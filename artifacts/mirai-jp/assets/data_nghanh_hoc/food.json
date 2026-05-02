@@ -1,0 +1,12 @@
+[
+  { "jp": "料理", "kana": "りょうり", "vi": "Nấu ăn / Món ăn", "category": "Ẩm thực" },
+  { "jp": "寿司", "kana": "すし", "vi": "Sushi", "category": "Ẩm thực" },
+  { "jp": "ラーメン", "kana": "ラーメン", "vi": "Mì ramen", "category": "Ẩm thực" },
+  { "jp": "天ぷら", "kana": "てんぷら", "vi": "Tempura", "category": "Ẩm thực" },
+  { "jp": "刺身", "kana": "さしみ", "vi": "Sashimi", "category": "Ẩm thực" },
+  { "jp": "定食", "kana": "ていしょく", "vi": "Suất cơm", "category": "Ẩm thực" },
+  { "jp": "おにぎり", "kana": "おにぎり", "vi": "Cơm nắm", "category": "Ẩm thực" },
+  { "jp": "抹茶", "kana": "まっちゃ", "vi": "Trà xanh", "category": "Ẩm thực" },
+  { "jp": "居酒屋", "kana": "いざかや", "vi": "Quán nhậu", "category": "Ẩm thực" },
+  { "jp": "食材", "kana": "しょくざい", "vi": "Nguyên liệu", "category": "Ẩm thực" }
+]

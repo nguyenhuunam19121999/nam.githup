@@ -1,0 +1,12 @@
+[
+  { "jp": "会議", "kana": "かいぎ", "vi": "Cuộc họp", "category": "Kinh doanh" },
+  { "jp": "契約", "kana": "けいやく", "vi": "Hợp đồng", "category": "Kinh doanh" },
+  { "jp": "予算", "kana": "よさん", "vi": "Ngân sách", "category": "Kinh doanh" },
+  { "jp": "利益", "kana": "りえき", "vi": "Lợi nhuận", "category": "Kinh doanh" },
+  { "jp": "顧客", "kana": "こきゃく", "vi": "Khách hàng", "category": "Kinh doanh" },
+  { "jp": "マーケティング", "kana": "マーケティング", "vi": "Tiếp thị", "category": "Kinh doanh" },
+  { "jp": "プレゼンテーション", "kana": "プレゼンテーション", "vi": "Thuyết trình", "category": "Kinh doanh" },
+  { "jp": "報告書", "kana": "ほうこくしょ", "vi": "Báo cáo", "category": "Kinh doanh" },
+  { "jp": "交渉", "kana": "こうしょう", "vi": "Đàm phán", "category": "Kinh doanh" },
+  { "jp": "投資", "kana": "とうし", "vi": "Đầu tư", "category": "Kinh doanh" }
+]

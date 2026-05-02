@@ -1,0 +1,67 @@
+[
+  {
+    "id": "n2-1",
+    "pattern": "そこで",
+    "phienAm": "そこで",
+    "meaning": "Vì thế/Do đó",
+    "level": "N2",
+    "structure": "[Câu 1 (lý do/tình huống)]。そこで、[Câu 2 (hành động/quyết định)]。",
+    "explanation": "Diễn tả: dựa vào tình huống/lý do ở vế trước mà người nói đưa ra hành động hoặc quyết định cụ thể ở vế sau. Vế sau thường là hành động chủ động.",
+    "examples": [
+      { "jp": "雨が急に降ってきた。そこで、近くの店で傘を買った。", "vi": "Trời bỗng nhiên đổ mưa. Vì thế, tôi đã mua ô ở cửa hàng gần đó." },
+      { "jp": "会議の時間が変わった。そこで、メンバーに連絡した。", "vi": "Giờ họp đã thay đổi. Do đó, tôi đã liên lạc với các thành viên." }
+    ]
+  },
+  {
+    "id": "n2-2",
+    "pattern": "だけましだ",
+    "phienAm": "だけましだ",
+    "meaning": "Kể cũng còn may",
+    "level": "N2",
+    "structure": "[V/Aい/Aな/N の thể thông thường] + だけましだ",
+    "explanation": "Diễn tả: tuy không phải tình huống tốt nhưng so với hoàn cảnh tệ hơn thì như vậy đã là may rồi. Mang sắc thái tự an ủi.",
+    "examples": [
+      { "jp": "残業はあるが、休みが取れるだけましだ。", "vi": "Tuy có tăng ca nhưng vẫn được nghỉ thì kể cũng còn may." },
+      { "jp": "給料が安くても、仕事があるだけましだ。", "vi": "Lương thấp nhưng có việc làm là còn may rồi." }
+    ]
+  },
+  {
+    "id": "n2-3",
+    "pattern": "がたい",
+    "phienAm": "がたい",
+    "meaning": "Khó mà/Không thể",
+    "level": "N2",
+    "structure": "[V ます (bỏ ます)] + がたい",
+    "explanation": "Diễn tả: việc gì đó rất khó thực hiện về mặt cảm xúc/tâm lý. Thường dùng với các động từ liên quan đến nhận thức như 信じる、想像する、理解する…",
+    "examples": [
+      { "jp": "彼の話は信じがたい。", "vi": "Câu chuyện của anh ấy thật khó tin." },
+      { "jp": "その光景は忘れがたい思い出だ。", "vi": "Cảnh tượng đó là kỷ niệm khó quên." }
+    ]
+  },
+  {
+    "id": "n2-4",
+    "pattern": "くせして",
+    "phienAm": "くせして",
+    "meaning": "Mặc dù... vậy mà",
+    "level": "N2",
+    "structure": "[V/Aい/Aな(な)/N(の) thể thông thường] + くせして",
+    "explanation": "Tương tự 「くせに」, diễn tả sự bực bội, chê trách khi hành vi của ai đó không phù hợp với thân phận/khả năng của họ. Mang sắc thái suồng sã, không lịch sự.",
+    "examples": [
+      { "jp": "知らないくせして、知ったふりをするな。", "vi": "Không biết vậy mà còn làm bộ biết." },
+      { "jp": "子供のくせして、大人みたいなことを言う。", "vi": "Mới nhỏ mà nói chuyện như người lớn." }
+    ]
+  },
+  {
+    "id": "n2-5",
+    "pattern": "わけではない",
+    "phienAm": "わけではない",
+    "meaning": "Không phải là",
+    "level": "N2",
+    "structure": "[V/Aい/Aな/N の thể thông thường] + わけではない",
+    "explanation": "Phủ định một phần: nói rằng không phải hoàn toàn như người nghe đang nghĩ, hoặc không phải lúc nào cũng vậy.",
+    "examples": [
+      { "jp": "毎日忙しいわけではない。", "vi": "Không phải ngày nào cũng bận." },
+      { "jp": "嫌いなわけではないが、あまり食べない。", "vi": "Không phải là tôi ghét, nhưng cũng ít ăn." }
+    ]
+  }
+]

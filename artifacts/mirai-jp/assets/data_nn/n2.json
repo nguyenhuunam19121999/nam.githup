@@ -1,0 +1,38 @@
+[
+  {
+    "id": "n2-g-001",
+    "pattern": "〜に関して",
+    "meaning": "Liên quan đến ~ / Về ~",
+    "level": "N2",
+    "usage": "Chỉ đề tài, phạm vi của hành động hoặc sự kiện.",
+    "examples": [
+      { "jp": "環境問題に関して研究しています。", "vi": "Tôi đang nghiên cứu về vấn đề môi trường." },
+      { "jp": "この件に関してご連絡します。", "vi": "Tôi sẽ liên hệ với bạn liên quan đến vấn đề này." }
+    ],
+    "notes": "Danh từ + に関して / に関する + Danh từ"
+  },
+  {
+    "id": "n2-g-002",
+    "pattern": "〜にもかかわらず",
+    "meaning": "Mặc dù ~ / Bất chấp ~",
+    "level": "N2",
+    "usage": "Diễn đạt điều đi ngược với điều kiện hoặc kỳ vọng.",
+    "examples": [
+      { "jp": "雨にもかかわらず、試合は行われた。", "vi": "Mặc dù trời mưa, trận đấu vẫn được tổ chức." },
+      { "jp": "忙しいにもかかわらず、手伝ってくれた。", "vi": "Mặc dù bận, anh ấy đã giúp tôi." }
+    ],
+    "notes": "Thể phổ thông / Danh từ / Tính từ い・な + にもかかわらず"
+  },
+  {
+    "id": "n2-g-003",
+    "pattern": "〜に際して",
+    "meaning": "Vào dịp ~ / Nhân dịp ~",
+    "level": "N2",
+    "usage": "Diễn đạt thời điểm quan trọng khi làm việc gì.",
+    "examples": [
+      { "jp": "入学に際して、注意事項を確認してください。", "vi": "Nhân dịp nhập học, xin hãy xác nhận các lưu ý." },
+      { "jp": "旅行に際し、パスポートを準備した。", "vi": "Nhân dịp đi du lịch, tôi đã chuẩn bị hộ chiếu." }
+    ],
+    "notes": "Danh từ / Động từ thể từ điển + に際して"
+  }
+]

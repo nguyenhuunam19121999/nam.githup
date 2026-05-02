@@ -1,0 +1,62 @@
+[
+  {
+    "id": "n5-g-001",
+    "pattern": "〜は〜です",
+    "meaning": "〜 là 〜 (câu khẳng định)",
+    "level": "N5",
+    "usage": "Dùng để mô tả hoặc nhận diện sự vật, sự việc.",
+    "examples": [
+      { "jp": "私は学生です。", "vi": "Tôi là học sinh." },
+      { "jp": "これは本です。", "vi": "Đây là cuốn sách." }
+    ],
+    "notes": "は là trợ từ chủ ngữ, です là trợ từ khẳng định."
+  },
+  {
+    "id": "n5-g-002",
+    "pattern": "〜は〜じゃありません",
+    "meaning": "〜 không phải là 〜 (câu phủ định)",
+    "level": "N5",
+    "usage": "Phủ định câu です.",
+    "examples": [
+      { "jp": "私は先生じゃありません。", "vi": "Tôi không phải là giáo viên." },
+      { "jp": "これは車じゃありません。", "vi": "Đây không phải là xe hơi." }
+    ],
+    "notes": "じゃありません = ではありません (lịch sự hơn)"
+  },
+  {
+    "id": "n5-g-003",
+    "pattern": "〜が〜ます",
+    "meaning": "〜 làm 〜 (câu hành động)",
+    "level": "N5",
+    "usage": "Diễn đạt hành động lịch sự.",
+    "examples": [
+      { "jp": "毎日日本語を勉強します。", "vi": "Mỗi ngày tôi học tiếng Nhật." },
+      { "jp": "コーヒーを飲みます。", "vi": "Tôi uống cà phê." }
+    ],
+    "notes": "Dạng lịch sự của động từ."
+  },
+  {
+    "id": "n5-g-004",
+    "pattern": "〜たい",
+    "meaning": "Muốn làm 〜",
+    "level": "N5",
+    "usage": "Diễn đạt mong muốn của người nói.",
+    "examples": [
+      { "jp": "日本に行きたいです。", "vi": "Tôi muốn đến Nhật Bản." },
+      { "jp": "水が飲みたいです。", "vi": "Tôi muốn uống nước." }
+    ],
+    "notes": "Gắn vào gốc ます của động từ."
+  },
+  {
+    "id": "n5-g-005",
+    "pattern": "〜てください",
+    "meaning": "Làm ơn 〜 / Hãy 〜",
+    "level": "N5",
+    "usage": "Yêu cầu lịch sự người khác làm gì.",
+    "examples": [
+      { "jp": "ここに書いてください。", "vi": "Hãy viết ở đây." },
+      { "jp": "ゆっくり話してください。", "vi": "Hãy nói chậm thôi." }
+    ],
+    "notes": "Dùng dạng て của động từ + ください."
+  }
+]

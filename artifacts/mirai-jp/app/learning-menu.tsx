@@ -1,0 +1,135 @@
+import { useLocalSearchParams, useRouter } from "expo-router";
+import React from "react";
+import { Alert, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
+
+const TEAL = "#4ECDC4";
+
+interface MenuItem {
+  id: string;
+  label: string;
+  renderIcon: () => React.ReactNode;
+  route?: string;
+}
+
+function HexIcon() {
+  return (
+    <View style={iconStyles.hexOuter}>
+      <View style={iconStyles.hexInner} />
+    </View>
+  );
+}
+
+function BookIcon() {
+  return (
+    <View style={iconStyles.bookWrap}>
+      <View style={iconStyles.bookSpine} />
+      <Text style={iconStyles.bookStar}>✦</Text>
+    </View>
+  );
+}
+
+function GrammarIcon() {
+  return (
+    <View style={iconStyles.grammarWrap}>
+      <Text style={iconStyles.grammarA}>A</Text>
+      <Text style={iconStyles.grammarCheck}>✓</Text>
+    </View>
+  );
+}
+
+function SunIcon() {
+  return (
+    <View style={iconStyles.sunWrap}>
+      {Array.from({ length: 8 }).map((_, i) => (
+        <View key={i} style={[iconStyles.sunRay, { transform: [{ rotate: `${i * 45}deg` }, { translateY: -18 }] }]} />
+      ))}
+      <View style={iconStyles.sunCircle} />
+    </View>
+  );
+}
+
+const ITEMS: MenuItem[] = [
+  { id: "guide", label: "Hướng Dẫn Học", renderIcon: () => <HexIcon /> },
+  { id: "vocab", label: "Từ Vựng", renderIcon: () => <BookIcon />, route: "/flashcard" },
+  { id: "grammar", label: "Ngữ Pháp", renderIcon: () => <GrammarIcon />, route: "/grammar" },
+  { id: "kanji", label: "Kanji", renderIcon: () => <SunIcon />, route: "/kanji" },
+];
+
+export default function LearningMenuScreen() {
+  const router = useRouter();
+  const params = useLocalSearchParams<{ level?: string; bookId?: string; title?: string }>();
+  const level = typeof params.level === "string" ? params.level : "";
+  const bookId = typeof params.bookId === "string" ? params.bookId : "";
+  const title = typeof params.title === "string" && params.title ? params.title : level ? `Khoá học ${level}` : "Chọn nội dung học";
+
+  const handlePress = (item: MenuItem) => {
+    if (item.route === "/flashcard") {
+      router.push({ pathname: "/flashcard", params: { ...(level ? { level } : {}), ...(bookId ? { bookId } : {}), ...(title ? { title } : {}) } });
+    } else if (item.route === "/grammar") {
+      router.push({ pathname: "/grammar", params: { ...(level ? { level } : {}), ...(title ? { title } : {}) } });
+    } else if (item.route === "/kanji") {
+      router.push({ pathname: "/kanji", params: { ...(level ? { level } : {}), ...(level ? { title: `Học Kanji ${level}` } : {}) } });
+    } else {
+      Alert.alert(item.label, "Nội dung sẽ được cập nhật sớm.");
+    }
+  };
+
+  return (
+    <View style={s.root}>
+      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
+      <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
+        <View style={s.topBarInner}>
+          <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7} hitSlop={10}>
+            <Text style={s.backIcon}>‹</Text>
+          </TouchableOpacity>
+          <Text style={s.topTitle} numberOfLines={1}>{title}</Text>
+          <View style={s.backBtn} />
+        </View>
+      </SafeAreaView>
+
+      <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} showsVerticalScrollIndicator={false}>
+        <View style={s.grid}>
+          {ITEMS.map((item) => (
+            <View key={item.id} style={s.cellWrap}>
+              <TouchableOpacity style={s.menuCard} onPress={() => handlePress(item)} activeOpacity={0.7}>
+                <View style={s.iconBox}>{item.renderIcon()}</View>
+                <Text style={s.menuLabel} numberOfLines={2}>{item.label}</Text>
+              </TouchableOpacity>
+            </View>
+          ))}
+        </View>
+      </ScrollView>
+    </View>
+  );
+}
+
+const s = StyleSheet.create({
+  root: { flex: 1, backgroundColor: "#f1f5f9" },
+  topBar: { backgroundColor: TEAL },
+  topBarInner: { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingVertical: 10 },
+  backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
+  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  topTitle: { flex: 1, color: "#fff", fontSize: 18, fontWeight: "800", textAlign: "center" },
+  scroll: { flex: 1 },
+  scrollContent: { padding: 16, paddingBottom: 40 },
+  grid: { flexDirection: "row", flexWrap: "wrap", marginHorizontal: -6 },
+  cellWrap: { width: "50%", paddingHorizontal: 6, marginBottom: 14 },
+  menuCard: { flexDirection: "row", alignItems: "center", backgroundColor: "#ffffff", borderRadius: 32, paddingVertical: 12, paddingHorizontal: 14, borderWidth: 1.5, borderColor: "#bfdbfe", minHeight: 84 },
+  iconBox: { width: 56, height: 56, borderRadius: 12, alignItems: "center", justifyContent: "center", backgroundColor: "#fff" },
+  menuLabel: { flex: 1, fontSize: 16, fontWeight: "700", color: "#0f172a", marginLeft: 12 },
+});
+
+const iconStyles = StyleSheet.create({
+  hexOuter: { width: 40, height: 40, backgroundColor: "#86C152", transform: [{ rotate: "30deg" }], alignItems: "center", justifyContent: "center", borderRadius: 6 },
+  hexInner: { width: 22, height: 22, backgroundColor: "#4A90E2", borderRadius: 4, transform: [{ rotate: "-30deg" }] },
+  bookWrap: { width: 36, height: 44, backgroundColor: "#3B82F6", borderRadius: 4, alignItems: "center", justifyContent: "center", overflow: "hidden" },
+  bookSpine: { position: "absolute", left: 4, top: 0, bottom: 0, width: 2, backgroundColor: "#1E3A8A" },
+  bookStar: { color: "#FDE68A", fontSize: 22, fontWeight: "900" },
+  grammarWrap: { width: 36, height: 44, backgroundColor: "#A78BFA", borderRadius: 4, alignItems: "center", justifyContent: "center" },
+  grammarA: { color: "#fff", fontSize: 22, fontWeight: "900", lineHeight: 24 },
+  grammarCheck: { position: "absolute", right: 4, bottom: 4, color: "#34D399", fontSize: 12, fontWeight: "900" },
+  sunWrap: { width: 44, height: 44, alignItems: "center", justifyContent: "center" },
+  sunCircle: { width: 22, height: 22, borderRadius: 11, backgroundColor: "#FBBF24" },
+  sunRay: { position: "absolute", width: 4, height: 7, borderRadius: 2, backgroundColor: "#FBBF24" },
+});

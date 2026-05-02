@@ -1,0 +1,12 @@
+[
+  { "jp": "大学", "kana": "だいがく", "vi": "Đại học", "category": "Giáo dục" },
+  { "jp": "授業", "kana": "じゅぎょう", "vi": "Bài giảng / Tiết học", "category": "Giáo dục" },
+  { "jp": "試験", "kana": "しけん", "vi": "Kỳ thi", "category": "Giáo dục" },
+  { "jp": "奨学金", "kana": "しょうがくきん", "vi": "Học bổng", "category": "Giáo dục" },
+  { "jp": "教授", "kana": "きょうじゅ", "vi": "Giáo sư", "category": "Giáo dục" },
+  { "jp": "研究室", "kana": "けんきゅうしつ", "vi": "Phòng nghiên cứu", "category": "Giáo dục" },
+  { "jp": "卒業論文", "kana": "そつぎょうろんぶん", "vi": "Luận văn tốt nghiệp", "category": "Giáo dục" },
+  { "jp": "入学", "kana": "にゅうがく", "vi": "Nhập học", "category": "Giáo dục" },
+  { "jp": "塾", "kana": "じゅく", "vi": "Trung tâm luyện thi", "category": "Giáo dục" },
+  { "jp": "図書館", "kana": "としょかん", "vi": "Thư viện", "category": "Giáo dục" }
+]

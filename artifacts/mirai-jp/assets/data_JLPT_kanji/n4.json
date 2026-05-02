@@ -1,0 +1,50 @@
+[
+  {
+    "id": "n4-001",
+    "kanji": "親",
+    "hanViet": "THÂN",
+    "kunyomi": ["おや", "した.しい"],
+    "onyomi": ["シン"],
+    "strokes": 16,
+    "level": "N4",
+    "frequency": 127,
+    "components": [{ "kanji": "立", "hanViet": "LẬP" }, { "kanji": "木", "hanViet": "MỘC" }, { "kanji": "見", "hanViet": "KIẾN" }],
+    "meanings": ["Cha mẹ", "Thân thiết"],
+    "examples": [
+      { "jp": "親切", "reading": "しんせつ", "vi": "Tử tế, thân thiện" },
+      { "jp": "両親", "reading": "りょうしん", "vi": "Cha mẹ" }
+    ]
+  },
+  {
+    "id": "n4-002",
+    "kanji": "便",
+    "hanViet": "TIỆN",
+    "kunyomi": ["たよ.り"],
+    "onyomi": ["ベン", "ビン"],
+    "strokes": 9,
+    "level": "N4",
+    "frequency": 232,
+    "components": [{ "kanji": "亻", "hanViet": "NHÂN" }, { "kanji": "更", "hanViet": "CANH" }],
+    "meanings": ["Tiện lợi", "Tin tức"],
+    "examples": [
+      { "jp": "便利", "reading": "べんり", "vi": "Tiện lợi" },
+      { "jp": "郵便", "reading": "ゆうびん", "vi": "Bưu điện" }
+    ]
+  },
+  {
+    "id": "n4-003",
+    "kanji": "調",
+    "hanViet": "ĐIỀU",
+    "kunyomi": ["しら.べる", "ととの.える"],
+    "onyomi": ["チョウ"],
+    "strokes": 15,
+    "level": "N4",
+    "frequency": 251,
+    "components": [{ "kanji": "言", "hanViet": "NGÔN" }, { "kanji": "周", "hanViet": "CHU" }],
+    "meanings": ["Điều tra", "Điều chỉnh", "Giai điệu"],
+    "examples": [
+      { "jp": "調査", "reading": "ちょうさ", "vi": "Điều tra" },
+      { "jp": "強調", "reading": "きょうちょう", "vi": "Nhấn mạnh" }
+    ]
+  }
+]

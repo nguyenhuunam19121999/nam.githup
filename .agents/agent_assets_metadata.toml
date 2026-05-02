@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "hpX-HnvSnHUJgBmOgm2yW"
+uri = "file://artifacts/mirai-jp/assets/images/icon.png"
+type = "image"
+title = "mirai jp app icon"

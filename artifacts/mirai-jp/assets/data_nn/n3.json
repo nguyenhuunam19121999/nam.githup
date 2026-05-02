@@ -1,0 +1,38 @@
+[
+  {
+    "id": "n3-g-001",
+    "pattern": "〜ようになる",
+    "meaning": "Trở nên / Bắt đầu có thể ~",
+    "level": "N3",
+    "usage": "Diễn đạt sự thay đổi dần dần theo thời gian.",
+    "examples": [
+      { "jp": "毎日練習して、上手に話せるようになりました。", "vi": "Luyện tập mỗi ngày, tôi đã trở nên nói chuyện giỏi hơn." },
+      { "jp": "子どもが野菜を食べるようになった。", "vi": "Đứa trẻ đã bắt đầu ăn rau rồi." }
+    ],
+    "notes": "Động từ thể từ điển / thể ない + ようになる"
+  },
+  {
+    "id": "n3-g-002",
+    "pattern": "〜ことができる",
+    "meaning": "Có thể làm ~",
+    "level": "N3",
+    "usage": "Diễn đạt khả năng.",
+    "examples": [
+      { "jp": "日本語で話すことができます。", "vi": "Tôi có thể nói tiếng Nhật." },
+      { "jp": "ピアノを弾くことができますか。", "vi": "Bạn có thể đánh đàn piano không?" }
+    ],
+    "notes": "Động từ thể từ điển + ことができる"
+  },
+  {
+    "id": "n3-g-003",
+    "pattern": "〜はずだ",
+    "meaning": "Đáng lẽ phải ~ / Hẳn là ~",
+    "level": "N3",
+    "usage": "Diễn đạt sự kỳ vọng hoặc suy luận logic.",
+    "examples": [
+      { "jp": "彼はもう来ているはずです。", "vi": "Anh ấy hẳn là đã đến rồi." },
+      { "jp": "この薬を飲めば、治るはずだ。", "vi": "Nếu uống thuốc này thì đáng lẽ phải khỏi." }
+    ],
+    "notes": "Dạng từ điển/ない/た + はずだ"
+  }
+]

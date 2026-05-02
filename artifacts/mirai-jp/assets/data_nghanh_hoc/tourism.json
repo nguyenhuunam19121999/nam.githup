@@ -1,0 +1,12 @@
+[
+  { "jp": "観光", "kana": "かんこう", "vi": "Du lịch", "category": "Du lịch" },
+  { "jp": "旅館", "kana": "りょかん", "vi": "Nhà trọ kiểu Nhật", "category": "Du lịch" },
+  { "jp": "温泉", "kana": "おんせん", "vi": "Suối nước nóng", "category": "Du lịch" },
+  { "jp": "空港", "kana": "くうこう", "vi": "Sân bay", "category": "Du lịch" },
+  { "jp": "新幹線", "kana": "しんかんせん", "vi": "Tàu cao tốc", "category": "Du lịch" },
+  { "jp": "地図", "kana": "ちず", "vi": "Bản đồ", "category": "Du lịch" },
+  { "jp": "名所", "kana": "めいしょ", "vi": "Danh thắng", "category": "Du lịch" },
+  { "jp": "ガイド", "kana": "ガイド", "vi": "Hướng dẫn viên", "category": "Du lịch" },
+  { "jp": "パスポート", "kana": "パスポート", "vi": "Hộ chiếu", "category": "Du lịch" },
+  { "jp": "予約", "kana": "よやく", "vi": "Đặt trước", "category": "Du lịch" }
+]

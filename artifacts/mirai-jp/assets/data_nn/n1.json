@@ -1,0 +1,38 @@
+[
+  {
+    "id": "n1-g-001",
+    "pattern": "〜いかんにかかわらず",
+    "meaning": "Bất kể ~ như thế nào",
+    "level": "N1",
+    "usage": "Diễn đạt không phụ thuộc vào điều kiện nào đó.",
+    "examples": [
+      { "jp": "結果のいかんにかかわらず、全力を尽くします。", "vi": "Bất kể kết quả như thế nào, tôi sẽ cố hết sức." },
+      { "jp": "理由のいかんにかかわらず、遅刻は認めません。", "vi": "Bất kể lý do ra sao, đi muộn đều không được chấp nhận." }
+    ],
+    "notes": "Danh từ + のいかんにかかわらず"
+  },
+  {
+    "id": "n1-g-002",
+    "pattern": "〜をもって",
+    "meaning": "Từ ~ / Bằng ~ / Kể từ ~",
+    "level": "N1",
+    "usage": "Diễn đạt phương tiện, giới hạn thời gian.",
+    "examples": [
+      { "jp": "本日をもって、閉店いたします。", "vi": "Kể từ hôm nay, chúng tôi đóng cửa." },
+      { "jp": "実力をもって示す。", "vi": "Chứng minh bằng thực lực." }
+    ],
+    "notes": "Danh từ + をもって"
+  },
+  {
+    "id": "n1-g-003",
+    "pattern": "〜ともなると",
+    "meaning": "Khi đã là ~ / Đến lúc ~",
+    "level": "N1",
+    "usage": "Diễn đạt khi đạt đến một cấp độ hoặc tình huống nhất định.",
+    "examples": [
+      { "jp": "社長ともなると、責任も重い。", "vi": "Khi đã là giám đốc thì trách nhiệm cũng nặng nề." },
+      { "jp": "50代ともなると、体力が落ちる。", "vi": "Khi đã đến tuổi 50, thể lực sẽ giảm sút." }
+    ],
+    "notes": "Danh từ + ともなると / ともなれば"
+  }
+]

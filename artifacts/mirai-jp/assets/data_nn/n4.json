@@ -1,0 +1,38 @@
+[
+  {
+    "id": "n4-g-001",
+    "pattern": "〜ために",
+    "meaning": "Để ~ / Vì ~",
+    "level": "N4",
+    "usage": "Diễn đạt mục đích hoặc nguyên nhân.",
+    "examples": [
+      { "jp": "日本語を勉強するために、毎日練習します。", "vi": "Để học tiếng Nhật, tôi luyện tập mỗi ngày." },
+      { "jp": "健康のために、野菜を食べます。", "vi": "Vì sức khỏe, tôi ăn rau." }
+    ],
+    "notes": "Động từ thể từ điển + ために (mục đích); Danh từ + のために"
+  },
+  {
+    "id": "n4-g-002",
+    "pattern": "〜ながら",
+    "meaning": "Vừa ~ vừa ~",
+    "level": "N4",
+    "usage": "Hai hành động diễn ra cùng lúc.",
+    "examples": [
+      { "jp": "音楽を聞きながら勉強します。", "vi": "Tôi vừa nghe nhạc vừa học bài." },
+      { "jp": "歩きながら話しましょう。", "vi": "Chúng ta vừa đi vừa nói chuyện nhé." }
+    ],
+    "notes": "Gắn vào gốc ます của động từ."
+  },
+  {
+    "id": "n4-g-003",
+    "pattern": "〜てしまう",
+    "meaning": "Đã ~ mất / Lỡ ~ rồi",
+    "level": "N4",
+    "usage": "Hành động hoàn tất (thường có sắc thái tiếc nuối hoặc bất ngờ).",
+    "examples": [
+      { "jp": "財布を忘れてしまいました。", "vi": "Tôi đã quên mất ví rồi." },
+      { "jp": "全部食べてしまった。", "vi": "Tôi đã ăn hết sạch rồi." }
+    ],
+    "notes": "Dạng て của động từ + しまう. Nói chuyện thường dùng ちゃう."
+  }
+]

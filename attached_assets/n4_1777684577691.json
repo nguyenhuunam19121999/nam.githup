@@ -1,0 +1,26 @@
+[
+  {
+    "id": "n4-1",
+    "pattern": "〜ことができる",
+    "phienAm": "ことができる",
+    "meaning": "Có thể",
+    "level": "N4",
+    "structure": "[V (thể từ điển)] + ことができる",
+    "explanation": "Diễn tả khả năng làm việc gì đó. Lịch sự hơn so với thể khả năng (V られる).",
+    "examples": [
+      { "jp": "私は日本語を話すことができます。", "vi": "Tôi có thể nói tiếng Nhật." }
+    ]
+  },
+  {
+    "id": "n4-2",
+    "pattern": "〜たことがある",
+    "phienAm": "たことがある",
+    "meaning": "Đã từng",
+    "level": "N4",
+    "structure": "[V (thể た)] + ことがある",
+    "explanation": "Diễn tả kinh nghiệm đã từng làm điều gì đó trong quá khứ.",
+    "examples": [
+      { "jp": "日本へ行ったことがあります。", "vi": "Tôi đã từng đến Nhật." }
+    ]
+  }
+]

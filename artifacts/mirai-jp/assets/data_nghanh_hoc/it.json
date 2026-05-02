@@ -1,0 +1,12 @@
+[
+  { "jp": "コンピューター", "kana": "コンピューター", "vi": "Máy tính", "category": "IT" },
+  { "jp": "ソフトウェア", "kana": "ソフトウェア", "vi": "Phần mềm", "category": "IT" },
+  { "jp": "ハードウェア", "kana": "ハードウェア", "vi": "Phần cứng", "category": "IT" },
+  { "jp": "インターネット", "kana": "インターネット", "vi": "Internet", "category": "IT" },
+  { "jp": "プログラミング", "kana": "プログラミング", "vi": "Lập trình", "category": "IT" },
+  { "jp": "データベース", "kana": "データベース", "vi": "Cơ sở dữ liệu", "category": "IT" },
+  { "jp": "クラウド", "kana": "クラウド", "vi": "Điện toán đám mây", "category": "IT" },
+  { "jp": "セキュリティ", "kana": "セキュリティ", "vi": "Bảo mật", "category": "IT" },
+  { "jp": "アプリケーション", "kana": "アプリケーション", "vi": "Ứng dụng", "category": "IT" },
+  { "jp": "バグ", "kana": "バグ", "vi": "Lỗi phần mềm", "category": "IT" }
+]

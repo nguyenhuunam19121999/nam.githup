@@ -1,0 +1,50 @@
+[
+  {
+    "id": "n3-001",
+    "kanji": "候",
+    "hanViet": "HẬU",
+    "kunyomi": ["そうろう"],
+    "onyomi": ["コウ"],
+    "strokes": 10,
+    "level": "N3",
+    "frequency": 510,
+    "components": [{ "kanji": "亻", "hanViet": "NHÂN" }],
+    "meanings": ["Khí hậu", "Dò ngóng"],
+    "examples": [
+      { "jp": "気候", "reading": "きこう", "vi": "Khí hậu" },
+      { "jp": "天候", "reading": "てんこう", "vi": "Thời tiết" }
+    ]
+  },
+  {
+    "id": "n3-002",
+    "kanji": "例",
+    "hanViet": "LỆ",
+    "kunyomi": ["たと.える"],
+    "onyomi": ["レイ"],
+    "strokes": 8,
+    "level": "N3",
+    "frequency": 384,
+    "components": [{ "kanji": "亻", "hanViet": "NHÂN" }, { "kanji": "列", "hanViet": "LIỆT" }],
+    "meanings": ["Ví dụ", "Tiền lệ"],
+    "examples": [
+      { "jp": "例えば", "reading": "たとえば", "vi": "Ví dụ" },
+      { "jp": "例外", "reading": "れいがい", "vi": "Ngoại lệ" }
+    ]
+  },
+  {
+    "id": "n3-003",
+    "kanji": "信",
+    "hanViet": "TÍN",
+    "kunyomi": [],
+    "onyomi": ["シン"],
+    "strokes": 9,
+    "level": "N3",
+    "frequency": 145,
+    "components": [{ "kanji": "亻", "hanViet": "NHÂN" }, { "kanji": "言", "hanViet": "NGÔN" }],
+    "meanings": ["Tin tưởng", "Tín hiệu"],
+    "examples": [
+      { "jp": "信号", "reading": "しんごう", "vi": "Tín hiệu" },
+      { "jp": "自信", "reading": "じしん", "vi": "Tự tin" }
+    ]
+  }
+]
