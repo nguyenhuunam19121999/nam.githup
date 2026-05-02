@@ -676,11 +676,14 @@ export default function FlashcardScreen() {
     }, Math.max(1, autoScrollSec) * 1000);
     return () => clearInterval(timer);
   }, [autoScroll, autoScrollSec, gameMode, total, menuOpen]);
+  const [shuffleToast, setShuffleToast] = useState(false);
   const doShuffle = () => {
     setData(shuffle(ALL));
     setIdx(0);
     setFlipped(false);
     setSearchText("");
+    setShuffleToast(true);
+    setTimeout(() => setShuffleToast(false), 1500);
   };
   const doReset = () => {
     setData([...ALL]);
@@ -1054,6 +1057,12 @@ export default function FlashcardScreen() {
                   <Text style={s.btnTextWhite}>Tiếp ▶</Text>
                 </TouchableOpacity>
               </View>
+
+              {shuffleToast && (
+                <View style={s.shuffleToast}>
+                  <Text style={s.shuffleToastText}>🔀 Đang xáo trộn...</Text>
+                </View>
+              )}
 
               <View style={s.btnRow}>
                 <TouchableOpacity style={s.btnShuffle} onPress={doShuffle}>
@@ -1514,6 +1523,18 @@ const s = StyleSheet.create({
     paddingVertical: 11,
     borderRadius: 10,
     alignItems: "center",
+  },
+  shuffleToast: {
+    backgroundColor: "#48bb78",
+    borderRadius: 10,
+    paddingVertical: 10,
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  shuffleToastText: {
+    color: "#fff",
+    fontWeight: "700",
+    fontSize: 14,
   },
   btnReset: {
     flex: 1,
