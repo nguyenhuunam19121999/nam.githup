@@ -3,38 +3,836 @@
     "id": "n3-1",
     "pattern": "ものだ",
     "phienAm": "ものだ",
-    "meaning": "Đúng là (cảm thán)/Thật muốn (ước muốn)",
+    "meaning": "Đúng là / Thật muốn",
     "level": "N3",
-    "structure": "V/Aい/Aな (thể thông thường) + ものだ/もんだ\n(Riêng Aなだ → Aなだ)\nVたい/Vたくない + ものだ/もんだ\nVてほしい/Vてほしくない + ものだ/もんだ",
-    "explanation": "『ものだ』 diễn tả:\n1. Cảm xúc ngạc nhiên hoặc sự cảm khái trước một sự việc; tâm trạng hoài niệm trước một thói quen hoặc tình huống kéo dài trong quá khứ (たものだ); thái độ mỉa mai hoặc chỉ trích gay gắt hành động của người khác (よくもまあ〜ものだ).\n2. Tâm trạng rất muốn, rất ao ước một việc gì đó. Đi với các cấu trúc như 『たい』、『ほしい』.",
+    "structure": "V/Adj + ものだ",
+    "explanation": "Cảm thán, hoài niệm, hoặc ước muốn mạnh.",
     "examples": [
-      { "jp": "時間が経つのは早いものだ。", "vi": "Thời gian trôi nhanh thật." },
-      { "jp": "子供の時、よくこの川で泳いだものだ。", "vi": "Hồi nhỏ tôi hay bơi ở con sông này." },
-      { "jp": "一度でいいから海外で暮らしてみたいものだ。", "vi": "Tôi rất muốn được sống ở nước ngoài một lần." }
+      {
+        "jp": "時間が経つのは早いものだ。",
+        "vi": "Thời gian trôi nhanh thật."
+      },
+      {
+        "jp": "一度海外で暮らしてみたいものだ。",
+        "vi": "Thật muốn được sống ở nước ngoài một lần."
+      }
     ]
   },
   {
     "id": "n3-2",
-    "pattern": "おかげで",
-    "phienAm": "おかげで",
-    "meaning": "Nhờ có",
+    "pattern": "ものだから",
+    "phienAm": "ものだから",
+    "meaning": "Chính vì / Do...",
     "level": "N3",
-    "structure": "[V/Aい/Aな/N の thể thông thường] + おかげで",
-    "explanation": "Diễn tả nguyên nhân/lý do dẫn đến kết quả tốt. Người nói biết ơn nguyên nhân đó.",
+    "structure": "[V/Adj thể thông thường] + ものだから",
+    "explanation": "Nêu lý do/nguyên nhân mang tính giải thích, đôi khi có sắc thái thanh minh.",
     "examples": [
-      { "jp": "先生のおかげで、合格できた。", "vi": "Nhờ có thầy mà tôi đã đậu." }
+      {
+        "jp": "電車が遅れたものだから、遅刻してしまった。",
+        "vi": "Chính vì tàu bị trễ nên tôi đã đến muộn."
+      },
+      {
+        "jp": "急いでいたものだから、財布を忘れた。",
+        "vi": "Vì vội quá nên tôi quên mất ví."
+      }
     ]
   },
   {
     "id": "n3-3",
-    "pattern": "ばかりでなく",
-    "phienAm": "ばかりでなく",
-    "meaning": "Không những... mà còn",
+    "pattern": "ものの",
+    "phienAm": "ものの",
+    "meaning": "Mặc dù / Tuy... nhưng",
     "level": "N3",
-    "structure": "[V/Aい/Aな/N thể thông thường] + ばかりでなく",
-    "explanation": "Diễn tả: không chỉ điều A mà còn cả điều B nữa. Vế sau thường là điều mở rộng hơn, đáng chú ý hơn.",
+    "structure": "[V/Adj thể thông thường] + ものの",
+    "explanation": "Nhượng bộ: vế đầu nhượng bộ, vế sau đưa ra thực tế ngược lại.",
     "examples": [
-      { "jp": "彼は英語ばかりでなく、フランス語も話せる。", "vi": "Anh ấy không những nói được tiếng Anh mà còn cả tiếng Pháp." }
+      {
+        "jp": "日本語を勉強したものの、まだ話せない。",
+        "vi": "Mặc dù đã học tiếng Nhật nhưng vẫn chưa nói được."
+      },
+      {
+        "jp": "行くとは言ったものの、本当に行きたくない。",
+        "vi": "Tuy đã nói sẽ đi nhưng thật sự không muốn đi."
+      }
+    ]
+  },
+  {
+    "id": "n3-4",
+    "pattern": "〜ものがある",
+    "phienAm": "ものがある",
+    "meaning": "Có điều gì đó... (tính chất)",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường] + ものがある",
+    "explanation": "Diễn tả cảm nhận mạnh mẽ về tính chất nào đó.",
+    "examples": [
+      {
+        "jp": "彼の話には感動するものがある。",
+        "vi": "Câu chuyện của anh ấy có điều gì đó thật cảm động."
+      },
+      {
+        "jp": "この絵には美しいものがある。",
+        "vi": "Bức tranh này có vẻ đẹp nào đó."
+      }
+    ]
+  },
+  {
+    "id": "n3-5",
+    "pattern": "〜わけだ",
+    "phienAm": "わけだ",
+    "meaning": "Có nghĩa là / Thảo nào",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường / N + という] + わけだ",
+    "explanation": "Kết luận logic, giải thích lý do.",
+    "examples": [
+      {
+        "jp": "毎日練習したんだから、上手になるわけだ。",
+        "vi": "Đã luyện tập mỗi ngày thì đương nhiên sẽ giỏi lên rồi."
+      },
+      {
+        "jp": "10年間も日本に住んでいたわけだ。",
+        "vi": "Thảo nào, thì ra anh ấy đã sống ở Nhật tới 10 năm."
+      }
+    ]
+  },
+  {
+    "id": "n3-6",
+    "pattern": "〜わけではない",
+    "phienAm": "わけではない",
+    "meaning": "Không có nghĩa là / Không phải hẳn là",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường] + わけではない",
+    "explanation": "Phủ định suy luận, bác bỏ hiểu lầm.",
+    "examples": [
+      {
+        "jp": "嫌いなわけではないが、苦手です。",
+        "vi": "Không phải là tôi ghét, nhưng tôi kém."
+      },
+      {
+        "jp": "全員が参加するわけではありません。",
+        "vi": "Không có nghĩa là tất cả mọi người đều tham gia."
+      }
+    ]
+  },
+  {
+    "id": "n3-7",
+    "pattern": "〜わけがない",
+    "phienAm": "わけがない",
+    "meaning": "Không thể nào...",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường] + わけがない",
+    "explanation": "Phủ định mạnh: không thể có chuyện đó.",
+    "examples": [
+      {
+        "jp": "彼がそんなことをするわけがない。",
+        "vi": "Không thể nào anh ấy lại làm điều đó."
+      },
+      {
+        "jp": "こんな簡単な問題ができないわけがない。",
+        "vi": "Không thể nào không làm được bài dễ như vậy."
+      }
+    ]
+  },
+  {
+    "id": "n3-8",
+    "pattern": "〜わけにはいかない",
+    "phienAm": "わけにはいかない",
+    "meaning": "Không thể / Không được phép (vì lý do xã hội)",
+    "level": "N3",
+    "structure": "[V thể từ điển / V-ない] + わけにはいかない",
+    "explanation": "Không thể làm vì có lý do đạo đức, xã hội, hoàn cảnh.",
+    "examples": [
+      {
+        "jp": "試験中に辞書を使うわけにはいかない。",
+        "vi": "Không thể dùng từ điển trong kỳ thi."
+      },
+      {
+        "jp": "嫌いでも食べないわけにはいかない。",
+        "vi": "Dù không thích vẫn không thể không ăn."
+      }
+    ]
+  },
+  {
+    "id": "n3-9",
+    "pattern": "〜ばかりか〜も",
+    "phienAm": "ばかりかも",
+    "meaning": "Không chỉ... mà còn...",
+    "level": "N3",
+    "structure": "[N/V] + ばかりか + [N/V] + も",
+    "explanation": "Mở rộng phạm vi, thường theo hướng tăng tiến.",
+    "examples": [
+      {
+        "jp": "彼は歌が上手なばかりか、ダンスも得意だ。",
+        "vi": "Anh ấy không chỉ hát hay mà còn giỏi nhảy."
+      },
+      {
+        "jp": "疲れているばかりか、頭も痛くなってきた。",
+        "vi": "Không chỉ mệt mà đầu còn bắt đầu đau."
+      }
+    ]
+  },
+  {
+    "id": "n3-10",
+    "pattern": "〜ばかりに",
+    "phienAm": "ばかりに",
+    "meaning": "Chỉ vì / Do duy nhất một lý do",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường] + ばかりに",
+    "explanation": "Chỉ vì một lý do duy nhất đó mà gây ra kết quả tiêu cực.",
+    "examples": [
+      {
+        "jp": "一言言えなかったばかりに、誤解されてしまった。",
+        "vi": "Chỉ vì không nói được một câu mà bị hiểu lầm."
+      },
+      {
+        "jp": "油断したばかりに、試験に失敗した。",
+        "vi": "Chỉ vì chủ quan mà thi trượt."
+      }
+    ]
+  },
+  {
+    "id": "n3-11",
+    "pattern": "〜に過ぎない",
+    "phienAm": "にすぎない",
+    "meaning": "Chỉ là / Không hơn gì",
+    "level": "N3",
+    "structure": "[V/N/数] + に過ぎない",
+    "explanation": "Nhấn mạnh mức độ thấp, hạn chế.",
+    "examples": [
+      {
+        "jp": "これはあくまでも私の意見に過ぎない。",
+        "vi": "Đây chỉ là ý kiến cá nhân của tôi mà thôi."
+      },
+      {
+        "jp": "まだ始まりに過ぎない。",
+        "vi": "Đây chỉ mới là bắt đầu thôi."
+      }
+    ]
+  },
+  {
+    "id": "n3-12",
+    "pattern": "〜に違いない",
+    "phienAm": "にちがいない",
+    "meaning": "Chắc chắn là...",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường / N] + に違いない",
+    "explanation": "Khẳng định chắc chắn dựa trên suy luận.",
+    "examples": [
+      {
+        "jp": "あの車は高いに違いない。",
+        "vi": "Chiếc xe đó chắc chắn là đắt."
+      },
+      {
+        "jp": "彼は怒っているに違いない。",
+        "vi": "Chắc chắn anh ấy đang giận."
+      }
+    ]
+  },
+  {
+    "id": "n3-13",
+    "pattern": "〜に反して",
+    "phienAm": "にはんして",
+    "meaning": "Trái với / Đi ngược lại",
+    "level": "N3",
+    "structure": "[N] + に反して",
+    "explanation": "Thực tế ngược với kỳ vọng hoặc quy tắc.",
+    "examples": [
+      {
+        "jp": "予想に反して、試験は簡単だった。",
+        "vi": "Trái với dự đoán, kỳ thi lại dễ."
+      },
+      {
+        "jp": "規則に反して行動した。",
+        "vi": "Họ đã hành động trái với quy định."
+      }
+    ]
+  },
+  {
+    "id": "n3-14",
+    "pattern": "〜に応じて",
+    "phienAm": "におうじて",
+    "meaning": "Tùy theo / Phù hợp với",
+    "level": "N3",
+    "structure": "[N] + に応じて / に応じた + N",
+    "explanation": "Thích ứng với điều kiện, tình huống.",
+    "examples": [
+      {
+        "jp": "状況に応じて、対応方法を変えます。",
+        "vi": "Tùy tình huống, tôi sẽ thay đổi cách xử lý."
+      },
+      {
+        "jp": "能力に応じた仕事をしたい。",
+        "vi": "Tôi muốn làm việc phù hợp với năng lực."
+      }
+    ]
+  },
+  {
+    "id": "n3-15",
+    "pattern": "〜にもかかわらず",
+    "phienAm": "にもかかわらず",
+    "meaning": "Mặc dù / Bất chấp",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường / N] + にもかかわらず",
+    "explanation": "Vế sau trái ngược hoàn toàn với vế trước.",
+    "examples": [
+      {
+        "jp": "雨にもかかわらず、大勢の人が来た。",
+        "vi": "Mặc dù trời mưa nhưng có rất nhiều người đến."
+      },
+      {
+        "jp": "努力したにもかかわらず、結果が出なかった。",
+        "vi": "Mặc dù đã cố gắng nhưng không có kết quả."
+      }
+    ]
+  },
+  {
+    "id": "n3-16",
+    "pattern": "〜をはじめ",
+    "phienAm": "をはじめ",
+    "meaning": "Bắt đầu từ / Đứng đầu là",
+    "level": "N3",
+    "structure": "[N] + をはじめ（として）",
+    "explanation": "Liệt kê đại diện tiêu biểu nhất trước rồi nêu những thứ khác.",
+    "examples": [
+      {
+        "jp": "東京をはじめ、大阪や京都にも行きたい。",
+        "vi": "Bắt đầu từ Tokyo, tôi cũng muốn đến Osaka và Kyoto."
+      },
+      {
+        "jp": "日本語をはじめ、英語も勉強しています。",
+        "vi": "Ngoài tiếng Nhật, tôi còn đang học tiếng Anh."
+      }
+    ]
+  },
+  {
+    "id": "n3-17",
+    "pattern": "〜をめぐって",
+    "phienAm": "をめぐって",
+    "meaning": "Xung quanh / Liên quan đến (vấn đề)",
+    "level": "N3",
+    "structure": "[N] + をめぐって / をめぐる + N",
+    "explanation": "Diễn tả vấn đề trung tâm của tranh luận.",
+    "examples": [
+      {
+        "jp": "予算をめぐって、激しい議論が行われた。",
+        "vi": "Cuộc tranh luận gay gắt đã diễn ra xung quanh vấn đề ngân sách."
+      },
+      {
+        "jp": "この問題をめぐる議論は続いている。",
+        "vi": "Cuộc tranh luận xung quanh vấn đề này vẫn tiếp tục."
+      }
+    ]
+  },
+  {
+    "id": "n3-18",
+    "pattern": "〜さえ〜ば",
+    "phienAm": "さえば",
+    "meaning": "Chỉ cần... thì",
+    "level": "N3",
+    "structure": "[N + さえ / V-gốc ます + さえすれ] + ば",
+    "explanation": "Điều kiện duy nhất và đủ để đạt kết quả.",
+    "examples": [
+      {
+        "jp": "お金さえあれば、旅行できる。",
+        "vi": "Chỉ cần có tiền là có thể đi du lịch."
+      },
+      {
+        "jp": "練習さえすれば、できるようになる。",
+        "vi": "Chỉ cần luyện tập là sẽ làm được."
+      }
+    ]
+  },
+  {
+    "id": "n3-19",
+    "pattern": "〜さえ",
+    "phienAm": "さえ",
+    "meaning": "Thậm chí",
+    "level": "N3",
+    "structure": "[N/V] + さえ",
+    "explanation": "Nhấn mạnh điều cực đoan nhất.",
+    "examples": [
+      {
+        "jp": "彼は漢字さえ読めない。",
+        "vi": "Anh ấy thậm chí không đọc được chữ Hán."
+      },
+      {
+        "jp": "疲れて、立ち上がることさえできない。",
+        "vi": "Mệt đến mức thậm chí không thể đứng dậy."
+      }
+    ]
+  },
+  {
+    "id": "n3-20",
+    "pattern": "〜てたまらない",
+    "phienAm": "てたまらない",
+    "meaning": "... đến không chịu được",
+    "level": "N3",
+    "structure": "[V-て / Aい-くて / Aな-で] + たまらない",
+    "explanation": "Diễn tả cảm giác hoặc mong muốn cực kỳ mạnh.",
+    "examples": [
+      {
+        "jp": "暑くてたまらない。",
+        "vi": "Nóng không chịu được."
+      },
+      {
+        "jp": "故郷が恋しくてたまらない。",
+        "vi": "Nhớ quê hương đến không chịu được."
+      }
+    ]
+  },
+  {
+    "id": "n3-21",
+    "pattern": "〜てしょうがない / 〜てしかたがない",
+    "phienAm": "てしょうがない",
+    "meaning": "... không thể làm gì được",
+    "level": "N3",
+    "structure": "[V-て / Aくて / Aなで] + しょうがない/しかたがない",
+    "explanation": "Trạng thái không thể kiểm soát hoặc không có cách nào khác.",
+    "examples": [
+      {
+        "jp": "心配でしょうがない。",
+        "vi": "Lo lắng không thể không lo được."
+      },
+      {
+        "jp": "眠くてしかたがない。",
+        "vi": "Buồn ngủ không chịu được."
+      }
+    ]
+  },
+  {
+    "id": "n3-22",
+    "pattern": "〜に従って",
+    "phienAm": "にしたがって",
+    "meaning": "Theo / Khi... thì dần dần",
+    "level": "N3",
+    "structure": "[V thể từ điển / N] + に従って",
+    "explanation": "Cùng chiều hướng thay đổi; hoặc tuân theo quy tắc.",
+    "examples": [
+      {
+        "jp": "春になるに従って、暖かくなります。",
+        "vi": "Khi dần vào mùa xuân, trời ấm dần lên."
+      },
+      {
+        "jp": "規則に従って行動してください。",
+        "vi": "Hãy hành động theo quy tắc."
+      }
+    ]
+  },
+  {
+    "id": "n3-23",
+    "pattern": "〜につれて",
+    "phienAm": "につれて",
+    "meaning": "Cùng với / Khi... dần dần",
+    "level": "N3",
+    "structure": "[V thể từ điển / N] + につれて",
+    "explanation": "Hai sự việc thay đổi cùng chiều song song.",
+    "examples": [
+      {
+        "jp": "時間が経つにつれて、痛みが和らいだ。",
+        "vi": "Theo thời gian trôi qua, cơn đau dịu dần."
+      },
+      {
+        "jp": "経験が増えるにつれて、自信がついてきた。",
+        "vi": "Khi kinh nghiệm tăng lên, sự tự tin cũng theo đó mà lên."
+      }
+    ]
+  },
+  {
+    "id": "n3-24",
+    "pattern": "〜にしたがって",
+    "phienAm": "にしたがって",
+    "meaning": "Theo / Phụ thuộc vào",
+    "level": "N3",
+    "structure": "[V thể từ điển / N] + にしたがって",
+    "explanation": "(xem 〜に従って ở trên)",
+    "examples": [
+      {
+        "jp": "説明書に従って、組み立ててください。",
+        "vi": "Hãy lắp ráp theo hướng dẫn."
+      },
+      {
+        "jp": "年齢を重ねるにしたがって、記憶力が低下する。",
+        "vi": "Khi tuổi tác tăng lên, trí nhớ cũng giảm."
+      }
+    ]
+  },
+  {
+    "id": "n3-25",
+    "pattern": "〜に加えて",
+    "phienAm": "にくわえて",
+    "meaning": "Thêm vào đó / Hơn nữa",
+    "level": "N3",
+    "structure": "[N] + に加えて",
+    "explanation": "Thêm vào một điều đã có sẵn.",
+    "examples": [
+      {
+        "jp": "技術に加えて、経験も必要です。",
+        "vi": "Ngoài kỹ thuật, kinh nghiệm cũng cần thiết."
+      },
+      {
+        "jp": "寒さに加えて、風も強くなってきた。",
+        "vi": "Thêm vào cái lạnh, gió cũng bắt đầu mạnh lên."
+      }
+    ]
+  },
+  {
+    "id": "n3-26",
+    "pattern": "〜上で",
+    "phienAm": "うえで",
+    "meaning": "Sau khi / Trên cơ sở",
+    "level": "N3",
+    "structure": "[V-た / N + の] + 上で",
+    "explanation": "① Sau khi hoàn thành; ② Trên cơ sở, nền tảng của.",
+    "examples": [
+      {
+        "jp": "よく考えた上で、決めます。",
+        "vi": "Sau khi suy nghĩ kỹ, tôi sẽ quyết định."
+      },
+      {
+        "jp": "信頼関係の上で、話し合いができます。",
+        "vi": "Trên cơ sở tin tưởng lẫn nhau mới có thể đàm thoại được."
+      }
+    ]
+  },
+  {
+    "id": "n3-27",
+    "pattern": "〜からといって",
+    "phienAm": "からといって",
+    "meaning": "Chỉ vì... mà nói rằng / Dù là vì",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường] + からといって",
+    "explanation": "Phê phán hoặc bác bỏ lý do không chính đáng.",
+    "examples": [
+      {
+        "jp": "忙しいからといって、食事を抜いてはいけない。",
+        "vi": "Chỉ vì bận mà không ăn là không được."
+      },
+      {
+        "jp": "外国人だからといって、差別してはいけない。",
+        "vi": "Không được phân biệt đối xử chỉ vì là người nước ngoài."
+      }
+    ]
+  },
+  {
+    "id": "n3-28",
+    "pattern": "〜おかげで",
+    "phienAm": "おかげで",
+    "meaning": "Nhờ...",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường / N + の] + おかげで",
+    "explanation": "Nguyên nhân dẫn đến kết quả tốt (cảm ơn).",
+    "examples": [
+      {
+        "jp": "先生のおかげで、合格できました。",
+        "vi": "Nhờ thầy, tôi đã đậu được."
+      },
+      {
+        "jp": "みなさんのおかげで、プロジェクトが成功しました。",
+        "vi": "Nhờ mọi người, dự án đã thành công."
+      }
+    ]
+  },
+  {
+    "id": "n3-29",
+    "pattern": "〜せいで",
+    "phienAm": "せいで",
+    "meaning": "Vì / Do (nguyên nhân tiêu cực)",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường / N + の] + せいで",
+    "explanation": "Nguyên nhân dẫn đến kết quả xấu (đổ lỗi).",
+    "examples": [
+      {
+        "jp": "暑さのせいで、食欲がない。",
+        "vi": "Vì trời nóng nên tôi không có cảm giác ăn."
+      },
+      {
+        "jp": "彼のせいで、計画が台無しになった。",
+        "vi": "Vì anh ấy mà kế hoạch bị hỏng."
+      }
+    ]
+  },
+  {
+    "id": "n3-30",
+    "pattern": "〜はもちろん",
+    "phienAm": "はもちろん",
+    "meaning": "Dĩ nhiên là... và còn...",
+    "level": "N3",
+    "structure": "[N] + はもちろん（のこと）、[N/V] + も",
+    "explanation": "Nhấn mạnh điều hiển nhiên, rồi thêm điều nữa.",
+    "examples": [
+      {
+        "jp": "彼は英語はもちろん、中国語も話せます。",
+        "vi": "Anh ấy ngoài tiếng Anh dĩ nhiên còn nói được tiếng Trung."
+      },
+      {
+        "jp": "週末はもちろん、平日も忙しい。",
+        "vi": "Không chỉ cuối tuần mà ngày thường cũng bận."
+      }
+    ]
+  },
+  {
+    "id": "n3-31",
+    "pattern": "〜というより",
+    "phienAm": "というより",
+    "meaning": "Nói đúng hơn là / Thay vì nói là",
+    "level": "N3",
+    "structure": "[V/N/Adj] + というより",
+    "explanation": "Sửa lại cách diễn đạt, đưa ra cách nói chính xác hơn.",
+    "examples": [
+      {
+        "jp": "難しいというより、面倒くさいんです。",
+        "vi": "Nói đúng hơn là phiền phức, chứ không phải khó."
+      },
+      {
+        "jp": "友達というより、もう家族みたいな存在だ。",
+        "vi": "Nói đúng hơn là giống gia đình hơn là bạn bè."
+      }
+    ]
+  },
+  {
+    "id": "n3-32",
+    "pattern": "〜とともに",
+    "phienAm": "とともに",
+    "meaning": "Cùng với / Khi... thì đồng thời",
+    "level": "N3",
+    "structure": "[V thể từ điển / N] + とともに",
+    "explanation": "Đồng thời hoặc đi kèm.",
+    "examples": [
+      {
+        "jp": "時代の変化とともに、生活も変わった。",
+        "vi": "Cùng với sự thay đổi của thời đại, cuộc sống cũng thay đổi."
+      },
+      {
+        "jp": "彼と一緒に、夢を実現したい。",
+        "vi": "Tôi muốn thực hiện ước mơ cùng với anh ấy."
+      }
+    ]
+  },
+  {
+    "id": "n3-33",
+    "pattern": "〜を通して / 〜を通じて",
+    "phienAm": "をとおして",
+    "meaning": "Thông qua / Xuyên suốt",
+    "level": "N3",
+    "structure": "[N] + を通して/を通じて",
+    "explanation": "Phương tiện, kênh; hoặc trong suốt khoảng thời gian.",
+    "examples": [
+      {
+        "jp": "インターネットを通じて、世界中の人と繋がれる。",
+        "vi": "Thông qua Internet, có thể kết nối với mọi người trên thế giới."
+      },
+      {
+        "jp": "一年を通して、この地域は暖かい。",
+        "vi": "Suốt cả năm, vùng này ấm áp."
+      }
+    ]
+  },
+  {
+    "id": "n3-34",
+    "pattern": "〜にかけては",
+    "phienAm": "にかけては",
+    "meaning": "Về mặt / Xét về",
+    "level": "N3",
+    "structure": "[N] + にかけては",
+    "explanation": "Về mặt một lĩnh vực, khả năng nào đó đặc biệt.",
+    "examples": [
+      {
+        "jp": "料理にかけては、彼女に誰もかなわない。",
+        "vi": "Về mặt nấu ăn, không ai qua được cô ấy."
+      },
+      {
+        "jp": "スポーツにかけては自信があります。",
+        "vi": "Tôi tự tin về thể thao."
+      }
+    ]
+  },
+  {
+    "id": "n3-35",
+    "pattern": "〜に関わらず",
+    "phienAm": "にかかわらず",
+    "meaning": "Bất kể / Không phân biệt",
+    "level": "N3",
+    "structure": "[N / V-う / V-まい / Adj] + に関わらず",
+    "explanation": "Bất kể điều kiện nào cũng vậy.",
+    "examples": [
+      {
+        "jp": "天気に関わらず、試合を行います。",
+        "vi": "Bất kể thời tiết thế nào, trận đấu vẫn sẽ diễn ra."
+      },
+      {
+        "jp": "年齢に関わらず、誰でも参加できます。",
+        "vi": "Bất kể tuổi tác, ai cũng có thể tham gia."
+      }
+    ]
+  },
+  {
+    "id": "n3-36",
+    "pattern": "〜に当たって",
+    "phienAm": "にあたって",
+    "meaning": "Nhân dịp / Vào lúc",
+    "level": "N3",
+    "structure": "[V thể từ điển / N] + に当たって",
+    "explanation": "Dùng trong văn trang trọng để đánh dấu thời điểm quan trọng.",
+    "examples": [
+      {
+        "jp": "卒業に当たって、一言ご挨拶申し上げます。",
+        "vi": "Nhân dịp tốt nghiệp, cho phép tôi nói đôi lời."
+      },
+      {
+        "jp": "試験を受けるに当たって、準備が大切です。",
+        "vi": "Vào lúc dự thi, việc chuẩn bị rất quan trọng."
+      }
+    ]
+  },
+  {
+    "id": "n3-37",
+    "pattern": "〜に際して",
+    "phienAm": "にさいして",
+    "meaning": "Khi / Nhân dịp (quan trọng)",
+    "level": "N3",
+    "structure": "[V thể từ điển / N] + に際して",
+    "explanation": "Dùng trong văn viết trang trọng cho thời điểm/sự kiện quan trọng.",
+    "examples": [
+      {
+        "jp": "ご結婚に際して、お祝い申し上げます。",
+        "vi": "Nhân dịp kết hôn, xin chúc mừng."
+      },
+      {
+        "jp": "渡航に際して、パスポートが必要です。",
+        "vi": "Khi xuất cảnh, cần có hộ chiếu."
+      }
+    ]
+  },
+  {
+    "id": "n3-38",
+    "pattern": "〜ないことには",
+    "phienAm": "ないことには",
+    "meaning": "Nếu không... thì không thể",
+    "level": "N3",
+    "structure": "[V-ない] + ことには",
+    "explanation": "Điều kiện bắt buộc: nếu điều kiện đó không thỏa mãn thì không thể.",
+    "examples": [
+      {
+        "jp": "実際に使ってみないことには、わからない。",
+        "vi": "Nếu không thực sự dùng thử thì không thể biết."
+      },
+      {
+        "jp": "話し合わないことには、解決できない。",
+        "vi": "Nếu không nói chuyện thì không thể giải quyết được."
+      }
+    ]
+  },
+  {
+    "id": "n3-39",
+    "pattern": "〜ように見える",
+    "phienAm": "ようにみえる",
+    "meaning": "Trông có vẻ...",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường / N + の] + ように見える",
+    "explanation": "Đánh giá bề ngoài.",
+    "examples": [
+      {
+        "jp": "彼は疲れているように見えます。",
+        "vi": "Anh ấy trông có vẻ mệt."
+      },
+      {
+        "jp": "元気なように見えるけど、実は心配だ。",
+        "vi": "Trông có vẻ khỏe nhưng thực ra tôi đang lo lắng."
+      }
+    ]
+  },
+  {
+    "id": "n3-40",
+    "pattern": "〜ずにはいられない",
+    "phienAm": "ずにはいられない",
+    "meaning": "Không thể không... (bản năng)",
+    "level": "N3",
+    "structure": "[V-ない] + ずにはいられない",
+    "explanation": "Không thể cưỡng lại, không kiểm soát được cảm xúc/hành động.",
+    "examples": [
+      {
+        "jp": "彼の話を聞いて、笑わずにはいられなかった。",
+        "vi": "Nghe câu chuyện của anh ấy, không thể không cười."
+      },
+      {
+        "jp": "その映画を見て、泣かずにはいられなかった。",
+        "vi": "Xem phim đó không thể không khóc."
+      }
+    ]
+  },
+  {
+    "id": "n3-41",
+    "pattern": "〜始末だ",
+    "phienAm": "しまつだ",
+    "meaning": "Đến mức / Tệ đến nỗi",
+    "level": "N3",
+    "structure": "[V thể từ điển / N の] + 始末だ",
+    "explanation": "Kết cục xấu, không mong đợi.",
+    "examples": [
+      {
+        "jp": "借金がどんどん増えて、家まで売る始末だ。",
+        "vi": "Nợ ngày càng tăng, đến mức phải bán nhà."
+      },
+      {
+        "jp": "口論になって、泣く始末だった。",
+        "vi": "Đến mức cãi nhau rồi khóc."
+      }
+    ]
+  },
+  {
+    "id": "n3-42",
+    "pattern": "〜に相違ない",
+    "phienAm": "にそういない",
+    "meaning": "Chắc chắn là / Nhất định là",
+    "level": "N3",
+    "structure": "[V/Adj thể thông thường / N] + に相違ない",
+    "explanation": "Khẳng định chắc chắn, thường trong văn viết.",
+    "examples": [
+      {
+        "jp": "これは彼の作品に相違ない。",
+        "vi": "Đây chắc chắn là tác phẩm của anh ấy."
+      },
+      {
+        "jp": "成功するに相違ない。",
+        "vi": "Chắc chắn sẽ thành công."
+      }
+    ]
+  },
+  {
+    "id": "n3-43",
+    "pattern": "〜かねる",
+    "phienAm": "かねる",
+    "meaning": "Khó mà / Không thể (khiêm tốn)",
+    "level": "N3",
+    "structure": "[V-gốc ます] + かねる",
+    "explanation": "Từ chối lịch sự, không thể làm vì lý do nào đó.",
+    "examples": [
+      {
+        "jp": "その件については、お答えしかねます。",
+        "vi": "Về vấn đề đó, tôi thực khó có thể trả lời."
+      },
+      {
+        "jp": "一人では決めかねます。",
+        "vi": "Tôi khó mà quyết định một mình được."
+      }
+    ]
+  },
+  {
+    "id": "n3-44",
+    "pattern": "〜かねない",
+    "phienAm": "かねない",
+    "meaning": "Có thể xảy ra (nguy cơ)",
+    "level": "N3",
+    "structure": "[V-gốc ます] + かねない",
+    "explanation": "Cảnh báo về khả năng điều xấu có thể xảy ra.",
+    "examples": [
+      {
+        "jp": "このまま放置すれば、大問題になりかねない。",
+        "vi": "Nếu cứ bỏ qua như vậy, có thể sẽ thành vấn đề lớn."
+      },
+      {
+        "jp": "無理をすると、病気になりかねない。",
+        "vi": "Nếu cố quá có thể sẽ bị ốm đấy."
+      }
     ]
   }
 ]

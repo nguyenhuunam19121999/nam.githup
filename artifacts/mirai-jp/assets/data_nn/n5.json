@@ -5,23 +5,1161 @@
     "phienAm": "です",
     "meaning": "Là (lịch sự)",
     "level": "N5",
-    "structure": "[N/Aな] + です\n[Aい] + です",
-    "explanation": "Trợ động từ lịch sự, dùng để khẳng định ở thì hiện tại với danh từ và tính từ.",
+    "structure": "[N/Aな] + です",
+    "explanation": "Trợ động từ lịch sự, khẳng định ở thì hiện tại. Phủ định: ではありません. Quá khứ: でした.",
     "examples": [
-      { "jp": "私は学生です。", "vi": "Tôi là học sinh." },
-      { "jp": "この本は面白いです。", "vi": "Quyển sách này thú vị." }
+      {
+        "jp": "私は学生です。",
+        "vi": "Tôi là học sinh."
+      },
+      {
+        "jp": "これはペンです。",
+        "vi": "Đây là bút."
+      }
     ]
   },
   {
     "id": "n5-2",
     "pattern": "〜ます",
     "phienAm": "ます",
-    "meaning": "Thể lịch sự của động từ",
+    "meaning": "Thể lịch sự",
     "level": "N5",
-    "structure": "[V (gốc ます)] + ます",
-    "explanation": "Đuôi 「ます」biến động từ về thể lịch sự. Phủ định: ません. Quá khứ: ました.",
+    "structure": "[V-gốc] + ます",
+    "explanation": "Biến động từ về thể lịch sự. Phủ định: ません. Quá khứ: ました. Tương lai/thói quen: ます.",
     "examples": [
-      { "jp": "毎日学校へ行きます。", "vi": "Hàng ngày tôi đi học." }
+      {
+        "jp": "毎日学校へ行きます。",
+        "vi": "Hàng ngày tôi đi học."
+      },
+      {
+        "jp": "昨日映画を見ました。",
+        "vi": "Hôm qua tôi đã xem phim."
+      }
+    ]
+  },
+  {
+    "id": "n5-3",
+    "pattern": "〜は〜が",
+    "phienAm": "は〜が",
+    "meaning": "Chủ đề + Chủ ngữ",
+    "level": "N5",
+    "structure": "[N (chủ đề)] + は + [N (chủ ngữ)] + が + V/Adj",
+    "explanation": "は nêu chủ đề câu; が nêu chủ ngữ thực hiện hành động hoặc mang tính chất.",
+    "examples": [
+      {
+        "jp": "象は鼻が長い。",
+        "vi": "Con voi thì cái vòi dài."
+      },
+      {
+        "jp": "私はすしが好きです。",
+        "vi": "Tôi thích sushi."
+      }
+    ]
+  },
+  {
+    "id": "n5-4",
+    "pattern": "〜を",
+    "phienAm": "を",
+    "meaning": "Tân ngữ (object)",
+    "level": "N5",
+    "structure": "[N] + を + V (ngoại động từ)",
+    "explanation": "Trợ từ を đánh dấu tân ngữ trực tiếp — danh từ chịu tác động của động từ.",
+    "examples": [
+      {
+        "jp": "りんごを食べます。",
+        "vi": "Tôi ăn táo."
+      },
+      {
+        "jp": "本を読みます。",
+        "vi": "Tôi đọc sách."
+      }
+    ]
+  },
+  {
+    "id": "n5-5",
+    "pattern": "〜に",
+    "phienAm": "に",
+    "meaning": "Điểm đến / Thời gian / Mục đích",
+    "level": "N5",
+    "structure": "[Nơi/Thời gian] + に",
+    "explanation": "に chỉ điểm đến (đi đến đâu), thời điểm cụ thể (lúc mấy giờ, ngày bao nhiêu), hoặc mục đích.",
+    "examples": [
+      {
+        "jp": "東京に行きます。",
+        "vi": "Tôi đi đến Tokyo."
+      },
+      {
+        "jp": "三時に会いましょう。",
+        "vi": "Hãy gặp nhau lúc 3 giờ."
+      }
+    ]
+  },
+  {
+    "id": "n5-6",
+    "pattern": "〜で",
+    "phienAm": "で",
+    "meaning": "Địa điểm / Phương tiện / Nguyên nhân",
+    "level": "N5",
+    "structure": "[Nơi/Phương tiện] + で",
+    "explanation": "で chỉ nơi diễn ra hành động, phương tiện/công cụ được dùng, hoặc nguyên nhân.",
+    "examples": [
+      {
+        "jp": "図書館で勉強します。",
+        "vi": "Tôi học ở thư viện."
+      },
+      {
+        "jp": "バスで学校へ行きます。",
+        "vi": "Tôi đi học bằng xe buýt."
+      }
+    ]
+  },
+  {
+    "id": "n5-7",
+    "pattern": "〜と",
+    "phienAm": "と",
+    "meaning": "Và / Cùng với / Nếu",
+    "level": "N5",
+    "structure": "[N] + と + [N] / [V thể từ điển] + と",
+    "explanation": "と dùng liệt kê danh từ đầy đủ, chỉ người đồng hành, hoặc điều kiện tự nhiên (nếu～thì～).",
+    "examples": [
+      {
+        "jp": "りんごとみかんを買います。",
+        "vi": "Tôi mua táo và quýt."
+      },
+      {
+        "jp": "友達と映画を見ます。",
+        "vi": "Tôi xem phim cùng bạn."
+      }
+    ]
+  },
+  {
+    "id": "n5-8",
+    "pattern": "〜も",
+    "phienAm": "も",
+    "meaning": "Cũng",
+    "level": "N5",
+    "structure": "[N] + も + V/Adj",
+    "explanation": "Thay thế は hoặc が để thêm ý 'cũng'. Phủ định: 〜も〜ない (cũng không).",
+    "examples": [
+      {
+        "jp": "私も学生です。",
+        "vi": "Tôi cũng là học sinh."
+      },
+      {
+        "jp": "田中さんも来ました。",
+        "vi": "Bạn Tanaka cũng đã đến."
+      }
+    ]
+  },
+  {
+    "id": "n5-9",
+    "pattern": "〜の",
+    "phienAm": "の",
+    "meaning": "Sở hữu / Bổ nghĩa",
+    "level": "N5",
+    "structure": "[N1] + の + [N2]",
+    "explanation": "の nối hai danh từ, N1 bổ nghĩa hoặc sở hữu N2.",
+    "examples": [
+      {
+        "jp": "私の本です。",
+        "vi": "Đây là sách của tôi."
+      },
+      {
+        "jp": "日本語の先生です。",
+        "vi": "Đây là giáo viên tiếng Nhật."
+      }
+    ]
+  },
+  {
+    "id": "n5-10",
+    "pattern": "〜へ",
+    "phienAm": "へ",
+    "meaning": "Hướng đến",
+    "level": "N5",
+    "structure": "[Nơi] + へ + V (di chuyển)",
+    "explanation": "へ chỉ hướng di chuyển, gần giống に nhưng nhấn mạnh hướng chứ không phải điểm đến.",
+    "examples": [
+      {
+        "jp": "学校へ行きます。",
+        "vi": "Tôi đi về phía trường."
+      },
+      {
+        "jp": "日本へ来ました。",
+        "vi": "Tôi đã đến Nhật."
+      }
+    ]
+  },
+  {
+    "id": "n5-11",
+    "pattern": "〜から",
+    "phienAm": "から①",
+    "meaning": "Từ (điểm xuất phát)",
+    "level": "N5",
+    "structure": "[Nơi/Thời gian] + から",
+    "explanation": "から chỉ điểm xuất phát về không gian hoặc thời gian.",
+    "examples": [
+      {
+        "jp": "九時から授業が始まります。",
+        "vi": "Giờ học bắt đầu từ 9 giờ."
+      },
+      {
+        "jp": "東京から大阪まで行きます。",
+        "vi": "Tôi đi từ Tokyo đến Osaka."
+      }
+    ]
+  },
+  {
+    "id": "n5-12",
+    "pattern": "〜まで",
+    "phienAm": "まで",
+    "meaning": "Đến (điểm kết thúc)",
+    "level": "N5",
+    "structure": "[Nơi/Thời gian] + まで",
+    "explanation": "まで chỉ điểm kết thúc về không gian hoặc thời gian.",
+    "examples": [
+      {
+        "jp": "六時まで働きます。",
+        "vi": "Tôi làm việc đến 6 giờ."
+      },
+      {
+        "jp": "駅まで歩きます。",
+        "vi": "Tôi đi bộ đến ga."
+      }
+    ]
+  },
+  {
+    "id": "n5-13",
+    "pattern": "〜や〜など",
+    "phienAm": "や〜など",
+    "meaning": "Liệt kê không đầy đủ",
+    "level": "N5",
+    "structure": "[N1] + や + [N2] + など",
+    "explanation": "や liệt kê một số ví dụ tiêu biểu, など (v.v.) ngụ ý còn nhiều thứ khác.",
+    "examples": [
+      {
+        "jp": "机の上に本やノートなどがあります。",
+        "vi": "Trên bàn có sách, vở, v.v."
+      },
+      {
+        "jp": "果物やお菓子などを買いました。",
+        "vi": "Tôi đã mua trái cây, bánh kẹo, v.v."
+      }
+    ]
+  },
+  {
+    "id": "n5-14",
+    "pattern": "〜ね / 〜よ",
+    "phienAm": "ね・よ",
+    "meaning": "Xác nhận / Khẳng định",
+    "level": "N5",
+    "structure": "[Câu] + ね / よ",
+    "explanation": "ね: xác nhận/tìm sự đồng ý. よ: thông báo thông tin mới, khẳng định điều người nghe chưa biết.",
+    "examples": [
+      {
+        "jp": "いい天気ですね。",
+        "vi": "Trời đẹp nhỉ."
+      },
+      {
+        "jp": "あの映画はおもしろいですよ。",
+        "vi": "Phim đó hay đấy (tôi bảo bạn nhé)."
+      }
+    ]
+  },
+  {
+    "id": "n5-15",
+    "pattern": "〜ている",
+    "phienAm": "ている",
+    "meaning": "Đang / Trạng thái",
+    "level": "N5",
+    "structure": "[V-て] + いる",
+    "explanation": "Diễn tả: ① đang làm gì (tiến hành); ② trạng thái kết quả vẫn còn (kết quả). Lịch sự: ています.",
+    "examples": [
+      {
+        "jp": "今、ご飯を食べています。",
+        "vi": "Bây giờ tôi đang ăn cơm."
+      },
+      {
+        "jp": "窓が開いています。",
+        "vi": "Cửa sổ đang mở (trạng thái mở)."
+      }
+    ]
+  },
+  {
+    "id": "n5-16",
+    "pattern": "〜てください",
+    "phienAm": "てください",
+    "meaning": "Xin hãy...",
+    "level": "N5",
+    "structure": "[V-て] + ください",
+    "explanation": "Yêu cầu lịch sự: xin hãy làm gì. Phủ định (cấm): ないでください.",
+    "examples": [
+      {
+        "jp": "ここに名前を書いてください。",
+        "vi": "Hãy viết tên vào đây."
+      },
+      {
+        "jp": "静かにしてください。",
+        "vi": "Xin hãy giữ yên lặng."
+      }
+    ]
+  },
+  {
+    "id": "n5-17",
+    "pattern": "〜てもいいですか",
+    "phienAm": "てもいいですか",
+    "meaning": "Tôi có thể... không?",
+    "level": "N5",
+    "structure": "[V-て] + もいいですか",
+    "explanation": "Hỏi xin phép làm điều gì. Trả lời đồng ý: いいです/どうぞ. Từ chối: てはいけません.",
+    "examples": [
+      {
+        "jp": "ここに座ってもいいですか。",
+        "vi": "Tôi có thể ngồi ở đây không?"
+      },
+      {
+        "jp": "写真を撮ってもいいですか。",
+        "vi": "Tôi có thể chụp ảnh không?"
+      }
+    ]
+  },
+  {
+    "id": "n5-18",
+    "pattern": "〜てはいけません",
+    "phienAm": "てはいけません",
+    "meaning": "Không được... (cấm)",
+    "level": "N5",
+    "structure": "[V-て] + はいけません",
+    "explanation": "Cấm đoán: không được làm điều gì đó.",
+    "examples": [
+      {
+        "jp": "ここでタバコを吸ってはいけません。",
+        "vi": "Ở đây không được hút thuốc."
+      },
+      {
+        "jp": "授業中に話してはいけません。",
+        "vi": "Không được nói chuyện trong giờ học."
+      }
+    ]
+  },
+  {
+    "id": "n5-19",
+    "pattern": "〜なければなりません",
+    "phienAm": "なければなりません",
+    "meaning": "Phải...",
+    "level": "N5",
+    "structure": "[V-ない] + ければなりません",
+    "explanation": "Diễn tả nghĩa vụ, bắt buộc phải làm gì. Dạng thân mật: なきゃ.",
+    "examples": [
+      {
+        "jp": "宿題をしなければなりません。",
+        "vi": "Tôi phải làm bài tập về nhà."
+      },
+      {
+        "jp": "薬を飲まなければなりません。",
+        "vi": "Tôi phải uống thuốc."
+      }
+    ]
+  },
+  {
+    "id": "n5-20",
+    "pattern": "〜ないでください",
+    "phienAm": "ないでください",
+    "meaning": "Xin đừng...",
+    "level": "N5",
+    "structure": "[V-ない] + でください",
+    "explanation": "Yêu cầu không làm điều gì.",
+    "examples": [
+      {
+        "jp": "ここに入らないでください。",
+        "vi": "Xin đừng vào đây."
+      },
+      {
+        "jp": "写真を撮らないでください。",
+        "vi": "Xin đừng chụp ảnh."
+      }
+    ]
+  },
+  {
+    "id": "n5-21",
+    "pattern": "〜たい",
+    "phienAm": "たい",
+    "meaning": "Muốn làm...",
+    "level": "N5",
+    "structure": "[V-gốc ます] + たい",
+    "explanation": "Diễn tả ước muốn của người nói. Danh từ: [N] + がほしい.",
+    "examples": [
+      {
+        "jp": "日本へ行きたいです。",
+        "vi": "Tôi muốn đi Nhật."
+      },
+      {
+        "jp": "水が飲みたいです。",
+        "vi": "Tôi muốn uống nước."
+      }
+    ]
+  },
+  {
+    "id": "n5-22",
+    "pattern": "〜から②",
+    "phienAm": "から②",
+    "meaning": "Vì (nguyên nhân)",
+    "level": "N5",
+    "structure": "[Câu 1 (nguyên nhân)] + から、[Câu 2 (kết quả)]",
+    "explanation": "から① = từ (xuất phát); から② = vì (lý do). Người nói chủ động nêu lý do cho ý kiến/hành động.",
+    "examples": [
+      {
+        "jp": "雨が降っているから、傘を持っていきます。",
+        "vi": "Vì trời đang mưa nên tôi mang ô theo."
+      },
+      {
+        "jp": "眠いから、寝ます。",
+        "vi": "Vì buồn ngủ nên tôi đi ngủ."
+      }
+    ]
+  },
+  {
+    "id": "n5-23",
+    "pattern": "〜ので",
+    "phienAm": "ので",
+    "meaning": "Vì (khách quan)",
+    "level": "N5",
+    "structure": "[Câu 1 (nguyên nhân)] + ので、[Câu 2 (kết quả)]",
+    "explanation": "ので nghe khách quan, lịch sự hơn から. Dùng nhiều khi giải thích với người lớn tuổi/cấp trên.",
+    "examples": [
+      {
+        "jp": "電車が遅れたので、遅刻しました。",
+        "vi": "Vì tàu đến trễ nên tôi đến muộn."
+      },
+      {
+        "jp": "熱があるので、学校を休みます。",
+        "vi": "Vì bị sốt nên tôi nghỉ học."
+      }
+    ]
+  },
+  {
+    "id": "n5-24",
+    "pattern": "〜が (nhưng)",
+    "phienAm": "が",
+    "meaning": "Nhưng (nối câu)",
+    "level": "N5",
+    "structure": "[Câu 1] + が、[Câu 2]",
+    "explanation": "が nối hai câu có nội dung tương phản nhẹ (= nhưng, mặc dù). Nhẹ hơn でも.",
+    "examples": [
+      {
+        "jp": "日本語は難しいですが、面白いです。",
+        "vi": "Tiếng Nhật khó nhưng thú vị."
+      },
+      {
+        "jp": "行きたいですが、時間がありません。",
+        "vi": "Tôi muốn đi nhưng không có thời gian."
+      }
+    ]
+  },
+  {
+    "id": "n5-25",
+    "pattern": "〜けど / 〜けれど",
+    "phienAm": "けど",
+    "meaning": "Nhưng (thân mật)",
+    "level": "N5",
+    "structure": "[Câu 1] + けど/けれど、[Câu 2]",
+    "explanation": "けど là dạng nói thân mật của が. Dùng nhiều trong hội thoại.",
+    "examples": [
+      {
+        "jp": "おいしいけど、高いですね。",
+        "vi": "Ngon nhưng đắt nhỉ."
+      },
+      {
+        "jp": "行きたいけど、お金がない。",
+        "vi": "Muốn đi nhưng không có tiền."
+      }
+    ]
+  },
+  {
+    "id": "n5-26",
+    "pattern": "〜て (nối động từ)",
+    "phienAm": "〜て",
+    "meaning": "Và rồi / Nối hành động",
+    "level": "N5",
+    "structure": "[V1-て] + [V2]",
+    "explanation": "て form nối các động từ theo thứ tự thời gian, hoặc diễn tả cách thức.",
+    "examples": [
+      {
+        "jp": "シャワーを浴びて、朝ご飯を食べます。",
+        "vi": "Tắm xong rồi ăn sáng."
+      },
+      {
+        "jp": "歩いて学校へ行きます。",
+        "vi": "Tôi đi bộ đến trường."
+      }
+    ]
+  },
+  {
+    "id": "n5-27",
+    "pattern": "〜ましょう / 〜ませんか",
+    "phienAm": "ましょう",
+    "meaning": "Hãy cùng... / Mình cùng... nhé?",
+    "level": "N5",
+    "structure": "[V-gốc ます] + ましょう / ませんか",
+    "explanation": "ましょう: rủ mạnh. ませんか: rủ lịch sự hơn, dạng câu hỏi.",
+    "examples": [
+      {
+        "jp": "一緒に昼ご飯を食べましょう。",
+        "vi": "Hãy cùng ăn trưa."
+      },
+      {
+        "jp": "コーヒーでも飲みませんか。",
+        "vi": "Chúng ta cùng uống cà phê nhé?"
+      }
+    ]
+  },
+  {
+    "id": "n5-28",
+    "pattern": "〜どんな〜 / 〜どの",
+    "phienAm": "どんな/どの",
+    "meaning": "Loại nào / Cái nào",
+    "level": "N5",
+    "structure": "どんな + N / どの + N",
+    "explanation": "どんな hỏi về tính chất, loại. どの chỉ định một trong số nhiều vật cụ thể.",
+    "examples": [
+      {
+        "jp": "どんな音楽が好きですか。",
+        "vi": "Bạn thích loại nhạc nào?"
+      },
+      {
+        "jp": "どの本を読みますか。",
+        "vi": "Bạn đọc quyển sách nào?"
+      }
+    ]
+  },
+  {
+    "id": "n5-29",
+    "pattern": "〜くて / 〜で (nối tính từ)",
+    "phienAm": "くて・で",
+    "meaning": "Nối tính từ",
+    "level": "N5",
+    "structure": "[Aい → いくて] / [Aな → で] + tính từ/câu",
+    "explanation": "くて nối tính từ い; で (= なで) nối tính từ な.",
+    "examples": [
+      {
+        "jp": "この部屋は広くて明るいです。",
+        "vi": "Căn phòng này rộng và sáng."
+      },
+      {
+        "jp": "彼女はきれいで優しい人です。",
+        "vi": "Cô ấy là người đẹp và hiền."
+      }
+    ]
+  },
+  {
+    "id": "n5-30",
+    "pattern": "〜すぎる",
+    "phienAm": "すぎる",
+    "meaning": "Quá...",
+    "level": "N5",
+    "structure": "[V-gốc ます / Aい-い / Aな] + すぎる",
+    "explanation": "Diễn tả mức độ vượt quá giới hạn bình thường.",
+    "examples": [
+      {
+        "jp": "食べすぎて、お腹が痛い。",
+        "vi": "Ăn quá nhiều nên đau bụng."
+      },
+      {
+        "jp": "この映画は長すぎます。",
+        "vi": "Bộ phim này dài quá."
+      }
+    ]
+  },
+  {
+    "id": "n5-31",
+    "pattern": "〜ほうがいい",
+    "phienAm": "ほうがいい",
+    "meaning": "Nên...",
+    "level": "N5",
+    "structure": "[V-た / V-ない] + ほうがいい",
+    "explanation": "Lời khuyên. た + ほうがいい: nên làm. ない + ほうがいい: không nên làm.",
+    "examples": [
+      {
+        "jp": "早く寝たほうがいいですよ。",
+        "vi": "Bạn nên đi ngủ sớm đấy."
+      },
+      {
+        "jp": "お酒を飲まないほうがいいです。",
+        "vi": "Bạn không nên uống rượu."
+      }
+    ]
+  },
+  {
+    "id": "n5-32",
+    "pattern": "〜つもりだ",
+    "phienAm": "つもりだ",
+    "meaning": "Dự định / Có ý định",
+    "level": "N5",
+    "structure": "[V thể từ điển / V-ない] + つもりだ",
+    "explanation": "Diễn tả dự định, kế hoạch của người nói.",
+    "examples": [
+      {
+        "jp": "来年、日本へ行くつもりです。",
+        "vi": "Năm sau tôi dự định đi Nhật."
+      },
+      {
+        "jp": "お酒は飲まないつもりです。",
+        "vi": "Tôi dự định không uống rượu."
+      }
+    ]
+  },
+  {
+    "id": "n5-33",
+    "pattern": "〜たり〜たりする",
+    "phienAm": "たりたりする",
+    "meaning": "Khi thì... khi thì...",
+    "level": "N5",
+    "structure": "[V-た] + り + [V-た] + り + する",
+    "explanation": "Liệt kê một số hành động tiêu biểu trong một chuỗi, không đầy đủ.",
+    "examples": [
+      {
+        "jp": "週末は映画を見たり、本を読んだりします。",
+        "vi": "Cuối tuần tôi khi thì xem phim, khi thì đọc sách."
+      },
+      {
+        "jp": "彼は泣いたり笑ったりしている。",
+        "vi": "Anh ta lúc khóc lúc cười."
+      }
+    ]
+  },
+  {
+    "id": "n5-34",
+    "pattern": "〜てから",
+    "phienAm": "てから",
+    "meaning": "Sau khi (làm gì) thì...",
+    "level": "N5",
+    "structure": "[V-て] + から",
+    "explanation": "Hành động ở vế sau xảy ra sau khi hành động vế trước hoàn thành.",
+    "examples": [
+      {
+        "jp": "宿題をしてから、ゲームをします。",
+        "vi": "Làm bài tập xong mới chơi game."
+      },
+      {
+        "jp": "手を洗ってから、食べてください。",
+        "vi": "Rửa tay xong mới ăn nhé."
+      }
+    ]
+  },
+  {
+    "id": "n5-35",
+    "pattern": "〜前に",
+    "phienAm": "まえに",
+    "meaning": "Trước khi...",
+    "level": "N5",
+    "structure": "[V thể từ điển / N + の] + 前に",
+    "explanation": "Hành động ở vế sau xảy ra trước hành động vế trước.",
+    "examples": [
+      {
+        "jp": "寝る前に、歯を磨きます。",
+        "vi": "Trước khi ngủ, tôi đánh răng."
+      },
+      {
+        "jp": "出発の前に、荷物を確認してください。",
+        "vi": "Trước khi khởi hành, hãy kiểm tra hành lý."
+      }
+    ]
+  },
+  {
+    "id": "n5-36",
+    "pattern": "〜後で",
+    "phienAm": "あとで",
+    "meaning": "Sau khi...",
+    "level": "N5",
+    "structure": "[V-た / N + の] + 後で",
+    "explanation": "Hành động ở vế sau xảy ra sau hành động vế trước.",
+    "examples": [
+      {
+        "jp": "ご飯を食べた後で、散歩します。",
+        "vi": "Sau khi ăn cơm, tôi đi dạo."
+      },
+      {
+        "jp": "仕事の後で、飲みに行きませんか。",
+        "vi": "Sau giờ làm, chúng ta đi uống không?"
+      }
+    ]
+  },
+  {
+    "id": "n5-37",
+    "pattern": "〜ながら",
+    "phienAm": "ながら",
+    "meaning": "Vừa... vừa...",
+    "level": "N5",
+    "structure": "[V-gốc ます] + ながら",
+    "explanation": "Hai hành động xảy ra đồng thời, chủ thể là một người. Hành động chính ở vế sau.",
+    "examples": [
+      {
+        "jp": "音楽を聞きながら、料理します。",
+        "vi": "Tôi vừa nghe nhạc vừa nấu ăn."
+      },
+      {
+        "jp": "スマホを見ながら歩かないでください。",
+        "vi": "Đừng vừa nhìn điện thoại vừa đi."
+      }
+    ]
+  },
+  {
+    "id": "n5-38",
+    "pattern": "〜とき",
+    "phienAm": "とき",
+    "meaning": "Lúc / Khi",
+    "level": "N5",
+    "structure": "[V/Adj thể thường / N + の] + とき",
+    "explanation": "Diễn tả thời điểm xảy ra sự việc.",
+    "examples": [
+      {
+        "jp": "子供のとき、よく川で泳ぎました。",
+        "vi": "Hồi còn nhỏ, tôi hay bơi ở sông."
+      },
+      {
+        "jp": "困ったとき、相談してください。",
+        "vi": "Khi gặp khó khăn, hãy hỏi tôi."
+      }
+    ]
+  },
+  {
+    "id": "n5-39",
+    "pattern": "〜てもいい",
+    "phienAm": "てもいい",
+    "meaning": "Được phép... (không cần...)",
+    "level": "N5",
+    "structure": "[V-て] + もいい",
+    "explanation": "Cho phép làm điều gì. Cũng dùng để nói 'không sao nếu...'.",
+    "examples": [
+      {
+        "jp": "もう帰ってもいいですよ。",
+        "vi": "Bạn có thể về rồi đấy."
+      },
+      {
+        "jp": "ここで写真を撮ってもいいです。",
+        "vi": "Bạn được phép chụp ảnh ở đây."
+      }
+    ]
+  },
+  {
+    "id": "n5-40",
+    "pattern": "〜てしまう",
+    "phienAm": "てしまう",
+    "meaning": "Lỡ / Đã... mất (hối tiếc hoặc hoàn thành)",
+    "level": "N5",
+    "structure": "[V-て] + しまう",
+    "explanation": "Diễn tả: ① hành động hoàn toàn kết thúc; ② điều không mong muốn đã xảy ra (hối tiếc).",
+    "examples": [
+      {
+        "jp": "財布を忘れてしまいました。",
+        "vi": "Tôi đã quên mất ví."
+      },
+      {
+        "jp": "ケーキを全部食べてしまった。",
+        "vi": "Tôi đã ăn hết cả cái bánh mất rồi."
+      }
+    ]
+  },
+  {
+    "id": "n5-41",
+    "pattern": "〜てみる",
+    "phienAm": "てみる",
+    "meaning": "Thử (làm gì)",
+    "level": "N5",
+    "structure": "[V-て] + みる",
+    "explanation": "Thử làm điều gì để xem kết quả.",
+    "examples": [
+      {
+        "jp": "この料理を食べてみてください。",
+        "vi": "Hãy thử ăn món ăn này xem."
+      },
+      {
+        "jp": "新しい方法を試してみます。",
+        "vi": "Tôi sẽ thử phương pháp mới xem sao."
+      }
+    ]
+  },
+  {
+    "id": "n5-42",
+    "pattern": "〜ておく",
+    "phienAm": "ておく",
+    "meaning": "Làm trước để chuẩn bị",
+    "level": "N5",
+    "structure": "[V-て] + おく",
+    "explanation": "Làm điều gì trước để chuẩn bị cho tương lai.",
+    "examples": [
+      {
+        "jp": "旅行の前に、ホテルを予約しておきます。",
+        "vi": "Trước chuyến đi, tôi đặt khách sạn trước."
+      },
+      {
+        "jp": "資料を読んでおいてください。",
+        "vi": "Hãy đọc tài liệu trước nhé."
+      }
+    ]
+  },
+  {
+    "id": "n5-43",
+    "pattern": "〜てある",
+    "phienAm": "てある",
+    "meaning": "Đã được... (trạng thái kết quả)",
+    "level": "N5",
+    "structure": "[V (ngoại động từ) -て] + ある",
+    "explanation": "Diễn tả trạng thái kết quả còn tồn tại sau khi ai đó chủ động làm gì.",
+    "examples": [
+      {
+        "jp": "黒板に名前が書いてある。",
+        "vi": "Trên bảng đã có tên được viết sẵn."
+      },
+      {
+        "jp": "冷蔵庫にビールが冷やしてある。",
+        "vi": "Trong tủ lạnh đã có bia được làm lạnh sẵn."
+      }
+    ]
+  },
+  {
+    "id": "n5-44",
+    "pattern": "〜てあげる / 〜てもらう / 〜てくれる",
+    "phienAm": "てあげる・てもらう・てくれる",
+    "meaning": "Cho / Nhận / Được cho",
+    "level": "N5",
+    "structure": "[V-て] + あげる/もらう/くれる",
+    "explanation": "あげる: tôi làm cho người khác. もらう: tôi nhận được từ người khác. くれる: người khác làm cho tôi.",
+    "examples": [
+      {
+        "jp": "友達に本を貸してあげました。",
+        "vi": "Tôi đã cho bạn mượn sách."
+      },
+      {
+        "jp": "先生に教えてもらいました。",
+        "vi": "Tôi đã được thầy dạy cho."
+      },
+      {
+        "jp": "彼女がケーキを作ってくれました。",
+        "vi": "Cô ấy đã làm bánh cho tôi."
+      }
+    ]
+  },
+  {
+    "id": "n5-45",
+    "pattern": "〜かもしれない",
+    "phienAm": "かもしれない",
+    "meaning": "Có thể / Có lẽ",
+    "level": "N5",
+    "structure": "[V/Adj thể thường / N (だ→Ø)] + かもしれない",
+    "explanation": "Diễn tả sự không chắc chắn, xác suất khoảng 50%.",
+    "examples": [
+      {
+        "jp": "明日、雨が降るかもしれません。",
+        "vi": "Ngày mai có thể sẽ mưa."
+      },
+      {
+        "jp": "彼女は知っているかもしれない。",
+        "vi": "Cô ấy có thể đã biết rồi."
+      }
+    ]
+  },
+  {
+    "id": "n5-46",
+    "pattern": "〜でしょう / 〜だろう",
+    "phienAm": "でしょう",
+    "meaning": "Chắc là / Có lẽ (phỏng đoán)",
+    "level": "N5",
+    "structure": "[V/Adj thể thường / N] + でしょう",
+    "explanation": "Phỏng đoán hoặc tìm sự đồng ý. でしょう (lịch sự), だろう (thân mật).",
+    "examples": [
+      {
+        "jp": "明日は晴れるでしょう。",
+        "vi": "Ngày mai có lẽ trời sẽ nắng."
+      },
+      {
+        "jp": "彼も来るでしょう。",
+        "vi": "Anh ấy chắc cũng sẽ đến nhỉ?"
+      }
+    ]
+  },
+  {
+    "id": "n5-47",
+    "pattern": "〜らしい",
+    "phienAm": "らしい",
+    "meaning": "Có vẻ (nghe nói)",
+    "level": "N5",
+    "structure": "[V/Adj thể thường / N] + らしい",
+    "explanation": "Dựa trên thông tin nghe được hoặc bằng chứng khách quan để phỏng đoán.",
+    "examples": [
+      {
+        "jp": "田中さんは結婚するらしい。",
+        "vi": "Nghe nói bạn Tanaka sắp kết hôn."
+      },
+      {
+        "jp": "外は寒いらしいです。",
+        "vi": "Có vẻ ngoài trời lạnh."
+      }
+    ]
+  },
+  {
+    "id": "n5-48",
+    "pattern": "〜ようだ / 〜みたいだ",
+    "phienAm": "ようだ",
+    "meaning": "Có vẻ như (quan sát)",
+    "level": "N5",
+    "structure": "[V/Adj thể thường / N + の] + ようだ",
+    "explanation": "Phỏng đoán dựa trên quan sát trực tiếp. みたいだ là dạng thân mật.",
+    "examples": [
+      {
+        "jp": "彼は怒っているようです。",
+        "vi": "Có vẻ như anh ấy đang giận."
+      },
+      {
+        "jp": "子供みたいな字ですね。",
+        "vi": "Chữ viết trông như của trẻ con nhỉ."
+      }
+    ]
+  },
+  {
+    "id": "n5-49",
+    "pattern": "〜そうだ (様態)",
+    "phienAm": "そうだ（様態）",
+    "meaning": "Trông có vẻ... (nhìn thấy)",
+    "level": "N5",
+    "structure": "[V-gốc ます / Aい-い / Aな] + そうだ",
+    "explanation": "Phỏng đoán dựa trên vẻ bề ngoài, trực tiếp quan sát. Khác với そうだ (nghe nói).",
+    "examples": [
+      {
+        "jp": "このケーキはおいしそうです。",
+        "vi": "Cái bánh này trông có vẻ ngon."
+      },
+      {
+        "jp": "空が暗くなってきた。雨が降りそうだ。",
+        "vi": "Bầu trời tối dần. Có vẻ sắp mưa."
+      }
+    ]
+  },
+  {
+    "id": "n5-50",
+    "pattern": "〜と思う",
+    "phienAm": "とおもう",
+    "meaning": "Tôi nghĩ rằng...",
+    "level": "N5",
+    "structure": "[V/Adj thể thường / N + だ] + と思う",
+    "explanation": "Diễn tả ý kiến, suy nghĩ của người nói.",
+    "examples": [
+      {
+        "jp": "この映画はおもしろいと思います。",
+        "vi": "Tôi nghĩ bộ phim này thú vị."
+      },
+      {
+        "jp": "彼は来ないと思います。",
+        "vi": "Tôi nghĩ anh ấy sẽ không đến."
+      }
+    ]
+  },
+  {
+    "id": "n5-51",
+    "pattern": "〜と言う",
+    "phienAm": "という",
+    "meaning": "Gọi là / Nói rằng",
+    "level": "N5",
+    "structure": "[「Câu」] + と言う / [N] + という + N",
+    "explanation": "Trích dẫn lời nói; hoặc định nghĩa/tên gọi của một thứ gì.",
+    "examples": [
+      {
+        "jp": "先生は「明日テストがある」と言いました。",
+        "vi": "Thầy nói rằng 'Ngày mai có bài kiểm tra'."
+      },
+      {
+        "jp": "東京という都市に住んでいます。",
+        "vi": "Tôi sống ở thành phố tên là Tokyo."
+      }
+    ]
+  },
+  {
+    "id": "n5-52",
+    "pattern": "〜より",
+    "phienAm": "より",
+    "meaning": "So sánh hơn",
+    "level": "N5",
+    "structure": "[N1] + より + [N2の方が] + Adj",
+    "explanation": "より: hơn. Cấu trúc so sánh: A よりB の方がAdjだ.",
+    "examples": [
+      {
+        "jp": "バスより電車のほうが速いです。",
+        "vi": "Tàu điện nhanh hơn xe buýt."
+      },
+      {
+        "jp": "昨日より今日のほうが暖かい。",
+        "vi": "Hôm nay ấm hơn hôm qua."
+      }
+    ]
+  },
+  {
+    "id": "n5-53",
+    "pattern": "〜ほど",
+    "phienAm": "ほど",
+    "meaning": "Đến mức / Càng... càng...",
+    "level": "N5",
+    "structure": "[N/V] + ほど",
+    "explanation": "ほど: mức độ tương đương; N + ほど + Adj (neg) → 'không... bằng'; V + ほど + Adj.",
+    "examples": [
+      {
+        "jp": "彼女は泣くほど嬉しかった。",
+        "vi": "Cô ấy vui đến mức khóc."
+      },
+      {
+        "jp": "日本語は思ったほど難しくない。",
+        "vi": "Tiếng Nhật không khó như tôi nghĩ."
+      }
+    ]
+  },
+  {
+    "id": "n5-54",
+    "pattern": "〜だけ",
+    "phienAm": "だけ",
+    "meaning": "Chỉ / Mỗi",
+    "level": "N5",
+    "structure": "[N/V] + だけ",
+    "explanation": "Giới hạn số lượng hoặc hành động ở mức tối thiểu.",
+    "examples": [
+      {
+        "jp": "一つだけ買います。",
+        "vi": "Tôi chỉ mua một cái."
+      },
+      {
+        "jp": "水だけ飲んでいます。",
+        "vi": "Tôi chỉ uống nước."
+      }
+    ]
+  },
+  {
+    "id": "n5-55",
+    "pattern": "〜しか〜ない",
+    "phienAm": "しかない",
+    "meaning": "Chỉ có... thôi (hạn chế)",
+    "level": "N5",
+    "structure": "[N/V] + しか + V (phủ định)",
+    "explanation": "Diễn tả số lượng ít ỏi hơn mong muốn, nhấn mạnh sự thiếu hụt. Luôn dùng với phủ định.",
+    "examples": [
+      {
+        "jp": "お金が百円しかありません。",
+        "vi": "Tôi chỉ có 100 yên thôi."
+      },
+      {
+        "jp": "一つしか食べていない。",
+        "vi": "Tôi chỉ ăn có một cái thôi."
+      }
+    ]
+  },
+  {
+    "id": "n5-56",
+    "pattern": "〜ために",
+    "phienAm": "ために",
+    "meaning": "Để / Vì (mục đích)",
+    "level": "N5",
+    "structure": "[V thể từ điển / N + の] + ために",
+    "explanation": "Mục đích hoặc nguyên nhân (vì ai). Khác: ために (nguyên nhân, lý do).",
+    "examples": [
+      {
+        "jp": "日本語を勉強するために、日本へ来ました。",
+        "vi": "Tôi đến Nhật để học tiếng Nhật."
+      },
+      {
+        "jp": "健康のために、毎日運動します。",
+        "vi": "Vì sức khoẻ, tôi tập thể dục mỗi ngày."
+      }
+    ]
+  },
+  {
+    "id": "n5-57",
+    "pattern": "〜ても",
+    "phienAm": "ても",
+    "meaning": "Dù / Cho dù",
+    "level": "N5",
+    "structure": "[V-て / Aい-くて / Aな-で / Nで] + も",
+    "explanation": "Diễn tả điều kiện tương phản: 'dù có... đi nữa thì...'.",
+    "examples": [
+      {
+        "jp": "雨が降っても、出かけます。",
+        "vi": "Dù trời mưa, tôi vẫn ra ngoài."
+      },
+      {
+        "jp": "高くても、買います。",
+        "vi": "Dù đắt, tôi vẫn mua."
+      }
+    ]
+  },
+  {
+    "id": "n5-58",
+    "pattern": "〜ば",
+    "phienAm": "ば",
+    "meaning": "Nếu (điều kiện)",
+    "level": "N5",
+    "structure": "[V-えば / Aい-ければ / Aな-なら / N-なら]",
+    "explanation": "Điều kiện giả định. Thường dùng khi kết quả phụ thuộc vào điều kiện.",
+    "examples": [
+      {
+        "jp": "もっと練習すれば、上手になります。",
+        "vi": "Nếu luyện tập nhiều hơn sẽ giỏi hơn."
+      },
+      {
+        "jp": "安ければ、買います。",
+        "vi": "Nếu rẻ thì tôi sẽ mua."
+      }
+    ]
+  },
+  {
+    "id": "n5-59",
+    "pattern": "〜たら",
+    "phienAm": "たら",
+    "meaning": "Nếu / Khi (điều kiện/thời gian)",
+    "level": "N5",
+    "structure": "[V-たら / Aい-かったら / N-だったら]",
+    "explanation": "Điều kiện hoặc thời điểm. たら nhấn mạnh sau khi vế trước hoàn tất.",
+    "examples": [
+      {
+        "jp": "雨が降ったら、家にいます。",
+        "vi": "Nếu trời mưa, tôi ở nhà."
+      },
+      {
+        "jp": "春になったら、花見をしましょう。",
+        "vi": "Khi đến mùa xuân, hãy cùng ngắm hoa anh đào nhé."
+      }
+    ]
+  },
+  {
+    "id": "n5-60",
+    "pattern": "〜なら",
+    "phienAm": "なら",
+    "meaning": "Nếu đã vậy / Trong trường hợp",
+    "level": "N5",
+    "structure": "[N / V thể thông thường] + なら",
+    "explanation": "Điều kiện giả định dựa trên thông tin người nói vừa nghe hoặc biết.",
+    "examples": [
+      {
+        "jp": "日本へ行くなら、京都がおすすめです。",
+        "vi": "Nếu bạn đi Nhật, tôi khuyên đến Kyoto."
+      },
+      {
+        "jp": "学生なら、割引があります。",
+        "vi": "Nếu là sinh viên sẽ có giảm giá."
+      }
+    ]
+  },
+  {
+    "id": "n5-61",
+    "pattern": "〜のに",
+    "phienAm": "のに",
+    "meaning": "Mặc dù / Trong khi đó... (tương phản)",
+    "level": "N5",
+    "structure": "[V/Adj thể thông thường] + のに",
+    "explanation": "Diễn tả sự tương phản, thất vọng: 'mặc dù đã... vậy mà...'.",
+    "examples": [
+      {
+        "jp": "一生懸命勉強したのに、試験に落ちた。",
+        "vi": "Mặc dù học rất chăm chỉ vậy mà vẫn thi rớt."
+      },
+      {
+        "jp": "頼んだのに、来なかった。",
+        "vi": "Mặc dù đã mời mà vẫn không đến."
+      }
     ]
   }
 ]
