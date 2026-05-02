@@ -1,5 +1,5 @@
 import { useRouter } from "expo-router";
-import React, { useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Dimensions,
   Keyboard,
@@ -119,6 +119,22 @@ export default function HomeScreen() {
   const [bannerIdx, setBannerIdx] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
   const bannerRef = useRef<ScrollView>(null);
+  const isPaused = useRef(false);
+
+  const scrollToNext = useCallback(() => {
+    if (isPaused.current) return;
+    setBannerIdx((prev) => {
+      const next = (prev + 1) % BANNERS.length;
+      bannerRef.current?.scrollTo({ x: next * BANNER_WIDTH, animated: true });
+      return next;
+    });
+  }, []);
+
+  useEffect(() => {
+    const id = setInterval(scrollToNext, 2000);
+    return () => clearInterval(id);
+  }, [scrollToNext]);
+
   const q = normalize(query.trim());
   const vocabResults = useMemo(() => filterVocab(VOCAB, q), [q]);
 
@@ -228,7 +244,8 @@ export default function HomeScreen() {
               horizontal
               pagingEnabled
               showsHorizontalScrollIndicator={false}
-              onMomentumScrollEnd={onBannerScroll}
+              onScrollBeginDrag={() => { isPaused.current = true; }}
+              onMomentumScrollEnd={(e) => { onBannerScroll(e); isPaused.current = false; }}
               decelerationRate="fast"
               snapToInterval={BANNER_WIDTH}
             >
