@@ -11,6 +11,7 @@
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
@@ -642,6 +643,7 @@ export default function KanjiListScreen() {
           </View>
         </View>
       </Modal>
+      <BottomTabBar />
     </View>
   );
 }

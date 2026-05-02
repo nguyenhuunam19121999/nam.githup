@@ -19,6 +19,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Speech from "expo-speech";
 import React, { useEffect, useMemo, useRef, useState } from "react";
@@ -1243,6 +1244,7 @@ export default function FlashcardScreen() {
             setShowBookmarksOnly(true);
           }}
         />
+      <BottomTabBar />
       </View>
     </TouchableWithoutFeedback>
   );

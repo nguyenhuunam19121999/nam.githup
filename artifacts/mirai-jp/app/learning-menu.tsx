@@ -8,6 +8,7 @@
 
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import {
   Alert,
   ScrollView,
@@ -213,6 +214,7 @@ export default function LearningMenuScreen() {
           ))}
         </View>
       </ScrollView>
+      <BottomTabBar />
     </View>
   );
 }

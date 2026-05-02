@@ -7,6 +7,7 @@
 
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import {
   ScrollView,
   StatusBar,
@@ -145,6 +146,7 @@ export default function BookSelectScreen() {
           </TouchableOpacity>
         ))}
       </ScrollView>
+      <BottomTabBar />
     </View>
   );
 }

@@ -8,6 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import React, { useMemo, useState } from "react";
 import {
   Alert,
@@ -287,6 +288,7 @@ export default function GrammarScreen() {
         onClose={() => setLevelSheet(false)}
         renderLabel={(v) => v}
       />
+      <BottomTabBar />
     </View>
   );
 }

@@ -8,6 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useLocalSearchParams, useRouter } from "expo-router";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import React, { useMemo, useState } from "react";
 import {
   ScrollView,
@@ -270,6 +271,7 @@ export default function KanjiDetailScreen() {
           </TouchableOpacity>
         </View>
       </SafeAreaView>
+      <BottomTabBar />
     </View>
   );
 }

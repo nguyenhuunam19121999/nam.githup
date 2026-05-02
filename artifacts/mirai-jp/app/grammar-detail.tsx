@@ -10,6 +10,7 @@
 
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import {
   ScrollView,
   StatusBar,
@@ -156,6 +157,7 @@ export default function GrammarDetailScreen() {
 
         <View style={{ height: 40 }} />
       </ScrollView>
+      <BottomTabBar />
     </View>
   );
 }
