@@ -8,6 +8,7 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
+  Switch,
   Text,
   TextInput,
   TouchableOpacity,
@@ -120,12 +121,11 @@ export default function HomeScreen() {
   const [menuVisible, setMenuVisible] = useState(false);
   const bannerRef = useRef<ScrollView>(null);
   const autoScrollRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const isPausedRef = useRef(false);
+  const [autoScrollEnabled, setAutoScrollEnabled] = useState(false);
 
   const AUTO_SCROLL_MS = 2000;
 
   const scrollToNext = useCallback(() => {
-    if (isPausedRef.current) return;
     setBannerIdx((prev) => {
       const next = (prev + 1) % BANNERS.length;
       bannerRef.current?.scrollTo({ x: next * BANNER_WIDTH, animated: true });
@@ -134,21 +134,24 @@ export default function HomeScreen() {
   }, []);
 
   useEffect(() => {
+    if (!autoScrollEnabled) {
+      if (autoScrollRef.current) clearInterval(autoScrollRef.current);
+      return;
+    }
     autoScrollRef.current = setInterval(scrollToNext, AUTO_SCROLL_MS);
     return () => {
       if (autoScrollRef.current) clearInterval(autoScrollRef.current);
     };
-  }, [scrollToNext]);
+  }, [autoScrollEnabled, scrollToNext]);
 
   const pauseAutoScroll = useCallback(() => {
-    isPausedRef.current = true;
     if (autoScrollRef.current) clearInterval(autoScrollRef.current);
   }, []);
 
   const resumeAutoScroll = useCallback(() => {
-    isPausedRef.current = false;
+    if (!autoScrollEnabled) return;
     autoScrollRef.current = setInterval(scrollToNext, AUTO_SCROLL_MS);
-  }, [scrollToNext]);
+  }, [autoScrollEnabled, scrollToNext]);
 
   const q = normalize(query.trim());
   const vocabResults = useMemo(() => filterVocab(VOCAB, q), [q]);
@@ -293,6 +296,18 @@ export default function HomeScreen() {
                   style={[s.dot, i === bannerIdx && s.dotActive]}
                 />
               ))}
+              <View style={s.autoScrollToggle}>
+                <Text style={s.autoScrollLabel}>
+                  {autoScrollEnabled ? "▶" : "⏸"}
+                </Text>
+                <Switch
+                  value={autoScrollEnabled}
+                  onValueChange={setAutoScrollEnabled}
+                  trackColor={{ false: "#cbd5e1", true: TEAL }}
+                  thumbColor="#fff"
+                  style={{ transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }] }}
+                />
+              </View>
             </View>
           </View>
 
@@ -601,8 +616,19 @@ const s = StyleSheet.create({
   dotsRow: {
     flexDirection: "row",
     justifyContent: "center",
+    alignItems: "center",
     gap: 6,
     marginTop: 10,
+  },
+  autoScrollToggle: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: 8,
+    gap: 2,
+  },
+  autoScrollLabel: {
+    fontSize: 10,
+    color: "#94a3b8",
   },
   dot: {
     width: 6,
