@@ -525,7 +525,7 @@ const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(0,0,0,0.28)",
+    backgroundColor: "rgba(0,0,0,0.13)",
     borderRadius: 10,
     paddingHorizontal: 16,
     height: 50,
