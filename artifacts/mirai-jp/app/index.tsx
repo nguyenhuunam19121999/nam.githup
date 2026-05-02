@@ -83,7 +83,7 @@ const JLPT_COLORS: Record<string, { badge: string; outer: string }> = {
 const BANNERS = [
   {
     id: "promo",
-    title: "Nhật ngữ chuyên ngành",
+    title: "Nhật ngữ chuyên ngành  ",
     subtitle: "Đúng 100%",
     badge: "Chạm là nhớ\nhọc là mơ",
     cta: "Học ngay",
