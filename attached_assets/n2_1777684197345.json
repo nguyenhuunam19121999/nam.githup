@@ -1,0 +1,60 @@
+[
+  {
+    "id": "n2-001",
+    "kanji": "様",
+    "hanViet": "DẠNG",
+    "kunyomi": ["さま"],
+    "onyomi": ["ヨウ"],
+    "strokes": 14,
+    "level": "N2",
+    "frequency": 493,
+    "components": [
+      { "kanji": "木", "hanViet": "MỘC" },
+      { "kanji": "羊", "hanViet": "DƯƠNG" }
+    ],
+    "meanings": ["Dạng, kiểu, hình thức", "Ngài, ông/bà (kính ngữ)"],
+    "examples": [
+      { "jp": "様子", "reading": "ようす", "vi": "Tình trạng, bộ dạng" },
+      { "jp": "同様", "reading": "どうよう", "vi": "Giống nhau" },
+      { "jp": "お客様", "reading": "おきゃくさま", "vi": "Quý khách" }
+    ]
+  },
+  {
+    "id": "n2-002",
+    "kanji": "確",
+    "hanViet": "XÁC",
+    "kunyomi": ["たし.か", "たし.かめる"],
+    "onyomi": ["カク"],
+    "strokes": 15,
+    "level": "N2",
+    "frequency": 339,
+    "components": [
+      { "kanji": "石", "hanViet": "THẠCH" },
+      { "kanji": "隺", "hanViet": "HẠC" }
+    ],
+    "meanings": ["Chắc chắn", "Xác nhận"],
+    "examples": [
+      { "jp": "確認", "reading": "かくにん", "vi": "Xác nhận" },
+      { "jp": "正確", "reading": "せいかく", "vi": "Chính xác" }
+    ]
+  },
+  {
+    "id": "n2-003",
+    "kanji": "認",
+    "hanViet": "NHẬN",
+    "kunyomi": ["みと.める"],
+    "onyomi": ["ニン"],
+    "strokes": 14,
+    "level": "N2",
+    "frequency": 289,
+    "components": [
+      { "kanji": "言", "hanViet": "NGÔN" },
+      { "kanji": "忍", "hanViet": "NHẪN" }
+    ],
+    "meanings": ["Công nhận", "Nhận biết"],
+    "examples": [
+      { "jp": "認める", "reading": "みとめる", "vi": "Công nhận" },
+      { "jp": "確認", "reading": "かくにん", "vi": "Xác nhận" }
+    ]
+  }
+]

@@ -1,0 +1,74 @@
+[
+  {
+    "id": "n4-001",
+    "kanji": "海",
+    "hanViet": "HẢI",
+    "kunyomi": ["うみ"],
+    "onyomi": ["カイ"],
+    "strokes": 9,
+    "level": "N4",
+    "frequency": 302,
+    "components": [
+      { "kanji": "氵", "hanViet": "THUỶ (bộ nước)" },
+      { "kanji": "毎", "hanViet": "MỖI" }
+    ],
+    "meanings": ["Biển, đại dương"],
+    "examples": [
+      { "jp": "海外", "reading": "かいがい", "vi": "Nước ngoài" },
+      { "jp": "海岸", "reading": "かいがん", "vi": "Bờ biển" }
+    ]
+  },
+  {
+    "id": "n4-002",
+    "kanji": "安",
+    "hanViet": "AN",
+    "kunyomi": ["やす.い", "やす.まる"],
+    "onyomi": ["アン"],
+    "strokes": 6,
+    "level": "N4",
+    "frequency": 234,
+    "components": [
+      { "kanji": "宀", "hanViet": "MIÊN (mái nhà)" },
+      { "kanji": "女", "hanViet": "NỮ" }
+    ],
+    "meanings": ["An toàn, yên ổn", "Rẻ, giá thấp"],
+    "examples": [
+      { "jp": "安全", "reading": "あんぜん", "vi": "An toàn" },
+      { "jp": "安い", "reading": "やすい", "vi": "Rẻ" }
+    ]
+  },
+  {
+    "id": "n4-003",
+    "kanji": "春",
+    "hanViet": "XUÂN",
+    "kunyomi": ["はる"],
+    "onyomi": ["シュン"],
+    "strokes": 9,
+    "level": "N4",
+    "frequency": 645,
+    "components": [
+      { "kanji": "日", "hanViet": "NHẬT" }
+    ],
+    "meanings": ["Mùa xuân", "Tuổi trẻ"],
+    "examples": [
+      { "jp": "春休み", "reading": "はるやすみ", "vi": "Kỳ nghỉ xuân" },
+      { "jp": "青春", "reading": "せいしゅん", "vi": "Tuổi thanh xuân" }
+    ]
+  },
+  {
+    "id": "n4-004",
+    "kanji": "工",
+    "hanViet": "CÔNG",
+    "kunyomi": [],
+    "onyomi": ["コウ", "ク"],
+    "strokes": 3,
+    "level": "N4",
+    "frequency": 296,
+    "components": [{ "kanji": "工", "hanViet": "CÔNG" }],
+    "meanings": ["Thợ, công việc thủ công", "Chế tạo"],
+    "examples": [
+      { "jp": "工場", "reading": "こうじょう", "vi": "Nhà máy" },
+      { "jp": "工事", "reading": "こうじ", "vi": "Thi công" }
+    ]
+  }
+]
