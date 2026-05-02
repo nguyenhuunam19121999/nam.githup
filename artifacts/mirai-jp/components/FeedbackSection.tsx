@@ -29,7 +29,8 @@ interface Feedback {
   createdAt: number;
 }
 
-const PRIMARY = "#3182ce";
+// Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
+const PRIMARY = "#4ECDC4";
 
 interface Props {
   pageKey: string; // duy nhất cho từng trang để tách biệt thread
