@@ -1,5 +1,5 @@
 import { useRouter } from "expo-router";
-import React, { useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Dimensions,
   Keyboard,
@@ -119,6 +119,36 @@ export default function HomeScreen() {
   const [bannerIdx, setBannerIdx] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
   const bannerRef = useRef<ScrollView>(null);
+  const autoScrollRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const isPausedRef = useRef(false);
+
+  const AUTO_SCROLL_MS = 2000;
+
+  const scrollToNext = useCallback(() => {
+    if (isPausedRef.current) return;
+    setBannerIdx((prev) => {
+      const next = (prev + 1) % BANNERS.length;
+      bannerRef.current?.scrollTo({ x: next * BANNER_WIDTH, animated: true });
+      return next;
+    });
+  }, []);
+
+  useEffect(() => {
+    autoScrollRef.current = setInterval(scrollToNext, AUTO_SCROLL_MS);
+    return () => {
+      if (autoScrollRef.current) clearInterval(autoScrollRef.current);
+    };
+  }, [scrollToNext]);
+
+  const pauseAutoScroll = useCallback(() => {
+    isPausedRef.current = true;
+    if (autoScrollRef.current) clearInterval(autoScrollRef.current);
+  }, []);
+
+  const resumeAutoScroll = useCallback(() => {
+    isPausedRef.current = false;
+    autoScrollRef.current = setInterval(scrollToNext, AUTO_SCROLL_MS);
+  }, [scrollToNext]);
 
   const q = normalize(query.trim());
   const vocabResults = useMemo(() => filterVocab(VOCAB, q), [q]);
@@ -229,7 +259,11 @@ export default function HomeScreen() {
               horizontal
               pagingEnabled
               showsHorizontalScrollIndicator={false}
-              onMomentumScrollEnd={onBannerScroll}
+              onMomentumScrollEnd={(e) => {
+                onBannerScroll(e);
+                resumeAutoScroll();
+              }}
+              onScrollBeginDrag={pauseAutoScroll}
               decelerationRate="fast"
               snapToInterval={BANNER_WIDTH}
             >
