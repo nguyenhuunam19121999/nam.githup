@@ -23,8 +23,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
+// Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const BLUE = "#4ECDC4";
+// Phiên bản sáng hơn của teal — dùng cho text phụ trên nền tối
 const BLUE_LIGHT = "#7EDDD9";
+// Màu cam — dùng cho nhãn JLPT level
 const ORANGE = "#F59E0B";
 
 export default function GrammarDetailScreen() {

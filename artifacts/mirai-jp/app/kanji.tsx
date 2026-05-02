@@ -22,7 +22,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 
+// Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const BLUE = "#4ECDC4";
+// Màu đỏ dùng riêng cho chữ Kanji
 const RED = "#E03131";
 
 export default function KanjiListScreen() {

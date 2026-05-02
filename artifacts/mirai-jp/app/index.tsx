@@ -19,6 +19,9 @@ import { ALL_VOCAB, type RawVocab } from "../assets/vocab";
 import { AuthMenu } from "../components/AuthMenu";
 import { useAuth } from "../hooks/useAuth";
 
+// ─── Màu chủ đạo ──────────────────────────────────────────────────────────────
+// TEAL      : #4ECDC4  rgb(78, 205, 196) — xanh ngọc, dùng cho header, nút, badge
+// TEAL_DARK : #3BB3AC                    — phiên bản tối hơn, dùng cho viền/hover
 const TEAL = "#4ECDC4";
 const TEAL_DARK = "#3BB3AC";
 

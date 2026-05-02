@@ -25,7 +25,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getGrammar, type GrammarItem } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
+// Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const BLUE = "#4ECDC4";
+// Phiên bản tối hơn của teal — dùng cho viền, hover
 const BLUE_DARK = "#3BB3AC";
 
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;

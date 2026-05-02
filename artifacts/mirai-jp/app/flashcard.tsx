@@ -1,3 +1,23 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// flashcard.tsx
+// Màn hình học từ vựng dạng thẻ lật (flashcard) — trung tâm của app.
+//
+// Chế độ:
+//   📇 Flashcard  — lật thẻ xem mặt trước/sau, có thể tự động cuộn
+//   📝 Quiz       — 4 đáp án trắc nghiệm (tối đa 15 câu)
+//   ✍️ Luyện viết — nhập nghĩa tiếng Việt để kiểm tra
+//
+// Tính năng chính:
+//   • Tự động lật thẻ (mặc định 2s, cấu hình được)
+//   • Đánh dấu từ yêu thích (lưu AsyncStorage riêng từng tài khoản)
+//   • Tìm kiếm nhanh trong danh sách
+//   • Xáo trộn / đặt lại thứ tự thẻ
+//   • Phát âm tiếng Nhật (expo-speech)
+//   • Thống kê học tập
+//
+// Màu chủ đạo: #4ECDC4  rgb(78, 205, 196) — đồng bộ toàn app
+// ─────────────────────────────────────────────────────────────────────────────
+
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Speech from "expo-speech";

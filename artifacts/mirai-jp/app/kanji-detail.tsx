@@ -23,7 +23,9 @@ import { getKanjiById } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 
+// Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const BLUE = "#4ECDC4";
+// Phiên bản tối hơn của teal — dùng cho nút, viền
 const BLUE_DARK = "#3BB3AC";
 
 export default function KanjiDetailScreen() {
