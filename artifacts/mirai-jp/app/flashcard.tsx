@@ -859,12 +859,6 @@ export default function FlashcardScreen() {
               <Text style={s.subtitle}>{ALL.length} từ vựng tiếng Nhật</Text>
             </View>
             <View style={s.headerButtons}>
-              {/* Logo badge nhỏ trong header trắng */}
-              <View style={s.logoBadgeWhite}>
-                <Text style={s.logoBadgeWhiteText}>Mirai</Text>
-                <Text style={s.logoBadgeWhiteDot}>.</Text>
-                <Text style={s.logoBadgeWhiteJP}>JP</Text>
-              </View>
               <TouchableOpacity
                 style={s.statsBtn}
                 onPress={() => setShowStats(true)}

@@ -332,12 +332,6 @@ export default function KanjiListScreen() {
 
         {/* Nút Thống kê + Menu */}
         <View style={s.headerBtns}>
-          {/* Logo badge nhỏ trong header trắng */}
-          <View style={s.logoBadgeWhite}>
-            <Text style={s.logoBadgeWhiteText}>Mirai</Text>
-            <Text style={s.logoBadgeWhiteDot}>.</Text>
-            <Text style={s.logoBadgeWhiteJP}>JP</Text>
-          </View>
           <TouchableOpacity style={s.headerActionBtn} onPress={() => setShowStats(true)} activeOpacity={0.8}>
             <Text style={s.statsBtnText}>📊</Text>
           </TouchableOpacity>
