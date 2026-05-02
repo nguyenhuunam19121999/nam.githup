@@ -84,9 +84,9 @@ const BANNERS = [
   {
     id: "promo",
     title: "Nhật ngữ chuyên ngành",
-    subtitle: "Giảm 80%",
-    badge: "MỪNG ĐẠI LỄ\n30/4 — 1/5",
-    cta: "Đăng ký ngay",
+    subtitle: "Đúng 100%",
+    badge: "Chạm là nhớ\nhọc là mơ",
+    cta: "Học ngay",
     bg: ["#F97316", "#EA580C"],
   },
   {
@@ -305,7 +305,7 @@ export default function HomeScreen() {
             <Text style={s.searchIcon}>🔍</Text>
             <TextInput
               style={s.searchInput}
-              placeholder="Tìm từ vựng (kanji, hiragana, nghĩa)..."
+              placeholder="Tìm kiếm (kanji, hiragana, nghĩa)..."
               placeholderTextColor="#94a3b8"
               value={query}
               onChangeText={setQuery}
@@ -469,7 +469,7 @@ export default function HomeScreen() {
               activeOpacity={0.85}
               onPress={() => goFlashcard()}
             >
-              <Text style={s.mascotEmoji}>🏠</Text>
+              <Text style={s.mascotEmoji}>🦉</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -525,13 +525,13 @@ const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",
-    paddingHorizontal: 4,
+    paddingHorizontal: 8,
     height: 50,
     marginRight: 10,
   },
   logoText: {
     color: "#fff",
-    fontSize: 22,
+    fontSize: 27,
     fontWeight: "800",
     letterSpacing: 0.3,
   },

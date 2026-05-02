@@ -1,20 +1,308 @@
 [
   {
-    "kanji": "飲食",
-    "hira": "いんしょく",
-    "han": "Ẩm thực",
-    "nghia": "ăn uống2s"
+    "kanji": "あくまで",
+    "hira": "あくまで",
+    "han": "Vẫn cứ/Đến cùng",
+    "nghia": "đến cùng, vẫn cứ"
   },
   {
-    "kanji": "製造",
-    "hira": "せいぞう",
-    "han": "Chế tạo",
-    "nghia": "sản xuất"
+    "kanji": "あらかじめ",
+    "hira": "あらかじめ",
+    "han": "Trước/Trước đó",
+    "nghia": "trước đó, sự trước"
   },
   {
-    "kanji": "食品",
-    "hira": "しょくひん",
-    "han": "Thực phẩm",
-    "nghia": "thực phẩm"
+    "kanji": "一方",
+    "hira": "いっぽう",
+    "han": "Nhất Phương/Một mặt",
+    "nghia": "một mặt, trong khi đó"
+  },
+  {
+    "kanji": "いわば",
+    "hira": "いわば",
+    "han": "Có thể nói/Nói cách khác",
+    "nghia": "có thể nói, nói cách khác"
+  },
+  {
+    "kanji": "おのずと",
+    "hira": "おのずと",
+    "han": "Tự nhiên/Tự động",
+    "nghia": "tự nhiên, tự động"
+  },
+  {
+    "kanji": "却って",
+    "hira": "かえって",
+    "han": "Cải/Ngược lại",
+    "nghia": "ngược lại, trái lại"
+  },
+  {
+    "kanji": "各々",
+    "hira": "おのおの",
+    "han": "Mỗi/Mỗi người",
+    "nghia": "mỗi người, mỗi cái"
+  },
+  {
+    "kanji": "かつて",
+    "hira": "かつて",
+    "han": "Xưa/Trước đây",
+    "nghia": "trước đây, từng"
+  },
+  {
+    "kanji": "仮に",
+    "hira": "かりに",
+    "han": "Giả/Giả sử",
+    "nghia": "giả sử"
+  },
+  {
+    "kanji": "形成",
+    "hira": "けいせい",
+    "han": "Hình Thành/HT",
+    "nghia": "hình thành"
+  },
+  {
+    "kanji": "見通し",
+    "hira": "みとおし",
+    "han": "Triển vọng/Dự đoán",
+    "nghia": "dự đoán, triển vọng"
+  },
+  {
+    "kanji": "根本",
+    "hira": "こんぽん",
+    "han": "Căn Bổn/Cơ bản",
+    "nghia": "cơ bản, căn bản"
+  },
+  {
+    "kanji": "差し迫る",
+    "hira": "さしせまる",
+    "han": "Cấp/Sắp đến",
+    "nghia": "cấp bách, sắp xảy ra"
+  },
+  {
+    "kanji": "したがって",
+    "hira": "したがって",
+    "han": "Vì thế/Do đó",
+    "nghia": "do đó, vì thế"
+  },
+  {
+    "kanji": "実は",
+    "hira": "じつは",
+    "han": "Thực/Thực ra",
+    "nghia": "thực ra"
+  },
+  {
+    "kanji": "自ら",
+    "hira": "みずから",
+    "han": "Tự/Tự mình",
+    "nghia": "tự mình"
+  },
+  {
+    "kanji": "素早い",
+    "hira": "すばやい",
+    "han": "Nhanh/Mau lẹ",
+    "nghia": "nhanh nhẹn, mau lẹ"
+  },
+  {
+    "kanji": "逆に",
+    "hira": "ぎゃくに",
+    "han": "Nghịch/Ngược lại",
+    "nghia": "ngược lại"
+  },
+  {
+    "kanji": "とりわけ",
+    "hira": "とりわけ",
+    "han": "Đặc biệt/Nhất là",
+    "nghia": "đặc biệt, nhất là"
+  },
+  {
+    "kanji": "なお",
+    "hira": "なお",
+    "han": "Thêm/Hơn nữa",
+    "nghia": "hơn nữa, ngoài ra"
+  },
+  {
+    "kanji": "にもかかわらず",
+    "hira": "にもかかわらず",
+    "han": "Dù/Mặc dù",
+    "nghia": "mặc dù, bất chấp"
+  },
+  {
+    "kanji": "のみならず",
+    "hira": "のみならず",
+    "han": "Chẳng những/Không chỉ",
+    "nghia": "không chỉ, chẳng những"
+  },
+  {
+    "kanji": "はたして",
+    "hira": "はたして",
+    "han": "Quả/Quả thật",
+    "nghia": "quả thật, thực sự"
+  },
+  {
+    "kanji": "ひいては",
+    "hira": "ひいては",
+    "han": "Hơn nữa/Thậm chí",
+    "nghia": "thậm chí, và xa hơn là"
+  },
+  {
+    "kanji": "まして",
+    "hira": "まして",
+    "han": "Hơn nữa/Huống chi",
+    "nghia": "huống chi, hơn nữa là"
+  },
+  {
+    "kanji": "むしろ",
+    "hira": "むしろ",
+    "han": "Thà/Thay vào đó",
+    "nghia": "thà, thay vào đó"
+  },
+  {
+    "kanji": "もとより",
+    "hira": "もとより",
+    "han": "Vốn dĩ/Đương nhiên",
+    "nghia": "đương nhiên, vốn dĩ"
+  },
+  {
+    "kanji": "やがて",
+    "hira": "やがて",
+    "han": "Sắp/Không lâu nữa",
+    "nghia": "không lâu nữa, sắp"
+  },
+  {
+    "kanji": "やむを得ない",
+    "hira": "やむをえない",
+    "han": "Bất đắc dĩ/Đành phải",
+    "nghia": "đành phải, bất đắc dĩ"
+  },
+  {
+    "kanji": "ゆえに",
+    "hira": "ゆえに",
+    "han": "Do/Vì thế",
+    "nghia": "vì thế, do đó"
+  },
+  {
+    "kanji": "一概に",
+    "hira": "いちがいに",
+    "han": "Một phần/Không thể nói chung",
+    "nghia": "không thể nói một chiều"
+  },
+  {
+    "kanji": "必ずしも",
+    "hira": "かならずしも",
+    "han": "Chưa hẳn/Không nhất thiết",
+    "nghia": "không nhất thiết, chưa hẳn"
+  },
+  {
+    "kanji": "言い換えれば",
+    "hira": "いいかえれば",
+    "han": "Nói cách khác",
+    "nghia": "nói cách khác"
+  },
+  {
+    "kanji": "基づく",
+    "hira": "もとづく",
+    "han": "Dựa trên/Căn cứ vào",
+    "nghia": "dựa trên, căn cứ vào"
+  },
+  {
+    "kanji": "及ぶ",
+    "hira": "およぶ",
+    "han": "Đạt tới/Lên đến",
+    "nghia": "đạt tới, lên đến"
+  },
+  {
+    "kanji": "かかわる",
+    "hira": "かかわる",
+    "han": "Liên quan/Liên đến",
+    "nghia": "liên quan đến"
+  },
+  {
+    "kanji": "に対して",
+    "hira": "にたいして",
+    "han": "Đối với/Với",
+    "nghia": "đối với"
+  },
+  {
+    "kanji": "に関して",
+    "hira": "にかんして",
+    "han": "Về/Liên quan",
+    "nghia": "về, liên quan đến"
+  },
+  {
+    "kanji": "に伴う",
+    "hira": "にともなう",
+    "han": "Kèm theo/Đi cùng",
+    "nghia": "kèm theo, đi cùng với"
+  },
+  {
+    "kanji": "に応じて",
+    "hira": "におうじて",
+    "han": "Tuỳ/Tuỳ theo",
+    "nghia": "tuỳ theo"
+  },
+  {
+    "kanji": "に基づいて",
+    "hira": "にもとづいて",
+    "han": "Dựa vào/Căn cứ",
+    "nghia": "dựa vào"
+  },
+  {
+    "kanji": "にとって",
+    "hira": "にとって",
+    "han": "Đối với/Với",
+    "nghia": "đối với"
+  },
+  {
+    "kanji": "向けて",
+    "hira": "むけて",
+    "han": "Hướng tới",
+    "nghia": "hướng tới"
+  },
+  {
+    "kanji": "もとに",
+    "hira": "もとに",
+    "han": "Dưới/Dựa trên",
+    "nghia": "dưới, dựa trên"
+  },
+  {
+    "kanji": "わずか",
+    "hira": "わずか",
+    "han": "Chút ít/Vài",
+    "nghia": "chút ít, chỉ vài"
+  },
+  {
+    "kanji": "といっても",
+    "hira": "といっても",
+    "han": "Dù/Tuy nói thế",
+    "nghia": "tuy nói thế, dù vậy"
+  },
+  {
+    "kanji": "そもそも",
+    "hira": "そもそも",
+    "han": "Vốn/Từ đầu",
+    "nghia": "vốn dĩ, từ đầu"
+  },
+  {
+    "kanji": "もはや",
+    "hira": "もはや",
+    "han": "Đã không còn/Không còn nữa",
+    "nghia": "không còn nữa"
+  },
+  {
+    "kanji": "しかしながら",
+    "hira": "しかしながら",
+    "han": "Tuy nhiên/Dù vậy",
+    "nghia": "tuy nhiên, dù vậy"
+  },
+  {
+    "kanji": "断言する",
+    "hira": "だんげんする",
+    "han": "Khẳng định/Quả quyết",
+    "nghia": "khẳng định, quả quyết"
+  },
+  {
+    "kanji": "見直す",
+    "hira": "みなおす",
+    "han": "Xem lại/Xem xét lại",
+    "nghia": "xem xét lại"
   }
 ]

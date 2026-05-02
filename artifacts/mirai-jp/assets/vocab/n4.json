@@ -1,20 +1,1244 @@
 [
   {
-    "kanji": "飲食",
-    "hira": "いんしょく",
-    "han": "Ẩm thực",
-    "nghia": "ăn uống4"
+    "kanji": "会う",
+    "hira": "あう",
+    "han": "Hội/Gặp",
+    "nghia": "gặp gỡ"
   },
   {
-    "kanji": "製造",
-    "hira": "せいぞう",
-    "han": "Chế tạo",
+    "kanji": "集まる",
+    "hira": "あつまる",
+    "han": "Tập/Tụ",
+    "nghia": "tập trung lại, tụ họp"
+  },
+  {
+    "kanji": "集める",
+    "hira": "あつめる",
+    "han": "Tập/Thu",
+    "nghia": "thu thập, tập hợp"
+  },
+  {
+    "kanji": "遊ぶ",
+    "hira": "あそぶ",
+    "han": "Du/Chơi",
+    "nghia": "chơi đùa, vui chơi"
+  },
+  {
+    "kanji": "あげる",
+    "hira": "あげる",
+    "han": "Cấp/Tặng",
+    "nghia": "cho, tặng (người dưới)"
+  },
+  {
+    "kanji": "歩く",
+    "hira": "あるく",
+    "han": "Bộ/Đi",
+    "nghia": "đi bộ"
+  },
+  {
+    "kanji": "洗う",
+    "hira": "あらう",
+    "han": "Tiển/Rửa",
+    "nghia": "rửa, giặt"
+  },
+  {
+    "kanji": "ある",
+    "hira": "ある",
+    "han": "Hữu/Có",
+    "nghia": "có (vật vô tri)"
+  },
+  {
+    "kanji": "案内",
+    "hira": "あんない",
+    "han": "Án Nội/HD",
+    "nghia": "hướng dẫn, chỉ đường"
+  },
+  {
+    "kanji": "言う",
+    "hira": "いう",
+    "han": "Ngôn/Nói",
+    "nghia": "nói"
+  },
+  {
+    "kanji": "いくら",
+    "hira": "いくら",
+    "han": "Đa thiểu/Bao",
+    "nghia": "bao nhiêu (tiền)"
+  },
+  {
+    "kanji": "急ぐ",
+    "hira": "いそぐ",
+    "han": "Cấp/Vội",
+    "nghia": "vội vàng, gấp"
+  },
+  {
+    "kanji": "今",
+    "hira": "いま",
+    "han": "Kim/Bây giờ",
+    "nghia": "bây giờ, lúc này"
+  },
+  {
+    "kanji": "意味",
+    "hira": "いみ",
+    "han": "Ý Nghĩa/ÝN",
+    "nghia": "ý nghĩa"
+  },
+  {
+    "kanji": "いる",
+    "hira": "いる",
+    "han": "Cư/Ở",
+    "nghia": "có, ở (người/động vật)"
+  },
+  {
+    "kanji": "受ける",
+    "hira": "うける",
+    "han": "Thụ/Nhận",
+    "nghia": "nhận, tham dự (thi)"
+  },
+  {
+    "kanji": "動く",
+    "hira": "うごく",
+    "han": "Động/Chuyển",
+    "nghia": "di chuyển, hoạt động"
+  },
+  {
+    "kanji": "生まれる",
+    "hira": "うまれる",
+    "han": "Sinh/Ra đời",
+    "nghia": "được sinh ra"
+  },
+  {
+    "kanji": "運動",
+    "hira": "うんどう",
+    "han": "Vận Động/VĐ",
+    "nghia": "vận động, thể dục"
+  },
+  {
+    "kanji": "運転",
+    "hira": "うんてん",
+    "han": "Vận Chuyển/LX",
+    "nghia": "lái xe"
+  },
+  {
+    "kanji": "映画",
+    "hira": "えいが",
+    "han": "Ánh Hoạ/PĐA",
+    "nghia": "phim điện ảnh"
+  },
+  {
+    "kanji": "駅員",
+    "hira": "えきいん",
+    "han": "Dịch Viên/NV",
+    "nghia": "nhân viên ga"
+  },
+  {
+    "kanji": "遠足",
+    "hira": "えんそく",
+    "han": "Viễn Túc/DN",
+    "nghia": "dã ngoại, dã ngoại"
+  },
+  {
+    "kanji": "お菓子",
+    "hira": "おかし",
+    "han": "Quả Tử/Bánh",
+    "nghia": "bánh kẹo"
+  },
+  {
+    "kanji": "お客さん",
+    "hira": "おきゃくさん",
+    "han": "Khách/KH",
+    "nghia": "khách, khách hàng"
+  },
+  {
+    "kanji": "起きる",
+    "hira": "おきる",
+    "han": "Khởi/Dậy",
+    "nghia": "thức dậy, xảy ra"
+  },
+  {
+    "kanji": "送る",
+    "hira": "おくる",
+    "han": "Tống/Gửi",
+    "nghia": "gửi, tiễn"
+  },
+  {
+    "kanji": "教える",
+    "hira": "おしえる",
+    "han": "Giáo/Dạy",
+    "nghia": "dạy, hướng dẫn"
+  },
+  {
+    "kanji": "押す",
+    "hira": "おす",
+    "han": "Áp/Đẩy",
+    "nghia": "ấn, đẩy"
+  },
+  {
+    "kanji": "落とす",
+    "hira": "おとす",
+    "han": "Lạc/Đánh rơi",
+    "nghia": "đánh rơi, bỏ sót"
+  },
+  {
+    "kanji": "お礼",
+    "hira": "おれい",
+    "han": "Lễ/Cảm ơn",
+    "nghia": "lời cảm ơn, quà cảm ơn"
+  },
+  {
+    "kanji": "音楽",
+    "hira": "おんがく",
+    "han": "Âm Nhạc/ÂN",
+    "nghia": "âm nhạc"
+  },
+  {
+    "kanji": "温度",
+    "hira": "おんど",
+    "han": "Ôn Độ/Nhiệt",
+    "nghia": "nhiệt độ"
+  },
+  {
+    "kanji": "会議",
+    "hira": "かいぎ",
+    "han": "Hội Nghị/Họp",
+    "nghia": "cuộc họp"
+  },
+  {
+    "kanji": "会話",
+    "hira": "かいわ",
+    "han": "Hội Thoại/HT",
+    "nghia": "hội thoại, đàm thoại"
+  },
+  {
+    "kanji": "顔",
+    "hira": "かお",
+    "han": "Nhan/Mặt",
+    "nghia": "khuôn mặt"
+  },
+  {
+    "kanji": "形",
+    "hira": "かたち",
+    "han": "Hình/Dáng",
+    "nghia": "hình dạng"
+  },
+  {
+    "kanji": "方",
+    "hira": "かた",
+    "han": "Phương/Cách",
+    "nghia": "cách, phương pháp (kính)"
+  },
+  {
+    "kanji": "返す",
+    "hira": "かえす",
+    "han": "Phản/Trả lại",
+    "nghia": "trả lại"
+  },
+  {
+    "kanji": "帰る",
+    "hira": "かえる",
+    "han": "Quy/Về",
+    "nghia": "về nhà, trở về"
+  },
+  {
+    "kanji": "鍵",
+    "hira": "かぎ",
+    "han": "Kiện/Chìa",
+    "nghia": "chìa khoá, khoá"
+  },
+  {
+    "kanji": "係",
+    "hira": "かかり",
+    "han": "Hệ/Phụ trách",
+    "nghia": "người phụ trách"
+  },
+  {
+    "kanji": "書き方",
+    "hira": "かきかた",
+    "han": "Thư Phương/Viết",
+    "nghia": "cách viết"
+  },
+  {
+    "kanji": "覚える",
+    "hira": "おぼえる",
+    "han": "Giác/Nhớ",
+    "nghia": "nhớ, học thuộc"
+  },
+  {
+    "kanji": "考える",
+    "hira": "かんがえる",
+    "han": "Khảo/Nghĩ",
+    "nghia": "suy nghĩ, cân nhắc"
+  },
+  {
+    "kanji": "感じる",
+    "hira": "かんじる",
+    "han": "Cảm/Cảm thấy",
+    "nghia": "cảm thấy"
+  },
+  {
+    "kanji": "漢字",
+    "hira": "かんじ",
+    "han": "Hán Tự/HN",
+    "nghia": "chữ Hán, kanji"
+  },
+  {
+    "kanji": "着る",
+    "hira": "きる",
+    "han": "Trước/Mặc",
+    "nghia": "mặc (áo)"
+  },
+  {
+    "kanji": "切る",
+    "hira": "きる",
+    "han": "Thiết/Cắt",
+    "nghia": "cắt"
+  },
+  {
+    "kanji": "決める",
+    "hira": "きめる",
+    "han": "Quyết/Quyết định",
+    "nghia": "quyết định"
+  },
+  {
+    "kanji": "気持ち",
+    "hira": "きもち",
+    "han": "Khí Trì/Cảm giác",
+    "nghia": "cảm giác, tâm trạng"
+  },
+  {
+    "kanji": "気をつける",
+    "hira": "きをつける",
+    "han": "Khí/Chú ý",
+    "nghia": "cẩn thận, chú ý"
+  },
+  {
+    "kanji": "教育",
+    "hira": "きょういく",
+    "han": "Giáo Dục/GD",
+    "nghia": "giáo dục"
+  },
+  {
+    "kanji": "興味",
+    "hira": "きょうみ",
+    "han": "Hứng Thị/HT",
+    "nghia": "hứng thú, sở thích"
+  },
+  {
+    "kanji": "近所",
+    "hira": "きんじょ",
+    "han": "Cận Sở/Lân cận",
+    "nghia": "hàng xóm, khu vực gần"
+  },
+  {
+    "kanji": "区別",
+    "hira": "くべつ",
+    "han": "Khu Biệt/Phân biệt",
+    "nghia": "phân biệt"
+  },
+  {
+    "kanji": "苦手",
+    "hira": "にがて",
+    "han": "Khổ Thủ/Không giỏi",
+    "nghia": "không giỏi, yếu kém"
+  },
+  {
+    "kanji": "経験",
+    "hira": "けいけん",
+    "han": "Kinh Nghiệm/KN",
+    "nghia": "kinh nghiệm"
+  },
+  {
+    "kanji": "研究",
+    "hira": "けんきゅう",
+    "han": "Nghiên Cứu/NC",
+    "nghia": "nghiên cứu"
+  },
+  {
+    "kanji": "健康",
+    "hira": "けんこう",
+    "han": "Kiện Khang/SK",
+    "nghia": "sức khoẻ"
+  },
+  {
+    "kanji": "工場",
+    "hira": "こうじょう",
+    "han": "Công Trường/NM",
+    "nghia": "nhà máy"
+  },
+  {
+    "kanji": "交通",
+    "hira": "こうつう",
+    "han": "Giao Thông/GT",
+    "nghia": "giao thông"
+  },
+  {
+    "kanji": "声",
+    "hira": "こえ",
+    "han": "Thanh/Giọng",
+    "nghia": "giọng nói, tiếng"
+  },
+  {
+    "kanji": "困る",
+    "hira": "こまる",
+    "han": "Khốn/Khó xử",
+    "nghia": "khó xử, lúng túng"
+  },
+  {
+    "kanji": "今週",
+    "hira": "こんしゅう",
+    "han": "Kim Tuần/TN",
+    "nghia": "tuần này"
+  },
+  {
+    "kanji": "今度",
+    "hira": "こんど",
+    "han": "Kim Độ/Lần này",
+    "nghia": "lần này, lần tới"
+  },
+  {
+    "kanji": "最近",
+    "hira": "さいきん",
+    "han": "Tối Cận/Gần đây",
+    "nghia": "gần đây"
+  },
+  {
+    "kanji": "試合",
+    "hira": "しあい",
+    "han": "Thí Hợp/Trận",
+    "nghia": "trận thi đấu"
+  },
+  {
+    "kanji": "時間",
+    "hira": "じかん",
+    "han": "Thời Gian/TG",
+    "nghia": "thời gian"
+  },
+  {
+    "kanji": "仕事",
+    "hira": "しごと",
+    "han": "Sĩ Sự/CV",
+    "nghia": "công việc"
+  },
+  {
+    "kanji": "地図",
+    "hira": "ちず",
+    "han": "Địa Đồ/BĐ",
+    "nghia": "bản đồ"
+  },
+  {
+    "kanji": "自転車",
+    "hira": "じてんしゃ",
+    "han": "Tự Chuyển Xa/XĐ",
+    "nghia": "xe đạp"
+  },
+  {
+    "kanji": "自分",
+    "hira": "じぶん",
+    "han": "Tự Phân/Bản thân",
+    "nghia": "bản thân"
+  },
+  {
+    "kanji": "社会",
+    "hira": "しゃかい",
+    "han": "Xã Hội/XH",
+    "nghia": "xã hội"
+  },
+  {
+    "kanji": "写真",
+    "hira": "しゃしん",
+    "han": "Tả Chân/Ảnh",
+    "nghia": "ảnh chụp, hình ảnh"
+  },
+  {
+    "kanji": "試験",
+    "hira": "しけん",
+    "han": "Thí Nghiệm/Thi",
+    "nghia": "kỳ thi"
+  },
+  {
+    "kanji": "知る",
+    "hira": "しる",
+    "han": "Tri/Biết",
+    "nghia": "biết, hiểu"
+  },
+  {
+    "kanji": "信号",
+    "hira": "しんごう",
+    "han": "Tín Hiệu/Đèn",
+    "nghia": "đèn tín hiệu giao thông"
+  },
+  {
+    "kanji": "心配",
+    "hira": "しんぱい",
+    "han": "Tâm Phối/Lo",
+    "nghia": "lo lắng"
+  },
+  {
+    "kanji": "水泳",
+    "hira": "すいえい",
+    "han": "Thuỷ Vĩnh/Bơi",
+    "nghia": "bơi lội"
+  },
+  {
+    "kanji": "すぐ",
+    "hira": "すぐ",
+    "han": "Tức/Ngay",
+    "nghia": "ngay lập tức"
+  },
+  {
+    "kanji": "少し",
+    "hira": "すこし",
+    "han": "Thiểu/Một chút",
+    "nghia": "một chút, ít"
+  },
+  {
+    "kanji": "素晴らしい",
+    "hira": "すばらしい",
+    "han": "Tố Tuệ/Tuyệt",
+    "nghia": "tuyệt vời"
+  },
+  {
+    "kanji": "住む",
+    "hira": "すむ",
+    "han": "Trú/Sống",
+    "nghia": "sống ở, cư trú"
+  },
+  {
+    "kanji": "生活",
+    "hira": "せいかつ",
+    "han": "Sinh Hoạt/SH",
+    "nghia": "cuộc sống, sinh hoạt"
+  },
+  {
+    "kanji": "席",
+    "hira": "せき",
+    "han": "Tịch/Chỗ ngồi",
+    "nghia": "chỗ ngồi, vị trí"
+  },
+  {
+    "kanji": "説明",
+    "hira": "せつめい",
+    "han": "Thuyết Minh/GT",
+    "nghia": "giải thích, thuyết minh"
+  },
+  {
+    "kanji": "先週",
+    "hira": "せんしゅう",
+    "han": "Tiên Tuần/Tuần trước",
+    "nghia": "tuần trước"
+  },
+  {
+    "kanji": "相談",
+    "hira": "そうだん",
+    "han": "Tương Đàm/Tư vấn",
+    "nghia": "thảo luận, tham khảo ý kiến"
+  },
+  {
+    "kanji": "卒業",
+    "hira": "そつぎょう",
+    "han": "Tốt Nghiệp/TN",
+    "nghia": "tốt nghiệp"
+  },
+  {
+    "kanji": "外国",
+    "hira": "がいこく",
+    "han": "Ngoại Quốc/NN",
+    "nghia": "nước ngoài"
+  },
+  {
+    "kanji": "大学",
+    "hira": "だいがく",
+    "han": "Đại Học/ĐH",
+    "nghia": "đại học"
+  },
+  {
+    "kanji": "大切",
+    "hira": "たいせつ",
+    "han": "Đại Thiết/QT",
+    "nghia": "quý báu, quan trọng"
+  },
+  {
+    "kanji": "体育",
+    "hira": "たいいく",
+    "han": "Thể Dục/TD",
+    "nghia": "thể dục"
+  },
+  {
+    "kanji": "試す",
+    "hira": "ためす",
+    "han": "Thí/Thử",
+    "nghia": "thử nghiệm"
+  },
+  {
+    "kanji": "誕生日",
+    "hira": "たんじょうび",
+    "han": "Đản Sinh Nhật/SN",
+    "nghia": "sinh nhật"
+  },
+  {
+    "kanji": "地下鉄",
+    "hira": "ちかてつ",
+    "han": "Địa Hạ Thiết/TĐN",
+    "nghia": "tàu điện ngầm"
+  },
+  {
+    "kanji": "注意",
+    "hira": "ちゅうい",
+    "han": "Chú Ý/Chú ý",
+    "nghia": "chú ý, cảnh báo"
+  },
+  {
+    "kanji": "注文",
+    "hira": "ちゅうもん",
+    "han": "Chú Văn/ĐH",
+    "nghia": "đặt hàng, gọi món"
+  },
+  {
+    "kanji": "使う",
+    "hira": "つかう",
+    "han": "Sử/Dùng",
+    "nghia": "sử dụng, dùng"
+  },
+  {
+    "kanji": "疲れる",
+    "hira": "つかれる",
+    "han": "Bì/Mệt",
+    "nghia": "mệt mỏi"
+  },
+  {
+    "kanji": "着く",
+    "hira": "つく",
+    "han": "Trước/Đến",
+    "nghia": "đến nơi"
+  },
+  {
+    "kanji": "作る",
+    "hira": "つくる",
+    "han": "Tác/Làm",
+    "nghia": "làm, tạo ra"
+  },
+  {
+    "kanji": "続ける",
+    "hira": "つづける",
+    "han": "Tục/Tiếp tục",
+    "nghia": "tiếp tục"
+  },
+  {
+    "kanji": "手伝う",
+    "hira": "てつだう",
+    "han": "Thủ Truyền/Giúp",
+    "nghia": "giúp đỡ"
+  },
+  {
+    "kanji": "電車",
+    "hira": "でんしゃ",
+    "han": "Điện Xa/Tàu",
+    "nghia": "tàu điện"
+  },
+  {
+    "kanji": "電話",
+    "hira": "でんわ",
+    "han": "Điện Thoại/ĐT",
+    "nghia": "điện thoại"
+  },
+  {
+    "kanji": "出かける",
+    "hira": "でかける",
+    "han": "Xuất/Ra ngoài",
+    "nghia": "ra ngoài"
+  },
+  {
+    "kanji": "出来る",
+    "hira": "できる",
+    "han": "Xuất Năng/Được",
+    "nghia": "có thể, hoàn thành"
+  },
+  {
+    "kanji": "伝える",
+    "hira": "つたえる",
+    "han": "Truyền/Truyền đạt",
+    "nghia": "truyền đạt"
+  },
+  {
+    "kanji": "特別",
+    "hira": "とくべつ",
+    "han": "Đặc Biệt/ĐB",
+    "nghia": "đặc biệt"
+  },
+  {
+    "kanji": "泊まる",
+    "hira": "とまる",
+    "han": "Bạc/Ở lại",
+    "nghia": "ngủ qua đêm, ở lại"
+  },
+  {
+    "kanji": "友達",
+    "hira": "ともだち",
+    "han": "Hữu Đạt/Bạn",
+    "nghia": "bạn bè"
+  },
+  {
+    "kanji": "取る",
+    "hira": "とる",
+    "han": "Thủ/Lấy",
+    "nghia": "lấy, nhặt"
+  },
+  {
+    "kanji": "直す",
+    "hira": "なおす",
+    "han": "Trực/Sửa",
+    "nghia": "sửa chữa"
+  },
+  {
+    "kanji": "泣く",
+    "hira": "なく",
+    "han": "Khấp/Khóc",
+    "nghia": "khóc"
+  },
+  {
+    "kanji": "習う",
+    "hira": "ならう",
+    "han": "Tập/Học",
+    "nghia": "học (từ người khác)"
+  },
+  {
+    "kanji": "なるほど",
+    "hira": "なるほど",
+    "han": "Thành/Ra vậy",
+    "nghia": "ra vậy, tôi hiểu rồi"
+  },
+  {
+    "kanji": "匂い",
+    "hira": "におい",
+    "han": "Khứu/Mùi",
+    "nghia": "mùi hương, mùi"
+  },
+  {
+    "kanji": "乗る",
+    "hira": "のる",
+    "han": "Thừa/Đi",
+    "nghia": "đi (phương tiện)"
+  },
+  {
+    "kanji": "運ぶ",
+    "hira": "はこぶ",
+    "han": "Vận/Mang",
+    "nghia": "vận chuyển, mang"
+  },
+  {
+    "kanji": "始まる",
+    "hira": "はじまる",
+    "han": "Thỉ/Bắt đầu",
+    "nghia": "bắt đầu (tự xảy ra)"
+  },
+  {
+    "kanji": "始める",
+    "hira": "はじめる",
+    "han": "Thỉ/Bắt đầu",
+    "nghia": "bắt đầu (chủ động)"
+  },
+  {
+    "kanji": "場所",
+    "hira": "ばしょ",
+    "han": "Trường Sở/Nơi",
+    "nghia": "nơi, địa điểm"
+  },
+  {
+    "kanji": "番号",
+    "hira": "ばんごう",
+    "han": "Phiên Hiệu/Số",
+    "nghia": "số (thứ tự)"
+  },
+  {
+    "kanji": "払う",
+    "hira": "はらう",
+    "han": "Phất/Trả",
+    "nghia": "trả tiền, xua đuổi"
+  },
+  {
+    "kanji": "晴れる",
+    "hira": "はれる",
+    "han": "Tình/Nắng",
+    "nghia": "trời nắng"
+  },
+  {
+    "kanji": "引っ越す",
+    "hira": "ひっこす",
+    "han": "Dẫn/Chuyển nhà",
+    "nghia": "chuyển nhà"
+  },
+  {
+    "kanji": "人々",
+    "hira": "ひとびと",
+    "han": "Nhân/Mọi người",
+    "nghia": "mọi người"
+  },
+  {
+    "kanji": "昼ごはん",
+    "hira": "ひるごはん",
+    "han": "Trú/Cơm trưa",
+    "nghia": "bữa trưa"
+  },
+  {
+    "kanji": "広い",
+    "hira": "ひろい",
+    "han": "Quảng/Rộng",
+    "nghia": "rộng"
+  },
+  {
+    "kanji": "普通",
+    "hira": "ふつう",
+    "han": "Phổ Thông/BT",
+    "nghia": "bình thường, thông thường"
+  },
+  {
+    "kanji": "文化",
+    "hira": "ぶんか",
+    "han": "Văn Hoá/VH",
+    "nghia": "văn hoá"
+  },
+  {
+    "kanji": "別れる",
+    "hira": "わかれる",
+    "han": "Biệt/Chia tay",
+    "nghia": "chia tay"
+  },
+  {
+    "kanji": "分かる",
+    "hira": "わかる",
+    "han": "Phân/Hiểu",
+    "nghia": "hiểu, biết"
+  },
+  {
+    "kanji": "忘れる",
+    "hira": "わすれる",
+    "han": "Vong/Quên",
+    "nghia": "quên"
+  },
+  {
+    "kanji": "笑う",
+    "hira": "わらう",
+    "han": "Tiếu/Cười",
+    "nghia": "cười"
+  },
+  {
+    "kanji": "を",
+    "hira": "を",
+    "han": "Mục/Tân",
+    "nghia": "(trợ từ chỉ tân ngữ)"
+  },
+  {
+    "kanji": "料理",
+    "hira": "りょうり",
+    "han": "Liệu Lý/Nấu ăn",
+    "nghia": "nấu ăn, món ăn"
+  },
+  {
+    "kanji": "旅行",
+    "hira": "りょこう",
+    "han": "Lữ Hành/Du lịch",
+    "nghia": "du lịch"
+  },
+  {
+    "kanji": "理由",
+    "hira": "りゆう",
+    "han": "Lý Do/Lý do",
+    "nghia": "lý do"
+  },
+  {
+    "kanji": "練習",
+    "hira": "れんしゅう",
+    "han": "Luyện Tập/LT",
+    "nghia": "luyện tập"
+  },
+  {
+    "kanji": "連絡",
+    "hira": "れんらく",
+    "han": "Liên Lạc/LL",
+    "nghia": "liên lạc"
+  },
+  {
+    "kanji": "予約",
+    "hira": "よやく",
+    "han": "Dự Ước/Đặt trước",
+    "nghia": "đặt trước, đặt chỗ"
+  },
+  {
+    "kanji": "用意",
+    "hira": "ようい",
+    "han": "Dụng Ý/Chuẩn bị",
+    "nghia": "chuẩn bị"
+  },
+  {
+    "kanji": "夕食",
+    "hira": "ゆうしょく",
+    "han": "Tịch Thực/Tối",
+    "nghia": "bữa tối"
+  },
+  {
+    "kanji": "有名",
+    "hira": "ゆうめい",
+    "han": "Hữu Danh/Nổi tiếng",
+    "nghia": "nổi tiếng"
+  },
+  {
+    "kanji": "やっぱり",
+    "hira": "やっぱり",
+    "han": "Vẫn/Quả nhiên",
+    "nghia": "vẫn là, quả nhiên"
+  },
+  {
+    "kanji": "野菜",
+    "hira": "やさい",
+    "han": "Dã Thái/Rau",
+    "nghia": "rau củ"
+  },
+  {
+    "kanji": "もちろん",
+    "hira": "もちろん",
+    "han": "Đương nhiên/Dĩ nhiên",
+    "nghia": "tất nhiên, dĩ nhiên"
+  },
+  {
+    "kanji": "持つ",
+    "hira": "もつ",
+    "han": "Trì/Cầm",
+    "nghia": "cầm, giữ, có"
+  },
+  {
+    "kanji": "申し込む",
+    "hira": "もうしこむ",
+    "han": "Thân Nhập/ĐK",
+    "nghia": "đăng ký, nộp đơn"
+  },
+  {
+    "kanji": "目的",
+    "hira": "もくてき",
+    "han": "Mục Đích/MĐ",
+    "nghia": "mục đích"
+  },
+  {
+    "kanji": "迎える",
+    "hira": "むかえる",
+    "han": "Nghinh/Đón",
+    "nghia": "đón tiếp"
+  },
+  {
+    "kanji": "向かう",
+    "hira": "むかう",
+    "han": "Hướng/Hướng về",
+    "nghia": "hướng về phía"
+  },
+  {
+    "kanji": "待つ",
+    "hira": "まつ",
+    "han": "Đãi/Chờ",
+    "nghia": "chờ đợi"
+  },
+  {
+    "kanji": "まず",
+    "hira": "まず",
+    "han": "Mạt/Trước tiên",
+    "nghia": "trước tiên, đầu tiên"
+  },
+  {
+    "kanji": "毎朝",
+    "hira": "まいあさ",
+    "han": "Mỗi Triêu/Sáng",
+    "nghia": "mỗi buổi sáng"
+  },
+  {
+    "kanji": "参加",
+    "hira": "さんか",
+    "han": "Tham Gia/TG",
+    "nghia": "tham gia"
+  },
+  {
+    "kanji": "最高",
+    "hira": "さいこう",
+    "han": "Tối Cao/Tốt nhất",
+    "nghia": "tốt nhất, cao nhất"
+  },
+  {
+    "kanji": "最後",
+    "hira": "さいご",
+    "han": "Tối Hậu/Cuối",
+    "nghia": "cuối cùng"
+  },
+  {
+    "kanji": "受付",
+    "hira": "うけつけ",
+    "han": "Thụ Phụ/Lễ tân",
+    "nghia": "lễ tân, tiếp nhận"
+  },
+  {
+    "kanji": "嬉しい",
+    "hira": "うれしい",
+    "han": "Hỷ/Vui",
+    "nghia": "vui mừng"
+  },
+  {
+    "kanji": "動物",
+    "hira": "どうぶつ",
+    "han": "Động Vật/ĐV",
+    "nghia": "động vật"
+  },
+  {
+    "kanji": "道路",
+    "hira": "どうろ",
+    "han": "Đạo Lộ/Đường",
+    "nghia": "đường bộ"
+  },
+  {
+    "kanji": "図書館",
+    "hira": "としょかん",
+    "han": "Đồ Thư Quán/TV",
+    "nghia": "thư viện"
+  },
+  {
+    "kanji": "都市",
+    "hira": "とし",
+    "han": "Đô Thị/ĐT",
+    "nghia": "đô thị, thành phố"
+  },
+  {
+    "kanji": "手紙",
+    "hira": "てがみ",
+    "han": "Thủ Chỉ/Thư",
+    "nghia": "lá thư"
+  },
+  {
+    "kanji": "丁寧",
+    "hira": "ていねい",
+    "han": "Đinh Ninh/Lịch sự",
+    "nghia": "lịch sự, cẩn thận"
+  },
+  {
+    "kanji": "転勤",
+    "hira": "てんきん",
+    "han": "Chuyển Cần/Đổi việc",
+    "nghia": "chuyển nơi công tác"
+  },
+  {
+    "kanji": "電池",
+    "hira": "でんち",
+    "han": "Điện Trì/Pin",
+    "nghia": "pin"
+  },
+  {
+    "kanji": "子供",
+    "hira": "こども",
+    "han": "Tử Cung/Trẻ em",
+    "nghia": "trẻ em"
+  },
+  {
+    "kanji": "言葉",
+    "hira": "ことば",
+    "han": "Ngôn Diệp/Ngôn ngữ",
+    "nghia": "ngôn ngữ, lời nói"
+  },
+  {
+    "kanji": "公園",
+    "hira": "こうえん",
+    "han": "Công Viên/CV",
+    "nghia": "công viên"
+  },
+  {
+    "kanji": "高校",
+    "hira": "こうこう",
+    "han": "Cao Giáo/THPT",
+    "nghia": "trường THPT"
+  },
+  {
+    "kanji": "交換",
+    "hira": "こうかん",
+    "han": "Giao Hoán/TĐ",
+    "nghia": "trao đổi"
+  },
+  {
+    "kanji": "校長",
+    "hira": "こうちょう",
+    "han": "Giáo Trưởng/HT",
+    "nghia": "hiệu trưởng"
+  },
+  {
+    "kanji": "喜ぶ",
+    "hira": "よろこぶ",
+    "han": "Hỷ/Vui mừng",
+    "nghia": "vui mừng"
+  },
+  {
+    "kanji": "夜中",
+    "hira": "よなか",
+    "han": "Dạ Trung/Nửa đêm",
+    "nghia": "nửa đêm"
+  },
+  {
+    "kanji": "用事",
+    "hira": "ようじ",
+    "han": "Dụng Sự/Việc",
+    "nghia": "việc cần làm"
+  },
+  {
+    "kanji": "呼ぶ",
+    "hira": "よぶ",
+    "han": "Hô/Gọi",
+    "nghia": "gọi, mời"
+  },
+  {
+    "kanji": "もらう",
+    "hira": "もらう",
+    "han": "Thụ/Nhận",
+    "nghia": "nhận (từ người khác)"
+  },
+  {
+    "kanji": "本当に",
+    "hira": "ほんとうに",
+    "han": "Bổn Đường/Thật",
+    "nghia": "thật sự"
+  },
+  {
+    "kanji": "放送",
+    "hira": "ほうそう",
+    "han": "Phóng Tống/Phát sóng",
+    "nghia": "phát sóng"
+  },
+  {
+    "kanji": "報告",
+    "hira": "ほうこく",
+    "han": "Báo Cáo/BC",
+    "nghia": "báo cáo"
+  },
+  {
+    "kanji": "部屋",
+    "hira": "へや",
+    "han": "Bộ Ốc/Phòng",
+    "nghia": "phòng"
+  },
+  {
+    "kanji": "変わる",
+    "hira": "かわる",
+    "han": "Biến/Thay đổi",
+    "nghia": "thay đổi"
+  },
+  {
+    "kanji": "帰国",
+    "hira": "きこく",
+    "han": "Quy Quốc/Về nước",
+    "nghia": "về nước"
+  },
+  {
+    "kanji": "来週",
+    "hira": "らいしゅう",
+    "han": "Lai Tuần/Tuần sau",
+    "nghia": "tuần sau"
+  },
+  {
+    "kanji": "来月",
+    "hira": "らいげつ",
+    "han": "Lai Nguyệt/Tháng sau",
+    "nghia": "tháng sau"
+  },
+  {
+    "kanji": "留学",
+    "hira": "りゅうがく",
+    "han": "Lưu Học/Du học",
+    "nghia": "du học"
+  },
+  {
+    "kanji": "夫婦",
+    "hira": "ふうふ",
+    "han": "Phu Phụ/Vợ chồng",
+    "nghia": "vợ chồng"
+  },
+  {
+    "kanji": "部長",
+    "hira": "ぶちょう",
+    "han": "Bộ Trưởng/Trưởng BP",
+    "nghia": "trưởng bộ phận"
+  },
+  {
+    "kanji": "普段",
+    "hira": "ふだん",
+    "han": "Phổ Đoạn/Thường ngày",
+    "nghia": "thường ngày"
+  },
+  {
+    "kanji": "締め切り",
+    "hira": "しめきり",
+    "han": "Thiết Thiết/Deadline",
+    "nghia": "hạn chót"
+  },
+  {
+    "kanji": "失礼",
+    "hira": "しつれい",
+    "han": "Thất Lễ/Xin lỗi",
+    "nghia": "thất lễ, xin phép"
+  },
+  {
+    "kanji": "知識",
+    "hira": "ちしき",
+    "han": "Tri Thức/KT",
+    "nghia": "kiến thức"
+  },
+  {
+    "kanji": "丁度",
+    "hira": "ちょうど",
+    "han": "Đinh Độ/Vừa đúng",
+    "nghia": "vừa đúng, vừa vặn"
+  },
+  {
+    "kanji": "宿題",
+    "hira": "しゅくだい",
+    "han": "Túc Đề/BT",
+    "nghia": "bài tập về nhà"
+  },
+  {
+    "kanji": "生産",
+    "hira": "せいさん",
+    "han": "Sinh Sản/SX",
     "nghia": "sản xuất"
   },
   {
-    "kanji": "食品",
-    "hira": "しょくひん",
-    "han": "Thực phẩm",
-    "nghia": "thực phẩm"
+    "kanji": "世界",
+    "hira": "せかい",
+    "han": "Thế Giới/TG",
+    "nghia": "thế giới"
+  },
+  {
+    "kanji": "西洋",
+    "hira": "せいよう",
+    "han": "Tây Dương/TÂY",
+    "nghia": "phương Tây"
+  },
+  {
+    "kanji": "授業",
+    "hira": "じゅぎょう",
+    "han": "Thụ Nghiệp/GD",
+    "nghia": "tiết học, bài giảng"
+  },
+  {
+    "kanji": "受験",
+    "hira": "じゅけん",
+    "han": "Thụ Nghiệm/Thi",
+    "nghia": "dự thi"
+  },
+  {
+    "kanji": "自然",
+    "hira": "しぜん",
+    "han": "Tự Nhiên/TN",
+    "nghia": "tự nhiên"
+  },
+  {
+    "kanji": "親切",
+    "hira": "しんせつ",
+    "han": "Thân Thiết/Thân thiện",
+    "nghia": "thân thiện, tốt bụng"
+  },
+  {
+    "kanji": "祭り",
+    "hira": "まつり",
+    "han": "Tế/Lễ hội",
+    "nghia": "lễ hội"
   }
 ]
