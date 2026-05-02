@@ -1,20 +1,2036 @@
 [
   {
-    "kanji": "飲食",
-    "hira": "いんしょく",
-    "han": "Ẩm thực",
-    "nghia": "ăn uống5"
+    "kanji": "朝",
+    "hira": "あさ",
+    "han": "",
+    "nghia": "buổi sáng"
   },
   {
-    "kanji": "製造",
-    "hira": "せいぞう",
-    "han": "Chế tạo",
-    "nghia": "sản xuất"
+    "kanji": "あさって",
+    "hira": "あさって",
+    "han": "",
+    "nghia": "ngày kia"
   },
   {
-    "kanji": "食品",
-    "hira": "しょくひん",
-    "han": "Thực phẩm",
-    "nghia": "thực phẩm"
+    "kanji": "足",
+    "hira": "あし",
+    "han": "",
+    "nghia": "chân"
+  },
+  {
+    "kanji": "明日",
+    "hira": "あした",
+    "han": "",
+    "nghia": "ngày mai"
+  },
+  {
+    "kanji": "これ",
+    "hira": "これ",
+    "han": "",
+    "nghia": "cái này"
+  },
+  {
+    "kanji": "それ",
+    "hira": "それ",
+    "han": "",
+    "nghia": "cái đó"
+  },
+  {
+    "kanji": "あれ",
+    "hira": "あれ",
+    "han": "",
+    "nghia": "cái kia"
+  },
+  {
+    "kanji": "ここ",
+    "hira": "ここ",
+    "han": "",
+    "nghia": "chỗ này"
+  },
+  {
+    "kanji": "そこ",
+    "hira": "そこ",
+    "han": "",
+    "nghia": "chỗ đó"
+  },
+  {
+    "kanji": "あそこ",
+    "hira": "あそこ",
+    "han": "",
+    "nghia": "Chỗ kia, đằng kia"
+  },
+  {
+    "kanji": "こちら",
+    "hira": "こちら",
+    "han": "",
+    "nghia": "phía này"
+  },
+  {
+    "kanji": "そちら",
+    "hira": "そちら",
+    "han": "",
+    "nghia": "phía đó"
+  },
+  {
+    "kanji": "あちら",
+    "hira": "あちら",
+    "han": "",
+    "nghia": "phía kia"
+  },
+  {
+    "kanji": "春",
+    "hira": "はる",
+    "han": "",
+    "nghia": "mùa xuân"
+  },
+  {
+    "kanji": "夏",
+    "hira": "なつ",
+    "han": "",
+    "nghia": "mùa hạ"
+  },
+  {
+    "kanji": "秋",
+    "hira": "あき",
+    "han": "",
+    "nghia": "mùa thu"
+  },
+  {
+    "kanji": "冬",
+    "hira": "ふゆ",
+    "han": "",
+    "nghia": "mùa đông"
+  },
+  {
+    "kanji": "頭",
+    "hira": "あたま",
+    "han": "",
+    "nghia": "đầu"
+  },
+  {
+    "kanji": "あなた",
+    "hira": "あなた",
+    "han": "",
+    "nghia": "bạn"
+  },
+  {
+    "kanji": "兄",
+    "hira": "あに",
+    "han": "",
+    "nghia": "Anh trai (mình)"
+  },
+  {
+    "kanji": "姉",
+    "hira": "あね",
+    "han": "",
+    "nghia": "Chị gái (mình)"
+  },
+  {
+    "kanji": "アパート",
+    "hira": "あぱーと",
+    "han": "",
+    "nghia": "căn hộ"
+  },
+  {
+    "kanji": "雨",
+    "hira": "あめ",
+    "han": "",
+    "nghia": "mưa"
+  },
+  {
+    "kanji": "飴",
+    "hira": "あめ",
+    "han": "",
+    "nghia": "kẹo (ngậm)"
+  },
+  {
+    "kanji": "家",
+    "hira": "いえ",
+    "han": "",
+    "nghia": "nhà"
+  },
+  {
+    "kanji": "池",
+    "hira": "いけ",
+    "han": "",
+    "nghia": "cái ao"
+  },
+  {
+    "kanji": "医者",
+    "hira": "いしゃ",
+    "han": "",
+    "nghia": "bác sĩ"
+  },
+  {
+    "kanji": "椅子",
+    "hira": "いす",
+    "han": "",
+    "nghia": "ghế"
+  },
+  {
+    "kanji": "一",
+    "hira": "いち",
+    "han": "",
+    "nghia": "một"
+  },
+  {
+    "kanji": "二日",
+    "hira": "ふつか",
+    "han": "",
+    "nghia": "2 ngày, ngày mồng 2"
+  },
+  {
+    "kanji": "三日",
+    "hira": "みっか",
+    "han": "",
+    "nghia": "3 ngày, ngày mồng 3"
+  },
+  {
+    "kanji": "四日",
+    "hira": "よっか",
+    "han": "",
+    "nghia": "4 ngày, ngày mồng 4"
+  },
+  {
+    "kanji": "五日",
+    "hira": "いつか",
+    "han": "",
+    "nghia": "năm ngày, ngày mồng 5"
+  },
+  {
+    "kanji": "六日",
+    "hira": "むいか",
+    "han": "",
+    "nghia": "6 ngày, ngày mồng 6"
+  },
+  {
+    "kanji": "七日",
+    "hira": "なのか",
+    "han": "",
+    "nghia": "7 ngày, ngày mồng 7"
+  },
+  {
+    "kanji": "八日",
+    "hira": "ようか",
+    "han": "",
+    "nghia": "8 ngày, ngày mồng 8"
+  },
+  {
+    "kanji": "十日",
+    "hira": "とおか",
+    "han": "",
+    "nghia": "10 ngày, ngày mồng 10"
+  },
+  {
+    "kanji": "犬",
+    "hira": "いぬ",
+    "han": "",
+    "nghia": "con chó"
+  },
+  {
+    "kanji": "今",
+    "hira": "いま",
+    "han": "",
+    "nghia": "bây giờ"
+  },
+  {
+    "kanji": "意味",
+    "hira": "いみ",
+    "han": "",
+    "nghia": "ý nghĩa"
+  },
+  {
+    "kanji": "妹",
+    "hira": "いもうと",
+    "han": "",
+    "nghia": "em gái (mình)"
+  },
+  {
+    "kanji": "入口",
+    "hira": "いりぐち",
+    "han": "",
+    "nghia": "lối vào"
+  },
+  {
+    "kanji": "色",
+    "hira": "いろ",
+    "han": "",
+    "nghia": "màu"
+  },
+  {
+    "kanji": "上",
+    "hira": "うえ",
+    "han": "",
+    "nghia": "trên"
+  },
+  {
+    "kanji": "後ろ",
+    "hira": "うしろ",
+    "han": "",
+    "nghia": "đằng sau"
+  },
+  {
+    "kanji": "歌",
+    "hira": "うた",
+    "han": "",
+    "nghia": "bài hát"
+  },
+  {
+    "kanji": "海",
+    "hira": "うみ",
+    "han": "",
+    "nghia": "biển"
+  },
+  {
+    "kanji": "上着",
+    "hira": "うわぎ",
+    "han": "",
+    "nghia": "áo khoác"
+  },
+  {
+    "kanji": "絵",
+    "hira": "え",
+    "han": "",
+    "nghia": "bức tranh"
+  },
+  {
+    "kanji": "映画",
+    "hira": "えいが",
+    "han": "",
+    "nghia": "phim (điện ảnh)"
+  },
+  {
+    "kanji": "英語",
+    "hira": "えいご",
+    "han": "",
+    "nghia": "Tiếng Anh"
+  },
+  {
+    "kanji": "駅",
+    "hira": "えき",
+    "han": "",
+    "nghia": "nhà ga"
+  },
+  {
+    "kanji": "お菓子",
+    "hira": "おかし",
+    "han": "",
+    "nghia": "Bánh, kẹo"
+  },
+  {
+    "kanji": "お金",
+    "hira": "おかね",
+    "han": "",
+    "nghia": "tiền"
+  },
+  {
+    "kanji": "お酒",
+    "hira": "おさけ",
+    "han": "",
+    "nghia": "rượu"
+  },
+  {
+    "kanji": "お皿",
+    "hira": "おさら",
+    "han": "",
+    "nghia": "Cái đĩa"
+  },
+  {
+    "kanji": "おじさん",
+    "hira": "おじさん",
+    "han": "",
+    "nghia": "chú, bác (người đàn ông trung niên)"
+  },
+  {
+    "kanji": "お茶",
+    "hira": "おちゃ",
+    "han": "",
+    "nghia": "trà"
+  },
+  {
+    "kanji": "弟",
+    "hira": "おとうと",
+    "han": "",
+    "nghia": "em trai (mình)"
+  },
+  {
+    "kanji": "男",
+    "hira": "おとこ",
+    "han": "",
+    "nghia": "nam giới, con trai"
+  },
+  {
+    "kanji": "一昨日",
+    "hira": "おととい",
+    "han": "",
+    "nghia": "hôm kia"
+  },
+  {
+    "kanji": "大人",
+    "hira": "おとな",
+    "han": "",
+    "nghia": "người lớn"
+  },
+  {
+    "kanji": "おなか",
+    "hira": "おなか",
+    "han": "",
+    "nghia": "bụng"
+  },
+  {
+    "kanji": "同じ",
+    "hira": "おなじ",
+    "han": "",
+    "nghia": "giống nhau"
+  },
+  {
+    "kanji": "お風呂",
+    "hira": "おふろ",
+    "han": "",
+    "nghia": "Bồn tắm"
+  },
+  {
+    "kanji": "かぎ",
+    "hira": "かぎ",
+    "han": "",
+    "nghia": "chìa khóa"
+  },
+  {
+    "kanji": "傘",
+    "hira": "かさ",
+    "han": "",
+    "nghia": "cái ô"
+  },
+  {
+    "kanji": "風",
+    "hira": "かぜ",
+    "han": "",
+    "nghia": "gió"
+  },
+  {
+    "kanji": "風邪",
+    "hira": "かぜ",
+    "han": "",
+    "nghia": "cảm, cúm"
+  },
+  {
+    "kanji": "家族",
+    "hira": "かぞく",
+    "han": "",
+    "nghia": "Gia đình"
+  },
+  {
+    "kanji": "家庭",
+    "hira": "かてい",
+    "han": "",
+    "nghia": "gia đình"
+  },
+  {
+    "kanji": "角",
+    "hira": "かど",
+    "han": "",
+    "nghia": "góc (bàn, cua, quẹo)"
+  },
+  {
+    "kanji": "紙",
+    "hira": "かみ",
+    "han": "",
+    "nghia": "giấy"
+  },
+  {
+    "kanji": "川",
+    "hira": "かわ",
+    "han": "",
+    "nghia": "sông"
+  },
+  {
+    "kanji": "漢字",
+    "hira": "かんじ",
+    "han": "",
+    "nghia": "chữ Hán"
+  },
+  {
+    "kanji": "木",
+    "hira": "き",
+    "han": "",
+    "nghia": "cây, gỗ"
+  },
+  {
+    "kanji": "黄色",
+    "hira": "きいろ",
+    "han": "",
+    "nghia": "màu vàng"
+  },
+  {
+    "kanji": "北",
+    "hira": "きた",
+    "han": "",
+    "nghia": "phía Bắc"
+  },
+  {
+    "kanji": "切手",
+    "hira": "きって",
+    "han": "",
+    "nghia": "tem"
+  },
+  {
+    "kanji": "切符",
+    "hira": "きっぷ",
+    "han": "",
+    "nghia": "vé (tàu, xe)"
+  },
+  {
+    "kanji": "昨日",
+    "hira": "きのう",
+    "han": "",
+    "nghia": "Hôm qua"
+  },
+  {
+    "kanji": "今日",
+    "hira": "きょう",
+    "han": "",
+    "nghia": "Hôm nay"
+  },
+  {
+    "kanji": "去年",
+    "hira": "きょねん",
+    "han": "",
+    "nghia": "năm ngoái"
+  },
+  {
+    "kanji": "銀行",
+    "hira": "ぎんこう",
+    "han": "",
+    "nghia": "Ngân hàng"
+  },
+  {
+    "kanji": "薬",
+    "hira": "くすり",
+    "han": "",
+    "nghia": "thuốc"
+  },
+  {
+    "kanji": "果物",
+    "hira": "くだもの",
+    "han": "",
+    "nghia": "hoa quả, trái cây"
+  },
+  {
+    "kanji": "口",
+    "hira": "くち",
+    "han": "",
+    "nghia": "miệng"
+  },
+  {
+    "kanji": "靴",
+    "hira": "くつ",
+    "han": "",
+    "nghia": "giày dép"
+  },
+  {
+    "kanji": "靴下",
+    "hira": "くつした",
+    "han": "",
+    "nghia": "cái tất"
+  },
+  {
+    "kanji": "国",
+    "hira": "くに",
+    "han": "",
+    "nghia": "đất nước"
+  },
+  {
+    "kanji": "車",
+    "hira": "くるま",
+    "han": "",
+    "nghia": "xe hơi, xe"
+  },
+  {
+    "kanji": "黒",
+    "hira": "くろ",
+    "han": "",
+    "nghia": "đen, màu đen"
+  },
+  {
+    "kanji": "今朝",
+    "hira": "けさ",
+    "han": "",
+    "nghia": "sáng nay"
+  },
+  {
+    "kanji": "結婚",
+    "hira": "けっこん",
+    "han": "",
+    "nghia": "kết hôn"
+  },
+  {
+    "kanji": "公園",
+    "hira": "こうえん",
+    "han": "",
+    "nghia": "công viên"
+  },
+  {
+    "kanji": "紅茶",
+    "hira": "こうちゃ",
+    "han": "",
+    "nghia": "trà đen"
+  },
+  {
+    "kanji": "声",
+    "hira": "こえ",
+    "han": "",
+    "nghia": "tiếng, giọng nói"
+  },
+  {
+    "kanji": "午後",
+    "hira": "ごご",
+    "han": "",
+    "nghia": "buổi chiều"
+  },
+  {
+    "kanji": "午前",
+    "hira": "ごぜん",
+    "han": "",
+    "nghia": "buổi sáng"
+  },
+  {
+    "kanji": "今年",
+    "hira": "ことし",
+    "han": "",
+    "nghia": "năm nay"
+  },
+  {
+    "kanji": "言葉",
+    "hira": "ことば",
+    "han": "",
+    "nghia": "từ, từ vựng"
+  },
+  {
+    "kanji": "子供",
+    "hira": "こども",
+    "han": "",
+    "nghia": "trẻ em, con cái"
+  },
+  {
+    "kanji": "御飯",
+    "hira": "ごはん",
+    "han": "",
+    "nghia": "cơm, bữa ăn"
+  },
+  {
+    "kanji": "これ",
+    "hira": "これ",
+    "han": "",
+    "nghia": "cái này"
+  },
+  {
+    "kanji": "今月",
+    "hira": "こんげつ",
+    "han": "",
+    "nghia": "tháng này"
+  },
+  {
+    "kanji": "こんな",
+    "hira": "こんな",
+    "han": "",
+    "nghia": "như thế này"
+  },
+  {
+    "kanji": "今晩",
+    "hira": "こんばん",
+    "han": "",
+    "nghia": "tối nay"
+  },
+  {
+    "kanji": "財布",
+    "hira": "さいふ",
+    "han": "",
+    "nghia": "cái ví"
+  },
+  {
+    "kanji": "魚",
+    "hira": "さかな",
+    "han": "",
+    "nghia": "cá"
+  },
+  {
+    "kanji": "作文",
+    "hira": "さくぶん",
+    "han": "",
+    "nghia": "làm văn"
+  },
+  {
+    "kanji": "雑誌",
+    "hira": "ざっし",
+    "han": "",
+    "nghia": "tạp chí"
+  },
+  {
+    "kanji": "砂糖",
+    "hira": "さとう",
+    "han": "",
+    "nghia": "đường"
+  },
+  {
+    "kanji": "三",
+    "hira": "さん",
+    "han": "",
+    "nghia": "ba"
+  },
+  {
+    "kanji": "四",
+    "hira": "し/よん",
+    "han": "",
+    "nghia": "bốn"
+  },
+  {
+    "kanji": "塩",
+    "hira": "しお",
+    "han": "",
+    "nghia": "muối"
+  },
+  {
+    "kanji": "時間",
+    "hira": "じかん",
+    "han": "",
+    "nghia": "Thời gian"
+  },
+  {
+    "kanji": "仕事",
+    "hira": "しごと",
+    "han": "",
+    "nghia": "công việc"
+  },
+  {
+    "kanji": "辞書",
+    "hira": "じしょ",
+    "han": "",
+    "nghia": "từ điển"
+  },
+  {
+    "kanji": "下",
+    "hira": "した",
+    "han": "",
+    "nghia": "dưới"
+  },
+  {
+    "kanji": "自動車",
+    "hira": "じどうしゃ",
+    "han": "",
+    "nghia": "ô tô, xe hơi"
+  },
+  {
+    "kanji": "自分",
+    "hira": "じぶん",
+    "han": "",
+    "nghia": "bản thân, tự mình"
+  },
+  {
+    "kanji": "写真",
+    "hira": "しゃしん",
+    "han": "",
+    "nghia": "ảnh"
+  },
+  {
+    "kanji": "十",
+    "hira": "じゅう",
+    "han": "",
+    "nghia": "mười"
+  },
+  {
+    "kanji": "授業",
+    "hira": "じゅぎょう",
+    "han": "",
+    "nghia": "giờ học"
+  },
+  {
+    "kanji": "宿題",
+    "hira": "しゅくだい",
+    "han": "",
+    "nghia": "bài tập về nhà"
+  },
+  {
+    "kanji": "背",
+    "hira": "せ",
+    "han": "",
+    "nghia": "lưng"
+  },
+  {
+    "kanji": "生徒",
+    "hira": "せいと",
+    "han": "",
+    "nghia": "học sinh"
+  },
+  {
+    "kanji": "千",
+    "hira": "せん",
+    "han": "",
+    "nghia": "nghìn"
+  },
+  {
+    "kanji": "掃除",
+    "hira": "そうじ",
+    "han": "",
+    "nghia": "dọn dẹp"
+  },
+  {
+    "kanji": "外",
+    "hira": "そと",
+    "han": "",
+    "nghia": "ngoài"
+  },
+  {
+    "kanji": "空",
+    "hira": "そら",
+    "han": "",
+    "nghia": "bầu trời"
+  },
+  {
+    "kanji": "卵",
+    "hira": "たまご",
+    "han": "",
+    "nghia": "trứng"
+  },
+  {
+    "kanji": "地図",
+    "hira": "ちず",
+    "han": "",
+    "nghia": "Bản đồ"
+  },
+  {
+    "kanji": "机",
+    "hira": "つくえ",
+    "han": "",
+    "nghia": "bàn"
+  },
+  {
+    "kanji": "手",
+    "hira": "て",
+    "han": "",
+    "nghia": "tay"
+  },
+  {
+    "kanji": "手紙",
+    "hira": "てがみ",
+    "han": "",
+    "nghia": "thư"
+  },
+  {
+    "kanji": "出口",
+    "hira": "でぐち",
+    "han": "",
+    "nghia": "cửa ra, lối ra"
+  },
+  {
+    "kanji": "天気",
+    "hira": "てんき",
+    "han": "",
+    "nghia": "thời tiết"
+  },
+  {
+    "kanji": "電気",
+    "hira": "でんき",
+    "han": "",
+    "nghia": "điện, đèn điện"
+  },
+  {
+    "kanji": "電車",
+    "hira": "でんしゃ",
+    "han": "",
+    "nghia": "tàu điện"
+  },
+  {
+    "kanji": "電話",
+    "hira": "でんわ",
+    "han": "",
+    "nghia": "điện thoại"
+  },
+  {
+    "kanji": "戸",
+    "hira": "と",
+    "han": "",
+    "nghia": "Cửa"
+  },
+  {
+    "kanji": "所",
+    "hira": "ところ",
+    "han": "",
+    "nghia": "nơi, chỗ"
+  },
+  {
+    "kanji": "年",
+    "hira": "とし",
+    "han": "",
+    "nghia": "năm"
+  },
+  {
+    "kanji": "動物",
+    "hira": "どうぶつ",
+    "han": "",
+    "nghia": "động vật"
+  },
+  {
+    "kanji": "時々",
+    "hira": "ときどき",
+    "han": "",
+    "nghia": "thỉnh thoảng"
+  },
+  {
+    "kanji": "時計",
+    "hira": "とけい",
+    "han": "",
+    "nghia": "đồng hồ"
+  },
+  {
+    "kanji": "隣",
+    "hira": "となり",
+    "han": "",
+    "nghia": "bên cạnh"
+  },
+  {
+    "kanji": "土曜日",
+    "hira": "どようび",
+    "han": "",
+    "nghia": "Thứ bảy"
+  },
+  {
+    "kanji": "鳥",
+    "hira": "とり",
+    "han": "",
+    "nghia": "con chim"
+  },
+  {
+    "kanji": "とり肉",
+    "hira": "とりにく",
+    "han": "",
+    "nghia": "thịt gà"
+  },
+  {
+    "kanji": "ナイフ",
+    "hira": "naifu",
+    "han": "",
+    "nghia": "dao"
+  },
+  {
+    "kanji": "中",
+    "hira": "なか",
+    "han": "",
+    "nghia": "trong"
+  },
+  {
+    "kanji": "夏",
+    "hira": "なつ",
+    "han": "",
+    "nghia": "mùa hè"
+  },
+  {
+    "kanji": "七つ",
+    "hira": "ななつ",
+    "han": "",
+    "nghia": "bảy cái (đếm vật nói chung)"
+  },
+  {
+    "kanji": "名前",
+    "hira": "なまえ",
+    "han": "",
+    "nghia": "tên"
+  },
+  {
+    "kanji": "二",
+    "hira": "に",
+    "han": "",
+    "nghia": "hai"
+  },
+  {
+    "kanji": "肉",
+    "hira": "にく",
+    "han": "",
+    "nghia": "thịt"
+  },
+  {
+    "kanji": "西",
+    "hira": "にし",
+    "han": "",
+    "nghia": "phía Tây"
+  },
+  {
+    "kanji": "荷物",
+    "hira": "にもつ",
+    "han": "",
+    "nghia": "hành lý, đồ đạc"
+  },
+  {
+    "kanji": "庭",
+    "hira": "にわ",
+    "han": "",
+    "nghia": "vườn"
+  },
+  {
+    "kanji": "猫",
+    "hira": "ねこ",
+    "han": "",
+    "nghia": "mèo"
+  },
+  {
+    "kanji": "歯",
+    "hira": "は",
+    "han": "",
+    "nghia": "răng"
+  },
+  {
+    "kanji": "灰皿",
+    "hira": "はいざら",
+    "han": "",
+    "nghia": "gạt tàn thuốc"
+  },
+  {
+    "kanji": "葉書",
+    "hira": "はがき",
+    "han": "",
+    "nghia": "bưu thiếp"
+  },
+  {
+    "kanji": "箱",
+    "hira": "はこ",
+    "han": "",
+    "nghia": "cái hộp"
+  },
+  {
+    "kanji": "橋",
+    "hira": "はし",
+    "han": "",
+    "nghia": "cầu"
+  },
+  {
+    "kanji": "箸",
+    "hira": "はし",
+    "han": "",
+    "nghia": "đũa"
+  },
+  {
+    "kanji": "八",
+    "hira": "はち",
+    "han": "",
+    "nghia": "tám"
+  },
+  {
+    "kanji": "花",
+    "hira": "はな",
+    "han": "",
+    "nghia": "hoa"
+  },
+  {
+    "kanji": "鼻",
+    "hira": "はな",
+    "han": "",
+    "nghia": "mũi"
+  },
+  {
+    "kanji": "話",
+    "hira": "はなし",
+    "han": "",
+    "nghia": "câu chuyện"
+  },
+  {
+    "kanji": "春",
+    "hira": "はる",
+    "han": "",
+    "nghia": "mùa xuân"
+  },
+  {
+    "kanji": "半",
+    "hira": "はん",
+    "han": "",
+    "nghia": "một nửa"
+  },
+  {
+    "kanji": "晩",
+    "hira": "ばん",
+    "han": "",
+    "nghia": "buổi tối"
+  },
+  {
+    "kanji": "番号",
+    "hira": "ばんごう",
+    "han": "",
+    "nghia": "số"
+  },
+  {
+    "kanji": "半分",
+    "hira": "はんぶん",
+    "han": "",
+    "nghia": "một nửa"
+  },
+  {
+    "kanji": "東",
+    "hira": "ひがし",
+    "han": "",
+    "nghia": "phía Đông"
+  },
+  {
+    "kanji": "左",
+    "hira": "ひだり",
+    "han": "",
+    "nghia": "phía bên tay trái"
+  },
+  {
+    "kanji": "人",
+    "hira": "ひと",
+    "han": "",
+    "nghia": "người"
+  },
+  {
+    "kanji": "一つ",
+    "hira": "ひとつ",
+    "han": "",
+    "nghia": "một cái (đếm vật nói chung)"
+  },
+  {
+    "kanji": "一月",
+    "hira": "いちがつ",
+    "han": "",
+    "nghia": "tháng 1"
+  },
+  {
+    "kanji": "一人",
+    "hira": "ひとり",
+    "han": "",
+    "nghia": "một người"
+  },
+  {
+    "kanji": "百",
+    "hira": "ひゃく",
+    "han": "",
+    "nghia": "trăm"
+  },
+  {
+    "kanji": "病院",
+    "hira": "びょういん",
+    "han": "",
+    "nghia": "bệnh viện"
+  },
+  {
+    "kanji": "病気",
+    "hira": "びょうき",
+    "han": "",
+    "nghia": "bệnh"
+  },
+  {
+    "kanji": "昼",
+    "hira": "ひる",
+    "han": "",
+    "nghia": "buổi trưa, ban ngày"
+  },
+  {
+    "kanji": "封筒",
+    "hira": "ふうとう",
+    "han": "",
+    "nghia": "phong bì"
+  },
+  {
+    "kanji": "服",
+    "hira": "ふく",
+    "han": "",
+    "nghia": "quần áo"
+  },
+  {
+    "kanji": "二つ",
+    "hira": "ふたつ",
+    "han": "",
+    "nghia": "hai cái (đếm vật nói chung)"
+  },
+  {
+    "kanji": "豚肉",
+    "hira": "ぶたにく",
+    "han": "",
+    "nghia": "thịt lợn"
+  },
+  {
+    "kanji": "二人",
+    "hira": "ふたり",
+    "han": "",
+    "nghia": "hai người"
+  },
+  {
+    "kanji": "二日",
+    "hira": "ふつか",
+    "han": "",
+    "nghia": "hai ngày, ngày mồng 2"
+  },
+  {
+    "kanji": "冬",
+    "hira": "ふゆ",
+    "han": "",
+    "nghia": "mùa đông"
+  },
+  {
+    "kanji": "文章",
+    "hira": "ぶんしょう",
+    "han": "",
+    "nghia": "câu văn, đoạn văn"
+  },
+  {
+    "kanji": "部屋",
+    "hira": "へや",
+    "han": "",
+    "nghia": "căn phòng"
+  },
+  {
+    "kanji": "辺",
+    "hira": "へん",
+    "han": "",
+    "nghia": "khu vực"
+  },
+  {
+    "kanji": "帽子",
+    "hira": "ぼうし",
+    "han": "",
+    "nghia": "mũ"
+  },
+  {
+    "kanji": "本",
+    "hira": "ほん",
+    "han": "",
+    "nghia": "cuốn sách"
+  },
+  {
+    "kanji": "本棚",
+    "hira": "ほんだな",
+    "han": "",
+    "nghia": "giá sách"
+  },
+  {
+    "kanji": "本当",
+    "hira": "ほんとう",
+    "han": "",
+    "nghia": "sự thật"
+  },
+  {
+    "kanji": "毎朝",
+    "hira": "まいあさ",
+    "han": "",
+    "nghia": "mỗi buổi sáng"
+  },
+  {
+    "kanji": "毎週",
+    "hira": "まいしゅう",
+    "han": "",
+    "nghia": "mỗi tuần"
+  },
+  {
+    "kanji": "毎日",
+    "hira": "まいにち",
+    "han": "",
+    "nghia": "mỗi ngày"
+  },
+  {
+    "kanji": "毎晩",
+    "hira": "まいばん",
+    "han": "",
+    "nghia": "mỗi tối"
+  },
+  {
+    "kanji": "前",
+    "hira": "まえ",
+    "han": "",
+    "nghia": "trước"
+  },
+  {
+    "kanji": "町",
+    "hira": "まち",
+    "han": "",
+    "nghia": "thị xã, thành phố"
+  },
+  {
+    "kanji": "窓",
+    "hira": "まど",
+    "han": "",
+    "nghia": "cửa sổ"
+  },
+  {
+    "kanji": "万",
+    "hira": "まん",
+    "han": "",
+    "nghia": "mười nghìn"
+  },
+  {
+    "kanji": "右",
+    "hira": "みぎ",
+    "han": "",
+    "nghia": "bên phải"
+  },
+  {
+    "kanji": "水",
+    "hira": "みず",
+    "han": "",
+    "nghia": "nước"
+  },
+  {
+    "kanji": "店",
+    "hira": "みせ",
+    "han": "",
+    "nghia": "cửa hàng, cửa tiệm"
+  },
+  {
+    "kanji": "道",
+    "hira": "みち",
+    "han": "",
+    "nghia": "đường phố"
+  },
+  {
+    "kanji": "三つ",
+    "hira": "みっつ",
+    "han": "",
+    "nghia": "ba cái (đếm đồ vật nói chung)"
+  },
+  {
+    "kanji": "緑",
+    "hira": "みどり",
+    "han": "",
+    "nghia": "màu xanh lá cây"
+  },
+  {
+    "kanji": "耳",
+    "hira": "みみ",
+    "han": "",
+    "nghia": "tai"
+  },
+  {
+    "kanji": "向こう",
+    "hira": "むこう",
+    "han": "",
+    "nghia": "phía bên kia"
+  },
+  {
+    "kanji": "六つ",
+    "hira": "むっつ",
+    "han": "",
+    "nghia": "sáu cái (đếm đồ vật nói chung)"
+  },
+  {
+    "kanji": "村",
+    "hira": "むら",
+    "han": "",
+    "nghia": "làng"
+  },
+  {
+    "kanji": "目",
+    "hira": "め",
+    "han": "",
+    "nghia": "mắt"
+  },
+  {
+    "kanji": "物",
+    "hira": "もの",
+    "han": "",
+    "nghia": "đồ vật"
+  },
+  {
+    "kanji": "門",
+    "hira": "もん",
+    "han": "",
+    "nghia": "cổng, cửa"
+  },
+  {
+    "kanji": "野菜",
+    "hira": "やさい",
+    "han": "",
+    "nghia": "rau"
+  },
+  {
+    "kanji": "八つ",
+    "hira": "やっつ",
+    "han": "",
+    "nghia": "tám cái (đếm vật nói chung)"
+  },
+  {
+    "kanji": "山",
+    "hira": "やま",
+    "han": "",
+    "nghia": "núi"
+  },
+  {
+    "kanji": "ゆうべ",
+    "hira": "ゆうべ",
+    "han": "",
+    "nghia": "đêm qua"
+  },
+  {
+    "kanji": "横",
+    "hira": "よこ",
+    "han": "",
+    "nghia": "bên cạnh, bên, chiều rộng"
+  },
+  {
+    "kanji": "夜",
+    "hira": "よる",
+    "han": "",
+    "nghia": "buổi tối, ban đêm"
+  },
+  {
+    "kanji": "来年",
+    "hira": "らいねん",
+    "han": "",
+    "nghia": "năm sau"
+  },
+  {
+    "kanji": "料理",
+    "hira": "りょうり",
+    "han": "",
+    "nghia": "nấu ăn, món ăn"
+  },
+  {
+    "kanji": "廊下",
+    "hira": "ろうか",
+    "han": "",
+    "nghia": "hành lang"
+  },
+  {
+    "kanji": "六",
+    "hira": "ろく",
+    "han": "",
+    "nghia": "sáu"
+  },
+  {
+    "kanji": "会う",
+    "hira": "あう",
+    "han": "",
+    "nghia": "Gặp mặt"
+  },
+  {
+    "kanji": "開く",
+    "hira": "あく",
+    "han": "",
+    "nghia": "Mở (tự động từ)"
+  },
+  {
+    "kanji": "洗う",
+    "hira": "あらう",
+    "han": "",
+    "nghia": "Rửa"
+  },
+  {
+    "kanji": "歩く",
+    "hira": "あるく",
+    "han": "",
+    "nghia": "Đi bộ"
+  },
+  {
+    "kanji": "要る",
+    "hira": "いる",
+    "han": "",
+    "nghia": "Cần"
+  },
+  {
+    "kanji": "歌う",
+    "hira": "うたう",
+    "han": "",
+    "nghia": "Hát"
+  },
+  {
+    "kanji": "売る",
+    "hira": "うる",
+    "han": "",
+    "nghia": "Bán"
+  },
+  {
+    "kanji": "降りる",
+    "hira": "おりる",
+    "han": "",
+    "nghia": "Xuống"
+  },
+  {
+    "kanji": "買う",
+    "hira": "かう",
+    "han": "",
+    "nghia": "Mua"
+  },
+  {
+    "kanji": "帰る",
+    "hira": "かえる",
+    "han": "",
+    "nghia": "Về"
+  },
+  {
+    "kanji": "書く",
+    "hira": "かく",
+    "han": "",
+    "nghia": "Viết"
+  },
+  {
+    "kanji": "貸す",
+    "hira": "かす",
+    "han": "",
+    "nghia": "Cho vay, cho mượn"
+  },
+  {
+    "kanji": "借りる",
+    "hira": "かりる",
+    "han": "",
+    "nghia": "Vay, mượn"
+  },
+  {
+    "kanji": "聞く",
+    "hira": "きく",
+    "han": "",
+    "nghia": "Nghe, hỏi"
+  },
+  {
+    "kanji": "切る",
+    "hira": "きる",
+    "han": "",
+    "nghia": "Cắt"
+  },
+  {
+    "kanji": "着る",
+    "hira": "きる",
+    "han": "",
+    "nghia": "Mặc (đưa từ trên xuống như áo...)"
+  },
+  {
+    "kanji": "来る",
+    "hira": "くる",
+    "han": "",
+    "nghia": "Đến"
+  },
+  {
+    "kanji": "知る",
+    "hira": "しる",
+    "han": "",
+    "nghia": "Biết"
+  },
+  {
+    "kanji": "吸う",
+    "hira": "すう",
+    "han": "",
+    "nghia": "Hút"
+  },
+  {
+    "kanji": "住む",
+    "hira": "すむ",
+    "han": "",
+    "nghia": "Sống"
+  },
+  {
+    "kanji": "出す",
+    "hira": "だす",
+    "han": "",
+    "nghia": "Lấy ra, nộp, gửi (thư)"
+  },
+  {
+    "kanji": "立つ",
+    "hira": "たつ",
+    "han": "",
+    "nghia": "Đứng"
+  },
+  {
+    "kanji": "食べる",
+    "hira": "たべる",
+    "han": "",
+    "nghia": "Ăn"
+  },
+  {
+    "kanji": "使う",
+    "hira": "つかう",
+    "han": "",
+    "nghia": "Sử dụng"
+  },
+  {
+    "kanji": "着く",
+    "hira": "つく",
+    "han": "",
+    "nghia": "Đến"
+  },
+  {
+    "kanji": "出る",
+    "hira": "でる",
+    "han": "",
+    "nghia": "Ra, rời khỏi, xuất hiện"
+  },
+  {
+    "kanji": "飛ぶ",
+    "hira": "とぶ",
+    "han": "",
+    "nghia": "Bay, nhảy"
+  },
+  {
+    "kanji": "取る",
+    "hira": "とる",
+    "han": "",
+    "nghia": "Lấy (muối...)"
+  },
+  {
+    "kanji": "撮る",
+    "hira": "とる",
+    "han": "",
+    "nghia": "Chụp ảnh hoặc quay phim"
+  },
+  {
+    "kanji": "鳴く",
+    "hira": "なく",
+    "han": "",
+    "nghia": "Kêu, hót"
+  },
+  {
+    "kanji": "無くす",
+    "hira": "なくす",
+    "han": "",
+    "nghia": "Làm mất, đánh mất"
+  },
+  {
+    "kanji": "習う",
+    "hira": "ならう",
+    "han": "",
+    "nghia": "Học"
+  },
+  {
+    "kanji": "並ぶ",
+    "hira": "ならぶ",
+    "han": "",
+    "nghia": "Xếp hàng, ngang bằng"
+  },
+  {
+    "kanji": "脱ぐ",
+    "hira": "ぬぐ",
+    "han": "",
+    "nghia": "Cởi"
+  },
+  {
+    "kanji": "寝る",
+    "hira": "ねる",
+    "han": "",
+    "nghia": "Đi ngủ, ngủ"
+  },
+  {
+    "kanji": "登る",
+    "hira": "のぼる",
+    "han": "",
+    "nghia": "Leo lên"
+  },
+  {
+    "kanji": "飲む",
+    "hira": "のむ",
+    "han": "",
+    "nghia": "Uống"
+  },
+  {
+    "kanji": "乗る",
+    "hira": "のる",
+    "han": "",
+    "nghia": "Lên (tàu, xe...), cưỡi ngựa"
+  },
+  {
+    "kanji": "入る",
+    "hira": "はいる",
+    "han": "",
+    "nghia": "Vào, đi vào"
+  },
+  {
+    "kanji": "履く",
+    "hira": "はく",
+    "han": "",
+    "nghia": "Mặc, đi (từ dưới lên)"
+  },
+  {
+    "kanji": "走る",
+    "hira": "はしる",
+    "han": "",
+    "nghia": "Chạy"
+  },
+  {
+    "kanji": "話す",
+    "hira": "はなす",
+    "han": "",
+    "nghia": "Nói chuyện"
+  },
+  {
+    "kanji": "貼る",
+    "hira": "はる",
+    "han": "",
+    "nghia": "Dán"
+  },
+  {
+    "kanji": "晴れる",
+    "hira": "はれる",
+    "han": "",
+    "nghia": "Có nắng, thời tiết đẹp"
+  },
+  {
+    "kanji": "引く",
+    "hira": "ひく",
+    "han": "",
+    "nghia": "Kéo"
+  },
+  {
+    "kanji": "弾く",
+    "hira": "ひく",
+    "han": "",
+    "nghia": "Chơi (nhạc cụ)"
+  },
+  {
+    "kanji": "吹く",
+    "hira": "ふく",
+    "han": "",
+    "nghia": "Thổi"
+  },
+  {
+    "kanji": "降る",
+    "hira": "ふる",
+    "han": "",
+    "nghia": "Rơi (mưa, tuyết)"
+  },
+  {
+    "kanji": "曲る",
+    "hira": "まがる",
+    "han": "",
+    "nghia": "Rẽ, cong"
+  },
+  {
+    "kanji": "待つ",
+    "hira": "まつ",
+    "han": "",
+    "nghia": "Chờ đợi"
+  },
+  {
+    "kanji": "右",
+    "hira": "みぎ",
+    "han": "",
+    "nghia": "Bên phải"
+  },
+  {
+    "kanji": "見せる",
+    "hira": "みせる",
+    "han": "",
+    "nghia": "Cho xem"
+  },
+  {
+    "kanji": "見る",
+    "hira": "みる",
+    "han": "",
+    "nghia": "Xem, nhìn, trông"
+  },
+  {
+    "kanji": "持つ",
+    "hira": "もつ",
+    "han": "",
+    "nghia": "Mang, cầm"
+  },
+  {
+    "kanji": "休む",
+    "hira": "やすむ",
+    "han": "",
+    "nghia": "Nghỉ, nghỉ ngơi"
+  },
+  {
+    "kanji": "呼ぶ",
+    "hira": "よぶ",
+    "han": "",
+    "nghia": "Gọi"
+  },
+  {
+    "kanji": "読む",
+    "hira": "よむ",
+    "han": "",
+    "nghia": "Đọc"
+  },
+  {
+    "kanji": "渡す",
+    "hira": "わたす",
+    "han": "",
+    "nghia": "Đưa cho"
+  },
+  {
+    "kanji": "渡る",
+    "hira": "わたる",
+    "han": "",
+    "nghia": "Đi qua, băng qua"
+  },
+  {
+    "kanji": "青い",
+    "hira": "あおい",
+    "han": "",
+    "nghia": "Xanh da trời"
+  },
+  {
+    "kanji": "赤い",
+    "hira": "あかい",
+    "han": "",
+    "nghia": "Màu đỏ"
+  },
+  {
+    "kanji": "暑い",
+    "hira": "あつい",
+    "han": "",
+    "nghia": "Nóng (thời tiết)"
+  },
+  {
+    "kanji": "熱い",
+    "hira": "あつい",
+    "han": "",
+    "nghia": "Nóng (khi chạm vào)"
+  },
+  {
+    "kanji": "厚い",
+    "hira": "あつい",
+    "han": "",
+    "nghia": "Dày"
+  },
+  {
+    "kanji": "甘い",
+    "hira": "あまい",
+    "han": "",
+    "nghia": "Ngọt, ngọt ngào"
+  },
+  {
+    "kanji": "痛い",
+    "hira": "いたい",
+    "han": "",
+    "nghia": "Đau"
+  },
+  {
+    "kanji": "多い",
+    "hira": "おおい",
+    "han": "",
+    "nghia": "Nhiều"
+  },
+  {
+    "kanji": "遅い",
+    "hira": "おそい",
+    "han": "",
+    "nghia": "Muộn, chậm"
+  },
+  {
+    "kanji": "重い",
+    "hira": "おもい",
+    "han": "",
+    "nghia": "Nặng"
+  },
+  {
+    "kanji": "辛い",
+    "hira": "からい",
+    "han": "",
+    "nghia": "Cay"
+  },
+  {
+    "kanji": "軽い",
+    "hira": "かるい",
+    "han": "",
+    "nghia": "Nhẹ"
+  },
+  {
+    "kanji": "暗い",
+    "hira": "くらい",
+    "han": "",
+    "nghia": "Tối"
+  },
+  {
+    "kanji": "寒い",
+    "hira": "さむい",
+    "han": "",
+    "nghia": "Lạnh"
+  },
+  {
+    "kanji": "白い",
+    "hira": "しろい",
+    "han": "",
+    "nghia": "Trắng"
+  },
+  {
+    "kanji": "狭い",
+    "hira": "せまい",
+    "han": "",
+    "nghia": "Hẹp"
+  },
+  {
+    "kanji": "小さい",
+    "hira": "ちいさい",
+    "han": "",
+    "nghia": "Nhỏ"
+  },
+  {
+    "kanji": "近い",
+    "hira": "ちかい",
+    "han": "",
+    "nghia": "Gần"
+  },
+  {
+    "kanji": "遠い",
+    "hira": "とおい",
+    "han": "",
+    "nghia": "Xa"
+  },
+  {
+    "kanji": "長い",
+    "hira": "ながい",
+    "han": "",
+    "nghia": "Dài"
+  },
+  {
+    "kanji": "早い",
+    "hira": "はやい",
+    "han": "",
+    "nghia": "Sớm"
+  },
+  {
+    "kanji": "速い",
+    "hira": "はやい",
+    "han": "",
+    "nghia": "Nhanh chóng"
+  },
+  {
+    "kanji": "広い",
+    "hira": "ひろい",
+    "han": "",
+    "nghia": "Rộng rãi, rộng"
+  },
+  {
+    "kanji": "太い",
+    "hira": "ふとい",
+    "han": "",
+    "nghia": "Béo"
+  },
+  {
+    "kanji": "古い",
+    "hira": "ふるい",
+    "han": "",
+    "nghia": "Cũ (không dùng cho người)"
+  },
+  {
+    "kanji": "欲しい",
+    "hira": "ほしい",
+    "han": "",
+    "nghia": "Muốn"
+  },
+  {
+    "kanji": "細い",
+    "hira": "ほそい",
+    "han": "",
+    "nghia": "Gầy, hẹp, thon"
+  },
+  {
+    "kanji": "丸い",
+    "hira": "まるい",
+    "han": "",
+    "nghia": "Tròn"
+  },
+  {
+    "kanji": "安い",
+    "hira": "やすい",
+    "han": "",
+    "nghia": "Giá rẻ"
+  },
+  {
+    "kanji": "弱い",
+    "hira": "よわい",
+    "han": "",
+    "nghia": "Yếu"
+  },
+  {
+    "kanji": "強い",
+    "hira": "つよい",
+    "han": "",
+    "nghia": "Mạnh"
+  },
+  {
+    "kanji": "若い",
+    "hira": "わかい",
+    "han": "",
+    "nghia": "Trẻ"
+  },
+  {
+    "kanji": "悪い",
+    "hira": "わるい",
+    "han": "",
+    "nghia": "Xấu"
+  },
+  {
+    "kanji": "嫌",
+    "hira": "いや",
+    "han": "",
+    "nghia": "Chán, ghét, khó chịu"
+  },
+  {
+    "kanji": "嫌い",
+    "hira": "きらい",
+    "han": "",
+    "nghia": "Ghét, không thích"
+  },
+  {
+    "kanji": "結構",
+    "hira": "けっこう",
+    "han": "",
+    "nghia": "Đủ"
+  },
+  {
+    "kanji": "元気",
+    "hira": "げんき",
+    "han": "",
+    "nghia": "Khỏe mạnh"
+  },
+  {
+    "kanji": "上手",
+    "hira": "じょうず",
+    "han": "",
+    "nghia": "Giỏi, khéo"
+  },
+  {
+    "kanji": "丈夫",
+    "hira": "じょうぶ",
+    "han": "",
+    "nghia": "Chắc, bền"
+  },
+  {
+    "kanji": "好き",
+    "hira": "すき",
+    "han": "",
+    "nghia": "Thích"
+  },
+  {
+    "kanji": "大変",
+    "hira": "たいへん",
+    "han": "",
+    "nghia": "Khó khăn, vất vả"
+  },
+  {
+    "kanji": "暇",
+    "hira": "ひま",
+    "han": "",
+    "nghia": "Rảnh rỗi"
+  },
+  {
+    "kanji": "便利",
+    "hira": "べんり",
+    "han": "",
+    "nghia": "Tiện lợi"
+  },
+  {
+    "kanji": "不便",
+    "hira": "ふべん",
+    "han": "",
+    "nghia": "Bất tiện"
+  },
+  {
+    "kanji": "簡単",
+    "hira": "かんたん",
+    "han": "",
+    "nghia": "Đơn giản"
+  },
+  {
+    "kanji": "後",
+    "hira": "あと",
+    "han": "",
+    "nghia": "Sau đó"
+  },
+  {
+    "kanji": "先",
+    "hira": "さき",
+    "han": "",
+    "nghia": "Trước (làm cái gì đó trước)"
+  },
+  {
+    "kanji": "誰",
+    "hira": "だれ",
+    "han": "",
+    "nghia": "Ai, người nào"
   }
 ]

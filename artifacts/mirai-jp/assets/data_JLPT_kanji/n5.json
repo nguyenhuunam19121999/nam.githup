@@ -3,97 +3,3021 @@
     "id": "n5-001",
     "kanji": "一",
     "hanViet": "NHẤT",
-    "kunyomi": ["ひと-", "ひと.つ"],
-    "onyomi": ["イチ", "イツ"],
+    "kunyomi": [
+      "ひと-",
+      "ひと.つ"
+    ],
+    "onyomi": [
+      "イチ",
+      "イツ"
+    ],
     "strokes": 1,
     "level": "N5",
     "frequency": 2,
-    "components": [{ "kanji": "一", "hanViet": "NHẤT" }],
-    "meanings": ["Một", "Số 1", "Toàn bộ, đồng nhất"],
+    "components": [
+      {
+        "kanji": "一",
+        "hanViet": "NHẤT"
+      }
+    ],
+    "meanings": [
+      "Một",
+      "Số 1",
+      "Toàn bộ, đồng nhất"
+    ],
     "examples": [
-      { "jp": "一人", "reading": "ひとり", "vi": "Một người" },
-      { "jp": "一月", "reading": "いちがつ", "vi": "Tháng Một" }
+      {
+        "jp": "一人",
+        "reading": "ひとり",
+        "vi": "Một người"
+      },
+      {
+        "jp": "一月",
+        "reading": "いちがつ",
+        "vi": "Tháng Một"
+      }
     ]
   },
   {
     "id": "n5-002",
     "kanji": "日",
     "hanViet": "NHẬT",
-    "kunyomi": ["ひ", "-び", "-か"],
-    "onyomi": ["ニチ", "ジツ"],
+    "kunyomi": [
+      "ひ",
+      "-び",
+      "-か"
+    ],
+    "onyomi": [
+      "ニチ",
+      "ジツ"
+    ],
     "strokes": 4,
     "level": "N5",
     "frequency": 1,
-    "components": [{ "kanji": "日", "hanViet": "NHẬT" }],
-    "meanings": ["Mặt trời", "Ngày", "Nước Nhật"],
+    "components": [
+      {
+        "kanji": "日",
+        "hanViet": "NHẬT"
+      }
+    ],
+    "meanings": [
+      "Mặt trời",
+      "Ngày",
+      "Nước Nhật"
+    ],
     "examples": [
-      { "jp": "日本", "reading": "にほん", "vi": "Nhật Bản" },
-      { "jp": "今日", "reading": "きょう", "vi": "Hôm nay" },
-      { "jp": "毎日", "reading": "まいにち", "vi": "Mỗi ngày" }
+      {
+        "jp": "日本",
+        "reading": "にほん",
+        "vi": "Nhật Bản"
+      },
+      {
+        "jp": "今日",
+        "reading": "きょう",
+        "vi": "Hôm nay"
+      },
+      {
+        "jp": "毎日",
+        "reading": "まいにち",
+        "vi": "Mỗi ngày"
+      }
     ]
   },
   {
     "id": "n5-003",
     "kanji": "月",
     "hanViet": "NGUYỆT",
-    "kunyomi": ["つき"],
-    "onyomi": ["ゲツ", "ガツ"],
+    "kunyomi": [
+      "つき"
+    ],
+    "onyomi": [
+      "ゲツ",
+      "ガツ"
+    ],
     "strokes": 4,
     "level": "N5",
     "frequency": 23,
-    "components": [{ "kanji": "月", "hanViet": "NGUYỆT" }],
-    "meanings": ["Mặt trăng", "Tháng"],
+    "components": [
+      {
+        "kanji": "月",
+        "hanViet": "NGUYỆT"
+      }
+    ],
+    "meanings": [
+      "Mặt trăng",
+      "Tháng"
+    ],
     "examples": [
-      { "jp": "月曜日", "reading": "げつようび", "vi": "Thứ hai" },
-      { "jp": "今月", "reading": "こんげつ", "vi": "Tháng này" }
+      {
+        "jp": "月曜日",
+        "reading": "げつようび",
+        "vi": "Thứ hai"
+      },
+      {
+        "jp": "今月",
+        "reading": "こんげつ",
+        "vi": "Tháng này"
+      }
     ]
   },
   {
     "id": "n5-004",
     "kanji": "人",
     "hanViet": "NHÂN",
-    "kunyomi": ["ひと", "-り", "-と"],
-    "onyomi": ["ジン", "ニン"],
+    "kunyomi": [
+      "ひと",
+      "-り",
+      "-と"
+    ],
+    "onyomi": [
+      "ジン",
+      "ニン"
+    ],
     "strokes": 2,
     "level": "N5",
     "frequency": 5,
-    "components": [{ "kanji": "人", "hanViet": "NHÂN" }],
-    "meanings": ["Người", "Con người"],
+    "components": [
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      }
+    ],
+    "meanings": [
+      "Người",
+      "Con người"
+    ],
     "examples": [
-      { "jp": "日本人", "reading": "にほんじん", "vi": "Người Nhật" },
-      { "jp": "三人", "reading": "さんにん", "vi": "Ba người" }
+      {
+        "jp": "日本人",
+        "reading": "にほんじん",
+        "vi": "Người Nhật"
+      },
+      {
+        "jp": "三人",
+        "reading": "さんにん",
+        "vi": "Ba người"
+      }
     ]
   },
   {
     "id": "n5-005",
     "kanji": "山",
     "hanViet": "SƠN",
-    "kunyomi": ["やま"],
-    "onyomi": ["サン", "セン"],
+    "kunyomi": [
+      "やま"
+    ],
+    "onyomi": [
+      "サン",
+      "セン"
+    ],
     "strokes": 3,
     "level": "N5",
     "frequency": 89,
-    "components": [{ "kanji": "山", "hanViet": "SƠN" }],
-    "meanings": ["Núi", "Một đống lớn"],
+    "components": [
+      {
+        "kanji": "山",
+        "hanViet": "SƠN"
+      }
+    ],
+    "meanings": [
+      "Núi",
+      "Một đống lớn"
+    ],
     "examples": [
-      { "jp": "富士山", "reading": "ふじさん", "vi": "Núi Phú Sĩ" },
-      { "jp": "火山", "reading": "かざん", "vi": "Núi lửa" }
+      {
+        "jp": "富士山",
+        "reading": "ふじさん",
+        "vi": "Núi Phú Sĩ"
+      },
+      {
+        "jp": "火山",
+        "reading": "かざん",
+        "vi": "Núi lửa"
+      }
     ]
   },
   {
     "id": "n5-006",
     "kanji": "水",
     "hanViet": "THUỶ",
-    "kunyomi": ["みず", "-みず"],
-    "onyomi": ["スイ"],
+    "kunyomi": [
+      "みず",
+      "-みず"
+    ],
+    "onyomi": [
+      "スイ"
+    ],
     "strokes": 4,
     "level": "N5",
     "frequency": 130,
-    "components": [{ "kanji": "水", "hanViet": "THUỶ" }],
-    "meanings": ["Nước", "Sự lỏng"],
+    "components": [
+      {
+        "kanji": "水",
+        "hanViet": "THUỶ"
+      }
+    ],
+    "meanings": [
+      "Nước",
+      "Sự lỏng"
+    ],
     "examples": [
-      { "jp": "水曜日", "reading": "すいようび", "vi": "Thứ tư" },
-      { "jp": "お水", "reading": "おみず", "vi": "Nước (uống)" }
+      {
+        "jp": "水曜日",
+        "reading": "すいようび",
+        "vi": "Thứ tư"
+      },
+      {
+        "jp": "お水",
+        "reading": "おみず",
+        "vi": "Nước (uống)"
+      }
+    ]
+  },
+  {
+    "id": "n5-007",
+    "kanji": "火",
+    "hanViet": "HỎA",
+    "kunyomi": [
+      "ひ"
+    ],
+    "onyomi": [
+      "か"
+    ],
+    "strokes": 4,
+    "level": "N5",
+    "frequency": 9,
+    "components": [
+      {
+        "kanji": "火",
+        "hanViet": "HỎA"
+      }
+    ],
+    "meanings": [
+      "Lửa"
+    ],
+    "examples": [
+      {
+        "jp": "火",
+        "reading": "ひ",
+        "vi": "Lửa"
+      }
+    ]
+  },
+  {
+    "id": "n5-008",
+    "kanji": "木",
+    "hanViet": "MỘC",
+    "kunyomi": [
+      "き"
+    ],
+    "onyomi": [
+      "もく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Cây",
+      "gỗ"
+    ],
+    "examples": [
+      {
+        "jp": "木",
+        "reading": "き",
+        "vi": "Cây"
+      }
+    ]
+  },
+  {
+    "id": "n5-009",
+    "kanji": "金",
+    "hanViet": "KIM",
+    "kunyomi": [
+      "きん"
+    ],
+    "onyomi": [
+      "かね"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Vàng",
+      "tiền"
+    ],
+    "examples": [
+      {
+        "jp": "金",
+        "reading": "きん",
+        "vi": "Vàng"
+      }
+    ]
+  },
+  {
+    "id": "n5-010",
+    "kanji": "土",
+    "hanViet": "THỔ",
+    "kunyomi": [
+      "つち"
+    ],
+    "onyomi": [
+      "ど"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Đất"
+    ],
+    "examples": [
+      {
+        "jp": "土",
+        "reading": "つち",
+        "vi": "Đất"
+      }
+    ]
+  },
+  {
+    "id": "n5-011",
+    "kanji": "川",
+    "hanViet": "XUYÊN",
+    "kunyomi": [
+      "かわ"
+    ],
+    "onyomi": [
+      "がわ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Sông"
+    ],
+    "examples": [
+      {
+        "jp": "川",
+        "reading": "かわ",
+        "vi": "Sông"
+      }
+    ]
+  },
+  {
+    "id": "n5-012",
+    "kanji": "口",
+    "hanViet": "KHẨU",
+    "kunyomi": [
+      "くち"
+    ],
+    "onyomi": [
+      "こう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Miệng"
+    ],
+    "examples": [
+      {
+        "jp": "口",
+        "reading": "くち",
+        "vi": "Miệng"
+      }
+    ]
+  },
+  {
+    "id": "n5-013",
+    "kanji": "目",
+    "hanViet": "MỤC",
+    "kunyomi": [
+      "め"
+    ],
+    "onyomi": [
+      "もく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Mắt"
+    ],
+    "examples": [
+      {
+        "jp": "目",
+        "reading": "め",
+        "vi": "Mắt"
+      }
+    ]
+  },
+  {
+    "id": "n5-014",
+    "kanji": "耳",
+    "hanViet": "NHĨ",
+    "kunyomi": [
+      "みみ"
+    ],
+    "onyomi": [
+      "じ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Tai"
+    ],
+    "examples": [
+      {
+        "jp": "耳",
+        "reading": "みみ",
+        "vi": "Tai"
+      }
+    ]
+  },
+  {
+    "id": "n5-015",
+    "kanji": "手",
+    "hanViet": "THỦ",
+    "kunyomi": [
+      "て"
+    ],
+    "onyomi": [
+      "しゅ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Tay"
+    ],
+    "examples": [
+      {
+        "jp": "手",
+        "reading": "て",
+        "vi": "Tay"
+      }
+    ]
+  },
+  {
+    "id": "n5-016",
+    "kanji": "足",
+    "hanViet": "TÚC",
+    "kunyomi": [
+      "あし"
+    ],
+    "onyomi": [
+      "そく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Chân"
+    ],
+    "examples": [
+      {
+        "jp": "足",
+        "reading": "あし",
+        "vi": "Chân"
+      }
+    ]
+  },
+  {
+    "id": "n5-017",
+    "kanji": "子",
+    "hanViet": "TỬ",
+    "kunyomi": [
+      "こ"
+    ],
+    "onyomi": [
+      "し"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 4,
+    "components": [],
+    "meanings": [
+      "Trẻ em",
+      "con cái"
+    ],
+    "examples": [
+      {
+        "jp": "子",
+        "reading": "こ",
+        "vi": "Trẻ em"
+      }
+    ]
+  },
+  {
+    "id": "n5-018",
+    "kanji": "女",
+    "hanViet": "NỮ",
+    "kunyomi": [
+      "おんな"
+    ],
+    "onyomi": [
+      "じょ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Phụ nữ"
+    ],
+    "examples": [
+      {
+        "jp": "女",
+        "reading": "おんな",
+        "vi": "Phụ nữ"
+      }
+    ]
+  },
+  {
+    "id": "n5-019",
+    "kanji": "男",
+    "hanViet": "NAM",
+    "kunyomi": [
+      "おとこ"
+    ],
+    "onyomi": [
+      "だん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Đàn ông"
+    ],
+    "examples": [
+      {
+        "jp": "男",
+        "reading": "おとこ",
+        "vi": "Đàn ông"
+      }
+    ]
+  },
+  {
+    "id": "n5-020",
+    "kanji": "父",
+    "hanViet": "PHỤ",
+    "kunyomi": [
+      "ちち"
+    ],
+    "onyomi": [
+      "ふ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Cha"
+    ],
+    "examples": [
+      {
+        "jp": "父",
+        "reading": "ちち",
+        "vi": "Cha"
+      }
+    ]
+  },
+  {
+    "id": "n5-021",
+    "kanji": "母",
+    "hanViet": "MẪU",
+    "kunyomi": [
+      "はは"
+    ],
+    "onyomi": [
+      "ぼ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Mẹ"
+    ],
+    "examples": [
+      {
+        "jp": "母",
+        "reading": "はは",
+        "vi": "Mẹ"
+      }
+    ]
+  },
+  {
+    "id": "n5-022",
+    "kanji": "学",
+    "hanViet": "HỌC",
+    "kunyomi": [
+      "がく"
+    ],
+    "onyomi": [
+      "まなぶ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Học"
+    ],
+    "examples": [
+      {
+        "jp": "学",
+        "reading": "がく",
+        "vi": "Học"
+      }
+    ]
+  },
+  {
+    "id": "n5-023",
+    "kanji": "校",
+    "hanViet": "HIỆU",
+    "kunyomi": [
+      "こう"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Trường học"
+    ],
+    "examples": [
+      {
+        "jp": "校",
+        "reading": "こう",
+        "vi": "Trường học"
+      }
+    ]
+  },
+  {
+    "id": "n5-024",
+    "kanji": "生",
+    "hanViet": "SINH",
+    "kunyomi": [
+      "せい"
+    ],
+    "onyomi": [
+      "なま"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Sinh",
+      "sống"
+    ],
+    "examples": [
+      {
+        "jp": "生",
+        "reading": "せい",
+        "vi": "Sinh"
+      }
+    ]
+  },
+  {
+    "id": "n5-025",
+    "kanji": "先",
+    "hanViet": "TIÊN",
+    "kunyomi": [
+      "さき"
+    ],
+    "onyomi": [
+      "せん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Trước",
+      "tiên"
+    ],
+    "examples": [
+      {
+        "jp": "先",
+        "reading": "さき",
+        "vi": "Trước"
+      }
+    ]
+  },
+  {
+    "id": "n5-026",
+    "kanji": "年",
+    "hanViet": "NIÊN",
+    "kunyomi": [
+      "ねん"
+    ],
+    "onyomi": [
+      "とし"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Năm"
+    ],
+    "examples": [
+      {
+        "jp": "年",
+        "reading": "ねん",
+        "vi": "Năm"
+      }
+    ]
+  },
+  {
+    "id": "n5-027",
+    "kanji": "時",
+    "hanViet": "THỜI",
+    "kunyomi": [
+      "とき"
+    ],
+    "onyomi": [
+      "じ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Thời gian",
+      "giờ"
+    ],
+    "examples": [
+      {
+        "jp": "時",
+        "reading": "とき",
+        "vi": "Thời gian"
+      }
+    ]
+  },
+  {
+    "id": "n5-028",
+    "kanji": "分",
+    "hanViet": "PHÂN",
+    "kunyomi": [
+      "ふん"
+    ],
+    "onyomi": [
+      "わける"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Phút",
+      "chia"
+    ],
+    "examples": [
+      {
+        "jp": "分",
+        "reading": "ふん",
+        "vi": "Phút"
+      }
+    ]
+  },
+  {
+    "id": "n5-029",
+    "kanji": "今",
+    "hanViet": "KIM",
+    "kunyomi": [
+      "いま"
+    ],
+    "onyomi": [
+      "こん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Bây giờ"
+    ],
+    "examples": [
+      {
+        "jp": "今",
+        "reading": "いま",
+        "vi": "Bây giờ"
+      }
+    ]
+  },
+  {
+    "id": "n5-030",
+    "kanji": "半",
+    "hanViet": "BÁN",
+    "kunyomi": [
+      "はん"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 9,
+    "components": [],
+    "meanings": [
+      "Một nửa"
+    ],
+    "examples": [
+      {
+        "jp": "半",
+        "reading": "はん",
+        "vi": "Một nửa"
+      }
+    ]
+  },
+  {
+    "id": "n5-031",
+    "kanji": "午",
+    "hanViet": "NGỌ",
+    "kunyomi": [
+      "ご"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Buổi trưa"
+    ],
+    "examples": [
+      {
+        "jp": "午",
+        "reading": "ご",
+        "vi": "Buổi trưa"
+      }
+    ]
+  },
+  {
+    "id": "n5-032",
+    "kanji": "前",
+    "hanViet": "TIỀN",
+    "kunyomi": [
+      "まえ"
+    ],
+    "onyomi": [
+      "ぜん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Trước"
+    ],
+    "examples": [
+      {
+        "jp": "前",
+        "reading": "まえ",
+        "vi": "Trước"
+      }
+    ]
+  },
+  {
+    "id": "n5-033",
+    "kanji": "後",
+    "hanViet": "HẬU",
+    "kunyomi": [
+      "あと"
+    ],
+    "onyomi": [
+      "ご"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Sau"
+    ],
+    "examples": [
+      {
+        "jp": "後",
+        "reading": "あと",
+        "vi": "Sau"
+      }
+    ]
+  },
+  {
+    "id": "n5-034",
+    "kanji": "東",
+    "hanViet": "ĐÔNG",
+    "kunyomi": [
+      "ひがし"
+    ],
+    "onyomi": [
+      "とう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Phía Đông"
+    ],
+    "examples": [
+      {
+        "jp": "東",
+        "reading": "ひがし",
+        "vi": "Phía Đông"
+      }
+    ]
+  },
+  {
+    "id": "n5-035",
+    "kanji": "西",
+    "hanViet": "TÂY",
+    "kunyomi": [
+      "にし"
+    ],
+    "onyomi": [
+      "せい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Phía Tây"
+    ],
+    "examples": [
+      {
+        "jp": "西",
+        "reading": "にし",
+        "vi": "Phía Tây"
+      }
+    ]
+  },
+  {
+    "id": "n5-036",
+    "kanji": "南",
+    "hanViet": "NAM",
+    "kunyomi": [
+      "みなみ"
+    ],
+    "onyomi": [
+      "なん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Phía Nam"
+    ],
+    "examples": [
+      {
+        "jp": "南",
+        "reading": "みなみ",
+        "vi": "Phía Nam"
+      }
+    ]
+  },
+  {
+    "id": "n5-037",
+    "kanji": "北",
+    "hanViet": "BẮC",
+    "kunyomi": [
+      "きた"
+    ],
+    "onyomi": [
+      "ほく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Phía Bắc"
+    ],
+    "examples": [
+      {
+        "jp": "北",
+        "reading": "きた",
+        "vi": "Phía Bắc"
+      }
+    ]
+  },
+  {
+    "id": "n5-038",
+    "kanji": "右",
+    "hanViet": "HỮU",
+    "kunyomi": [
+      "みぎ"
+    ],
+    "onyomi": [
+      "う"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Bên phải"
+    ],
+    "examples": [
+      {
+        "jp": "右",
+        "reading": "みぎ",
+        "vi": "Bên phải"
+      }
+    ]
+  },
+  {
+    "id": "n5-039",
+    "kanji": "左",
+    "hanViet": "TẢ",
+    "kunyomi": [
+      "ひだり"
+    ],
+    "onyomi": [
+      "さ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Bên trái"
+    ],
+    "examples": [
+      {
+        "jp": "左",
+        "reading": "ひだり",
+        "vi": "Bên trái"
+      }
+    ]
+  },
+  {
+    "id": "n5-040",
+    "kanji": "中",
+    "hanViet": "TRUNG",
+    "kunyomi": [
+      "なか"
+    ],
+    "onyomi": [
+      "ちゅう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Bên trong"
+    ],
+    "examples": [
+      {
+        "jp": "中",
+        "reading": "なか",
+        "vi": "Bên trong"
+      }
+    ]
+  },
+  {
+    "id": "n5-041",
+    "kanji": "外",
+    "hanViet": "NGOẠI",
+    "kunyomi": [
+      "そと"
+    ],
+    "onyomi": [
+      "がい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Bên ngoài"
+    ],
+    "examples": [
+      {
+        "jp": "外",
+        "reading": "そと",
+        "vi": "Bên ngoài"
+      }
+    ]
+  },
+  {
+    "id": "n5-042",
+    "kanji": "大",
+    "hanViet": "ĐẠI",
+    "kunyomi": [
+      "おお"
+    ],
+    "onyomi": [
+      "だい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "To",
+      "lớn"
+    ],
+    "examples": [
+      {
+        "jp": "大",
+        "reading": "おお",
+        "vi": "To"
+      }
+    ]
+  },
+  {
+    "id": "n5-043",
+    "kanji": "小",
+    "hanViet": "TIỂU",
+    "kunyomi": [
+      "ちい"
+    ],
+    "onyomi": [
+      "しょう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Nhỏ",
+      "bé"
+    ],
+    "examples": [
+      {
+        "jp": "小",
+        "reading": "ちい",
+        "vi": "Nhỏ"
+      }
+    ]
+  },
+  {
+    "id": "n5-044",
+    "kanji": "高",
+    "hanViet": "CAO",
+    "kunyomi": [
+      "たか"
+    ],
+    "onyomi": [
+      "こう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Cao",
+      "đắt"
+    ],
+    "examples": [
+      {
+        "jp": "高",
+        "reading": "たか",
+        "vi": "Cao"
+      }
+    ]
+  },
+  {
+    "id": "n5-045",
+    "kanji": "安",
+    "hanViet": "AN",
+    "kunyomi": [
+      "やす"
+    ],
+    "onyomi": [
+      "あん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Rẻ",
+      "an toàn"
+    ],
+    "examples": [
+      {
+        "jp": "安",
+        "reading": "やす",
+        "vi": "Rẻ"
+      }
+    ]
+  },
+  {
+    "id": "n5-046",
+    "kanji": "新",
+    "hanViet": "TÂN",
+    "kunyomi": [
+      "あたら"
+    ],
+    "onyomi": [
+      "しん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Mới"
+    ],
+    "examples": [
+      {
+        "jp": "新",
+        "reading": "あたら",
+        "vi": "Mới"
+      }
+    ]
+  },
+  {
+    "id": "n5-047",
+    "kanji": "古",
+    "hanViet": "CỔ",
+    "kunyomi": [
+      "ふる"
+    ],
+    "onyomi": [
+      "こ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Cũ",
+      "cổ"
+    ],
+    "examples": [
+      {
+        "jp": "古",
+        "reading": "ふる",
+        "vi": "Cũ"
+      }
+    ]
+  },
+  {
+    "id": "n5-048",
+    "kanji": "白",
+    "hanViet": "BẠCH",
+    "kunyomi": [
+      "しろ"
+    ],
+    "onyomi": [
+      "はく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 9,
+    "components": [],
+    "meanings": [
+      "Màu trắng"
+    ],
+    "examples": [
+      {
+        "jp": "白",
+        "reading": "しろ",
+        "vi": "Màu trắng"
+      }
+    ]
+  },
+  {
+    "id": "n5-049",
+    "kanji": "黒",
+    "hanViet": "HẮC",
+    "kunyomi": [
+      "くろ"
+    ],
+    "onyomi": [
+      "こく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Màu đen"
+    ],
+    "examples": [
+      {
+        "jp": "黒",
+        "reading": "くろ",
+        "vi": "Màu đen"
+      }
+    ]
+  },
+  {
+    "id": "n5-050",
+    "kanji": "赤",
+    "hanViet": "XÍCH",
+    "kunyomi": [
+      "あか"
+    ],
+    "onyomi": [
+      "せき"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Màu đỏ"
+    ],
+    "examples": [
+      {
+        "jp": "赤",
+        "reading": "あか",
+        "vi": "Màu đỏ"
+      }
+    ]
+  },
+  {
+    "id": "n5-051",
+    "kanji": "青",
+    "hanViet": "THANH",
+    "kunyomi": [
+      "あお"
+    ],
+    "onyomi": [
+      "せい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 9,
+    "components": [],
+    "meanings": [
+      "Màu xanh"
+    ],
+    "examples": [
+      {
+        "jp": "青",
+        "reading": "あお",
+        "vi": "Màu xanh"
+      }
+    ]
+  },
+  {
+    "id": "n5-052",
+    "kanji": "多",
+    "hanViet": "ĐA",
+    "kunyomi": [
+      "おお"
+    ],
+    "onyomi": [
+      "た"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 9,
+    "components": [],
+    "meanings": [
+      "Nhiều"
+    ],
+    "examples": [
+      {
+        "jp": "多",
+        "reading": "おお",
+        "vi": "Nhiều"
+      }
+    ]
+  },
+  {
+    "id": "n5-053",
+    "kanji": "少",
+    "hanViet": "THIỂU",
+    "kunyomi": [
+      "すく"
+    ],
+    "onyomi": [
+      "しょう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Ít"
+    ],
+    "examples": [
+      {
+        "jp": "少",
+        "reading": "すく",
+        "vi": "Ít"
+      }
+    ]
+  },
+  {
+    "id": "n5-054",
+    "kanji": "長",
+    "hanViet": "TRƯỜNG",
+    "kunyomi": [
+      "なが"
+    ],
+    "onyomi": [
+      "ちょう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Dài",
+      "trưởng"
+    ],
+    "examples": [
+      {
+        "jp": "長",
+        "reading": "なが",
+        "vi": "Dài"
+      }
+    ]
+  },
+  {
+    "id": "n5-055",
+    "kanji": "近",
+    "hanViet": "CẬN",
+    "kunyomi": [
+      "ちか"
+    ],
+    "onyomi": [
+      "きん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Gần"
+    ],
+    "examples": [
+      {
+        "jp": "近",
+        "reading": "ちか",
+        "vi": "Gần"
+      }
+    ]
+  },
+  {
+    "id": "n5-056",
+    "kanji": "遠",
+    "hanViet": "VIỄN",
+    "kunyomi": [
+      "とお"
+    ],
+    "onyomi": [
+      "えん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Xa"
+    ],
+    "examples": [
+      {
+        "jp": "遠",
+        "reading": "とお",
+        "vi": "Xa"
+      }
+    ]
+  },
+  {
+    "id": "n5-057",
+    "kanji": "明",
+    "hanViet": "MINH",
+    "kunyomi": [
+      "あか"
+    ],
+    "onyomi": [
+      "めい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Sáng",
+      "rõ"
+    ],
+    "examples": [
+      {
+        "jp": "明",
+        "reading": "あか",
+        "vi": "Sáng"
+      }
+    ]
+  },
+  {
+    "id": "n5-058",
+    "kanji": "暗",
+    "hanViet": "ÁM",
+    "kunyomi": [
+      "くら"
+    ],
+    "onyomi": [
+      "あん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Tối",
+      "âm u"
+    ],
+    "examples": [
+      {
+        "jp": "暗",
+        "reading": "くら",
+        "vi": "Tối"
+      }
+    ]
+  },
+  {
+    "id": "n5-059",
+    "kanji": "早",
+    "hanViet": "TẢO",
+    "kunyomi": [
+      "はや"
+    ],
+    "onyomi": [
+      "そう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Sớm",
+      "nhanh"
+    ],
+    "examples": [
+      {
+        "jp": "早",
+        "reading": "はや",
+        "vi": "Sớm"
+      }
+    ]
+  },
+  {
+    "id": "n5-060",
+    "kanji": "夕",
+    "hanViet": "TỊCH",
+    "kunyomi": [
+      "ゆう"
+    ],
+    "onyomi": [
+      "せき"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Buổi chiều"
+    ],
+    "examples": [
+      {
+        "jp": "夕",
+        "reading": "ゆう",
+        "vi": "Buổi chiều"
+      }
+    ]
+  },
+  {
+    "id": "n5-061",
+    "kanji": "夜",
+    "hanViet": "DẠ",
+    "kunyomi": [
+      "よる"
+    ],
+    "onyomi": [
+      "や"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Đêm"
+    ],
+    "examples": [
+      {
+        "jp": "夜",
+        "reading": "よる",
+        "vi": "Đêm"
+      }
+    ]
+  },
+  {
+    "id": "n5-062",
+    "kanji": "春",
+    "hanViet": "XUÂN",
+    "kunyomi": [
+      "はる"
+    ],
+    "onyomi": [
+      "しゅん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Mùa xuân"
+    ],
+    "examples": [
+      {
+        "jp": "春",
+        "reading": "はる",
+        "vi": "Mùa xuân"
+      }
+    ]
+  },
+  {
+    "id": "n5-063",
+    "kanji": "夏",
+    "hanViet": "HẠ",
+    "kunyomi": [
+      "なつ"
+    ],
+    "onyomi": [
+      "か"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 9,
+    "components": [],
+    "meanings": [
+      "Mùa hè"
+    ],
+    "examples": [
+      {
+        "jp": "夏",
+        "reading": "なつ",
+        "vi": "Mùa hè"
+      }
+    ]
+  },
+  {
+    "id": "n5-064",
+    "kanji": "秋",
+    "hanViet": "THU",
+    "kunyomi": [
+      "あき"
+    ],
+    "onyomi": [
+      "しゅう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Mùa thu"
+    ],
+    "examples": [
+      {
+        "jp": "秋",
+        "reading": "あき",
+        "vi": "Mùa thu"
+      }
+    ]
+  },
+  {
+    "id": "n5-065",
+    "kanji": "冬",
+    "hanViet": "ĐÔNG",
+    "kunyomi": [
+      "ふゆ"
+    ],
+    "onyomi": [
+      "とう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 4,
+    "components": [],
+    "meanings": [
+      "Mùa đông"
+    ],
+    "examples": [
+      {
+        "jp": "冬",
+        "reading": "ふゆ",
+        "vi": "Mùa đông"
+      }
+    ]
+  },
+  {
+    "id": "n5-066",
+    "kanji": "書",
+    "hanViet": "THƯ",
+    "kunyomi": [
+      "かく"
+    ],
+    "onyomi": [
+      "しょ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Viết"
+    ],
+    "examples": [
+      {
+        "jp": "書",
+        "reading": "かく",
+        "vi": "Viết"
+      }
+    ]
+  },
+  {
+    "id": "n5-067",
+    "kanji": "読",
+    "hanViet": "ĐỌC",
+    "kunyomi": [
+      "よむ"
+    ],
+    "onyomi": [
+      "どく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Đọc"
+    ],
+    "examples": [
+      {
+        "jp": "読",
+        "reading": "よむ",
+        "vi": "Đọc"
+      }
+    ]
+  },
+  {
+    "id": "n5-068",
+    "kanji": "話",
+    "hanViet": "THOẠI",
+    "kunyomi": [
+      "はなす"
+    ],
+    "onyomi": [
+      "わ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Nói chuyện"
+    ],
+    "examples": [
+      {
+        "jp": "話",
+        "reading": "はなす",
+        "vi": "Nói chuyện"
+      }
+    ]
+  },
+  {
+    "id": "n5-069",
+    "kanji": "買",
+    "hanViet": "MÃI",
+    "kunyomi": [
+      "かう"
+    ],
+    "onyomi": [
+      "ばい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Mua"
+    ],
+    "examples": [
+      {
+        "jp": "買",
+        "reading": "かう",
+        "vi": "Mua"
+      }
+    ]
+  },
+  {
+    "id": "n5-070",
+    "kanji": "売",
+    "hanViet": "MẠI",
+    "kunyomi": [
+      "うる"
+    ],
+    "onyomi": [
+      "ばい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Bán"
+    ],
+    "examples": [
+      {
+        "jp": "売",
+        "reading": "うる",
+        "vi": "Bán"
+      }
+    ]
+  },
+  {
+    "id": "n5-071",
+    "kanji": "食",
+    "hanViet": "THỰC",
+    "kunyomi": [
+      "たべる"
+    ],
+    "onyomi": [
+      "しょく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Ăn"
+    ],
+    "examples": [
+      {
+        "jp": "食",
+        "reading": "たべる",
+        "vi": "Ăn"
+      }
+    ]
+  },
+  {
+    "id": "n5-072",
+    "kanji": "飲",
+    "hanViet": "ẨM",
+    "kunyomi": [
+      "のむ"
+    ],
+    "onyomi": [
+      "いん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Uống"
+    ],
+    "examples": [
+      {
+        "jp": "飲",
+        "reading": "のむ",
+        "vi": "Uống"
+      }
+    ]
+  },
+  {
+    "id": "n5-073",
+    "kanji": "見",
+    "hanViet": "KIẾN",
+    "kunyomi": [
+      "みる"
+    ],
+    "onyomi": [
+      "けん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Nhìn",
+      "xem"
+    ],
+    "examples": [
+      {
+        "jp": "見",
+        "reading": "みる",
+        "vi": "Nhìn"
+      }
+    ]
+  },
+  {
+    "id": "n5-074",
+    "kanji": "聞",
+    "hanViet": "VĂN",
+    "kunyomi": [
+      "きく"
+    ],
+    "onyomi": [
+      "ぶん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Nghe",
+      "hỏi"
+    ],
+    "examples": [
+      {
+        "jp": "聞",
+        "reading": "きく",
+        "vi": "Nghe"
+      }
+    ]
+  },
+  {
+    "id": "n5-075",
+    "kanji": "行",
+    "hanViet": "HÀNH",
+    "kunyomi": [
+      "いく"
+    ],
+    "onyomi": [
+      "こう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Đi"
+    ],
+    "examples": [
+      {
+        "jp": "行",
+        "reading": "いく",
+        "vi": "Đi"
+      }
+    ]
+  },
+  {
+    "id": "n5-076",
+    "kanji": "来",
+    "hanViet": "LAI",
+    "kunyomi": [
+      "くる"
+    ],
+    "onyomi": [
+      "らい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Đến"
+    ],
+    "examples": [
+      {
+        "jp": "来",
+        "reading": "くる",
+        "vi": "Đến"
+      }
+    ]
+  },
+  {
+    "id": "n5-077",
+    "kanji": "帰",
+    "hanViet": "QUY",
+    "kunyomi": [
+      "かえる"
+    ],
+    "onyomi": [
+      "き"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Trở về"
+    ],
+    "examples": [
+      {
+        "jp": "帰",
+        "reading": "かえる",
+        "vi": "Trở về"
+      }
+    ]
+  },
+  {
+    "id": "n5-078",
+    "kanji": "住",
+    "hanViet": "TRÚ",
+    "kunyomi": [
+      "すむ"
+    ],
+    "onyomi": [
+      "じゅう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Sống",
+      "cư trú"
+    ],
+    "examples": [
+      {
+        "jp": "住",
+        "reading": "すむ",
+        "vi": "Sống"
+      }
+    ]
+  },
+  {
+    "id": "n5-079",
+    "kanji": "旅",
+    "hanViet": "LỮ",
+    "kunyomi": [
+      "たび"
+    ],
+    "onyomi": [
+      "りょ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Chuyến đi",
+      "du lịch"
+    ],
+    "examples": [
+      {
+        "jp": "旅",
+        "reading": "たび",
+        "vi": "Chuyến đi"
+      }
+    ]
+  },
+  {
+    "id": "n5-080",
+    "kanji": "車",
+    "hanViet": "XA",
+    "kunyomi": [
+      "くるま"
+    ],
+    "onyomi": [
+      "しゃ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Xe hơi"
+    ],
+    "examples": [
+      {
+        "jp": "車",
+        "reading": "くるま",
+        "vi": "Xe hơi"
+      }
+    ]
+  },
+  {
+    "id": "n5-081",
+    "kanji": "電",
+    "hanViet": "ĐIỆN",
+    "kunyomi": [
+      "でん"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Điện"
+    ],
+    "examples": [
+      {
+        "jp": "電",
+        "reading": "でん",
+        "vi": "Điện"
+      }
+    ]
+  },
+  {
+    "id": "n5-082",
+    "kanji": "駅",
+    "hanViet": "DỊCH",
+    "kunyomi": [
+      "えき"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Ga tàu"
+    ],
+    "examples": [
+      {
+        "jp": "駅",
+        "reading": "えき",
+        "vi": "Ga tàu"
+      }
+    ]
+  },
+  {
+    "id": "n5-083",
+    "kanji": "社",
+    "hanViet": "XÃ",
+    "kunyomi": [
+      "しゃ"
+    ],
+    "onyomi": [
+      "じゃ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Công ty",
+      "xã hội"
+    ],
+    "examples": [
+      {
+        "jp": "社",
+        "reading": "しゃ",
+        "vi": "Công ty"
+      }
+    ]
+  },
+  {
+    "id": "n5-084",
+    "kanji": "店",
+    "hanViet": "ĐIẾM",
+    "kunyomi": [
+      "みせ"
+    ],
+    "onyomi": [
+      "てん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Cửa hàng"
+    ],
+    "examples": [
+      {
+        "jp": "店",
+        "reading": "みせ",
+        "vi": "Cửa hàng"
+      }
+    ]
+  },
+  {
+    "id": "n5-085",
+    "kanji": "銀",
+    "hanViet": "NGÂN",
+    "kunyomi": [
+      "ぎん"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Ngân (bạc)"
+    ],
+    "examples": [
+      {
+        "jp": "銀",
+        "reading": "ぎん",
+        "vi": "Ngân (bạc)"
+      }
+    ]
+  },
+  {
+    "id": "n5-086",
+    "kanji": "病",
+    "hanViet": "BỆNH",
+    "kunyomi": [
+      "びょう"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Bệnh"
+    ],
+    "examples": [
+      {
+        "jp": "病",
+        "reading": "びょう",
+        "vi": "Bệnh"
+      }
+    ]
+  },
+  {
+    "id": "n5-087",
+    "kanji": "院",
+    "hanViet": "VIỆN",
+    "kunyomi": [
+      "いん"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Viện"
+    ],
+    "examples": [
+      {
+        "jp": "院",
+        "reading": "いん",
+        "vi": "Viện"
+      }
+    ]
+  },
+  {
+    "id": "n5-088",
+    "kanji": "友",
+    "hanViet": "HỮU",
+    "kunyomi": [
+      "とも"
+    ],
+    "onyomi": [
+      "ゆう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Bạn bè"
+    ],
+    "examples": [
+      {
+        "jp": "友",
+        "reading": "とも",
+        "vi": "Bạn bè"
+      }
+    ]
+  },
+  {
+    "id": "n5-089",
+    "kanji": "家",
+    "hanViet": "GIA",
+    "kunyomi": [
+      "いえ"
+    ],
+    "onyomi": [
+      "か"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Nhà"
+    ],
+    "examples": [
+      {
+        "jp": "家",
+        "reading": "いえ",
+        "vi": "Nhà"
+      }
+    ]
+  },
+  {
+    "id": "n5-090",
+    "kanji": "道",
+    "hanViet": "ĐẠO",
+    "kunyomi": [
+      "みち"
+    ],
+    "onyomi": [
+      "どう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Con đường"
+    ],
+    "examples": [
+      {
+        "jp": "道",
+        "reading": "みち",
+        "vi": "Con đường"
+      }
+    ]
+  },
+  {
+    "id": "n5-091",
+    "kanji": "通",
+    "hanViet": "THÔNG",
+    "kunyomi": [
+      "とおる"
+    ],
+    "onyomi": [
+      "つう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Đi qua",
+      "thông qua"
+    ],
+    "examples": [
+      {
+        "jp": "通",
+        "reading": "とおる",
+        "vi": "Đi qua"
+      }
+    ]
+  },
+  {
+    "id": "n5-092",
+    "kanji": "国",
+    "hanViet": "QUỐC",
+    "kunyomi": [
+      "くに"
+    ],
+    "onyomi": [
+      "こく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Quốc gia"
+    ],
+    "examples": [
+      {
+        "jp": "国",
+        "reading": "くに",
+        "vi": "Quốc gia"
+      }
+    ]
+  },
+  {
+    "id": "n5-093",
+    "kanji": "内",
+    "hanViet": "NỘI",
+    "kunyomi": [
+      "うち"
+    ],
+    "onyomi": [
+      "ない"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 4,
+    "components": [],
+    "meanings": [
+      "Bên trong"
+    ],
+    "examples": [
+      {
+        "jp": "内",
+        "reading": "うち",
+        "vi": "Bên trong"
+      }
+    ]
+  },
+  {
+    "id": "n5-094",
+    "kanji": "天",
+    "hanViet": "THIÊN",
+    "kunyomi": [
+      "てん"
+    ],
+    "onyomi": [],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Trời",
+      "thiên"
+    ],
+    "examples": [
+      {
+        "jp": "天",
+        "reading": "てん",
+        "vi": "Trời"
+      }
+    ]
+  },
+  {
+    "id": "n5-095",
+    "kanji": "気",
+    "hanViet": "KHÍ",
+    "kunyomi": [
+      "き"
+    ],
+    "onyomi": [
+      "け"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Khí",
+      "cảm giác"
+    ],
+    "examples": [
+      {
+        "jp": "気",
+        "reading": "き",
+        "vi": "Khí"
+      }
+    ]
+  },
+  {
+    "id": "n5-096",
+    "kanji": "雨",
+    "hanViet": "VŨ",
+    "kunyomi": [
+      "あめ"
+    ],
+    "onyomi": [
+      "う"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Mưa"
+    ],
+    "examples": [
+      {
+        "jp": "雨",
+        "reading": "あめ",
+        "vi": "Mưa"
+      }
+    ]
+  },
+  {
+    "id": "n5-097",
+    "kanji": "雪",
+    "hanViet": "TUYẾT",
+    "kunyomi": [
+      "ゆき"
+    ],
+    "onyomi": [
+      "せつ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Tuyết"
+    ],
+    "examples": [
+      {
+        "jp": "雪",
+        "reading": "ゆき",
+        "vi": "Tuyết"
+      }
+    ]
+  },
+  {
+    "id": "n5-098",
+    "kanji": "風",
+    "hanViet": "PHONG",
+    "kunyomi": [
+      "かぜ"
+    ],
+    "onyomi": [
+      "ふう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Gió"
+    ],
+    "examples": [
+      {
+        "jp": "風",
+        "reading": "かぜ",
+        "vi": "Gió"
+      }
+    ]
+  },
+  {
+    "id": "n5-099",
+    "kanji": "花",
+    "hanViet": "HOA",
+    "kunyomi": [
+      "はな"
+    ],
+    "onyomi": [
+      "か"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Hoa"
+    ],
+    "examples": [
+      {
+        "jp": "花",
+        "reading": "はな",
+        "vi": "Hoa"
+      }
+    ]
+  },
+  {
+    "id": "n5-100",
+    "kanji": "森",
+    "hanViet": "LÂM",
+    "kunyomi": [
+      "もり"
+    ],
+    "onyomi": [
+      "しん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Rừng"
+    ],
+    "examples": [
+      {
+        "jp": "森",
+        "reading": "もり",
+        "vi": "Rừng"
+      }
+    ]
+  },
+  {
+    "id": "n5-101",
+    "kanji": "石",
+    "hanViet": "THẠCH",
+    "kunyomi": [
+      "いし"
+    ],
+    "onyomi": [
+      "せき"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 7,
+    "components": [],
+    "meanings": [
+      "Đá"
+    ],
+    "examples": [
+      {
+        "jp": "石",
+        "reading": "いし",
+        "vi": "Đá"
+      }
+    ]
+  },
+  {
+    "id": "n5-102",
+    "kanji": "空",
+    "hanViet": "KHÔNG",
+    "kunyomi": [
+      "そら"
+    ],
+    "onyomi": [
+      "くう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 4,
+    "components": [],
+    "meanings": [
+      "Bầu trời"
+    ],
+    "examples": [
+      {
+        "jp": "空",
+        "reading": "そら",
+        "vi": "Bầu trời"
+      }
+    ]
+  },
+  {
+    "id": "n5-103",
+    "kanji": "海",
+    "hanViet": "HẢI",
+    "kunyomi": [
+      "うみ"
+    ],
+    "onyomi": [
+      "かい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Biển"
+    ],
+    "examples": [
+      {
+        "jp": "海",
+        "reading": "うみ",
+        "vi": "Biển"
+      }
+    ]
+  },
+  {
+    "id": "n5-104",
+    "kanji": "鳥",
+    "hanViet": "ĐIỂU",
+    "kunyomi": [
+      "とり"
+    ],
+    "onyomi": [
+      "ちょう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Chim"
+    ],
+    "examples": [
+      {
+        "jp": "鳥",
+        "reading": "とり",
+        "vi": "Chim"
+      }
+    ]
+  },
+  {
+    "id": "n5-105",
+    "kanji": "魚",
+    "hanViet": "NGƯ",
+    "kunyomi": [
+      "さかな"
+    ],
+    "onyomi": [
+      "ぎょ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 1,
+    "components": [],
+    "meanings": [
+      "Cá"
+    ],
+    "examples": [
+      {
+        "jp": "魚",
+        "reading": "さかな",
+        "vi": "Cá"
+      }
+    ]
+  },
+  {
+    "id": "n5-106",
+    "kanji": "牛",
+    "hanViet": "NGƯ",
+    "kunyomi": [
+      "うし"
+    ],
+    "onyomi": [
+      "ぎゅう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Bò"
+    ],
+    "examples": [
+      {
+        "jp": "牛",
+        "reading": "うし",
+        "vi": "Bò"
+      }
+    ]
+  },
+  {
+    "id": "n5-107",
+    "kanji": "犬",
+    "hanViet": "KHUYỂN",
+    "kunyomi": [
+      "いぬ"
+    ],
+    "onyomi": [
+      "けん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 4,
+    "components": [],
+    "meanings": [
+      "Chó"
+    ],
+    "examples": [
+      {
+        "jp": "犬",
+        "reading": "いぬ",
+        "vi": "Chó"
+      }
+    ]
+  },
+  {
+    "id": "n5-108",
+    "kanji": "猫",
+    "hanViet": "MIÊU",
+    "kunyomi": [
+      "ねこ"
+    ],
+    "onyomi": [
+      "びょう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 3,
+    "components": [],
+    "meanings": [
+      "Mèo"
+    ],
+    "examples": [
+      {
+        "jp": "猫",
+        "reading": "ねこ",
+        "vi": "Mèo"
+      }
+    ]
+  },
+  {
+    "id": "n5-109",
+    "kanji": "心",
+    "hanViet": "TÂM",
+    "kunyomi": [
+      "こころ"
+    ],
+    "onyomi": [
+      "しん"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Trái tim",
+      "tâm"
+    ],
+    "examples": [
+      {
+        "jp": "心",
+        "reading": "こころ",
+        "vi": "Trái tim"
+      }
+    ]
+  },
+  {
+    "id": "n5-110",
+    "kanji": "体",
+    "hanViet": "THỂ",
+    "kunyomi": [
+      "からだ"
+    ],
+    "onyomi": [
+      "たい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 2,
+    "components": [],
+    "meanings": [
+      "Cơ thể"
+    ],
+    "examples": [
+      {
+        "jp": "体",
+        "reading": "からだ",
+        "vi": "Cơ thể"
+      }
+    ]
+  },
+  {
+    "id": "n5-111",
+    "kanji": "頭",
+    "hanViet": "ĐẦU",
+    "kunyomi": [
+      "あたま"
+    ],
+    "onyomi": [
+      "ず"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 4,
+    "components": [],
+    "meanings": [
+      "Đầu"
+    ],
+    "examples": [
+      {
+        "jp": "頭",
+        "reading": "あたま",
+        "vi": "Đầu"
+      }
+    ]
+  },
+  {
+    "id": "n5-112",
+    "kanji": "首",
+    "hanViet": "THỦ",
+    "kunyomi": [
+      "くび"
+    ],
+    "onyomi": [
+      "しゅ"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 6,
+    "components": [],
+    "meanings": [
+      "Cổ"
+    ],
+    "examples": [
+      {
+        "jp": "首",
+        "reading": "くび",
+        "vi": "Cổ"
+      }
+    ]
+  },
+  {
+    "id": "n5-113",
+    "kanji": "力",
+    "hanViet": "LỰC",
+    "kunyomi": [
+      "ちから"
+    ],
+    "onyomi": [
+      "りょく"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Sức mạnh"
+    ],
+    "examples": [
+      {
+        "jp": "力",
+        "reading": "ちから",
+        "vi": "Sức mạnh"
+      }
+    ]
+  },
+  {
+    "id": "n5-114",
+    "kanji": "動",
+    "hanViet": "ĐỘNG",
+    "kunyomi": [
+      "うごく"
+    ],
+    "onyomi": [
+      "どう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 5,
+    "components": [],
+    "meanings": [
+      "Chuyển động"
+    ],
+    "examples": [
+      {
+        "jp": "動",
+        "reading": "うごく",
+        "vi": "Chuyển động"
+      }
+    ]
+  },
+  {
+    "id": "n5-115",
+    "kanji": "走",
+    "hanViet": "TẨU",
+    "kunyomi": [
+      "はしる"
+    ],
+    "onyomi": [
+      "そう"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 8,
+    "components": [],
+    "meanings": [
+      "Chạy"
+    ],
+    "examples": [
+      {
+        "jp": "走",
+        "reading": "はしる",
+        "vi": "Chạy"
+      }
+    ]
+  },
+  {
+    "id": "n5-116",
+    "kanji": "止",
+    "hanViet": "CHỈ",
+    "kunyomi": [
+      "とまる"
+    ],
+    "onyomi": [
+      "し"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 9,
+    "components": [],
+    "meanings": [
+      "Dừng lại"
+    ],
+    "examples": [
+      {
+        "jp": "止",
+        "reading": "とまる",
+        "vi": "Dừng lại"
+      }
+    ]
+  },
+  {
+    "id": "n5-117",
+    "kanji": "開",
+    "hanViet": "KHAI",
+    "kunyomi": [
+      "あける"
+    ],
+    "onyomi": [
+      "かい"
+    ],
+    "strokes": 0,
+    "level": "N5",
+    "frequency": 10,
+    "components": [],
+    "meanings": [
+      "Mở"
+    ],
+    "examples": [
+      {
+        "jp": "開",
+        "reading": "あける",
+        "vi": "Mở"
+      }
     ]
   }
 ]
