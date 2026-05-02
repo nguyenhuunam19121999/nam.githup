@@ -156,7 +156,7 @@ export default function GrammarScreen() {
           >
             <Text style={s.circleBtnIcon}>‹</Text>
           </TouchableOpacity>
-          <Text style={s.topTitle}>JLPT</Text>
+          <View style={{ flex: 1 }} />
           {/* Logo thương hiệu góc phải */}
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>

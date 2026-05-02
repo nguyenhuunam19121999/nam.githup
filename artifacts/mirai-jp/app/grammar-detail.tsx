@@ -52,7 +52,7 @@ export default function GrammarDetailScreen() {
             >
               <Text style={s.circleBtnIcon}>‹</Text>
             </TouchableOpacity>
-            <Text style={s.topTitle}>Chi tiết</Text>
+            <View style={{ flex: 1 }} />
             <View style={s.logoBadge}>
               <Text style={s.logoText}>Mirai</Text>
               <Text style={s.logoDot}>.</Text>
@@ -83,7 +83,7 @@ export default function GrammarDetailScreen() {
           >
             <Text style={s.circleBtnIcon}>‹</Text>
           </TouchableOpacity>
-          <Text style={s.topTitle}>JLPT</Text>
+          <View style={{ flex: 1 }} />
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>
             <Text style={s.logoDot}>.</Text>

@@ -57,7 +57,7 @@ export default function KanjiDetailScreen() {
             >
               <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
-            <Text style={s.topTitle}>Không tìm thấy</Text>
+            <View style={{ flex: 1 }} />
             <View style={s.logoBadge}>
               <Text style={s.logoText}>Mirai</Text>
               <Text style={s.logoDot}>.</Text>
@@ -88,9 +88,7 @@ export default function KanjiDetailScreen() {
           >
             <Text style={s.backIcon}>‹</Text>
           </TouchableOpacity>
-          <Text style={s.topTitle} numberOfLines={1}>
-            Chi tiết Kanji
-          </Text>
+          <View style={{ flex: 1 }} />
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>
             <Text style={s.logoDot}>.</Text>

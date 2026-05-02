@@ -106,9 +106,7 @@ export default function BookSelectScreen() {
           >
             <Text style={s.backIcon}>‹</Text>
           </TouchableOpacity>
-          <Text style={s.topTitle} numberOfLines={1}>
-            Chọn sách {level}
-          </Text>
+          <View style={{ flex: 1 }} />
           {/* Logo thương hiệu góc phải */}
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>
