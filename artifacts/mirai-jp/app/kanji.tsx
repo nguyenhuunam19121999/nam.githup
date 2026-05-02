@@ -399,7 +399,7 @@ export default function KanjiListScreen() {
       {/* DANH SÁCH (mặc định)                                                 */}
       {/* ══════════════════════════════════════════════════════════════════════ */}
       {mode === "list" && (
-        <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled">
+        <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
           {filtered.length === 0 ? (
             <View style={s.empty}>
               <Text style={s.emptyText}>Chưa có kanji nào phù hợp.</Text>
@@ -460,7 +460,7 @@ export default function KanjiListScreen() {
       {/* QUIZ                                                                  */}
       {/* ══════════════════════════════════════════════════════════════════════ */}
       {mode === "quiz" && (
-        <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled">
+        <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
           {filtered.length < 4 ? (
             <View style={s.empty}>
               <Text style={s.emptyText}>Cần ít nhất 4 kanji để chơi quiz.</Text>
@@ -526,7 +526,7 @@ export default function KanjiListScreen() {
       {/* LUYỆN VIẾT                                                            */}
       {/* ══════════════════════════════════════════════════════════════════════ */}
       {mode === "writing" && (
-        <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled">
+        <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
           {filtered.length === 0 ? (
             <View style={s.empty}>
               <Text style={s.emptyText}>Không tìm thấy Kanji phù hợp.</Text>

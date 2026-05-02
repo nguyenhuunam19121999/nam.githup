@@ -126,7 +126,7 @@ export function KanjiNotesModal({
           </View>
 
           {/* Vùng nhập ghi chú */}
-          <ScrollView style={n.scrollArea} keyboardShouldPersistTaps="handled">
+          <ScrollView style={n.scrollArea} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
             <TextInput
               ref={inputRef}
               style={[n.textInput, !isLoggedIn && n.textInputGuest]}

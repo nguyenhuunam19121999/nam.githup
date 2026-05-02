@@ -102,6 +102,7 @@ export default function KanjiDetailScreen() {
       <ScrollView
         style={s.scroll}
         contentContainerStyle={s.scrollContent}
+        showsVerticalScrollIndicator={false}
       >
         {/* ── Card thông tin chính ── */}
         <View style={s.card}>
