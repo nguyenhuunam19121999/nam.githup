@@ -573,7 +573,7 @@ export default function FlashcardScreen() {
   // autoScroll : bật/tắt chế độ tự cuộn
   // autoScrollSec : số giây giữa mỗi lần lật / chuyển thẻ
   const AUTO_SCROLL_PRESETS = [2, 3, 5, 8, 10, 15] as const;
-  const [autoScroll, setAutoScroll] = useState(true);
+  const [autoScroll, setAutoScroll] = useState(false);
   const [autoScrollSec, setAutoScrollSec] = useState(2);
 
   // Đọc lại tuỳ chọn auto-scroll đã lưu cho từng tài khoản
