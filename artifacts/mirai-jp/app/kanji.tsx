@@ -24,7 +24,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
@@ -143,7 +142,6 @@ function StatsModal({
 export default function KanjiListScreen() {
   const router = useRouter();
   const { scopedKey } = useAuth();
-  const insets = useSafeAreaInsets();
   const params = useLocalSearchParams<{ level?: string; title?: string }>();
   const level = (typeof params.level === "string" ? params.level : "N5").toUpperCase();
   const title =
@@ -311,8 +309,8 @@ export default function KanjiListScreen() {
     <View style={s.root}>
       <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
 
-      {/* ── Header (giống flashcard: nằm trong scroll, tránh notch bằng insets.top) ── */}
-      <View style={[s.headerRow, { paddingTop: insets.top + 8 }]}>
+      {/* ── Header (paddingTop: 56 giống flashcard.tsx — tránh notch/dynamic island) ── */}
+      <View style={s.headerRow}>
         {/* Nút quay lại */}
         <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
           <Text style={s.backBtnText}>‹</Text>
@@ -630,12 +628,13 @@ export default function KanjiListScreen() {
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f0f4f8" },
 
-  // Header — giống flashcard.tsx: nền trắng, nút bo tròn
+  // Header — giống flashcard.tsx: paddingTop:56 tránh notch, nền trắng, nút bo tròn
   headerRow: {
     flexDirection: "row",
     alignItems: "flex-start",
     justifyContent: "space-between",
     paddingHorizontal: 16,
+    paddingTop: 56,
     paddingBottom: 12,
     backgroundColor: "#f0f4f8",
   },
