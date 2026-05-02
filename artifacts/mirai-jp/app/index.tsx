@@ -70,6 +70,16 @@ const JLPT_LEVELS: Item[] = [
   { id: "n1", emoji: "N1", jp: "N1", vi: "Khoá học N1", route: "/flashcard" },
 ];
 
+// Màu biểu tượng theo từng cấp JLPT
+// N5: Xanh lá (dễ nhất) → N1: Đỏ đô (khó nhất)
+const JLPT_COLORS: Record<string, { badge: string; outer: string }> = {
+  N5: { badge: "#22C55E", outer: "#dcfce7" }, // Xanh lá
+  N4: { badge: "#3B82F6", outer: "#dbeafe" }, // Xanh dương nhạt
+  N3: { badge: "#F59E0B", outer: "#fef3c7" }, // Vàng
+  N2: { badge: "#EA580C", outer: "#ffedd5" }, // Cam
+  N1: { badge: "#C0392B", outer: "#fee2e2" }, // Đỏ đô
+};
+
 const BANNERS = [
   {
     id: "promo",
@@ -363,8 +373,8 @@ export default function HomeScreen() {
                         }}
                         activeOpacity={0.7}
                       >
-                        <View style={s.jlptBadgeOuter}>
-                          <View style={s.jlptBadge}>
+                        <View style={[s.jlptBadgeOuter, { borderColor: JLPT_COLORS[it.jp]?.outer ?? "#e0f2f1", backgroundColor: JLPT_COLORS[it.jp]?.outer ?? "#fff" }]}>
+                          <View style={[s.jlptBadge, { backgroundColor: JLPT_COLORS[it.jp]?.badge ?? TEAL }]}>
                             <Text style={s.jlptBadgeText}>{it.jp}</Text>
                           </View>
                         </View>
