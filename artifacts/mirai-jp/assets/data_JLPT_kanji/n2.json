@@ -4232,5 +4232,4036 @@
         "vi": "mệt mỏi"
       }
     ]
+  },
+  {
+    "id": "n2-099",
+    "kanji": "井",
+    "hanViet": "TỈNH",
+    "kunyomi": [
+      "い"
+    ],
+    "onyomi": [
+      "セイ"
+    ],
+    "strokes": 4,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "井",
+        "hanViet": "TỈNH"
+      }
+    ],
+    "meanings": [
+      "Cái giếng",
+      "Giếng nước"
+    ],
+    "examples": [
+      {
+        "jp": "井戸",
+        "reading": "いど",
+        "vi": "cái giếng"
+      },
+      {
+        "jp": "天井",
+        "reading": "てんじょう",
+        "vi": "trần nhà"
+      },
+      {
+        "jp": "石油井戸",
+        "reading": "せきゆいど",
+        "vi": "giếng dầu"
+      }
+    ]
+  },
+  {
+    "id": "n2-100",
+    "kanji": "丼",
+    "hanViet": "TỈNH",
+    "kunyomi": [
+      "どんぶり",
+      "どん"
+    ],
+    "onyomi": [
+      "タン"
+    ],
+    "strokes": 5,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "丼",
+        "hanViet": "TỈNH"
+      }
+    ],
+    "meanings": [
+      "Cái tô",
+      "Cơm với topping"
+    ],
+    "examples": [
+      {
+        "jp": "天丼",
+        "reading": "てんどん",
+        "vi": "cơm tempura"
+      },
+      {
+        "jp": "牛丼",
+        "reading": "ぎゅうどん",
+        "vi": "cơm thịt bò"
+      },
+      {
+        "jp": "丼物",
+        "reading": "どんぶりもの",
+        "vi": "món cơm tô"
+      }
+    ]
+  },
+  {
+    "id": "n2-101",
+    "kanji": "囲",
+    "hanViet": "VI",
+    "kunyomi": [
+      "かこ.む",
+      "かこ.い"
+    ],
+    "onyomi": [
+      "イ"
+    ],
+    "strokes": 7,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "囲",
+        "hanViet": "VI"
+      }
+    ],
+    "meanings": [
+      "Vây quanh",
+      "Bao vây"
+    ],
+    "examples": [
+      {
+        "jp": "囲む",
+        "reading": "かこむ",
+        "vi": "vây quanh"
+      },
+      {
+        "jp": "範囲",
+        "reading": "はんい",
+        "vi": "phạm vi"
+      },
+      {
+        "jp": "包囲",
+        "reading": "ほうい",
+        "vi": "bao vây"
+      }
+    ]
+  },
+  {
+    "id": "n2-102",
+    "kanji": "免",
+    "hanViet": "MIỄN",
+    "kunyomi": [
+      "まぬか.れる"
+    ],
+    "onyomi": [
+      "メン"
+    ],
+    "strokes": 8,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "免",
+        "hanViet": "MIỄN"
+      }
+    ],
+    "meanings": [
+      "Miễn",
+      "Tha"
+    ],
+    "examples": [
+      {
+        "jp": "免許",
+        "reading": "めんきょ",
+        "vi": "giấy phép"
+      },
+      {
+        "jp": "免税",
+        "reading": "めんぜい",
+        "vi": "miễn thuế"
+      },
+      {
+        "jp": "免疫",
+        "reading": "めんえき",
+        "vi": "miễn dịch"
+      }
+    ]
+  },
+  {
+    "id": "n2-103",
+    "kanji": "晩",
+    "hanViet": "VÃN",
+    "kunyomi": [
+      "ばん"
+    ],
+    "onyomi": [
+      "バン"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "晩",
+        "hanViet": "VÃN"
+      }
+    ],
+    "meanings": [
+      "Tối",
+      "Buổi tối"
+    ],
+    "examples": [
+      {
+        "jp": "毎晩",
+        "reading": "まいばん",
+        "vi": "mỗi tối"
+      },
+      {
+        "jp": "晩ご飯",
+        "reading": "ばんごはん",
+        "vi": "cơm tối"
+      },
+      {
+        "jp": "晩年",
+        "reading": "ばんねん",
+        "vi": "tuổi già"
+      }
+    ]
+  },
+  {
+    "id": "n2-104",
+    "kanji": "逸",
+    "hanViet": "DẬT",
+    "kunyomi": [
+      "そ.れる",
+      "は.ずれる"
+    ],
+    "onyomi": [
+      "イツ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "逸",
+        "hanViet": "DẬT"
+      }
+    ],
+    "meanings": [
+      "Vượt trội",
+      "Lạc đường"
+    ],
+    "examples": [
+      {
+        "jp": "逸材",
+        "reading": "いつざい",
+        "vi": "tài năng xuất sắc"
+      },
+      {
+        "jp": "逸脱",
+        "reading": "いつだつ",
+        "vi": "bị sai lệch"
+      },
+      {
+        "jp": "逸話",
+        "reading": "いつわ",
+        "vi": "câu chuyện thú vị"
+      }
+    ]
+  },
+  {
+    "id": "n2-105",
+    "kanji": "令",
+    "hanViet": "LỆNH",
+    "kunyomi": [],
+    "onyomi": [
+      "レイ"
+    ],
+    "strokes": 5,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "令",
+        "hanViet": "LỆNH"
+      }
+    ],
+    "meanings": [
+      "Lệnh",
+      "Mệnh lệnh"
+    ],
+    "examples": [
+      {
+        "jp": "命令",
+        "reading": "めいれい",
+        "vi": "mệnh lệnh"
+      },
+      {
+        "jp": "号令",
+        "reading": "ごうれい",
+        "vi": "hiệu lệnh"
+      },
+      {
+        "jp": "令和",
+        "reading": "れいわ",
+        "vi": "Reiwa (niên hiệu)"
+      }
+    ]
+  },
+  {
+    "id": "n2-106",
+    "kanji": "領",
+    "hanViet": "LĨNH",
+    "kunyomi": [],
+    "onyomi": [
+      "リョウ"
+    ],
+    "strokes": 14,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "領",
+        "hanViet": "LĨNH"
+      }
+    ],
+    "meanings": [
+      "Lĩnh thổ",
+      "Thu nhận"
+    ],
+    "examples": [
+      {
+        "jp": "領土",
+        "reading": "りょうど",
+        "vi": "lãnh thổ"
+      },
+      {
+        "jp": "大統領",
+        "reading": "だいとうりょう",
+        "vi": "tổng thống"
+      },
+      {
+        "jp": "領収書",
+        "reading": "りょうしゅうしょ",
+        "vi": "biên lai"
+      }
+    ]
+  },
+  {
+    "id": "n2-107",
+    "kanji": "冷",
+    "hanViet": "LÃNH",
+    "kunyomi": [
+      "さ.める",
+      "ひ.える"
+    ],
+    "onyomi": [
+      "レイ"
+    ],
+    "strokes": 7,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "冷",
+        "hanViet": "LÃNH"
+      }
+    ],
+    "meanings": [
+      "Lạnh",
+      "Nguội"
+    ],
+    "examples": [
+      {
+        "jp": "冷静",
+        "reading": "れいせい",
+        "vi": "bình tĩnh"
+      },
+      {
+        "jp": "冷蔵庫",
+        "reading": "れいぞうこ",
+        "vi": "tủ lạnh"
+      },
+      {
+        "jp": "冷凍",
+        "reading": "れいとう",
+        "vi": "đông lạnh"
+      }
+    ]
+  },
+  {
+    "id": "n2-108",
+    "kanji": "兆",
+    "hanViet": "TRIỆU",
+    "kunyomi": [
+      "きざ.し"
+    ],
+    "onyomi": [
+      "チョウ"
+    ],
+    "strokes": 6,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "兆",
+        "hanViet": "TRIỆU"
+      }
+    ],
+    "meanings": [
+      "Triệu",
+      "Triệu chứng"
+    ],
+    "examples": [
+      {
+        "jp": "兆し",
+        "reading": "きざし",
+        "vi": "dấu hiệu"
+      },
+      {
+        "jp": "一兆円",
+        "reading": "いっちょうえん",
+        "vi": "một nghìn tỷ yên"
+      },
+      {
+        "jp": "前兆",
+        "reading": "ぜんちょう",
+        "vi": "điềm báo"
+      }
+    ]
+  },
+  {
+    "id": "n2-109",
+    "kanji": "逃",
+    "hanViet": "ĐÀO",
+    "kunyomi": [
+      "に.げる",
+      "のが.れる"
+    ],
+    "onyomi": [
+      "トウ"
+    ],
+    "strokes": 9,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "逃",
+        "hanViet": "ĐÀO"
+      }
+    ],
+    "meanings": [
+      "Bỏ trốn",
+      "Tháo chạy"
+    ],
+    "examples": [
+      {
+        "jp": "逃げる",
+        "reading": "にげる",
+        "vi": "chạy trốn"
+      },
+      {
+        "jp": "逃走",
+        "reading": "とうそう",
+        "vi": "chạy trốn"
+      },
+      {
+        "jp": "逃れる",
+        "reading": "のがれる",
+        "vi": "trốn tránh"
+      }
+    ]
+  },
+  {
+    "id": "n2-110",
+    "kanji": "桃",
+    "hanViet": "ĐÀO",
+    "kunyomi": [
+      "もも"
+    ],
+    "onyomi": [
+      "トウ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "桃",
+        "hanViet": "ĐÀO"
+      }
+    ],
+    "meanings": [
+      "Quả đào",
+      "Đào"
+    ],
+    "examples": [
+      {
+        "jp": "桃",
+        "reading": "もも",
+        "vi": "quả đào"
+      },
+      {
+        "jp": "白桃",
+        "reading": "はくとう",
+        "vi": "quả đào trắng"
+      },
+      {
+        "jp": "桃色",
+        "reading": "ももいろ",
+        "vi": "màu hồng đào"
+      }
+    ]
+  },
+  {
+    "id": "n2-111",
+    "kanji": "民",
+    "hanViet": "DÂN",
+    "kunyomi": [
+      "たみ"
+    ],
+    "onyomi": [
+      "ミン"
+    ],
+    "strokes": 5,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "民",
+        "hanViet": "DÂN"
+      }
+    ],
+    "meanings": [
+      "Dân",
+      "Nhân dân"
+    ],
+    "examples": [
+      {
+        "jp": "民主",
+        "reading": "みんしゅ",
+        "vi": "dân chủ"
+      },
+      {
+        "jp": "国民",
+        "reading": "こくみん",
+        "vi": "quốc dân"
+      },
+      {
+        "jp": "民間",
+        "reading": "みんかん",
+        "vi": "tư nhân"
+      }
+    ]
+  },
+  {
+    "id": "n2-112",
+    "kanji": "眠",
+    "hanViet": "MIÊN",
+    "kunyomi": [
+      "ねむ.る",
+      "ねむ.い"
+    ],
+    "onyomi": [
+      "ミン"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "眠",
+        "hanViet": "MIÊN"
+      }
+    ],
+    "meanings": [
+      "Ngủ",
+      "Giấc ngủ"
+    ],
+    "examples": [
+      {
+        "jp": "眠る",
+        "reading": "ねむる",
+        "vi": "ngủ"
+      },
+      {
+        "jp": "睡眠",
+        "reading": "すいみん",
+        "vi": "giấc ngủ"
+      },
+      {
+        "jp": "不眠",
+        "reading": "ふみん",
+        "vi": "mất ngủ"
+      }
+    ]
+  },
+  {
+    "id": "n2-113",
+    "kanji": "票",
+    "hanViet": "PHIẾU",
+    "kunyomi": [],
+    "onyomi": [
+      "ヒョウ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "票",
+        "hanViet": "PHIẾU"
+      }
+    ],
+    "meanings": [
+      "Phiếu",
+      "Lá phiếu"
+    ],
+    "examples": [
+      {
+        "jp": "投票",
+        "reading": "とうひょう",
+        "vi": "bỏ phiếu"
+      },
+      {
+        "jp": "一票",
+        "reading": "いっぴょう",
+        "vi": "một lá phiếu"
+      },
+      {
+        "jp": "伝票",
+        "reading": "でんぴょう",
+        "vi": "phiếu thu"
+      }
+    ]
+  },
+  {
+    "id": "n2-114",
+    "kanji": "謙",
+    "hanViet": "KHIÊM",
+    "kunyomi": [],
+    "onyomi": [
+      "ケン"
+    ],
+    "strokes": 17,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "謙",
+        "hanViet": "KHIÊM"
+      }
+    ],
+    "meanings": [
+      "Khiêm tốn"
+    ],
+    "examples": [
+      {
+        "jp": "謙虚",
+        "reading": "けんきょ",
+        "vi": "khiêm tốn"
+      },
+      {
+        "jp": "謙遜",
+        "reading": "けんそん",
+        "vi": "khiêm nhường"
+      },
+      {
+        "jp": "謙譲語",
+        "reading": "けんじょうご",
+        "vi": "kính ngữ khiêm nhường"
+      }
+    ]
+  },
+  {
+    "id": "n2-115",
+    "kanji": "更",
+    "hanViet": "CANH",
+    "kunyomi": [
+      "さら",
+      "ふ.ける"
+    ],
+    "onyomi": [
+      "コウ"
+    ],
+    "strokes": 7,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "更",
+        "hanViet": "CANH"
+      }
+    ],
+    "meanings": [
+      "Thay đổi",
+      "Canh khuya"
+    ],
+    "examples": [
+      {
+        "jp": "更新",
+        "reading": "こうしん",
+        "vi": "gia hạn"
+      },
+      {
+        "jp": "変更",
+        "reading": "へんこう",
+        "vi": "thay đổi"
+      },
+      {
+        "jp": "夜更かし",
+        "reading": "よふかし",
+        "vi": "thức đêm"
+      }
+    ]
+  },
+  {
+    "id": "n2-116",
+    "kanji": "割",
+    "hanViet": "CÁT",
+    "kunyomi": [
+      "わ.る",
+      "わ.れる"
+    ],
+    "onyomi": [
+      "カツ"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "割",
+        "hanViet": "CÁT"
+      }
+    ],
+    "meanings": [
+      "Chia",
+      "Phân chia"
+    ],
+    "examples": [
+      {
+        "jp": "割引",
+        "reading": "わりびき",
+        "vi": "giảm giá"
+      },
+      {
+        "jp": "割合",
+        "reading": "わりあい",
+        "vi": "tỉ lệ"
+      },
+      {
+        "jp": "割る",
+        "reading": "わる",
+        "vi": "chia, vỡ"
+      }
+    ]
+  },
+  {
+    "id": "n2-117",
+    "kanji": "硬",
+    "hanViet": "NGẠCH",
+    "kunyomi": [
+      "かた.い"
+    ],
+    "onyomi": [
+      "コウ"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "硬",
+        "hanViet": "NGẠCH"
+      }
+    ],
+    "meanings": [
+      "Cứng",
+      "Rắn chắc"
+    ],
+    "examples": [
+      {
+        "jp": "強硬",
+        "reading": "きょうこう",
+        "vi": "cứng rắn"
+      },
+      {
+        "jp": "硬い",
+        "reading": "かたい",
+        "vi": "cứng nhắc"
+      },
+      {
+        "jp": "硬貨",
+        "reading": "こうか",
+        "vi": "đồng xu"
+      }
+    ]
+  },
+  {
+    "id": "n2-118",
+    "kanji": "矛",
+    "hanViet": "MÂU",
+    "kunyomi": [
+      "ほこ"
+    ],
+    "onyomi": [
+      "ム"
+    ],
+    "strokes": 5,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "矛",
+        "hanViet": "MÂU"
+      }
+    ],
+    "meanings": [
+      "Mâu thuẫn",
+      "Giáo"
+    ],
+    "examples": [
+      {
+        "jp": "矛盾",
+        "reading": "むじゅん",
+        "vi": "sự mâu thuẫn"
+      },
+      {
+        "jp": "矛先",
+        "reading": "ほこさき",
+        "vi": "mũi giáo"
+      },
+      {
+        "jp": "自己矛盾",
+        "reading": "じこむじゅん",
+        "vi": "tự mâu thuẫn"
+      }
+    ]
+  },
+  {
+    "id": "n2-119",
+    "kanji": "充",
+    "hanViet": "SUNG",
+    "kunyomi": [
+      "あ.てる"
+    ],
+    "onyomi": [
+      "ジュウ"
+    ],
+    "strokes": 6,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "充",
+        "hanViet": "SUNG"
+      }
+    ],
+    "meanings": [
+      "Đầy đủ",
+      "Sung mãn"
+    ],
+    "examples": [
+      {
+        "jp": "充実",
+        "reading": "じゅうじつ",
+        "vi": "đầy đủ, ý nghĩa"
+      },
+      {
+        "jp": "充電",
+        "reading": "じゅうでん",
+        "vi": "sạc điện"
+      },
+      {
+        "jp": "充分",
+        "reading": "じゅうぶん",
+        "vi": "đầy đủ"
+      }
+    ]
+  },
+  {
+    "id": "n2-120",
+    "kanji": "柔",
+    "hanViet": "NHU",
+    "kunyomi": [
+      "やわ.らか",
+      "やわ.らかい"
+    ],
+    "onyomi": [
+      "ジュウ",
+      "ニュウ"
+    ],
+    "strokes": 9,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "柔",
+        "hanViet": "NHU"
+      }
+    ],
+    "meanings": [
+      "Mềm",
+      "Dịu dàng"
+    ],
+    "examples": [
+      {
+        "jp": "柔道",
+        "reading": "じゅうどう",
+        "vi": "võ Judo"
+      },
+      {
+        "jp": "柔らかい",
+        "reading": "やわらかい",
+        "vi": "mềm"
+      },
+      {
+        "jp": "柔軟",
+        "reading": "じゅうなん",
+        "vi": "mềm dẻo, linh hoạt"
+      }
+    ]
+  },
+  {
+    "id": "n2-121",
+    "kanji": "銃",
+    "hanViet": "SÚNG",
+    "kunyomi": [],
+    "onyomi": [
+      "ジュウ"
+    ],
+    "strokes": 14,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "銃",
+        "hanViet": "SÚNG"
+      }
+    ],
+    "meanings": [
+      "Súng"
+    ],
+    "examples": [
+      {
+        "jp": "銃",
+        "reading": "じゅう",
+        "vi": "súng"
+      },
+      {
+        "jp": "拳銃",
+        "reading": "けんじゅう",
+        "vi": "súng lục"
+      },
+      {
+        "jp": "銃撃",
+        "reading": "じゅうげき",
+        "vi": "bắn súng"
+      }
+    ]
+  },
+  {
+    "id": "n2-122",
+    "kanji": "堅",
+    "hanViet": "KIÊN",
+    "kunyomi": [
+      "かた.い"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "堅",
+        "hanViet": "KIÊN"
+      }
+    ],
+    "meanings": [
+      "Kiên cường",
+      "Vững chắc"
+    ],
+    "examples": [
+      {
+        "jp": "堅い",
+        "reading": "かたい",
+        "vi": "kiên cường, bền, chắc chắn"
+      },
+      {
+        "jp": "堅実",
+        "reading": "けんじつ",
+        "vi": "ổn định"
+      },
+      {
+        "jp": "堅固",
+        "reading": "けんご",
+        "vi": "vững chắc"
+      }
+    ]
+  },
+  {
+    "id": "n2-123",
+    "kanji": "緊",
+    "hanViet": "KHẨN",
+    "kunyomi": [],
+    "onyomi": [
+      "キン"
+    ],
+    "strokes": 15,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "緊",
+        "hanViet": "KHẨN"
+      }
+    ],
+    "meanings": [
+      "Khẩn cấp",
+      "Lo lắng"
+    ],
+    "examples": [
+      {
+        "jp": "緊張",
+        "reading": "きんちょう",
+        "vi": "lo lắng, căng thẳng"
+      },
+      {
+        "jp": "緊急",
+        "reading": "きんきゅう",
+        "vi": "khẩn cấp"
+      },
+      {
+        "jp": "緊迫",
+        "reading": "きんぱく",
+        "vi": "căng thẳng, gấp gáp"
+      }
+    ]
+  },
+  {
+    "id": "n2-124",
+    "kanji": "帰",
+    "hanViet": "QUY",
+    "kunyomi": [
+      "かえ.る",
+      "かえ.す"
+    ],
+    "onyomi": [
+      "キ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "帰",
+        "hanViet": "QUY"
+      }
+    ],
+    "meanings": [
+      "Về",
+      "Trở về"
+    ],
+    "examples": [
+      {
+        "jp": "帰国",
+        "reading": "きこく",
+        "vi": "về nước"
+      },
+      {
+        "jp": "帰宅",
+        "reading": "きたく",
+        "vi": "về nhà"
+      },
+      {
+        "jp": "復帰",
+        "reading": "ふっき",
+        "vi": "quay trở lại"
+      }
+    ]
+  },
+  {
+    "id": "n2-125",
+    "kanji": "婦",
+    "hanViet": "PHỤ",
+    "kunyomi": [],
+    "onyomi": [
+      "フ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "婦",
+        "hanViet": "PHỤ"
+      }
+    ],
+    "meanings": [
+      "Phụ nữ",
+      "Vợ"
+    ],
+    "examples": [
+      {
+        "jp": "主婦",
+        "reading": "しゅふ",
+        "vi": "nội trợ"
+      },
+      {
+        "jp": "夫婦",
+        "reading": "ふうふ",
+        "vi": "vợ chồng"
+      },
+      {
+        "jp": "産婦人科",
+        "reading": "さんふじんか",
+        "vi": "khoa sản"
+      }
+    ]
+  },
+  {
+    "id": "n2-126",
+    "kanji": "掃",
+    "hanViet": "TẢO",
+    "kunyomi": [
+      "は.く"
+    ],
+    "onyomi": [
+      "ソウ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "掃",
+        "hanViet": "TẢO"
+      }
+    ],
+    "meanings": [
+      "Quét",
+      "Dọn sạch"
+    ],
+    "examples": [
+      {
+        "jp": "掃除",
+        "reading": "そうじ",
+        "vi": "dọn dẹp"
+      },
+      {
+        "jp": "一掃",
+        "reading": "いっそう",
+        "vi": "tiêu diệt sạch"
+      },
+      {
+        "jp": "清掃",
+        "reading": "せいそう",
+        "vi": "dọn vệ sinh"
+      }
+    ]
+  },
+  {
+    "id": "n2-127",
+    "kanji": "砲",
+    "hanViet": "PHÁO",
+    "kunyomi": [],
+    "onyomi": [
+      "ホウ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "砲",
+        "hanViet": "PHÁO"
+      }
+    ],
+    "meanings": [
+      "Đại bác",
+      "Pháo"
+    ],
+    "examples": [
+      {
+        "jp": "大砲",
+        "reading": "たいほう",
+        "vi": "đại bác"
+      },
+      {
+        "jp": "砲撃",
+        "reading": "ほうげき",
+        "vi": "pháo kích"
+      },
+      {
+        "jp": "鉄砲",
+        "reading": "てっぽう",
+        "vi": "súng"
+      }
+    ]
+  },
+  {
+    "id": "n2-128",
+    "kanji": "枠",
+    "hanViet": "KHUNG",
+    "kunyomi": [
+      "わく"
+    ],
+    "onyomi": [],
+    "strokes": 8,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "枠",
+        "hanViet": "KHUNG"
+      }
+    ],
+    "meanings": [
+      "Khung",
+      "Khuôn"
+    ],
+    "examples": [
+      {
+        "jp": "枠",
+        "reading": "わく",
+        "vi": "khung"
+      },
+      {
+        "jp": "枠組み",
+        "reading": "わくぐみ",
+        "vi": "lên khung"
+      },
+      {
+        "jp": "枠内",
+        "reading": "わくない",
+        "vi": "trong phạm vi"
+      }
+    ]
+  },
+  {
+    "id": "n2-129",
+    "kanji": "酔",
+    "hanViet": "TÚY",
+    "kunyomi": [
+      "よ.う"
+    ],
+    "onyomi": [
+      "スイ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "酔",
+        "hanViet": "TÚY"
+      }
+    ],
+    "meanings": [
+      "Say",
+      "Say sưa"
+    ],
+    "examples": [
+      {
+        "jp": "酔う",
+        "reading": "よう",
+        "vi": "say (rượu, xe)"
+      },
+      {
+        "jp": "酔っ払い",
+        "reading": "よっぱらい",
+        "vi": "kẻ say rượu"
+      },
+      {
+        "jp": "二日酔い",
+        "reading": "ふつかよい",
+        "vi": "say rượu hôm sau"
+      }
+    ]
+  },
+  {
+    "id": "n2-130",
+    "kanji": "粋",
+    "hanViet": "TÚY",
+    "kunyomi": [
+      "いき"
+    ],
+    "onyomi": [
+      "スイ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "粋",
+        "hanViet": "TÚY"
+      }
+    ],
+    "meanings": [
+      "Tinh tế",
+      "Sành điệu"
+    ],
+    "examples": [
+      {
+        "jp": "粋",
+        "reading": "いき",
+        "vi": "sành điệu, tinh tế"
+      },
+      {
+        "jp": "純粋",
+        "reading": "じゅんすい",
+        "vi": "thuần túy"
+      },
+      {
+        "jp": "粋な",
+        "reading": "いきな",
+        "vi": "thanh lịch, sành điệu"
+      }
+    ]
+  },
+  {
+    "id": "n2-131",
+    "kanji": "飯",
+    "hanViet": "PHẠN",
+    "kunyomi": [
+      "めし"
+    ],
+    "onyomi": [
+      "ハン"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "飯",
+        "hanViet": "PHẠN"
+      }
+    ],
+    "meanings": [
+      "Cơm",
+      "Bữa cơm"
+    ],
+    "examples": [
+      {
+        "jp": "ご飯",
+        "reading": "ごはん",
+        "vi": "cơm, bữa ăn"
+      },
+      {
+        "jp": "夕飯",
+        "reading": "ゆうはん",
+        "vi": "bữa tối"
+      },
+      {
+        "jp": "炊飯器",
+        "reading": "すいはんき",
+        "vi": "nồi cơm điện"
+      }
+    ]
+  },
+  {
+    "id": "n2-132",
+    "kanji": "販",
+    "hanViet": "PHÁN",
+    "kunyomi": [],
+    "onyomi": [
+      "ハン"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "販",
+        "hanViet": "PHÁN"
+      }
+    ],
+    "meanings": [
+      "Bán",
+      "Buôn bán"
+    ],
+    "examples": [
+      {
+        "jp": "販売",
+        "reading": "はんばい",
+        "vi": "bán hàng"
+      },
+      {
+        "jp": "市販",
+        "reading": "しはん",
+        "vi": "bán trên thị trường"
+      },
+      {
+        "jp": "自動販売機",
+        "reading": "じどうはんばいき",
+        "vi": "máy bán hàng tự động"
+      }
+    ]
+  },
+  {
+    "id": "n2-133",
+    "kanji": "殺",
+    "hanViet": "SÁT",
+    "kunyomi": [
+      "ころ.す"
+    ],
+    "onyomi": [
+      "サツ",
+      "サイ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "殺",
+        "hanViet": "SÁT"
+      }
+    ],
+    "meanings": [
+      "Giết",
+      "Sát hại"
+    ],
+    "examples": [
+      {
+        "jp": "殺す",
+        "reading": "ころす",
+        "vi": "giết"
+      },
+      {
+        "jp": "殺人",
+        "reading": "さつじん",
+        "vi": "giết người"
+      },
+      {
+        "jp": "殺害",
+        "reading": "さつがい",
+        "vi": "sát hại"
+      }
+    ]
+  },
+  {
+    "id": "n2-134",
+    "kanji": "整",
+    "hanViet": "CHỈNH",
+    "kunyomi": [
+      "ととの.える",
+      "ととの.う"
+    ],
+    "onyomi": [
+      "セイ"
+    ],
+    "strokes": 16,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "整",
+        "hanViet": "CHỈNH"
+      }
+    ],
+    "meanings": [
+      "Chỉnh lý",
+      "Sắp xếp"
+    ],
+    "examples": [
+      {
+        "jp": "整える",
+        "reading": "ととのえる",
+        "vi": "sắp xếp, chuẩn bị"
+      },
+      {
+        "jp": "整理",
+        "reading": "せいり",
+        "vi": "chỉnh lý"
+      },
+      {
+        "jp": "調整",
+        "reading": "ちょうせい",
+        "vi": "điều chỉnh"
+      }
+    ]
+  },
+  {
+    "id": "n2-135",
+    "kanji": "症",
+    "hanViet": "CHỨNG",
+    "kunyomi": [],
+    "onyomi": [
+      "ショウ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "症",
+        "hanViet": "CHỨNG"
+      }
+    ],
+    "meanings": [
+      "Triệu chứng",
+      "Bệnh"
+    ],
+    "examples": [
+      {
+        "jp": "症状",
+        "reading": "しょうじょう",
+        "vi": "triệu chứng"
+      },
+      {
+        "jp": "熱中症",
+        "reading": "ねっちゅうしょう",
+        "vi": "say nắng"
+      },
+      {
+        "jp": "後遺症",
+        "reading": "こういしょう",
+        "vi": "di chứng"
+      }
+    ]
+  },
+  {
+    "id": "n2-136",
+    "kanji": "庁",
+    "hanViet": "SẢNH",
+    "kunyomi": [],
+    "onyomi": [
+      "チョウ"
+    ],
+    "strokes": 5,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "庁",
+        "hanViet": "SẢNH"
+      }
+    ],
+    "meanings": [
+      "Cơ quan",
+      "Sở"
+    ],
+    "examples": [
+      {
+        "jp": "警察庁",
+        "reading": "けいさつちょう",
+        "vi": "cảnh sát sảnh"
+      },
+      {
+        "jp": "官庁",
+        "reading": "かんちょう",
+        "vi": "cơ quan nhà nước"
+      },
+      {
+        "jp": "庁舎",
+        "reading": "ちょうしゃ",
+        "vi": "tòa nhà cơ quan"
+      }
+    ]
+  },
+  {
+    "id": "n2-137",
+    "kanji": "貯",
+    "hanViet": "TRỮ",
+    "kunyomi": [
+      "た.める"
+    ],
+    "onyomi": [
+      "チョ"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "貯",
+        "hanViet": "TRỮ"
+      }
+    ],
+    "meanings": [
+      "Tiết kiệm",
+      "Tích trữ"
+    ],
+    "examples": [
+      {
+        "jp": "貯金",
+        "reading": "ちょきん",
+        "vi": "tiết kiệm"
+      },
+      {
+        "jp": "貯水",
+        "reading": "ちょすい",
+        "vi": "trữ nước"
+      },
+      {
+        "jp": "貯蔵",
+        "reading": "ちょぞう",
+        "vi": "cất giữ"
+      }
+    ]
+  },
+  {
+    "id": "n2-138",
+    "kanji": "停",
+    "hanViet": "ĐÌNH",
+    "kunyomi": [],
+    "onyomi": [
+      "テイ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "停",
+        "hanViet": "ĐÌNH"
+      }
+    ],
+    "meanings": [
+      "Dừng",
+      "Đỗ"
+    ],
+    "examples": [
+      {
+        "jp": "停車",
+        "reading": "ていしゃ",
+        "vi": "dừng xe"
+      },
+      {
+        "jp": "停止",
+        "reading": "ていし",
+        "vi": "dừng lại"
+      },
+      {
+        "jp": "駐停車",
+        "reading": "ちゅうていしゃ",
+        "vi": "đỗ xe"
+      }
+    ]
+  },
+  {
+    "id": "n2-139",
+    "kanji": "防",
+    "hanViet": "PHÒNG",
+    "kunyomi": [
+      "ふせ.ぐ"
+    ],
+    "onyomi": [
+      "ボウ"
+    ],
+    "strokes": 7,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "防",
+        "hanViet": "PHÒNG"
+      }
+    ],
+    "meanings": [
+      "Phòng ngừa",
+      "Bảo vệ"
+    ],
+    "examples": [
+      {
+        "jp": "防ぐ",
+        "reading": "ふせぐ",
+        "vi": "phòng, chống"
+      },
+      {
+        "jp": "防犯",
+        "reading": "ぼうはん",
+        "vi": "chống tội phạm"
+      },
+      {
+        "jp": "防災",
+        "reading": "ぼうさい",
+        "vi": "phòng chống thảm họa"
+      }
+    ]
+  },
+  {
+    "id": "n2-140",
+    "kanji": "泊",
+    "hanViet": "BẠC",
+    "kunyomi": [
+      "と.まる",
+      "とま.り"
+    ],
+    "onyomi": [
+      "ハク"
+    ],
+    "strokes": 8,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "泊",
+        "hanViet": "BẠC"
+      }
+    ],
+    "meanings": [
+      "Lưu lại",
+      "Nghỉ ngơi"
+    ],
+    "examples": [
+      {
+        "jp": "泊まる",
+        "reading": "とまる",
+        "vi": "lưu lại, nghỉ qua đêm"
+      },
+      {
+        "jp": "宿泊",
+        "reading": "しゅくはく",
+        "vi": "lưu trú"
+      },
+      {
+        "jp": "一泊",
+        "reading": "いっぱく",
+        "vi": "một đêm"
+      }
+    ]
+  },
+  {
+    "id": "n2-141",
+    "kanji": "縮",
+    "hanViet": "SÚNG",
+    "kunyomi": [
+      "ちぢ.む",
+      "ちぢ.める"
+    ],
+    "onyomi": [
+      "シュク"
+    ],
+    "strokes": 17,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "縮",
+        "hanViet": "SÚNG"
+      }
+    ],
+    "meanings": [
+      "Co rút",
+      "Thu nhỏ"
+    ],
+    "examples": [
+      {
+        "jp": "縮む",
+        "reading": "ちぢむ",
+        "vi": "co lại"
+      },
+      {
+        "jp": "縮小",
+        "reading": "しゅくしょう",
+        "vi": "thu nhỏ"
+      },
+      {
+        "jp": "短縮",
+        "reading": "たんしゅく",
+        "vi": "rút ngắn"
+      }
+    ]
+  },
+  {
+    "id": "n2-142",
+    "kanji": "隣",
+    "hanViet": "LÂN",
+    "kunyomi": [
+      "とな.り",
+      "とな.る"
+    ],
+    "onyomi": [
+      "リン"
+    ],
+    "strokes": 16,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "隣",
+        "hanViet": "LÂN"
+      }
+    ],
+    "meanings": [
+      "Hàng xóm",
+      "Bên cạnh"
+    ],
+    "examples": [
+      {
+        "jp": "隣",
+        "reading": "となり",
+        "vi": "hàng xóm, bên cạnh"
+      },
+      {
+        "jp": "隣人",
+        "reading": "りんじん",
+        "vi": "hàng xóm"
+      },
+      {
+        "jp": "隣接",
+        "reading": "りんせつ",
+        "vi": "tiếp giáp"
+      }
+    ]
+  },
+  {
+    "id": "n2-143",
+    "kanji": "祝",
+    "hanViet": "CHÚC",
+    "kunyomi": [
+      "いわ.う"
+    ],
+    "onyomi": [
+      "シュク",
+      "シュウ"
+    ],
+    "strokes": 9,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "祝",
+        "hanViet": "CHÚC"
+      }
+    ],
+    "meanings": [
+      "Chúc mừng",
+      "Lễ"
+    ],
+    "examples": [
+      {
+        "jp": "祝う",
+        "reading": "いわう",
+        "vi": "chúc mừng"
+      },
+      {
+        "jp": "祝日",
+        "reading": "しゅくじつ",
+        "vi": "ngày lễ"
+      },
+      {
+        "jp": "祝賀",
+        "reading": "しゅくが",
+        "vi": "chúc mừng"
+      }
+    ]
+  },
+  {
+    "id": "n2-144",
+    "kanji": "器",
+    "hanViet": "KHÍ",
+    "kunyomi": [
+      "うつわ"
+    ],
+    "onyomi": [
+      "キ"
+    ],
+    "strokes": 15,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "器",
+        "hanViet": "KHÍ"
+      }
+    ],
+    "meanings": [
+      "Dụng cụ",
+      "Khí tài"
+    ],
+    "examples": [
+      {
+        "jp": "器",
+        "reading": "うつわ",
+        "vi": "dụng cụ, đồ đựng"
+      },
+      {
+        "jp": "機器",
+        "reading": "きき",
+        "vi": "thiết bị"
+      },
+      {
+        "jp": "食器",
+        "reading": "しょっき",
+        "vi": "bát đĩa"
+      }
+    ]
+  },
+  {
+    "id": "n2-145",
+    "kanji": "況",
+    "hanViet": "HUỐNG",
+    "kunyomi": [],
+    "onyomi": [
+      "キョウ"
+    ],
+    "strokes": 8,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "況",
+        "hanViet": "HUỐNG"
+      }
+    ],
+    "meanings": [
+      "Tình huống",
+      "Huống chi"
+    ],
+    "examples": [
+      {
+        "jp": "状況",
+        "reading": "じょうきょう",
+        "vi": "tình huống"
+      },
+      {
+        "jp": "近況",
+        "reading": "きんきょう",
+        "vi": "tình hình gần đây"
+      },
+      {
+        "jp": "況して",
+        "reading": "まして",
+        "vi": "huống chi"
+      }
+    ]
+  },
+  {
+    "id": "n2-146",
+    "kanji": "操",
+    "hanViet": "THAO",
+    "kunyomi": [
+      "あやつ.る",
+      "みさお"
+    ],
+    "onyomi": [
+      "ソウ"
+    ],
+    "strokes": 16,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "操",
+        "hanViet": "THAO"
+      }
+    ],
+    "meanings": [
+      "Thao tác",
+      "Vận hành"
+    ],
+    "examples": [
+      {
+        "jp": "操作",
+        "reading": "そうさ",
+        "vi": "thao tác, vận hành"
+      },
+      {
+        "jp": "操縦",
+        "reading": "そうじゅう",
+        "vi": "lái, điều khiển"
+      },
+      {
+        "jp": "体操",
+        "reading": "たいそう",
+        "vi": "thể dục"
+      }
+    ]
+  },
+  {
+    "id": "n2-147",
+    "kanji": "燥",
+    "hanViet": "TÁO",
+    "kunyomi": [],
+    "onyomi": [
+      "ソウ"
+    ],
+    "strokes": 17,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "燥",
+        "hanViet": "TÁO"
+      }
+    ],
+    "meanings": [
+      "Khô",
+      "Khô khan"
+    ],
+    "examples": [
+      {
+        "jp": "乾燥",
+        "reading": "かんそう",
+        "vi": "khô khan"
+      },
+      {
+        "jp": "燥",
+        "reading": "そう",
+        "vi": "khô"
+      }
+    ]
+  },
+  {
+    "id": "n2-148",
+    "kanji": "街",
+    "hanViet": "NHAI",
+    "kunyomi": [
+      "まち"
+    ],
+    "onyomi": [
+      "ガイ",
+      "カイ"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "街",
+        "hanViet": "NHAI"
+      }
+    ],
+    "meanings": [
+      "Phố",
+      "Đường phố"
+    ],
+    "examples": [
+      {
+        "jp": "街",
+        "reading": "まち",
+        "vi": "phố, thành phố"
+      },
+      {
+        "jp": "商店街",
+        "reading": "しょうてんがい",
+        "vi": "khu phố mua sắm"
+      },
+      {
+        "jp": "街角",
+        "reading": "まちかど",
+        "vi": "góc phố"
+      }
+    ]
+  },
+  {
+    "id": "n2-149",
+    "kanji": "衛",
+    "hanViet": "VỆ",
+    "kunyomi": [],
+    "onyomi": [
+      "エイ"
+    ],
+    "strokes": 16,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "衛",
+        "hanViet": "VỆ"
+      }
+    ],
+    "meanings": [
+      "Vệ sinh",
+      "Bảo vệ"
+    ],
+    "examples": [
+      {
+        "jp": "衛星",
+        "reading": "えいせい",
+        "vi": "vệ tinh"
+      },
+      {
+        "jp": "防衛",
+        "reading": "ぼうえい",
+        "vi": "phòng thủ"
+      },
+      {
+        "jp": "衛生",
+        "reading": "えいせい",
+        "vi": "vệ sinh"
+      }
+    ]
+  },
+  {
+    "id": "n2-150",
+    "kanji": "菜",
+    "hanViet": "THÁI",
+    "kunyomi": [
+      "な"
+    ],
+    "onyomi": [
+      "サイ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "菜",
+        "hanViet": "THÁI"
+      }
+    ],
+    "meanings": [
+      "Rau",
+      "Thức ăn"
+    ],
+    "examples": [
+      {
+        "jp": "野菜",
+        "reading": "やさい",
+        "vi": "rau"
+      },
+      {
+        "jp": "菜食",
+        "reading": "さいしょく",
+        "vi": "ăn chay"
+      },
+      {
+        "jp": "お菜",
+        "reading": "おかず",
+        "vi": "thức ăn"
+      }
+    ]
+  },
+  {
+    "id": "n2-151",
+    "kanji": "彩",
+    "hanViet": "THÁI",
+    "kunyomi": [
+      "いろど.る"
+    ],
+    "onyomi": [
+      "サイ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "彩",
+        "hanViet": "THÁI"
+      }
+    ],
+    "meanings": [
+      "Màu sắc",
+      "Tô màu"
+    ],
+    "examples": [
+      {
+        "jp": "色彩",
+        "reading": "しきさい",
+        "vi": "màu sắc"
+      },
+      {
+        "jp": "彩り",
+        "reading": "いろどり",
+        "vi": "màu sắc, trang trí"
+      },
+      {
+        "jp": "多彩",
+        "reading": "たさい",
+        "vi": "đa dạng, phong phú"
+      }
+    ]
+  },
+  {
+    "id": "n2-152",
+    "kanji": "軟",
+    "hanViet": "NHUYỄN",
+    "kunyomi": [
+      "やわ.らか",
+      "やわ.らかい"
+    ],
+    "onyomi": [
+      "ナン"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "軟",
+        "hanViet": "NHUYỄN"
+      }
+    ],
+    "meanings": [
+      "Mềm",
+      "Nhu mì"
+    ],
+    "examples": [
+      {
+        "jp": "軟化",
+        "reading": "なんか",
+        "vi": "mềm hóa"
+      },
+      {
+        "jp": "軟骨",
+        "reading": "なんこつ",
+        "vi": "sụn"
+      },
+      {
+        "jp": "柔軟",
+        "reading": "じゅうなん",
+        "vi": "mềm dẻo"
+      }
+    ]
+  },
+  {
+    "id": "n2-153",
+    "kanji": "軒",
+    "hanViet": "HIÊN",
+    "kunyomi": [
+      "のき"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "軒",
+        "hanViet": "HIÊN"
+      }
+    ],
+    "meanings": [
+      "Hiên nhà",
+      "Mái hiên"
+    ],
+    "examples": [
+      {
+        "jp": "軒",
+        "reading": "のき",
+        "vi": "mái hiên"
+      },
+      {
+        "jp": "軒下",
+        "reading": "のきした",
+        "vi": "dưới mái hiên"
+      },
+      {
+        "jp": "一軒",
+        "reading": "いっけん",
+        "vi": "một căn nhà"
+      }
+    ]
+  },
+  {
+    "id": "n2-154",
+    "kanji": "適",
+    "hanViet": "THÍCH",
+    "kunyomi": [],
+    "onyomi": [
+      "テキ"
+    ],
+    "strokes": 14,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "適",
+        "hanViet": "THÍCH"
+      }
+    ],
+    "meanings": [
+      "Phù hợp",
+      "Thích hợp"
+    ],
+    "examples": [
+      {
+        "jp": "適切",
+        "reading": "てきせつ",
+        "vi": "thích hợp"
+      },
+      {
+        "jp": "適用",
+        "reading": "てきよう",
+        "vi": "áp dụng"
+      },
+      {
+        "jp": "適当",
+        "reading": "てきとう",
+        "vi": "phù hợp"
+      }
+    ]
+  },
+  {
+    "id": "n2-155",
+    "kanji": "滴",
+    "hanViet": "ĐỊCH",
+    "kunyomi": [
+      "しずく",
+      "した.たる"
+    ],
+    "onyomi": [
+      "テキ"
+    ],
+    "strokes": 14,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "滴",
+        "hanViet": "ĐỊCH"
+      }
+    ],
+    "meanings": [
+      "Giọt nước",
+      "Nhỏ giọt"
+    ],
+    "examples": [
+      {
+        "jp": "水滴",
+        "reading": "すいてき",
+        "vi": "giọt nước"
+      },
+      {
+        "jp": "点滴",
+        "reading": "てんてき",
+        "vi": "truyền dịch"
+      },
+      {
+        "jp": "滴",
+        "reading": "しずく",
+        "vi": "giọt"
+      }
+    ]
+  },
+  {
+    "id": "n2-156",
+    "kanji": "泉",
+    "hanViet": "TUYỀN",
+    "kunyomi": [
+      "いずみ"
+    ],
+    "onyomi": [
+      "セン"
+    ],
+    "strokes": 9,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "泉",
+        "hanViet": "TUYỀN"
+      }
+    ],
+    "meanings": [
+      "Suối",
+      "Nguồn nước"
+    ],
+    "examples": [
+      {
+        "jp": "温泉",
+        "reading": "おんせん",
+        "vi": "suối nước nóng"
+      },
+      {
+        "jp": "泉",
+        "reading": "いずみ",
+        "vi": "suối, nguồn"
+      },
+      {
+        "jp": "源泉",
+        "reading": "げんせん",
+        "vi": "nguồn gốc"
+      }
+    ]
+  },
+  {
+    "id": "n2-157",
+    "kanji": "固",
+    "hanViet": "CỐ",
+    "kunyomi": [
+      "かた.める",
+      "かた.まる",
+      "かた.い"
+    ],
+    "onyomi": [
+      "コ"
+    ],
+    "strokes": 8,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "固",
+        "hanViet": "CỐ"
+      }
+    ],
+    "meanings": [
+      "Cứng",
+      "Kiên cố"
+    ],
+    "examples": [
+      {
+        "jp": "固める",
+        "reading": "かためる",
+        "vi": "làm cứng, củng cố"
+      },
+      {
+        "jp": "固定",
+        "reading": "こてい",
+        "vi": "cố định"
+      },
+      {
+        "jp": "固体",
+        "reading": "こたい",
+        "vi": "chất rắn"
+      }
+    ]
+  },
+  {
+    "id": "n2-158",
+    "kanji": "枯",
+    "hanViet": "CỐ",
+    "kunyomi": [
+      "か.れる",
+      "か.らす"
+    ],
+    "onyomi": [
+      "コ"
+    ],
+    "strokes": 9,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "枯",
+        "hanViet": "CỐ"
+      }
+    ],
+    "meanings": [
+      "Héo",
+      "Khô héo"
+    ],
+    "examples": [
+      {
+        "jp": "枯れる",
+        "reading": "かれる",
+        "vi": "héo, tàn"
+      },
+      {
+        "jp": "枯らす",
+        "reading": "からす",
+        "vi": "làm héo"
+      },
+      {
+        "jp": "枯木",
+        "reading": "かれき",
+        "vi": "cây khô"
+      }
+    ]
+  },
+  {
+    "id": "n2-159",
+    "kanji": "巣",
+    "hanViet": "SÀO",
+    "kunyomi": [
+      "す"
+    ],
+    "onyomi": [
+      "ソウ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "巣",
+        "hanViet": "SÀO"
+      }
+    ],
+    "meanings": [
+      "Tổ",
+      "Ổ"
+    ],
+    "examples": [
+      {
+        "jp": "巣",
+        "reading": "す",
+        "vi": "tổ (chim)"
+      },
+      {
+        "jp": "巣箱",
+        "reading": "すばこ",
+        "vi": "hộp tổ"
+      },
+      {
+        "jp": "蜂の巣",
+        "reading": "はちのす",
+        "vi": "tổ ong"
+      }
+    ]
+  },
+  {
+    "id": "n2-160",
+    "kanji": "菓",
+    "hanViet": "QUẢ",
+    "kunyomi": [],
+    "onyomi": [
+      "カ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "菓",
+        "hanViet": "QUẢ"
+      }
+    ],
+    "meanings": [
+      "Bánh kẹo",
+      "Hoa quả"
+    ],
+    "examples": [
+      {
+        "jp": "菓子",
+        "reading": "かし",
+        "vi": "bánh kẹo"
+      },
+      {
+        "jp": "和菓子",
+        "reading": "わがし",
+        "vi": "bánh kẹo Nhật"
+      },
+      {
+        "jp": "洋菓子",
+        "reading": "ようがし",
+        "vi": "bánh kẹo phương Tây"
+      }
+    ]
+  },
+  {
+    "id": "n2-161",
+    "kanji": "署",
+    "hanViet": "THỰ",
+    "kunyomi": [],
+    "onyomi": [
+      "ショ"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "署",
+        "hanViet": "THỰ"
+      }
+    ],
+    "meanings": [
+      "Sở",
+      "Cơ quan"
+    ],
+    "examples": [
+      {
+        "jp": "警察署",
+        "reading": "けいさつしょ",
+        "vi": "sở cảnh sát"
+      },
+      {
+        "jp": "消防署",
+        "reading": "しょうぼうしょ",
+        "vi": "sở cứu hỏa"
+      },
+      {
+        "jp": "署名",
+        "reading": "しょめい",
+        "vi": "ký tên"
+      }
+    ]
+  },
+  {
+    "id": "n2-162",
+    "kanji": "著",
+    "hanViet": "TRỨ",
+    "kunyomi": [
+      "いちじる.しい"
+    ],
+    "onyomi": [
+      "チョ",
+      "チャク"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "著",
+        "hanViet": "TRỨ"
+      }
+    ],
+    "meanings": [
+      "Nổi bật",
+      "Tác giả"
+    ],
+    "examples": [
+      {
+        "jp": "著者",
+        "reading": "ちょしゃ",
+        "vi": "tác giả"
+      },
+      {
+        "jp": "著名",
+        "reading": "ちょめい",
+        "vi": "nổi tiếng"
+      },
+      {
+        "jp": "著しい",
+        "reading": "いちじるしい",
+        "vi": "đáng kể, rõ rệt"
+      }
+    ]
+  },
+  {
+    "id": "n2-163",
+    "kanji": "嵐",
+    "hanViet": "LÃM",
+    "kunyomi": [
+      "あらし"
+    ],
+    "onyomi": [
+      "ラン"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "嵐",
+        "hanViet": "LÃM"
+      }
+    ],
+    "meanings": [
+      "Bão",
+      "Cơn bão"
+    ],
+    "examples": [
+      {
+        "jp": "嵐",
+        "reading": "あらし",
+        "vi": "bão"
+      },
+      {
+        "jp": "砂嵐",
+        "reading": "すなあらし",
+        "vi": "bão cát"
+      }
+    ]
+  },
+  {
+    "id": "n2-164",
+    "kanji": "寮",
+    "hanViet": "LIÊU",
+    "kunyomi": [],
+    "onyomi": [
+      "リョウ"
+    ],
+    "strokes": 15,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "寮",
+        "hanViet": "LIÊU"
+      }
+    ],
+    "meanings": [
+      "Ký túc xá",
+      "Phòng trọ"
+    ],
+    "examples": [
+      {
+        "jp": "寮",
+        "reading": "りょう",
+        "vi": "ký túc xá"
+      },
+      {
+        "jp": "学生寮",
+        "reading": "がくせいりょう",
+        "vi": "ký túc xá sinh viên"
+      },
+      {
+        "jp": "社員寮",
+        "reading": "しゃいんりょう",
+        "vi": "khu nhà ở nhân viên"
+      }
+    ]
+  },
+  {
+    "id": "n2-165",
+    "kanji": "療",
+    "hanViet": "LIỆU",
+    "kunyomi": [],
+    "onyomi": [
+      "リョウ"
+    ],
+    "strokes": 17,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "療",
+        "hanViet": "LIỆU"
+      }
+    ],
+    "meanings": [
+      "Chữa trị",
+      "Liệu pháp"
+    ],
+    "examples": [
+      {
+        "jp": "治療",
+        "reading": "ちりょう",
+        "vi": "điều trị"
+      },
+      {
+        "jp": "療養",
+        "reading": "りょうよう",
+        "vi": "dưỡng bệnh"
+      },
+      {
+        "jp": "医療",
+        "reading": "いりょう",
+        "vi": "y tế"
+      }
+    ]
+  },
+  {
+    "id": "n2-166",
+    "kanji": "僚",
+    "hanViet": "LIÊU",
+    "kunyomi": [],
+    "onyomi": [
+      "リョウ"
+    ],
+    "strokes": 14,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "僚",
+        "hanViet": "LIÊU"
+      }
+    ],
+    "meanings": [
+      "Đồng liêu",
+      "Đồng nghiệp"
+    ],
+    "examples": [
+      {
+        "jp": "同僚",
+        "reading": "どうりょう",
+        "vi": "đồng nghiệp"
+      },
+      {
+        "jp": "官僚",
+        "reading": "かんりょう",
+        "vi": "quan liêu"
+      },
+      {
+        "jp": "閣僚",
+        "reading": "かくりょう",
+        "vi": "thành viên nội các"
+      }
+    ]
+  },
+  {
+    "id": "n2-167",
+    "kanji": "節",
+    "hanViet": "TIẾT",
+    "kunyomi": [
+      "ふし"
+    ],
+    "onyomi": [
+      "セツ",
+      "セチ"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "節",
+        "hanViet": "TIẾT"
+      }
+    ],
+    "meanings": [
+      "Mùa",
+      "Khúc"
+    ],
+    "examples": [
+      {
+        "jp": "季節",
+        "reading": "きせつ",
+        "vi": "mùa"
+      },
+      {
+        "jp": "節約",
+        "reading": "せつやく",
+        "vi": "tiết kiệm"
+      },
+      {
+        "jp": "調節",
+        "reading": "ちょうせつ",
+        "vi": "điều chỉnh"
+      }
+    ]
+  },
+  {
+    "id": "n2-168",
+    "kanji": "偶",
+    "hanViet": "NGẪU",
+    "kunyomi": [],
+    "onyomi": [
+      "グウ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "偶",
+        "hanViet": "NGẪU"
+      }
+    ],
+    "meanings": [
+      "Ngẫu nhiên",
+      "Đôi"
+    ],
+    "examples": [
+      {
+        "jp": "偶然",
+        "reading": "ぐうぜん",
+        "vi": "ngẫu nhiên"
+      },
+      {
+        "jp": "偶数",
+        "reading": "ぐうすう",
+        "vi": "số chẵn"
+      },
+      {
+        "jp": "偶像",
+        "reading": "ぐうぞう",
+        "vi": "thần tượng"
+      }
+    ]
+  },
+  {
+    "id": "n2-169",
+    "kanji": "隅",
+    "hanViet": "NGUNG",
+    "kunyomi": [
+      "すみ"
+    ],
+    "onyomi": [
+      "グウ"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "隅",
+        "hanViet": "NGUNG"
+      }
+    ],
+    "meanings": [
+      "Góc",
+      "Xó"
+    ],
+    "examples": [
+      {
+        "jp": "隅",
+        "reading": "すみ",
+        "vi": "góc"
+      },
+      {
+        "jp": "隅々",
+        "reading": "すみずみ",
+        "vi": "mọi góc khuất"
+      },
+      {
+        "jp": "四隅",
+        "reading": "よすみ",
+        "vi": "bốn góc"
+      }
+    ]
+  },
+  {
+    "id": "n2-170",
+    "kanji": "暴",
+    "hanViet": "BẠO",
+    "kunyomi": [
+      "あば.れる",
+      "あば.く"
+    ],
+    "onyomi": [
+      "ボウ",
+      "バク"
+    ],
+    "strokes": 15,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "暴",
+        "hanViet": "BẠO"
+      }
+    ],
+    "meanings": [
+      "Bạo lực",
+      "Hung bạo"
+    ],
+    "examples": [
+      {
+        "jp": "暴力",
+        "reading": "ぼうりょく",
+        "vi": "bạo lực"
+      },
+      {
+        "jp": "暴れる",
+        "reading": "あばれる",
+        "vi": "quậy phá"
+      },
+      {
+        "jp": "暴露",
+        "reading": "ばくろ",
+        "vi": "phơi bày"
+      }
+    ]
+  },
+  {
+    "id": "n2-171",
+    "kanji": "爆",
+    "hanViet": "BÙM",
+    "kunyomi": [],
+    "onyomi": [
+      "バク"
+    ],
+    "strokes": 19,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "爆",
+        "hanViet": "BÙM"
+      }
+    ],
+    "meanings": [
+      "Bùng nổ",
+      "Nổ"
+    ],
+    "examples": [
+      {
+        "jp": "爆発",
+        "reading": "ばくはつ",
+        "vi": "nổ, bộc phát"
+      },
+      {
+        "jp": "爆弾",
+        "reading": "ばくだん",
+        "vi": "bom"
+      },
+      {
+        "jp": "爆睡",
+        "reading": "ばくすい",
+        "vi": "ngủ say"
+      }
+    ]
+  },
+  {
+    "id": "n2-172",
+    "kanji": "廊",
+    "hanViet": "LANG",
+    "kunyomi": [],
+    "onyomi": [
+      "ロウ"
+    ],
+    "strokes": 12,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "廊",
+        "hanViet": "LANG"
+      }
+    ],
+    "meanings": [
+      "Hành lang",
+      "Dãy nhà"
+    ],
+    "examples": [
+      {
+        "jp": "廊下",
+        "reading": "ろうか",
+        "vi": "hành lang"
+      },
+      {
+        "jp": "回廊",
+        "reading": "かいろう",
+        "vi": "hành lang vòng"
+      }
+    ]
+  },
+  {
+    "id": "n2-173",
+    "kanji": "朗",
+    "hanViet": "LÃNG",
+    "kunyomi": [
+      "ほが.らか"
+    ],
+    "onyomi": [
+      "ロウ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "朗",
+        "hanViet": "LÃNG"
+      }
+    ],
+    "meanings": [
+      "Vui vẻ",
+      "Sảng khoái"
+    ],
+    "examples": [
+      {
+        "jp": "明朗",
+        "reading": "めいろう",
+        "vi": "vui vẻ, sảng khoái"
+      },
+      {
+        "jp": "朗読",
+        "reading": "ろうどく",
+        "vi": "đọc to"
+      },
+      {
+        "jp": "朗報",
+        "reading": "ろうほう",
+        "vi": "tin vui"
+      }
+    ]
+  },
+  {
+    "id": "n2-174",
+    "kanji": "浪",
+    "hanViet": "LÃNG",
+    "kunyomi": [
+      "なみ"
+    ],
+    "onyomi": [
+      "ロウ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "浪",
+        "hanViet": "LÃNG"
+      }
+    ],
+    "meanings": [
+      "Sóng",
+      "Lang thang"
+    ],
+    "examples": [
+      {
+        "jp": "浪人",
+        "reading": "ろうにん",
+        "vi": "ronin, học sinh thi lại"
+      },
+      {
+        "jp": "放浪",
+        "reading": "ほうろう",
+        "vi": "lang thang"
+      },
+      {
+        "jp": "浪費",
+        "reading": "ろうひ",
+        "vi": "lãng phí"
+      }
+    ]
+  },
+  {
+    "id": "n2-175",
+    "kanji": "弁",
+    "hanViet": "BIỆN",
+    "kunyomi": [],
+    "onyomi": [
+      "ベン"
+    ],
+    "strokes": 5,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "弁",
+        "hanViet": "BIỆN"
+      }
+    ],
+    "meanings": [
+      "Biện hộ",
+      "Tiện lợi"
+    ],
+    "examples": [
+      {
+        "jp": "弁護士",
+        "reading": "べんごし",
+        "vi": "luật sư"
+      },
+      {
+        "jp": "弁当",
+        "reading": "べんとう",
+        "vi": "hộp cơm"
+      },
+      {
+        "jp": "弁償",
+        "reading": "べんしょう",
+        "vi": "bồi thường"
+      }
+    ]
+  },
+  {
+    "id": "n2-176",
+    "kanji": "勧",
+    "hanViet": "KHUYẾN",
+    "kunyomi": [
+      "すす.める"
+    ],
+    "onyomi": [
+      "カン"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "勧",
+        "hanViet": "KHUYẾN"
+      }
+    ],
+    "meanings": [
+      "Khuyến khích",
+      "Giới thiệu"
+    ],
+    "examples": [
+      {
+        "jp": "勧める",
+        "reading": "すすめる",
+        "vi": "khuyến khích, giới thiệu"
+      },
+      {
+        "jp": "勧誘",
+        "reading": "かんゆう",
+        "vi": "mời chào"
+      },
+      {
+        "jp": "勧告",
+        "reading": "かんこく",
+        "vi": "khuyến cáo"
+      }
+    ]
+  },
+  {
+    "id": "n2-177",
+    "kanji": "歓",
+    "hanViet": "HOAN",
+    "kunyomi": [],
+    "onyomi": [
+      "カン"
+    ],
+    "strokes": 15,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "歓",
+        "hanViet": "HOAN"
+      }
+    ],
+    "meanings": [
+      "Vui mừng",
+      "Hoan nghênh"
+    ],
+    "examples": [
+      {
+        "jp": "歓迎",
+        "reading": "かんげい",
+        "vi": "hoan nghênh"
+      },
+      {
+        "jp": "歓喜",
+        "reading": "かんき",
+        "vi": "vui mừng"
+      },
+      {
+        "jp": "歓声",
+        "reading": "かんせい",
+        "vi": "tiếng歓呼"
+      }
+    ]
+  },
+  {
+    "id": "n2-178",
+    "kanji": "乾",
+    "hanViet": "CAN",
+    "kunyomi": [
+      "かわ.く",
+      "かわ.かす"
+    ],
+    "onyomi": [
+      "カン",
+      "ケン"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "乾",
+        "hanViet": "CAN"
+      }
+    ],
+    "meanings": [
+      "Khô",
+      "Cạn"
+    ],
+    "examples": [
+      {
+        "jp": "乾燥",
+        "reading": "かんそう",
+        "vi": "khô khan"
+      },
+      {
+        "jp": "乾杯",
+        "reading": "かんぱい",
+        "vi": "chúc mừng (nâng ly)"
+      },
+      {
+        "jp": "乾電池",
+        "reading": "かんでんち",
+        "vi": "pin khô"
+      }
+    ]
+  },
+  {
+    "id": "n2-179",
+    "kanji": "勘",
+    "hanViet": "KHÁM",
+    "kunyomi": [],
+    "onyomi": [
+      "カン"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "勘",
+        "hanViet": "KHÁM"
+      }
+    ],
+    "meanings": [
+      "Trực giác",
+      "Cảm giác"
+    ],
+    "examples": [
+      {
+        "jp": "勘",
+        "reading": "かん",
+        "vi": "trực giác, linh cảm"
+      },
+      {
+        "jp": "勘違い",
+        "reading": "かんちがい",
+        "vi": "hiểu lầm"
+      },
+      {
+        "jp": "直感",
+        "reading": "ちょっかん",
+        "vi": "trực giác"
+      }
+    ]
+  },
+  {
+    "id": "n2-180",
+    "kanji": "腸",
+    "hanViet": "TRƯỜNG",
+    "kunyomi": [],
+    "onyomi": [
+      "チョウ"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "腸",
+        "hanViet": "TRƯỜNG"
+      }
+    ],
+    "meanings": [
+      "Ruột",
+      "Đường ruột"
+    ],
+    "examples": [
+      {
+        "jp": "腸",
+        "reading": "ちょう",
+        "vi": "ruột"
+      },
+      {
+        "jp": "大腸",
+        "reading": "だいちょう",
+        "vi": "đại trường"
+      },
+      {
+        "jp": "腸炎",
+        "reading": "ちょうえん",
+        "vi": "viêm ruột"
+      }
+    ]
+  },
+  {
+    "id": "n2-181",
+    "kanji": "幕",
+    "hanViet": "MẠC",
+    "kunyomi": [
+      "まく",
+      "とばり"
+    ],
+    "onyomi": [
+      "マク",
+      "バク"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "幕",
+        "hanViet": "MẠC"
+      }
+    ],
+    "meanings": [
+      "Màn",
+      "Thời kỳ"
+    ],
+    "examples": [
+      {
+        "jp": "幕",
+        "reading": "まく",
+        "vi": "màn"
+      },
+      {
+        "jp": "幕末",
+        "reading": "ばくまつ",
+        "vi": "cuối thời Edo"
+      },
+      {
+        "jp": "開幕",
+        "reading": "かいまく",
+        "vi": "khai mạc"
+      }
+    ]
+  },
+  {
+    "id": "n2-182",
+    "kanji": "枚",
+    "hanViet": "MUỘI",
+    "kunyomi": [],
+    "onyomi": [
+      "マイ"
+    ],
+    "strokes": 8,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "枚",
+        "hanViet": "MUỘI"
+      }
+    ],
+    "meanings": [
+      "Tờ",
+      "Tấm (đếm)"
+    ],
+    "examples": [
+      {
+        "jp": "一枚",
+        "reading": "いちまい",
+        "vi": "một tờ"
+      },
+      {
+        "jp": "枚数",
+        "reading": "まいすう",
+        "vi": "số tờ"
+      },
+      {
+        "jp": "何枚",
+        "reading": "なんまい",
+        "vi": "bao nhiêu tờ"
+      }
+    ]
+  },
+  {
+    "id": "n2-183",
+    "kanji": "飼",
+    "hanViet": "TỰ",
+    "kunyomi": [
+      "か.う"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "飼",
+        "hanViet": "TỰ"
+      }
+    ],
+    "meanings": [
+      "Nuôi",
+      "Chăn nuôi"
+    ],
+    "examples": [
+      {
+        "jp": "飼う",
+        "reading": "かう",
+        "vi": "nuôi (thú)"
+      },
+      {
+        "jp": "飼育",
+        "reading": "しいく",
+        "vi": "chăn nuôi"
+      },
+      {
+        "jp": "飼料",
+        "reading": "しりょう",
+        "vi": "thức ăn gia súc"
+      }
+    ]
+  },
+  {
+    "id": "n2-184",
+    "kanji": "携",
+    "hanViet": "HUỀ",
+    "kunyomi": [
+      "たずさ.える",
+      "たずさ.わる"
+    ],
+    "onyomi": [
+      "ケイ"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "携",
+        "hanViet": "HUỀ"
+      }
+    ],
+    "meanings": [
+      "Mang theo",
+      "Tham gia"
+    ],
+    "examples": [
+      {
+        "jp": "携帯",
+        "reading": "けいたい",
+        "vi": "điện thoại di động"
+      },
+      {
+        "jp": "携帯電話",
+        "reading": "けいたいでんわ",
+        "vi": "điện thoại di động"
+      },
+      {
+        "jp": "携帯する",
+        "reading": "けいたいする",
+        "vi": "mang theo"
+      }
+    ]
+  },
+  {
+    "id": "n2-185",
+    "kanji": "帯",
+    "hanViet": "ĐỚI",
+    "kunyomi": [
+      "おび",
+      "お.びる"
+    ],
+    "onyomi": [
+      "タイ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "帯",
+        "hanViet": "ĐỚI"
+      }
+    ],
+    "meanings": [
+      "Thắt lưng",
+      "Mang theo"
+    ],
+    "examples": [
+      {
+        "jp": "携帯",
+        "reading": "けいたい",
+        "vi": "điện thoại di động"
+      },
+      {
+        "jp": "地帯",
+        "reading": "ちたい",
+        "vi": "khu vực, vùng"
+      },
+      {
+        "jp": "熱帯",
+        "reading": "ねったい",
+        "vi": "nhiệt đới"
+      }
+    ]
+  },
+  {
+    "id": "n2-186",
+    "kanji": "丁",
+    "hanViet": "ĐINH",
+    "kunyomi": [],
+    "onyomi": [
+      "チョウ",
+      "テイ"
+    ],
+    "strokes": 2,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "丁",
+        "hanViet": "ĐINH"
+      }
+    ],
+    "meanings": [
+      "Chú bé",
+      "Đinh"
+    ],
+    "examples": [
+      {
+        "jp": "丁寧",
+        "reading": "ていねい",
+        "vi": "lịch sự, cẩn thận"
+      },
+      {
+        "jp": "一丁",
+        "reading": "いっちょう",
+        "vi": "một miếng, một khối"
+      },
+      {
+        "jp": "丁度",
+        "reading": "ちょうど",
+        "vi": "đúng"
+      }
+    ]
+  },
+  {
+    "id": "n2-187",
+    "kanji": "刃",
+    "hanViet": "NHẬN",
+    "kunyomi": [
+      "は"
+    ],
+    "onyomi": [
+      "ジン"
+    ],
+    "strokes": 3,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "刃",
+        "hanViet": "NHẬN"
+      }
+    ],
+    "meanings": [
+      "Lưỡi dao",
+      "Lưỡi kiếm"
+    ],
+    "examples": [
+      {
+        "jp": "刃",
+        "reading": "は",
+        "vi": "lưỡi dao"
+      },
+      {
+        "jp": "刃物",
+        "reading": "はもの",
+        "vi": "vật sắc bén"
+      },
+      {
+        "jp": "両刃",
+        "reading": "もろは",
+        "vi": "hai lưỡi"
+      }
+    ]
+  },
+  {
+    "id": "n2-188",
+    "kanji": "召",
+    "hanViet": "TRIỆU",
+    "kunyomi": [
+      "め.す"
+    ],
+    "onyomi": [
+      "ショウ"
+    ],
+    "strokes": 5,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "召",
+        "hanViet": "TRIỆU"
+      }
+    ],
+    "meanings": [
+      "Triệu tập",
+      "Gọi"
+    ],
+    "examples": [
+      {
+        "jp": "召す",
+        "reading": "めす",
+        "vi": "mặc, ăn (kính ngữ)"
+      },
+      {
+        "jp": "召喚",
+        "reading": "しょうかん",
+        "vi": "triệu tập"
+      },
+      {
+        "jp": "召集",
+        "reading": "しょうしゅう",
+        "vi": "triệu tập"
+      }
+    ]
+  },
+  {
+    "id": "n2-189",
+    "kanji": "慣",
+    "hanViet": "QUÁN",
+    "kunyomi": [
+      "な.れる",
+      "な.らす"
+    ],
+    "onyomi": [
+      "カン"
+    ],
+    "strokes": 14,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "慣",
+        "hanViet": "QUÁN"
+      }
+    ],
+    "meanings": [
+      "Quen thuộc",
+      "Thói quen"
+    ],
+    "examples": [
+      {
+        "jp": "慣れる",
+        "reading": "なれる",
+        "vi": "quen"
+      },
+      {
+        "jp": "習慣",
+        "reading": "しゅうかん",
+        "vi": "thói quen"
+      },
+      {
+        "jp": "慣例",
+        "reading": "かんれい",
+        "vi": "thông lệ"
+      }
+    ]
+  },
+  {
+    "id": "n2-190",
+    "kanji": "妨",
+    "hanViet": "PHÒNG",
+    "kunyomi": [
+      "さまた.げる"
+    ],
+    "onyomi": [
+      "ボウ"
+    ],
+    "strokes": 7,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "妨",
+        "hanViet": "PHÒNG"
+      }
+    ],
+    "meanings": [
+      "Cản trở",
+      "Ngăn trở"
+    ],
+    "examples": [
+      {
+        "jp": "妨げる",
+        "reading": "さまたげる",
+        "vi": "gây cản trở"
+      },
+      {
+        "jp": "妨害",
+        "reading": "ぼうがい",
+        "vi": "cản trở, quấy rối"
+      },
+      {
+        "jp": "妨げ",
+        "reading": "さまたげ",
+        "vi": "cản trở"
+      }
+    ]
+  },
+  {
+    "id": "n2-191",
+    "kanji": "娯",
+    "hanViet": "NGỌ",
+    "kunyomi": [],
+    "onyomi": [
+      "ゴ"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "娯",
+        "hanViet": "NGỌ"
+      }
+    ],
+    "meanings": [
+      "Vui chơi",
+      "Giải trí"
+    ],
+    "examples": [
+      {
+        "jp": "娯楽",
+        "reading": "ごらく",
+        "vi": "giải trí, tiêu khiển"
+      },
+      {
+        "jp": "娯楽施設",
+        "reading": "ごらくしせつ",
+        "vi": "cơ sở giải trí"
+      }
+    ]
+  },
+  {
+    "id": "n2-192",
+    "kanji": "彫",
+    "hanViet": "ĐIÊU",
+    "kunyomi": [
+      "ほ.る"
+    ],
+    "onyomi": [
+      "チョウ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "彫",
+        "hanViet": "ĐIÊU"
+      }
+    ],
+    "meanings": [
+      "Điêu khắc",
+      "Khắc"
+    ],
+    "examples": [
+      {
+        "jp": "彫る",
+        "reading": "ほる",
+        "vi": "khắc"
+      },
+      {
+        "jp": "彫刻",
+        "reading": "ちょうこく",
+        "vi": "điêu khắc"
+      },
+      {
+        "jp": "彫刻刀",
+        "reading": "ちょうこくとう",
+        "vi": "dao khắc"
+      }
+    ]
+  },
+  {
+    "id": "n2-193",
+    "kanji": "垂",
+    "hanViet": "THÙY",
+    "kunyomi": [
+      "た.れる",
+      "た.らす"
+    ],
+    "onyomi": [
+      "スイ"
+    ],
+    "strokes": 8,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "垂",
+        "hanViet": "THÙY"
+      }
+    ],
+    "meanings": [
+      "Chảy xuống",
+      "Rủ xuống"
+    ],
+    "examples": [
+      {
+        "jp": "垂れる",
+        "reading": "たれる",
+        "vi": "chảy xuống"
+      },
+      {
+        "jp": "懸垂",
+        "reading": "けんすい",
+        "vi": "hít xà đơn"
+      },
+      {
+        "jp": "垂直",
+        "reading": "すいちょく",
+        "vi": "thẳng đứng"
+      }
+    ]
+  },
+  {
+    "id": "n2-194",
+    "kanji": "祭",
+    "hanViet": "TẾ",
+    "kunyomi": [
+      "まつ.る",
+      "まつ.り"
+    ],
+    "onyomi": [
+      "サイ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "祭",
+        "hanViet": "TẾ"
+      }
+    ],
+    "meanings": [
+      "Lễ hội",
+      "Thờ cúng"
+    ],
+    "examples": [
+      {
+        "jp": "祭日",
+        "reading": "さいじつ",
+        "vi": "ngày lễ"
+      },
+      {
+        "jp": "文化祭",
+        "reading": "ぶんかさい",
+        "vi": "lễ hội văn hóa"
+      },
+      {
+        "jp": "祭り",
+        "reading": "まつり",
+        "vi": "lễ hội"
+      }
+    ]
+  },
+  {
+    "id": "n2-195",
+    "kanji": "察",
+    "hanViet": "SÁT",
+    "kunyomi": [
+      "さっ.する"
+    ],
+    "onyomi": [
+      "サツ"
+    ],
+    "strokes": 14,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "察",
+        "hanViet": "SÁT"
+      }
+    ],
+    "meanings": [
+      "Điều tra",
+      "Suy xét"
+    ],
+    "examples": [
+      {
+        "jp": "察する",
+        "reading": "さっする",
+        "vi": "hiểu được, đoán"
+      },
+      {
+        "jp": "観察",
+        "reading": "かんさつ",
+        "vi": "quan sát"
+      },
+      {
+        "jp": "診察",
+        "reading": "しんさつ",
+        "vi": "khám bệnh"
+      }
+    ]
+  },
+  {
+    "id": "n2-196",
+    "kanji": "郵",
+    "hanViet": "BƯU",
+    "kunyomi": [],
+    "onyomi": [
+      "ユウ"
+    ],
+    "strokes": 11,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "郵",
+        "hanViet": "BƯU"
+      }
+    ],
+    "meanings": [
+      "Bưu điện",
+      "Bưu chính"
+    ],
+    "examples": [
+      {
+        "jp": "郵便",
+        "reading": "ゆうびん",
+        "vi": "bưu điện, thư"
+      },
+      {
+        "jp": "郵便局",
+        "reading": "ゆうびんきょく",
+        "vi": "bưu cục"
+      },
+      {
+        "jp": "郵送",
+        "reading": "ゆうそう",
+        "vi": "gửi qua bưu điện"
+      }
+    ]
+  },
+  {
+    "id": "n2-197",
+    "kanji": "睡",
+    "hanViet": "THỤY",
+    "kunyomi": [],
+    "onyomi": [
+      "スイ"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "睡",
+        "hanViet": "THỤY"
+      }
+    ],
+    "meanings": [
+      "Ngủ",
+      "Giấc ngủ"
+    ],
+    "examples": [
+      {
+        "jp": "睡眠",
+        "reading": "すいみん",
+        "vi": "giấc ngủ"
+      },
+      {
+        "jp": "爆睡",
+        "reading": "ばくすい",
+        "vi": "ngủ say"
+      },
+      {
+        "jp": "睡眠不足",
+        "reading": "すいみんぶそく",
+        "vi": "thiếu ngủ"
+      }
+    ]
+  },
+  {
+    "id": "n2-198",
+    "kanji": "嫌",
+    "hanViet": "HIỀM",
+    "kunyomi": [
+      "きら.い",
+      "いや"
+    ],
+    "onyomi": [
+      "ケン",
+      "ゲン"
+    ],
+    "strokes": 13,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "嫌",
+        "hanViet": "HIỀM"
+      }
+    ],
+    "meanings": [
+      "Ghét",
+      "Khó chịu"
+    ],
+    "examples": [
+      {
+        "jp": "嫌い",
+        "reading": "きらい",
+        "vi": "ghét"
+      },
+      {
+        "jp": "嫌がる",
+        "reading": "いやがる",
+        "vi": "ghét, không thích"
+      },
+      {
+        "jp": "機嫌",
+        "reading": "きげん",
+        "vi": "tâm trạng"
+      }
+    ]
+  },
+  {
+    "id": "n2-199",
+    "kanji": "兼",
+    "hanViet": "KIÊM",
+    "kunyomi": [
+      "か.ねる"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "strokes": 10,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "兼",
+        "hanViet": "KIÊM"
+      }
+    ],
+    "meanings": [
+      "Kiêm nhiệm",
+      "Gộp lại"
+    ],
+    "examples": [
+      {
+        "jp": "兼用",
+        "reading": "けんよう",
+        "vi": "dùng chung"
+      },
+      {
+        "jp": "兼任",
+        "reading": "けんにん",
+        "vi": "kiêm nhiệm"
+      },
+      {
+        "jp": "兼業",
+        "reading": "けんぎょう",
+        "vi": "nghề phụ"
+      }
+    ]
+  },
+  {
+    "id": "n2-200",
+    "kanji": "調",
+    "hanViet": "ĐIỀU",
+    "kunyomi": [
+      "しら.べる",
+      "ととの.える"
+    ],
+    "onyomi": [
+      "チョウ"
+    ],
+    "strokes": 15,
+    "level": "N2",
+    "components": [
+      {
+        "kanji": "調",
+        "hanViet": "ĐIỀU"
+      }
+    ],
+    "meanings": [
+      "Điều tra",
+      "Điều chỉnh"
+    ],
+    "examples": [
+      {
+        "jp": "調子",
+        "reading": "ちょうし",
+        "vi": "trạng thái"
+      },
+      {
+        "jp": "調整",
+        "reading": "ちょうせい",
+        "vi": "điều chỉnh"
+      },
+      {
+        "jp": "調査",
+        "reading": "ちょうさ",
+        "vi": "điều tra"
+      }
+    ]
   }
 ]
