@@ -621,12 +621,26 @@ export default function FlashcardScreen() {
     }
   };
 
-  const toggleBookmark = (index: number) => {
+  const toggleBookmark = async (index: number) => {
     const newBookmarks = new Set(bookmarks);
-    if (newBookmarks.has(index)) {
-      newBookmarks.delete(index);
-    } else {
+    const isAdding = !newBookmarks.has(index);
+    if (isAdding) {
       newBookmarks.add(index);
+      // Khi thêm sao → ghi word vào reviewedWords (unique set, không đếm trùng)
+      try {
+        const raw = await AsyncStorage.getItem(scopedKey("reviewedWords"));
+        const existing: number[] = raw ? JSON.parse(raw) : [];
+        if (!existing.includes(index)) {
+          await AsyncStorage.setItem(
+            scopedKey("reviewedWords"),
+            JSON.stringify([...existing, index]),
+          );
+        }
+      } catch (e) {
+        console.log("Error saving reviewedWords");
+      }
+    } else {
+      newBookmarks.delete(index);
     }
     setBookmarks(newBookmarks);
     saveBookmarks(newBookmarks);
