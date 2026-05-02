@@ -8,7 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useLocalSearchParams, useRouter } from "expo-router";
-import React, { useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import {
   ScrollView,
   StatusBar,
@@ -20,9 +20,10 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { LinearGradient } from "expo-linear-gradient";
-import { getKanjiById } from "../assets/data_JLPT_kanji";
+import { getKanjiById, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
+import { WritingPracticeModal } from "../components/WritingPracticeModal";
 
 // Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const BLUE = "#4ECDC4";
@@ -36,6 +37,9 @@ export default function KanjiDetailScreen() {
   const params = useLocalSearchParams<{ id?: string }>();
   const id = typeof params.id === "string" ? params.id : "";
   const kanji = useMemo(() => getKanjiById(id), [id]);
+
+  // State mở modal luyện viết khi nhấn nút bút ✎
+  const [writingItem, setWritingItem] = useState<KanjiItem | null>(null);
 
   if (!kanji) {
     return (
@@ -98,9 +102,14 @@ export default function KanjiDetailScreen() {
               <Text style={s.bigHanViet}>{kanji.hanViet}</Text>
             </View>
             <View style={s.headerActions}>
-              <View style={s.actionBtn}>
-                <Text style={s.actionIcon}>✎</Text>
-              </View>
+              {/* Nút mở modal luyện viết */}
+              <TouchableOpacity
+                style={[s.actionBtn, s.actionBtnActive]}
+                onPress={() => setWritingItem(kanji)}
+                hitSlop={6}
+              >
+                <Text style={[s.actionIcon, s.actionIconActive]}>✎</Text>
+              </TouchableOpacity>
               <View style={s.actionBtn}>
                 <Text style={s.actionIcon}>📋</Text>
               </View>
@@ -217,6 +226,12 @@ export default function KanjiDetailScreen() {
         <View style={{ height: 40 }} />
       </ScrollView>
 
+      {/* ── Modal luyện viết ── */}
+      <WritingPracticeModal
+        item={writingItem}
+        onClose={() => setWritingItem(null)}
+      />
+
       {/* ── Thanh dưới (giống ảnh 2): nút trước / Đóng / sau ── */}
       <SafeAreaView edges={["bottom"]} style={s.bottomBar}>
         <View style={s.bottomInner}>
@@ -304,6 +319,9 @@ const s = StyleSheet.create({
     backgroundColor: "#fff",
   },
   actionIcon: { fontSize: 14, color: "#475569" },
+  // Trạng thái active cho nút bút ✎
+  actionBtnActive: { backgroundColor: "#f0fdfc", borderColor: BLUE },
+  actionIconActive: { color: BLUE },
 
   divider: {
     height: StyleSheet.hairlineWidth,
