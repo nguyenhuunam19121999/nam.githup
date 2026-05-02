@@ -8,7 +8,7 @@
   {
     "kanji": "一挙に",
     "hira": "いっきょに",
-    "han": "Một lần/Cùng lúc",
+    "han": "Nhất Cử/Cùng lúc",
     "nghia": "cùng một lúc, một lần"
   },
   {
@@ -122,8 +122,8 @@
   {
     "kanji": "もっぱら",
     "hira": "もっぱら",
-    "han": "Hoàn toàn/Chuyên",
-    "nghia": "hoàn toàn, chuyên"
+    "han": "Hoàn toàn/Chủ yếu",
+    "nghia": "hoàn toàn, chủ yếu"
   },
   {
     "kanji": "やむなく",
@@ -165,18 +165,18 @@
     "kanji": "一環",
     "hira": "いっかん",
     "han": "Nhất Hoàn/Một phần",
-    "nghia": "một phần, vòng lặp"
+    "nghia": "một phần của tổng thể"
   },
   {
     "kanji": "一転",
     "hira": "いってん",
-    "han": "Nhất Chuyển/Đột ngột",
+    "han": "Nhất Chuyển/Đột ngột đổi",
     "nghia": "đột ngột thay đổi"
   },
   {
     "kanji": "陰謀",
     "hira": "いんぼう",
-    "han": "Âm Mưu/ÂM",
+    "han": "Âm Mưu",
     "nghia": "âm mưu"
   },
   {
@@ -206,7 +206,7 @@
   {
     "kanji": "画期的",
     "hira": "かっきてき",
-    "han": "Đột phá/Mang tính CM",
+    "han": "Bước ngoặt/Cách mạng",
     "nghia": "mang tính cách mạng"
   },
   {
@@ -260,7 +260,7 @@
   {
     "kanji": "象徴",
     "hira": "しょうちょう",
-    "han": "Tượng Trưng/TT",
+    "han": "Tượng Trưng",
     "nghia": "tượng trưng"
   },
   {
@@ -272,7 +272,7 @@
   {
     "kanji": "精巧",
     "hira": "せいこう",
-    "han": "Tinh Xảo/TX",
+    "han": "Tinh Xảo",
     "nghia": "tinh xảo"
   },
   {
@@ -320,7 +320,7 @@
   {
     "kanji": "突如",
     "hira": "とつじょ",
-    "han": "Đột Nhiên/Đột ngột",
+    "han": "Đột Nhiên",
     "nghia": "đột nhiên"
   },
   {
@@ -424,5 +424,3341 @@
     "hira": "おもいこむ",
     "han": "Tin chắc/Cho rằng",
     "nghia": "tin chắc, cứ cho là"
+  },
+  {
+    "kanji": "嫉妬",
+    "hira": "しっと",
+    "han": "Ghen/Ghen tỵ",
+    "nghia": "ghen, ghen tỵ"
+  },
+  {
+    "kanji": "念",
+    "hira": "ねん",
+    "han": "Suy nghĩ/Tâm niệm",
+    "nghia": "suy nghĩ, tâm niệm"
+  },
+  {
+    "kanji": "恥",
+    "hira": "はじ",
+    "han": "Xấu hổ",
+    "nghia": "sự xấu hổ"
+  },
+  {
+    "kanji": "没頭",
+    "hira": "ぼっとう",
+    "han": "Đắm mình/Say sưa",
+    "nghia": "đắm mình vào, say sưa với"
+  },
+  {
+    "kanji": "採用",
+    "hira": "さいよう",
+    "han": "Tuyển chọn/Chọn dùng",
+    "nghia": "tuyển chọn, chọn dùng"
+  },
+  {
+    "kanji": "絶望",
+    "hira": "ぜつぼう",
+    "han": "Tuyệt Vọng",
+    "nghia": "tuyệt vọng"
+  },
+  {
+    "kanji": "欲",
+    "hira": "よく",
+    "han": "Lòng tham/Ham muốn",
+    "nghia": "lòng tham, ham muốn"
+  },
+  {
+    "kanji": "本音",
+    "hira": "ほんね",
+    "han": "Thật lòng/Nội tâm",
+    "nghia": "thật lòng, tâm tư thật sự"
+  },
+  {
+    "kanji": "自立",
+    "hira": "じりつ",
+    "han": "Tự Lập",
+    "nghia": "tự lập"
+  },
+  {
+    "kanji": "主食",
+    "hira": "しゅしょく",
+    "han": "Chủ Thực/Món chính",
+    "nghia": "món ăn chính"
+  },
+  {
+    "kanji": "桁",
+    "hira": "けた",
+    "han": "Chữ số/Hàng số",
+    "nghia": "chữ số, hàng số"
+  },
+  {
+    "kanji": "意向",
+    "hira": "いこう",
+    "han": "Ý Hướng/Ý muốn",
+    "nghia": "ý muốn, dự định"
+  },
+  {
+    "kanji": "権威",
+    "hira": "けんい",
+    "han": "Quyền Uy",
+    "nghia": "uy quyền, sức ảnh hưởng lớn"
+  },
+  {
+    "kanji": "身の回り",
+    "hira": "みのまわり",
+    "han": "Vật dụng cá nhân",
+    "nghia": "những việc hàng ngày của bản thân"
+  },
+  {
+    "kanji": "出費",
+    "hira": "しゅっぴ",
+    "han": "Chi phí/Chi tiêu",
+    "nghia": "chi phí, chi tiêu"
+  },
+  {
+    "kanji": "派遣",
+    "hira": "はけん",
+    "han": "Phái Cử",
+    "nghia": "phái cử, phái đi"
+  },
+  {
+    "kanji": "強制",
+    "hira": "きょうせい",
+    "han": "Cưỡng Chế/Ép buộc",
+    "nghia": "ép buộc, cưỡng chế"
+  },
+  {
+    "kanji": "欄",
+    "hira": "らん",
+    "han": "Cột/Ô",
+    "nghia": "cột, ô (trong bảng biểu)"
+  },
+  {
+    "kanji": "世帯",
+    "hira": "せたい",
+    "han": "Hộ Gia Đình",
+    "nghia": "hộ gia đình"
+  },
+  {
+    "kanji": "縁",
+    "hira": "えん",
+    "han": "Duyên/Mối liên hệ",
+    "nghia": "duyên nợ, mối liên hệ"
+  },
+  {
+    "kanji": "待遇",
+    "hira": "たいぐう",
+    "han": "Đãi Ngộ/Đối đãi",
+    "nghia": "đãi ngộ, đối đãi"
+  },
+  {
+    "kanji": "操縦",
+    "hira": "そうじゅう",
+    "han": "Điều Khiển",
+    "nghia": "điều khiển, kiểm soát"
+  },
+  {
+    "kanji": "庶民",
+    "hira": "しょみん",
+    "han": "Thứ Dân/Dân thường",
+    "nghia": "dân thường, người dân"
+  },
+  {
+    "kanji": "所属",
+    "hira": "しょぞく",
+    "han": "Sở Thuộc/Thuộc về",
+    "nghia": "thuộc về, trực thuộc"
+  },
+  {
+    "kanji": "指図",
+    "hira": "さしず",
+    "han": "Chỉ Thị/Ra lệnh",
+    "nghia": "ra lệnh, chỉ đạo"
+  },
+  {
+    "kanji": "豊作",
+    "hira": "ほうさく",
+    "han": "Phong Tác/Bội thu",
+    "nghia": "bội thu, mùa màng tốt"
+  },
+  {
+    "kanji": "塊",
+    "hira": "かたまり",
+    "han": "Cục/Tảng/Miếng",
+    "nghia": "cục, tảng, miếng"
+  },
+  {
+    "kanji": "現役",
+    "hira": "げんえき",
+    "han": "Hiện Dịch/Đương chức",
+    "nghia": "đương chức, đang hoạt động"
+  },
+  {
+    "kanji": "例年",
+    "hira": "れいねん",
+    "han": "Lệ Niên/Thường niên",
+    "nghia": "thường niên, mọi năm"
+  },
+  {
+    "kanji": "視線",
+    "hira": "しせん",
+    "han": "Thị Tuyến/Ánh nhìn",
+    "nghia": "ánh nhìn, tầm mắt"
+  },
+  {
+    "kanji": "くじ",
+    "hira": "くじ",
+    "han": "Lá thăm/Xổ số",
+    "nghia": "lá thăm, lá số, xổ số"
+  },
+  {
+    "kanji": "分裂",
+    "hira": "ぶんれつ",
+    "han": "Phân Liệt/Phân chia",
+    "nghia": "phân chia, tách rời"
+  },
+  {
+    "kanji": "ど忘れ",
+    "hira": "どわすれ",
+    "han": "Đột nhiên quên",
+    "nghia": "đột nhiên quên mất"
+  },
+  {
+    "kanji": "とげ",
+    "hira": "とげ",
+    "han": "Gai",
+    "nghia": "gai, điều gai góc"
+  },
+  {
+    "kanji": "夜更かし",
+    "hira": "よふかし",
+    "han": "Thức khuya",
+    "nghia": "thức khuya, cú đêm"
+  },
+  {
+    "kanji": "振動",
+    "hira": "しんどう",
+    "han": "Chấn Động/Rung lắc",
+    "nghia": "rung lắc, chấn động"
+  },
+  {
+    "kanji": "施設",
+    "hira": "しせつ",
+    "han": "Thi Thiết/Cơ sở",
+    "nghia": "cơ sở, thiết bị, cơ sở vật chất"
+  },
+  {
+    "kanji": "解消",
+    "hira": "かいしょう",
+    "han": "Giải Tiêu/Xóa bỏ",
+    "nghia": "giải quyết, xóa bỏ"
+  },
+  {
+    "kanji": "沸騰",
+    "hira": "ふっとう",
+    "han": "Phí Đằng/Sôi",
+    "nghia": "sôi, đạt đỉnh điểm"
+  },
+  {
+    "kanji": "対抗",
+    "hira": "たいこう",
+    "han": "Đối Kháng/Cạnh tranh",
+    "nghia": "cạnh tranh, đối kháng"
+  },
+  {
+    "kanji": "循環",
+    "hira": "じゅんかん",
+    "han": "Tuần Hoàn",
+    "nghia": "tuần hoàn, chu trình"
+  },
+  {
+    "kanji": "獲得",
+    "hira": "かくとく",
+    "han": "Hoạch Đắc/Giành được",
+    "nghia": "giành được, đạt được"
+  },
+  {
+    "kanji": "検索",
+    "hira": "けんさく",
+    "han": "Kiểm Sách/Tìm kiếm",
+    "nghia": "tìm kiếm"
+  },
+  {
+    "kanji": "依存",
+    "hira": "いぞん",
+    "han": "Y Tồn/Phụ thuộc",
+    "nghia": "phụ thuộc"
+  },
+  {
+    "kanji": "促進",
+    "hira": "そくしん",
+    "han": "Xúc Tiến/Thúc đẩy",
+    "nghia": "xúc tiến, thúc đẩy"
+  },
+  {
+    "kanji": "適応",
+    "hira": "てきおう",
+    "han": "Thích Ứng",
+    "nghia": "thích ứng, thích nghi"
+  },
+  {
+    "kanji": "原則",
+    "hira": "げんそく",
+    "han": "Nguyên Tắc",
+    "nghia": "nguyên tắc"
+  },
+  {
+    "kanji": "運営",
+    "hira": "うんえい",
+    "han": "Vận Hành/Quản lí",
+    "nghia": "vận hành, quản lí"
+  },
+  {
+    "kanji": "作用",
+    "hira": "さよう",
+    "han": "Tác Dụng",
+    "nghia": "tác dụng, ảnh hưởng"
+  },
+  {
+    "kanji": "経過",
+    "hira": "けいか",
+    "han": "Kinh Quá/Quá trình",
+    "nghia": "trải qua, quá trình"
+  },
+  {
+    "kanji": "青春",
+    "hira": "せいしゅん",
+    "han": "Thanh Xuân",
+    "nghia": "thanh xuân, thời trẻ"
+  },
+  {
+    "kanji": "感染",
+    "hira": "かんせん",
+    "han": "Cảm Nhiễm/Lây nhiễm",
+    "nghia": "lây nhiễm"
+  },
+  {
+    "kanji": "向上",
+    "hira": "こうじょう",
+    "han": "Hướng Thượng/Cải thiện",
+    "nghia": "cải thiện, nâng cao"
+  },
+  {
+    "kanji": "迫力",
+    "hira": "はくりょく",
+    "han": "Bức Lực/Ấn tượng",
+    "nghia": "sức lôi cuốn, ấn tượng mạnh"
+  },
+  {
+    "kanji": "家出",
+    "hira": "いえで",
+    "han": "Bỏ nhà ra đi",
+    "nghia": "bỏ nhà ra đi"
+  },
+  {
+    "kanji": "調和",
+    "hira": "ちょうわ",
+    "han": "Điều Hòa/Hài hòa",
+    "nghia": "sự hài hòa, hòa hợp"
+  },
+  {
+    "kanji": "抗議",
+    "hira": "こうぎ",
+    "han": "Kháng Nghị/Phản đối",
+    "nghia": "phản đối"
+  },
+  {
+    "kanji": "拒否",
+    "hira": "きょひ",
+    "han": "Cự Phủ/Từ chối",
+    "nghia": "từ chối, bác bỏ"
+  },
+  {
+    "kanji": "革新",
+    "hira": "かくしん",
+    "han": "Cách Tân/Cải cách",
+    "nghia": "cải cách, đổi mới"
+  },
+  {
+    "kanji": "規模",
+    "hira": "きぼ",
+    "han": "Quy Mô",
+    "nghia": "quy mô"
+  },
+  {
+    "kanji": "素質",
+    "hira": "そしつ",
+    "han": "Tố Chất",
+    "nghia": "tố chất, tư chất"
+  },
+  {
+    "kanji": "ずぶぬれ",
+    "hira": "ずぶぬれ",
+    "han": "Ướt sũng",
+    "nghia": "ướt sũng, ướt dầm"
+  },
+  {
+    "kanji": "迷信",
+    "hira": "めいしん",
+    "han": "Mê Tín",
+    "nghia": "mê tín"
+  },
+  {
+    "kanji": "使い捨て",
+    "hira": "つかいすて",
+    "han": "Dùng một lần",
+    "nghia": "dùng một lần rồi vứt"
+  },
+  {
+    "kanji": "回収",
+    "hira": "かいしゅう",
+    "han": "Thu hồi/Hoàn trả",
+    "nghia": "thu hồi, hoàn trả"
+  },
+  {
+    "kanji": "区間",
+    "hira": "くかん",
+    "han": "Khu Gian/Đoạn",
+    "nghia": "đoạn, khoảng cách"
+  },
+  {
+    "kanji": "返却",
+    "hira": "へんきゃく",
+    "han": "Trả Lại",
+    "nghia": "hoàn trả, trả lại"
+  },
+  {
+    "kanji": "中継",
+    "hira": "ちゅうけい",
+    "han": "Trung Kế/Phát sóng",
+    "nghia": "truyền hình, phát sóng"
+  },
+  {
+    "kanji": "勝利",
+    "hira": "しょうり",
+    "han": "Thắng Lợi",
+    "nghia": "chiến thắng"
+  },
+  {
+    "kanji": "活気",
+    "hira": "かっき",
+    "han": "Hoạt Khí/Sôi nổi",
+    "nghia": "sự hoạt bát, sức sống"
+  },
+  {
+    "kanji": "投書",
+    "hira": "とうしょ",
+    "han": "Thư bạn đọc",
+    "nghia": "thư bạn đọc, thư góp ý"
+  },
+  {
+    "kanji": "片言",
+    "hira": "かたこと",
+    "han": "Bập bõm/Vài từ",
+    "nghia": "bập bõm vài từ, nói ngọng"
+  },
+  {
+    "kanji": "良心",
+    "hira": "りょうしん",
+    "han": "Lương Tâm",
+    "nghia": "lương tâm"
+  },
+  {
+    "kanji": "晩年",
+    "hira": "ばんねん",
+    "han": "Vãn Niên/Cuối đời",
+    "nghia": "những năm cuối đời"
+  },
+  {
+    "kanji": "葬式",
+    "hira": "そうしき",
+    "han": "Tang Lễ",
+    "nghia": "đám tang"
+  },
+  {
+    "kanji": "好意",
+    "hira": "こうい",
+    "han": "Hảo Ý/Thiện ý",
+    "nghia": "cảm tình, thiện ý"
+  },
+  {
+    "kanji": "用心",
+    "hira": "ようじん",
+    "han": "Cẩn trọng/Cảnh giác",
+    "nghia": "cẩn trọng, cảnh giác"
+  },
+  {
+    "kanji": "目前",
+    "hira": "もくぜん",
+    "han": "Mục Tiền/Trước mắt",
+    "nghia": "trước mắt, gần tới"
+  },
+  {
+    "kanji": "技",
+    "hira": "わざ",
+    "han": "Kỹ thuật/Kỹ năng",
+    "nghia": "kỹ thuật, kỹ năng"
+  },
+  {
+    "kanji": "差し入れ",
+    "hira": "さしいれ",
+    "han": "Tiếp tế/Bồi dưỡng",
+    "nghia": "tiếp tế đồ ăn thức uống"
+  },
+  {
+    "kanji": "秩序",
+    "hira": "ちつじょ",
+    "han": "Trật Tự",
+    "nghia": "trật tự"
+  },
+  {
+    "kanji": "予感",
+    "hira": "よかん",
+    "han": "Linh cảm",
+    "nghia": "linh cảm, dự cảm"
+  },
+  {
+    "kanji": "間際",
+    "hira": "まぎわ",
+    "han": "Ngay trước khi",
+    "nghia": "ngay trước khi, khoảnh khắc trước"
+  },
+  {
+    "kanji": "心構え",
+    "hira": "こころがまえ",
+    "han": "Tâm lý chuẩn bị",
+    "nghia": "chuẩn bị tâm lý"
+  },
+  {
+    "kanji": "声援",
+    "hira": "せいえん",
+    "han": "Thanh Viện/Cổ vũ",
+    "nghia": "khích lệ, cổ vũ"
+  },
+  {
+    "kanji": "ため息",
+    "hira": "ためいき",
+    "han": "Thở dài",
+    "nghia": "tiếng thở dài"
+  },
+  {
+    "kanji": "負傷",
+    "hira": "ふしょう",
+    "han": "Phụ Thương/Bị thương",
+    "nghia": "bị thương"
+  },
+  {
+    "kanji": "こつ",
+    "hira": "こつ",
+    "han": "Mẹo/Bí quyết",
+    "nghia": "mánh khóe, mẹo, bí quyết"
+  },
+  {
+    "kanji": "心地",
+    "hira": "ここち",
+    "han": "Cảm giác",
+    "nghia": "cảm giác, tâm trạng"
+  },
+  {
+    "kanji": "規律",
+    "hira": "きりつ",
+    "han": "Kỷ Luật",
+    "nghia": "kỷ luật, quy tắc"
+  },
+  {
+    "kanji": "首脳",
+    "hira": "しゅのう",
+    "han": "Thủ Lĩnh/Đầu não",
+    "nghia": "lãnh đạo, đầu não"
+  },
+  {
+    "kanji": "介入",
+    "hira": "かいにゅう",
+    "han": "Can Thiệp",
+    "nghia": "can thiệp"
+  },
+  {
+    "kanji": "侵害",
+    "hira": "しんがい",
+    "han": "Xâm Hại/Vi phạm",
+    "nghia": "xâm phạm, vi phạm"
+  },
+  {
+    "kanji": "見込み",
+    "hira": "みこみ",
+    "han": "Dự báo/Triển vọng",
+    "nghia": "triển vọng, dự đoán"
+  },
+  {
+    "kanji": "人材",
+    "hira": "じんざい",
+    "han": "Nhân Tài/Nhân lực",
+    "nghia": "nhân tài, nhân lực"
+  },
+  {
+    "kanji": "艶",
+    "hira": "つや",
+    "han": "Bóng láng",
+    "nghia": "bóng, bóng láng"
+  },
+  {
+    "kanji": "視点",
+    "hira": "してん",
+    "han": "Thị Điểm/Quan điểm",
+    "nghia": "quan điểm, lập trường"
+  },
+  {
+    "kanji": "左右",
+    "hira": "さゆう",
+    "han": "Trái Phải/Ảnh hưởng",
+    "nghia": "trái phải; ảnh hưởng"
+  },
+  {
+    "kanji": "先端",
+    "hira": "せんたん",
+    "han": "Tiên Đoan/Mũi nhọn",
+    "nghia": "đi đầu, mũi nhọn"
+  },
+  {
+    "kanji": "正体",
+    "hira": "しょうたい",
+    "han": "Chính Thể/Bản chất",
+    "nghia": "bản chất, thân phận thật"
+  },
+  {
+    "kanji": "わな",
+    "hira": "わな",
+    "han": "Bẫy",
+    "nghia": "bẫy, cạm bẫy"
+  },
+  {
+    "kanji": "枠",
+    "hira": "わく",
+    "han": "Khung/Viền",
+    "nghia": "khung, viền, giới hạn"
+  },
+  {
+    "kanji": "団らん",
+    "hira": "だんらん",
+    "han": "Sum họp/Đoàn viên",
+    "nghia": "sum họp, đoàn viên gia đình"
+  },
+  {
+    "kanji": "危機",
+    "hira": "きき",
+    "han": "Nguy Cơ/Khủng hoảng",
+    "nghia": "nguy cơ, khủng hoảng"
+  },
+  {
+    "kanji": "均衡",
+    "hira": "きんこう",
+    "han": "Quân Hành/Cân bằng",
+    "nghia": "cân bằng"
+  },
+  {
+    "kanji": "蓄積",
+    "hira": "ちくせき",
+    "han": "Tích Lũy",
+    "nghia": "tích lũy, lưu trữ"
+  },
+  {
+    "kanji": "警戒",
+    "hira": "けいかい",
+    "han": "Cảnh Giới/Cảnh giác",
+    "nghia": "cảnh giác, đề phòng"
+  },
+  {
+    "kanji": "見通し",
+    "hira": "みとおし",
+    "han": "Tầm nhìn/Triển vọng",
+    "nghia": "tầm nhìn, triển vọng"
+  },
+  {
+    "kanji": "公衆",
+    "hira": "こうしゅう",
+    "han": "Công Chúng",
+    "nghia": "công chúng, công cộng"
+  },
+  {
+    "kanji": "差し支え",
+    "hira": "さしつかえ",
+    "han": "Không tiện/Trở ngại",
+    "nghia": "không tiện, trở ngại"
+  },
+  {
+    "kanji": "停滞",
+    "hira": "ていたい",
+    "han": "Đình Trệ",
+    "nghia": "đình trệ, kẹt"
+  },
+  {
+    "kanji": "群れ",
+    "hira": "むれ",
+    "han": "Đàn/Bầy",
+    "nghia": "bầy, đàn, đám"
+  },
+  {
+    "kanji": "衝撃",
+    "hira": "しょうげき",
+    "han": "Xung Kích/Sốc",
+    "nghia": "sốc, va đập, chấn động"
+  },
+  {
+    "kanji": "見積もり",
+    "hira": "みつもり",
+    "han": "Ước tính/Báo giá",
+    "nghia": "ước tính, báo giá"
+  },
+  {
+    "kanji": "流通",
+    "hira": "りゅうつう",
+    "han": "Lưu Thông/Phân phối",
+    "nghia": "lưu thông, phân phối"
+  },
+  {
+    "kanji": "直面",
+    "hira": "ちょくめん",
+    "han": "Trực Diện/Đối mặt",
+    "nghia": "trực diện, đối mặt"
+  },
+  {
+    "kanji": "貢献",
+    "hira": "こうけん",
+    "han": "Cống Hiến",
+    "nghia": "cống hiến, đóng góp"
+  },
+  {
+    "kanji": "信念",
+    "hira": "しんねん",
+    "han": "Tín Niệm/Niềm tin",
+    "nghia": "niềm tin, lòng tin"
+  },
+  {
+    "kanji": "正義",
+    "hira": "せいぎ",
+    "han": "Chính Nghĩa",
+    "nghia": "chính nghĩa"
+  },
+  {
+    "kanji": "統計",
+    "hira": "とうけい",
+    "han": "Thống Kê",
+    "nghia": "thống kê"
+  },
+  {
+    "kanji": "描写",
+    "hira": "びょうしゃ",
+    "han": "Miêu Tả",
+    "nghia": "miêu tả, phác họa"
+  },
+  {
+    "kanji": "唯一",
+    "hira": "ゆいいつ",
+    "han": "Duy Nhất",
+    "nghia": "độc nhất, duy nhất"
+  },
+  {
+    "kanji": "衝動",
+    "hira": "しょうどう",
+    "han": "Bốc Đồng/Hành động bộc phát",
+    "nghia": "sự bốc đồng, hành động bộc phát"
+  },
+  {
+    "kanji": "推進",
+    "hira": "すいしん",
+    "han": "Thúc Đẩy/Đẩy mạnh",
+    "nghia": "đẩy mạnh, xúc tiến"
+  },
+  {
+    "kanji": "教養",
+    "hira": "きょうよう",
+    "han": "Giáo Dưỡng/Học thức",
+    "nghia": "học thức, kiến thức văn hóa"
+  },
+  {
+    "kanji": "柄",
+    "hira": "がら",
+    "han": "Hoa văn/Phẩm cách",
+    "nghia": "hoa văn, phẩm cách"
+  },
+  {
+    "kanji": "愚痴",
+    "hira": "ぐち",
+    "han": "Oán thán/Than vãn",
+    "nghia": "than thở, oán thán, cằn nhằn"
+  },
+  {
+    "kanji": "意地",
+    "hira": "いじ",
+    "han": "Tâm địa/Bướng",
+    "nghia": "tâm địa, tính bướng bỉnh"
+  },
+  {
+    "kanji": "飛躍",
+    "hira": "ひやく",
+    "han": "Phi Dược/Nhảy vọt",
+    "nghia": "nhảy vọt, tiến xa"
+  },
+  {
+    "kanji": "相席",
+    "hira": "あいせき",
+    "han": "Ngồi chung bàn",
+    "nghia": "ngồi chung bàn với người lạ"
+  },
+  {
+    "kanji": "束縛",
+    "hira": "そくばく",
+    "han": "Thúc Phược/Ràng buộc",
+    "nghia": "ràng buộc, trói buộc"
+  },
+  {
+    "kanji": "包容力",
+    "hira": "ほうようりょく",
+    "han": "Bao Dung",
+    "nghia": "sức bao dung"
+  },
+  {
+    "kanji": "行楽",
+    "hira": "こうらく",
+    "han": "Tham quan/Dã ngoại",
+    "nghia": "chuyến tham quan, đi chơi"
+  },
+  {
+    "kanji": "背伸び",
+    "hira": "せのび",
+    "han": "Nhón chân/Cố vươn",
+    "nghia": "nhón chân, cố vượt quá sức"
+  },
+  {
+    "kanji": "不振",
+    "hira": "ふしん",
+    "han": "Bất Chấn/Không tốt",
+    "nghia": "không tốt, không trôi chảy"
+  },
+  {
+    "kanji": "分散",
+    "hira": "ぶんさん",
+    "han": "Phân Tán",
+    "nghia": "phân tán"
+  },
+  {
+    "kanji": "体裁",
+    "hira": "ていさい",
+    "han": "Thể Tài/Tác phong",
+    "nghia": "tác phong, hình thức quy chuẩn"
+  },
+  {
+    "kanji": "両立",
+    "hira": "りょうりつ",
+    "han": "Lưỡng Lập/Song song",
+    "nghia": "song song, cùng tồn tại"
+  },
+  {
+    "kanji": "格差",
+    "hira": "かくさ",
+    "han": "Cách Sai/Khoảng cách",
+    "nghia": "sự khác biệt, khoảng cách"
+  },
+  {
+    "kanji": "把握",
+    "hira": "はあく",
+    "han": "Bắt nắm/Nắm bắt",
+    "nghia": "hiểu, nắm bắt"
+  },
+  {
+    "kanji": "過程",
+    "hira": "かてい",
+    "han": "Quá Trình",
+    "nghia": "quá trình"
+  },
+  {
+    "kanji": "起源",
+    "hira": "きげん",
+    "han": "Khởi Nguyên/Nguồn gốc",
+    "nghia": "nguồn gốc, khởi đầu"
+  },
+  {
+    "kanji": "野心",
+    "hira": "やしん",
+    "han": "Dã Tâm/Tham vọng",
+    "nghia": "tham vọng"
+  },
+  {
+    "kanji": "繁栄",
+    "hira": "はんえい",
+    "han": "Phồn Vinh/Hưng thịnh",
+    "nghia": "hưng thịnh, phồn vinh"
+  },
+  {
+    "kanji": "成熟",
+    "hira": "せいじゅく",
+    "han": "Thành Thục/Chín muồi",
+    "nghia": "chín muồi, thuần thục"
+  },
+  {
+    "kanji": "整備",
+    "hira": "せいび",
+    "han": "Chỉnh Bị/Bảo dưỡng",
+    "nghia": "chuẩn bị, bảo dưỡng"
+  },
+  {
+    "kanji": "歯止め",
+    "hira": "はどめ",
+    "han": "Phanh/Dừng lại",
+    "nghia": "phanh, kiềm chế"
+  },
+  {
+    "kanji": "犠牲",
+    "hira": "ぎせい",
+    "han": "Hy Sinh",
+    "nghia": "hy sinh"
+  },
+  {
+    "kanji": "氾濫",
+    "hira": "はんらん",
+    "han": "Tràn lan/Ngập lụt",
+    "nghia": "ngập, tràn lan"
+  },
+  {
+    "kanji": "つじつま",
+    "hira": "つじつま",
+    "han": "Logic/Hợp lý",
+    "nghia": "ăn khớp, hợp logic"
+  },
+  {
+    "kanji": "本場",
+    "hira": "ほんば",
+    "han": "Nguồn gốc/Chính cống",
+    "nghia": "quê hương, nguồn gốc, chính cống"
+  },
+  {
+    "kanji": "野次",
+    "hira": "やじ",
+    "han": "Chế giễu/Chỉ trích",
+    "nghia": "chế giễu, la hét phản đối"
+  },
+  {
+    "kanji": "根気",
+    "hira": "こんき",
+    "han": "Căn Khí/Kiên nhẫn",
+    "nghia": "kiên nhẫn, sự bền bỉ"
+  },
+  {
+    "kanji": "自覚",
+    "hira": "じかく",
+    "han": "Tự Giác/Ý thức",
+    "nghia": "tự ý thức, tự giác"
+  },
+  {
+    "kanji": "偏見",
+    "hira": "へんけん",
+    "han": "Thiên Kiến/Thành kiến",
+    "nghia": "thành kiến, nghĩ phiến diện"
+  },
+  {
+    "kanji": "相応",
+    "hira": "そうおう",
+    "han": "Tương Ứng/Phù hợp",
+    "nghia": "phù hợp, tương xứng"
+  },
+  {
+    "kanji": "並",
+    "hira": "なみ",
+    "han": "Bình thường/Trung bình",
+    "nghia": "trung bình, bình thường"
+  },
+  {
+    "kanji": "褒美",
+    "hira": "ほうび",
+    "han": "Khen Thưởng",
+    "nghia": "phần thưởng"
+  },
+  {
+    "kanji": "誘惑",
+    "hira": "ゆうわく",
+    "han": "Dụ Hoặc/Cám dỗ",
+    "nghia": "dụ dỗ, cám dỗ"
+  },
+  {
+    "kanji": "油断",
+    "hira": "ゆだん",
+    "han": "Lơ là/Chủ quan",
+    "nghia": "lơ là, chủ quan"
+  },
+  {
+    "kanji": "ゆとり",
+    "hira": "ゆとり",
+    "han": "Dư thừa/Thảnh thơi",
+    "nghia": "dư thừa, thảnh thơi"
+  },
+  {
+    "kanji": "遺産",
+    "hira": "いさん",
+    "han": "Di Sản",
+    "nghia": "di sản"
+  },
+  {
+    "kanji": "廃止",
+    "hira": "はいし",
+    "han": "Phế Chỉ/Hủy bỏ",
+    "nghia": "hủy bỏ, bãi bỏ"
+  },
+  {
+    "kanji": "延べ",
+    "hira": "のべ",
+    "han": "Tổng số/Tổng cộng",
+    "nghia": "tổng số"
+  },
+  {
+    "kanji": "台無し",
+    "hira": "だいなし",
+    "han": "Phá hỏng/Bị tiêu hủy",
+    "nghia": "bị phá hỏng, bị tiêu tan"
+  },
+  {
+    "kanji": "是正",
+    "hira": "ぜせい",
+    "han": "Cải Chính/Chỉnh sửa",
+    "nghia": "chỉnh sửa lại, cải chính"
+  },
+  {
+    "kanji": "是非",
+    "hira": "ぜひ",
+    "han": "Phải trái/Nhất định",
+    "nghia": "nhất định, phải trái"
+  },
+  {
+    "kanji": "配慮",
+    "hira": "はいりょ",
+    "han": "Quan Tâm/Chú ý",
+    "nghia": "quan tâm, cân nhắc"
+  },
+  {
+    "kanji": "成果",
+    "hira": "せいか",
+    "han": "Thành Quả",
+    "nghia": "thành quả, kết quả"
+  },
+  {
+    "kanji": "逃亡",
+    "hira": "とうぼう",
+    "han": "Đào Vong/Trốn thoát",
+    "nghia": "trốn thoát, đào tẩu"
+  },
+  {
+    "kanji": "逃避",
+    "hira": "とうひ",
+    "han": "Đào Tị/Lẩn tránh",
+    "nghia": "lẩn tránh, trốn chạy"
+  },
+  {
+    "kanji": "驚異",
+    "hira": "きょうい",
+    "han": "Kinh Dị/Kỳ diệu",
+    "nghia": "kỳ diệu, điều kinh ngạc"
+  },
+  {
+    "kanji": "概念",
+    "hira": "がいねん",
+    "han": "Khái Niệm",
+    "nghia": "khái niệm"
+  },
+  {
+    "kanji": "緩和",
+    "hira": "かんわ",
+    "han": "Hoãn Hòa/Giảm nhẹ",
+    "nghia": "hòa hoãn, giảm nhẹ"
+  },
+  {
+    "kanji": "解除",
+    "hira": "かいじょ",
+    "han": "Giải Trừ/Bãi bỏ",
+    "nghia": "bãi bỏ, hủy bỏ, gỡ bỏ"
+  },
+  {
+    "kanji": "めど",
+    "hira": "めど",
+    "han": "Mục tiêu/Triển vọng",
+    "nghia": "mục tiêu, triển vọng"
+  },
+  {
+    "kanji": "道のり",
+    "hira": "みちのり",
+    "han": "Chặng đường",
+    "nghia": "đường đi, chặng đường"
+  },
+  {
+    "kanji": "声明",
+    "hira": "せいめい",
+    "han": "Tuyên Bố",
+    "nghia": "tuyên bố, tuyên cáo"
+  },
+  {
+    "kanji": "補給",
+    "hira": "ほきゅう",
+    "han": "Bổ Cấp/Cung cấp",
+    "nghia": "bổ sung, cung cấp"
+  },
+  {
+    "kanji": "言い分",
+    "hira": "いいぶん",
+    "han": "Lý do/Biện hộ",
+    "nghia": "lý do biện hộ, điều muốn nói"
+  },
+  {
+    "kanji": "添加",
+    "hira": "てんか",
+    "han": "Thêm vào/Phụ gia",
+    "nghia": "thêm vào, phụ gia"
+  },
+  {
+    "kanji": "有数",
+    "hira": "ゆうすう",
+    "han": "Hàng đầu/Nổi bật",
+    "nghia": "dẫn đầu, nổi bật"
+  },
+  {
+    "kanji": "企画",
+    "hira": "きかく",
+    "han": "Kế hoạch/Dự án",
+    "nghia": "kế hoạch, dự án"
+  },
+  {
+    "kanji": "樹立",
+    "hira": "じゅりつ",
+    "han": "Thụ Lập/Thiết lập",
+    "nghia": "thiết lập, xác lập"
+  },
+  {
+    "kanji": "着手",
+    "hira": "ちゃくしゅ",
+    "han": "Bắt tay vào",
+    "nghia": "bắt tay vào công việc"
+  },
+  {
+    "kanji": "台頭",
+    "hira": "たいとう",
+    "han": "Thai Đầu/Nổi lên",
+    "nghia": "sự nổi lên, xuất hiện"
+  },
+  {
+    "kanji": "成分",
+    "hira": "せいぶん",
+    "han": "Thành Phần",
+    "nghia": "thành phần"
+  },
+  {
+    "kanji": "報酬",
+    "hira": "ほうしゅう",
+    "han": "Thưởng/Thù lao",
+    "nghia": "thưởng, thù lao"
+  },
+  {
+    "kanji": "共存",
+    "hira": "きょうそん",
+    "han": "Cộng Tồn/Chung sống",
+    "nghia": "cùng tồn tại, chung sống"
+  },
+  {
+    "kanji": "見解",
+    "hira": "けんかい",
+    "han": "Kiến Giải/Quan điểm",
+    "nghia": "quan điểm, cách nghĩ"
+  },
+  {
+    "kanji": "折衷",
+    "hira": "せっちゅう",
+    "han": "Triết Trung/Thỏa hiệp",
+    "nghia": "pha trộn, thỏa hiệp dung hòa"
+  },
+  {
+    "kanji": "許容",
+    "hira": "きょよう",
+    "han": "Hứa Dung/Chấp nhận",
+    "nghia": "chấp nhận, cho phép"
+  },
+  {
+    "kanji": "目安",
+    "hira": "めやす",
+    "han": "Tiêu chuẩn/Mục tiêu",
+    "nghia": "tiêu chuẩn, mục tiêu tham khảo"
+  },
+  {
+    "kanji": "行き違い",
+    "hira": "ゆきちがい",
+    "han": "Hiểu lầm/Lạc nhau",
+    "nghia": "hiểu lầm, lạc nhau"
+  },
+  {
+    "kanji": "認識",
+    "hira": "にんしき",
+    "han": "Nhận Thức",
+    "nghia": "nhận thức"
+  },
+  {
+    "kanji": "宣告",
+    "hira": "せんこく",
+    "han": "Tuyên Cáo/Tuyên án",
+    "nghia": "tuyên bố, tuyên án, phán quyết"
+  },
+  {
+    "kanji": "補足",
+    "hira": "ほそく",
+    "han": "Bổ Túc/Bổ sung",
+    "nghia": "bổ sung vào phần chưa đủ"
+  },
+  {
+    "kanji": "展開",
+    "hira": "てんかい",
+    "han": "Triển Khai",
+    "nghia": "triển khai, mở rộng"
+  },
+  {
+    "kanji": "開拓",
+    "hira": "かいたく",
+    "han": "Khai Thác/Tiên phong",
+    "nghia": "khai phá, tiên phong, khai thác"
+  },
+  {
+    "kanji": "言いなり",
+    "hira": "いいなり",
+    "han": "Vâng lời/Nghe theo",
+    "nghia": "vâng lời, nghe theo"
+  },
+  {
+    "kanji": "欠乏",
+    "hira": "けつぼう",
+    "han": "Khuyết Phạp/Thiếu hụt",
+    "nghia": "thiếu hụt, thiếu"
+  },
+  {
+    "kanji": "拡散",
+    "hira": "かくさん",
+    "han": "Khuếch Tán",
+    "nghia": "khuếch tán, lan ra"
+  },
+  {
+    "kanji": "膨張",
+    "hira": "ぼうちょう",
+    "han": "Phình Trướng/Giãn nở",
+    "nghia": "bành trướng, giãn nở, bùng nổ"
+  },
+  {
+    "kanji": "兆し",
+    "hira": "きざし",
+    "han": "Dấu hiệu/Điềm báo",
+    "nghia": "dấu hiệu, điềm báo"
+  },
+  {
+    "kanji": "幕開け",
+    "hira": "まくあけ",
+    "han": "Mở màn/Bắt đầu",
+    "nghia": "mở đầu, mở màn"
+  },
+  {
+    "kanji": "趣旨",
+    "hira": "しゅし",
+    "han": "Thú Chỉ/Ý đồ",
+    "nghia": "ý đồ, mục đích, ý nghĩa"
+  },
+  {
+    "kanji": "要領",
+    "hira": "ようりょう",
+    "han": "Yếu Lĩnh/Bí quyết",
+    "nghia": "bí quyết, phác thảo, lanh lợi"
+  },
+  {
+    "kanji": "統率",
+    "hira": "とうそつ",
+    "han": "Thống Soái/Chỉ huy",
+    "nghia": "chỉ huy, lãnh đạo"
+  },
+  {
+    "kanji": "実践",
+    "hira": "じっせん",
+    "han": "Thực Tiễn",
+    "nghia": "thực tiễn, thực hành"
+  },
+  {
+    "kanji": "措置",
+    "hira": "そち",
+    "han": "Biện Pháp",
+    "nghia": "biện pháp"
+  },
+  {
+    "kanji": "勢力",
+    "hira": "せいりょく",
+    "han": "Thế Lực",
+    "nghia": "thế lực, ảnh hưởng, sức mạnh"
+  },
+  {
+    "kanji": "無数",
+    "hira": "むすう",
+    "han": "Vô Số",
+    "nghia": "vô số"
+  },
+  {
+    "kanji": "固執",
+    "hira": "こしつ",
+    "han": "Cố Chấp",
+    "nghia": "cố chấp, bảo thủ"
+  },
+  {
+    "kanji": "内訳",
+    "hira": "うちわけ",
+    "han": "Chi tiết/Phân loại",
+    "nghia": "diễn giải thành từng mục"
+  },
+  {
+    "kanji": "奨励",
+    "hira": "しょうれい",
+    "han": "Khuyến Khích",
+    "nghia": "động viên, khuyến khích"
+  },
+  {
+    "kanji": "除外",
+    "hira": "じょがい",
+    "han": "Trừ Ra/Loại trừ",
+    "nghia": "ngoại trừ, loại trừ"
+  },
+  {
+    "kanji": "還元",
+    "hira": "かんげん",
+    "han": "Hoàn Nguyên/Hoàn lại",
+    "nghia": "quy hồi, hoàn lại"
+  },
+  {
+    "kanji": "阻害",
+    "hira": "そがい",
+    "han": "Trở Ngại",
+    "nghia": "trở ngại, cản trở"
+  },
+  {
+    "kanji": "擁護",
+    "hira": "ようご",
+    "han": "Ủng Hộ/Bảo vệ",
+    "nghia": "bảo vệ, hỗ trợ"
+  },
+  {
+    "kanji": "渦",
+    "hira": "うず",
+    "han": "Xoáy",
+    "nghia": "xoáy nước, vòng xoáy"
+  },
+  {
+    "kanji": "溝",
+    "hira": "みぞ",
+    "han": "Rãnh/Hố sâu",
+    "nghia": "rãnh, khoảng cách, hố sâu"
+  },
+  {
+    "kanji": "模倣",
+    "hira": "もほう",
+    "han": "Mô Phỏng/Sao chép",
+    "nghia": "sao chép, bắt chước"
+  },
+  {
+    "kanji": "趣",
+    "hira": "おもむき",
+    "han": "Phong vị/Cảnh tượng",
+    "nghia": "cảnh tượng, dáng vẻ, điểm mấu chốt"
+  },
+  {
+    "kanji": "融通",
+    "hira": "ゆうづう",
+    "han": "Dung Thông/Linh hoạt",
+    "nghia": "linh hoạt, vay mượn"
+  },
+  {
+    "kanji": "実態",
+    "hira": "じったい",
+    "han": "Thực Thái/Thực trạng",
+    "nghia": "thực trạng, thực tế"
+  },
+  {
+    "kanji": "情緒",
+    "hira": "じょうしょ",
+    "han": "Tình Cảm/Cảm xúc",
+    "nghia": "cảm xúc, tinh thần, bầu không khí"
+  },
+  {
+    "kanji": "監視",
+    "hira": "かんし",
+    "han": "Giám Sát",
+    "nghia": "giám sát"
+  },
+  {
+    "kanji": "動揺",
+    "hira": "どうよう",
+    "han": "Động Dao/Lung lay",
+    "nghia": "dao động, lung lay, hoang mang"
+  },
+  {
+    "kanji": "形勢",
+    "hira": "けいせい",
+    "han": "Hình Thế/Tình thế",
+    "nghia": "tình thế, điều kiện"
+  },
+  {
+    "kanji": "疑惑",
+    "hira": "ぎわく",
+    "han": "Nghi Hoặc/Nghi ngờ",
+    "nghia": "nghi ngờ, nghi hoặc"
+  },
+  {
+    "kanji": "経緯",
+    "hira": "けいい",
+    "han": "Kinh Vĩ/Ngọn ngành",
+    "nghia": "chi tiết, ngọn ngành, sự tình"
+  },
+  {
+    "kanji": "保障",
+    "hira": "ほしょう",
+    "han": "Bảo Đảm",
+    "nghia": "bảo đảm"
+  },
+  {
+    "kanji": "架空",
+    "hira": "かくう",
+    "han": "Giả Không/Hư cấu",
+    "nghia": "tưởng tượng, hư cấu, giả tưởng"
+  },
+  {
+    "kanji": "果て",
+    "hira": "はて",
+    "han": "Tận cùng/Cuối cùng",
+    "nghia": "sau cùng, tận cùng"
+  },
+  {
+    "kanji": "待望",
+    "hira": "たいぼう",
+    "han": "Đãi Vọng/Mong đợi",
+    "nghia": "mong đợi, trông chờ"
+  },
+  {
+    "kanji": "着目",
+    "hira": "ちゃくもく",
+    "han": "Chú ý/Tập trung",
+    "nghia": "chú ý, tập trung vào"
+  },
+  {
+    "kanji": "便宜",
+    "hira": "べんぎ",
+    "han": "Tiện Nghi/Tiện lợi",
+    "nghia": "tiện lợi, thuận tiện"
+  },
+  {
+    "kanji": "暴露",
+    "hira": "ばくろ",
+    "han": "Bạo Lộ/Lộ tẩy",
+    "nghia": "bộc lộ, lộ tẩy"
+  },
+  {
+    "kanji": "自粛",
+    "hira": "じしゅく",
+    "han": "Tự kiềm chế",
+    "nghia": "tự kiềm chế, tự kiểm điểm"
+  },
+  {
+    "kanji": "突破",
+    "hira": "とっぱ",
+    "han": "Đột Phá",
+    "nghia": "đột phá, vượt qua"
+  },
+  {
+    "kanji": "風潮",
+    "hira": "ふうちょう",
+    "han": "Phong Trào/Xu hướng",
+    "nghia": "xu hướng, trào lưu"
+  },
+  {
+    "kanji": "摂取",
+    "hira": "せっしゅ",
+    "han": "Hấp Thụ",
+    "nghia": "hấp thụ, tiếp nhận"
+  },
+  {
+    "kanji": "義理",
+    "hira": "ぎり",
+    "han": "Nghĩa Lý/Nghĩa vụ",
+    "nghia": "đạo lý, nghĩa vụ xã hội"
+  },
+  {
+    "kanji": "治安",
+    "hira": "ちあん",
+    "han": "Trị An",
+    "nghia": "trật tự công cộng, trị an"
+  },
+  {
+    "kanji": "主催",
+    "hira": "しゅさい",
+    "han": "Chủ Tổ chức",
+    "nghia": "chủ trì, tổ chức"
+  },
+  {
+    "kanji": "第三者",
+    "hira": "だいさんしゃ",
+    "han": "Bên Thứ Ba",
+    "nghia": "bên thứ 3, người ngoài cuộc"
+  },
+  {
+    "kanji": "むら",
+    "hira": "むら",
+    "han": "Không đều/Thất thường",
+    "nghia": "không đều, tính khí thất thường"
+  },
+  {
+    "kanji": "模索",
+    "hira": "もさく",
+    "han": "Mò mẫm/Tìm tòi",
+    "nghia": "tìm kiếm, mò mẫm"
+  },
+  {
+    "kanji": "節度",
+    "hira": "せつど",
+    "han": "Điều Độ/Chừng mực",
+    "nghia": "chừng mực, điều độ"
+  },
+  {
+    "kanji": "駆使",
+    "hira": "くし",
+    "han": "Khu Sử/Tận dụng",
+    "nghia": "tận dụng, sử dụng thành thạo"
+  },
+  {
+    "kanji": "禁物",
+    "hira": "きんもつ",
+    "han": "Cấm Vật/Cấm kỵ",
+    "nghia": "điều cấm kỵ"
+  },
+  {
+    "kanji": "無口",
+    "hira": "むくち",
+    "han": "Vô Khẩu/Ít nói",
+    "nghia": "ít nói, trầm lặng"
+  },
+  {
+    "kanji": "利口",
+    "hira": "りこう",
+    "han": "Lợi Khẩu/Thông minh",
+    "nghia": "thông minh, lanh lợi"
+  },
+  {
+    "kanji": "正当",
+    "hira": "せいとう",
+    "han": "Chính Đáng",
+    "nghia": "chính đáng, đúng đắn"
+  },
+  {
+    "kanji": "望ましい",
+    "hira": "のぞましい",
+    "han": "Lý tưởng/Mong muốn",
+    "nghia": "lý tưởng, đáng mong muốn"
+  },
+  {
+    "kanji": "乱暴",
+    "hira": "らんぼう",
+    "han": "Loạn Bạo/Thô lỗ",
+    "nghia": "thô lỗ, cục cằn, bạo lực"
+  },
+  {
+    "kanji": "喜ばしい",
+    "hira": "よろこばしい",
+    "han": "Đáng vui mừng",
+    "nghia": "vui mừng, đáng vui"
+  },
+  {
+    "kanji": "厚かましい",
+    "hira": "あつかましい",
+    "han": "Mặt dày/Vô liêm sỉ",
+    "nghia": "mặt dày, không biết xấu hổ"
+  },
+  {
+    "kanji": "傲慢",
+    "hira": "ごうまん",
+    "han": "Ngạo Mạn/Kiêu ngạo",
+    "nghia": "ngạo mạn, kiêu ngạo"
+  },
+  {
+    "kanji": "愚か",
+    "hira": "おろか",
+    "han": "Ngu ngốc",
+    "nghia": "ngốc, dại dột"
+  },
+  {
+    "kanji": "大げさ",
+    "hira": "おおげさ",
+    "han": "Phóng Đại/Cường điệu",
+    "nghia": "phóng đại, cường điệu"
+  },
+  {
+    "kanji": "明白",
+    "hira": "めいはく",
+    "han": "Minh Bạch/Rõ ràng",
+    "nghia": "minh bạch, rõ ràng"
+  },
+  {
+    "kanji": "臆病",
+    "hira": "おくびょう",
+    "han": "Nhút nhát/Sợ sệt",
+    "nghia": "nhút nhát, sợ sệt"
+  },
+  {
+    "kanji": "盛大",
+    "hira": "せいだい",
+    "han": "Thịnh Đại/Hoành tráng",
+    "nghia": "hoành tráng, long trọng"
+  },
+  {
+    "kanji": "完璧",
+    "hira": "かんぺき",
+    "han": "Hoàn Bích/Hoàn hảo",
+    "nghia": "hoàn hảo"
+  },
+  {
+    "kanji": "客観的",
+    "hira": "きゃっかんてき",
+    "han": "Khách Quan",
+    "nghia": "tính khách quan"
+  },
+  {
+    "kanji": "大幅",
+    "hira": "おおはば",
+    "han": "Đáng kể/Lớn",
+    "nghia": "lớn, đáng kể"
+  },
+  {
+    "kanji": "だるい",
+    "hira": "だるい",
+    "han": "Uể oải/Mệt mỏi",
+    "nghia": "uể oải, mệt mỏi"
+  },
+  {
+    "kanji": "憂鬱",
+    "hira": "ゆううつ",
+    "han": "U Uất/Buồn rầu",
+    "nghia": "buồn rầu, u sầu"
+  },
+  {
+    "kanji": "有利",
+    "hira": "ゆうり",
+    "han": "Hữu Lợi/Có lợi",
+    "nghia": "có lợi, thuận lợi"
+  },
+  {
+    "kanji": "有望",
+    "hira": "ゆうぼう",
+    "han": "Hữu Vọng/Triển vọng",
+    "nghia": "có triển vọng"
+  },
+  {
+    "kanji": "頑丈",
+    "hira": "がんじょう",
+    "han": "Chắc chắn/Cứng cáp",
+    "nghia": "chắc chắn, cứng cáp"
+  },
+  {
+    "kanji": "柔軟",
+    "hira": "じゅうなん",
+    "han": "Nhu Nhuyễn/Linh hoạt",
+    "nghia": "linh hoạt, dẻo dai"
+  },
+  {
+    "kanji": "悲惨",
+    "hira": "ひさん",
+    "han": "Bi Thảm",
+    "nghia": "bi thảm, thê thảm"
+  },
+  {
+    "kanji": "情けない",
+    "hira": "なさけない",
+    "han": "Đáng thất vọng/Hổ thẹn",
+    "nghia": "đáng thất vọng, đáng xấu hổ"
+  },
+  {
+    "kanji": "余計",
+    "hira": "よけい",
+    "han": "Dư thừa/Không cần thiết",
+    "nghia": "không cần thiết, dư, vượt quá"
+  },
+  {
+    "kanji": "前向き",
+    "hira": "まえむき",
+    "han": "Tích Cực",
+    "nghia": "tích cực, hướng về phía trước"
+  },
+  {
+    "kanji": "陽気",
+    "hira": "ようき",
+    "han": "Vui vẻ/Hòa đồng",
+    "nghia": "vui vẻ, hòa đồng"
+  },
+  {
+    "kanji": "卑怯",
+    "hira": "ひきょう",
+    "han": "Ty Tiện/Hèn hạ",
+    "nghia": "hèn hạ, gian xảo"
+  },
+  {
+    "kanji": "あやふや",
+    "hira": "あやふや",
+    "han": "Mập mờ/Không rõ",
+    "nghia": "mập mờ, không rõ ràng"
+  },
+  {
+    "kanji": "残酷",
+    "hira": "ざんこく",
+    "han": "Tàn Khốc/Độc ác",
+    "nghia": "độc ác, tàn nhẫn"
+  },
+  {
+    "kanji": "鮮やか",
+    "hira": "あざやか",
+    "han": "Rực rỡ/Chói lọi",
+    "nghia": "rực rỡ, chói lọi, tươi mới"
+  },
+  {
+    "kanji": "楽観的",
+    "hira": "らっかんてき",
+    "han": "Lạc Quan",
+    "nghia": "lạc quan"
+  },
+  {
+    "kanji": "疑わしい",
+    "hira": "うたがわしい",
+    "han": "Đáng ngờ",
+    "nghia": "nghi ngờ, đáng nghi"
+  },
+  {
+    "kanji": "忠実",
+    "hira": "ちゅうじつ",
+    "han": "Trung Thực/Trung thành",
+    "nghia": "trung thành, chân thực"
+  },
+  {
+    "kanji": "香ばしい",
+    "hira": "こうばしい",
+    "han": "Thơm",
+    "nghia": "thơm (mùi rang nướng)"
+  },
+  {
+    "kanji": "温和",
+    "hira": "おんわ",
+    "han": "Ôn Hòa",
+    "nghia": "ôn hòa, nhẹ nhàng"
+  },
+  {
+    "kanji": "のんき",
+    "hira": "のんき",
+    "han": "Vô tư/Lạc quan",
+    "nghia": "vô tư, lạc quan"
+  },
+  {
+    "kanji": "貧弱",
+    "hira": "ひんじゃく",
+    "han": "Bần Nhược/Nghèo nàn",
+    "nghia": "nghèo nàn, gầy yếu"
+  },
+  {
+    "kanji": "密接",
+    "hira": "みっせつ",
+    "han": "Mật Tiếp/Mật thiết",
+    "nghia": "mật thiết, gắn bó"
+  },
+  {
+    "kanji": "厳重",
+    "hira": "げんじゅう",
+    "han": "Nghiêm Trọng/Nghiêm ngặt",
+    "nghia": "nghiêm ngặt, chặt chẽ"
+  },
+  {
+    "kanji": "若々しい",
+    "hira": "わかわかしい",
+    "han": "Trẻ trung",
+    "nghia": "trẻ trung, tươi trẻ"
+  },
+  {
+    "kanji": "幼稚",
+    "hira": "ようち",
+    "han": "Ấu Trĩ/Trẻ con",
+    "nghia": "trẻ con, non nớt"
+  },
+  {
+    "kanji": "大ざっぱ",
+    "hira": "おおざっぱ",
+    "han": "Đại Khái/Qua loa",
+    "nghia": "đại khái, qua loa"
+  },
+  {
+    "kanji": "簡潔",
+    "hira": "かんけつ",
+    "han": "Giản Khiết/Ngắn gọn",
+    "nghia": "ngắn gọn, súc tích"
+  },
+  {
+    "kanji": "膨大",
+    "hira": "ぼうだい",
+    "han": "Phồng Đại/Khổng lồ",
+    "nghia": "khổng lồ, to lớn"
+  },
+  {
+    "kanji": "強硬",
+    "hira": "きょうこう",
+    "han": "Cứng rắn/Mạnh mẽ",
+    "nghia": "mạnh mẽ, cứng rắn"
+  },
+  {
+    "kanji": "勇敢",
+    "hira": "ゆうかん",
+    "han": "Dũng Cảm",
+    "nghia": "dũng cảm, can đảm"
+  },
+  {
+    "kanji": "やかましい",
+    "hira": "やかましい",
+    "han": "Ồn ào/Phiền hà",
+    "nghia": "ầm ĩ, phiền hà"
+  },
+  {
+    "kanji": "軽快",
+    "hira": "けいかい",
+    "han": "Khinh Khoái/Nhịp nhàng",
+    "nghia": "nhịp nhàng, nhẹ nhàng"
+  },
+  {
+    "kanji": "不審",
+    "hira": "ふしん",
+    "han": "Bất Thẩm/Đáng ngờ",
+    "nghia": "đáng ngờ, khả nghi"
+  },
+  {
+    "kanji": "大胆",
+    "hira": "だいたん",
+    "han": "Đại Đảm/Táo bạo",
+    "nghia": "táo bạo, gan dạ"
+  },
+  {
+    "kanji": "寛大",
+    "hira": "かんだい",
+    "han": "Khoan Đại/Độ lượng",
+    "nghia": "quảng đại, độ lượng"
+  },
+  {
+    "kanji": "ふさわしい",
+    "hira": "ふさわしい",
+    "han": "Phù hợp/Thích hợp",
+    "nghia": "phù hợp, thích hợp"
+  },
+  {
+    "kanji": "公式",
+    "hira": "こうしき",
+    "han": "Công Thức/Chính thức",
+    "nghia": "chính thức"
+  },
+  {
+    "kanji": "無茶",
+    "hira": "むちゃ",
+    "han": "Vô Lý/Quá mức",
+    "nghia": "vô lý, quá mức, bừa bãi"
+  },
+  {
+    "kanji": "かすか",
+    "hira": "かすか",
+    "han": "Nhỏ bé/Mờ nhạt",
+    "nghia": "nhỏ bé, mờ nhạt, thấp thoáng"
+  },
+  {
+    "kanji": "微妙",
+    "hira": "びみょう",
+    "han": "Vi Diệu/Tinh tế",
+    "nghia": "tinh tế, phức tạp, khó nói"
+  },
+  {
+    "kanji": "未熟",
+    "hira": "みじゅく",
+    "han": "Vị Thục/Chưa chín",
+    "nghia": "non trẻ, chưa chín, chưa trưởng thành"
+  },
+  {
+    "kanji": "精密",
+    "hira": "せいみつ",
+    "han": "Tinh Mật/Chính xác",
+    "nghia": "chính xác, chi tiết, tinh xảo"
+  },
+  {
+    "kanji": "勤勉",
+    "hira": "きんべん",
+    "han": "Cần Mẫn/Chăm chỉ",
+    "nghia": "chăm chỉ, cần cù"
+  },
+  {
+    "kanji": "冷静",
+    "hira": "れいせい",
+    "han": "Lạnh Tĩnh/Bình tĩnh",
+    "nghia": "bình tĩnh, điềm tĩnh"
+  },
+  {
+    "kanji": "乏しい",
+    "hira": "とぼしい",
+    "han": "Nghèo nàn/Thiếu",
+    "nghia": "nghèo nàn, thiếu"
+  },
+  {
+    "kanji": "賢明",
+    "hira": "けんめい",
+    "han": "Hiền Minh/Khôn ngoan",
+    "nghia": "khôn ngoan, sáng suốt"
+  },
+  {
+    "kanji": "不可欠",
+    "hira": "ふかけつ",
+    "han": "Bất Khả Khuyết/Thiết yếu",
+    "nghia": "không thể thiếu, thiết yếu"
+  },
+  {
+    "kanji": "速やか",
+    "hira": "すみやか",
+    "han": "Nhanh chóng",
+    "nghia": "nhanh chóng, mau lẹ"
+  },
+  {
+    "kanji": "素早い",
+    "hira": "すばやい",
+    "han": "Lanh lợi/Nhanh nhẹn",
+    "nghia": "lanh lợi, nhanh nhẹn"
+  },
+  {
+    "kanji": "軽率",
+    "hira": "けいそつ",
+    "han": "Khinh Suất/Hấp tấp",
+    "nghia": "hấp tấp, nông nổi, thiếu suy nghĩ"
+  },
+  {
+    "kanji": "怠慢",
+    "hira": "たいまん",
+    "han": "Đãi Mạn/Lười nhác",
+    "nghia": "lười nhác, chậm chạp"
+  },
+  {
+    "kanji": "素っ気ない",
+    "hira": "そっけない",
+    "han": "Lãnh đạm/Thờ ơ",
+    "nghia": "lãnh đạm, thờ ơ, lạnh nhạt"
+  },
+  {
+    "kanji": "たくましい",
+    "hira": "たくましい",
+    "han": "Lực lưỡng/Mạnh mẽ",
+    "nghia": "lực lưỡng, rắn chắc, mạnh mẽ"
+  },
+  {
+    "kanji": "健やか",
+    "hira": "すこやか",
+    "han": "Khỏe mạnh",
+    "nghia": "khỏe mạnh"
+  },
+  {
+    "kanji": "ささやか",
+    "hira": "ささやか",
+    "han": "Nhỏ bé/Giản dị",
+    "nghia": "nhỏ bé, giản dị"
+  },
+  {
+    "kanji": "ささいな",
+    "hira": "ささいな",
+    "han": "Nhỏ nhặt/Tầm thường",
+    "nghia": "nhỏ nhặt, tầm thường"
+  },
+  {
+    "kanji": "無邪気",
+    "hira": "むじゃき",
+    "han": "Vô Tà Khí/Ngây thơ",
+    "nghia": "ngây thơ, trong sáng"
+  },
+  {
+    "kanji": "無神経",
+    "hira": "むしんけい",
+    "han": "Vô Thần Kinh/Vô tâm",
+    "nghia": "không nhạy cảm, vô tâm, vô ý"
+  },
+  {
+    "kanji": "煩わしい",
+    "hira": "わずらわしい",
+    "han": "Phiền phức",
+    "nghia": "phiền phức, phức tạp"
+  },
+  {
+    "kanji": "厄介",
+    "hira": "やっかい",
+    "han": "Dịch Hại/Phiền hà",
+    "nghia": "phiền hà, phức tạp"
+  },
+  {
+    "kanji": "たやすい",
+    "hira": "たやすい",
+    "han": "Dễ dàng/Đơn giản",
+    "nghia": "đơn giản, dễ dàng"
+  },
+  {
+    "kanji": "ややこしい",
+    "hira": "ややこしい",
+    "han": "Lằng nhằng/Phức tạp",
+    "nghia": "lằng nhằng, phức tạp"
+  },
+  {
+    "kanji": "淡い",
+    "hira": "あわい",
+    "han": "Nhạt/Mỏng manh",
+    "nghia": "nhạt, thoảng qua, mỏng manh"
+  },
+  {
+    "kanji": "なだらか",
+    "hira": "なだらか",
+    "han": "Thoai thoải/Nhẹ nhàng",
+    "nghia": "thoai thoải, dần dần"
+  },
+  {
+    "kanji": "緩やか",
+    "hira": "ゆるやか",
+    "han": "Thoải mái/Chậm rãi",
+    "nghia": "thoai thoải, thoải mái, chậm rãi"
+  },
+  {
+    "kanji": "のどか",
+    "hira": "のどか",
+    "han": "Thanh bình/Yên bình",
+    "nghia": "thanh bình, yên bình, thảnh thơi"
+  },
+  {
+    "kanji": "和やか",
+    "hira": "なごやか",
+    "han": "Ôn hòa/Êm dịu",
+    "nghia": "ôn hòa, êm dịu"
+  },
+  {
+    "kanji": "しなやか",
+    "hira": "しなやか",
+    "han": "Mềm dẻo/Dẻo dai",
+    "nghia": "mềm dẻo, dẻo dai"
+  },
+  {
+    "kanji": "したたか",
+    "hira": "したたか",
+    "han": "Cứng rắn/Mạnh mẽ",
+    "nghia": "cứng rắn, mạnh mẽ, kiên cường"
+  },
+  {
+    "kanji": "もろい",
+    "hira": "もろい",
+    "han": "Dễ vỡ/Yếu đuối",
+    "nghia": "dễ vỡ, yếu đuối"
+  },
+  {
+    "kanji": "緻密",
+    "hira": "ちみつ",
+    "han": "Tỉ mỉ/Chi tiết",
+    "nghia": "tỉ mỉ, chi tiết"
+  },
+  {
+    "kanji": "重宝",
+    "hira": "ちょうほう",
+    "han": "Quý báu/Tiện lợi",
+    "nghia": "quý báu, tiện lợi, hữu ích"
+  },
+  {
+    "kanji": "詳細",
+    "hira": "しょうさい",
+    "han": "Tường Tận/Chi tiết",
+    "nghia": "chi tiết, tường tận"
+  },
+  {
+    "kanji": "いい加減",
+    "hira": "いいかげん",
+    "han": "Vô trách nhiệm/Vô lý",
+    "nghia": "vô trách nhiệm, qua loa, vô lý"
+  },
+  {
+    "kanji": "投げやり",
+    "hira": "なげやり",
+    "han": "Bất cần/Qua loa",
+    "nghia": "bất cần, qua loa, không cố gắng"
+  },
+  {
+    "kanji": "淡泊",
+    "hira": "たんぱく",
+    "han": "Đạm Bạc/Nhạt",
+    "nghia": "nhạt, bình dị, không màng vật chất"
+  },
+  {
+    "kanji": "無難",
+    "hira": "ぶなん",
+    "han": "An toàn/Không đột phá",
+    "nghia": "an toàn, không có gì mới"
+  },
+  {
+    "kanji": "画一的",
+    "hira": "かくいつてき",
+    "han": "Đồng Nhất/Rập khuôn",
+    "nghia": "đồng nhất, tiêu chuẩn"
+  },
+  {
+    "kanji": "危うい",
+    "hira": "あやうい",
+    "han": "Nguy hiểm/Suýt",
+    "nghia": "nguy hiểm, suýt nữa"
+  },
+  {
+    "kanji": "はかない",
+    "hira": "はかない",
+    "han": "Phù du/Thoáng qua",
+    "nghia": "thoáng qua, phù du"
+  },
+  {
+    "kanji": "あっけない",
+    "hira": "あっけない",
+    "han": "Lãng xẹt/Không đủ",
+    "nghia": "kết thúc quá nhanh, lãng xẹt"
+  },
+  {
+    "kanji": "むなしい",
+    "hira": "むなしい",
+    "han": "Trống rỗng/Vô nghĩa",
+    "nghia": "trống rỗng, phí công, vô nghĩa"
+  },
+  {
+    "kanji": "重厚",
+    "hira": "じゅうこう",
+    "han": "Đồ sộ/Sâu lắng",
+    "nghia": "uy nghi, đồ sộ, sâu lắng"
+  },
+  {
+    "kanji": "厳か",
+    "hira": "おごそか",
+    "han": "Trang Nghiêm/Uy nghiêm",
+    "nghia": "trang trọng, uy nghiêm"
+  },
+  {
+    "kanji": "莫大",
+    "hira": "ばくだい",
+    "han": "Mạc Đại/Khổng lồ",
+    "nghia": "khổng lồ, to lớn"
+  },
+  {
+    "kanji": "おびただしい",
+    "hira": "おびただしい",
+    "han": "Vô số/Khổng lồ",
+    "nghia": "nhiều vô số, khổng lồ"
+  },
+  {
+    "kanji": "甚だしい",
+    "hira": "はなはだしい",
+    "han": "Cực kỳ/Quá mức",
+    "nghia": "cực kỳ, kinh khủng, quá mức"
+  },
+  {
+    "kanji": "露骨",
+    "hira": "ろこつ",
+    "han": "Lộ Cốt/Lộ liễu",
+    "nghia": "lộ liễu, không che đậy"
+  },
+  {
+    "kanji": "優雅",
+    "hira": "ゆうが",
+    "han": "Ưu Nhã/Tao nhã",
+    "nghia": "tao nhã, thanh tao, thanh lịch"
+  },
+  {
+    "kanji": "見事",
+    "hira": "みごと",
+    "han": "Xuất sắc/Hoàn hảo",
+    "nghia": "xuất sắc, không thể chê"
+  },
+  {
+    "kanji": "模範的",
+    "hira": "もはんてき",
+    "han": "Mẫu Mực/Gương mẫu",
+    "nghia": "gương mẫu, mẫu mực"
+  },
+  {
+    "kanji": "堪能",
+    "hira": "たんのう",
+    "han": "Khéo léo/Thành thạo",
+    "nghia": "thành thạo, giỏi"
+  },
+  {
+    "kanji": "紛らわしい",
+    "hira": "まぎらわしい",
+    "han": "Dễ nhầm lẫn",
+    "nghia": "dễ nhầm lẫn"
+  },
+  {
+    "kanji": "希薄",
+    "hira": "きはく",
+    "han": "Hy Bạc/Hời hợt",
+    "nghia": "mỏng, loãng, nông cạn, hời hợt"
+  },
+  {
+    "kanji": "まちまち",
+    "hira": "まちまち",
+    "han": "Muôn hình/Khác nhau",
+    "nghia": "muôn hình muôn vẻ, khác nhau"
+  },
+  {
+    "kanji": "著しい",
+    "hira": "いちじるしい",
+    "han": "Rõ rệt/Đáng kể",
+    "nghia": "rõ rệt, đáng kể"
+  },
+  {
+    "kanji": "切実",
+    "hira": "せつじつ",
+    "han": "Thiết Thực/Cấp bách",
+    "nghia": "thiết thực, cấp bách, sâu sắc"
+  },
+  {
+    "kanji": "圧倒的",
+    "hira": "あっとうてき",
+    "han": "Áp Đảo",
+    "nghia": "áp đảo, vượt trội"
+  },
+  {
+    "kanji": "ひそか",
+    "hira": "ひそか",
+    "han": "Bí mật/Lén lút",
+    "nghia": "bí mật, lén lút"
+  },
+  {
+    "kanji": "細やか",
+    "hira": "こまやか",
+    "han": "Chu đáo/Tỉ mỉ",
+    "nghia": "chu đáo, tỉ mỉ"
+  },
+  {
+    "kanji": "旺盛",
+    "hira": "おうせい",
+    "han": "Vượng Thịnh/Mãnh liệt",
+    "nghia": "mãnh liệt, sung sức"
+  },
+  {
+    "kanji": "切ない",
+    "hira": "せつない",
+    "han": "Buồn đau/Thiết tha",
+    "nghia": "buồn đau, buồn khôn xiết"
+  },
+  {
+    "kanji": "なれなれしい",
+    "hira": "なれなれしい",
+    "han": "Suồng sã",
+    "nghia": "suồng sã, thân mật quá mức"
+  },
+  {
+    "kanji": "悩ましい",
+    "hira": "なやましい",
+    "han": "Trăn trở/Phiền não",
+    "nghia": "trăn trở, phiền não"
+  },
+  {
+    "kanji": "申し分ない",
+    "hira": "もうしぶんない",
+    "han": "Không chê vào đâu",
+    "nghia": "không thể chê vào đâu, hoàn hảo"
+  },
+  {
+    "kanji": "かけがえのない",
+    "hira": "かけがえのない",
+    "han": "Không thể thay thế",
+    "nghia": "không thể thay thế, vô giá"
+  },
+  {
+    "kanji": "まれ",
+    "hira": "まれ",
+    "han": "Hiếm/Không phổ biến",
+    "nghia": "hiếm, không phổ biến"
+  },
+  {
+    "kanji": "顕著",
+    "hira": "けんちょ",
+    "han": "Hiển Trứ/Nổi bật",
+    "nghia": "nổi bật, rõ ràng"
+  },
+  {
+    "kanji": "痛切",
+    "hira": "つうせつ",
+    "han": "Thống Thiết/Sâu sắc",
+    "nghia": "thống thiết, sâu sắc, cấp bách"
+  },
+  {
+    "kanji": "致命的",
+    "hira": "ちめいてき",
+    "han": "Chí Mạng",
+    "nghia": "chí mạng, gây tổn hại lớn"
+  },
+  {
+    "kanji": "格別",
+    "hira": "かくべつ",
+    "han": "Cách Biệt/Đặc biệt",
+    "nghia": "đặc biệt, ngoại lệ"
+  },
+  {
+    "kanji": "うっとうしい",
+    "hira": "うっとうしい",
+    "han": "U ám/Khó chịu",
+    "nghia": "u ám, ảm đạm, vướng víu"
+  },
+  {
+    "kanji": "冷ややか",
+    "hira": "ひややか",
+    "han": "Lạnh lùng/Lạnh nhạt",
+    "nghia": "lạnh lùng, lạnh nhạt"
+  },
+  {
+    "kanji": "みっともない",
+    "hira": "みっともない",
+    "han": "Đáng xấu hổ/Khó coi",
+    "nghia": "đáng xấu hổ, khó coi"
+  },
+  {
+    "kanji": "思わしい",
+    "hira": "おもわしい",
+    "han": "Như ý/Như mong muốn",
+    "nghia": "như ý, như mong muốn"
+  },
+  {
+    "kanji": "まめ",
+    "hira": "まめ",
+    "han": "Chăm chỉ/Cẩn thận",
+    "nghia": "chăm chỉ, cẩn thận, siêng năng"
+  },
+  {
+    "kanji": "円滑",
+    "hira": "えんかつ",
+    "han": "Viên Hoạt/Trôi chảy",
+    "nghia": "trôi chảy, trơn tru, suôn sẻ"
+  },
+  {
+    "kanji": "今どき",
+    "hira": "いまどき",
+    "han": "Thời nay/Ngày nay",
+    "nghia": "ngày nay, thời nay"
+  },
+  {
+    "kanji": "今さら",
+    "hira": "いまさら",
+    "han": "Bây giờ mới/Muộn rồi",
+    "nghia": "bây giờ mới, muộn quá rồi"
+  },
+  {
+    "kanji": "今や",
+    "hira": "いまや",
+    "han": "Hiện tại/Thế mà",
+    "nghia": "bây giờ, thế mà bây giờ"
+  },
+  {
+    "kanji": "今に",
+    "hira": "いまに",
+    "han": "Chẳng bao lâu nữa",
+    "nghia": "chẳng mấy chốc, chẳng bao lâu nữa"
+  },
+  {
+    "kanji": "ごたごた",
+    "hira": "ごたごた",
+    "han": "Hỗn độn/Xích mích",
+    "nghia": "hỗn độn, xích mích, cãi cọ"
+  },
+  {
+    "kanji": "不意に",
+    "hira": "ふいに",
+    "han": "Đột nhiên",
+    "nghia": "đột nhiên, không ngờ tới"
+  },
+  {
+    "kanji": "いたって",
+    "hira": "いたって",
+    "han": "Rất/Vô cùng",
+    "nghia": "rất, vô cùng"
+  },
+  {
+    "kanji": "今一つ",
+    "hira": "いまひとつ",
+    "han": "Thiếu một chút",
+    "nghia": "thiếu một chút, chưa đủ"
+  },
+  {
+    "kanji": "近々",
+    "hira": "ちかぢか",
+    "han": "Sắp/Gần đây",
+    "nghia": "sắp tới, gần đây"
+  },
+  {
+    "kanji": "始終",
+    "hira": "しじゅう",
+    "han": "Từ đầu chí cuối",
+    "nghia": "từ đầu chí cuối, liên tục không ngớt"
+  },
+  {
+    "kanji": "がっちり",
+    "hira": "がっちり",
+    "han": "Chắc nịch/Rắn chắc",
+    "nghia": "chắc nịch, rắn chắc"
+  },
+  {
+    "kanji": "ぐんぐん",
+    "hira": "ぐんぐん",
+    "han": "Nhanh chóng/Vùn vụt",
+    "nghia": "nhanh chóng, tăng trưởng vùn vụt"
+  },
+  {
+    "kanji": "さほど",
+    "hira": "さほど",
+    "han": "Không lắm/Không đến mức",
+    "nghia": "không lắm, không đến mức đó"
+  },
+  {
+    "kanji": "一概に",
+    "hira": "いちがいに",
+    "han": "Hoàn toàn/Tuyệt đối",
+    "nghia": "hoàn toàn, tuyệt đối (thường dùng phủ định)"
+  },
+  {
+    "kanji": "ごちゃごちゃ",
+    "hira": "ごちゃごちゃ",
+    "han": "Lộn xộn/Lung tung",
+    "nghia": "rối loạn, lung tung"
+  },
+  {
+    "kanji": "極めて",
+    "hira": "きわめて",
+    "han": "Cực kỳ/Vô cùng",
+    "nghia": "cực kỳ, vô cùng"
+  },
+  {
+    "kanji": "若干",
+    "hira": "じゃっかん",
+    "han": "Nhược Cán/Một chút",
+    "nghia": "một chút, ít nhiều"
+  },
+  {
+    "kanji": "頻繁に",
+    "hira": "ひんぱんに",
+    "han": "Thường xuyên",
+    "nghia": "thường xuyên"
+  },
+  {
+    "kanji": "ちょくちょく",
+    "hira": "ちょくちょく",
+    "han": "Thường xuyên/Mỗi lúc",
+    "nghia": "thường xuyên, thỉnh thoảng"
+  },
+  {
+    "kanji": "ぼつぼつ",
+    "hira": "ぼつぼつ",
+    "han": "Sắp/Dần dần",
+    "nghia": "sắp, dần dần, từng chút một"
+  },
+  {
+    "kanji": "一向に",
+    "hira": "いっこうに",
+    "han": "Hoàn toàn không",
+    "nghia": "hoàn toàn không (dù làm cách nào)"
+  },
+  {
+    "kanji": "一見",
+    "hira": "いっけん",
+    "han": "Thoạt nhìn",
+    "nghia": "thoạt nhìn"
+  },
+  {
+    "kanji": "さも",
+    "hira": "さも",
+    "han": "Như thể là",
+    "nghia": "như thể là, rất (nhấn mạnh)"
+  },
+  {
+    "kanji": "さぞ",
+    "hira": "さぞ",
+    "han": "Chắc là/Hẳn là",
+    "nghia": "chắc là, hẳn là"
+  },
+  {
+    "kanji": "もしくは",
+    "hira": "もしくは",
+    "han": "Hoặc là",
+    "nghia": "hoặc là"
+  },
+  {
+    "kanji": "ただし",
+    "hira": "ただし",
+    "han": "Tuy nhiên/Nhưng",
+    "nghia": "tuy nhiên, nhưng"
+  },
+  {
+    "kanji": "なお",
+    "hira": "なお",
+    "han": "Hơn nữa/Ngoài ra",
+    "nghia": "hơn nữa, ngoài ra, vẫn còn"
+  },
+  {
+    "kanji": "ちなみに",
+    "hira": "ちなみに",
+    "han": "Nhân tiện",
+    "nghia": "nhân tiện, tiện thể"
+  },
+  {
+    "kanji": "もっとも",
+    "hira": "もっとも",
+    "han": "Nhất/Tuy nhiên",
+    "nghia": "nhất, tuy nhiên, đương nhiên"
+  },
+  {
+    "kanji": "近年",
+    "hira": "きんねん",
+    "han": "Cận Niên/Gần đây",
+    "nghia": "những năm gần đây"
+  },
+  {
+    "kanji": "かつて",
+    "hira": "かつて",
+    "han": "Trước kia/Đã từng",
+    "nghia": "trước kia, đã từng, từng có một thời"
+  },
+  {
+    "kanji": "かねて",
+    "hira": "かねて",
+    "han": "Trước đó",
+    "nghia": "trước đó, từ trước"
+  },
+  {
+    "kanji": "目下",
+    "hira": "もっか",
+    "han": "Hiện tại",
+    "nghia": "hiện tại"
+  },
+  {
+    "kanji": "やや",
+    "hira": "やや",
+    "han": "Hơi/Một chút",
+    "nghia": "hơi, một chút"
+  },
+  {
+    "kanji": "幾分",
+    "hira": "いくぶん",
+    "han": "Một chút/Hơi hơi",
+    "nghia": "một chút, hơi hơi"
+  },
+  {
+    "kanji": "早急に",
+    "hira": "さっきゅうに",
+    "han": "Khẩn cấp/Gấp rút",
+    "nghia": "khẩn cấp, gấp rút"
+  },
+  {
+    "kanji": "即座に",
+    "hira": "そくざに",
+    "han": "Ngay lập tức",
+    "nghia": "ngay lập tức"
+  },
+  {
+    "kanji": "すかさず",
+    "hira": "すかさず",
+    "han": "Ngay lập tức",
+    "nghia": "ngay lập tức, không chậm trễ"
+  },
+  {
+    "kanji": "何なりと",
+    "hira": "なんなりと",
+    "han": "Gì cũng được",
+    "nghia": "gì cũng được, bất cứ thứ gì"
+  },
+  {
+    "kanji": "どうやら",
+    "hira": "どうやら",
+    "han": "Có vẻ/Dường như",
+    "nghia": "có vẻ, dường như"
+  },
+  {
+    "kanji": "よほど",
+    "hira": "よほど",
+    "han": "Khá/Đáng kể",
+    "nghia": "khá, đáng kể"
+  },
+  {
+    "kanji": "ゆえに",
+    "hira": "ゆえに",
+    "han": "Chính bởi vì",
+    "nghia": "chính bởi vì"
+  },
+  {
+    "kanji": "よって",
+    "hira": "よって",
+    "han": "Bởi vậy/Do đó",
+    "nghia": "bởi vậy, do đó"
+  },
+  {
+    "kanji": "終日",
+    "hira": "しゅうじつ",
+    "han": "Cả ngày",
+    "nghia": "cả ngày"
+  },
+  {
+    "kanji": "ぐったり",
+    "hira": "ぐったり",
+    "han": "Mệt lử/Rã rời",
+    "nghia": "mệt lử, rã rời"
+  },
+  {
+    "kanji": "げっそり",
+    "hira": "げっそり",
+    "han": "Gầy rộc/Nản chí",
+    "nghia": "gầy rộc, nản chí"
+  },
+  {
+    "kanji": "べたべた",
+    "hira": "べたべた",
+    "han": "Dính dính/Nhớp nháp",
+    "nghia": "dính dính, nhớp nháp"
+  },
+  {
+    "kanji": "くっきり",
+    "hira": "くっきり",
+    "han": "Rõ ràng/Nổi bật",
+    "nghia": "rõ ràng, nổi bật"
+  },
+  {
+    "kanji": "着々と",
+    "hira": "ちゃくちゃくと",
+    "han": "Tiến triển vững chắc",
+    "nghia": "tiến triển một cách chắc chắn, ổn định"
+  },
+  {
+    "kanji": "すんなり",
+    "hira": "すんなり",
+    "han": "Thuận lợi/Suôn sẻ",
+    "nghia": "thuận lợi, suôn sẻ"
+  },
+  {
+    "kanji": "何とぞ",
+    "hira": "なにとぞ",
+    "han": "Kính mong/Xin hãy",
+    "nghia": "kính mong, xin vui lòng"
+  },
+  {
+    "kanji": "ろくに",
+    "hira": "ろくに",
+    "han": "Đủ/Đàng hoàng",
+    "nghia": "đủ, đàng hoàng (ろくに～ない = không thể đủ)"
+  },
+  {
+    "kanji": "及び",
+    "hira": "および",
+    "han": "Và/Cùng với",
+    "nghia": "và, cùng với"
+  },
+  {
+    "kanji": "第一",
+    "hira": "だいいち",
+    "han": "Trước tiên/Quan trọng nhất",
+    "nghia": "trước tiên, quan trọng nhất"
+  },
+  {
+    "kanji": "人一倍",
+    "hira": "ひといちばい",
+    "han": "Hơn người/Hơn thường",
+    "nghia": "hơn bình thường, hơn người"
+  },
+  {
+    "kanji": "一通り",
+    "hira": "ひととおり",
+    "han": "Qua loa/Đại khái",
+    "nghia": "đại khái, qua loa, ở mức tàm tạm"
+  },
+  {
+    "kanji": "さんざん",
+    "hira": "さんざん",
+    "han": "Khốc liệt/Tồi tệ",
+    "nghia": "khốc liệt, dữ dội, tồi tệ"
+  },
+  {
+    "kanji": "ぐっと",
+    "hira": "ぐっと",
+    "han": "Rất nhiều/Kìm nén",
+    "nghia": "rất nhiều, cố gắng kìm nén"
+  },
+  {
+    "kanji": "はるかに",
+    "hira": "はるかに",
+    "han": "Hơn nhiều/Xa hơn",
+    "nghia": "hơn nhiều, xa hơn"
+  },
+  {
+    "kanji": "そこそこ",
+    "hira": "そこそこ",
+    "han": "Kha khá/Tàm tạm",
+    "nghia": "kha khá, tàm tạm"
+  },
+  {
+    "kanji": "ひっそり",
+    "hira": "ひっそり",
+    "han": "Tĩnh mịch/Lặng lẽ",
+    "nghia": "tĩnh mịch, yên lặng"
+  },
+  {
+    "kanji": "およそ",
+    "hira": "およそ",
+    "han": "Khoảng/Đại khái",
+    "nghia": "khoảng, đại khái"
+  },
+  {
+    "kanji": "おのおの",
+    "hira": "おのおの",
+    "han": "Từng/Mỗi",
+    "nghia": "từng, mỗi một"
+  },
+  {
+    "kanji": "てきぱき",
+    "hira": "てきぱき",
+    "han": "Nhanh nhảu/Tháo vát",
+    "nghia": "nhanh nhảu, tháo vát"
+  },
+  {
+    "kanji": "だらだら",
+    "hira": "だらだら",
+    "han": "Lê thê/Lười biếng",
+    "nghia": "lê thê, dài dòng, lười biếng"
+  },
+  {
+    "kanji": "並びに",
+    "hira": "ならびに",
+    "han": "Và/Cũng như",
+    "nghia": "và, cũng như"
+  },
+  {
+    "kanji": "ありとあらゆる",
+    "hira": "ありとあらゆる",
+    "han": "Tất cả/Mọi",
+    "nghia": "tất cả, mỗi, mọi"
+  },
+  {
+    "kanji": "ぐずぐず",
+    "hira": "ぐずぐず",
+    "han": "Chần chừ/Lề mề",
+    "nghia": "chần chừ, lề mề"
+  },
+  {
+    "kanji": "ゆうゆう",
+    "hira": "ゆうゆう",
+    "han": "Ung dung/Thong thả",
+    "nghia": "ung dung, thong thả"
+  },
+  {
+    "kanji": "誠に",
+    "hira": "まことに",
+    "han": "Thực sự/Rất",
+    "nghia": "thực sự, rất"
+  },
+  {
+    "kanji": "もろに",
+    "hira": "もろに",
+    "han": "Trực tiếp/Hoàn toàn",
+    "nghia": "trực tiếp, hoàn toàn"
+  },
+  {
+    "kanji": "いやに",
+    "hira": "いやに",
+    "han": "Rất/Kinh khủng",
+    "nghia": "rất, kinh khủng (theo cảm giác khó chịu)"
+  },
+  {
+    "kanji": "やけに",
+    "hira": "やけに",
+    "han": "Rất/Khủng khiếp",
+    "nghia": "rất, khủng khiếp"
+  },
+  {
+    "kanji": "むやみに",
+    "hira": "むやみに",
+    "han": "Quá mức/Thiếu suy nghĩ",
+    "nghia": "quá mức, thiếu suy nghĩ"
+  },
+  {
+    "kanji": "とっさに",
+    "hira": "とっさに",
+    "han": "Đột nhiên/Tức khắc",
+    "nghia": "đột nhiên, trong khoảnh khắc"
+  },
+  {
+    "kanji": "いかに",
+    "hira": "いかに",
+    "han": "Dù thế nào/Biết bao",
+    "nghia": "dù có như thế nào, biết bao"
+  },
+  {
+    "kanji": "一律に",
+    "hira": "いちりつに",
+    "han": "Đồng nhất/Ngang bằng",
+    "nghia": "đồng nhất, ngang bằng nhau"
+  },
+  {
+    "kanji": "一応",
+    "hira": "いちおう",
+    "han": "Tạm thời/Để chắc thì",
+    "nghia": "tạm thời, để cho chắc thì"
+  },
+  {
+    "kanji": "一旦",
+    "hira": "いったん",
+    "han": "Tạm thời/Một khi",
+    "nghia": "tạm thời, một khi"
+  },
+  {
+    "kanji": "しみじみ",
+    "hira": "しみじみ",
+    "han": "Sâu sắc/Yên bình",
+    "nghia": "sâu sắc, thấm thía"
+  },
+  {
+    "kanji": "つくづく",
+    "hira": "つくづく",
+    "han": "Kỹ càng/Sâu sắc",
+    "nghia": "kỹ càng, sâu sắc"
+  },
+  {
+    "kanji": "かろうじて",
+    "hira": "かろうじて",
+    "han": "Khó khăn mới/Vừa vặn",
+    "nghia": "khó khăn lắm mới, cuối cùng thì cũng"
+  },
+  {
+    "kanji": "あえて",
+    "hira": "あえて",
+    "han": "Dám/Mạnh dạn",
+    "nghia": "dám, mạnh dạn"
+  },
+  {
+    "kanji": "ひとまず",
+    "hira": "ひとまず",
+    "han": "Tạm thời/Trước mắt",
+    "nghia": "tạm thời, trước mắt"
+  },
+  {
+    "kanji": "追って",
+    "hira": "おって",
+    "han": "Sau đó/Tiếp theo",
+    "nghia": "sau đó, tiếp theo"
+  },
+  {
+    "kanji": "いそいそ",
+    "hira": "いそいそ",
+    "han": "Hào hứng/Hăm hở",
+    "nghia": "hào hứng, hăm hở"
+  },
+  {
+    "kanji": "あくまで",
+    "hira": "あくまで",
+    "han": "Đến cùng/Tới cùng",
+    "nghia": "đến cùng, tới cùng, rất"
+  },
+  {
+    "kanji": "めっきり",
+    "hira": "めっきり",
+    "han": "Rõ rệt/Hẳn đi",
+    "nghia": "rõ rệt, thay đổi hẳn"
+  },
+  {
+    "kanji": "てっきり",
+    "hira": "てっきり",
+    "han": "Chắc chắn/Nhất định",
+    "nghia": "chắc chắn (nhưng thực ra lại không)"
+  },
+  {
+    "kanji": "いっそ",
+    "hira": "いっそ",
+    "han": "Thà/차라리",
+    "nghia": "thà, thà rằng"
+  },
+  {
+    "kanji": "きっかり",
+    "hira": "きっかり",
+    "han": "Đúng/Chính xác",
+    "nghia": "đúng, chính xác về thời gian"
+  },
+  {
+    "kanji": "きっちり",
+    "hira": "きっちり",
+    "han": "Vừa vặn/Vừa đúng",
+    "nghia": "vừa vặn, vừa đủ, vừa đúng"
+  },
+  {
+    "kanji": "現に",
+    "hira": "げんに",
+    "han": "Thực tế là",
+    "nghia": "thực tế là"
+  },
+  {
+    "kanji": "言わば",
+    "hira": "いわば",
+    "han": "Nếu để nói thì",
+    "nghia": "nếu để nói thì, nói cách khác"
+  },
+  {
+    "kanji": "じっくり",
+    "hira": "じっくり",
+    "han": "Kỹ lưỡng/Cẩn thận",
+    "nghia": "kỹ lưỡng, cẩn thận"
+  },
+  {
+    "kanji": "おろおろ",
+    "hira": "おろおろ",
+    "han": "Luống cuống/Quýnh",
+    "nghia": "luống cuống, quýnh lên"
+  },
+  {
+    "kanji": "まごまご",
+    "hira": "まごまご",
+    "han": "Bối rối/Lúng túng",
+    "nghia": "bối rối, lúng túng"
+  },
+  {
+    "kanji": "ぶつぶつ",
+    "hira": "ぶつぶつ",
+    "han": "Lầm bầm/Làu bàu",
+    "nghia": "lầm bầm, làu bàu"
+  },
+  {
+    "kanji": "うっとり",
+    "hira": "うっとり",
+    "han": "Thu hút/Chìm đắm",
+    "nghia": "thu hút, chìm đắm, ngây ngất"
+  },
+  {
+    "kanji": "やたら",
+    "hira": "やたら",
+    "han": "Quá mức/Bừa bãi",
+    "nghia": "quá mức, bừa bãi"
+  },
+  {
+    "kanji": "なにしろ",
+    "hira": "なにしろ",
+    "han": "Dù sao đi nữa",
+    "nghia": "dù sao đi nữa"
+  },
+  {
+    "kanji": "一気に",
+    "hira": "いっきに",
+    "han": "Một hơi/Một mạch",
+    "nghia": "một hơi, một mạch"
+  },
+  {
+    "kanji": "あわや",
+    "hira": "あわや",
+    "han": "Suýt thì/Xém chút",
+    "nghia": "suýt thì, xém chút nữa"
+  },
+  {
+    "kanji": "がっくり",
+    "hira": "がっくり",
+    "han": "Đau khổ/Suy sụp",
+    "nghia": "đau khổ, suy sụp"
+  },
+  {
+    "kanji": "うんざり",
+    "hira": "うんざり",
+    "han": "Chán ngấy",
+    "nghia": "chán ngấy"
+  },
+  {
+    "kanji": "きっぱり",
+    "hira": "きっぱり",
+    "han": "Dứt khoát/Thẳng thừng",
+    "nghia": "dứt khoát, thẳng thừng"
+  },
+  {
+    "kanji": "ゆったり",
+    "hira": "ゆったり",
+    "han": "Thoải mái/Thư thả",
+    "nghia": "thoải mái, thư thả"
+  },
+  {
+    "kanji": "セミナー",
+    "hira": "せみなー",
+    "han": "Hội thảo",
+    "nghia": "hội thảo"
+  },
+  {
+    "kanji": "プロジェクト",
+    "hira": "ぷろじぇくと",
+    "han": "Dự án",
+    "nghia": "dự án"
+  },
+  {
+    "kanji": "イベント",
+    "hira": "いべんと",
+    "han": "Sự kiện",
+    "nghia": "sự kiện"
+  },
+  {
+    "kanji": "フェスティバル",
+    "hira": "ふぇすてぃばる",
+    "han": "Lễ hội",
+    "nghia": "lễ hội"
+  },
+  {
+    "kanji": "パレード",
+    "hira": "ぱれーど",
+    "han": "Diễu hành",
+    "nghia": "diễu hành"
+  },
+  {
+    "kanji": "レシピ",
+    "hira": "れしぴ",
+    "han": "Công thức nấu",
+    "nghia": "công thức nấu ăn"
+  },
+  {
+    "kanji": "スパイス",
+    "hira": "すぱいす",
+    "han": "Gia vị",
+    "nghia": "gia vị"
+  },
+  {
+    "kanji": "ボリューム",
+    "hira": "ぼりゅーむ",
+    "han": "Khối lượng/Âm lượng",
+    "nghia": "lượng, âm lượng"
+  },
+  {
+    "kanji": "フィクション",
+    "hira": "ふぃくしょん",
+    "han": "Hư cấu",
+    "nghia": "hư cấu"
+  },
+  {
+    "kanji": "デビュー",
+    "hira": "でびゅー",
+    "han": "Ra mắt",
+    "nghia": "ra mắt lần đầu"
+  },
+  {
+    "kanji": "ランク",
+    "hira": "らんく",
+    "han": "Xếp hạng",
+    "nghia": "xếp hạng"
+  },
+  {
+    "kanji": "リゾート",
+    "hira": "りぞーと",
+    "han": "Nghỉ dưỡng",
+    "nghia": "khu nghỉ dưỡng"
+  },
+  {
+    "kanji": "ブランド",
+    "hira": "ぶらんど",
+    "han": "Nhãn hiệu",
+    "nghia": "nhãn hiệu, thương hiệu"
+  },
+  {
+    "kanji": "スリル",
+    "hira": "すりる",
+    "han": "Rùng mình/Ly kỳ",
+    "nghia": "cảm giác hồi hộp, ly kỳ"
+  },
+  {
+    "kanji": "ミステリー",
+    "hira": "みすてりー",
+    "han": "Bí ẩn",
+    "nghia": "bí ẩn, truyện trinh thám"
+  },
+  {
+    "kanji": "シンポジウム",
+    "hira": "しんぽじうむ",
+    "han": "Hội nghị chuyên đề",
+    "nghia": "hội nghị chuyên đề"
+  },
+  {
+    "kanji": "センサー",
+    "hira": "せんさー",
+    "han": "Cảm biến",
+    "nghia": "cảm biến"
+  },
+  {
+    "kanji": "チャレンジ",
+    "hira": "ちゃれんじ",
+    "han": "Thử thách",
+    "nghia": "thử thách, cố gắng"
+  },
+  {
+    "kanji": "リストラ",
+    "hira": "りすとら",
+    "han": "Tái cấu trúc",
+    "nghia": "tái cấu trúc, sa thải"
+  },
+  {
+    "kanji": "フリーター",
+    "hira": "ふりーたー",
+    "han": "Làm tự do",
+    "nghia": "người làm việc tự do không chính thức"
+  },
+  {
+    "kanji": "アレルギー",
+    "hira": "あれるぎー",
+    "han": "Dị ứng",
+    "nghia": "dị ứng"
+  },
+  {
+    "kanji": "インターンシップ",
+    "hira": "いんたーんしっぷ",
+    "han": "Thực tập",
+    "nghia": "thực tập"
+  },
+  {
+    "kanji": "パートナー",
+    "hira": "ぱーとなー",
+    "han": "Đối tác/Bạn đồng hành",
+    "nghia": "đối tác, bạn đồng hành"
+  },
+  {
+    "kanji": "セクハラ",
+    "hira": "せくはら",
+    "han": "Quấy rối tình dục",
+    "nghia": "quấy rối tình dục"
+  },
+  {
+    "kanji": "チームワーク",
+    "hira": "ちーむわーく",
+    "han": "Tinh thần đội nhóm",
+    "nghia": "tinh thần đội nhóm"
+  },
+  {
+    "kanji": "ボイコット",
+    "hira": "ぼいこっと",
+    "han": "Tẩy chay",
+    "nghia": "tẩy chay"
+  },
+  {
+    "kanji": "フリーマーケット",
+    "hira": "ふりーまーけっと",
+    "han": "Chợ trời",
+    "nghia": "chợ trời"
+  },
+  {
+    "kanji": "スポンサー",
+    "hira": "すぽんさー",
+    "han": "Tài trợ",
+    "nghia": "nhà tài trợ"
+  },
+  {
+    "kanji": "キャンペーン",
+    "hira": "きゃんぺーん",
+    "han": "Chiến dịch",
+    "nghia": "chiến dịch, chương trình khuyến mại"
+  },
+  {
+    "kanji": "ポピュラー",
+    "hira": "ぽぴゅらー",
+    "han": "Phổ biến",
+    "nghia": "phổ biến, được yêu thích"
+  },
+  {
+    "kanji": "カジュアル",
+    "hira": "かじゅある",
+    "han": "Bình thường/Thoải mái",
+    "nghia": "đơn giản, thoải mái (quần áo)"
+  },
+  {
+    "kanji": "フォーマル",
+    "hira": "ふぉーまる",
+    "han": "Trang trọng",
+    "nghia": "trang trọng, lễ phục"
+  },
+  {
+    "kanji": "シビア",
+    "hira": "しびあ",
+    "han": "Nghiêm trọng/Khắc nghiệt",
+    "nghia": "nghiêm trọng, khắc nghiệt"
+  },
+  {
+    "kanji": "ピンチ",
+    "hira": "ぴんち",
+    "han": "Tình thế khó khăn",
+    "nghia": "tình trạng khó khăn, khủng hoảng"
+  },
+  {
+    "kanji": "マンネリ",
+    "hira": "まんねり",
+    "han": "Rập khuôn/Lối mòn",
+    "nghia": "đi vào lối mòn, rập khuôn"
+  },
+  {
+    "kanji": "バラエティー",
+    "hira": "ばらえてぃー",
+    "han": "Đa dạng",
+    "nghia": "đa dạng, chương trình tạp kỹ"
+  },
+  {
+    "kanji": "バイタリティー",
+    "hira": "ばいたりてぃー",
+    "han": "Sức sống",
+    "nghia": "sức sống, sinh khí"
+  },
+  {
+    "kanji": "ダイナミック",
+    "hira": "だいなみっく",
+    "han": "Năng động",
+    "nghia": "năng động, năng nổ"
+  },
+  {
+    "kanji": "スタミナ",
+    "hira": "すたみな",
+    "han": "Thể lực/Sức bền",
+    "nghia": "thể lực, sức bền"
+  },
+  {
+    "kanji": "ピーク",
+    "hira": "ぴーく",
+    "han": "Đỉnh/Cao điểm",
+    "nghia": "đỉnh, cao điểm"
+  },
+  {
+    "kanji": "クライマックス",
+    "hira": "くらいまっくす",
+    "han": "Đỉnh điểm",
+    "nghia": "đỉnh điểm, cao trào"
+  },
+  {
+    "kanji": "インパクト",
+    "hira": "いんぱくと",
+    "han": "Tác động/Ấn tượng",
+    "nghia": "tác động, ấn tượng"
+  },
+  {
+    "kanji": "コントラスト",
+    "hira": "こんとらすと",
+    "han": "Tương phản",
+    "nghia": "tương phản"
+  },
+  {
+    "kanji": "ニュアンス",
+    "hira": "にゅあんす",
+    "han": "Sắc thái",
+    "nghia": "sắc thái, ý nghĩa tinh tế"
+  },
+  {
+    "kanji": "ギャップ",
+    "hira": "ぎゃっぷ",
+    "han": "Khoảng cách/Chênh lệch",
+    "nghia": "khoảng cách, chênh lệch"
+  },
+  {
+    "kanji": "ステレオタイプ",
+    "hira": "すてれおたいぷ",
+    "han": "Rập khuôn/Định kiến",
+    "nghia": "rập khuôn, định kiến"
+  },
+  {
+    "kanji": "インフラ",
+    "hira": "いんふら",
+    "han": "Cơ sở hạ tầng",
+    "nghia": "cơ sở hạ tầng"
+  },
+  {
+    "kanji": "ネットワーク",
+    "hira": "ねっとわーく",
+    "han": "Mạng lưới",
+    "nghia": "mạng lưới, các mối quan hệ"
+  },
+  {
+    "kanji": "テクノロジー",
+    "hira": "てくのろじー",
+    "han": "Công nghệ",
+    "nghia": "công nghệ"
+  },
+  {
+    "kanji": "テクニック",
+    "hira": "てくにっく",
+    "han": "Kỹ thuật",
+    "nghia": "kỹ thuật"
+  },
+  {
+    "kanji": "メカニズム",
+    "hira": "めかにずむ",
+    "han": "Cơ cấu/Cơ chế",
+    "nghia": "cơ cấu, cơ chế"
+  },
+  {
+    "kanji": "プロセス",
+    "hira": "ぷろせす",
+    "han": "Quá trình",
+    "nghia": "quá trình"
+  },
+  {
+    "kanji": "フィードバック",
+    "hira": "ふぃーどばっく",
+    "han": "Phản hồi",
+    "nghia": "phản hồi"
+  },
+  {
+    "kanji": "コンセプト",
+    "hira": "こんせぷと",
+    "han": "Khái niệm/Ý tưởng",
+    "nghia": "khái niệm, ý tưởng cốt lõi"
+  },
+  {
+    "kanji": "ポリシー",
+    "hira": "ぽりしー",
+    "han": "Chính sách",
+    "nghia": "chính sách, quan điểm"
+  },
+  {
+    "kanji": "アピール",
+    "hira": "あぴーる",
+    "han": "Kêu gọi/Thu hút",
+    "nghia": "kêu gọi, thu hút, làm nổi bật"
+  },
+  {
+    "kanji": "シミュレーション",
+    "hira": "しみゅれーしょん",
+    "han": "Mô phỏng",
+    "nghia": "mô phỏng"
+  },
+  {
+    "kanji": "タイミング",
+    "hira": "たいみんぐ",
+    "han": "Thời điểm/Căn thời gian",
+    "nghia": "căn, chọn thời điểm"
+  },
+  {
+    "kanji": "スムーズ",
+    "hira": "すむーず",
+    "han": "Trơn tru/Dễ dàng",
+    "nghia": "trơn tru, dễ dàng"
+  },
+  {
+    "kanji": "サイクル",
+    "hira": "さいくる",
+    "han": "Chu kỳ",
+    "nghia": "chu kỳ"
+  },
+  {
+    "kanji": "ジェンダー",
+    "hira": "じぇんだー",
+    "han": "Giới tính",
+    "nghia": "giới tính, bình đẳng giới"
+  },
+  {
+    "kanji": "シフト",
+    "hira": "しふと",
+    "han": "Ca/Kíp",
+    "nghia": "ca, kíp, dịch chuyển"
+  },
+  {
+    "kanji": "フォーム",
+    "hira": "ふぉーむ",
+    "han": "Tư thế/Mẫu",
+    "nghia": "tư thế, mẫu, form"
+  },
+  {
+    "kanji": "トーン",
+    "hira": "とーん",
+    "han": "Giọng điệu/Tông màu",
+    "nghia": "tông giọng, tông màu"
   }
 ]
