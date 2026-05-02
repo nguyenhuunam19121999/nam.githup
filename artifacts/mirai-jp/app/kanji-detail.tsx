@@ -24,6 +24,7 @@ import { getKanjiById, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 import { WritingPracticeModal } from "../components/WritingPracticeModal";
+import { KanjiNotesModal } from "../components/KanjiNotesModal";
 
 // Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const BLUE = "#4ECDC4";
@@ -40,6 +41,8 @@ export default function KanjiDetailScreen() {
 
   // State mở modal luyện viết khi nhấn nút bút ✎
   const [writingItem, setWritingItem] = useState<KanjiItem | null>(null);
+  // State mở modal ghi chú khi nhấn icon 📋
+  const [notesItem, setNotesItem] = useState<KanjiItem | null>(null);
 
   if (!kanji) {
     return (
@@ -110,9 +113,14 @@ export default function KanjiDetailScreen() {
               >
                 <Text style={[s.actionIcon, s.actionIconActive]}>✎</Text>
               </TouchableOpacity>
-              <View style={s.actionBtn}>
-                <Text style={s.actionIcon}>📋</Text>
-              </View>
+              {/* Nút mở modal ghi chú */}
+              <TouchableOpacity
+                style={[s.actionBtn, s.actionBtnActive]}
+                onPress={() => setNotesItem(kanji)}
+                hitSlop={6}
+              >
+                <Text style={[s.actionIcon, s.actionIconActive]}>📋</Text>
+              </TouchableOpacity>
               <View style={s.actionBtn}>
                 <Text style={s.actionIcon}>＋</Text>
               </View>
@@ -230,6 +238,12 @@ export default function KanjiDetailScreen() {
       <WritingPracticeModal
         item={writingItem}
         onClose={() => setWritingItem(null)}
+      />
+
+      {/* ── Modal ghi chú ── */}
+      <KanjiNotesModal
+        item={notesItem}
+        onClose={() => setNotesItem(null)}
       />
 
       {/* ── Thanh dưới (giống ảnh 2): nút trước / Đóng / sau ── */}
