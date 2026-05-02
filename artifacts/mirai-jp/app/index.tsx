@@ -1,5 +1,5 @@
 import { useRouter } from "expo-router";
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useMemo, useRef, useState } from "react";
 import {
   Dimensions,
   Keyboard,
@@ -8,7 +8,6 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Switch,
   Text,
   TextInput,
   TouchableOpacity,
@@ -120,39 +119,6 @@ export default function HomeScreen() {
   const [bannerIdx, setBannerIdx] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
   const bannerRef = useRef<ScrollView>(null);
-  const autoScrollRef = useRef<ReturnType<typeof setInterval> | null>(null);
-  const [autoScrollEnabled, setAutoScrollEnabled] = useState(false);
-
-  const AUTO_SCROLL_MS = 2000;
-
-  const scrollToNext = useCallback(() => {
-    setBannerIdx((prev) => {
-      const next = (prev + 1) % BANNERS.length;
-      bannerRef.current?.scrollTo({ x: next * BANNER_WIDTH, animated: true });
-      return next;
-    });
-  }, []);
-
-  useEffect(() => {
-    if (!autoScrollEnabled) {
-      if (autoScrollRef.current) clearInterval(autoScrollRef.current);
-      return;
-    }
-    autoScrollRef.current = setInterval(scrollToNext, AUTO_SCROLL_MS);
-    return () => {
-      if (autoScrollRef.current) clearInterval(autoScrollRef.current);
-    };
-  }, [autoScrollEnabled, scrollToNext]);
-
-  const pauseAutoScroll = useCallback(() => {
-    if (autoScrollRef.current) clearInterval(autoScrollRef.current);
-  }, []);
-
-  const resumeAutoScroll = useCallback(() => {
-    if (!autoScrollEnabled) return;
-    autoScrollRef.current = setInterval(scrollToNext, AUTO_SCROLL_MS);
-  }, [autoScrollEnabled, scrollToNext]);
-
   const q = normalize(query.trim());
   const vocabResults = useMemo(() => filterVocab(VOCAB, q), [q]);
 
@@ -262,11 +228,7 @@ export default function HomeScreen() {
               horizontal
               pagingEnabled
               showsHorizontalScrollIndicator={false}
-              onMomentumScrollEnd={(e) => {
-                onBannerScroll(e);
-                resumeAutoScroll();
-              }}
-              onScrollBeginDrag={pauseAutoScroll}
+              onMomentumScrollEnd={onBannerScroll}
               decelerationRate="fast"
               snapToInterval={BANNER_WIDTH}
             >
@@ -296,18 +258,6 @@ export default function HomeScreen() {
                   style={[s.dot, i === bannerIdx && s.dotActive]}
                 />
               ))}
-              <View style={s.autoScrollToggle}>
-                <Text style={s.autoScrollLabel}>
-                  {autoScrollEnabled ? "▶" : "⏸"}
-                </Text>
-                <Switch
-                  value={autoScrollEnabled}
-                  onValueChange={setAutoScrollEnabled}
-                  trackColor={{ false: "#cbd5e1", true: TEAL }}
-                  thumbColor="#fff"
-                  style={{ transform: [{ scaleX: 0.7 }, { scaleY: 0.7 }] }}
-                />
-              </View>
             </View>
           </View>
 
@@ -616,19 +566,8 @@ const s = StyleSheet.create({
   dotsRow: {
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "center",
     gap: 6,
     marginTop: 10,
-  },
-  autoScrollToggle: {
-    flexDirection: "row",
-    alignItems: "center",
-    marginLeft: 8,
-    gap: 2,
-  },
-  autoScrollLabel: {
-    fontSize: 10,
-    color: "#94a3b8",
   },
   dot: {
     width: 6,
