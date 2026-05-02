@@ -3228,5 +3228,1040 @@
         "vi": "Không cần phải nói cũng biết, sức khỏe là quan trọng nhất."
       }
     ]
+  },
+  {
+    "id": "n2-171",
+    "pattern": "〜ないものか / 〜ないものだろうか",
+    "phienAm": "ないものか/ないものだろうか",
+    "meaning": "Giá mà / Ước gì / Không thể... hay sao",
+    "level": "N2",
+    "structure": "[Vない] + ものか / ものだろうか",
+    "explanation": "Diễn tả ước muốn hay nguyện vọng của người nói đối với điều khó thực hiện.",
+    "examples": [
+      {
+        "jp": "世界中が平和になる日が来ないものだろうか。",
+        "vi": "Mong là một ngày nào đó hòa bình trên khắp thế giới này."
+      },
+      {
+        "jp": "いつも原田選手に負けている。何とかして勝てないものか、作戦を考えているところだ。",
+        "vi": "Lúc nào cũng thua tuyển thủ Harada cả. Tôi đang nghĩ chiến lược làm sao để thắng cậu ta."
+      },
+      {
+        "jp": "何とか手術をしないで治せないものだろうかと、医者に相談してみた。",
+        "vi": "Tôi đã thử bàn bạc với bác sĩ xem làm sao để có thể không phẫu thuật mà vẫn khỏi bệnh được."
+      },
+      {
+        "jp": "1日が30時間にならないものかなあ。そうすれば、好きなことができるのに。",
+        "vi": "Phải chi 1 ngày có 30 giờ nhỉ. Nếu thế thì sẽ có thể làm điều mình thích."
+      }
+    ]
+  },
+  {
+    "id": "n2-172",
+    "pattern": "〜上に",
+    "phienAm": "うえに",
+    "meaning": "Không chỉ... mà còn / Thêm vào đó",
+    "level": "N2",
+    "structure": "[V普 / Aい / Aなな / N] + 上に",
+    "explanation": "Ngoài điều A ra, còn thêm điều B nữa. Thường cả hai đều theo cùng chiều hướng.",
+    "examples": [
+      {
+        "jp": "彼の妹は美人の上に性格も良い。成績優秀な上、スポーツもよくできる。",
+        "vi": "Em gái cậu ấy không chỉ đẹp mà tính cách cũng tốt, học giỏi và chơi thể thao cũng hay nữa."
+      },
+      {
+        "jp": "今日は曇っている上に風が強いので、とても寒く感じられる。",
+        "vi": "Hôm nay trời nhiều mây, gió lại mạnh nữa nên cảm giác rất là lạnh."
+      },
+      {
+        "jp": "きのうはごちそうになった上、おみやげまでいただき、ありがとうございました。",
+        "vi": "Hôm qua không chỉ được anh chiêu đãi mà còn có quà tặng, thật sự là rất cảm ơn."
+      },
+      {
+        "jp": "いまどきの若者は敬語も使えない上、礼儀も知らない。",
+        "vi": "Giới trẻ bây giờ không chỉ không biết sử dụng kính ngữ mà còn không biết phép tắc gì cả."
+      }
+    ]
+  },
+  {
+    "id": "n2-173",
+    "pattern": "〜てしようがない / 〜てしかたがない",
+    "phienAm": "てしようがない/てしかたがない",
+    "meaning": "Rất... không chịu được / Không sao kiểm soát được",
+    "level": "N2",
+    "structure": "[Vて / Aくて / Aなで] + しようがない / しかたがない",
+    "explanation": "Cảm giác hoặc trạng thái mạnh đến mức không thể kiểm soát. Chủ ngữ thường là ngôi thứ nhất.",
+    "examples": [
+      {
+        "jp": "定年退職した父は、毎日ひまでしようがないと言っている。",
+        "vi": "Người bố đã nghỉ hưu của tôi nói rằng ngày nào cũng nhàn rỗi quá."
+      },
+      {
+        "jp": "試験の間じゅう、教室内を歩き回る先生の足音が気になってしようがなかった。",
+        "vi": "Trong suốt buổi thi tôi rất bứt rứt vì tiếng bước chân của thầy giáo vòng quanh lớp."
+      },
+      {
+        "jp": "最近寝不足で、眠くてしかたがない。",
+        "vi": "Vì gần đây tôi thiếu ngủ nên tôi rất buồn ngủ."
+      },
+      {
+        "jp": "花粉症にかかったらしく、涙が出てしかたがない。",
+        "vi": "Vì bị dị ứng phấn hoa nên nước mắt tôi cứ chảy ra."
+      },
+      {
+        "jp": "ほしくてしかたのなかったカメラをやっと手に入れた。",
+        "vi": "Cuối cùng tôi cũng có được cái máy ảnh mà tôi đã rất muốn có."
+      },
+      {
+        "jp": "祖母は孫がかわいくてしようがない様子だ。",
+        "vi": "Bà tôi có vẻ rất cưng chiều cháu."
+      }
+    ]
+  },
+  {
+    "id": "n2-174",
+    "pattern": "〜に相違ない",
+    "phienAm": "にそういない",
+    "meaning": "Chắc chắn / Không sai là",
+    "level": "N2",
+    "structure": "[V普 / Aい / Aな / N] + に相違ない",
+    "explanation": "Phán đoán chắc chắn, giống に違いない nhưng trang trọng hơn, dùng trong văn viết.",
+    "examples": [
+      {
+        "jp": "これだけの証拠がある以上、犯人はあの男に相違ないと思われる。",
+        "vi": "Dựa trên chứng cứ nhiều đây tôi cho rằng thủ phạm chắc chắn là người đàn ông đó."
+      },
+      {
+        "jp": "双方が譲歩しなければ、交渉は決裂するに相違ない。",
+        "vi": "Nếu cả hai bên không nhường nhịn, thương lượng chắc chắn sẽ đổ vỡ."
+      },
+      {
+        "jp": "あんなに毎日練習しているのだから、彼女は天才に相違ない。",
+        "vi": "Ngày nào cũng luyện tập như thế, cô ấy chắc chắn là thiên tài."
+      }
+    ]
+  },
+  {
+    "id": "n2-175",
+    "pattern": "〜ずにはいられない / 〜ないではいられない",
+    "phienAm": "ずにはいられない/ないではいられない",
+    "meaning": "Không thể không... / Tự dưng phải",
+    "level": "N2",
+    "structure": "[Vない（ず）] + にはいられない　（する→せずにはいられない）",
+    "explanation": "Dù sao đi nữa cũng không thể nhịn mà không làm điều gì đó, tự nhiên làm mất. Chủ ngữ thường là ngôi thứ nhất.",
+    "examples": [
+      {
+        "jp": "もう真夜中だったが、心配で電話をしないではいられなかった。",
+        "vi": "Đã nửa đêm rồi nhưng vì quá lo nên tôi không thể không gọi điện."
+      },
+      {
+        "jp": "驚いた彼の顔があまりにおかしかったので、失礼だとは思ったが、笑わないではいられなかった。",
+        "vi": "Bị giật mình, nét mặt anh ấy kỳ cục nên dù có phần thất lễ nhưng tôi không thể không cười."
+      },
+      {
+        "jp": "隣の家の騒音のひどさに、一言苦情を言わずにはいられなかった。",
+        "vi": "Tôi không thể không than phiền về độ kinh khủng của tiếng ồn phát ra từ nhà hàng xóm."
+      },
+      {
+        "jp": "兄は最近酒を飲みすぎている。ストレスから飲まずにはいられないらしい。",
+        "vi": "Anh trai tôi dạo này uống quá nhiều. Có vẻ như vì stress nên không thể không uống."
+      },
+      {
+        "jp": "人間は「見てはいけない」と言われると、かえって見ずにはいられなくなるものらしい。",
+        "vi": "Con người mà, hễ bị nhắc không được nhìn là dường như sẽ làm ngược lại, phải nhìn bằng được."
+      }
+    ]
+  },
+  {
+    "id": "n2-176",
+    "pattern": "〜っぱなし",
+    "phienAm": "っぱなし",
+    "meaning": "Cứ mãi / Để nguyên / Liên tục không dứt",
+    "level": "N2",
+    "structure": "[Vます] + っぱなし",
+    "explanation": "①Giữ nguyên trạng thái suốt, không thay đổi. ②Để nguyên trạng thái mà không giải quyết.",
+    "examples": [
+      {
+        "jp": "この1週間雨が降りっぱなしで、洗濯物が乾かない。",
+        "vi": "Trời mưa suốt tuần nay rồi, quần áo không khô nổi."
+      },
+      {
+        "jp": "新幹線は込んでいて、大阪まで3時間立ちっぱなしだった。",
+        "vi": "Tàu shinkansen đông nên tôi phải đứng suốt 3 tiếng đồng hồ tới Osaka."
+      },
+      {
+        "jp": "昨夜は電気もテレビもつけっぱなしで寝てしまった。",
+        "vi": "Tối qua, tôi để cả đèn cả TV mở rồi ngủ quên mất."
+      },
+      {
+        "jp": "使ったものは出しっぱなしにせず、元あったところへ返すようにしましょう。",
+        "vi": "Không mang đồ ra dùng rồi để đấy, hãy trả đồ lại vị trí cũ."
+      },
+      {
+        "jp": "文句を言われっぱなしで言い返せなかった。悔しい。",
+        "vi": "Tôi cứ bị mắng thế mà không thể nói lại được câu nào. Thật cay cú!"
+      }
+    ]
+  },
+  {
+    "id": "n2-177",
+    "pattern": "〜っこない",
+    "phienAm": "っこない",
+    "meaning": "Chắc chắn không / Không thể nào (khẩu ngữ)",
+    "level": "N2",
+    "structure": "[Vます] + っこない",
+    "explanation": "Phủ định chắc chắn mang tính khẩu ngữ mạnh, không thể nào xảy ra.",
+    "examples": [
+      {
+        "jp": "今日中に漢字を100字覚えるなんて無理だ。できっこない。",
+        "vi": "Nhớ được 100 chữ Hán trong ngày hôm nay là điều không thể. Chắc chắn là không thể."
+      },
+      {
+        "jp": "こんな話、だれも信じてくれっこないと思う。",
+        "vi": "Tôi nghĩ rằng chắc chắn không ai tin câu chuyện này của tôi đâu."
+      },
+      {
+        "jp": "「お母さんには私の気持ちなんか、わかりっこないわよ」",
+        "vi": "Mẹ chắc chắn không thể hiểu tâm trạng của tôi."
+      }
+    ]
+  },
+  {
+    "id": "n2-178",
+    "pattern": "〜げ",
+    "phienAm": "げ",
+    "meaning": "Có vẻ / Trông như thể (tâm trạng/biểu hiện)",
+    "level": "N2",
+    "structure": "[Aい（語幹）/ Aな（語幹）/ V-ます] + げ",
+    "explanation": "Diễn tả vẻ ngoài hay thái độ biểu hiện cảm xúc/trạng thái của ai đó.",
+    "examples": [
+      {
+        "jp": "息子は得意げに100点を取ったテストを差し出した。",
+        "vi": "Con trai tôi đã đưa ra bài kiểm tra được 100 điểm đầy vẻ tự hào."
+      },
+      {
+        "jp": "ハンバーガーショップは楽しげな若者たちでいっぱいだった。",
+        "vi": "Quán hamburger có nhiều bạn trẻ có vẻ đang rất vui vẻ."
+      },
+      {
+        "jp": "学生は自信なさげに答えた。",
+        "vi": "Học sinh có vẻ không tự tin trả lời câu hỏi."
+      },
+      {
+        "jp": "彼は何か言いたげな様子で立っていた。",
+        "vi": "Anh ấy đứng với bộ dạng như thể đang muốn nói gì đó."
+      }
+    ]
+  },
+  {
+    "id": "n2-179",
+    "pattern": "〜のやら / 〜ものやら",
+    "phienAm": "のやら/ものやら",
+    "meaning": "Không biết... hay... / ... hay gì",
+    "level": "N2",
+    "structure": "[V普 / Aい / Aなな / N] + のやら / ものやら",
+    "explanation": "Biểu hiện sự phân vân, không chắc chắn; thường là câu hỏi tu từ bày tỏ tâm trạng.",
+    "examples": [
+      {
+        "jp": "リさんは授業がわかっているのやらいないのやら、無表情なのでわからない。",
+        "vi": "Vì không có biểu lộ gì nên không hiểu Li có hiểu bài hay không."
+      },
+      {
+        "jp": "最近は、男なのやら女なのやらわからないかっこうの若者がいる。",
+        "vi": "Gần đây có những thanh niên bộ dạng trai chẳng ra trai, gái chẳng ra gái."
+      },
+      {
+        "jp": "子どもが帰ってこない。どこで何をしているのやら。",
+        "vi": "Con tôi chưa về. Nó đang làm gì ở đâu không biết."
+      },
+      {
+        "jp": "「あれ、めがねがない。どこに置いたものやら」",
+        "vi": "Ơ, không thấy kính đâu. Đặt đâu rồi nhỉ."
+      }
+    ]
+  },
+  {
+    "id": "n2-180",
+    "pattern": "〜だの〜だの",
+    "phienAm": "だのだの",
+    "meaning": "Nào là... nào là... / Đủ thứ (thường mang sắc thái phàn nàn)",
+    "level": "N2",
+    "structure": "[V普 / Aい / Aな / N] + だの + [V普 / Aい / Aな / N] + だの",
+    "explanation": "Liệt kê nhiều ví dụ, thường mang sắc thái phàn nàn hoặc chê bai.",
+    "examples": [
+      {
+        "jp": "私の部屋には漫画だの服だのが散らかっていて、寝る場所さえないほどだ。",
+        "vi": "Phòng tôi bừa bộn với nào là truyện tranh, nào là áo quần, đến mức không có chỗ để ngủ."
+      },
+      {
+        "jp": "彼女の話はいつも給料が少ないだの、仕事が忙しすぎるだの、文句ばかりだ。",
+        "vi": "Cô ấy lúc nào cũng phàn nàn nào là lương thấp, nào là việc quá bận rộn."
+      },
+      {
+        "jp": "彼はいつもスターになるだの映画を撮るだのと、夢のようなことばかり言っている。",
+        "vi": "Anh ta toàn nói về những thứ như ước mơ trở thành ngôi sao, làm phim này nọ."
+      },
+      {
+        "jp": "うちの親は毎日のように勉強しろだの、無駄づかいするなだの、うるさくて嫌になる。",
+        "vi": "Bố mẹ tôi mỗi ngày đều bắt tôi phải học, không được lãng phí thời gian, thật phiền phức."
+      }
+    ]
+  },
+  {
+    "id": "n2-181",
+    "pattern": "〜にこたえて / 〜にこたえる",
+    "phienAm": "にこたえて/にこたえる",
+    "meaning": "Đáp lại / Đáp ứng (kỳ vọng, yêu cầu)",
+    "level": "N2",
+    "structure": "[N] + にこたえて / にこたえ / にこたえた + N",
+    "explanation": "Đáp lại sự mong đợi, yêu cầu hay tiếng kêu gọi của đối phương.",
+    "examples": [
+      {
+        "jp": "選手たちは会場の声援にこたえて手を振った。",
+        "vi": "Các tuyển thủ vẫy tay để đáp lại tiếng cổ vũ của hội trường."
+      },
+      {
+        "jp": "学校は学生の要望にこたえ、図書室の利用時間を延長した。",
+        "vi": "Trường học đã tăng thời gian mở cửa của thư viện theo mong muốn của học sinh."
+      },
+      {
+        "jp": "今日の晩ご飯は、子どもたちのリクエストに応えてハンバーグにした。",
+        "vi": "Bữa tối này là món hamburger theo như yêu cầu của bọn trẻ."
+      },
+      {
+        "jp": "私は成績が悪く、親の期待に応えることができなかった。",
+        "vi": "Với thành tích kém tôi đã không thể đáp lại sự kỳ vọng của bố mẹ."
+      }
+    ]
+  },
+  {
+    "id": "n2-182",
+    "pattern": "〜ぬく",
+    "phienAm": "ぬく",
+    "meaning": "Làm đến cùng / Hoàn toàn / Vượt qua hết",
+    "level": "N2",
+    "structure": "[Vます] + ぬく",
+    "explanation": "Làm điều gì đó đến tận cùng, không bỏ giữa chừng.",
+    "examples": [
+      {
+        "jp": "決めたことは最後までやりぬきなさい。",
+        "vi": "Việc đã quyết thì hãy cố gắng làm đến cùng."
+      },
+      {
+        "jp": "彼は初マラソンで42.195キロを走りぬいた。",
+        "vi": "Lần đầu tham gia marathon anh ấy đã chạy hết cả 42.195km của cuộc thi."
+      },
+      {
+        "jp": "考え抜いた末に、会社を辞めて独立することにした。",
+        "vi": "Sau khi suy nghĩ đủ đường, tôi đã quyết định nghỉ việc ở công ty để làm việc độc lập."
+      },
+      {
+        "jp": "A氏は戦時下を生き抜き、戦後は祖国の復興に尽くした。",
+        "vi": "Sống sót qua thời chiến, sau chiến tranh anh A đã cống hiến cho công cuộc phục hưng đất nước."
+      }
+    ]
+  },
+  {
+    "id": "n2-183",
+    "pattern": "〜ばかりに",
+    "phienAm": "ばかりに",
+    "meaning": "Chỉ vì... mà / Chỉ tại... nên (kết quả xấu)",
+    "level": "N2",
+    "structure": "[V普 / Aい / Aなな / N] + ばかりに",
+    "explanation": "Chỉ vì một nguyên nhân đó mà dẫn đến kết quả tiêu cực, thường mang sắc thái hối hận.",
+    "examples": [
+      {
+        "jp": "私が遅刻をしたばかりに皆に迷惑をかけてしまった。",
+        "vi": "Chỉ vì đi muộn thôi mà tôi đã gây phiền phức cho mọi người."
+      },
+      {
+        "jp": "彼の一言を信じたばかりにひどい目にあった。",
+        "vi": "Chỉ vì một lần tin lời anh ta thôi mà tôi đã gặp rắc rối."
+      },
+      {
+        "jp": "背が高いばかりにどこへいっても目立ってしまう。",
+        "vi": "Chỉ vì cao thôi mà đi đâu tôi cũng bị chú ý."
+      },
+      {
+        "jp": "兄は無口なばかりによく冷たい人だと誤解されるようだ。",
+        "vi": "Chỉ vì ít nói mà anh trai tôi hay bị hiểu nhầm là người lạnh lùng."
+      },
+      {
+        "jp": "外国人であるばかりに、アパート探しには苦労した。",
+        "vi": "Chỉ vì là người nước ngoài mà tôi gặp khó khăn trong việc tìm nhà ở."
+      }
+    ]
+  },
+  {
+    "id": "n2-184",
+    "pattern": "〜ところを",
+    "phienAm": "ところを",
+    "meaning": "Đúng lúc / Ngay lúc (mở đầu lịch sự)",
+    "level": "N2",
+    "structure": "[V普 / Aい / Aなな / Nの] + ところを",
+    "explanation": "Mở đầu câu một cách lịch sự: vào đúng lúc bận, đúng lúc đang..., dùng trước lời cảm ơn, yêu cầu, xin lỗi.",
+    "examples": [
+      {
+        "jp": "お忙しいところをわざわざ来ていただき、ありがとうございました。",
+        "vi": "Thật cảm ơn anh đã cất công tới đây trong lúc bận rộn."
+      },
+      {
+        "jp": "お話中のところをちょっと失礼します。",
+        "vi": "Xin lỗi vì cắt ngang cuộc nói chuyện."
+      },
+      {
+        "jp": "お休みのところを、早朝からお電話して申し訳ありません。",
+        "vi": "Tôi rất xin lỗi vì đã gọi cho anh vào sáng sớm giữa lúc đang nghỉ ngơi."
+      }
+    ]
+  },
+  {
+    "id": "n2-185",
+    "pattern": "〜たところで",
+    "phienAm": "たところで",
+    "meaning": "Dù... cũng vô ích / Dù có... thì cũng",
+    "level": "N2",
+    "structure": "[Vた] + ところで",
+    "explanation": "Giả định điều gì đó xảy ra nhưng kết quả sẽ không như mong muốn, vô ích.",
+    "examples": [
+      {
+        "jp": "本当のことを言ったところで、だれもしんじてくれないだろう。",
+        "vi": "Dù nói thật thì cũng chẳng có ai tin đâu."
+      },
+      {
+        "jp": "この病気は手術をしたところで回復は難しいと思われる。",
+        "vi": "Căn bệnh này dù có trải qua phẫu thuật, cũng khó mà hồi phục."
+      },
+      {
+        "jp": "今から急いだところで間に合わないよ。",
+        "vi": "Giờ dù có vội cũng không kịp giờ đâu."
+      },
+      {
+        "jp": "すんでしまったことは、今さら後悔したところでどうにもならない。",
+        "vi": "Việc đã xong rồi, dẫu có hối hận cũng chẳng thay đổi được gì."
+      },
+      {
+        "jp": "彼女は体力があるから、2、3日徹夜したところで平気だろう。",
+        "vi": "Cô ấy vì có thể lực tốt nên thức trắng vài ngày cũng không sao."
+      }
+    ]
+  },
+  {
+    "id": "n2-186",
+    "pattern": "〜矢先に / 〜矢先の",
+    "phienAm": "やさきに/やさきの",
+    "meaning": "Ngay sau khi / Vừa mới... thì ngay lập tức",
+    "level": "N2",
+    "structure": "[Vた] + 矢先に / [Vようとした] + 矢先に",
+    "explanation": "①Ngay sau khi hành động A xảy ra thì B xảy ra ngay (thường bất ngờ, tiêu cực). ②Đúng lúc chuẩn bị làm thì B xảy ra.",
+    "examples": [
+      {
+        "jp": "日本へ来た矢先にバッグを置き忘れ、パスポートをなくしてしまった。",
+        "vi": "Ngay sau khi đến Nhật Bản, tôi để quên túi xách nên mất luôn hộ chiếu rồi."
+      },
+      {
+        "jp": "突然彼女が婚約解消を言い出した。式場を決めた矢先のことだった。",
+        "vi": "Đột nhiên cô ấy nói hủy hôn. Ngay sau khi quyết định nơi tổ chức hôn lễ."
+      },
+      {
+        "jp": "何度受験してもだめなので、あきらめようかと思った矢先に、合格通知が届いた。",
+        "vi": "Đã dự thi biết bao lần mà vẫn trượt, tôi định từ bỏ thì ngay sau đó thông báo thi đỗ đến."
+      },
+      {
+        "jp": "電話をかけようとした矢先に向こうからかかってきた。",
+        "vi": "Đang lúc định gọi điện thì đầu bên kia gọi đến."
+      },
+      {
+        "jp": "オフィスを出ようとした矢先に課長に呼び止められた。",
+        "vi": "Vừa lúc định đi ra ngoài thì trưởng phòng gọi lại."
+      }
+    ]
+  },
+  {
+    "id": "n2-187",
+    "pattern": "〜にとどまらず",
+    "phienAm": "にとどまらず",
+    "meaning": "Không chỉ dừng lại ở / Mở rộng ra ngoài phạm vi",
+    "level": "N2",
+    "structure": "[N / Vる / だけ] + にとどまらず",
+    "explanation": "Không giới hạn ở phạm vi đó mà còn mở rộng ra thêm.",
+    "examples": [
+      {
+        "jp": "熱帯雨林の減少の影響は、周辺地域にとどまらず、地球全体に及んでいる。",
+        "vi": "Ảnh hưởng của việc giảm rừng mưa nhiệt đới không chỉ đối với khu vực lân cận mà là còn đối với toàn địa cầu."
+      },
+      {
+        "jp": "そのアニメは子どもや若者にとどまらず、広く大人にも受け入れられた。",
+        "vi": "Bộ phim hoạt hình đó được đón nhận không chỉ bởi trẻ em và giới trẻ mà còn cả người lớn nữa."
+      },
+      {
+        "jp": "ゲームは子どもたちから読書や外遊びの時間を奪うだけにとどまらず、コミュニケーション能力の低下を招く恐れもある。",
+        "vi": "Game không chỉ lấy đi thời gian đọc sách của bọn trẻ mà còn có nguy cơ dẫn đến giảm năng lực giao tiếp."
+      },
+      {
+        "jp": "業績悪化のため、ボーナスが減額されるにとどまらず、手当までカットされた。",
+        "vi": "Vì tình hình kinh doanh xấu đi nên không những tiền thưởng bị giảm mà đến cả trợ cấp cũng bị cắt."
+      }
+    ]
+  },
+  {
+    "id": "n2-188",
+    "pattern": "〜には〜が / 〜ことは〜が",
+    "phienAm": "にはが/ことはが",
+    "meaning": "Có... thật nhưng / Làm thì có làm nhưng...",
+    "level": "N2",
+    "structure": "[V / Aい / Aな] + には/ことは + [V / Aい / Aな] + が / けど",
+    "explanation": "Xác nhận điều gì đó là đúng nhưng nêu vấn đề hoặc hạn chế kèm theo.",
+    "examples": [
+      {
+        "jp": "雨は降るには降ったが、たった3ミリだった。これでは水不足は解消しない。",
+        "vi": "Mưa thì có mưa nhưng chỉ khoảng 3mm thôi. Chừng đó không thể giải quyết được vấn đề thiếu nước."
+      },
+      {
+        "jp": "「あなたの言いたいこともわかることはわかるけど……」",
+        "vi": "Những điều bạn muốn nói hiểu thì tôi hiểu nhưng…"
+      },
+      {
+        "jp": "この道具は便利は便利だが、高すぎて売れないだろう。",
+        "vi": "Dụng cụ này tiện thì tiện thật nhưng đắt quá chắc chẳng bán được mấy."
+      },
+      {
+        "jp": "「同窓会、行った？」「行ったことは行ったんだけど、風邪気味だったんで、30分ほどで帰ってきちゃったんだ」",
+        "vi": "Đã tổ chức họp hội cựu sinh viên à? Tổ chức thì có đấy nhưng chỉ khoảng 30 phút rồi về thôi."
+      }
+    ]
+  },
+  {
+    "id": "n2-189",
+    "pattern": "〜というか〜というか",
+    "phienAm": "というかというか",
+    "meaning": "Vừa... lại vừa... / Cả A lẫn B",
+    "level": "N2",
+    "structure": "[V / N1] + というか + [V / N2] + というか",
+    "explanation": "Liệt kê các từ mô tả liên tiếp nhau, nêu cả A lẫn B để mô tả cảm nhận.",
+    "examples": [
+      {
+        "jp": "彼女はかわいいというか子どもっぽいというか、とにかく年よりはずいぶん若く見える。",
+        "vi": "Bà ấy vừa dễ thương lại trẻ con, dù là có tuổi rồi mà trông còn khá trẻ trung."
+      },
+      {
+        "jp": "「父は曲がったことが大嫌いな人です。くそまじめというか融通が利かないというか…」",
+        "vi": "Bố tôi là người rất ghét loanh quanh. Bố vừa cực kỳ nghiêm túc lại vừa cứng nhắc."
+      },
+      {
+        "jp": "「山本のやつ、会社を辞めて自転車で世界一周旅行をするんだって。勇気があるというか無謀というか。でも、ちょっとうらやましいなあ」",
+        "vi": "Cái tên Yamamoto, nghe nói nghỉ việc cái là đi du lịch bằng xe đạp vòng quanh thế giới. Vừa can đảm lại vừa liều lĩnh. Cơ mà, có chút ghen tị nhỉ!"
+      }
+    ]
+  },
+  {
+    "id": "n2-190",
+    "pattern": "〜にこしたことはない / 〜に越したことはない",
+    "phienAm": "にこしたことはない",
+    "meaning": "Không gì hơn / Tốt nhất là",
+    "level": "N2",
+    "structure": "[V辞書形 / Aい / Aなな / N] + にこしたことはない",
+    "explanation": "Điều đó là tốt nhất, không có gì tốt hơn thế nữa.",
+    "examples": [
+      {
+        "jp": "「その仕事は経験がなくてもできますか」「はい、経験はあるに越したことはありませんが、なくても大丈夫です」",
+        "vi": "Công việc đó không có kinh nghiệm cũng làm được chứ? Ừ. Có kinh nghiệm thì sẽ tốt hơn nhưng không có cũng không sao."
+      },
+      {
+        "jp": "家賃は安いにこしたことはないが、だからといって、駅から遠いのは困る。",
+        "vi": "Tiền thuê nhà rẻ thì tốt rồi nhưng nói là thế chứ ở xa nhà ga cũng phiền phức đấy."
+      },
+      {
+        "jp": "アルバイトではなく正社員になれるのなら、それに越したことはない。",
+        "vi": "Không gì hơn nếu có thể trở thành nhân viên chính thức chứ không phải chỉ làm thêm."
+      },
+      {
+        "jp": "インターネットで買い物は、用心するに越したことはない。",
+        "vi": "Mua đồ qua mạng tốt hơn hết là nên cẩn thận."
+      }
+    ]
+  },
+  {
+    "id": "n2-191",
+    "pattern": "〜（よ）うにも〜ない",
+    "phienAm": "うにもない",
+    "meaning": "Dù muốn... cũng không thể",
+    "level": "N2",
+    "structure": "[V意志形] + にも + [V可能形否定]",
+    "explanation": "Muốn làm điều gì đó nhưng điều kiện không cho phép nên không thể thực hiện được.",
+    "examples": [
+      {
+        "jp": "歯が痛くて食べようにも食べられない。",
+        "vi": "Tôi đau răng, muốn ăn nhưng không ăn nổi."
+      },
+      {
+        "jp": "大雪で電車が止まってしまい、学校へ行こうにも行けなかった。",
+        "vi": "Vì tuyết dày đặc nên xe điện phải ngừng hoạt động, tôi muốn đến trường lắm nhưng không thể."
+      },
+      {
+        "jp": "体がだるくて起きようにも起きられず、会社を休んでしまった。",
+        "vi": "Người uể oải, muốn dậy cũng không dậy nổi, đành phải nghỉ việc."
+      },
+      {
+        "jp": "最近太りぎみなのだが、運動しようにも場所も時間もない。",
+        "vi": "Gần đây tôi có vẻ béo lên nhưng muốn vận động mà chẳng có không gian, thời gian gì cả."
+      },
+      {
+        "jp": "高熱が出たのだが、すぐに病院へ行こうにも、日曜でどこも休診だった。",
+        "vi": "Tôi bị sốt cao nhưng dù muốn đến bệnh viện ngay thì vì Chủ Nhật chỗ nào cũng nghỉ khám cả."
+      }
+    ]
+  },
+  {
+    "id": "n2-192",
+    "pattern": "〜は〜にかかっている",
+    "phienAm": "はにかかっている",
+    "meaning": "Tùy thuộc vào / Phụ thuộc vào",
+    "level": "N2",
+    "structure": "[〜かどうか（は）/ 〜か（は）] + [N] + にかかっている",
+    "explanation": "Kết quả của điều gì đó phụ thuộc hoàn toàn vào nhân tố nêu ra.",
+    "examples": [
+      {
+        "jp": "合格できるかどうかは、これから1ヶ月のがんばりにかかっている。",
+        "vi": "Đỗ hay không đỗ phụ thuộc vào sự nỗ lực trong 1 tháng tính từ giờ."
+      },
+      {
+        "jp": "契約の成否は、取引先がこの条件をどう考えるかにかかっている。",
+        "vi": "Có ký được hợp đồng hay không phụ thuộc vào việc đối tác nghĩ thế nào về điều kiện này."
+      },
+      {
+        "jp": "「ぼくが幸せになれるかどうかは、君の返事にかかっているんだ」",
+        "vi": "Anh có hạnh phúc hay không phụ thuộc vào câu trả lời của em."
+      },
+      {
+        "jp": "目的が達成できるかどうかは、事前準備がどれだけしっかりできたかにかかっている。",
+        "vi": "Có đạt được mục đích hay không phụ thuộc vào khâu chuẩn bị trước kỹ càng như nào."
+      }
+    ]
+  },
+  {
+    "id": "n2-193",
+    "pattern": "〜（よ）うとしている",
+    "phienAm": "うとしている",
+    "meaning": "Sắp / Ngay trước khi (văn học)",
+    "level": "N2",
+    "structure": "[V意志形] + としている / とする",
+    "explanation": "Diễn tả khoảnh khắc ngay trước khi hành động xảy ra. Cách dùng văn học/trang trọng.",
+    "examples": [
+      {
+        "jp": "私が生まれたのは1960年、日本が高度経済成長の時代を迎えようとしている時期だった。",
+        "vi": "Tôi sinh năm 1960, giai đoạn Nhật Bản vừa bước vào thời kỳ tăng trưởng kinh tế cao."
+      },
+      {
+        "jp": "宇宙飛行士である妻が乗るロケットが、今、打ち上げられようとしている。",
+        "vi": "Tên lửa vợ tôi, nhà du hành vũ trụ lái, bây giờ đang được phóng."
+      },
+      {
+        "jp": "新しい年が明けようとしている。今年はどんな年になるだろうか。",
+        "vi": "Năm mới vừa sang. Năm nay sẽ là một năm như nào nhỉ!"
+      },
+      {
+        "jp": "病院では、生まれようとする命と消えようとする命の交代が、日々くり返されている。",
+        "vi": "Ở bệnh viện, việc những sinh linh mới ra đời thay thế cho những sinh mệnh vừa lụi tắt được lặp lại mỗi ngày."
+      }
+    ]
+  },
+  {
+    "id": "n2-194",
+    "pattern": "〜（よ）うではないか / 〜（よ）うじゃないか",
+    "phienAm": "うではないか/うじゃないか",
+    "meaning": "Hãy cùng... / Nào, hãy...",
+    "level": "N2",
+    "structure": "[V意志形] + ではないか / じゃないか",
+    "explanation": "Kêu gọi người khác cùng hành động, thường trong diễn văn hoặc khẩu hiệu.",
+    "examples": [
+      {
+        "jp": "「この問題について、みなで考えようではありませんか」",
+        "vi": "Về vấn đề này, tất cả mọi người hãy cùng suy nghĩ."
+      },
+      {
+        "jp": "一人一人がごみを減らす努力をしようではないか。",
+        "vi": "Mỗi người hãy cùng nỗ lực để giảm thiểu rác thải."
+      },
+      {
+        "jp": "「目標に向かってお互いがんばろうじゃないか！」",
+        "vi": "Hãy cùng nhau cố gắng hướng tới mục tiêu!"
+      }
+    ]
+  },
+  {
+    "id": "n2-195",
+    "pattern": "〜N上 / 〜N上で",
+    "phienAm": "じょう/うえ",
+    "meaning": "Về mặt / Xét về / Theo (lĩnh vực/góc độ)",
+    "level": "N2",
+    "structure": "[N] + 上（じょう）",
+    "explanation": "Nhìn từ góc độ, phạm vi của lĩnh vực đó. Khác với 上で (sau khi): ở đây N上 có nghĩa 'xét về mặt N'.",
+    "examples": [
+      {
+        "jp": "法律上は男女平等だが、実際にはまだいろいろな差別がある。",
+        "vi": "Về mặt pháp luật thì nam nữ đều bình đẳng nhưng trên thực tế vẫn còn nhiều sự phân biệt."
+      },
+      {
+        "jp": "実験は理論上は成功するはずだったのに失敗した。なぜだろう。",
+        "vi": "Theo lý thuyết thì thí nghiệm này chắc chắn phải thành công chứ. Tại sao lại như vậy nhỉ?"
+      },
+      {
+        "jp": "あの夫婦は表面上は仲がよさそうだが、実はそうでもないらしい。",
+        "vi": "Cặp vợ chồng kia nhìn bề ngoài có vẻ hòa thuận, thực tế thì hình như không phải vậy."
+      },
+      {
+        "jp": "彼とは仕事の上での付き合いしかない。",
+        "vi": "Với anh ấy, tôi chỉ có mối quan hệ trong công việc."
+      }
+    ]
+  },
+  {
+    "id": "n2-196",
+    "pattern": "〜ことにする（架空・仮定）",
+    "phienAm": "ことにする かくう",
+    "meaning": "Coi như / Giả như là (thực ra không phải thế)",
+    "level": "N2",
+    "structure": "[Vた / という] + ことにする / ことにした",
+    "explanation": "Đối xử với điều gì đó như thật dù thực tế không phải vậy. Khác với ことにした (quyết định).",
+    "examples": [
+      {
+        "jp": "友達に書いてもらった作文を、自分が書いたことにして提出した。",
+        "vi": "Tôi đã nộp bài văn bạn tôi làm cho như thể tự mình làm vậy."
+      },
+      {
+        "jp": "ごみだけ拾って、掃除したことにした。",
+        "vi": "Chỉ nhặt rác thôi nhưng tôi làm ra vẻ đang tổng vệ sinh vậy."
+      },
+      {
+        "jp": "「今の話は聞かなかったことにしてください」",
+        "vi": "Coi như tao chưa nói gì với mày nhé (làm như chưa nghe thấy chuyện này)!"
+      },
+      {
+        "jp": "妻「会社の高橋さんからお電話よ」夫「今、いないということにしておいてくれ」",
+        "vi": "Vợ: Có điện thoại từ anh Takahashi công ty anh đó. Chồng: Cứ nói là anh không có đây đi."
+      }
+    ]
+  },
+  {
+    "id": "n2-197",
+    "pattern": "〜かのようだ / 〜かのように",
+    "phienAm": "かのようだ/かのように",
+    "meaning": "Như thể là / Dường như (thực ra không phải)",
+    "level": "N2",
+    "structure": "[Vた / Vない / Vている / N+である] + かのようだ / かのように",
+    "explanation": "Ví von/so sánh điều A với điều B, thực tế không phải vậy nhưng trông như thể là thế.",
+    "examples": [
+      {
+        "jp": "春になると一面に花が咲き、まるで赤いじゅうたんを敷いたかのようだった。",
+        "vi": "Xuân đến hoa đua nở, như thể ai đó cố công trải lớp thảm đỏ vậy."
+      },
+      {
+        "jp": "彼の部屋はまるで泥棒に入られたかのように散らかっていた。",
+        "vi": "Căn phòng của anh ấy lộn xộn như thể có trộm đột nhập vậy."
+      },
+      {
+        "jp": "9月の終わりだというのに、夏が戻ってきたかのような暑さだ。",
+        "vi": "Cuối tháng 9 rồi mà nóng như mùa hè quay trở lại vậy."
+      },
+      {
+        "jp": "母は見てきたかのように事故現場の様子を話した。",
+        "vi": "Mẹ tôi kể về hiện trường vụ tai nạn như thể đã nhìn thấy vậy."
+      },
+      {
+        "jp": "林君は大金持ちであるかのように、気前よく友だちにごちそうした。",
+        "vi": "Hayashi thường chiêu đãi mọi người hào phóng như thể mình giàu lắm vậy."
+      }
+    ]
+  },
+  {
+    "id": "n2-198",
+    "pattern": "〜はともかく（として）/ 〜ならともかく",
+    "phienAm": "はともかく/ならともかく",
+    "meaning": "Không bàn đến / Tạm gác lại / Khỏi cần nói đến",
+    "level": "N2",
+    "structure": "[N] + はともかく / はともかくとして　/　[N] + ならともかく、[câu sau]",
+    "explanation": "①はともかく: tạm gác chuyện đó sang một bên để nói về điều khác. ②ならともかく: điều A có thể chấp nhận được nhưng điều B thì không.",
+    "examples": [
+      {
+        "jp": "このバッグは色はともかくデザインがしゃれている。",
+        "vi": "Cái túi này, nếu không nói đến màu sắc thì thiết kế rất thanh lịch."
+      },
+      {
+        "jp": "あのタレントは歌はともかく顔がかわいい。",
+        "vi": "Ca sĩ đó nếu không nói về ca hát thì gương mặt rất dễ thương."
+      },
+      {
+        "jp": "実際にできるかどうかはともかくとして、その計画は面白い。",
+        "vi": "Không bàn tới tính thực tế thì kế hoạch đó rất thú vị."
+      },
+      {
+        "jp": "今日のテストは内容はともかく、量が多くて時間が足りなかった。",
+        "vi": "Chưa cần nói đến nội dung, bài thi hôm nay quá dài nên không đủ thời gian làm bài."
+      },
+      {
+        "jp": "「小学生ならともかく、高校生のあなたがこんな漢字も読めないのですか」",
+        "vi": "Học sinh tiểu học thì không nói làm gì, nhưng bạn là học sinh trung học mà không đọc được chữ kanji này sao?"
+      }
+    ]
+  },
+  {
+    "id": "n2-199",
+    "pattern": "〜も〜ば〜も / 〜も〜なら〜も",
+    "phienAm": "もばも/もならも",
+    "meaning": "Cũng... lại cũng... / Vừa A lại vừa B",
+    "level": "N2",
+    "structure": "[N+も] + [A-ば / A-なら] + [N+も]",
+    "explanation": "Liệt kê hai điều cùng tính chất: cả A lẫn B đều có. Thường dùng để bày tỏ ý kiến về đặc điểm của sự vật/người.",
+    "examples": [
+      {
+        "jp": "会場には独身者もいれば既婚者もいた。",
+        "vi": "Trong hội trường người độc thân cũng có và người đã kết hôn cũng có."
+      },
+      {
+        "jp": "あのレストランは味も良ければ雰囲気も良く、その上値段も手ごろだ。",
+        "vi": "Nhà hàng đó hương vị cũng thơm ngon và quang cảnh cũng đẹp, thêm vào đó giá cả cũng vừa phải."
+      },
+      {
+        "jp": "彼はスポーツも得意ならピアノもプロ並みだ。",
+        "vi": "Anh ấy thể thao cũng giỏi mà trình piano cũng rất chuyên nghiệp."
+      },
+      {
+        "jp": "私は勉強も嫌いなら運動も苦手で、当然成績も悪かった。",
+        "vi": "Tôi học cũng không thích mà thể thao cũng kém nên đương nhiên là thành tích cũng kém rồi."
+      },
+      {
+        "jp": "うちにはクーラーもなければ電子レンジもありません。",
+        "vi": "Nhà tôi máy lạnh cũng không có mà lò vi sóng cũng không."
+      },
+      {
+        "jp": "あの親は子どもが迷惑をかけていても注意しようとしない。まったく、親も親なら子も子だ。",
+        "vi": "Người cha đó dù con mình gây phiền phức cũng không chịu nhắc nhở. Đúng là, bố mẹ thế nào con thế ấy."
+      }
+    ]
+  },
+  {
+    "id": "n2-200",
+    "pattern": "〜というより",
+    "phienAm": "というより",
+    "meaning": "Đúng hơn là / Nói cách khác thì",
+    "level": "N2",
+    "structure": "[V / Aい / Aな / N] + というより（も）",
+    "explanation": "Diễn đạt A nhưng B thì chính xác/phù hợp hơn. Sửa hoặc điều chỉnh cách diễn đạt.",
+    "examples": [
+      {
+        "jp": "担任の山田先生はとても若くて、先生というより友達みたいだ。",
+        "vi": "Thầy Yamada chủ nhiệm lớp tôi trẻ lắm, trông giống bạn hơn là giáo viên."
+      },
+      {
+        "jp": "社内は冷房が効きすぎていて、涼しいというより寒いくらいだった。",
+        "vi": "Trong công ty điều hòa hoạt động mạnh quá, lạnh luôn rồi chứ không còn là mát nữa."
+      },
+      {
+        "jp": "試合に負けたことは、残念というよりただ悔しい。",
+        "vi": "Thua trận đấu đó là điều đáng hổ thẹn hơn là đáng tiếc."
+      },
+      {
+        "jp": "私にとって留学は、海外で学ぶというより家を出る手段であった。",
+        "vi": "Du học đối với tôi mà nói thì là đó là cách để tôi rời khỏi nhà hơn là đi học ở nước ngoài."
+      }
+    ]
+  },
+  {
+    "id": "n2-201",
+    "pattern": "〜か〜ないかのうちに",
+    "phienAm": "かないかのうちに",
+    "meaning": "Ngay khi vừa / Hầu như đồng thời",
+    "level": "N2",
+    "structure": "[V辞書形] + か + [Vない] + かのうちに　/　[Vた] + か + [Vない] + かのうちに",
+    "explanation": "Hành động B xảy ra gần như ngay lập tức khi A vừa xong, hầu như đồng thời.",
+    "examples": [
+      {
+        "jp": "デパートのドアが開くか開かないかのうちに、待っていた客たちはバーゲン会場に殺到した。",
+        "vi": "Ngay khi cánh cửa trung tâm thương mại vừa mở ra, những vị khách đang đứng chờ đã ùa vào."
+      },
+      {
+        "jp": "けがをしたところが治ったか治らないかのうちに、また同じところを切ってしまった。",
+        "vi": "Vết thương vừa kịp lành thì tôi đã cứa vào đúng chỗ đó luôn rồi."
+      },
+      {
+        "jp": "始業ベルが鳴り終わるか終わらないかのうちに先生が教室に入ってきた。",
+        "vi": "Chuông vào giờ vừa dứt thì thầy giáo đã bước vào lớp."
+      }
+    ]
+  },
+  {
+    "id": "n2-202",
+    "pattern": "〜にしたら / 〜にすれば / 〜にしても",
+    "phienAm": "にしたら/にすれば/にしても",
+    "meaning": "Đối với / Từ lập trường của / Xét theo góc độ của",
+    "level": "N2",
+    "structure": "[立場を表す N] + にしたら / にすれば / にしても",
+    "explanation": "Đứng từ lập trường, quan điểm của đối tượng nêu ra để suy nghĩ hoặc đánh giá.",
+    "examples": [
+      {
+        "jp": "髪を茶色に染めることなど、私にしたら何でもないことだが、祖父母にすれば許せないことらしい。",
+        "vi": "Đối với tôi mà nói thì những việc như nhuộm tóc nâu thì đâu có gì đâu nhưng với ông bà thì đó có vẻ là việc không thể chấp nhận được."
+      },
+      {
+        "jp": "会社の経営が苦しいことがわかっているので、組合側にしても大幅な賃金アップは要求できないだろう。",
+        "vi": "Vì hiểu được rằng việc kinh doanh của công ty đang gặp khó khăn nên có vẻ ngay cả với công đoàn thì việc yêu cầu tăng tiền công nhiều cũng không thể."
+      },
+      {
+        "jp": "子供にしたら、2年ごとに転校させられて嫌だと思っているだろう。私にしても、引っ越しのたびに気が重い。",
+        "vi": "Với bọn trẻ thì tôi nghĩ việc cứ 2 năm phải chuyển trường là điều không hay. Về phía mình, tôi cũng cảm thấy thật nặng nề mỗi khi chuyển nhà."
+      }
+    ]
+  },
+  {
+    "id": "n2-203",
+    "pattern": "〜ては〜ては",
+    "phienAm": "てはては",
+    "meaning": "Lặp đi lặp lại / Cứ... rồi lại...",
+    "level": "N2",
+    "structure": "[Vて] + は + [V / N] + [Vて] + は + [V / N]",
+    "explanation": "Hành động A và B lặp đi lặp lại xen kẽ nhau. Cũng dùng một mình (〜ては) để chỉ hành động tái diễn.",
+    "examples": [
+      {
+        "jp": "雨が降ってはやみ、降ってはやみしている。",
+        "vi": "Mưa rồi lại tạnh, mưa rồi lại tạnh."
+      },
+      {
+        "jp": "書いては消し、書いては消しで、レポートがなかなか進まない。",
+        "vi": "Viết rồi xóa, viết rồi xóa nên mãi mà không xong báo cáo."
+      },
+      {
+        "jp": "冬休みは食っては寝、食っては寝で、3キロも太ってしまった。",
+        "vi": "Kỳ nghỉ đông, tôi cứ ăn lại ngủ, ăn lại ngủ nên béo lên tận 3kg rồi."
+      },
+      {
+        "jp": "彼女が毎年海外旅行に行っては、珍しい織物を買って帰ってくる。",
+        "vi": "Cô ấy cứ mỗi năm đi du lịch nước ngoài lại mua về những loại vải hiếm."
+      },
+      {
+        "jp": "留学のために貯金をしているのだが、なかなかたまらない。貯金通帳を見てはため息をつく毎日だ。",
+        "vi": "Tôi đang để dành tiền để đi du học nhưng mãi mà không dành được. Mỗi ngày, cứ nhìn đến tài khoản tiết kiệm tôi lại thở dài."
+      }
+    ]
+  },
+  {
+    "id": "n2-204",
+    "pattern": "〜と見えて / 〜と見え",
+    "phienAm": "とみえて",
+    "meaning": "Có vẻ là / Dường như (suy đoán từ biểu hiện bên ngoài)",
+    "level": "N2",
+    "structure": "①[V / Aい / Aな] + と見えて / と見え　②[〜ようだ / そうだ] + に見えて（対比）",
+    "explanation": "①Suy đoán nguyên nhân từ những gì quan sát được. ②Trông có vẻ A nhưng thực ra không phải thế (đối lập).",
+    "examples": [
+      {
+        "jp": "父は機嫌が悪いと見えて、朝から一言も口をきかない。",
+        "vi": "Có vẻ bố tôi tâm trạng không tốt, suốt từ sáng chưa thấy nói một lời."
+      },
+      {
+        "jp": "そのお菓子がよほどおいしかったと見えて、子供たちは一つ残さず食べてしまった。",
+        "vi": "Có vẻ kẹo đó ngon lắm, bọn trẻ đã ăn hết không sót cái nào."
+      },
+      {
+        "jp": "あの会社は景気がいいと見えて、夜遅くまで明かりがついている。",
+        "vi": "Công ty đó có vẻ làm ăn tốt, đèn điện bật đến tận khuya."
+      },
+      {
+        "jp": "この料理は油っこそうに見えて、意外にあっさりしている。",
+        "vi": "Món này trông có vẻ béo nhưng không ngờ nó rất thanh."
+      },
+      {
+        "jp": "一見悩みがないように見えて、実はいろいろな問題を抱えている人も多い。",
+        "vi": "Nhiều người trông không có vẻ gì là phiền não nhưng thực ra đang gặp rất nhiều vấn đề."
+      }
+    ]
+  },
+  {
+    "id": "n2-205",
+    "pattern": "〜というと / 〜といえば / 〜といったら",
+    "phienAm": "というと/といえば/といったら",
+    "meaning": "Nói đến / Nhắc đến / Hễ nói về",
+    "level": "N2",
+    "structure": "[N / câu] + というと / といえば / といったら",
+    "explanation": "①Liên tưởng đến điều gì khi nhắc đến chủ đề đó. ②Nêu ví dụ tiêu biểu. ③Lý giải, cắt nghĩa. ④といったら: diễn đạt cảm xúc mạnh.",
+    "examples": [
+      {
+        "jp": "「佐藤先生といえば、今度本を出版なさるそうだよ」",
+        "vi": "Nói đến thầy Satou mới nhớ nghe nói lần này thầy xuất bản sách đó."
+      },
+      {
+        "jp": "日本では花と言えば桜だ。",
+        "vi": "Ở Nhật Bản, hễ nói đến hoa là nghĩ ngay đến hoa anh đào."
+      },
+      {
+        "jp": "なぜこの大学を選んだかというと、学習環境が整っているからです。",
+        "vi": "Nếu nói tại sao lại chọn trường đại học này thì là vì môi trường giáo dục được trang bị tốt."
+      },
+      {
+        "jp": "そのときの彼の顔といったら、幽霊でも見たかのように真っ青だった。",
+        "vi": "Nói đến mặt anh ta lúc đó thì xanh lè như ma vậy."
+      },
+      {
+        "jp": "恋人と別れたときの寂しさといったら、泣きたいぐらいだった。",
+        "vi": "Nói về nỗi cô đơn khi chia tay người yêu thì đến nỗi muốn khóc luôn."
+      }
+    ]
+  },
+  {
+    "id": "n2-206",
+    "pattern": "〜といっても",
+    "phienAm": "といっても",
+    "meaning": "Dù nói là... / Tuy nói thế nhưng không đến mức đó",
+    "level": "N2",
+    "structure": "[V / Aい / Aな / N] + といっても",
+    "explanation": "Thừa nhận điều A là đúng, nhưng điều chỉnh lại kỳ vọng: thực ra không đến mức độ đó.",
+    "examples": [
+      {
+        "jp": "「勉強したといっても、初級レベルだけなんですよ」",
+        "vi": "Nói là học chứ chỉ ở trình độ sơ cấp thôi."
+      },
+      {
+        "jp": "「でも、遠いといっても歩いて15分なんでしょ」",
+        "vi": "Nói là xa chứ đi bộ 15 phút thôi mà."
+      },
+      {
+        "jp": "このあたりは一戸建てが多い。しかし一戸建てといっても、敷地はせいぜい90平方メートルぐらいだ。",
+        "vi": "Khu vực này căn hộ biệt lập nhiều. Nhưng nói là biệt lập chứ mặt bằng tối đa cũng chỉ khoảng 90 mét vuông."
+      },
+      {
+        "jp": "「週末は時々旅行に行くんです。といっても日帰りですけどね」",
+        "vi": "Cuối tuần thi thoảng tôi đi du lịch. Nói vậy chứ cũng chỉ là đi trong ngày thôi."
+      }
+    ]
+  },
+  {
+    "id": "n2-207",
+    "pattern": "〜のみ",
+    "phienAm": "のみ",
+    "meaning": "Chỉ ~ / Chỉ ~ thôi (văn viết trang trọng)",
+    "level": "N2",
+    "structure": "[N / V普 / Aい] + のみ",
+    "explanation": "のみ = だけ (văn viết trang trọng). Dùng để giới hạn: chỉ điều đó, không gì khác.",
+    "examples": [
+      {
+        "jp": "野球の全国大会に出場できるのは1県に1校のみだ。",
+        "vi": "Việc tham dự đại hội bóng chày toàn quốc thì mỗi tỉnh chỉ được 1 trường tham dự."
+      },
+      {
+        "jp": "今はただ、父が無事であるよう、祈るのみです。",
+        "vi": "Bây giờ tôi chỉ cầu mong bố tôi bình an vô sự thôi."
+      },
+      {
+        "jp": "指導者はただ厳しいのみではいけない。それでは若者はついてこないだろう。",
+        "vi": "Người lãnh đạo đừng lúc nào cũng nghiêm khắc. Như thế thì người trẻ sẽ không theo đâu."
+      },
+      {
+        "jp": "最近はペーパーテストのみではなく、面接も行う大学が増えた。",
+        "vi": "Gần đây không chỉ thi viết, các trường đại học tổ chức phỏng vấn cũng tăng."
+      },
+      {
+        "jp": "T大学合格には、ただ努力あるのみ！",
+        "vi": "Để thi đỗ Đại học T, chỉ có cách nỗ lực thôi!"
+      }
+    ]
   }
 ]
