@@ -136,7 +136,11 @@ export default function GrammarScreen() {
       });
       return;
     }
-    Alert.alert("Hán tự", "Phần Hán tự sẽ được cập nhật sớm.");
+    // Chuyển sang trang Kanji với đúng cấp độ hiện tại
+    router.replace({
+      pathname: "/kanji",
+      params: { level, title: `Học Kanji ${level}` },
+    });
   };
 
   return (
