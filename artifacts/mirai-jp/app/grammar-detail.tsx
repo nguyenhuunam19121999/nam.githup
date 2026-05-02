@@ -23,8 +23,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
-const BLUE = "#2F80ED";
-const BLUE_LIGHT = "#3B82F6";
+const BLUE = "#4ECDC4";
+const BLUE_LIGHT = "#7EDDD9";
 const ORANGE = "#F59E0B";
 
 export default function GrammarDetailScreen() {

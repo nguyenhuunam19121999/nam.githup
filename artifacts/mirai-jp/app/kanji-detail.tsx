@@ -23,8 +23,8 @@ import { getKanjiById } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 
-const BLUE = "#2F80ED";
-const BLUE_DARK = "#1E40AF";
+const BLUE = "#4ECDC4";
+const BLUE_DARK = "#3BB3AC";
 
 export default function KanjiDetailScreen() {
   const router = useRouter();

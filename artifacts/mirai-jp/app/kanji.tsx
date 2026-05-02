@@ -22,7 +22,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 
-const BLUE = "#2F80ED";
+const BLUE = "#4ECDC4";
 const RED = "#E03131";
 
 export default function KanjiListScreen() {
@@ -222,7 +222,7 @@ const s = StyleSheet.create({
     letterSpacing: 0.5,
     marginBottom: 4,
   },
-  meaning: { fontSize: 13, color: "#2563eb" },
+  meaning: { fontSize: 13, color: "#4ECDC4" },
 
   empty: { padding: 30, alignItems: "center" },
   emptyText: { color: "#64748b" },

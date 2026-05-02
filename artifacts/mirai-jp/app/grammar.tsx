@@ -25,8 +25,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getGrammar, type GrammarItem } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
-const BLUE = "#2F80ED";
-const BLUE_DARK = "#1F5FBF";
+const BLUE = "#4ECDC4";
+const BLUE_DARK = "#3BB3AC";
 
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;
 type Level = (typeof LEVELS)[number];

@@ -109,7 +109,7 @@ function ToggleRow({
       <Switch
         value={value}
         onValueChange={onToggle}
-        trackColor={{ false: "#cbd5e0", true: "#34c759" }}
+        trackColor={{ false: "#cbd5e0", true: "#4ECDC4" }}
         thumbColor="#fff"
         ios_backgroundColor="#cbd5e0"
       />
@@ -1148,7 +1148,7 @@ export default function FlashcardScreen() {
                         s.td,
                         {
                           flex: 1.3,
-                          color: "#2b6cb0",
+                          color: "#3BB3AC",
                           fontWeight: "600",
                           fontSize: 12,
                         },
@@ -1223,7 +1223,7 @@ const s = StyleSheet.create({
     justifyContent: "center",
     marginRight: 10,
   },
-  backBtnText: { fontSize: 28, color: "#3b82f6", lineHeight: 30 },
+  backBtnText: { fontSize: 28, color: "#4ECDC4", lineHeight: 30 },
   titleBlock: { flex: 1, marginRight: 10 },
   title: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
   subtitle: { fontSize: 13, color: "#718096" },
@@ -1292,7 +1292,7 @@ const s = StyleSheet.create({
     marginBottom: 12,
   },
   menuSheetTitle: { fontSize: 16, fontWeight: "800", color: "#0f172a" },
-  menuSheetClose: { fontSize: 14, fontWeight: "600", color: "#3182ce" },
+  menuSheetClose: { fontSize: 14, fontWeight: "600", color: "#4ECDC4" },
   autoScrollHint: {
     fontSize: 12,
     color: "#64748b",
@@ -1314,8 +1314,8 @@ const s = StyleSheet.create({
     backgroundColor: "#f8fafc",
   },
   autoScrollChipActive: {
-    backgroundColor: "#3182ce",
-    borderColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
+    borderColor: "#4ECDC4",
   },
   autoScrollChipDisabled: { opacity: 0.45 },
   autoScrollChipText: {
@@ -1356,7 +1356,7 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   modeActive: {
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
   },
   modeBtnText: {
     fontSize: 13,
@@ -1382,7 +1382,7 @@ const s = StyleSheet.create({
     marginRight: 10,
   },
   topicChipActive: {
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
   },
   topicText: {
     fontSize: 13,
@@ -1438,7 +1438,7 @@ const s = StyleSheet.create({
   },
   progressFill: {
     height: "100%",
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
     borderRadius: 99,
   },
 
@@ -1460,7 +1460,7 @@ const s = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#e2e8f0",
   },
-  cardBack: { backgroundColor: "#2b6cb0" },
+  cardBack: { backgroundColor: "#3BB3AC" },
 
   fieldBlock: { width: "100%", alignItems: "center", marginBottom: 6 },
   fieldLbl: {
@@ -1512,14 +1512,14 @@ const s = StyleSheet.create({
   },
   btnNext: {
     flex: 1,
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
     paddingVertical: 11,
     borderRadius: 10,
     alignItems: "center",
   },
   btnShuffle: {
     flex: 1,
-    backgroundColor: "#48bb78",
+    backgroundColor: "#4ECDC4",
     paddingVertical: 11,
     borderRadius: 10,
     alignItems: "center",
@@ -1533,7 +1533,7 @@ const s = StyleSheet.create({
   },
   btnList: {
     width: "100%",
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
     paddingVertical: 13,
     borderRadius: 12,
     alignItems: "center",
@@ -1545,7 +1545,7 @@ const s = StyleSheet.create({
   /* Table */
   tableHeader: {
     flexDirection: "row",
-    backgroundColor: "#2b6cb0",
+    backgroundColor: "#3BB3AC",
     paddingVertical: 12,
     paddingHorizontal: 8,
     borderTopLeftRadius: 12,
@@ -1583,7 +1583,7 @@ const s = StyleSheet.create({
     marginBottom: 24,
   },
   quizCounter: { fontSize: 16, fontWeight: "600", color: "#4a5568" },
-  quizScore: { fontSize: 16, fontWeight: "700", color: "#48bb78" },
+  quizScore: { fontSize: 16, fontWeight: "700", color: "#4ECDC4" },
   questionCard: {
     backgroundColor: "#fff",
     borderRadius: 20,
@@ -1608,8 +1608,8 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   correctOption: {
-    backgroundColor: "#48bb78",
-    borderColor: "#38a169",
+    backgroundColor: "#4ECDC4",
+    borderColor: "#3BB3AC",
     padding: 16,
     borderRadius: 12,
     borderWidth: 2,
@@ -1625,14 +1625,14 @@ const s = StyleSheet.create({
   },
   optionText: { fontSize: 16, fontWeight: "500", color: "#2d3748" },
   explainBtn: { alignItems: "center", padding: 12 },
-  explainText: { fontSize: 14, color: "#3182ce" },
+  explainText: { fontSize: 14, color: "#4ECDC4" },
   explanationBox: {
     backgroundColor: "#ebf8ff",
     padding: 16,
     borderRadius: 12,
     marginTop: 12,
   },
-  explanationTitle: { fontWeight: "700", color: "#2b6cb0", marginBottom: 8 },
+  explanationTitle: { fontWeight: "700", color: "#3BB3AC", marginBottom: 8 },
   explanationContent: { fontSize: 14, color: "#2d3748" },
   resultCard: {
     backgroundColor: "#fff",
@@ -1648,13 +1648,13 @@ const s = StyleSheet.create({
   resultScore: {
     fontSize: 48,
     fontWeight: "800",
-    color: "#3182ce",
+    color: "#4ECDC4",
     marginBottom: 8,
   },
   resultPercentage: { fontSize: 20, color: "#4a5568", marginBottom: 16 },
   resultMessage: { fontSize: 18, marginBottom: 24 },
   quizExitBtn: {
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
     paddingVertical: 14,
     paddingHorizontal: 32,
     borderRadius: 12,
@@ -1680,7 +1680,7 @@ const s = StyleSheet.create({
     marginBottom: 16,
   },
   practiceCounter: { fontSize: 16, fontWeight: "600", color: "#4a5568" },
-  practiceScore: { fontSize: 16, fontWeight: "700", color: "#48bb78" },
+  practiceScore: { fontSize: 16, fontWeight: "700", color: "#4ECDC4" },
   practiceInput: {
     backgroundColor: "#fff",
     borderWidth: 2,
@@ -1691,7 +1691,7 @@ const s = StyleSheet.create({
     marginBottom: 20,
   },
   checkBtn: {
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
     paddingVertical: 14,
     borderRadius: 12,
     alignItems: "center",
@@ -1741,7 +1741,7 @@ const s = StyleSheet.create({
     borderRadius: 16,
     width: "100%",
   },
-  statValue: { fontSize: 40, fontWeight: "800", color: "#2b6cb0" },
+  statValue: { fontSize: 40, fontWeight: "800", color: "#3BB3AC" },
   statLabel: { fontSize: 14, color: "#4a5568", marginTop: 4 },
   statsDivider: {
     height: 1,
@@ -1762,9 +1762,9 @@ const s = StyleSheet.create({
     marginBottom: 10,
   },
   statRowLabel: { fontSize: 14, color: "#4a5568" },
-  statRowValue: { fontSize: 14, fontWeight: "700", color: "#2b6cb0" },
+  statRowValue: { fontSize: 14, fontWeight: "700", color: "#3BB3AC" },
   closeStatsBtn: {
-    backgroundColor: "#3182ce",
+    backgroundColor: "#4ECDC4",
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 10,
