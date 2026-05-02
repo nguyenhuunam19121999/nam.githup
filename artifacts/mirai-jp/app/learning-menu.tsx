@@ -153,7 +153,8 @@ export default function LearningMenuScreen() {
         pathname: "/kanji",
         params: {
           ...(level ? { level } : {}),
-          ...(title ? { title: `Học Kanji ${level || ""}`.trim() } : {}),
+          ...(bookId ? { bookId } : {}),
+          ...(title ? { title: `Học Kanji ${title || level || ""}`.trim() } : {}),
         },
       });
     } else {

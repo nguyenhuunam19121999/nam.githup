@@ -27,7 +27,7 @@ import {
   View,
 } from "react-native";
 
-import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
+import { getKanji, getKanjiByBook, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 import { WritingPracticeModal } from "../components/WritingPracticeModal";
@@ -148,15 +148,19 @@ function StatsModal({
 export default function KanjiListScreen() {
   const router = useRouter();
   const { scopedKey } = useAuth();
-  const params = useLocalSearchParams<{ level?: string; title?: string }>();
+  const params = useLocalSearchParams<{ level?: string; bookId?: string; title?: string }>();
   const level = (typeof params.level === "string" ? params.level : "N5").toUpperCase();
+  const bookId = typeof params.bookId === "string" ? params.bookId : "";
   const title =
     typeof params.title === "string" && params.title
       ? params.title
       : `Học Kanji ${level}`;
 
-  // Dữ liệu gốc (chưa xáo trộn)
-  const BASE: KanjiItem[] = useMemo(() => getKanji(level), [level]);
+  // Dữ liệu gốc (chưa xáo trộn) — ưu tiên bookId nếu có
+  const BASE: KanjiItem[] = useMemo(
+    () => (bookId ? (getKanjiByBook(bookId) ?? getKanji(level)) : getKanji(level)),
+    [bookId, level],
+  );
   // Dữ liệu hiển thị (có thể đã xáo trộn)
   const [items, setItems] = useState<KanjiItem[]>([]);
   useEffect(() => { setItems([...BASE]); }, [BASE]);
@@ -175,24 +179,24 @@ export default function KanjiListScreen() {
   const [bookmarks, setBookmarks] = useState<Set<string>>(new Set());
   const [showBookmarksOnly, setShowBookmarksOnly] = useState(false);
 
+  // Key lưu bookmark — dùng bookId nếu có, ngược lại dùng level
+  const bmKey = bookId ? `kanjiBookmarks::${bookId}` : `kanjiBookmarks::${level}`;
+
   // Tải bookmark từ AsyncStorage
   useEffect(() => {
     (async () => {
       try {
-        const raw = await AsyncStorage.getItem(scopedKey(`kanjiBookmarks::${level}`));
+        const raw = await AsyncStorage.getItem(scopedKey(bmKey));
         setBookmarks(raw ? new Set(JSON.parse(raw)) : new Set());
       } catch {
         /* ignore */
       }
     })();
-  }, [scopedKey, level]);
+  }, [scopedKey, bmKey]);
 
   const saveBookmarks = async (bm: Set<string>) => {
     try {
-      await AsyncStorage.setItem(
-        scopedKey(`kanjiBookmarks::${level}`),
-        JSON.stringify([...bm]),
-      );
+      await AsyncStorage.setItem(scopedKey(bmKey), JSON.stringify([...bm]));
     } catch {
       /* ignore */
     }

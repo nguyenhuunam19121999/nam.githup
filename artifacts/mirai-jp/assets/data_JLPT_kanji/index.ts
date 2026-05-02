@@ -7,6 +7,7 @@
 
 import n1 from "./n1.json";
 import n2 from "./n2.json";
+import n2Mimikara from "./n2_mimikara.json";
 import n3 from "./n3.json";
 import n4 from "./n4.json";
 import n5 from "./n5.json";
@@ -55,6 +56,11 @@ export const KANJI_BY_LEVEL: Record<string, KanjiItem[]> = {
   N1: n1 as KanjiItem[],
 };
 
+/** Kanji theo sách giáo trình — bookId giống với vocab */
+export const KANJI_BY_BOOK: Record<string, KanjiItem[]> = {
+  "mimikara-n2": n2Mimikara as KanjiItem[],
+};
+
 export const ALL_KANJI: KanjiItem[] = [
   ...(n5 as KanjiItem[]),
   ...(n4 as KanjiItem[]),
@@ -68,6 +74,11 @@ export function getKanji(level?: string): KanjiItem[] {
   const lvl = (level ?? "").toUpperCase();
   if (KANJI_BY_LEVEL[lvl]) return KANJI_BY_LEVEL[lvl];
   return ALL_KANJI;
+}
+
+/** Trả về danh sách Kanji theo bookId (ví dụ "mimikara-n2") */
+export function getKanjiByBook(bookId: string): KanjiItem[] | null {
+  return KANJI_BY_BOOK[bookId] ?? null;
 }
 
 export function getKanjiById(id: string): KanjiItem | undefined {
