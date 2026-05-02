@@ -24,6 +24,58 @@ import {
 import { getGrammar, type GrammarItem } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
+// ─── Modal thống kê ngữ pháp ─────────────────────────────────────────────────
+function GrammarStatsModal({
+  visible,
+  onClose,
+  totalCount,
+  level,
+}: {
+  visible: boolean;
+  onClose: () => void;
+  totalCount: number;
+  level: string;
+}) {
+  return (
+    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
+      <View style={ms.overlay}>
+        <View style={ms.sheet}>
+          {/* Tay cầm */}
+          <View style={ms.handle} />
+          <Text style={ms.title}>📊 Thống kê học Ngữ pháp</Text>
+
+          {/* Cấp độ */}
+          <View style={ms.card}>
+            <Text style={ms.cardValue}>{level}</Text>
+            <Text style={ms.cardLabel}>Cấp độ JLPT đang học</Text>
+          </View>
+
+          {/* Tổng số mẫu */}
+          <View style={ms.card}>
+            <Text style={ms.cardValue}>{totalCount}</Text>
+            <Text style={ms.cardLabel}>Tổng số mẫu ngữ pháp</Text>
+          </View>
+
+          <View style={ms.divider} />
+          <Text style={ms.sectionTitle}>🎯 Kết quả luyện tập</Text>
+          <View style={ms.row}>
+            <Text style={ms.rowLabel}>Quiz ngữ pháp:</Text>
+            <Text style={ms.rowVal}>Sắp ra mắt</Text>
+          </View>
+          <View style={ms.row}>
+            <Text style={ms.rowLabel}>Ghi chú đã lưu:</Text>
+            <Text style={ms.rowVal}>Sắp ra mắt</Text>
+          </View>
+
+          <TouchableOpacity style={ms.closeBtn} onPress={onClose} activeOpacity={0.85}>
+            <Text style={ms.closeBtnText}>Đóng</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </Modal>
+  );
+}
+
 // Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const BLUE = "#4ECDC4";
 // Phiên bản tối hơn của teal — dùng cho viền, hover
@@ -107,6 +159,8 @@ export default function GrammarScreen() {
 
   const [level, setLevel] = useState<Level>(initialLevel);
   const [type, setType] = useState<TypeId>("grammar");
+  // Modal thống kê
+  const [showStats, setShowStats] = useState(false);
 
   // Bộ lọc hiển thị (3 checkbox)
   const [showVocab, setShowVocab] = useState(true); // hiển thị mẫu ngữ pháp (kanji)
@@ -162,7 +216,7 @@ export default function GrammarScreen() {
 
         {/* Nút Thống kê + Menu */}
         <View style={s.headerBtns}>
-          <TouchableOpacity style={s.headerActionBtn} onPress={() => Alert.alert("Thống kê", "Tính năng sắp ra mắt.")} activeOpacity={0.8}>
+          <TouchableOpacity style={s.headerActionBtn} onPress={() => setShowStats(true)} activeOpacity={0.8}>
             <Text style={s.statsBtnText}>📊</Text>
           </TouchableOpacity>
           <TouchableOpacity style={s.headerActionBtn} onPress={() => Alert.alert("Tuỳ chọn", "Tính năng sắp ra mắt.")} activeOpacity={0.8}>
@@ -285,6 +339,13 @@ export default function GrammarScreen() {
         onSelect={setLevel}
         onClose={() => setLevelSheet(false)}
         renderLabel={(v) => v}
+      />
+      {/* ── Modal thống kê ── */}
+      <GrammarStatsModal
+        visible={showStats}
+        onClose={() => setShowStats(false)}
+        totalCount={items.length}
+        level={level}
       />
       <BottomTabBar />
     </View>
@@ -444,4 +505,67 @@ const sheet = StyleSheet.create({
   optionActive: { backgroundColor: "#f1f5f9" },
   optionText: { color: "#cbd5e1", fontSize: 18, fontWeight: "500" },
   optionTextActive: { color: "#0f172a", fontWeight: "700", fontSize: 20 },
+});
+
+// ── Styles modal thống kê ────────────────────────────────────────────────────
+const ms = StyleSheet.create({
+  overlay: {
+    flex: 1,
+    backgroundColor: "rgba(0,0,0,0.45)",
+    justifyContent: "flex-end",
+  },
+  sheet: {
+    backgroundColor: "#fff",
+    borderTopLeftRadius: 24,
+    borderTopRightRadius: 24,
+    paddingHorizontal: 20,
+    paddingBottom: 36,
+    paddingTop: 12,
+  },
+  handle: {
+    alignSelf: "center",
+    width: 40,
+    height: 4,
+    borderRadius: 2,
+    backgroundColor: "#e2e8f0",
+    marginBottom: 16,
+  },
+  title: {
+    fontSize: 18,
+    fontWeight: "800",
+    color: "#0f172a",
+    marginBottom: 16,
+    textAlign: "center",
+  },
+  card: {
+    backgroundColor: "#f1f5f9",
+    borderRadius: 14,
+    padding: 16,
+    alignItems: "center",
+    marginBottom: 10,
+  },
+  cardValue: { fontSize: 28, fontWeight: "900", color: "#0f172a" },
+  cardLabel: { fontSize: 13, color: "#64748b", marginTop: 4 },
+  divider: { height: 1, backgroundColor: "#e2e8f0", marginVertical: 14 },
+  sectionTitle: {
+    fontSize: 15,
+    fontWeight: "700",
+    color: "#0f172a",
+    marginBottom: 10,
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    paddingVertical: 6,
+  },
+  rowLabel: { fontSize: 14, color: "#475569" },
+  rowVal: { fontSize: 14, fontWeight: "700", color: "#0f172a" },
+  closeBtn: {
+    marginTop: 20,
+    backgroundColor: BLUE,
+    borderRadius: 14,
+    paddingVertical: 14,
+    alignItems: "center",
+  },
+  closeBtnText: { color: "#fff", fontWeight: "700", fontSize: 16 },
 });
