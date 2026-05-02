@@ -123,7 +123,7 @@ export function WritingPracticeModal({
           {/* Tham khảo thứ tự nét */}
           <Text style={ws.sectionLabel}>📖 Thứ tự nét tham khảo</Text>
           <View style={ws.strokeRef}>
-            <KanjiStrokeOrder kanji={item.kanji} size={130} />
+            <KanjiStrokeOrder kanji={item.kanji} size={130} containerSize={170} />
           </View>
 
           {/* Canvas vẽ tay */}
