@@ -5,7 +5,7 @@
     "hanViet": "Nhất ban",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 1,
     "level": "N2",
     "meanings": [
       "nói chung, phổ biến"
@@ -26,7 +26,8 @@
         "reading": "いっぽう",
         "vi": "một mặt, mặt khác"
       }
-    ]
+    ],
+    "frequency": 2
   },
   {
     "id": "n2mk-0002",
@@ -34,7 +35,7 @@
     "hanViet": "Đinh ninh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 2,
     "level": "N2",
     "meanings": [
       "lịch sự, chu đáo"
@@ -53,7 +54,7 @@
     "hanViet": "Thượng phẩm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "tao nhã, lịch sự"
@@ -74,7 +75,8 @@
         "reading": "たちあがる",
         "vi": "đứng dậy, khởi dậy"
       }
-    ]
+    ],
+    "frequency": 7
   },
   {
     "id": "n2mk-0004",
@@ -82,7 +84,7 @@
     "hanViet": "Hạ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "phía dưới"
@@ -103,7 +105,8 @@
         "reading": "ていかする",
         "vi": "giảm xuống, suy giảm"
       }
-    ]
+    ],
+    "frequency": 11
   },
   {
     "id": "n2mk-0005",
@@ -111,7 +114,7 @@
     "hanViet": "Bất an",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "lo lắng, bất an"
@@ -140,7 +143,7 @@
     "hanViet": "Dữ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "cho, đưa, gây ra"
@@ -159,7 +162,7 @@
     "hanViet": "Thế giới quan",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "thế giới quan"
@@ -178,7 +181,7 @@
     "hanViet": "Lưỡng thân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "cha mẹ, bố mẹ"
@@ -197,7 +200,7 @@
     "hanViet": "Tập trung lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "khả năng tập trung"
@@ -213,7 +216,8 @@
         "reading": "なか",
         "vi": "bên trong, giữa"
       }
-    ]
+    ],
+    "frequency": 6
   },
   {
     "id": "n2mk-0010",
@@ -221,7 +225,7 @@
     "hanViet": "Vượt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "vượt qua"
@@ -250,7 +254,7 @@
     "hanViet": "Loạn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "rối loạn, lộn xộn"
@@ -274,7 +278,7 @@
     "hanViet": "Dự định",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "dự định, kế hoạch"
@@ -293,7 +297,7 @@
     "hanViet": "Cạnh tranh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "cạnh tranh"
@@ -322,7 +326,7 @@
     "hanViet": "Sự cố",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "tai nạn, sự cố"
@@ -343,7 +347,8 @@
         "reading": "しごと",
         "vi": "công việc"
       }
-    ]
+    ],
+    "frequency": 10
   },
   {
     "id": "n2mk-0015",
@@ -351,7 +356,7 @@
     "hanViet": "Hỗ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "lẫn nhau, qua lại"
@@ -380,7 +385,7 @@
     "hanViet": "Vong",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "mất đi, mất người thân"
@@ -399,7 +404,7 @@
     "hanViet": "Giao lưu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "giao lưu, trao đổi"
@@ -428,7 +433,7 @@
     "hanViet": "Cá nhân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 2,
     "level": "N2",
     "meanings": [
       "cá nhân"
@@ -449,7 +454,8 @@
         "reading": "じんせいかん",
         "vi": "quan điểm nhân sinh"
       }
-    ]
+    ],
+    "frequency": 5
   },
   {
     "id": "n2mk-0019",
@@ -457,7 +463,7 @@
     "hanViet": "Kim niên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "năm nay"
@@ -468,7 +474,8 @@
         "reading": "ことし",
         "vi": "năm nay"
       }
-    ]
+    ],
+    "frequency": 17
   },
   {
     "id": "n2mk-0020",
@@ -476,7 +483,7 @@
     "hanViet": "Giới hộ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "chăm sóc người già"
@@ -495,7 +502,7 @@
     "hanViet": "Sự nghiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "công việc"
@@ -519,7 +526,7 @@
     "hanViet": "Tha nhân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "người khác, người ngoài"
@@ -530,7 +537,8 @@
         "reading": "たにん",
         "vi": "người khác, người ngoài"
       }
-    ]
+    ],
+    "frequency": 68
   },
   {
     "id": "n2mk-0023",
@@ -538,7 +546,7 @@
     "hanViet": "Căn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "bám rễ, ăn sâu"
@@ -554,7 +562,8 @@
         "reading": "きをつける",
         "vi": "chú ý, cẩn thận"
       }
-    ]
+    ],
+    "frequency": 110
   },
   {
     "id": "n2mk-0024",
@@ -562,7 +571,7 @@
     "hanViet": "Hiện đại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "hiện đại, hiện nay"
@@ -586,7 +595,7 @@
     "hanViet": "Dĩ lai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "từ đó đến nay"
@@ -605,7 +614,7 @@
     "hanViet": "Điều kiện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "điều kiện"
@@ -624,7 +633,7 @@
     "hanViet": "Trách nhiệm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "trách nhiệm"
@@ -648,7 +657,7 @@
     "hanViet": "Doanh nghiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "công ty, doanh nghiệp"
@@ -667,7 +676,7 @@
     "hanViet": "Hưu giả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "kỳ nghỉ"
@@ -686,7 +695,7 @@
     "hanViet": "Hội nghị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "cuộc họp, hội nghị"
@@ -707,7 +716,8 @@
         "reading": "しゃかい",
         "vi": "xã hội"
       }
-    ]
+    ],
+    "frequency": 30
   },
   {
     "id": "n2mk-0031",
@@ -715,7 +725,7 @@
     "hanViet": "Truyền",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "truyền đạt"
@@ -739,7 +749,7 @@
     "hanViet": "Thân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "kéo dài, vươn lên"
@@ -758,7 +768,7 @@
     "hanViet": "Lập vị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "vị trí đứng, quan điểm"
@@ -777,7 +787,7 @@
     "hanViet": "Tối đê",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "thấp nhất, tệ nhất"
@@ -793,7 +803,8 @@
         "reading": "ていかする",
         "vi": "giảm xuống, suy giảm"
       }
-    ]
+    ],
+    "frequency": 150
   },
   {
     "id": "n2mk-0035",
@@ -801,7 +812,7 @@
     "hanViet": "Trú dân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "cư dân, người dân sống ở đó"
@@ -812,7 +823,8 @@
         "reading": "じゅうみん",
         "vi": "cư dân, người dân sống ở đó"
       }
-    ]
+    ],
+    "frequency": 8
   },
   {
     "id": "n2mk-0036",
@@ -820,7 +832,7 @@
     "hanViet": "Vật thể",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "lãng phí, tiếc"
@@ -841,7 +853,8 @@
         "reading": "たいけんする",
         "vi": "trải nghiệm"
       }
-    ]
+    ],
+    "frequency": 50
   },
   {
     "id": "n2mk-0037",
@@ -849,7 +862,7 @@
     "hanViet": "Dư dụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "여유, dư dả, th余裕"
@@ -873,7 +886,7 @@
     "hanViet": "Tác",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "tạo ra, làm ra"
@@ -894,7 +907,8 @@
         "reading": "かべをつくる",
         "vi": "tạo ra rào cản, xây tường"
       }
-    ]
+    ],
+    "frequency": 45
   },
   {
     "id": "n2mk-0039",
@@ -902,7 +916,7 @@
     "hanViet": "Sử phương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "cách sử dụng"
@@ -918,7 +932,8 @@
         "reading": "きをつかう",
         "vi": "quan tâm, chú ý"
       }
-    ]
+    ],
+    "frequency": 48
   },
   {
     "id": "n2mk-0040",
@@ -926,7 +941,7 @@
     "hanViet": "Lệ ngoại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "ngoại lệ"
@@ -945,7 +960,7 @@
     "hanViet": "Đề cung",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "cung cấp"
@@ -969,7 +984,7 @@
     "hanViet": "Y lai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "nhờ cậy, ủy thác"
@@ -993,7 +1008,7 @@
     "hanViet": "Giá trị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "giá trị"
@@ -1022,7 +1037,7 @@
     "hanViet": "Tiện lợi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tiện lợi"
@@ -1046,7 +1061,7 @@
     "hanViet": "Quan hệ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "quan hệ, liên quan"
@@ -1070,7 +1085,7 @@
     "hanViet": "Xúc tiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "thúc đẩy, xúc tiến"
@@ -1089,7 +1104,7 @@
     "hanViet": "Bảo hiểm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "bảo hiểm"
@@ -1100,7 +1115,8 @@
         "reading": "ほけん",
         "vi": "bảo hiểm"
       }
-    ]
+    ],
+    "frequency": 89
   },
   {
     "id": "n2mk-0048",
@@ -1108,7 +1124,7 @@
     "hanViet": "Tự tín",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tự tin"
@@ -1137,7 +1153,7 @@
     "hanViet": "Cá nhân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "cá nhân"
@@ -1161,7 +1177,7 @@
     "hanViet": "Đảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "ngã, sụp đổ"
@@ -1180,7 +1196,7 @@
     "hanViet": "Tá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "mượn, vay"
@@ -1199,7 +1215,7 @@
     "hanViet": "Giá trị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "giá trị"
@@ -1223,7 +1239,7 @@
     "hanViet": "Thiên kiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "định kiến, thiên vị"
@@ -1242,7 +1258,7 @@
     "hanViet": "Ngẫu nhiên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "ngẫu nhiên"
@@ -1266,7 +1282,7 @@
     "hanViet": "Nguỵ vật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "đồ giả, hàng giả"
@@ -1285,7 +1301,7 @@
     "hanViet": "Chuẩn bị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "chuẩn bị"
@@ -1309,7 +1325,7 @@
     "hanViet": "Khuynh hướng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "xu hướng"
@@ -1333,7 +1349,7 @@
     "hanViet": "Lao phương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "cách làm việc"
@@ -1352,7 +1368,7 @@
     "hanViet": "Đồng liêu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "đồng nghiệp"
@@ -1371,7 +1387,7 @@
     "hanViet": "Sung thực cảm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "cảm giác sung mãn"
@@ -1390,7 +1406,7 @@
     "hanViet": "Tiên sinh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "thầy giáo, bác sĩ"
@@ -1411,7 +1427,8 @@
         "reading": "さきをみこす",
         "vi": "nhìn xa, đề phòng trước"
       }
-    ]
+    ],
+    "frequency": 24
   },
   {
     "id": "n2mk-0062",
@@ -1419,7 +1436,7 @@
     "hanViet": "Quang",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "ánh sáng"
@@ -1430,7 +1447,8 @@
         "reading": "ひかり",
         "vi": "ánh sáng"
       }
-    ]
+    ],
+    "frequency": 93
   },
   {
     "id": "n2mk-0063",
@@ -1438,7 +1456,7 @@
     "hanViet": "Khắc phục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "khắc phục, vượt qua"
@@ -1457,7 +1475,7 @@
     "hanViet": "Miễn hứa",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "giấy phép, bằng lái"
@@ -1476,7 +1494,7 @@
     "hanViet": "Dục nhi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "nuôi dạy con nhỏ"
@@ -1495,7 +1513,7 @@
     "hanViet": "Thụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 2,
     "level": "N2",
     "meanings": [
       "chấp nhận"
@@ -1516,7 +1534,8 @@
         "reading": "はいる",
         "vi": "vào, nhập vào"
       }
-    ]
+    ],
+    "frequency": 22
   },
   {
     "id": "n2mk-0067",
@@ -1524,7 +1543,7 @@
     "hanViet": "An toàn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "an toàn"
@@ -1540,7 +1559,8 @@
         "reading": "かんぜんな",
         "vi": "hoàn toàn"
       }
-    ]
+    ],
+    "frequency": 36
   },
   {
     "id": "n2mk-0068",
@@ -1548,7 +1568,7 @@
     "hanViet": "Công bình",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "công bằng"
@@ -1572,7 +1592,7 @@
     "hanViet": "Cộng thông",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "chung, phổ biến"
@@ -1601,7 +1621,7 @@
     "hanViet": "Cụ thể",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "cụ thể"
@@ -1620,7 +1640,7 @@
     "hanViet": "Án nội",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "hướng dẫn, chỉ dẫn"
@@ -1641,7 +1661,8 @@
         "reading": "ないぶ",
         "vi": "nội bộ, bên trong"
       }
-    ]
+    ],
+    "frequency": 74
   },
   {
     "id": "n2mk-0072",
@@ -1649,7 +1670,7 @@
     "hanViet": "Xạ chân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "ảnh, hình ảnh"
@@ -1668,7 +1689,7 @@
     "hanViet": "Đông",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "mùa đông"
@@ -1679,7 +1700,8 @@
         "reading": "ふゆ",
         "vi": "mùa đông"
       }
-    ]
+    ],
+    "frequency": 4
   },
   {
     "id": "n2mk-0074",
@@ -1687,7 +1709,7 @@
     "hanViet": "Lãnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "lạnh"
@@ -1706,7 +1728,7 @@
     "hanViet": "Xử lý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "xử lý"
@@ -1725,7 +1747,7 @@
     "hanViet": "Sinh xuất",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "tạo ra, sinh ra"
@@ -1746,7 +1768,8 @@
         "reading": "ゆしゅつ",
         "vi": "xuất khẩu"
       }
-    ]
+    ],
+    "frequency": 14
   },
   {
     "id": "n2mk-0077",
@@ -1754,7 +1777,7 @@
     "hanViet": "Thập phân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "đầy đủ"
@@ -1775,7 +1798,8 @@
         "reading": "きぶん",
         "vi": "tâm trạng"
       }
-    ]
+    ],
+    "frequency": 15
   },
   {
     "id": "n2mk-0078",
@@ -1783,7 +1807,7 @@
     "hanViet": "Đại thiết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "quan trọng, quý giá"
@@ -1812,7 +1836,7 @@
     "hanViet": "Tối sơ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "đầu tiên, ban đầu"
@@ -1831,7 +1855,7 @@
     "hanViet": "Phán đoán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "phán đoán, đánh giá"
@@ -1860,7 +1884,7 @@
     "hanViet": "Biệt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "chia tay, tách ra"
@@ -1889,7 +1913,7 @@
     "hanViet": "Quyền lợi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "quyền lợi, quyền hạn"
@@ -1918,7 +1942,7 @@
     "hanViet": "Đáo trứ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "đến nơi, đến"
@@ -1937,7 +1961,7 @@
     "hanViet": "Quy chế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "quy định, kiểm soát"
@@ -1966,7 +1990,7 @@
     "hanViet": "Tứ hợp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "đối chiếu, hiệu chỉnh"
@@ -1985,7 +2009,7 @@
     "hanViet": "Khắc tâm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "khắc ghi trong lòng"
@@ -2004,7 +2028,7 @@
     "hanViet": "Quy tắc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "quy tắc, quy định"
@@ -2023,7 +2047,7 @@
     "hanViet": "Danh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tên"
@@ -2044,7 +2068,8 @@
         "reading": "まえむき",
         "vi": "tích cực, hướng về phía trước"
       }
-    ]
+    ],
+    "frequency": 24
   },
   {
     "id": "n2mk-0089",
@@ -2052,7 +2077,7 @@
     "hanViet": "Vai trò",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "vai trò"
@@ -2081,7 +2106,7 @@
     "hanViet": "Sáng tạo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "sáng tạo"
@@ -2110,7 +2135,7 @@
     "hanViet": "Hiệp lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 2,
     "level": "N2",
     "meanings": [
       "hợp tác, giúp đỡ"
@@ -2131,7 +2156,8 @@
         "reading": "のうりょく",
         "vi": "năng lực"
       }
-    ]
+    ],
+    "frequency": 47
   },
   {
     "id": "n2mk-0092",
@@ -2139,7 +2165,7 @@
     "hanViet": "Thành công",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "thành công"
@@ -2158,7 +2184,7 @@
     "hanViet": "Gia",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "thêm vào, gia thêm"
@@ -2187,7 +2213,7 @@
     "hanViet": "Liệt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "kém hơn, thua"
@@ -2206,7 +2232,7 @@
     "hanViet": "Trợ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "giúp đỡ, cứu trợ"
@@ -2230,7 +2256,7 @@
     "hanViet": "Nỗ lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "nỗ lực, cố gắng"
@@ -2254,7 +2280,7 @@
     "hanViet": "Kích",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "cố gắng, nỗ lực"
@@ -2278,7 +2304,7 @@
     "hanViet": "Khổ lao",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "vất vả, khó nhọc"
@@ -2297,7 +2323,7 @@
     "hanViet": "Hiệu quả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "hiệu quả, tác dụng"
@@ -2326,7 +2352,7 @@
     "hanViet": "Dũng khí",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "lòng dũng cảm"
@@ -2345,7 +2371,7 @@
     "hanViet": "Hành động",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "hành động"
@@ -2366,7 +2392,8 @@
         "reading": "かつどう",
         "vi": "hoạt động"
       }
-    ]
+    ],
+    "frequency": 55
   },
   {
     "id": "n2mk-0102",
@@ -2374,7 +2401,7 @@
     "hanViet": "Nghĩa vụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "nghĩa vụ, trách nhiệm"
@@ -2393,7 +2420,7 @@
     "hanViet": "Thắng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "thắng, chiến thắng"
@@ -2412,7 +2439,7 @@
     "hanViet": "Chuyển cần",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "chuyển công tác"
@@ -2431,7 +2458,7 @@
     "hanViet": "Khuyến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "khuyến khích, giới thiệu"
@@ -2450,7 +2477,7 @@
     "hanViet": "Vật thể",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "lãng phí, tiếc"
@@ -2469,7 +2496,7 @@
     "hanViet": "Xú",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "có mùi, thoảng mùi"
@@ -2488,7 +2515,7 @@
     "hanViet": "Bao quát tính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "tính bao quát, toàn diện"
@@ -2507,7 +2534,7 @@
     "hanViet": "Ác hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "trở xấu, xấu đi"
@@ -2536,7 +2563,7 @@
     "hanViet": "Khu biệt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "phân biệt, phân loại"
@@ -2555,7 +2582,7 @@
     "hanViet": "Y liệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "y tế"
@@ -2579,7 +2606,7 @@
     "hanViet": "Thập phân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 2,
     "level": "N2",
     "meanings": [
       "đầy đủ"
@@ -2590,7 +2617,8 @@
         "reading": "じゅうぶんな",
         "vi": "đầy đủ"
       }
-    ]
+    ],
+    "frequency": 70
   },
   {
     "id": "n2mk-0113",
@@ -2598,7 +2626,7 @@
     "hanViet": "Tốt nghiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "tốt nghiệp"
@@ -2617,7 +2645,7 @@
     "hanViet": "Hiệp lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "hợp tác, giúp đỡ"
@@ -2646,7 +2674,7 @@
     "hanViet": "Giản đơn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "đơn giản"
@@ -2665,7 +2693,7 @@
     "hanViet": "Chiếm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "chiếm, giữ"
@@ -2684,7 +2712,7 @@
     "hanViet": "Ấn tượng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "ấn tượng"
@@ -2703,7 +2731,7 @@
     "hanViet": "Nguy",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "nguy hiểm"
@@ -2727,7 +2755,7 @@
     "hanViet": "Hậu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "dày"
@@ -2746,7 +2774,7 @@
     "hanViet": "Nguyên nhân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nguyên nhân, lý do"
@@ -2765,7 +2793,7 @@
     "hanViet": "Nghiêm mật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "nghiêm ngặt, chính xác"
@@ -2784,7 +2812,7 @@
     "hanViet": "Quá khứ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "quá khứ"
@@ -2803,7 +2831,7 @@
     "hanViet": "Tham gia",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "tham gia"
@@ -2827,7 +2855,7 @@
     "hanViet": "Phổ cập",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "phổ biến, lan rộng"
@@ -2851,7 +2879,7 @@
     "hanViet": "Bằng hữu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "bạn bè"
@@ -2867,7 +2895,8 @@
         "reading": "ゆうじん",
         "vi": "bạn bè"
       }
-    ]
+    ],
+    "frequency": 107
   },
   {
     "id": "n2mk-0126",
@@ -2875,7 +2904,7 @@
     "hanViet": "Phản cảm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "sự phản cảm, ác cảm"
@@ -2904,7 +2933,7 @@
     "hanViet": "Thu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "lắng xuống, ổn định"
@@ -2923,7 +2952,7 @@
     "hanViet": "Thủ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "đương đầu, giải quyết"
@@ -2944,7 +2973,8 @@
         "reading": "とりあげる",
         "vi": "đề cập, lấy đi"
       }
-    ]
+    ],
+    "frequency": 58
   },
   {
     "id": "n2mk-0129",
@@ -2952,7 +2982,7 @@
     "hanViet": "Thụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "chấp nhận"
@@ -2981,7 +3011,7 @@
     "hanViet": "Khẩu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "miệng"
@@ -2997,7 +3027,8 @@
         "reading": "でぐち",
         "vi": "lối ra"
       }
-    ]
+    ],
+    "frequency": 55
   },
   {
     "id": "n2mk-0131",
@@ -3005,7 +3036,7 @@
     "hanViet": "Khả năng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "khả năng, triển vọng"
@@ -3034,7 +3065,7 @@
     "hanViet": "Đài phong",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "bão"
@@ -3045,7 +3076,8 @@
         "reading": "たいふう",
         "vi": "bão"
       }
-    ]
+    ],
+    "frequency": 157
   },
   {
     "id": "n2mk-0133",
@@ -3053,7 +3085,7 @@
     "hanViet": "Lịch sử",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "lịch sử"
@@ -3072,7 +3104,7 @@
     "hanViet": "Thành mộng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "thực hiện ước mơ"
@@ -3091,7 +3123,7 @@
     "hanViet": "Thượng ti",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "cấp trên"
@@ -3110,7 +3142,7 @@
     "hanViet": "Ám hiệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "hiệu lệnh, tín hiệu"
@@ -3139,7 +3171,7 @@
     "hanViet": "Đồng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "tương tự, giống như"
@@ -3155,7 +3187,8 @@
         "reading": "どうりょう",
         "vi": "đồng nghiệp"
       }
-    ]
+    ],
+    "frequency": 38
   },
   {
     "id": "n2mk-0138",
@@ -3163,7 +3196,7 @@
     "hanViet": "Hữu danh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "nổi tiếng"
@@ -3179,7 +3212,8 @@
         "reading": "なまえ",
         "vi": "tên"
       }
-    ]
+    ],
+    "frequency": 33
   },
   {
     "id": "n2mk-0139",
@@ -3187,7 +3221,7 @@
     "hanViet": "Hướng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "hướng tới, đi về phía"
@@ -3216,7 +3250,7 @@
     "hanViet": "Phủ định",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "phủ nhận, bác bỏ"
@@ -3240,7 +3274,7 @@
     "hanViet": "Hàm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "bao gồm, chứa đựng"
@@ -3264,7 +3298,7 @@
     "hanViet": "Xuy phi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "thổi bay, xóa sạch"
@@ -3283,7 +3317,7 @@
     "hanViet": "Báo cáo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "báo cáo"
@@ -3302,7 +3336,7 @@
     "hanViet": "Địa vị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "giản dị, kín đáo"
@@ -3331,7 +3365,7 @@
     "hanViet": "Hô",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "gọi"
@@ -3355,7 +3389,7 @@
     "hanViet": "Vận mệnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "số phận"
@@ -3374,7 +3408,7 @@
     "hanViet": "Hoà bình",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "hòa bình, thanh bình"
@@ -3403,7 +3437,7 @@
     "hanViet": "Thượng phẩm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tao nhã, lịch sự"
@@ -3427,7 +3461,7 @@
     "hanViet": "Nhân viên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nhân viên"
@@ -3446,7 +3480,7 @@
     "hanViet": "Thương nghiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "thương mại"
@@ -3465,7 +3499,7 @@
     "hanViet": "Nghi vấn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "câu hỏi, điều thắc mắc"
@@ -3489,7 +3523,7 @@
     "hanViet": "Cải thiện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "cải thiện, cải tiến"
@@ -3513,7 +3547,7 @@
     "hanViet": "Hỷ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "niềm vui"
@@ -3532,7 +3566,7 @@
     "hanViet": "Kinh doanh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "kinh doanh, quản lý"
@@ -3556,7 +3590,7 @@
     "hanViet": "Chấn hồi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "vung vẫy, điều khiển"
@@ -3577,7 +3611,8 @@
         "reading": "ごてにまわる",
         "vi": "bị động, ứng phó chậm"
       }
-    ]
+    ],
+    "frequency": 56
   },
   {
     "id": "n2mk-0156",
@@ -3585,7 +3620,7 @@
     "hanViet": "Nguyên nhân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "nguyên nhân, lý do"
@@ -3609,7 +3644,7 @@
     "hanViet": "Đoàn thể",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "đoàn thể, tổ chức"
@@ -3628,7 +3663,7 @@
     "hanViet": "Khốn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "khó khăn, lúng túng"
@@ -3652,7 +3687,7 @@
     "hanViet": "Phạm vi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "phạm vi"
@@ -3671,7 +3706,7 @@
     "hanViet": "Ám hiệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "hiệu lệnh, tín hiệu"
@@ -3692,7 +3727,8 @@
         "reading": "ちず",
         "vi": "bản đồ"
       }
-    ]
+    ],
+    "frequency": 126
   },
   {
     "id": "n2mk-0161",
@@ -3700,7 +3736,7 @@
     "hanViet": "Quốc tế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "quốc tế"
@@ -3721,7 +3757,8 @@
         "reading": "こくみん",
         "vi": "nhân dân, quốc dân"
       }
-    ]
+    ],
+    "frequency": 12
   },
   {
     "id": "n2mk-0162",
@@ -3729,7 +3766,7 @@
     "hanViet": "Hiện tại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "hiện tại"
@@ -3748,7 +3785,7 @@
     "hanViet": "Địa vực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "địa vực, khu vực"
@@ -3777,7 +3814,7 @@
     "hanViet": "Bình quân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "bình quân, trung bình"
@@ -3796,7 +3833,7 @@
     "hanViet": "Địa vực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "địa vực, khu vực"
@@ -3815,7 +3852,7 @@
     "hanViet": "Cơ bản",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "cơ bản"
@@ -3839,7 +3876,7 @@
     "hanViet": "Thông tin",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "thông tin"
@@ -3868,7 +3905,7 @@
     "hanViet": "Chức trường",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "nơi làm việc"
@@ -3897,7 +3934,7 @@
     "hanViet": "Hoàn cảnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "môi trường"
@@ -3916,7 +3953,7 @@
     "hanViet": "Tăng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "tăng lên"
@@ -3940,7 +3977,7 @@
     "hanViet": "Vượt tường",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "vượt qua rào cản"
@@ -3969,7 +4006,7 @@
     "hanViet": "Hoại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "phá hủy"
@@ -3988,7 +4025,7 @@
     "hanViet": "Biện hộ sĩ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "luật sư"
@@ -4007,7 +4044,7 @@
     "hanViet": "Thanh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "giọng nói"
@@ -4023,7 +4060,8 @@
         "reading": "こえをかける",
         "vi": "gọi, lên tiếng hỏi"
       }
-    ]
+    ],
+    "frequency": 111
   },
   {
     "id": "n2mk-0175",
@@ -4031,7 +4069,7 @@
     "hanViet": "Biến hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "sự thay đổi"
@@ -4060,7 +4098,7 @@
     "hanViet": "Lệ ngoại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "ngoại lệ"
@@ -4081,7 +4119,8 @@
         "reading": "がいこう",
         "vi": "ngoại giao"
       }
-    ]
+    ],
+    "frequency": 53
   },
   {
     "id": "n2mk-0177",
@@ -4089,7 +4128,7 @@
     "hanViet": "Đa dạng tính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "tính đa dạng"
@@ -4100,7 +4139,8 @@
         "reading": "たようせい",
         "vi": "tính đa dạng"
       }
-    ]
+    ],
+    "frequency": 41
   },
   {
     "id": "n2mk-0178",
@@ -4108,7 +4148,7 @@
     "hanViet": "Dạ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "buổi tối, đêm"
@@ -4119,7 +4159,8 @@
         "reading": "よる",
         "vi": "buổi tối, đêm"
       }
-    ]
+    ],
+    "frequency": 73
   },
   {
     "id": "n2mk-0179",
@@ -4127,7 +4168,7 @@
     "hanViet": "Mộng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "giấc mơ"
@@ -4151,7 +4192,7 @@
     "hanViet": "Đại thiết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "quan trọng, quý giá"
@@ -4172,7 +4213,8 @@
         "reading": "たいへんな",
         "vi": "khó khăn, vất vả"
       }
-    ]
+    ],
+    "frequency": 5
   },
   {
     "id": "n2mk-0181",
@@ -4180,7 +4222,7 @@
     "hanViet": "Thái dương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "mặt trời"
@@ -4199,7 +4241,7 @@
     "hanViet": "Công phu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "nghĩ cách, sáng tạo"
@@ -4218,7 +4260,7 @@
     "hanViet": "Thất",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "mất, đánh mất"
@@ -4247,7 +4289,7 @@
     "hanViet": "Khế ước",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "hợp đồng"
@@ -4266,7 +4308,7 @@
     "hanViet": "Hưng phấn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "sự kích thích, phấn khích"
@@ -4295,7 +4337,7 @@
     "hanViet": "Nữ tính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "phụ nữ"
@@ -4306,7 +4348,8 @@
         "reading": "じょせい",
         "vi": "phụ nữ"
       }
-    ]
+    ],
+    "frequency": 26
   },
   {
     "id": "n2mk-0187",
@@ -4314,7 +4357,7 @@
     "hanViet": "Lương hảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "tốt lành, thuận lợi"
@@ -4335,7 +4378,8 @@
         "reading": "このむ",
         "vi": "thích, ưa"
       }
-    ]
+    ],
+    "frequency": 121
   },
   {
     "id": "n2mk-0188",
@@ -4343,7 +4387,7 @@
     "hanViet": "Vi diệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "tế nhị, vi tế"
@@ -4362,7 +4406,7 @@
     "hanViet": "Tuỳ nghị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "thỏa hiệp, nhượng bộ"
@@ -4386,7 +4430,7 @@
     "hanViet": "Ngăn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "cản trở, ngăn cản"
@@ -4405,7 +4449,7 @@
     "hanViet": "Kết hôn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "kết hôn"
@@ -4429,7 +4473,7 @@
     "hanViet": "Hiềm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "ghét, không thích"
@@ -4448,7 +4492,7 @@
     "hanViet": "Hỷ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "vui mừng"
@@ -4467,7 +4511,7 @@
     "hanViet": "Thiểu tử hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "giảm sinh đẻ, tỉ lệ sinh thấp"
@@ -4488,7 +4532,8 @@
         "reading": "ようす",
         "vi": "dáng vẻ, tình hình"
       }
-    ]
+    ],
+    "frequency": 30
   },
   {
     "id": "n2mk-0195",
@@ -4496,7 +4541,7 @@
     "hanViet": "Số tự",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "con số, số"
@@ -4515,7 +4560,7 @@
     "hanViet": "Tương hỗ y tồn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "phụ thuộc lẫn nhau"
@@ -4539,7 +4584,7 @@
     "hanViet": "Quý tiết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "mùa, mùa vụ"
@@ -4558,7 +4603,7 @@
     "hanViet": "Cô độc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "cô đơn"
@@ -4577,7 +4622,7 @@
     "hanViet": "Khoa học kỹ thuật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "khoa học kỹ thuật"
@@ -4598,7 +4643,8 @@
         "reading": "がくしゃ",
         "vi": "học giả"
       }
-    ]
+    ],
+    "frequency": 52
   },
   {
     "id": "n2mk-0200",
@@ -4606,7 +4652,7 @@
     "hanViet": "Quy trạch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "về nhà"
@@ -4625,7 +4671,7 @@
     "hanViet": "Vũ trụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "vũ trụ"
@@ -4644,7 +4690,7 @@
     "hanViet": "Hộ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "bảo vệ, tuân thủ"
@@ -4673,7 +4719,7 @@
     "hanViet": "An định",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "ổn định"
@@ -4694,7 +4740,8 @@
         "reading": "ふあんな",
         "vi": "lo lắng, bất an"
       }
-    ]
+    ],
+    "frequency": 66
   },
   {
     "id": "n2mk-0204",
@@ -4702,7 +4749,7 @@
     "hanViet": "Hoàn toàn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "hoàn toàn"
@@ -4721,7 +4768,7 @@
     "hanViet": "Vũ trụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "vũ trụ"
@@ -4740,7 +4787,7 @@
     "hanViet": "Định",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "xác định, quy định"
@@ -4761,7 +4808,8 @@
         "reading": "よてい",
         "vi": "dự định, kế hoạch"
       }
-    ]
+    ],
+    "frequency": 67
   },
   {
     "id": "n2mk-0207",
@@ -4769,7 +4817,7 @@
     "hanViet": "Hiện thực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "thực tế"
@@ -4790,7 +4838,8 @@
         "reading": "げんじつてきな",
         "vi": "thực tế"
       }
-    ]
+    ],
+    "frequency": 49
   },
   {
     "id": "n2mk-0208",
@@ -4798,7 +4847,7 @@
     "hanViet": "Quan khách",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "khán giả"
@@ -4817,7 +4866,7 @@
     "hanViet": "Tổn hại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "thiệt hại, tổn thất"
@@ -4836,7 +4885,7 @@
     "hanViet": "Gia thổ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "tiền thuê nhà"
@@ -4857,7 +4906,8 @@
         "reading": "いえ",
         "vi": "nhà"
       }
-    ]
+    ],
+    "frequency": 27
   },
   {
     "id": "n2mk-0211",
@@ -4865,7 +4915,7 @@
     "hanViet": "Nội dung",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nội dung"
@@ -4884,7 +4934,7 @@
     "hanViet": "Tịch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "cô đơn, buồn bã"
@@ -4903,7 +4953,7 @@
     "hanViet": "Lập ký",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "ghé qua, ghé vào"
@@ -4932,7 +4982,7 @@
     "hanViet": "Nghiêm mật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "nghiêm ngặt, chính xác"
@@ -4956,7 +5006,7 @@
     "hanViet": "Động sát lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "khả năng nhìn nhận"
@@ -4980,7 +5030,7 @@
     "hanViet": "Đinh ninh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "lịch sự, chu đáo"
@@ -4999,7 +5049,7 @@
     "hanViet": "Đối sách",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "biện pháp đối phó"
@@ -5028,7 +5078,7 @@
     "hanViet": "Chuyên môn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "chuyên môn"
@@ -5052,7 +5102,7 @@
     "hanViet": "Tự tôn tâm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "tự trọng"
@@ -5081,7 +5131,7 @@
     "hanViet": "Đạo nhập",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "đưa vào, giới thiệu"
@@ -5100,7 +5150,7 @@
     "hanViet": "Tối tiểu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "nhỏ nhất, tối thiểu"
@@ -5116,7 +5166,8 @@
         "reading": "しゅくしょうする",
         "vi": "thu nhỏ, giảm bớt"
       }
-    ]
+    ],
+    "frequency": 47
   },
   {
     "id": "n2mk-0222",
@@ -5124,7 +5175,7 @@
     "hanViet": "Thiểu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "ít nhất"
@@ -5145,7 +5196,8 @@
         "reading": "げんしょうする",
         "vi": "giảm xuống"
       }
-    ]
+    ],
+    "frequency": 88
   },
   {
     "id": "n2mk-0223",
@@ -5153,7 +5205,7 @@
     "hanViet": "Tựu chức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "xin việc, tìm việc"
@@ -5172,7 +5224,7 @@
     "hanViet": "Tận tay",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "làm hết sức, cố gắng hết sức"
@@ -5191,7 +5243,7 @@
     "hanViet": "Cư trường sở",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "chỗ đứng, nơi thuộc về"
@@ -5210,7 +5262,7 @@
     "hanViet": "Điến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "đến nơi, đạt được"
@@ -5239,7 +5291,7 @@
     "hanViet": "Phòng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "căn phòng"
@@ -5258,7 +5310,7 @@
     "hanViet": "Triển khai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "triển khai, phát triển"
@@ -5282,7 +5334,7 @@
     "hanViet": "Thuộc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "thuộc về"
@@ -5301,7 +5353,7 @@
     "hanViet": "Sơn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "núi"
@@ -5312,7 +5364,8 @@
         "reading": "やま",
         "vi": "núi"
       }
-    ]
+    ],
+    "frequency": 89
   },
   {
     "id": "n2mk-0231",
@@ -5320,7 +5373,7 @@
     "hanViet": "Băng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "sụp đổ, tan vỡ"
@@ -5344,7 +5397,7 @@
     "hanViet": "Xuyên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "sông, suối"
@@ -5355,7 +5408,8 @@
         "reading": "かわ",
         "vi": "sông, suối"
       }
-    ]
+    ],
+    "frequency": 99
   },
   {
     "id": "n2mk-0233",
@@ -5363,7 +5417,7 @@
     "hanViet": "Tuần hợp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "tình cờ gặp, có duyên"
@@ -5382,7 +5436,7 @@
     "hanViet": "Công phu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 3,
     "level": "N2",
     "meanings": [
       "nghĩ cách, sáng tạo"
@@ -5406,7 +5460,7 @@
     "hanViet": "Xảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "khéo léo, tài tình"
@@ -5425,7 +5479,7 @@
     "hanViet": "Cách sai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "khoảng cách, chênh lệch"
@@ -5449,7 +5503,7 @@
     "hanViet": "Quyện hậm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "kéo vào, lôi cuốn"
@@ -5468,7 +5522,7 @@
     "hanViet": "Đô thị hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "đô thị hóa"
@@ -5492,7 +5546,7 @@
     "hanViet": "Hy vọng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "hy vọng"
@@ -5511,7 +5565,7 @@
     "hanViet": "Giáo sư",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "giáo viên"
@@ -5530,7 +5584,7 @@
     "hanViet": "Quy trạch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "về nhà"
@@ -5546,7 +5600,8 @@
         "reading": "きせい",
         "vi": "về thăm quê"
       }
-    ]
+    ],
+    "frequency": 6
   },
   {
     "id": "n2mk-0242",
@@ -5554,7 +5609,7 @@
     "hanViet": "Công bình",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "công bằng"
@@ -5583,7 +5638,7 @@
     "hanViet": "Niên kim",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "lương hưu"
@@ -5604,7 +5659,8 @@
         "reading": "らいねん",
         "vi": "năm sau"
       }
-    ]
+    ],
+    "frequency": 13
   },
   {
     "id": "n2mk-0244",
@@ -5612,7 +5668,7 @@
     "hanViet": "Hạnh phúc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "hạnh phúc"
@@ -5631,7 +5687,7 @@
     "hanViet": "Ấu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "non nớt, còn nhỏ"
@@ -5650,7 +5706,7 @@
     "hanViet": "Quảng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "mở rộng, phổ biến"
@@ -5666,7 +5722,8 @@
         "reading": "ひろい",
         "vi": "rộng"
       }
-    ]
+    ],
+    "frequency": 103
   },
   {
     "id": "n2mk-0247",
@@ -5674,7 +5731,7 @@
     "hanViet": "Trật tự",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "trật tự"
@@ -5693,7 +5750,7 @@
     "hanViet": "Điếm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "cửa hàng"
@@ -5704,7 +5761,8 @@
         "reading": "みせ",
         "vi": "cửa hàng"
       }
-    ]
+    ],
+    "frequency": 8
   },
   {
     "id": "n2mk-0249",
@@ -5712,7 +5770,7 @@
     "hanViet": "Chính phủ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "chính phủ"
@@ -5731,7 +5789,7 @@
     "hanViet": "Thái độ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "thái độ"
@@ -5760,7 +5818,7 @@
     "hanViet": "Gia đình",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "gia đình"
@@ -5779,7 +5837,7 @@
     "hanViet": "Phế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "lỗi thời, không còn dùng nữa"
@@ -5803,7 +5861,7 @@
     "hanViet": "Diên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "kéo dài, hoãn lại"
@@ -5827,7 +5885,7 @@
     "hanViet": "Kiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "xây dựng"
@@ -5846,7 +5904,7 @@
     "hanViet": "Biện hộ sĩ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "luật sư"
@@ -5865,7 +5923,7 @@
     "hanViet": "Hình thức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "hình thức"
@@ -5884,7 +5942,7 @@
     "hanViet": "Dẫn xuất",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "rút ra, khai thác"
@@ -5913,7 +5971,7 @@
     "hanViet": "Nhược",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "yếu đuối"
@@ -5937,7 +5995,7 @@
     "hanViet": "Khẩn trương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "căng thẳng, lo lắng"
@@ -5966,7 +6024,7 @@
     "hanViet": "Cường điệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "nhấn mạnh"
@@ -5987,7 +6045,8 @@
         "reading": "きょうりょくな",
         "vi": "mạnh mẽ, có uy lực"
       }
-    ]
+    ],
+    "frequency": 78
   },
   {
     "id": "n2mk-0261",
@@ -5995,7 +6054,7 @@
     "hanViet": "Đảm đương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "phụ trách, đảm nhiệm"
@@ -6024,7 +6083,7 @@
     "hanViet": "Hình thức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "hình thức"
@@ -6040,7 +6099,8 @@
         "reading": "かたち",
         "vi": "hình dạng, hình thức"
       }
-    ]
+    ],
+    "frequency": 90
   },
   {
     "id": "n2mk-0263",
@@ -6048,7 +6108,7 @@
     "hanViet": "Ảnh hưởng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "ảnh hưởng, tác động"
@@ -6072,7 +6132,7 @@
     "hanViet": "Vai trò",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "vai trò"
@@ -6096,7 +6156,7 @@
     "hanViet": "Kỳ đãi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "kỳ vọng, mong đợi"
@@ -6120,7 +6180,7 @@
     "hanViet": "Pháp luật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "pháp luật"
@@ -6139,7 +6199,7 @@
     "hanViet": "Hối cải",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "hối hận, ăn năn"
@@ -6160,7 +6220,8 @@
         "reading": "こうはい",
         "vi": "đàn em, hậu bối"
       }
-    ]
+    ],
+    "frequency": 16
   },
   {
     "id": "n2mk-0268",
@@ -6168,7 +6229,7 @@
     "hanViet": "Nhân viên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nhân viên"
@@ -6187,7 +6248,7 @@
     "hanViet": "Thuyết phục lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "sức thuyết phục"
@@ -6216,7 +6277,7 @@
     "hanViet": "Vi diệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tế nhị, vi tế"
@@ -6240,7 +6301,7 @@
     "hanViet": "Đặc trưng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "đặc điểm, đặc trưng"
@@ -6259,7 +6320,7 @@
     "hanViet": "Quan tâm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "quan tâm, mối quan tâm"
@@ -6280,7 +6341,8 @@
         "reading": "じそんしん",
         "vi": "tự trọng"
       }
-    ]
+    ],
+    "frequency": 44
   },
   {
     "id": "n2mk-0273",
@@ -6288,7 +6350,7 @@
     "hanViet": "Tất yếu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "cần thiết"
@@ -6312,7 +6374,7 @@
     "hanViet": "Nhẫn nại lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "sức chịu đựng, kiên nhẫn"
@@ -6331,7 +6393,7 @@
     "hanViet": "Ý chí",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "ý chí, ý muốn"
@@ -6350,7 +6412,7 @@
     "hanViet": "Vong",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "quên"
@@ -6369,7 +6431,7 @@
     "hanViet": "Vội",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "bận rộn"
@@ -6388,7 +6450,7 @@
     "hanViet": "Ứng viện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "cổ vũ, ủng hộ"
@@ -6417,7 +6479,7 @@
     "hanViet": "Kỷ niệm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "kỷ niệm"
@@ -6441,7 +6503,7 @@
     "hanViet": "Nộ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "sự tức giận"
@@ -6465,7 +6527,7 @@
     "hanViet": "Khủng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "đáng sợ"
@@ -6484,7 +6546,7 @@
     "hanViet": "Cố chấp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "quan niệm cố định, định kiến"
@@ -6505,7 +6567,8 @@
         "reading": "ふしぎな",
         "vi": "kỳ lạ, bí ẩn"
       }
-    ]
+    ],
+    "frequency": 35
   },
   {
     "id": "n2mk-0283",
@@ -6513,7 +6576,7 @@
     "hanViet": "Đãi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "lười biếng, xao nhãng"
@@ -6532,7 +6595,7 @@
     "hanViet": "Cấp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "vội vàng, gấp"
@@ -6551,7 +6614,7 @@
     "hanViet": "Khả năng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "khả năng, triển vọng"
@@ -6580,7 +6643,7 @@
     "hanViet": "Quái",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "đáng ngờ, kỳ lạ"
@@ -6599,7 +6662,7 @@
     "hanViet": "Khủng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "sợ hãi, lo ngại"
@@ -6618,7 +6681,7 @@
     "hanViet": "Thẹn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "xấu hổ"
@@ -6642,7 +6705,7 @@
     "hanViet": "Hối",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tiếc, tức tối"
@@ -6671,7 +6734,7 @@
     "hanViet": "Hoạn giả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "bệnh nhân"
@@ -6690,7 +6753,7 @@
     "hanViet": "Não",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nỗi lo lắng, vấn đề"
@@ -6709,7 +6772,7 @@
     "hanViet": "Ác hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "trở xấu, xấu đi"
@@ -6728,7 +6791,7 @@
     "hanViet": "Bi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "buồn bã"
@@ -6747,7 +6810,7 @@
     "hanViet": "Thông tin",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "thông tin"
@@ -6776,7 +6839,7 @@
     "hanViet": "Tiếc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "tiếc, uổng"
@@ -6800,7 +6863,7 @@
     "hanViet": "Vô ái tưởng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "lạnh lùng, thờ ơ"
@@ -6819,7 +6882,7 @@
     "hanViet": "Ý thức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "ý thức, nhận thức"
@@ -6848,7 +6911,7 @@
     "hanViet": "Ái tình",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tình yêu, tình cảm"
@@ -6877,7 +6940,7 @@
     "hanViet": "Cảm tạ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "lòng biết ơn"
@@ -6906,7 +6969,7 @@
     "hanViet": "Thái độ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "thái độ"
@@ -6930,7 +6993,7 @@
     "hanViet": "Hoảng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "hoảng loạn, vội vã"
@@ -6949,7 +7012,7 @@
     "hanViet": "Thận trọng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "thận trọng"
@@ -6968,7 +7031,7 @@
     "hanViet": "Tập quán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "tập quán, thói quen"
@@ -6987,7 +7050,7 @@
     "hanViet": "Mộng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "sự ngưỡng mộ, ước mơ"
@@ -7006,7 +7069,7 @@
     "hanViet": "Ký ức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "ký ức, trí nhớ"
@@ -7025,7 +7088,7 @@
     "hanViet": "Thành quả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "thành quả, kết quả"
@@ -7054,7 +7117,7 @@
     "hanViet": "Tiêu chiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "thách thức"
@@ -7078,7 +7141,7 @@
     "hanViet": "Phục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "trở lại"
@@ -7102,7 +7165,7 @@
     "hanViet": "Trường sở",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "nơi chốn"
@@ -7131,7 +7194,7 @@
     "hanViet": "Đối phương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "đối phương, bạn cùng"
@@ -7152,7 +7215,8 @@
         "reading": "はでな",
         "vi": "sặc sỡ, phô trương"
       }
-    ]
+    ],
+    "frequency": 18
   },
   {
     "id": "n2mk-0311",
@@ -7160,7 +7224,7 @@
     "hanViet": "Đả minh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "tâm sự, bộc bạch"
@@ -7189,7 +7253,7 @@
     "hanViet": "Phú",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "trả, thanh toán"
@@ -7208,7 +7272,7 @@
     "hanViet": "Xử",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "xử lý, đối xử"
@@ -7227,7 +7291,7 @@
     "hanViet": "Phê phán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "phê phán, chỉ trích"
@@ -7246,7 +7310,7 @@
     "hanViet": "Thừa nhận",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "phê duyệt, công nhận"
@@ -7265,7 +7329,7 @@
     "hanViet": "Kỹ thuật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "kỹ thuật"
@@ -7289,7 +7353,7 @@
     "hanViet": "Ức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "kiềm chế, kiểm soát"
@@ -7308,7 +7372,7 @@
     "hanViet": "Chiết hợp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "thỏa hiệp, tìm điểm chung"
@@ -7337,7 +7401,7 @@
     "hanViet": "Khí thoát",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "mất hết sức, buông lỏng"
@@ -7356,7 +7420,7 @@
     "hanViet": "Tuyển trạch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "sự lựa chọn"
@@ -7375,7 +7439,7 @@
     "hanViet": "Ôm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "ôm ấp, đang đương đầu với"
@@ -7394,7 +7458,7 @@
     "hanViet": "Áp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "ép buộc, áp đặt"
@@ -7423,7 +7487,7 @@
     "hanViet": "Trừu tượng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "trừu tượng"
@@ -7442,7 +7506,7 @@
     "hanViet": "Đảm đương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "phụ trách, đảm nhiệm"
@@ -7461,7 +7525,7 @@
     "hanViet": "Cự phủ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "từ chối, bác bỏ"
@@ -7480,7 +7544,7 @@
     "hanViet": "Căn cứ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "căn cứ, cơ sở"
@@ -7504,7 +7568,7 @@
     "hanViet": "Khuếch đại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "mở rộng"
@@ -7523,7 +7587,7 @@
     "hanViet": "Bao quát tính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tính bao quát, toàn diện"
@@ -7542,7 +7606,7 @@
     "hanViet": "Tâm trạng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tâm trạng, cảm giác"
@@ -7563,7 +7627,8 @@
         "reading": "いじする",
         "vi": "duy trì"
       }
-    ]
+    ],
+    "frequency": 54
   },
   {
     "id": "n2mk-0330",
@@ -7571,7 +7636,7 @@
     "hanViet": "Mục chỉ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "nhắm đến, hướng đến"
@@ -7590,7 +7655,7 @@
     "hanViet": "Tiêu chiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "thách thức"
@@ -7614,7 +7679,7 @@
     "hanViet": "Thoái chí",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "thất bại, bỏ cuộc"
@@ -7638,7 +7703,7 @@
     "hanViet": "Chấn phục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nhìn lại, hồi tưởng"
@@ -7667,7 +7732,7 @@
     "hanViet": "Xả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "vứt bỏ"
@@ -7686,7 +7751,7 @@
     "hanViet": "Ký quải",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "dựa vào, tựa vào"
@@ -7705,7 +7770,7 @@
     "hanViet": "Thái dụng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "tuyển dụng, áp dụng"
@@ -7724,7 +7789,7 @@
     "hanViet": "Tầm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "tìm kiếm"
@@ -7743,7 +7808,7 @@
     "hanViet": "Trực tiếp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "trực tiếp"
@@ -7767,7 +7832,7 @@
     "hanViet": "Đề án",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "đề nghị, đề xuất"
@@ -7796,7 +7861,7 @@
     "hanViet": "Biến hoán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "chuyển đổi, biến đổi"
@@ -7815,7 +7880,7 @@
     "hanViet": "Ứng viện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "cổ vũ, ủng hộ"
@@ -7839,7 +7904,7 @@
     "hanViet": "Dao",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "lay động, rung"
@@ -7858,7 +7923,7 @@
     "hanViet": "Tổn hại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "thiệt hại, tổn thất"
@@ -7877,7 +7942,7 @@
     "hanViet": "Đề huề",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "hợp tác, liên kết"
@@ -7901,7 +7966,7 @@
     "hanViet": "Ma sát",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "ma sát, mâu thuẫn"
@@ -7920,7 +7985,7 @@
     "hanViet": "Ma sát",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "ma sát, mâu thuẫn"
@@ -7939,7 +8004,7 @@
     "hanViet": "Chi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "hỗ trợ, chống đỡ"
@@ -7968,7 +8033,7 @@
     "hanViet": "Cải thiện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "cải thiện, cải tiến"
@@ -7997,7 +8062,7 @@
     "hanViet": "Phóng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "thả ra, bắn ra"
@@ -8016,7 +8081,7 @@
     "hanViet": "Chính trị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "chính trị"
@@ -8045,7 +8110,7 @@
     "hanViet": "Sự cố",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "tai nạn, sự cố"
@@ -8064,7 +8129,7 @@
     "hanViet": "Thất bại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "thất bại"
@@ -8083,7 +8148,7 @@
     "hanViet": "Giáo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "dạy, hướng dẫn"
@@ -8112,7 +8177,7 @@
     "hanViet": "Khí tán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "mất tập trung, sao nhãng"
@@ -8131,7 +8196,7 @@
     "hanViet": "Kính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "kính trọng, tôn kính"
@@ -8155,7 +8220,7 @@
     "hanViet": "Số tự",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "con số, số"
@@ -8166,7 +8231,8 @@
         "reading": "すうじ",
         "vi": "con số, số"
       }
-    ]
+    ],
+    "frequency": 80
   },
   {
     "id": "n2mk-0357",
@@ -8174,7 +8240,7 @@
     "hanViet": "Điều chỉnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "điều chỉnh"
@@ -8193,7 +8259,7 @@
     "hanViet": "Văn hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "văn hóa"
@@ -8217,7 +8283,7 @@
     "hanViet": "Tài liệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nguyên liệu, vật liệu"
@@ -8241,7 +8307,7 @@
     "hanViet": "Phán đoán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "phán đoán, đánh giá"
@@ -8270,7 +8336,7 @@
     "hanViet": "Tân văn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "báo, tờ báo"
@@ -8286,7 +8352,8 @@
         "reading": "かくしんせい",
         "vi": "tính cách tân, đổi mới"
       }
-    ]
+    ],
+    "frequency": 32
   },
   {
     "id": "n2mk-0362",
@@ -8294,7 +8361,7 @@
     "hanViet": "Phương châm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "phương hướng, chính sách"
@@ -8315,7 +8382,8 @@
         "reading": "いっぽう",
         "vi": "một mặt, mặt khác"
       }
-    ]
+    ],
+    "frequency": 9
   },
   {
     "id": "n2mk-0363",
@@ -8323,7 +8391,7 @@
     "hanViet": "Thí thiết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "cơ sở, trang thiết bị"
@@ -8347,7 +8415,7 @@
     "hanViet": "Lữ hành",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "du lịch"
@@ -8358,7 +8426,8 @@
         "reading": "りょこう",
         "vi": "du lịch"
       }
-    ]
+    ],
+    "frequency": 6
   },
   {
     "id": "n2mk-0365",
@@ -8366,7 +8435,7 @@
     "hanViet": "Ký",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "đã, rồi"
@@ -8385,7 +8454,7 @@
     "hanViet": "Minh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "sáng sủa, vui vẻ"
@@ -8406,7 +8475,8 @@
         "reading": "めいかくな",
         "vi": "rõ ràng"
       }
-    ]
+    ],
+    "frequency": 59
   },
   {
     "id": "n2mk-0367",
@@ -8414,7 +8484,7 @@
     "hanViet": "Dịch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "dễ"
@@ -8430,7 +8500,8 @@
         "reading": "ぼうえき",
         "vi": "thương mại, buôn bán"
       }
-    ]
+    ],
+    "frequency": 160
   },
   {
     "id": "n2mk-0368",
@@ -8438,7 +8509,7 @@
     "hanViet": "Tinh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "ngôi sao"
@@ -8457,7 +8528,7 @@
     "hanViet": "Điện ảnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "phim, điện ảnh"
@@ -8476,7 +8547,7 @@
     "hanViet": "Xuân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "mùa xuân"
@@ -8487,7 +8558,8 @@
         "reading": "はる",
         "vi": "mùa xuân"
       }
-    ]
+    ],
+    "frequency": 2
   },
   {
     "id": "n2mk-0371",
@@ -8495,7 +8567,7 @@
     "hanViet": "Mơ hồ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "mơ hồ, không rõ ràng"
@@ -8514,7 +8586,7 @@
     "hanViet": "Trú",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "buổi trưa"
@@ -8525,7 +8597,8 @@
         "reading": "ひる",
         "vi": "buổi trưa"
       }
-    ]
+    ],
+    "frequency": 155
   },
   {
     "id": "n2mk-0373",
@@ -8533,7 +8606,7 @@
     "hanViet": "Thời gian",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "thời gian"
@@ -8549,7 +8622,8 @@
         "reading": "じだい",
         "vi": "thời đại"
       }
-    ]
+    ],
+    "frequency": 8
   },
   {
     "id": "n2mk-0374",
@@ -8557,7 +8631,7 @@
     "hanViet": "Phổ cập",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "phổ biến, lan rộng"
@@ -8576,7 +8650,7 @@
     "hanViet": "Bối cảnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "bối cảnh, nền tảng"
@@ -8595,7 +8669,7 @@
     "hanViet": "Tinh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "tạnh, trời quang"
@@ -8606,7 +8680,8 @@
         "reading": "はれる",
         "vi": "tạnh, trời quang"
       }
-    ]
+    ],
+    "frequency": 176
   },
   {
     "id": "n2mk-0377",
@@ -8614,7 +8689,7 @@
     "hanViet": "Hưu giả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "kỳ nghỉ"
@@ -8633,7 +8708,7 @@
     "hanViet": "Ám",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tối, u ám"
@@ -8644,7 +8719,8 @@
         "reading": "くらい",
         "vi": "tối, u ám"
       }
-    ]
+    ],
+    "frequency": 2
   },
   {
     "id": "n2mk-0379",
@@ -8652,7 +8728,7 @@
     "hanViet": "Mộ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "trời tối, cuối năm"
@@ -8676,7 +8752,7 @@
     "hanViet": "Mơ hồ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "mơ hồ, không rõ ràng"
@@ -8695,7 +8771,7 @@
     "hanViet": "Thư phương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "cách viết"
@@ -8716,7 +8792,8 @@
         "reading": "かきこむ",
         "vi": "viết vào, điền vào"
       }
-    ]
+    ],
+    "frequency": 85
   },
   {
     "id": "n2mk-0382",
@@ -8724,7 +8801,7 @@
     "hanViet": "Thiết cải",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "chuyển đổi, thay đổi"
@@ -8743,7 +8820,7 @@
     "hanViet": "Tối đại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "lớn nhất, tối đa"
@@ -8772,7 +8849,7 @@
     "hanViet": "Nguyệt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "mặt trăng"
@@ -8783,7 +8860,8 @@
         "reading": "つき",
         "vi": "mặt trăng"
       }
-    ]
+    ],
+    "frequency": 23
   },
   {
     "id": "n2mk-0385",
@@ -8791,7 +8869,7 @@
     "hanViet": "Hữu hiệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "có hiệu lực, hiệu quả"
@@ -8820,7 +8898,7 @@
     "hanViet": "Khắc phục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "khắc phục, vượt qua"
@@ -8839,7 +8917,7 @@
     "hanViet": "Vọng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "mong muốn"
@@ -8868,7 +8946,7 @@
     "hanViet": "Triêu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "buổi sáng"
@@ -8879,7 +8957,8 @@
         "reading": "あさ",
         "vi": "buổi sáng"
       }
-    ]
+    ],
+    "frequency": 96
   },
   {
     "id": "n2mk-0389",
@@ -8887,7 +8966,7 @@
     "hanViet": "Kỳ gian",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "kỳ hạn, thời gian"
@@ -8916,7 +8995,7 @@
     "hanViet": "Mộc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "cây, gỗ"
@@ -8927,7 +9006,8 @@
         "reading": "き",
         "vi": "cây, gỗ"
       }
-    ]
+    ],
+    "frequency": 60
   },
   {
     "id": "n2mk-0391",
@@ -8935,7 +9015,7 @@
     "hanViet": "Vị liên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "sự luyến tiếc"
@@ -8959,7 +9039,7 @@
     "hanViet": "Cơ bản",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "cơ bản"
@@ -8980,7 +9060,8 @@
         "reading": "ほん",
         "vi": "sách"
       }
-    ]
+    ],
+    "frequency": 2
   },
   {
     "id": "n2mk-0393",
@@ -8988,7 +9069,7 @@
     "hanViet": "Kỷ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "bàn, bàn học"
@@ -9007,7 +9088,7 @@
     "hanViet": "Tài liệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "nguyên liệu, vật liệu"
@@ -9026,7 +9107,7 @@
     "hanViet": "Thủ ước",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "giữ lời hứa"
@@ -9045,7 +9126,7 @@
     "hanViet": "Điều ước",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "điều ước, hiệp ước"
@@ -9069,7 +9150,7 @@
     "hanViet": "Dĩ lai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "từ đó đến nay"
@@ -9090,7 +9171,8 @@
         "reading": "みらい",
         "vi": "tương lai"
       }
-    ]
+    ],
+    "frequency": 25
   },
   {
     "id": "n2mk-0398",
@@ -9098,7 +9180,7 @@
     "hanViet": "Phân tích",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "phân tích"
@@ -9117,7 +9199,7 @@
     "hanViet": "Hiệu quả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "hiệu quả, tác dụng"
@@ -9146,7 +9228,7 @@
     "hanViet": "Nhu nhuyễn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "linh hoạt, mềm dẻo"
@@ -9165,7 +9247,7 @@
     "hanViet": "Điều tra",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "điều tra, khảo sát"
@@ -9184,7 +9266,7 @@
     "hanViet": "Học hiệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "trường học"
@@ -9195,7 +9277,8 @@
         "reading": "がっこう",
         "vi": "trường học"
       }
-    ]
+    ],
+    "frequency": 6
   },
   {
     "id": "n2mk-0403",
@@ -9203,7 +9286,7 @@
     "hanViet": "Căn cứ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "căn cứ, cơ sở"
@@ -9227,7 +9310,7 @@
     "hanViet": "Giá cách",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "giá cả"
@@ -9256,7 +9339,7 @@
     "hanViet": "Án nội",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "hướng dẫn, chỉ dẫn"
@@ -9280,7 +9363,7 @@
     "hanViet": "Lâm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "rừng"
@@ -9291,7 +9374,8 @@
         "reading": "もり",
         "vi": "rừng"
       }
-    ]
+    ],
+    "frequency": 2
   },
   {
     "id": "n2mk-0407",
@@ -9299,7 +9383,7 @@
     "hanViet": "Kiểm thảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "xem xét, nghiên cứu"
@@ -9318,7 +9402,7 @@
     "hanViet": "Sản nghiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "ngành công nghiệp"
@@ -9347,7 +9431,7 @@
     "hanViet": "Kiến cực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "đánh giá chính xác, phán đoán đúng"
@@ -9366,7 +9450,7 @@
     "hanViet": "Lạc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "niềm vui, điều thú vị"
@@ -9395,7 +9479,7 @@
     "hanViet": "Tâm cấu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "tư thế tâm lý, sự chuẩn bị tinh thần"
@@ -9414,7 +9498,7 @@
     "hanViet": "Đa dạng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "đa dạng, nhiều loại"
@@ -9443,7 +9527,7 @@
     "hanViet": "Tiêu chuẩn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "tiêu chuẩn"
@@ -9472,7 +9556,7 @@
     "hanViet": "Quyền lợi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "quyền lợi, quyền hạn"
@@ -9496,7 +9580,7 @@
     "hanViet": "Cơ hội",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "cơ hội, dịp"
@@ -9520,7 +9604,7 @@
     "hanViet": "Khuyết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "thiếu, vắng"
@@ -9539,7 +9623,7 @@
     "hanViet": "Tiếp tiếp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "lần lượt, liên tiếp"
@@ -9558,7 +9642,7 @@
     "hanViet": "Ý dục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "ý chí, động lực"
@@ -9582,7 +9666,7 @@
     "hanViet": "Ca",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "bài hát"
@@ -9601,7 +9685,7 @@
     "hanViet": "Cấm chỉ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "cấm đoán, cấm"
@@ -9622,7 +9706,8 @@
         "reading": "はいしする",
         "vi": "bãi bỏ, loại bỏ"
       }
-    ]
+    ],
+    "frequency": 150
   },
   {
     "id": "n2mk-0421",
@@ -9630,7 +9715,7 @@
     "hanViet": "Chính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "đúng, chính xác"
@@ -9646,7 +9731,8 @@
         "reading": "こうせいせい",
         "vi": "tính công bằng"
       }
-    ]
+    ],
+    "frequency": 71
   },
   {
     "id": "n2mk-0422",
@@ -9654,7 +9740,7 @@
     "hanViet": "Tiến bộ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "tiến bộ"
@@ -9683,7 +9769,7 @@
     "hanViet": "Lịch sử",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "lịch sử"
@@ -9707,7 +9793,7 @@
     "hanViet": "Tồn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "còn lại"
@@ -9736,7 +9822,7 @@
     "hanViet": "Đoạn giai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "giai đoạn, bước"
@@ -9755,7 +9841,7 @@
     "hanViet": "Tỷ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "so sánh"
@@ -9784,7 +9870,7 @@
     "hanViet": "Di dân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "di dân, người nhập cư"
@@ -9813,7 +9899,7 @@
     "hanViet": "Tâm trạng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "tâm trạng, cảm giác"
@@ -9834,7 +9920,8 @@
         "reading": "きぶん",
         "vi": "tâm trạng"
       }
-    ]
+    ],
+    "frequency": 28
   },
   {
     "id": "n2mk-0429",
@@ -9842,7 +9929,7 @@
     "hanViet": "Thuỷ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "nước"
@@ -9858,7 +9945,8 @@
         "reading": "すいじゅん",
         "vi": "mức, tiêu chuẩn"
       }
-    ]
+    ],
+    "frequency": 130
   },
   {
     "id": "n2mk-0430",
@@ -9866,7 +9954,7 @@
     "hanViet": "Yêu cầu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "yêu cầu"
@@ -9895,7 +9983,7 @@
     "hanViet": "Uế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "bẩn thỉu"
@@ -9914,7 +10002,7 @@
     "hanViet": "Trì",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "ao"
@@ -9933,7 +10021,7 @@
     "hanViet": "Quyết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "quyết định"
@@ -9949,7 +10037,8 @@
         "reading": "かいけつさく",
         "vi": "biện pháp giải quyết"
       }
-    ]
+    ],
+    "frequency": 75
   },
   {
     "id": "n2mk-0434",
@@ -9957,7 +10046,7 @@
     "hanViet": "Xa xỉ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "xa xỉ, hoang phí"
@@ -9976,7 +10065,7 @@
     "hanViet": "Chính trị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "chính trị"
@@ -10000,7 +10089,7 @@
     "hanViet": "Trạng huống",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "tình trạng, hoàn cảnh"
@@ -10019,7 +10108,7 @@
     "hanViet": "Ngoại bạc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "ở bên ngoài qua đêm"
@@ -10038,7 +10127,7 @@
     "hanViet": "Pháp luật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "pháp luật"
@@ -10057,7 +10146,7 @@
     "hanViet": "Tân ba",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "sóng thần"
@@ -10068,7 +10157,8 @@
         "reading": "つなみ",
         "vi": "sóng thần"
       }
-    ]
+    ],
+    "frequency": 146
   },
   {
     "id": "n2mk-0440",
@@ -10076,7 +10166,7 @@
     "hanViet": "Chú ý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "chú ý, cẩn thận"
@@ -10095,7 +10185,7 @@
     "hanViet": "Động sát lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "khả năng nhìn nhận"
@@ -10114,7 +10204,7 @@
     "hanViet": "Tân ba",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "sóng thần"
@@ -10133,7 +10223,7 @@
     "hanViet": "Hoạt động",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "hoạt động"
@@ -10162,7 +10252,7 @@
     "hanViet": "Phai đề",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "sặc sỡ, phô trương"
@@ -10181,7 +10271,7 @@
     "hanViet": "Giao lưu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "giao lưu, trao đổi"
@@ -10210,7 +10300,7 @@
     "hanViet": "Thiển",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "nông, cạn"
@@ -10221,7 +10311,8 @@
         "reading": "あさい",
         "vi": "nông, cạn"
       }
-    ]
+    ],
+    "frequency": 210
   },
   {
     "id": "n2mk-0447",
@@ -10229,7 +10320,7 @@
     "hanViet": "Hải",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "biển"
@@ -10240,7 +10331,8 @@
         "reading": "うみ",
         "vi": "biển"
       }
-    ]
+    ],
+    "frequency": 65
   },
   {
     "id": "n2mk-0448",
@@ -10248,7 +10340,7 @@
     "hanViet": "Tiêu phí",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "tiêu dùng"
@@ -10277,7 +10369,7 @@
     "hanViet": "Thiêm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "thêm vào, đính kèm"
@@ -10301,7 +10393,7 @@
     "hanViet": "Kinh tế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "kinh tế"
@@ -10320,7 +10412,7 @@
     "hanViet": "Giao thiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "đàm phán, thương lượng"
@@ -10339,7 +10431,7 @@
     "hanViet": "Giảm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "giảm xuống"
@@ -10363,7 +10455,7 @@
     "hanViet": "Đồ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "đi qua, vượt qua"
@@ -10387,7 +10479,7 @@
     "hanViet": "Ôn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "ấm áp"
@@ -10416,7 +10508,7 @@
     "hanViet": "Bất mãn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "sự bất mãn, không hài lòng"
@@ -10440,7 +10532,7 @@
     "hanViet": "Tài nguyên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tài nguyên"
@@ -10459,7 +10551,7 @@
     "hanViet": "Chuẩn bị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "chuẩn bị"
@@ -10488,7 +10580,7 @@
     "hanViet": "Dật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tràn đầy, dư thừa"
@@ -10507,7 +10599,7 @@
     "hanViet": "Kịch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "mãnh liệt, dữ"
@@ -10526,7 +10618,7 @@
     "hanViet": "Trọc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "đục, vẩn đục"
@@ -10550,7 +10642,7 @@
     "hanViet": "Hoả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 4,
     "level": "N2",
     "meanings": [
       "lửa"
@@ -10561,7 +10653,8 @@
         "reading": "ひ",
         "vi": "lửa"
       }
-    ]
+    ],
+    "frequency": 9
   },
   {
     "id": "n2mk-0462",
@@ -10569,7 +10662,7 @@
     "hanViet": "Thị điểm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "quan điểm, góc nhìn"
@@ -10590,7 +10683,8 @@
         "reading": "ろんてん",
         "vi": "luận điểm, vấn đề tranh luận"
       }
-    ]
+    ],
+    "frequency": 115
   },
   {
     "id": "n2mk-0463",
@@ -10598,7 +10692,7 @@
     "hanViet": "Vô đạo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "vô ích, lãng phí"
@@ -10627,7 +10721,7 @@
     "hanViet": "Tiều",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "nóng vội, luống cuống"
@@ -10651,7 +10745,7 @@
     "hanViet": "Đương nhiên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "đương nhiên, tất nhiên"
@@ -10680,7 +10774,7 @@
     "hanViet": "Tình nhiệt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "đam mê, nhiệt huyết"
@@ -10704,7 +10798,7 @@
     "hanViet": "Nhiên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "bùng cháy"
@@ -10723,7 +10817,7 @@
     "hanViet": "Hành lý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "hành lý, đồ đạc"
@@ -10752,7 +10846,7 @@
     "hanViet": "Đặc trưng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "đặc điểm, đặc trưng"
@@ -10776,7 +10870,7 @@
     "hanViet": "Hiện trạng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "hiện trạng, tình trạng hiện tại"
@@ -10805,7 +10899,7 @@
     "hanViet": "Độc tự",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "độc đáo, riêng"
@@ -10834,7 +10928,7 @@
     "hanViet": "Hiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "hẹp"
@@ -10845,7 +10939,8 @@
         "reading": "せまい",
         "vi": "hẹp"
       }
-    ]
+    ],
+    "frequency": 200
   },
   {
     "id": "n2mk-0473",
@@ -10853,7 +10948,7 @@
     "hanViet": "Cống hiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "cống hiến, đóng góp"
@@ -10872,7 +10967,7 @@
     "hanViet": "Hiệu suất",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "hiệu suất"
@@ -10901,7 +10996,7 @@
     "hanViet": "Trân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "hiếm, lạ"
@@ -10920,7 +11015,7 @@
     "hanViet": "Hiện trạng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "hiện trạng, tình trạng hiện tại"
@@ -10949,7 +11044,7 @@
     "hanViet": "Địa cầu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "trái đất"
@@ -10968,7 +11063,7 @@
     "hanViet": "Quản lý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "quản lý, điều hành"
@@ -10997,7 +11092,7 @@
     "hanViet": "Hoàn cảnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "môi trường"
@@ -11016,7 +11111,7 @@
     "hanViet": "Sinh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "sống, tồn tại"
@@ -11037,7 +11132,8 @@
         "reading": "うむ",
         "vi": "sinh ra, tạo ra"
       }
-    ]
+    ],
+    "frequency": 16
   },
   {
     "id": "n2mk-0481",
@@ -11045,7 +11141,7 @@
     "hanViet": "Sản nghiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "ngành công nghiệp"
@@ -11074,7 +11170,7 @@
     "hanViet": "Phí dụng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "chi phí"
@@ -11103,7 +11199,7 @@
     "hanViet": "Tự do",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "tự do"
@@ -11132,7 +11228,7 @@
     "hanViet": "Thân hậm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "sự đăng ký, đơn xin"
@@ -11156,7 +11252,7 @@
     "hanViet": "Nam tính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "nam giới"
@@ -11167,7 +11263,8 @@
         "reading": "だんせい",
         "vi": "nam giới"
       }
-    ]
+    ],
+    "frequency": 80
   },
   {
     "id": "n2mk-0486",
@@ -11175,7 +11272,7 @@
     "hanViet": "Kế hoạch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "kế hoạch"
@@ -11199,7 +11296,7 @@
     "hanViet": "Giới hạn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "giới hạn, ranh giới"
@@ -11223,7 +11320,7 @@
     "hanViet": "Nhất ban",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "số một, nhất"
@@ -11242,7 +11339,7 @@
     "hanViet": "Dị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "khác nhau"
@@ -11261,7 +11358,7 @@
     "hanViet": "Nghi vấn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "câu hỏi, điều thắc mắc"
@@ -11280,7 +11377,7 @@
     "hanViet": "Bì",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "mệt mỏi"
@@ -11299,7 +11396,7 @@
     "hanViet": "Bệnh viện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "bệnh viện"
@@ -11310,7 +11407,8 @@
         "reading": "びょういん",
         "vi": "bệnh viện"
       }
-    ]
+    ],
+    "frequency": 115
   },
   {
     "id": "n2mk-0493",
@@ -11318,7 +11416,7 @@
     "hanViet": "Y liệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "y tế"
@@ -11337,7 +11435,7 @@
     "hanViet": "Hoạt bát",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "năng động, hoạt bát"
@@ -11366,7 +11464,7 @@
     "hanViet": "Thú",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "thú vị, vui"
@@ -11382,7 +11480,8 @@
         "reading": "めいはくな",
         "vi": "rõ ràng, hiển nhiên"
       }
-    ]
+    ],
+    "frequency": 95
   },
   {
     "id": "n2mk-0496",
@@ -11390,7 +11489,7 @@
     "hanViet": "Hợp lý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "hợp lý"
@@ -11419,7 +11518,7 @@
     "hanViet": "Hữu ích",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "có ích, bổ ích"
@@ -11438,7 +11537,7 @@
     "hanViet": "Thịnh thượng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "sôi nổi, lên cao"
@@ -11457,7 +11556,7 @@
     "hanViet": "Giám sát",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "giám sát, theo dõi"
@@ -11476,7 +11575,7 @@
     "hanViet": "Mục tiêu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "mục tiêu"
@@ -11497,7 +11596,8 @@
         "reading": "め",
         "vi": "mắt"
       }
-    ]
+    ],
+    "frequency": 37
   },
   {
     "id": "n2mk-0501",
@@ -11505,7 +11605,7 @@
     "hanViet": "Trực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "sửa chữa, chữa bệnh"
@@ -11526,7 +11626,8 @@
         "reading": "みなおす",
         "vi": "xem lại, đánh giá lại"
       }
-    ]
+    ],
+    "frequency": 77
   },
   {
     "id": "n2mk-0502",
@@ -11534,7 +11635,7 @@
     "hanViet": "Đối phương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "đối phương, bạn cùng"
@@ -11563,7 +11664,7 @@
     "hanViet": "Phản tỉnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "nhìn lại, kiểm điểm"
@@ -11587,7 +11688,7 @@
     "hanViet": "Chân diện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nghiêm túc, chăm chỉ"
@@ -11611,7 +11712,7 @@
     "hanViet": "Trứ nhãn điểm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "điểm chú ý, điểm nhìn"
@@ -11630,7 +11731,7 @@
     "hanViet": "Trứ nhãn điểm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "điểm chú ý, điểm nhìn"
@@ -11654,7 +11755,7 @@
     "hanViet": "Thuấn gian",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "khoảnh khắc"
@@ -11673,7 +11774,7 @@
     "hanViet": "Tri thức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "kiến thức, tri thức"
@@ -11694,7 +11795,8 @@
         "reading": "しらせる",
         "vi": "thông báo, cho biết"
       }
-    ]
+    ],
+    "frequency": 43
   },
   {
     "id": "n2mk-0509",
@@ -11702,7 +11804,7 @@
     "hanViet": "Đoản kỳ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "ngắn hạn"
@@ -11718,7 +11820,8 @@
         "reading": "たんしょ",
         "vi": "điểm yếu, nhược điểm"
       }
-    ]
+    ],
+    "frequency": 170
   },
   {
     "id": "n2mk-0510",
@@ -11726,7 +11829,7 @@
     "hanViet": "Thạch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "đá"
@@ -11737,7 +11840,8 @@
         "reading": "いし",
         "vi": "đá"
       }
-    ]
+    ],
+    "frequency": 96
   },
   {
     "id": "n2mk-0511",
@@ -11745,7 +11849,7 @@
     "hanViet": "Nghiên cứu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "nghiên cứu"
@@ -11769,7 +11873,7 @@
     "hanViet": "Xác nhận",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "xác nhận"
@@ -11798,7 +11902,7 @@
     "hanViet": "Thị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "chỉ ra, thể hiện"
@@ -11817,7 +11921,7 @@
     "hanViet": "Xã hội",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "xã hội"
@@ -11833,7 +11937,8 @@
         "reading": "かいしゃ",
         "vi": "công ty"
       }
-    ]
+    ],
+    "frequency": 35
   },
   {
     "id": "n2mk-0515",
@@ -11841,7 +11946,7 @@
     "hanViet": "Phúc chỉ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "phúc lợi"
@@ -11860,7 +11965,7 @@
     "hanViet": "Cấm chỉ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "cấm đoán, cấm"
@@ -11879,7 +11984,7 @@
     "hanViet": "Hạnh phúc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "hạnh phúc"
@@ -11903,7 +12008,7 @@
     "hanViet": "Khoa học kỹ thuật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "khoa học kỹ thuật"
@@ -11927,7 +12032,7 @@
     "hanViet": "Bí mật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "bí mật"
@@ -11946,7 +12051,7 @@
     "hanViet": "Trật tự",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "trật tự"
@@ -11965,7 +12070,7 @@
     "hanViet": "Xưng tán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "ca ngợi, khen ngợi"
@@ -11984,7 +12089,7 @@
     "hanViet": "Di dân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "di dân, người nhập cư"
@@ -12003,7 +12108,7 @@
     "hanViet": "Trình độ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "mức độ, trình độ"
@@ -12027,7 +12132,7 @@
     "hanViet": "Thuế kim",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "thuế"
@@ -12046,7 +12151,7 @@
     "hanViet": "Tích trọng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "tích lũy, chồng chất"
@@ -12075,7 +12180,7 @@
     "hanViet": "Huyệt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "lỗ, hố"
@@ -12094,7 +12199,7 @@
     "hanViet": "Nghiên cứu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "nghiên cứu"
@@ -12118,7 +12223,7 @@
     "hanViet": "Trống",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "chỗ trống, thời gian rảnh"
@@ -12139,7 +12244,8 @@
         "reading": "そら",
         "vi": "bầu trời"
       }
-    ]
+    ],
+    "frequency": 51
   },
   {
     "id": "n2mk-0529",
@@ -12147,7 +12253,7 @@
     "hanViet": "Xung đột",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "xung đột, va chạm"
@@ -12166,7 +12272,7 @@
     "hanViet": "Song",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "cửa sổ"
@@ -12185,7 +12291,7 @@
     "hanViet": "Đối lập",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "đối lập, mâu thuẫn"
@@ -12214,7 +12320,7 @@
     "hanViet": "Cạnh tranh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 20,
     "level": "N2",
     "meanings": [
       "cạnh tranh"
@@ -12243,7 +12349,7 @@
     "hanViet": "Tiếu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "cười"
@@ -12267,7 +12373,7 @@
     "hanViet": "Bất bình đẳng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "bất bình đẳng"
@@ -12291,7 +12397,7 @@
     "hanViet": "Đáp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "trả lời, đáp lại"
@@ -12310,7 +12416,7 @@
     "hanViet": "Đối sách",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "biện pháp đối phó"
@@ -12339,7 +12445,7 @@
     "hanViet": "Quản lý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "quản lý, điều hành"
@@ -12358,7 +12464,7 @@
     "hanViet": "Quý tiết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "mùa, mùa vụ"
@@ -12377,7 +12483,7 @@
     "hanViet": "Phạm vi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "phạm vi"
@@ -12396,7 +12502,7 @@
     "hanViet": "Giản đơn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "đơn giản"
@@ -12420,7 +12526,7 @@
     "hanViet": "Thô",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "thô, thưa"
@@ -12439,7 +12545,7 @@
     "hanViet": "Điều ước",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "điều ước, hiệp ước"
@@ -12468,7 +12574,7 @@
     "hanViet": "Nạp đắc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "chấp nhận, thuyết phục được"
@@ -12487,7 +12593,7 @@
     "hanViet": "Phân tranh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "xung đột, tranh chấp"
@@ -12506,7 +12612,7 @@
     "hanViet": "Tố trực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "thẳng thắn, ngoan ngoãn"
@@ -12535,7 +12641,7 @@
     "hanViet": "Tế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "chi tiết, nhỏ nhặt"
@@ -12554,7 +12660,7 @@
     "hanViet": "Thủ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "đương đầu, giải quyết"
@@ -12578,7 +12684,7 @@
     "hanViet": "Kiên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "sợi dây liên kết, tình cảm gắn bó"
@@ -12602,7 +12708,7 @@
     "hanViet": "Kinh nghiệm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "kinh nghiệm"
@@ -12631,7 +12737,7 @@
     "hanViet": "Kết hôn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "kết hôn"
@@ -12655,7 +12761,7 @@
     "hanViet": "Liên lạc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "liên lạc, thông báo"
@@ -12674,7 +12780,7 @@
     "hanViet": "Cấp liệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "lương"
@@ -12693,7 +12799,7 @@
     "hanViet": "Truyền thống",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "truyền thống"
@@ -12717,7 +12823,7 @@
     "hanViet": "Hoạ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "tranh, hình vẽ"
@@ -12736,7 +12842,7 @@
     "hanViet": "Thụ kế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "kế thừa, tiếp nối"
@@ -12755,7 +12861,7 @@
     "hanViet": "Tục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tiếp tục"
@@ -12784,7 +12890,7 @@
     "hanViet": "Duy trì",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "duy trì"
@@ -12808,7 +12914,7 @@
     "hanViet": "Khẩn trương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "căng thẳng, lo lắng"
@@ -12827,7 +12933,7 @@
     "hanViet": "Hoãn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "nới lỏng, giảm căng"
@@ -12851,7 +12957,7 @@
     "hanViet": "Vị liên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "sự luyến tiếc"
@@ -12870,7 +12976,7 @@
     "hanViet": "Duyên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "duyên phận, mối quan hệ"
@@ -12899,7 +13005,7 @@
     "hanViet": "Thu nhỏ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "thu nhỏ, giảm bớt"
@@ -12918,7 +13024,7 @@
     "hanViet": "Nghiệp tích",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "thành tích, kết quả kinh doanh"
@@ -12937,7 +13043,7 @@
     "hanViet": "Tổ chức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "tổ chức"
@@ -12956,7 +13062,7 @@
     "hanViet": "Phục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 19,
     "level": "N2",
     "meanings": [
       "lặp đi lặp lại"
@@ -12975,7 +13081,7 @@
     "hanViet": "Lập vị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "vị trí đứng, quan điểm"
@@ -12986,7 +13092,8 @@
         "reading": "たちいち",
         "vi": "vị trí đứng, quan điểm"
       }
-    ]
+    ],
+    "frequency": 130
   },
   {
     "id": "n2mk-0567",
@@ -12994,7 +13101,7 @@
     "hanViet": "Tiển",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "ghen tị, thèm muốn"
@@ -13013,7 +13120,7 @@
     "hanViet": "Nghĩa vụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "nghĩa vụ, trách nhiệm"
@@ -13037,7 +13144,7 @@
     "hanViet": "Tập quán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "tập quán, thói quen"
@@ -13056,7 +13163,7 @@
     "hanViet": "Phiên dịch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "dịch thuật"
@@ -13075,7 +13182,7 @@
     "hanViet": "Khảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "suy nghĩ, xem xét"
@@ -13104,7 +13211,7 @@
     "hanViet": "Nhược giả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "người trẻ"
@@ -13133,7 +13240,7 @@
     "hanViet": "Nhẫn nại lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "sức chịu đựng, kiên nhẫn"
@@ -13152,7 +13259,7 @@
     "hanViet": "Nhĩ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "tai"
@@ -13168,7 +13275,8 @@
         "reading": "みみをかたむける",
         "vi": "lắng nghe, chú ý nghe"
       }
-    ]
+    ],
+    "frequency": 130
   },
   {
     "id": "n2mk-0575",
@@ -13176,7 +13284,7 @@
     "hanViet": "Tân văn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "báo, tờ báo"
@@ -13197,7 +13305,8 @@
         "reading": "ききとる",
         "vi": "nghe hiểu, ghi lấy"
       }
-    ]
+    ],
+    "frequency": 72
   },
   {
     "id": "n2mk-0576",
@@ -13205,7 +13314,7 @@
     "hanViet": "Chức trường",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "nơi làm việc"
@@ -13234,7 +13343,7 @@
     "hanViet": "Khẳng định",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "khẳng định, thừa nhận"
@@ -13253,7 +13362,7 @@
     "hanViet": "Dục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "nuôi dưỡng, giáo dục"
@@ -13282,7 +13391,7 @@
     "hanViet": "Bối cảnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "bối cảnh, nền tảng"
@@ -13301,7 +13410,7 @@
     "hanViet": "Khắc tâm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "khắc ghi trong lòng"
@@ -13325,7 +13434,7 @@
     "hanViet": "Khả năng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "khả năng, triển vọng"
@@ -13354,7 +13463,7 @@
     "hanViet": "Uyển",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "cánh tay, kỹ năng"
@@ -13373,7 +13482,7 @@
     "hanViet": "Nổi giận",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "nổi giận, bực mình"
@@ -13392,7 +13501,7 @@
     "hanViet": "Tự tín",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "tự tin"
@@ -13413,7 +13522,8 @@
         "reading": "どくじ",
         "vi": "độc đáo, riêng"
       }
-    ]
+    ],
+    "frequency": 26
   },
   {
     "id": "n2mk-0585",
@@ -13421,7 +13531,7 @@
     "hanViet": "Chí",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "đến, dẫn đến"
@@ -13440,7 +13550,7 @@
     "hanViet": "Hưng phấn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "sự kích thích, phấn khích"
@@ -13459,7 +13569,7 @@
     "hanViet": "Nhất ban",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "nói chung, phổ biến"
@@ -13483,7 +13593,7 @@
     "hanViet": "Lương hảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "tốt lành, thuận lợi"
@@ -13502,7 +13612,7 @@
     "hanViet": "Hoa",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "hoa"
@@ -13513,7 +13623,8 @@
         "reading": "はな",
         "vi": "hoa"
       }
-    ]
+    ],
+    "frequency": 79
   },
   {
     "id": "n2mk-0590",
@@ -13521,7 +13632,7 @@
     "hanViet": "Nghệ thuật gia",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "nghệ sĩ"
@@ -13540,7 +13651,7 @@
     "hanViet": "Nhược giả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "người trẻ"
@@ -13564,7 +13675,7 @@
     "hanViet": "Khổ lao",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "vất vả, khó nhọc"
@@ -13593,7 +13704,7 @@
     "hanViet": "Thảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "cỏ, cây cỏ"
@@ -13604,7 +13715,8 @@
         "reading": "くさ",
         "vi": "cỏ, cây cỏ"
       }
-    ]
+    ],
+    "frequency": 130
   },
   {
     "id": "n2mk-0594",
@@ -13612,7 +13724,7 @@
     "hanViet": "Hoang",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "thô lỗ, dữ dội"
@@ -13631,7 +13743,7 @@
     "hanViet": "Hành lý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "hành lý, đồ đạc"
@@ -13650,7 +13762,7 @@
     "hanViet": "Lạc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "rơi, ngã xuống"
@@ -13674,7 +13786,7 @@
     "hanViet": "Ngôn từ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "ngôn từ, lời nói"
@@ -13693,7 +13805,7 @@
     "hanViet": "Bạc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "mỏng, nhạt"
@@ -13712,7 +13824,7 @@
     "hanViet": "Khiêm hư",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "khiêm tốn"
@@ -13731,7 +13843,7 @@
     "hanViet": "Kim dung",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "tài chính"
@@ -13760,7 +13872,7 @@
     "hanViet": "Hành động",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 6,
     "level": "N2",
     "meanings": [
       "hành động"
@@ -13781,7 +13893,8 @@
         "reading": "いきわたる",
         "vi": "lan rộng, đến khắp nơi"
       }
-    ]
+    ],
+    "frequency": 20
   },
   {
     "id": "n2mk-0602",
@@ -13789,7 +13902,7 @@
     "hanViet": "Kỹ thuật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "kỹ thuật"
@@ -13818,7 +13931,7 @@
     "hanViet": "Xung đột",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "xung đột, va chạm"
@@ -13837,7 +13950,7 @@
     "hanViet": "Biểu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "biểu đạt, thể hiện"
@@ -13861,7 +13974,7 @@
     "hanViet": "Phân liệt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "phân liệt, chia rẽ"
@@ -13880,7 +13993,7 @@
     "hanViet": "Dư dụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "여유, dư dả, th余裕"
@@ -13899,7 +14012,7 @@
     "hanViet": "Bổ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "bổ sung, bù đắp"
@@ -13918,7 +14031,7 @@
     "hanViet": "Phức tạp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "phức tạp"
@@ -13937,7 +14050,7 @@
     "hanViet": "Yếu nhân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "yếu tố"
@@ -13966,7 +14079,7 @@
     "hanViet": "Ý kiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "ý kiến"
@@ -13987,7 +14100,8 @@
         "reading": "みなおす",
         "vi": "xem lại, đánh giá lại"
       }
-    ]
+    ],
+    "frequency": 21
   },
   {
     "id": "n2mk-0611",
@@ -13995,7 +14109,7 @@
     "hanViet": "Quy tắc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "quy tắc, quy định"
@@ -14019,7 +14133,7 @@
     "hanViet": "Thị điểm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "quan điểm, góc nhìn"
@@ -14043,7 +14157,7 @@
     "hanViet": "Giác",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "nhớ, học thuộc"
@@ -14072,7 +14186,7 @@
     "hanViet": "Thân",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "cha mẹ"
@@ -14093,7 +14207,8 @@
         "reading": "したしい",
         "vi": "thân thiết"
       }
-    ]
+    ],
+    "frequency": 69
   },
   {
     "id": "n2mk-0615",
@@ -14101,7 +14216,7 @@
     "hanViet": "Giá trị quan",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "quan điểm giá trị"
@@ -14130,7 +14245,7 @@
     "hanViet": "Lý giải",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "hiểu, thông hiểu"
@@ -14159,7 +14274,7 @@
     "hanViet": "Xúc hợp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tiếp xúc, giao lưu"
@@ -14183,7 +14298,7 @@
     "hanViet": "Ngôn biểu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "diễn đạt"
@@ -14204,7 +14319,8 @@
         "reading": "ことば",
         "vi": "ngôn từ, lời nói"
       }
-    ]
+    ],
+    "frequency": 19
   },
   {
     "id": "n2mk-0619",
@@ -14212,7 +14328,7 @@
     "hanViet": "Kế hoạch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "kế hoạch"
@@ -14223,7 +14339,8 @@
         "reading": "けいかく",
         "vi": "kế hoạch"
       }
-    ]
+    ],
+    "frequency": 109
   },
   {
     "id": "n2mk-0620",
@@ -14231,7 +14348,7 @@
     "hanViet": "Kiểm thảo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "xem xét, nghiên cứu"
@@ -14250,7 +14367,7 @@
     "hanViet": "Kỷ niệm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "kỷ niệm"
@@ -14279,7 +14396,7 @@
     "hanViet": "Phỏng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "thăm, đến thăm"
@@ -14298,7 +14415,7 @@
     "hanViet": "Thiết bị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "trang thiết bị, cơ sở vật chất"
@@ -14322,7 +14439,7 @@
     "hanViet": "Dung",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "tha thứ, cho phép"
@@ -14351,7 +14468,7 @@
     "hanViet": "Ngôn dịch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "lý do, lời giải thích"
@@ -14375,7 +14492,7 @@
     "hanViet": "Tố",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "kêu cầu, kiện, kêu oan"
@@ -14394,7 +14511,7 @@
     "hanViet": "Chứng cứ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "bằng chứng, chứng cớ"
@@ -14418,7 +14535,7 @@
     "hanViet": "Đánh giá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "đánh giá"
@@ -14442,7 +14559,7 @@
     "hanViet": "Thử",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "thử nghiệm"
@@ -14466,7 +14583,7 @@
     "hanViet": "Truy cực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "dồn vào chân tường"
@@ -14495,7 +14612,7 @@
     "hanViet": "Thoại đề",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "chủ đề, đề tài"
@@ -14516,7 +14633,8 @@
         "reading": "でんわ",
         "vi": "điện thoại"
       }
-    ]
+    ],
+    "frequency": 63
   },
   {
     "id": "n2mk-0632",
@@ -14524,7 +14642,7 @@
     "hanViet": "Nhận",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "công nhận, thừa nhận"
@@ -14553,7 +14671,7 @@
     "hanViet": "Thệ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "thề, thề nguyện"
@@ -14572,7 +14690,7 @@
     "hanViet": "Tụ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "rủ, mời"
@@ -14591,7 +14709,7 @@
     "hanViet": "Thành thật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "thành thật, trung thực"
@@ -14610,7 +14728,7 @@
     "hanViet": "Thuyết minh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "giải thích"
@@ -14634,7 +14752,7 @@
     "hanViet": "Độc giả",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "độc giả"
@@ -14650,7 +14768,8 @@
         "reading": "よみとる",
         "vi": "đọc hiểu, nhận ra"
       }
-    ]
+    ],
+    "frequency": 94
   },
   {
     "id": "n2mk-0638",
@@ -14658,7 +14777,7 @@
     "hanViet": "Khoa đề",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "bài tập, nhiệm vụ, vấn đề"
@@ -14677,7 +14796,7 @@
     "hanViet": "Điều tra",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "điều tra, khảo sát"
@@ -14706,7 +14825,7 @@
     "hanViet": "Tương đàm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "tư vấn, bàn bạc"
@@ -14725,7 +14844,7 @@
     "hanViet": "Thân thỉnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "đơn xin, yêu cầu"
@@ -14749,7 +14868,7 @@
     "hanViet": "Luận lý",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "logic, luận lý"
@@ -14778,7 +14897,7 @@
     "hanViet": "Đề",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "từ bỏ, chịu thua"
@@ -14802,7 +14921,7 @@
     "hanViet": "Khiêm hư",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "khiêm tốn"
@@ -14821,7 +14940,7 @@
     "hanViet": "Cảm tạ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "lòng biết ơn"
@@ -14840,7 +14959,7 @@
     "hanViet": "Ý thức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 19,
     "level": "N2",
     "meanings": [
       "ý thức, nhận thức"
@@ -14869,7 +14988,7 @@
     "hanViet": "Cảnh sát",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 19,
     "level": "N2",
     "meanings": [
       "cảnh sát"
@@ -14888,7 +15007,7 @@
     "hanViet": "Hội nghị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 20,
     "level": "N2",
     "meanings": [
       "cuộc họp, hội nghị"
@@ -14917,7 +15036,7 @@
     "hanViet": "Giới hộ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 20,
     "level": "N2",
     "meanings": [
       "chăm sóc người già"
@@ -14941,7 +15060,7 @@
     "hanViet": "Ấn tượng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "ấn tượng"
@@ -14970,7 +15089,7 @@
     "hanViet": "Thủ bất kham",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "không thể kiểm soát, quá tay"
@@ -14989,7 +15108,7 @@
     "hanViet": "Cống hiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "cống hiến, đóng góp"
@@ -15008,7 +15127,7 @@
     "hanViet": "Bần khốn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "nghèo đói"
@@ -15027,7 +15146,7 @@
     "hanViet": "Trách nhiệm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "trách nhiệm"
@@ -15051,7 +15170,7 @@
     "hanViet": "Tá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "cho mượn, cho thuê"
@@ -15070,7 +15189,7 @@
     "hanViet": "Phí dụng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "chi phí"
@@ -15099,7 +15218,7 @@
     "hanViet": "Mậu dịch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "thương mại, buôn bán"
@@ -15118,7 +15237,7 @@
     "hanViet": "Gia thổ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tiền thuê nhà"
@@ -15137,7 +15256,7 @@
     "hanViet": "Tài nguyên",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tài nguyên"
@@ -15161,7 +15280,7 @@
     "hanViet": "Náo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "náo nhiệt, sôi động"
@@ -15180,7 +15299,7 @@
     "hanViet": "Xưng tán",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "ca ngợi, khen ngợi"
@@ -15199,7 +15318,7 @@
     "hanViet": "Bản chất",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "bản chất"
@@ -15228,7 +15347,7 @@
     "hanViet": "Xa xỉ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "xa xỉ, hoang phí"
@@ -15247,7 +15366,7 @@
     "hanViet": "Tẩu xuất",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "chạy ra, bắt đầu chạy"
@@ -15258,7 +15377,8 @@
         "reading": "はしりだす",
         "vi": "chạy ra, bắt đầu chạy"
       }
-    ]
+    ],
+    "frequency": 155
   },
   {
     "id": "n2mk-0665",
@@ -15266,7 +15386,7 @@
     "hanViet": "Khởi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "gây ra, đánh thức"
@@ -15295,7 +15415,7 @@
     "hanViet": "Việt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "vượt qua"
@@ -15324,7 +15444,7 @@
     "hanViet": "Thú vị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "sở thích"
@@ -15343,7 +15463,7 @@
     "hanViet": "Mãn túc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "sự thỏa mãn"
@@ -15359,7 +15479,8 @@
         "reading": "あし",
         "vi": "chân, bàn chân"
       }
-    ]
+    ],
+    "frequency": 86
   },
   {
     "id": "n2mk-0669",
@@ -15367,7 +15488,7 @@
     "hanViet": "Tích",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "dấu vết, tàn tích"
@@ -15386,7 +15507,7 @@
     "hanViet": "Đạp cứ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "dựa vào, căn cứ vào"
@@ -15415,7 +15536,7 @@
     "hanViet": "Trù trừ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 20,
     "level": "N2",
     "meanings": [
       "do dự, ngần ngại"
@@ -15434,7 +15555,7 @@
     "hanViet": "Trù trừ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 21,
     "level": "N2",
     "meanings": [
       "do dự, ngần ngại"
@@ -15453,7 +15574,7 @@
     "hanViet": "Hoạt diệu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 21,
     "level": "N2",
     "meanings": [
       "hoạt động tích cực"
@@ -15472,7 +15593,7 @@
     "hanViet": "Xa",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "xe, ô tô"
@@ -15483,7 +15604,8 @@
         "reading": "くるま",
         "vi": "xe, ô tô"
       }
-    ]
+    ],
+    "frequency": 60
   },
   {
     "id": "n2mk-0675",
@@ -15491,7 +15613,7 @@
     "hanViet": "Nhu nhuyễn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "linh hoạt, mềm dẻo"
@@ -15510,7 +15632,7 @@
     "hanViet": "Chuyển",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "ngã, vấp"
@@ -15534,7 +15656,7 @@
     "hanViet": "Khinh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "nhẹ"
@@ -15545,7 +15667,8 @@
         "reading": "かるい",
         "vi": "nhẹ"
       }
-    ]
+    ],
+    "frequency": 145
   },
   {
     "id": "n2mk-0678",
@@ -15553,7 +15676,7 @@
     "hanViet": "Tỷ giáo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "so sánh"
@@ -15572,7 +15695,7 @@
     "hanViet": "Tiên bối",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "đàn anh, tiền bối"
@@ -15596,7 +15719,7 @@
     "hanViet": "Xuất khẩu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "xuất khẩu"
@@ -15620,7 +15743,7 @@
     "hanViet": "Nông nghiệp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "nông nghiệp"
@@ -15639,7 +15762,7 @@
     "hanViet": "Cố chấp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 5,
     "level": "N2",
     "meanings": [
       "quan niệm cố định, định kiến"
@@ -15668,7 +15791,7 @@
     "hanViet": "Nghênh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "đón tiếp"
@@ -15687,7 +15810,7 @@
     "hanViet": "Phục",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 7,
     "level": "N2",
     "meanings": [
       "lặp đi lặp lại"
@@ -15711,7 +15834,7 @@
     "hanViet": "Mê",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "phân vân, lạc đường"
@@ -15735,7 +15858,7 @@
     "hanViet": "Truy việt",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "vượt qua, bắt kịp"
@@ -15764,7 +15887,7 @@
     "hanViet": "Thối chức",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "nghỉ việc, từ chức"
@@ -15783,7 +15906,7 @@
     "hanViet": "Tống",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "gửi, đưa tiễn"
@@ -15802,7 +15925,7 @@
     "hanViet": "Đào",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "trốn chạy"
@@ -15826,7 +15949,7 @@
     "hanViet": "Thấu minh tính",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "tính minh bạch"
@@ -15845,7 +15968,7 @@
     "hanViet": "Thông tri",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "thông báo"
@@ -15866,7 +15989,8 @@
         "reading": "つうしん",
         "vi": "thông tin liên lạc"
       }
-    ]
+    ],
+    "frequency": 48
   },
   {
     "id": "n2mk-0692",
@@ -15874,7 +15998,7 @@
     "hanViet": "Sáng tạo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "sáng tạo"
@@ -15898,7 +16022,7 @@
     "hanViet": "Liên lạc",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "liên lạc, thông báo"
@@ -15922,7 +16046,7 @@
     "hanViet": "Tiến",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "tiến lên, tiến triển"
@@ -15951,7 +16075,7 @@
     "hanViet": "Dật",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "đánh lạc, chuyển hướng"
@@ -15970,7 +16094,7 @@
     "hanViet": "Vận mệnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "số phận"
@@ -15994,7 +16118,7 @@
     "hanViet": "Quá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "qua, quá mức"
@@ -16023,7 +16147,7 @@
     "hanViet": "Đạo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "đường, con đường"
@@ -16044,7 +16168,8 @@
         "reading": "みちにまよう",
         "vi": "lạc đường, không biết đường đi"
       }
-    ]
+    ],
+    "frequency": 39
   },
   {
     "id": "n2mk-0699",
@@ -16052,7 +16177,7 @@
     "hanViet": "Đạt thành",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "đạt được, hoàn thành"
@@ -16081,7 +16206,7 @@
     "hanViet": "Dị hoà cảm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "cảm giác không phù hợp"
@@ -16100,7 +16225,7 @@
     "hanViet": "Thích thiết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "phù hợp, thích hợp"
@@ -16129,7 +16254,7 @@
     "hanViet": "Tuyển trạch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "sự lựa chọn"
@@ -16150,7 +16275,8 @@
         "reading": "せんしゅ",
         "vi": "vận động viên, tuyển thủ"
       }
-    ]
+    ],
+    "frequency": 105
   },
   {
     "id": "n2mk-0703",
@@ -16158,7 +16284,7 @@
     "hanViet": "Tị",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "tránh, né tránh"
@@ -16177,7 +16303,7 @@
     "hanViet": "Nội bộ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "nội bộ, bên trong"
@@ -16206,7 +16332,7 @@
     "hanViet": "Đô thị hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "đô thị hóa"
@@ -16230,7 +16356,7 @@
     "hanViet": "Tâm phối",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "lo lắng"
@@ -16249,7 +16375,7 @@
     "hanViet": "Giải thích",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "giải thích, diễn giải"
@@ -16268,7 +16394,7 @@
     "hanViet": "Trọng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "nặng"
@@ -16289,7 +16415,8 @@
         "reading": "しんちょうな",
         "vi": "thận trọng"
       }
-    ]
+    ],
+    "frequency": 57
   },
   {
     "id": "n2mk-0709",
@@ -16297,7 +16424,7 @@
     "hanViet": "Đắc ý phân dã",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "lĩnh vực sở trường"
@@ -16321,7 +16448,7 @@
     "hanViet": "Lượng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "lượng, khối lượng"
@@ -16332,7 +16459,8 @@
         "reading": "りょう",
         "vi": "lượng, khối lượng"
       }
-    ]
+    ],
+    "frequency": 139
   },
   {
     "id": "n2mk-0711",
@@ -16340,7 +16468,7 @@
     "hanViet": "Kim dung",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "tài chính"
@@ -16361,7 +16489,8 @@
         "reading": "ぜいきん",
         "vi": "thuế"
       }
-    ]
+    ],
+    "frequency": 20
   },
   {
     "id": "n2mk-0712",
@@ -16369,7 +16498,7 @@
     "hanViet": "Phương châm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "phương hướng, chính sách"
@@ -16388,7 +16517,7 @@
     "hanViet": "Độn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "chậm chạp, cùn"
@@ -16407,7 +16536,7 @@
     "hanViet": "Nhuệ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "nhọn, sắc bén"
@@ -16426,7 +16555,7 @@
     "hanViet": "Tú",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "bị gỉ sét"
@@ -16445,7 +16574,7 @@
     "hanViet": "Thành trưởng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "tăng trưởng, phát triển"
@@ -16466,7 +16595,8 @@
         "reading": "ちょうしょ",
         "vi": "điểm mạnh, ưu điểm"
       }
-    ]
+    ],
+    "frequency": 40
   },
   {
     "id": "n2mk-0717",
@@ -16474,7 +16604,7 @@
     "hanViet": "Chuyên môn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "chuyên môn"
@@ -16498,7 +16628,7 @@
     "hanViet": "Triển khai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "triển khai, phát triển"
@@ -16519,7 +16649,8 @@
         "reading": "あく",
         "vi": "mở ra, trống"
       }
-    ]
+    ],
+    "frequency": 58
   },
   {
     "id": "n2mk-0719",
@@ -16527,7 +16658,7 @@
     "hanViet": "Gián tiếp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "gián tiếp"
@@ -16556,7 +16687,7 @@
     "hanViet": "Quan hệ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "quan hệ, liên quan"
@@ -16585,7 +16716,7 @@
     "hanViet": "Giới hạn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "giới hạn, ranh giới"
@@ -16609,7 +16740,7 @@
     "hanViet": "Bệnh viện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "bệnh viện"
@@ -16620,7 +16751,8 @@
         "reading": "びょういん",
         "vi": "bệnh viện"
       }
-    ]
+    ],
+    "frequency": 5
   },
   {
     "id": "n2mk-0723",
@@ -16628,7 +16760,7 @@
     "hanViet": "Thủ trừ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "loại bỏ, gỡ bỏ"
@@ -16647,7 +16779,7 @@
     "hanViet": "Nguy hiểm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "nguy hiểm"
@@ -16671,7 +16803,7 @@
     "hanViet": "Thái dương",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "mặt trời"
@@ -16690,7 +16822,7 @@
     "hanViet": "Đoạn giai",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "giai đoạn, bước"
@@ -16709,7 +16841,7 @@
     "hanViet": "Quốc tế",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "quốc tế"
@@ -16728,7 +16860,7 @@
     "hanViet": "Tập",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "tập hợp, thu thập"
@@ -16752,7 +16884,7 @@
     "hanViet": "Phức tạp",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "phức tạp"
@@ -16771,7 +16903,7 @@
     "hanViet": "Ly hôn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 19,
     "level": "N2",
     "meanings": [
       "ly hôn"
@@ -16795,7 +16927,7 @@
     "hanViet": "Nan",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "khó"
@@ -16811,7 +16943,8 @@
         "reading": "なんみん",
         "vi": "người tị nạn"
       }
-    ]
+    ],
+    "frequency": 108
   },
   {
     "id": "n2mk-0732",
@@ -16819,7 +16952,7 @@
     "hanViet": "Vũ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 8,
     "level": "N2",
     "meanings": [
       "mưa"
@@ -16830,7 +16963,8 @@
         "reading": "あめ",
         "vi": "mưa"
       }
-    ]
+    ],
+    "frequency": 104
   },
   {
     "id": "n2mk-0733",
@@ -16838,7 +16972,7 @@
     "hanViet": "Tuyết",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 11,
     "level": "N2",
     "meanings": [
       "tuyết"
@@ -16849,7 +16983,8 @@
         "reading": "ゆき",
         "vi": "tuyết"
       }
-    ]
+    ],
+    "frequency": 148
   },
   {
     "id": "n2mk-0734",
@@ -16857,7 +16992,7 @@
     "hanViet": "Linh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "tràn ra, đổ ra"
@@ -16876,7 +17011,7 @@
     "hanViet": "Điện thoại",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "điện thoại"
@@ -16887,7 +17022,8 @@
         "reading": "でんわ",
         "vi": "điện thoại"
       }
-    ]
+    ],
+    "frequency": 68
   },
   {
     "id": "n2mk-0736",
@@ -16895,7 +17031,7 @@
     "hanViet": "Địa chấn",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "động đất"
@@ -16914,7 +17050,7 @@
     "hanViet": "Tĩnh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "yên tĩnh"
@@ -16933,7 +17069,7 @@
     "hanViet": "Chân diện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "nghiêm túc, chăm chỉ"
@@ -16949,7 +17085,8 @@
         "reading": "おもしろい",
         "vi": "thú vị, vui"
       }
-    ]
+    ],
+    "frequency": 136
   },
   {
     "id": "n2mk-0739",
@@ -16957,7 +17094,7 @@
     "hanViet": "Cải cách",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "cải cách"
@@ -16981,7 +17118,7 @@
     "hanViet": "Âm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "âm thanh, tiếng động"
@@ -16997,7 +17134,8 @@
         "reading": "おんがく",
         "vi": "âm nhạc"
       }
-    ]
+    ],
+    "frequency": 112
   },
   {
     "id": "n2mk-0741",
@@ -17005,7 +17143,7 @@
     "hanViet": "Ảnh hưởng",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 20,
     "level": "N2",
     "meanings": [
       "ảnh hưởng, tác động"
@@ -17024,7 +17162,7 @@
     "hanViet": "Thủ thuận",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 12,
     "level": "N2",
     "meanings": [
       "quy trình, thủ tục"
@@ -17048,7 +17186,7 @@
     "hanViet": "Kiên trì",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "cố gắng, nỗ lực"
@@ -17072,7 +17210,7 @@
     "hanViet": "Đầu",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "đầu, trí não"
@@ -17083,7 +17221,8 @@
         "reading": "あたま",
         "vi": "đầu, trí não"
       }
-    ]
+    ],
+    "frequency": 91
   },
   {
     "id": "n2mk-0745",
@@ -17091,7 +17230,7 @@
     "hanViet": "Nhờ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 16,
     "level": "N2",
     "meanings": [
       "nhờ cậy, đặt hàng"
@@ -17120,7 +17259,7 @@
     "hanViet": "Khoa đề",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "bài tập, nhiệm vụ, vấn đề"
@@ -17149,7 +17288,7 @@
     "hanViet": "Diện",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "khuôn mặt"
@@ -17160,7 +17299,8 @@
         "reading": "かお",
         "vi": "khuôn mặt"
       }
-    ]
+    ],
+    "frequency": 119
   },
   {
     "id": "n2mk-0748",
@@ -17168,7 +17308,7 @@
     "hanViet": "Đài phong",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "bão"
@@ -17184,7 +17324,8 @@
         "reading": "かぜ",
         "vi": "gió"
       }
-    ]
+    ],
+    "frequency": 81
   },
   {
     "id": "n2mk-0749",
@@ -17192,7 +17333,7 @@
     "hanViet": "Phi",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "bay, nhảy"
@@ -17221,7 +17362,7 @@
     "hanViet": "Thực sự",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 9,
     "level": "N2",
     "meanings": [
       "bữa ăn"
@@ -17232,7 +17373,8 @@
         "reading": "しょくじ",
         "vi": "bữa ăn"
       }
-    ]
+    ],
+    "frequency": 98
   },
   {
     "id": "n2mk-0751",
@@ -17240,7 +17382,7 @@
     "hanViet": "Cơ",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "đói, khát khao"
@@ -17259,7 +17401,7 @@
     "hanViet": "Bão",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 13,
     "level": "N2",
     "meanings": [
       "chán, ngán"
@@ -17278,7 +17420,7 @@
     "hanViet": "Vô đạo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "vô ích, lãng phí"
@@ -17297,7 +17439,7 @@
     "hanViet": "Dịch",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 14,
     "level": "N2",
     "meanings": [
       "nhà ga"
@@ -17308,7 +17450,8 @@
         "reading": "えき",
         "vi": "nhà ga"
       }
-    ]
+    ],
+    "frequency": 200
   },
   {
     "id": "n2mk-0755",
@@ -17316,7 +17459,7 @@
     "hanViet": "Táo",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "ồn ào, náo loạn"
@@ -17335,7 +17478,7 @@
     "hanViet": "Kinh nghiệm",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 18,
     "level": "N2",
     "meanings": [
       "kinh nghiệm"
@@ -17364,7 +17507,7 @@
     "hanViet": "Kinh",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 22,
     "level": "N2",
     "meanings": [
       "ngạc nhiên"
@@ -17383,7 +17526,7 @@
     "hanViet": "Cao linh hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 10,
     "level": "N2",
     "meanings": [
       "già hóa dân số"
@@ -17399,7 +17542,8 @@
         "reading": "さいこう",
         "vi": "cao nhất, tốt nhất"
       }
-    ]
+    ],
+    "frequency": 29
   },
   {
     "id": "n2mk-0759",
@@ -17407,7 +17551,7 @@
     "hanViet": "Mê lực",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 15,
     "level": "N2",
     "meanings": [
       "hấp dẫn, quyến rũ"
@@ -17426,7 +17570,7 @@
     "hanViet": "Cao linh hoá",
     "kunyomi": [],
     "onyomi": [],
-    "strokes": 0,
+    "strokes": 17,
     "level": "N2",
     "meanings": [
       "già hóa dân số"
