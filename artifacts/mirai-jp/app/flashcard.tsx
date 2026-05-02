@@ -522,7 +522,6 @@ export default function FlashcardScreen() {
   );
   const [searchText, setSearchText] = useState(initialQuery);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [showStats, setShowStats] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<number>>(new Set());
 
@@ -638,24 +637,15 @@ export default function FlashcardScreen() {
 
   // Lọc dữ liệu theo search và category
   const filteredData = (() => {
-    let result = ALL;
-
-    if (searchText) {
-      const q = normalize(searchText);
-      result = result.filter(
-        (v) =>
-          normalize(v.kanji).includes(q) ||
-          normalize(v.hiragana).includes(q) ||
-          normalize(v.han).includes(q) ||
-          normalize(v.nghia).includes(q),
-      );
-    }
-
-    if (selectedCategory !== "all") {
-      result = result.filter((v) => v.category === selectedCategory);
-    }
-
-    return result;
+    if (!searchText) return ALL;
+    const q = normalize(searchText);
+    return ALL.filter(
+      (v) =>
+        normalize(v.kanji).includes(q) ||
+        normalize(v.hiragana).includes(q) ||
+        normalize(v.han).includes(q) ||
+        normalize(v.nghia).includes(q),
+    );
   })();
 
   const total = filteredData.length;
@@ -691,14 +681,12 @@ export default function FlashcardScreen() {
     setIdx(0);
     setFlipped(false);
     setSearchText("");
-    setSelectedCategory("all");
   };
   const doReset = () => {
     setData([...ALL]);
     setIdx(0);
     setFlipped(false);
     setSearchText("");
-    setSelectedCategory("all");
   };
 
   // Phát âm
@@ -965,37 +953,6 @@ export default function FlashcardScreen() {
             </TouchableOpacity>
           </View>
 
-          {/* ── Category Filter ── */}
-          <ScrollView
-            horizontal
-            showsHorizontalScrollIndicator={false}
-            style={s.topicFilter}
-            contentContainerStyle={s.topicFilterContent}
-          >
-            {Object.entries(CATEGORIES).map(([key, label]) => (
-              <TouchableOpacity
-                key={key}
-                style={[
-                  s.topicChip,
-                  selectedCategory === key && s.topicChipActive,
-                ]}
-                onPress={() => {
-                  setSelectedCategory(key);
-                  setIdx(0);
-                  setFlipped(false);
-                }}
-              >
-                <Text
-                  style={[
-                    s.topicText,
-                    selectedCategory === key && s.topicTextActive,
-                  ]}
-                >
-                  {label}
-                </Text>
-              </TouchableOpacity>
-            ))}
-          </ScrollView>
 
           {/* ── Tìm kiếm ── */}
           <TextInput
