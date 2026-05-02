@@ -260,7 +260,7 @@ const s = StyleSheet.create({
   },
 
   exampleBlock: { marginTop: 10 },
-  exampleJp: { fontSize: 15, color: "#0f172a", lineHeight: 22 },
+  exampleJp: { fontSize: 15, color: BLUE, lineHeight: 22, fontWeight: "600" },
   exampleVi: { fontSize: 14, color: "#475569", marginTop: 2 },
 
   empty: { flex: 1, alignItems: "center", justifyContent: "center" },

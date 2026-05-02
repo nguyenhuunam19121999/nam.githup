@@ -348,7 +348,7 @@ const s = StyleSheet.create({
   // Phát âm
   pronRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 10 },
   diamond: { color: BLUE, fontSize: 12, marginRight: 8, marginTop: 4 },
-  pronLabel: { fontSize: 14, fontWeight: "700", color: "#0f172a" },
+  pronLabel: { fontSize: 14, fontWeight: "700", color: BLUE },
   pronValue: { fontSize: 15, color: BLUE, marginTop: 2 },
 
   // Vùng vẽ thứ tự nét
