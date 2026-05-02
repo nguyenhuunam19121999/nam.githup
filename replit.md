@@ -33,15 +33,23 @@ Japanese language learning mobile app built with Expo SDK 54 / React Native / ex
 
 **Tech Stack**: Expo SDK 54, expo-router v6, RN 0.81.5, @react-native-async-storage/async-storage, expo-speech, @tanstack/react-query, react-native-safe-area-context, react-native-gesture-handler, react-native-keyboard-controller, @expo-google-fonts/inter
 
-**Screens**:
-- `app/(tabs)/index.tsx` — Home screen with JLPT levels, industry courses, vocab search, banner carousel
+**Screens** (all in `app/` — no tabs folder):
+- `app/index.tsx` — Home screen with JLPT levels, industry courses, vocab search, banner carousel, AuthMenu
 - `app/book-select.tsx` — Book series picker for N2/N3 (Mimikara/Soumatome)
 - `app/learning-menu.tsx` — Learning type selector (vocab, grammar, kanji, guide)
 - `app/flashcard.tsx` — Flashcard study screen with Quiz, Practice, and List modes
 - `app/grammar.tsx` — Grammar list screen with level/type picker
 - `app/grammar-detail.tsx` — Grammar detail with structure, explanation, examples
-- `app/kanji.tsx` — Kanji grid browser with radical/component filtering
-- `app/kanji-detail.tsx` — Kanji detail with stroke order, readings, examples
+- `app/kanji.tsx` — Kanji grid browser with filtering
+- `app/kanji-detail.tsx` — Kanji detail with stroke order (KanjiStrokeOrder), readings, examples
+
+**Components**:
+- `components/AuthMenu.tsx` — Auth modal (login/register/logout), shown via menu button
+- `components/ErrorBoundary.tsx` — React error boundary wrapping root
+- `components/ErrorFallback.tsx` — Error UI with reload button (uses useColors, Feather icons)
+- `components/FeedbackSection.tsx` — Per-page feedback/voting with AsyncStorage
+- `components/KanjiStrokeOrder.tsx` — Animated kanji stroke order renderer (KanjiVG SVG paths)
+- `components/KeyboardAwareScrollViewCompat.tsx` — Keyboard-aware scroll (native: keyboard-controller, web: ScrollView)
 
 **Data**:
 - `assets/vocab/` — JLPT vocab JSON files (`n5.json`, `n4.json`, `n3_mimikara.json`, `n3_soumatome.json`, `n2_mimikara.json`, `n2_soumatome.json`, `n1.json`). RawVocab shape: `{ kanji?, hira?, han?, nghia?, example?, exampleMeaning?, category? }`. Exports: `getVocab(level?, bookId?)` → `RawVocab[]`, `ALL_VOCAB`, `VOCAB_BY_BOOK`
@@ -52,7 +60,7 @@ Japanese language learning mobile app built with Expo SDK 54 / React Native / ex
 
 **Auth**: AsyncStorage-based auth (`hooks/useAuth.tsx`) with `AuthProvider`, `useAuth()`, `scopedKey(key)` for per-user storage namespacing
 
-**Colors**: Teal `#4ECDC4`, Blue `#2F80ED`, background `#f1f5f9`
+**Colors / Theming**: `constants/colors.ts` defines the design token palette. `hooks/useColors.ts` returns the active palette based on device color scheme (light-only by default). Teal `#4ECDC4`, Blue `#2F80ED`, background `#f1f5f9`
 
 ### API Server (artifacts/api-server)
 Express 5 REST API server (port 8080, path `/api`). Uses Drizzle ORM + PostgreSQL, Zod validation, pino logging.

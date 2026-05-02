@@ -1,83 +1,97 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
-  Alert,
   Animated,
+  Dimensions,
+  Easing,
   KeyboardAvoidingView,
   Modal,
   Platform,
   Pressable,
-  ScrollView,
   StyleSheet,
   Text,
   TextInput,
   TouchableOpacity,
   View,
 } from "react-native";
-import { useAuth } from "@/hooks/useAuth";
+
+import { useAuth } from "../hooks/useAuth";
+
+const TEAL = "#4ECDC4";
+const TEAL_DARK = "#3BB3AC";
+const SCREEN_WIDTH = Dimensions.get("window").width;
+const PANEL_WIDTH = Math.min(360, SCREEN_WIDTH * 0.88);
+
+type Mode = "login" | "register";
 
 interface Props {
   visible: boolean;
   onClose: () => void;
 }
 
-type Mode = "menu" | "login" | "register";
-
 export function AuthMenu({ visible, onClose }: Props) {
   const { currentUser, login, register, logout } = useAuth();
-  const [mode, setMode] = useState<Mode>("menu");
+  const [mode, setMode] = useState<Mode>("login");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const handleLogin = async () => {
-    if (!username.trim() || !password.trim()) {
-      Alert.alert("Lỗi", "Vui lòng nhập tên đăng nhập và mật khẩu.");
-      return;
-    }
-    setLoading(true);
-    const ok = await login(username.trim(), password);
-    setLoading(false);
-    if (ok) {
-      setUsername("");
-      setPassword("");
-      setMode("menu");
-      onClose();
+  const slide = useRef(new Animated.Value(0)).current;
+
+  useEffect(() => {
+    if (visible) {
+      setError(null);
+      Animated.timing(slide, {
+        toValue: 1,
+        duration: 220,
+        easing: Easing.out(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
     } else {
-      Alert.alert("Lỗi", "Sai tên đăng nhập hoặc mật khẩu.");
+      Animated.timing(slide, {
+        toValue: 0,
+        duration: 180,
+        easing: Easing.in(Easing.cubic),
+        useNativeDriver: true,
+      }).start();
     }
+  }, [visible, slide]);
+
+  const translateX = slide.interpolate({
+    inputRange: [0, 1],
+    outputRange: [PANEL_WIDTH + 40, 0],
+  });
+  const overlayOpacity = slide.interpolate({
+    inputRange: [0, 1],
+    outputRange: [0, 1],
+  });
+
+  const reset = () => {
+    setUsername("");
+    setPassword("");
+    setError(null);
   };
 
-  const handleRegister = async () => {
-    if (!username.trim() || !password.trim()) {
-      Alert.alert("Lỗi", "Vui lòng nhập đầy đủ thông tin.");
-      return;
-    }
-    if (password.length < 4) {
-      Alert.alert("Lỗi", "Mật khẩu phải có ít nhất 4 ký tự.");
-      return;
-    }
+  const handleSubmit = async () => {
+    if (loading) return;
     setLoading(true);
-    const ok = await register(username.trim(), password);
+    setError(null);
+    const result =
+      mode === "login"
+        ? await login(username, password)
+        : await register(username, password);
     setLoading(false);
-    if (ok) {
-      setUsername("");
-      setPassword("");
-      setMode("menu");
-      onClose();
-    } else {
-      Alert.alert("Lỗi", "Tên đăng nhập đã tồn tại.");
+    if (!result.ok) {
+      setError(result.error ?? "Có lỗi xảy ra");
+      return;
     }
+    reset();
+    onClose();
   };
 
   const handleLogout = async () => {
     await logout();
-    onClose();
-  };
-
-  const handleClose = () => {
-    setMode("menu");
-    setUsername("");
-    setPassword("");
+    reset();
     onClose();
   };
 
@@ -85,160 +99,244 @@ export function AuthMenu({ visible, onClose }: Props) {
     <Modal
       visible={visible}
       transparent
-      animationType="slide"
-      onRequestClose={handleClose}
+      animationType="none"
+      onRequestClose={onClose}
     >
-      <View style={s.overlay}>
-        <Pressable style={s.backdrop} onPress={handleClose} />
-        <KeyboardAvoidingView
-          behavior={Platform.OS === "ios" ? "padding" : undefined}
-          style={s.sheetWrapper}
-        >
-          <View style={s.sheet}>
-            <View style={s.handle} />
+      <View style={s.root}>
+        <Animated.View style={[s.overlay, { opacity: overlayOpacity }]}>
+          <Pressable style={StyleSheet.absoluteFill} onPress={onClose} />
+        </Animated.View>
 
-            {currentUser ? (
-              <ScrollView>
-                <View style={s.userInfo}>
-                  <View style={s.avatar}>
-                    <Text style={s.avatarText}>{currentUser.charAt(0).toUpperCase()}</Text>
+        <Animated.View
+          style={[
+            s.panel,
+            { width: PANEL_WIDTH, transform: [{ translateX }] },
+          ]}
+        >
+          <KeyboardAvoidingView
+            behavior={Platform.OS === "ios" ? "padding" : undefined}
+            style={{ flex: 1 }}
+          >
+            <View style={s.header}>
+              <Text style={s.headerTitle}>
+                {currentUser ? "Tài khoản" : "Chào mừng"}
+              </Text>
+              <TouchableOpacity
+                style={s.closeBtn}
+                onPress={onClose}
+                hitSlop={10}
+              >
+                <Text style={s.closeIcon}>✕</Text>
+              </TouchableOpacity>
+            </View>
+
+            <View style={s.body}>
+              {currentUser ? (
+                <View>
+                  <View style={s.userBlock}>
+                    <View style={s.avatarBig}>
+                      <Text style={s.avatarBigText}>
+                        {currentUser.charAt(0).toUpperCase()}
+                      </Text>
+                    </View>
+                    <Text style={s.userBigName} numberOfLines={1}>
+                      {currentUser}
+                    </Text>
+                    <Text style={s.userMeta}>Đã đăng nhập</Text>
                   </View>
-                  <Text style={s.userName}>{currentUser}</Text>
-                  <Text style={s.userSub}>Đã đăng nhập</Text>
+                  <TouchableOpacity
+                    style={s.primaryBtn}
+                    onPress={handleLogout}
+                  >
+                    <Text style={s.primaryBtnText}>Đăng xuất</Text>
+                  </TouchableOpacity>
                 </View>
-                <TouchableOpacity style={s.logoutBtn} onPress={handleLogout} activeOpacity={0.8}>
-                  <Text style={s.logoutText}>Đăng xuất</Text>
-                </TouchableOpacity>
-              </ScrollView>
-            ) : mode === "menu" ? (
-              <View style={s.menuBody}>
-                <Text style={s.menuTitle}>Tài khoản</Text>
-                <Text style={s.menuSub}>Đăng nhập để lưu tiến độ học tập của bạn</Text>
-                <TouchableOpacity style={s.primaryBtn} onPress={() => setMode("login")} activeOpacity={0.8}>
-                  <Text style={s.primaryBtnText}>Đăng nhập</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={s.secondaryBtn} onPress={() => setMode("register")} activeOpacity={0.8}>
-                  <Text style={s.secondaryBtnText}>Tạo tài khoản mới</Text>
-                </TouchableOpacity>
-              </View>
-            ) : (
-              <ScrollView keyboardShouldPersistTaps="handled">
-                <Text style={s.formTitle}>
-                  {mode === "login" ? "Đăng nhập" : "Tạo tài khoản"}
-                </Text>
-                <Text style={s.inputLabel}>Tên đăng nhập</Text>
-                <TextInput
-                  style={s.input}
-                  value={username}
-                  onChangeText={setUsername}
-                  placeholder="Nhập tên đăng nhập..."
-                  placeholderTextColor="#94a3b8"
-                  autoCapitalize="none"
-                  autoCorrect={false}
-                />
-                <Text style={s.inputLabel}>Mật khẩu</Text>
-                <TextInput
-                  style={s.input}
-                  value={password}
-                  onChangeText={setPassword}
-                  placeholder="Nhập mật khẩu..."
-                  placeholderTextColor="#94a3b8"
-                  secureTextEntry
-                />
-                <TouchableOpacity
-                  style={[s.primaryBtn, loading && { opacity: 0.6 }]}
-                  onPress={mode === "login" ? handleLogin : handleRegister}
-                  disabled={loading}
-                  activeOpacity={0.8}
-                >
-                  <Text style={s.primaryBtnText}>
-                    {loading ? "Đang xử lý..." : mode === "login" ? "Đăng nhập" : "Tạo tài khoản"}
+              ) : (
+                <View>
+                  <View style={s.tabRow}>
+                    <TouchableOpacity
+                      style={[s.tabBtn, mode === "login" && s.tabBtnActive]}
+                      onPress={() => {
+                        setMode("login");
+                        setError(null);
+                      }}
+                    >
+                      <Text
+                        style={[
+                          s.tabText,
+                          mode === "login" && s.tabTextActive,
+                        ]}
+                      >
+                        Đăng nhập
+                      </Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                      style={[s.tabBtn, mode === "register" && s.tabBtnActive]}
+                      onPress={() => {
+                        setMode("register");
+                        setError(null);
+                      }}
+                    >
+                      <Text
+                        style={[
+                          s.tabText,
+                          mode === "register" && s.tabTextActive,
+                        ]}
+                      >
+                        Đăng ký
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  <Text style={s.fieldLabel}>Tên đăng nhập</Text>
+                  <TextInput
+                    style={s.input}
+                    value={username}
+                    onChangeText={setUsername}
+                    placeholder="Nhập tên đăng nhập"
+                    placeholderTextColor="#94a3b8"
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                  />
+
+                  <Text style={s.fieldLabel}>Mật khẩu</Text>
+                  <TextInput
+                    style={s.input}
+                    value={password}
+                    onChangeText={setPassword}
+                    placeholder="Nhập mật khẩu"
+                    placeholderTextColor="#94a3b8"
+                    secureTextEntry
+                  />
+
+                  {error && <Text style={s.errorText}>{error}</Text>}
+
+                  <TouchableOpacity
+                    style={[s.primaryBtn, loading && { opacity: 0.7 }]}
+                    onPress={handleSubmit}
+                    disabled={loading}
+                  >
+                    <Text style={s.primaryBtnText}>
+                      {mode === "login" ? "Đăng nhập" : "Tạo tài khoản"}
+                    </Text>
+                  </TouchableOpacity>
+
+                  <Text style={s.hint}>
+                    Tài khoản được lưu cục bộ trên thiết bị của bạn.
                   </Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={s.backBtn} onPress={() => setMode("menu")} activeOpacity={0.7}>
-                  <Text style={s.backBtnText}>← Quay lại</Text>
-                </TouchableOpacity>
-              </ScrollView>
-            )}
-          </View>
-        </KeyboardAvoidingView>
+                </View>
+              )}
+            </View>
+          </KeyboardAvoidingView>
+        </Animated.View>
       </View>
     </Modal>
   );
 }
 
 const s = StyleSheet.create({
-  overlay: { flex: 1, justifyContent: "flex-end" },
-  backdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.5)" },
-  sheetWrapper: { justifyContent: "flex-end" },
-  sheet: {
+  root: { flex: 1, flexDirection: "row" },
+  overlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: "rgba(15,23,42,0.45)",
+  },
+  panel: {
+    position: "absolute",
+    right: 0,
+    top: 0,
+    bottom: 0,
     backgroundColor: "#fff",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    padding: 20,
-    paddingBottom: 40,
-    minHeight: 300,
+    shadowColor: "#000",
+    shadowOpacity: 0.2,
+    shadowRadius: 18,
+    shadowOffset: { width: -4, height: 0 },
+    elevation: 12,
   },
-  handle: {
-    width: 40,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: "#e2e8f0",
-    alignSelf: "center",
-    marginBottom: 20,
+  header: {
+    backgroundColor: TEAL,
+    paddingTop: Platform.OS === "ios" ? 56 : 28,
+    paddingBottom: 18,
+    paddingHorizontal: 20,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
-  userInfo: { alignItems: "center", paddingVertical: 20 },
-  avatar: {
-    width: 72,
-    height: 72,
-    borderRadius: 36,
-    backgroundColor: "#4ECDC4",
+  headerTitle: { color: "#fff", fontSize: 20, fontWeight: "800" },
+  closeBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: "rgba(255,255,255,0.25)",
     alignItems: "center",
     justifyContent: "center",
-    marginBottom: 12,
   },
-  avatarText: { color: "#fff", fontSize: 32, fontWeight: "800" },
-  userName: { fontSize: 20, fontWeight: "800", color: "#0f172a" },
-  userSub: { fontSize: 14, color: "#64748b", marginTop: 4 },
-  logoutBtn: {
-    marginTop: 20,
-    backgroundColor: "#fee2e2",
-    borderRadius: 12,
-    paddingVertical: 14,
-    alignItems: "center",
-  },
-  logoutText: { color: "#dc2626", fontSize: 16, fontWeight: "700" },
-  menuBody: { paddingVertical: 10 },
-  menuTitle: { fontSize: 22, fontWeight: "800", color: "#0f172a", marginBottom: 8 },
-  menuSub: { fontSize: 14, color: "#64748b", marginBottom: 24, lineHeight: 20 },
-  primaryBtn: {
-    backgroundColor: "#4ECDC4",
-    borderRadius: 12,
-    paddingVertical: 14,
-    alignItems: "center",
-    marginBottom: 12,
-  },
-  primaryBtnText: { color: "#fff", fontSize: 16, fontWeight: "700" },
-  secondaryBtn: {
+  closeIcon: { color: "#fff", fontSize: 14, fontWeight: "800" },
+  body: { padding: 20, flex: 1 },
+  tabRow: {
+    flexDirection: "row",
     backgroundColor: "#f1f5f9",
     borderRadius: 12,
-    paddingVertical: 14,
+    padding: 4,
+    marginBottom: 18,
+  },
+  tabBtn: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: 10,
     alignItems: "center",
   },
-  secondaryBtnText: { color: "#0f172a", fontSize: 16, fontWeight: "600" },
-  formTitle: { fontSize: 22, fontWeight: "800", color: "#0f172a", marginBottom: 20 },
-  inputLabel: { fontSize: 14, fontWeight: "600", color: "#475569", marginBottom: 6 },
+  tabBtnActive: { backgroundColor: "#fff" },
+  tabText: { fontSize: 14, fontWeight: "600", color: "#64748b" },
+  tabTextActive: { color: TEAL_DARK, fontWeight: "800" },
+  fieldLabel: {
+    fontSize: 13,
+    fontWeight: "700",
+    color: "#334155",
+    marginBottom: 6,
+    marginTop: 6,
+  },
   input: {
     backgroundColor: "#f8fafc",
-    borderRadius: 10,
     borderWidth: 1,
     borderColor: "#e2e8f0",
+    borderRadius: 12,
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 15,
     color: "#0f172a",
-    marginBottom: 16,
+    marginBottom: 6,
   },
-  backBtn: { paddingVertical: 12, alignItems: "center" },
-  backBtnText: { color: "#64748b", fontSize: 14 },
+  errorText: {
+    color: "#dc2626",
+    fontSize: 13,
+    marginTop: 8,
+    fontWeight: "600",
+  },
+  primaryBtn: {
+    backgroundColor: TEAL,
+    borderRadius: 12,
+    paddingVertical: 14,
+    alignItems: "center",
+    marginTop: 14,
+  },
+  primaryBtnText: { color: "#fff", fontWeight: "800", fontSize: 15 },
+  hint: {
+    color: "#94a3b8",
+    fontSize: 12,
+    marginTop: 14,
+    textAlign: "center",
+  },
+  userBlock: { alignItems: "center", marginBottom: 24 },
+  avatarBig: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: TEAL,
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 12,
+  },
+  avatarBigText: { color: "#fff", fontSize: 28, fontWeight: "800" },
+  userBigName: { fontSize: 20, fontWeight: "800", color: "#0f172a" },
+  userMeta: { color: "#64748b", fontSize: 13, marginTop: 4 },
 });

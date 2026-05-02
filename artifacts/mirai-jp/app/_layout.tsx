@@ -14,8 +14,10 @@ import { KeyboardProvider } from "react-native-keyboard-controller";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { ErrorBoundary } from "@/components/ErrorBoundary";
+// AuthProvider: bọc toàn bộ ứng dụng để mọi màn hình đều dùng được useAuth()
 import { AuthProvider } from "@/hooks/useAuth";
 
+// Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 const queryClient = new QueryClient();
@@ -23,15 +25,18 @@ const queryClient = new QueryClient();
 function RootLayoutNav() {
   return (
     <Stack screenOptions={{ headerBackTitle: "Back" }}>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+      <Stack.Screen name="index" options={{ headerShown: false }} />
+      {/* Trang chọn sách (chỉ áp dụng cho N3 và N2) */}
       <Stack.Screen name="book-select" options={{ headerShown: false }} />
+      {/* Trang menu trung gian (Hướng Dẫn / Từ Vựng / Ngữ Pháp / Kanji) */}
       <Stack.Screen name="learning-menu" options={{ headerShown: false }} />
       <Stack.Screen name="flashcard" options={{ headerShown: false }} />
+      {/* Trang danh sách ngữ pháp + chi tiết 1 mẫu ngữ pháp */}
       <Stack.Screen name="grammar" options={{ headerShown: false }} />
       <Stack.Screen name="grammar-detail" options={{ headerShown: false }} />
+      {/* Trang kanji */}
       <Stack.Screen name="kanji" options={{ headerShown: false }} />
       <Stack.Screen name="kanji-detail" options={{ headerShown: false }} />
-      <Stack.Screen name="+not-found" />
     </Stack>
   );
 }
@@ -58,6 +63,8 @@ export default function RootLayout() {
         <QueryClientProvider client={queryClient}>
           <GestureHandlerRootView>
             <KeyboardProvider>
+              {/* AuthProvider phải bọc bên trong cùng để mọi màn hình
+                  (kể cả flashcard) đều có thể đọc/ghi trạng thái đăng nhập */}
               <AuthProvider>
                 <RootLayoutNav />
               </AuthProvider>

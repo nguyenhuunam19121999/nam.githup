@@ -1,50 +1,74 @@
 [
   {
     "id": "n4-001",
-    "kanji": "親",
-    "hanViet": "THÂN",
-    "kunyomi": ["おや", "した.しい"],
-    "onyomi": ["シン"],
-    "strokes": 16,
+    "kanji": "海",
+    "hanViet": "HẢI",
+    "kunyomi": ["うみ"],
+    "onyomi": ["カイ"],
+    "strokes": 9,
     "level": "N4",
-    "frequency": 127,
-    "components": [{ "kanji": "立", "hanViet": "LẬP" }, { "kanji": "木", "hanViet": "MỘC" }, { "kanji": "見", "hanViet": "KIẾN" }],
-    "meanings": ["Cha mẹ", "Thân thiết"],
+    "frequency": 302,
+    "components": [
+      { "kanji": "氵", "hanViet": "THUỶ (bộ nước)" },
+      { "kanji": "毎", "hanViet": "MỖI" }
+    ],
+    "meanings": ["Biển, đại dương"],
     "examples": [
-      { "jp": "親切", "reading": "しんせつ", "vi": "Tử tế, thân thiện" },
-      { "jp": "両親", "reading": "りょうしん", "vi": "Cha mẹ" }
+      { "jp": "海外", "reading": "かいがい", "vi": "Nước ngoài" },
+      { "jp": "海岸", "reading": "かいがん", "vi": "Bờ biển" }
     ]
   },
   {
     "id": "n4-002",
-    "kanji": "便",
-    "hanViet": "TIỆN",
-    "kunyomi": ["たよ.り"],
-    "onyomi": ["ベン", "ビン"],
-    "strokes": 9,
+    "kanji": "安",
+    "hanViet": "AN",
+    "kunyomi": ["やす.い", "やす.まる"],
+    "onyomi": ["アン"],
+    "strokes": 6,
     "level": "N4",
-    "frequency": 232,
-    "components": [{ "kanji": "亻", "hanViet": "NHÂN" }, { "kanji": "更", "hanViet": "CANH" }],
-    "meanings": ["Tiện lợi", "Tin tức"],
+    "frequency": 234,
+    "components": [
+      { "kanji": "宀", "hanViet": "MIÊN (mái nhà)" },
+      { "kanji": "女", "hanViet": "NỮ" }
+    ],
+    "meanings": ["An toàn, yên ổn", "Rẻ, giá thấp"],
     "examples": [
-      { "jp": "便利", "reading": "べんり", "vi": "Tiện lợi" },
-      { "jp": "郵便", "reading": "ゆうびん", "vi": "Bưu điện" }
+      { "jp": "安全", "reading": "あんぜん", "vi": "An toàn" },
+      { "jp": "安い", "reading": "やすい", "vi": "Rẻ" }
     ]
   },
   {
     "id": "n4-003",
-    "kanji": "調",
-    "hanViet": "ĐIỀU",
-    "kunyomi": ["しら.べる", "ととの.える"],
-    "onyomi": ["チョウ"],
-    "strokes": 15,
+    "kanji": "春",
+    "hanViet": "XUÂN",
+    "kunyomi": ["はる"],
+    "onyomi": ["シュン"],
+    "strokes": 9,
     "level": "N4",
-    "frequency": 251,
-    "components": [{ "kanji": "言", "hanViet": "NGÔN" }, { "kanji": "周", "hanViet": "CHU" }],
-    "meanings": ["Điều tra", "Điều chỉnh", "Giai điệu"],
+    "frequency": 645,
+    "components": [
+      { "kanji": "日", "hanViet": "NHẬT" }
+    ],
+    "meanings": ["Mùa xuân", "Tuổi trẻ"],
     "examples": [
-      { "jp": "調査", "reading": "ちょうさ", "vi": "Điều tra" },
-      { "jp": "強調", "reading": "きょうちょう", "vi": "Nhấn mạnh" }
+      { "jp": "春休み", "reading": "はるやすみ", "vi": "Kỳ nghỉ xuân" },
+      { "jp": "青春", "reading": "せいしゅん", "vi": "Tuổi thanh xuân" }
+    ]
+  },
+  {
+    "id": "n4-004",
+    "kanji": "工",
+    "hanViet": "CÔNG",
+    "kunyomi": [],
+    "onyomi": ["コウ", "ク"],
+    "strokes": 3,
+    "level": "N4",
+    "frequency": 296,
+    "components": [{ "kanji": "工", "hanViet": "CÔNG" }],
+    "meanings": ["Thợ, công việc thủ công", "Chế tạo"],
+    "examples": [
+      { "jp": "工場", "reading": "こうじょう", "vi": "Nhà máy" },
+      { "jp": "工事", "reading": "こうじ", "vi": "Thi công" }
     ]
   }
 ]

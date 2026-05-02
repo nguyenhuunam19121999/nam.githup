@@ -1,6 +1,14 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// kanji-detail.tsx
+// Trang chi tiết một chữ Kanji (xem ảnh mẫu 1 & 2).
+// Hiển thị: chữ Kanji to, âm Hán Việt, các âm Kunyomi / Onyomi, ô minh hoạ
+// chữ ở giữa (placeholder cho nét bút), 3 cột thông tin (Số nét / JLPT / Tần
+// suất), các bộ thủ cấu thành, danh sách nghĩa, và ví dụ từ ghép. Cuối trang
+// là khối "Đóng góp ý kiến" dùng chung.
+// ─────────────────────────────────────────────────────────────────────────────
+
 import { useLocalSearchParams, useRouter } from "expo-router";
-import * as Speech from "expo-speech";
-import React from "react";
+import React, { useMemo } from "react";
 import {
   ScrollView,
   StatusBar,
@@ -10,52 +18,38 @@ import {
   View,
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { findKanjiById } from "@/assets/data_JLPT_kanji";
-import { KanjiStrokeOrder } from "@/components/KanjiStrokeOrder";
-import { FeedbackSection } from "@/components/FeedbackSection";
 
-const TEAL = "#4ECDC4";
+import { getKanjiById } from "../assets/data_JLPT_kanji";
+import { FeedbackSection } from "../components/FeedbackSection";
+import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 
-function InfoChip({ label, value }: { label: string; value: string }) {
-  if (!value) return null;
-  return (
-    <View style={s.chip}>
-      <Text style={s.chipLabel}>{label}</Text>
-      <Text style={s.chipValue}>{value}</Text>
-    </View>
-  );
-}
+const BLUE = "#2F80ED";
+const BLUE_DARK = "#1E40AF";
 
 export default function KanjiDetailScreen() {
   const router = useRouter();
-  const params = useLocalSearchParams<{ id?: string; level?: string }>();
+  const params = useLocalSearchParams<{ id?: string }>();
   const id = typeof params.id === "string" ? params.id : "";
-  const level = typeof params.level === "string" ? params.level : "N5";
-  const kanji = findKanjiById(id);
-
-  const speak = (text: string) => {
-    if (!text) return;
-    Speech.speak(text, { language: "ja-JP", pitch: 1, rate: 0.8 });
-  };
+  const kanji = useMemo(() => getKanjiById(id), [id]);
 
   if (!kanji) {
     return (
       <View style={s.root}>
-        <StatusBar barStyle="light-content" backgroundColor={TEAL} />
         <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
           <View style={s.topBarInner}>
-            <TouchableOpacity style={s.circleBtn} onPress={() => router.back()} hitSlop={10}>
-              <Text style={s.circleBtnIcon}>‹</Text>
+            <TouchableOpacity
+              style={s.iconBtn}
+              onPress={() => router.back()}
+              hitSlop={8}
+            >
+              <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
-            <Text style={s.topTitle}>Chi tiết Kanji</Text>
-            <View style={s.circleBtn} />
+            <Text style={s.topTitle}>Không tìm thấy</Text>
+            <View style={s.iconBtn} />
           </View>
         </SafeAreaView>
-        <View style={s.notFoundWrap}>
-          <Text style={s.notFoundText}>Không tìm thấy kanji này.</Text>
-          <TouchableOpacity style={s.notFoundBtn} onPress={() => router.back()}>
-            <Text style={s.notFoundBtnText}>Quay lại</Text>
-          </TouchableOpacity>
+        <View style={{ padding: 24 }}>
+          <Text>Không tìm thấy chữ Kanji này.</Text>
         </View>
       </View>
     );
@@ -63,98 +57,357 @@ export default function KanjiDetailScreen() {
 
   return (
     <View style={s.root}>
-      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
+      <StatusBar barStyle="light-content" backgroundColor={BLUE} />
+
+      {/* ── Thanh trên cùng ── */}
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
-          <TouchableOpacity style={s.circleBtn} onPress={() => router.back()} hitSlop={10}>
-            <Text style={s.circleBtnIcon}>‹</Text>
+          <TouchableOpacity
+            style={s.iconBtn}
+            onPress={() => router.back()}
+            hitSlop={8}
+          >
+            <Text style={s.backIcon}>‹</Text>
           </TouchableOpacity>
-          <Text style={s.topTitle} numberOfLines={1}>{kanji.kanji} — {kanji.meaning}</Text>
-          <View style={s.circleBtn} />
+          <Text style={s.topTitle} numberOfLines={1}>
+            Chi tiết Kanji
+          </Text>
+          <View style={s.iconBtn} />
         </View>
       </SafeAreaView>
 
-      <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} showsVerticalScrollIndicator={false}>
-        <View style={s.headerCard}>
-          <View style={s.kanjiCircle}>
-            <Text style={s.kanjiChar}>{kanji.kanji}</Text>
-          </View>
-          <TouchableOpacity style={s.speakerBtn} onPress={() => speak(kanji.onyomi[0] || kanji.kanji)} activeOpacity={0.7}>
-            <Text style={s.speakerIcon}>🔊</Text>
-          </TouchableOpacity>
-          <Text style={s.levelBadge}>{level}</Text>
-          <Text style={s.meaningText}>{kanji.meanings.join(", ")}</Text>
-          {kanji.strokes ? <Text style={s.strokesText}>Số nét: {kanji.strokes}</Text> : null}
-        </View>
-
-        <View style={s.chipsRow}>
-          <InfoChip label="Âm On" value={kanji.onyomi.join(" · ")} />
-          <InfoChip label="Âm Kun" value={kanji.kunyomi.join(" · ")} />
-          {kanji.components.length > 0 ? <InfoChip label="Bộ phận" value={kanji.components.map((c) => c.kanji).join(" ")} /> : null}
-        </View>
-
-        <View style={s.block}>
-          <Text style={s.blockTitle}>✍️ Thứ tự nét viết</Text>
-          <KanjiStrokeOrder kanji={kanji.kanji} />
-        </View>
-
-
-        {kanji.examples && kanji.examples.length > 0 && (
-          <View style={s.block}>
-            <Text style={s.blockTitle}>💡 Ví dụ</Text>
-            {kanji.examples.map((ex, i) => (
-              <View key={i} style={s.exampleCard}>
-                <Text style={s.exampleJp}>{ex.jp}</Text>
-                {ex.reading ? <Text style={s.exampleReading}>{ex.reading}</Text> : null}
-                {ex.vi && <Text style={s.exampleVi}>{ex.vi}</Text>}
+      <ScrollView
+        style={s.scroll}
+        contentContainerStyle={s.scrollContent}
+      >
+        {/* ── Card thông tin chính ── */}
+        <View style={s.card}>
+          {/* Chữ kanji to + Hán Việt */}
+          <View style={s.headerRow}>
+            <View style={{ flex: 1 }}>
+              <Text style={s.bigKanji}>{kanji.kanji}</Text>
+              <Text style={s.bigHanViet}>{kanji.hanViet}</Text>
+            </View>
+            <View style={s.headerActions}>
+              <View style={s.actionBtn}>
+                <Text style={s.actionIcon}>✎</Text>
               </View>
-            ))}
+              <View style={s.actionBtn}>
+                <Text style={s.actionIcon}>📋</Text>
+              </View>
+              <View style={s.actionBtn}>
+                <Text style={s.actionIcon}>＋</Text>
+              </View>
+            </View>
           </View>
-        )}
 
-        <View style={{ paddingHorizontal: 4 }}>
-          <FeedbackSection pageKey={`kanji-detail::${id}`} />
+          <View style={s.divider} />
+
+          {/* Phát âm */}
+          <Text style={s.sectionTitle}>Phát âm</Text>
+
+          {kanji.kunyomi.length > 0 && (
+            <View style={s.pronRow}>
+              <Text style={s.diamond}>◆</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={s.pronLabel}>Kunyomi</Text>
+                <Text style={s.pronValue}>{kanji.kunyomi.join("、")}</Text>
+              </View>
+            </View>
+          )}
+
+          {kanji.onyomi.length > 0 && (
+            <View style={s.pronRow}>
+              <Text style={s.diamond}>◆</Text>
+              <View style={{ flex: 1 }}>
+                <Text style={s.pronLabel}>Onyomi</Text>
+                <Text style={s.pronValue}>{kanji.onyomi.join("、")}</Text>
+              </View>
+            </View>
+          )}
+
+          {/* Cách viết — từng nét được tô màu khác nhau, có đánh số thứ tự */}
+          <View style={s.strokeWrap}>
+            <KanjiStrokeOrder kanji={kanji.kanji} size={240} />
+            <Text style={s.strokeHint}>
+              Mỗi màu là một nét, số bên cạnh là thứ tự viết (1 → {kanji.strokes}).
+            </Text>
+          </View>
+
+          {/* 3 cột: Số nét | JLPT | Tần suất */}
+          <View style={s.statsRow}>
+            <View style={s.statCol}>
+              <View style={s.statChip}>
+                <Text style={s.statChipText}>Số nét</Text>
+              </View>
+              <Text style={s.statValue}>{kanji.strokes}</Text>
+            </View>
+            <View style={s.statCol}>
+              <View style={s.statChip}>
+                <Text style={s.statChipText}>JLPT</Text>
+              </View>
+              <Text style={s.statValue}>{kanji.level}</Text>
+            </View>
+            <View style={s.statCol}>
+              <View style={s.statChip}>
+                <Text style={s.statChipText}>Tần suất</Text>
+              </View>
+              <Text style={[s.statValue, s.statLink]}>
+                {kanji.frequency ? `#${kanji.frequency}/2500` : "—"}
+              </Text>
+            </View>
+          </View>
+
+          <View style={s.divider} />
+
+          {/* Bộ thủ */}
+          <View style={s.bushuHeader}>
+            <Text style={s.sectionTitle}>Bộ</Text>
+            <Text style={s.linkText}>↗ Phân tích Kanji</Text>
+          </View>
+          {(kanji.components ?? []).map((c, i) => (
+            <View key={i} style={s.bushuRow}>
+              <View style={s.bushuBar} />
+              <Text style={s.bushuKanji}>{c.kanji}</Text>
+              <Text style={s.bushuLabel}>「{c.hanViet}」</Text>
+            </View>
+          ))}
+
+          <View style={s.divider} />
+
+          {/* Nghĩa */}
+          <Text style={s.sectionTitle}>Nghĩa</Text>
+          {kanji.meanings.map((m, i) => (
+            <View key={i} style={s.meaningRow}>
+              <Text style={s.meaningDot}>•</Text>
+              <Text style={s.meaningText}>{m}</Text>
+            </View>
+          ))}
+
+          {/* Ví dụ */}
+          {kanji.examples && kanji.examples.length > 0 && (
+            <>
+              <View style={s.divider} />
+              <Text style={s.sectionTitle}>Ví dụ</Text>
+              {kanji.examples.map((ex, i) => (
+                <View key={i} style={s.exampleRow}>
+                  <Text style={s.exampleJp}>{ex.jp}</Text>
+                  <Text style={s.exampleReading}>{ex.reading}</Text>
+                  <Text style={s.exampleVi}>→ {ex.vi}</Text>
+                </View>
+              ))}
+            </>
+          )}
+        </View>
+
+        {/* Khối đóng góp ý kiến */}
+        <View style={{ paddingHorizontal: 12 }}>
+          <FeedbackSection pageKey={`kanji-detail::${kanji.id}`} />
         </View>
 
         <View style={{ height: 40 }} />
       </ScrollView>
+
+      {/* ── Thanh dưới (giống ảnh 2): nút trước / Đóng / sau ── */}
+      <SafeAreaView edges={["bottom"]} style={s.bottomBar}>
+        <View style={s.bottomInner}>
+          <TouchableOpacity style={s.navArrow} hitSlop={8}>
+            <Text style={s.navArrowText}>‹</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={s.closeBtn}
+            onPress={() => router.back()}
+            activeOpacity={0.85}
+          >
+            <Text style={s.closeBtnText}>Đóng</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={s.navArrow} hitSlop={8}>
+            <Text style={s.navArrowText}>›</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
     </View>
   );
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f8fafc" },
-  topBar: { backgroundColor: TEAL },
-  topBarInner: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 12, paddingVertical: 10 },
-  circleBtn: { width: 40, height: 40, borderRadius: 20, backgroundColor: "rgba(255,255,255,0.18)", alignItems: "center", justifyContent: "center" },
-  circleBtnIcon: { color: "#fff", fontSize: 28, fontWeight: "300", marginTop: -3, marginLeft: -2 },
-  topTitle: { flex: 1, color: "#fff", fontSize: 16, fontWeight: "800", textAlign: "center" },
+  root: { flex: 1, backgroundColor: "#f1f5f9" },
+
+  // Thanh xanh trên cùng
+  topBar: { backgroundColor: BLUE },
+  topBarInner: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+  },
+  iconBtn: {
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  topTitle: {
+    flex: 1,
+    color: "#fff",
+    fontSize: 18,
+    fontWeight: "800",
+    textAlign: "center",
+  },
+
   scroll: { flex: 1 },
-  scrollContent: { padding: 16, paddingBottom: 24 },
-  headerCard: { backgroundColor: TEAL, borderRadius: 20, padding: 20, alignItems: "center", marginBottom: 16, position: "relative" },
-  kanjiCircle: { width: 100, height: 100, borderRadius: 50, backgroundColor: "#fff", alignItems: "center", justifyContent: "center", marginBottom: 12, borderWidth: 3, borderColor: "rgba(255,255,255,0.5)" },
-  kanjiChar: { fontSize: 56, fontWeight: "700", color: "#0f172a" },
-  speakerBtn: { position: "absolute", top: 14, right: 14, width: 36, height: 36, borderRadius: 18, backgroundColor: "rgba(255,255,255,0.25)", alignItems: "center", justifyContent: "center" },
-  speakerIcon: { fontSize: 18 },
-  levelBadge: { color: "rgba(255,255,255,0.8)", fontSize: 11, fontWeight: "800", letterSpacing: 1.2, textTransform: "uppercase", marginBottom: 8 },
-  meaningText: { color: "#fff", fontSize: 24, fontWeight: "800", textAlign: "center" },
-  strokesText: { color: "rgba(255,255,255,0.8)", fontSize: 13, marginTop: 6 },
-  chipsRow: { flexDirection: "row", flexWrap: "wrap", gap: 10, marginBottom: 16 },
-  chip: { flex: 1, minWidth: 100, backgroundColor: "#fff", borderRadius: 12, padding: 12, borderWidth: 1, borderColor: "#e2e8f0", alignItems: "center" },
-  chipLabel: { fontSize: 10, fontWeight: "700", color: "#94a3b8", textTransform: "uppercase", letterSpacing: 0.8, marginBottom: 4 },
-  chipValue: { fontSize: 16, fontWeight: "700", color: "#0f172a", textAlign: "center" },
-  block: { marginBottom: 18 },
-  blockTitle: { fontSize: 16, fontWeight: "800", color: "#0f172a", marginBottom: 10 },
-  vocabRow: { flexDirection: "row", alignItems: "center", backgroundColor: "#fff", borderRadius: 10, padding: 12, marginBottom: 8, borderWidth: 1, borderColor: "#e2e8f0" },
-  vocabKanji: { fontSize: 18, fontWeight: "700", color: "#0f172a", width: 64, marginRight: 10 },
-  vocabReading: { fontSize: 13, color: "#3b82f6", flex: 1 },
-  vocabMeaning: { fontSize: 13, color: "#475569", flex: 2, textAlign: "right" },
-  exampleCard: { backgroundColor: "#fff", borderRadius: 12, padding: 14, marginBottom: 10, borderWidth: 1, borderColor: "#e2e8f0" },
-  exampleJp: { fontSize: 16, fontWeight: "600", color: "#0f172a" },
-  exampleReading: { fontSize: 13, color: "#64748b", marginTop: 2 },
-  exampleVi: { fontSize: 13, color: "#3b82f6", marginTop: 2 },
-  notFoundWrap: { flex: 1, alignItems: "center", justifyContent: "center", padding: 24 },
-  notFoundText: { fontSize: 18, color: "#475569", marginBottom: 20 },
-  notFoundBtn: { backgroundColor: TEAL, paddingHorizontal: 24, paddingVertical: 12, borderRadius: 12 },
-  notFoundBtnText: { color: "#fff", fontWeight: "700", fontSize: 15 },
+  scrollContent: { padding: 12, paddingBottom: 12 },
+
+  // Card chứa toàn bộ thông tin Kanji
+  card: {
+    backgroundColor: "#fff",
+    borderRadius: 14,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: "#e2e8f0",
+  },
+  headerRow: { flexDirection: "row", alignItems: "flex-start" },
+  bigKanji: {
+    fontSize: 56,
+    fontWeight: "800",
+    color: BLUE,
+    lineHeight: 64,
+  },
+  bigHanViet: {
+    fontSize: 13,
+    color: "#475569",
+    fontWeight: "700",
+    letterSpacing: 1,
+    marginTop: 2,
+  },
+  headerActions: { flexDirection: "row", alignItems: "center" },
+  actionBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 6,
+    borderWidth: 1,
+    borderColor: "#cbd5e1",
+    alignItems: "center",
+    justifyContent: "center",
+    marginLeft: 6,
+    backgroundColor: "#fff",
+  },
+  actionIcon: { fontSize: 14, color: "#475569" },
+
+  divider: {
+    height: StyleSheet.hairlineWidth,
+    backgroundColor: "#e2e8f0",
+    marginVertical: 14,
+  },
+
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: "800",
+    color: "#0f172a",
+    marginBottom: 10,
+  },
+
+  // Phát âm
+  pronRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 10 },
+  diamond: { color: BLUE, fontSize: 12, marginRight: 8, marginTop: 4 },
+  pronLabel: { fontSize: 14, fontWeight: "700", color: "#0f172a" },
+  pronValue: { fontSize: 15, color: BLUE, marginTop: 2 },
+
+  // Vùng vẽ thứ tự nét
+  strokeWrap: {
+    alignItems: "center",
+    marginVertical: 6,
+  },
+  strokeHint: {
+    fontSize: 11,
+    color: "#94a3b8",
+    marginTop: 8,
+    textAlign: "center",
+    paddingHorizontal: 16,
+  },
+
+  // 3 cột thông tin
+  statsRow: {
+    flexDirection: "row",
+    marginTop: 14,
+    paddingHorizontal: 4,
+  },
+  statCol: { flex: 1, alignItems: "center" },
+  statChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 14,
+    borderWidth: 1,
+    borderColor: "#cbd5e1",
+    backgroundColor: "#f8fafc",
+  },
+  statChipText: { fontSize: 12, color: "#475569", fontWeight: "600" },
+  statValue: { fontSize: 18, fontWeight: "800", color: "#0f172a", marginTop: 6 },
+  statLink: { color: BLUE, textDecorationLine: "underline" },
+
+  // Bộ thủ
+  bushuHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 6,
+  },
+  linkText: { fontSize: 13, color: BLUE, fontWeight: "600" },
+  bushuRow: { flexDirection: "row", alignItems: "center", marginTop: 8 },
+  bushuBar: {
+    width: 3,
+    height: 18,
+    backgroundColor: BLUE,
+    marginRight: 8,
+    borderRadius: 2,
+  },
+  bushuKanji: { fontSize: 18, fontWeight: "700", color: "#0f172a", marginRight: 6 },
+  bushuLabel: { fontSize: 13, color: "#475569" },
+
+  // Nghĩa
+  meaningRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 6 },
+  meaningDot: { fontSize: 16, color: "#0f172a", marginRight: 8 },
+  meaningText: { flex: 1, fontSize: 15, color: "#0f172a", lineHeight: 22 },
+
+  // Ví dụ
+  exampleRow: { marginBottom: 10 },
+  exampleJp: { fontSize: 16, fontWeight: "700", color: "#0f172a" },
+  exampleReading: { fontSize: 13, color: BLUE, marginTop: 2 },
+  exampleVi: { fontSize: 13, color: "#475569", marginTop: 2 },
+
+  // Thanh dưới
+  bottomBar: {
+    backgroundColor: "#fff",
+    borderTopWidth: 1,
+    borderTopColor: "#e2e8f0",
+  },
+  bottomInner: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+  },
+  navArrow: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: "#e2e8f0",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#fff",
+  },
+  navArrowText: { fontSize: 26, color: "#0f172a", marginTop: -4 },
+  closeBtn: {
+    flex: 1,
+    marginHorizontal: 12,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: BLUE,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  closeBtnText: { color: "#fff", fontSize: 16, fontWeight: "700" },
 });

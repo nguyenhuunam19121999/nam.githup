@@ -3,32 +3,33 @@
     "id": "n5-001",
     "kanji": "一",
     "hanViet": "NHẤT",
-    "kunyomi": ["ひと", "ひと.つ"],
+    "kunyomi": ["ひと-", "ひと.つ"],
     "onyomi": ["イチ", "イツ"],
     "strokes": 1,
     "level": "N5",
     "frequency": 2,
-    "components": [],
-    "meanings": ["Một", "Đầu tiên", "Thống nhất"],
+    "components": [{ "kanji": "一", "hanViet": "NHẤT" }],
+    "meanings": ["Một", "Số 1", "Toàn bộ, đồng nhất"],
     "examples": [
       { "jp": "一人", "reading": "ひとり", "vi": "Một người" },
-      { "jp": "一番", "reading": "いちばん", "vi": "Số một, nhất" }
+      { "jp": "一月", "reading": "いちがつ", "vi": "Tháng Một" }
     ]
   },
   {
     "id": "n5-002",
     "kanji": "日",
     "hanViet": "NHẬT",
-    "kunyomi": ["ひ", "か"],
+    "kunyomi": ["ひ", "-び", "-か"],
     "onyomi": ["ニチ", "ジツ"],
     "strokes": 4,
     "level": "N5",
     "frequency": 1,
-    "components": [],
-    "meanings": ["Mặt trời", "Ngày", "Nhật Bản"],
+    "components": [{ "kanji": "日", "hanViet": "NHẬT" }],
+    "meanings": ["Mặt trời", "Ngày", "Nước Nhật"],
     "examples": [
-      { "jp": "日本語", "reading": "にほんご", "vi": "Tiếng Nhật" },
-      { "jp": "今日", "reading": "きょう", "vi": "Hôm nay" }
+      { "jp": "日本", "reading": "にほん", "vi": "Nhật Bản" },
+      { "jp": "今日", "reading": "きょう", "vi": "Hôm nay" },
+      { "jp": "毎日", "reading": "まいにち", "vi": "Mỗi ngày" }
     ]
   },
   {
@@ -39,108 +40,60 @@
     "onyomi": ["ゲツ", "ガツ"],
     "strokes": 4,
     "level": "N5",
-    "frequency": 4,
-    "components": [],
+    "frequency": 23,
+    "components": [{ "kanji": "月", "hanViet": "NGUYỆT" }],
     "meanings": ["Mặt trăng", "Tháng"],
     "examples": [
-      { "jp": "月曜日", "reading": "げつようび", "vi": "Thứ Hai" },
+      { "jp": "月曜日", "reading": "げつようび", "vi": "Thứ hai" },
       { "jp": "今月", "reading": "こんげつ", "vi": "Tháng này" }
     ]
   },
   {
     "id": "n5-004",
-    "kanji": "山",
-    "hanViet": "SƠN",
-    "kunyomi": ["やま"],
-    "onyomi": ["サン", "ザン"],
-    "strokes": 3,
-    "level": "N5",
-    "frequency": 11,
-    "components": [],
-    "meanings": ["Núi"],
-    "examples": [
-      { "jp": "山田", "reading": "やまだ", "vi": "Yamada (họ người)" },
-      { "jp": "富士山", "reading": "ふじさん", "vi": "Núi Phú Sĩ" }
-    ]
-  },
-  {
-    "id": "n5-005",
-    "kanji": "水",
-    "hanViet": "THỦY",
-    "kunyomi": ["みず"],
-    "onyomi": ["スイ"],
-    "strokes": 4,
-    "level": "N5",
-    "frequency": 13,
-    "components": [],
-    "meanings": ["Nước"],
-    "examples": [
-      { "jp": "水曜日", "reading": "すいようび", "vi": "Thứ Tư" },
-      { "jp": "水泳", "reading": "すいえい", "vi": "Bơi lội" }
-    ]
-  },
-  {
-    "id": "n5-006",
     "kanji": "人",
     "hanViet": "NHÂN",
-    "kunyomi": ["ひと"],
+    "kunyomi": ["ひと", "-り", "-と"],
     "onyomi": ["ジン", "ニン"],
     "strokes": 2,
     "level": "N5",
     "frequency": 5,
-    "components": [],
-    "meanings": ["Người"],
+    "components": [{ "kanji": "人", "hanViet": "NHÂN" }],
+    "meanings": ["Người", "Con người"],
     "examples": [
       { "jp": "日本人", "reading": "にほんじん", "vi": "Người Nhật" },
-      { "jp": "一人", "reading": "ひとり", "vi": "Một mình" }
+      { "jp": "三人", "reading": "さんにん", "vi": "Ba người" }
     ]
   },
   {
-    "id": "n5-007",
-    "kanji": "口",
-    "hanViet": "KHẨU",
-    "kunyomi": ["くち"],
-    "onyomi": ["コウ", "ク"],
+    "id": "n5-005",
+    "kanji": "山",
+    "hanViet": "SƠN",
+    "kunyomi": ["やま"],
+    "onyomi": ["サン", "セン"],
     "strokes": 3,
     "level": "N5",
-    "frequency": 20,
-    "components": [],
-    "meanings": ["Miệng", "Cửa", "Lỗ"],
+    "frequency": 89,
+    "components": [{ "kanji": "山", "hanViet": "SƠN" }],
+    "meanings": ["Núi", "Một đống lớn"],
     "examples": [
-      { "jp": "口語", "reading": "こうご", "vi": "Khẩu ngữ" },
-      { "jp": "人口", "reading": "じんこう", "vi": "Dân số" }
+      { "jp": "富士山", "reading": "ふじさん", "vi": "Núi Phú Sĩ" },
+      { "jp": "火山", "reading": "かざん", "vi": "Núi lửa" }
     ]
   },
   {
-    "id": "n5-008",
-    "kanji": "目",
-    "hanViet": "MỤC",
-    "kunyomi": ["め", "ま"],
-    "onyomi": ["モク", "ボク"],
-    "strokes": 5,
-    "level": "N5",
-    "frequency": 14,
-    "components": [],
-    "meanings": ["Mắt", "Mục tiêu", "Con mắt"],
-    "examples": [
-      { "jp": "目的", "reading": "もくてき", "vi": "Mục đích" },
-      { "jp": "注目", "reading": "ちゅうもく", "vi": "Chú ý" }
-    ]
-  },
-  {
-    "id": "n5-009",
-    "kanji": "火",
-    "hanViet": "HỎA",
-    "kunyomi": ["ひ", "ほ"],
-    "onyomi": ["カ"],
+    "id": "n5-006",
+    "kanji": "水",
+    "hanViet": "THUỶ",
+    "kunyomi": ["みず", "-みず"],
+    "onyomi": ["スイ"],
     "strokes": 4,
     "level": "N5",
-    "frequency": 22,
-    "components": [],
-    "meanings": ["Lửa"],
+    "frequency": 130,
+    "components": [{ "kanji": "水", "hanViet": "THUỶ" }],
+    "meanings": ["Nước", "Sự lỏng"],
     "examples": [
-      { "jp": "火曜日", "reading": "かようび", "vi": "Thứ Ba" },
-      { "jp": "花火", "reading": "はなび", "vi": "Pháo hoa" }
+      { "jp": "水曜日", "reading": "すいようび", "vi": "Thứ tư" },
+      { "jp": "お水", "reading": "おみず", "vi": "Nước (uống)" }
     ]
   }
 ]

@@ -1,77 +1,122 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 
-interface AuthContextType {
+interface UserRecord {
+  username: string;
+  password: string;
+}
+
+interface AuthContextValue {
   currentUser: string | null;
-  isLoading: boolean;
-  login: (username: string, password: string) => Promise<boolean>;
-  register: (username: string, password: string) => Promise<boolean>;
+  ready: boolean;
+  login: (username: string, password: string) => Promise<{ ok: boolean; error?: string }>;
+  register: (
+    username: string,
+    password: string,
+  ) => Promise<{ ok: boolean; error?: string }>;
   logout: () => Promise<void>;
   scopedKey: (key: string) => string;
 }
 
-const AuthContext = createContext<AuthContextType>({
-  currentUser: null,
-  isLoading: true,
-  login: async () => false,
-  register: async () => false,
-  logout: async () => {},
-  scopedKey: (k) => k,
-});
+const AuthContext = createContext<AuthContextValue | undefined>(undefined);
+
+const USERS_KEY = "auth.users";
+const CURRENT_USER_KEY = "auth.currentUser";
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [currentUser, setCurrentUser] = useState<string | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    AsyncStorage.getItem("auth_current_user")
-      .then((u) => setCurrentUser(u))
-      .finally(() => setIsLoading(false));
+    (async () => {
+      try {
+        const saved = await AsyncStorage.getItem(CURRENT_USER_KEY);
+        if (saved) setCurrentUser(saved);
+      } catch (e) {
+        console.log("Error loading auth state");
+      } finally {
+        setReady(true);
+      }
+    })();
   }, []);
 
-  const login = useCallback(async (username: string, password: string) => {
+  const loadUsers = useCallback(async (): Promise<UserRecord[]> => {
     try {
-      const stored = await AsyncStorage.getItem(`auth_user_${username}`);
-      if (!stored) return false;
-      const data = JSON.parse(stored);
-      if (data.password !== password) return false;
-      await AsyncStorage.setItem("auth_current_user", username);
-      setCurrentUser(username);
-      return true;
+      const raw = await AsyncStorage.getItem(USERS_KEY);
+      return raw ? (JSON.parse(raw) as UserRecord[]) : [];
     } catch {
-      return false;
+      return [];
     }
   }, []);
 
-  const register = useCallback(async (username: string, password: string) => {
-    try {
-      const existing = await AsyncStorage.getItem(`auth_user_${username}`);
-      if (existing) return false;
-      await AsyncStorage.setItem(`auth_user_${username}`, JSON.stringify({ username, password }));
-      await AsyncStorage.setItem("auth_current_user", username);
-      setCurrentUser(username);
-      return true;
-    } catch {
-      return false;
-    }
+  const saveUsers = useCallback(async (users: UserRecord[]) => {
+    await AsyncStorage.setItem(USERS_KEY, JSON.stringify(users));
   }, []);
+
+  const register = useCallback(
+    async (username: string, password: string) => {
+      const u = username.trim();
+      if (!u) return { ok: false, error: "Vui lòng nhập tên đăng nhập" };
+      if (!password) return { ok: false, error: "Vui lòng nhập mật khẩu" };
+      const users = await loadUsers();
+      if (users.find((x) => x.username.toLowerCase() === u.toLowerCase())) {
+        return { ok: false, error: "Tên đăng nhập đã tồn tại" };
+      }
+      users.push({ username: u, password });
+      await saveUsers(users);
+      await AsyncStorage.setItem(CURRENT_USER_KEY, u);
+      setCurrentUser(u);
+      return { ok: true };
+    },
+    [loadUsers, saveUsers],
+  );
+
+  const login = useCallback(
+    async (username: string, password: string) => {
+      const u = username.trim();
+      const users = await loadUsers();
+      const found = users.find(
+        (x) => x.username.toLowerCase() === u.toLowerCase(),
+      );
+      if (!found) return { ok: false, error: "Tài khoản không tồn tại" };
+      if (found.password !== password)
+        return { ok: false, error: "Mật khẩu không đúng" };
+      await AsyncStorage.setItem(CURRENT_USER_KEY, found.username);
+      setCurrentUser(found.username);
+      return { ok: true };
+    },
+    [loadUsers],
+  );
 
   const logout = useCallback(async () => {
-    await AsyncStorage.removeItem("auth_current_user");
+    await AsyncStorage.removeItem(CURRENT_USER_KEY);
     setCurrentUser(null);
   }, []);
 
-  const scopedKey = useCallback((key: string) => {
-    return currentUser ? `${currentUser}_${key}` : `guest_${key}`;
-  }, [currentUser]);
-
-  return (
-    <AuthContext.Provider value={{ currentUser, isLoading, login, register, logout, scopedKey }}>
-      {children}
-    </AuthContext.Provider>
+  const scopedKey = useCallback(
+    (key: string) => `${currentUser ?? "guest"}::${key}`,
+    [currentUser],
   );
+
+  const value = useMemo<AuthContextValue>(
+    () => ({ currentUser, ready, login, register, logout, scopedKey }),
+    [currentUser, ready, login, register, logout, scopedKey],
+  );
+
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
 
 export function useAuth() {
-  return useContext(AuthContext);
+  const ctx = useContext(AuthContext);
+  if (!ctx) {
+    throw new Error("useAuth must be used inside AuthProvider");
+  }
+  return ctx;
 }

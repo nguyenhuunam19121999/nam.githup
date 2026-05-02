@@ -10,7 +10,8 @@
     "frequency": 1947,
     "components": [
       { "kanji": "林", "hanViet": "LÂM" },
-      { "kanji": "缶", "hanViet": "PHẪU" }
+      { "kanji": "缶", "hanViet": "PHẪU" },
+      { "kanji": "冖", "hanViet": "MỊCH" }
     ],
     "meanings": ["U uất, trầm uất", "Sum suê, rậm rạp"],
     "examples": [
@@ -35,24 +36,6 @@
     "examples": [
       { "jp": "韻律", "reading": "いんりつ", "vi": "Vần luật" },
       { "jp": "押韻", "reading": "おういん", "vi": "Gieo vần" }
-    ]
-  },
-  {
-    "id": "n1-003",
-    "kanji": "憧",
-    "hanViet": "ĐỒNG",
-    "kunyomi": ["あこが.れる"],
-    "onyomi": ["ショウ", "ドウ"],
-    "strokes": 15,
-    "level": "N1",
-    "frequency": 1200,
-    "components": [
-      { "kanji": "忄", "hanViet": "TÂM" },
-      { "kanji": "童", "hanViet": "ĐỒNG" }
-    ],
-    "meanings": ["Mơ tưởng, ngưỡng mộ"],
-    "examples": [
-      { "jp": "憧れる", "reading": "あこがれる", "vi": "Ngưỡng mộ, ao ước" }
     ]
   }
 ]

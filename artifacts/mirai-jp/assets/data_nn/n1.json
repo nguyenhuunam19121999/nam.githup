@@ -1,38 +1,26 @@
 [
   {
-    "id": "n1-g-001",
-    "pattern": "〜いかんにかかわらず",
-    "meaning": "Bất kể ~ như thế nào",
+    "id": "n1-1",
+    "pattern": "〜が早いか",
+    "phienAm": "がはやいか",
+    "meaning": "Vừa mới... thì",
     "level": "N1",
-    "usage": "Diễn đạt không phụ thuộc vào điều kiện nào đó.",
+    "structure": "[V (thể từ điển)] + が早いか",
+    "explanation": "Diễn tả: ngay khi vế trước vừa xảy ra thì vế sau lập tức diễn ra ngay sau đó. Hai sự việc gần như xảy ra đồng thời.",
     "examples": [
-      { "jp": "結果のいかんにかかわらず、全力を尽くします。", "vi": "Bất kể kết quả như thế nào, tôi sẽ cố hết sức." },
-      { "jp": "理由のいかんにかかわらず、遅刻は認めません。", "vi": "Bất kể lý do ra sao, đi muộn đều không được chấp nhận." }
-    ],
-    "notes": "Danh từ + のいかんにかかわらず"
+      { "jp": "ベルが鳴るが早いか、生徒たちは教室を飛び出した。", "vi": "Vừa nghe chuông reo, các học sinh đã chạy ra khỏi lớp." }
+    ]
   },
   {
-    "id": "n1-g-002",
-    "pattern": "〜をもって",
-    "meaning": "Từ ~ / Bằng ~ / Kể từ ~",
+    "id": "n1-2",
+    "pattern": "〜を余儀なくされる",
+    "phienAm": "をよぎなくされる",
+    "meaning": "Buộc phải",
     "level": "N1",
-    "usage": "Diễn đạt phương tiện, giới hạn thời gian.",
+    "structure": "[N] + を余儀なくされる",
+    "explanation": "Diễn tả: bị hoàn cảnh ép buộc phải làm điều gì đó dù không muốn. Mang sắc thái trang trọng, thường dùng trong văn viết/báo chí.",
     "examples": [
-      { "jp": "本日をもって、閉店いたします。", "vi": "Kể từ hôm nay, chúng tôi đóng cửa." },
-      { "jp": "実力をもって示す。", "vi": "Chứng minh bằng thực lực." }
-    ],
-    "notes": "Danh từ + をもって"
-  },
-  {
-    "id": "n1-g-003",
-    "pattern": "〜ともなると",
-    "meaning": "Khi đã là ~ / Đến lúc ~",
-    "level": "N1",
-    "usage": "Diễn đạt khi đạt đến một cấp độ hoặc tình huống nhất định.",
-    "examples": [
-      { "jp": "社長ともなると、責任も重い。", "vi": "Khi đã là giám đốc thì trách nhiệm cũng nặng nề." },
-      { "jp": "50代ともなると、体力が落ちる。", "vi": "Khi đã đến tuổi 50, thể lực sẽ giảm sút." }
-    ],
-    "notes": "Danh từ + ともなると / ともなれば"
+      { "jp": "台風で旅行の中止を余儀なくされた。", "vi": "Vì bão nên buộc phải hủy chuyến đi." }
+    ]
   }
 ]

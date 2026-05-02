@@ -1,53 +1,75 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// data_JLPT_kanji
+// Dữ liệu Kanji theo cấp độ JLPT (N5 → N1).
+// Mỗi cấp được lưu trong 1 file JSON riêng, dễ chỉnh sửa / mở rộng về sau.
+// Cấu trúc tương tự `data_nn` (ngữ pháp).
+// ─────────────────────────────────────────────────────────────────────────────
+
 import n1 from "./n1.json";
 import n2 from "./n2.json";
 import n3 from "./n3.json";
 import n4 from "./n4.json";
 import n5 from "./n5.json";
 
+/** Một thành phần (bộ thủ / bộ phận) cấu tạo nên chữ Kanji */
+export interface KanjiComponent {
+  kanji: string;
+  hanViet: string;
+}
+
+/** Ví dụ minh hoạ — từ ghép có chứa chữ Kanji này */
 export interface KanjiExample {
   jp: string;
   reading: string;
   vi: string;
 }
 
-export interface KanjiComponent {
-  kanji: string;
-  hanViet: string;
-}
-
 export interface KanjiItem {
   id: string;
+  /** Chính chữ Kanji, ví dụ "候" */
   kanji: string;
+  /** Âm Hán Việt, ví dụ "HẬU" */
   hanViet: string;
+  /** Âm thuần Nhật (Kunyomi) */
   kunyomi: string[];
+  /** Âm Hán Nhật (Onyomi) */
   onyomi: string[];
+  /** Số nét */
   strokes: number;
-  level: string;
-  frequency: number;
-  components: KanjiComponent[];
+  level: "N5" | "N4" | "N3" | "N2" | "N1";
+  /** Thứ hạng tần suất xuất hiện (theo bộ 2500 chữ thông dụng), không bắt buộc */
+  frequency?: number;
+  /** Các bộ thủ / bộ phận cấu thành */
+  components?: KanjiComponent[];
+  /** Danh sách nghĩa tiếng Việt */
   meanings: string[];
-  examples: KanjiExample[];
+  /** Ví dụ từ ghép minh hoạ (không bắt buộc) */
+  examples?: KanjiExample[];
 }
 
-export type JLPTLevel = "N1" | "N2" | "N3" | "N4" | "N5";
-
-export const KANJI_DATA: Record<JLPTLevel, KanjiItem[]> = {
-  N1: n1 as KanjiItem[],
-  N2: n2 as KanjiItem[],
-  N3: n3 as KanjiItem[],
-  N4: n4 as KanjiItem[],
+export const KANJI_BY_LEVEL: Record<string, KanjiItem[]> = {
   N5: n5 as KanjiItem[],
+  N4: n4 as KanjiItem[],
+  N3: n3 as KanjiItem[],
+  N2: n2 as KanjiItem[],
+  N1: n1 as KanjiItem[],
 };
 
-export function getKanji(level: string): KanjiItem[] {
-  const key = level.toUpperCase() as JLPTLevel;
-  return KANJI_DATA[key] ?? [];
+export const ALL_KANJI: KanjiItem[] = [
+  ...(n5 as KanjiItem[]),
+  ...(n4 as KanjiItem[]),
+  ...(n3 as KanjiItem[]),
+  ...(n2 as KanjiItem[]),
+  ...(n1 as KanjiItem[]),
+];
+
+/** Trả về danh sách Kanji theo cấp độ; nếu không có cấp hợp lệ → trả tất cả */
+export function getKanji(level?: string): KanjiItem[] {
+  const lvl = (level ?? "").toUpperCase();
+  if (KANJI_BY_LEVEL[lvl]) return KANJI_BY_LEVEL[lvl];
+  return ALL_KANJI;
 }
 
-export function findKanjiById(id: string): KanjiItem | undefined {
-  for (const level of Object.keys(KANJI_DATA) as JLPTLevel[]) {
-    const found = KANJI_DATA[level].find((k) => k.id === id || k.kanji === id);
-    if (found) return found;
-  }
-  return undefined;
+export function getKanjiById(id: string): KanjiItem | undefined {
+  return ALL_KANJI.find((k) => k.id === id);
 }
