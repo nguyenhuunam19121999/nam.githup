@@ -345,10 +345,10 @@ const s = StyleSheet.create({
   },
   downloadIcon: { color: "#fff", fontSize: 18, fontWeight: "700" },
   topTitle: { color: "#fff", fontSize: 18, fontWeight: "800" },
-  logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0,0,0,0.28)", borderRadius: 10, paddingHorizontal: 10, height: 40, borderWidth: 1, borderColor: "rgba(255,255,255,0.18)" },
-  logoText: { color: "#fff", fontSize: 15, fontWeight: "800" as const, letterSpacing: 0.3 },
-  logoDot:  { color: BLUE,   fontSize: 17, fontWeight: "900" as const },
-  logoJP:   { color: "#fff", fontSize: 15, fontWeight: "900" as const, letterSpacing: 0.5 },
+  logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0,0,0,0.13)", borderRadius: 10, paddingHorizontal: 16, height: 50, borderWidth: 1, borderColor: "rgba(255,255,255,0.22)" },
+  logoText: { color: "#fff", fontSize: 22, fontWeight: "800" as const, letterSpacing: 0.3 },
+  logoDot:  { color: BLUE,   fontSize: 24, fontWeight: "900" as const },
+  logoJP:   { color: "#fff", fontSize: 22, fontWeight: "900" as const, letterSpacing: 0.5 },
 
   // Vùng controls (dropdown + checkbox)
   controls: {
