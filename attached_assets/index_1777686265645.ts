@@ -21,6 +21,7 @@ export interface RawVocab {
   category?: string;
 }
 
+// Bộ dữ liệu theo cấp JLPT và theo sách (Mimikara / Soumatome)
 const JLPT_VOCAB: Record<string, RawVocab[]> = {
   "n5": n5 as RawVocab[],
   "n4": n4 as RawVocab[],
@@ -31,6 +32,7 @@ const JLPT_VOCAB: Record<string, RawVocab[]> = {
   "n1": n1 as RawVocab[],
 };
 
+// Map dùng chung: tra cứu theo bookId duy nhất (cấp JLPT hoặc ngành nghề)
 export const VOCAB_BY_BOOK: Record<string, RawVocab[]> = {
   ...JLPT_VOCAB,
   ...INDUSTRY_VOCAB,

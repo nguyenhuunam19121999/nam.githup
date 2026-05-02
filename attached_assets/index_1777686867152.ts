@@ -24,6 +24,11 @@ export const ALL_INDUSTRY_VOCAB: RawVocab[] = Object.values(
   INDUSTRY_VOCAB,
 ).flat();
 
+/**
+ * Thông tin hiển thị (tiêu đề) của từng nhóm ngành.
+ * Trùng với danh sách INDUSTRIES ở trang chủ — đặt ở đây để dùng chung
+ * cho mọi trang (header flashcard, breadcrumb...) tránh hard-code rải rác.
+ */
 export interface BookInfo {
   emoji: string;
   jp: string;
@@ -41,6 +46,11 @@ export const INDUSTRY_INFO: Record<string, BookInfo> = {
   "industry-cleaning": { emoji: "🧹", jp: "ビルクリーニング", vi: "Vệ sinh" },
 };
 
+/**
+ * Trả về thông tin tiêu đề cho một khoá / nhóm ngành.
+ * Ưu tiên bookId (ngành nghề), nếu không có thì dựa vào cấp độ JLPT.
+ * Khi không có cả hai → trả về tiêu đề chung "Tất cả từ vựng".
+ */
 export function getBookInfo(
   level?: string,
   bookId?: string,
@@ -49,17 +59,6 @@ export function getBookInfo(
   const lvl = (level ?? "").toUpperCase();
   if (["N5", "N4", "N3", "N2", "N1"].includes(lvl)) {
     return { emoji: "📖", jp: `JLPT ${lvl}`, vi: `Khoá học ${lvl}` };
-  }
-  if (bookId) {
-    const bookLevel = bookId.includes("n3")
-      ? "N3"
-      : bookId.includes("n2")
-        ? "N2"
-        : null;
-    if (bookLevel) {
-      const series = bookId.includes("mimikara") ? "Mimikara" : bookId.includes("soumatome") ? "Soumatome" : "";
-      return { emoji: "📗", jp: `JLPT ${bookLevel}`, vi: `${series} ${bookLevel}`.trim() };
-    }
   }
   return { emoji: "📚", jp: "全部", vi: "Tất cả từ vựng" };
 }

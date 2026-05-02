@@ -75,10 +75,10 @@ export default function HomeScreen() {
     if (!q) return [] as RawVocab[];
     return ALL_VOCAB.filter(
       (v) =>
-        v.kanji.includes(q) ||
-        normalize(v.hiragana).includes(q) ||
-        normalize(v.han).includes(q) ||
-        normalize(v.nghia).includes(q),
+        (v.kanji ?? "").includes(q) ||
+        normalize(v.hira ?? v.hiragana ?? "").includes(q) ||
+        normalize(v.han ?? "").includes(q) ||
+        normalize(v.nghia ?? "").includes(q),
     ).slice(0, 10);
   }, [q]);
 
@@ -188,7 +188,7 @@ export default function HomeScreen() {
                     <Text style={s.vocabKanji}>{v.kanji}</Text>
                   </View>
                   <View style={s.vocabBody}>
-                    <Text style={s.vocabHira}>{v.hiragana}</Text>
+                    <Text style={s.vocabHira}>{v.hira ?? v.hiragana ?? ""}</Text>
                     <Text style={s.vocabMeaning} numberOfLines={1}>{v.han ? `${v.han} · ` : ""}{v.nghia}</Text>
                   </View>
                   <Text style={s.cardArrow}>›</Text>

@@ -44,10 +44,11 @@ Japanese language learning mobile app built with Expo SDK 54 / React Native / ex
 - `app/kanji-detail.tsx` — Kanji detail with stroke order, readings, examples
 
 **Data**:
+- `assets/vocab/` — JLPT vocab JSON files (`n5.json`, `n4.json`, `n3_mimikara.json`, `n3_soumatome.json`, `n2_mimikara.json`, `n2_soumatome.json`, `n1.json`). RawVocab shape: `{ kanji?, hira?, han?, nghia?, example?, exampleMeaning?, category? }`. Exports: `getVocab(level?, bookId?)` → `RawVocab[]`, `ALL_VOCAB`, `VOCAB_BY_BOOK`
+- `assets/data_nghanh_hoc/` — Vietnamese-named industry JSON files (`thuc_pham.json`, `xay_dung.json`, `dieu_duong.json`, `nong_nghiep.json`, `khach_san.json`, `nha_hang.json`, `oto.json`, `ve_sinh.json`). Exports: `INDUSTRY_VOCAB: Record<string, RawVocab[]>`, `ALL_INDUSTRY_VOCAB`, `INDUSTRY_INFO`, `getBookInfo(level?, bookId?)`
+- bookId keys: `"n5"`, `"n4"`, `"mimikara-n3"`, `"soumatome-n3"`, `"mimikara-n2"`, `"soumatome-n2"`, `"n1"`, `"industry-food"`, `"industry-construction"`, `"industry-nursing"`, `"industry-agriculture"`, `"industry-hotel"`, `"industry-restaurant"`, `"industry-auto"`, `"industry-cleaning"`
 - `assets/data_JLPT_kanji/` — N1-N5 kanji JSON, `getKanji(level)`, `findKanjiById(id)` (searches by id or kanji char)
 - `assets/data_nn/` — N1-N5 grammar JSON, `getGrammar(level)`, `getGrammarById(id)`
-- `assets/data_nghanh_hoc/` — Industry vocab JSON (food/construction/nursing/agriculture/hotel/restaurant/auto/cleaning/IT/business/finance/education), `getBookInfo(level?, bookId?)`
-- `assets/vocab/index.ts` — `getVocab(level?, bookId?)` → `RawVocab[]`, `ALL_VOCAB`
 
 **Auth**: AsyncStorage-based auth (`hooks/useAuth.tsx`) with `AuthProvider`, `useAuth()`, `scopedKey(key)` for per-user storage namespacing
 

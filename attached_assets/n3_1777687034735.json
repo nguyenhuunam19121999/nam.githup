@@ -1,0 +1,40 @@
+[
+  {
+    "id": "n3-1",
+    "pattern": "ものだ",
+    "phienAm": "ものだ",
+    "meaning": "Đúng là (cảm thán)/Thật muốn (ước muốn)",
+    "level": "N3",
+    "structure": "V/Aい/Aな (thể thông thường) + ものだ/もんだ\n(Riêng Aなだ → Aなだ)\nVたい/Vたくない + ものだ/もんだ\nVてほしい/Vてほしくない + ものだ/もんだ",
+    "explanation": "『ものだ』 diễn tả:\n1. Cảm xúc ngạc nhiên hoặc sự cảm khái trước một sự việc; tâm trạng hoài niệm trước một thói quen hoặc tình huống kéo dài trong quá khứ (たものだ); thái độ mỉa mai hoặc chỉ trích gay gắt hành động của người khác (よくもまあ〜ものだ).\n2. Tâm trạng rất muốn, rất ao ước một việc gì đó. Đi với các cấu trúc như 『たい』、『ほしい』.",
+    "examples": [
+      { "jp": "時間が経つのは早いものだ。", "vi": "Thời gian trôi nhanh thật." },
+      { "jp": "子供の時、よくこの川で泳いだものだ。", "vi": "Hồi nhỏ tôi hay bơi ở con sông này." },
+      { "jp": "一度でいいから海外で暮らしてみたいものだ。", "vi": "Tôi rất muốn được sống ở nước ngoài một lần." }
+    ]
+  },
+  {
+    "id": "n3-2",
+    "pattern": "おかげで",
+    "phienAm": "おかげで",
+    "meaning": "Nhờ có",
+    "level": "N3",
+    "structure": "[V/Aい/Aな/N の thể thông thường] + おかげで",
+    "explanation": "Diễn tả nguyên nhân/lý do dẫn đến kết quả tốt. Người nói biết ơn nguyên nhân đó.",
+    "examples": [
+      { "jp": "先生のおかげで、合格できた。", "vi": "Nhờ có thầy mà tôi đã đậu." }
+    ]
+  },
+  {
+    "id": "n3-3",
+    "pattern": "ばかりでなく",
+    "phienAm": "ばかりでなく",
+    "meaning": "Không những... mà còn",
+    "level": "N3",
+    "structure": "[V/Aい/Aな/N thể thông thường] + ばかりでなく",
+    "explanation": "Diễn tả: không chỉ điều A mà còn cả điều B nữa. Vế sau thường là điều mở rộng hơn, đáng chú ý hơn.",
+    "examples": [
+      { "jp": "彼は英語ばかりでなく、フランス語も話せる。", "vi": "Anh ấy không những nói được tiếng Anh mà còn cả tiếng Pháp." }
+    ]
+  }
+]
