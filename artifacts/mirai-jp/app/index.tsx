@@ -225,6 +225,13 @@ export default function HomeScreen() {
             </View>
           )}
 
+          {/* Logo thương hiệu — luôn hiển thị góc phải, kể cả khi đã đăng nhập */}
+          <View style={s.logoBadge}>
+            <Text style={s.logoText}>Mirai</Text>
+            <Text style={s.logoDot}>.</Text>
+            <Text style={s.logoJP}>JP</Text>
+          </View>
+
           {/* Nút menu 3 vạch — bấm vào sẽ mở cửa sổ đăng nhập / đăng ký */}
           <TouchableOpacity
             style={s.iconBtn}
@@ -513,6 +520,35 @@ const s = StyleSheet.create({
   brandText: {
     color: "#fff",
     fontSize: 22,
+    fontWeight: "900",
+    letterSpacing: 0.5,
+  },
+  // Badge logo góc phải — luôn hiển thị
+  logoBadge: {
+    flexDirection: "row",
+    alignItems: "center",
+    backgroundColor: "rgba(0,0,0,0.28)",
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    marginLeft: 8,
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.18)",
+  },
+  logoText: {
+    color: "#fff",
+    fontSize: 14,
+    fontWeight: "800",
+    letterSpacing: 0.3,
+  },
+  logoDot: {
+    color: TEAL,
+    fontSize: 16,
+    fontWeight: "900",
+  },
+  logoJP: {
+    color: "#fff",
+    fontSize: 14,
     fontWeight: "900",
     letterSpacing: 0.5,
   },
