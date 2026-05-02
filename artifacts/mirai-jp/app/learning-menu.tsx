@@ -19,8 +19,12 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { LinearGradient } from "expo-linear-gradient";
+
 // Màu chủ đạo (đồng bộ với toàn app)
 const TEAL = "#4ECDC4";
+// Gradient header: từ trên #4ECDC4 xuống dưới #5e9a95
+const GRAD = ["#4ECDC4", "#5e9a95"] as const;
 
 // Định nghĩa 1 mục trong menu
 interface MenuItem {
@@ -162,6 +166,7 @@ export default function LearningMenuScreen() {
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
 
       {/* ── Thanh trên cùng: nút quay lại + tiêu đề ── */}
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity
@@ -179,6 +184,7 @@ export default function LearningMenuScreen() {
           <View style={s.backBtn} />
         </View>
       </SafeAreaView>
+      </LinearGradient>
 
       {/* ── Lưới 2 cột chứa 4 mục menu ── */}
       <ScrollView
@@ -214,7 +220,7 @@ const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
   // Thanh xanh trên cùng
-  topBar: { backgroundColor: TEAL },
+  topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",
     alignItems: "center",

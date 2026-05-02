@@ -22,6 +22,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { LinearGradient } from "expo-linear-gradient";
 import { getGrammar, type GrammarItem } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
@@ -29,6 +30,8 @@ import { FeedbackSection } from "../components/FeedbackSection";
 const BLUE = "#4ECDC4";
 // Phiên bản tối hơn của teal — dùng cho viền, hover
 const BLUE_DARK = "#3BB3AC";
+// Gradient header: từ trên #4ECDC4 xuống dưới #5e9a95
+const GRAD = ["#4ECDC4", "#5e9a95"] as const;
 
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;
 type Level = (typeof LEVELS)[number];
@@ -143,6 +146,7 @@ export default function GrammarScreen() {
       <StatusBar barStyle="light-content" backgroundColor={BLUE} />
 
       {/* ── Top bar xanh ────────────────────────────────────────────────── */}
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity
@@ -158,6 +162,7 @@ export default function GrammarScreen() {
           </TouchableOpacity>
         </View>
       </SafeAreaView>
+      </LinearGradient>
 
       {/* ── Khu dropdown + filter ───────────────────────────────────────── */}
       <View style={s.controls}>
@@ -312,7 +317,7 @@ const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#fff" },
 
   // Top bar xanh
-  topBar: { backgroundColor: BLUE },
+  topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",
     alignItems: "center",

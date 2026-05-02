@@ -19,6 +19,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { LinearGradient } from "expo-linear-gradient";
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
 
@@ -26,6 +27,8 @@ import { FeedbackSection } from "../components/FeedbackSection";
 const BLUE = "#4ECDC4";
 // Màu đỏ dùng riêng cho chữ Kanji
 const RED = "#E03131";
+// Gradient header: từ trên #4ECDC4 xuống dưới #5e9a95
+const GRAD = ["#4ECDC4", "#5e9a95"] as const;
 
 export default function KanjiListScreen() {
   const router = useRouter();
@@ -61,6 +64,7 @@ export default function KanjiListScreen() {
       <StatusBar barStyle="light-content" backgroundColor={BLUE} />
 
       {/* ── Thanh trên cùng ── */}
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity
@@ -88,6 +92,7 @@ export default function KanjiListScreen() {
           />
         </View>
       </SafeAreaView>
+      </LinearGradient>
 
       <ScrollView
         style={s.scroll}
@@ -141,7 +146,7 @@ const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
   // Thanh xanh trên cùng
-  topBar: { backgroundColor: BLUE },
+  topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",
     alignItems: "center",

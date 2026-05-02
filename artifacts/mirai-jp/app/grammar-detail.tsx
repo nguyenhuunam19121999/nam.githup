@@ -20,6 +20,7 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+import { LinearGradient } from "expo-linear-gradient";
 import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
@@ -29,6 +30,8 @@ const BLUE = "#4ECDC4";
 const BLUE_LIGHT = "#7EDDD9";
 // Màu cam — dùng cho nhãn JLPT level
 const ORANGE = "#F59E0B";
+// Gradient header: từ trên #4ECDC4 xuống dưới #5e9a95
+const GRAD = ["#4ECDC4", "#5e9a95"] as const;
 
 export default function GrammarDetailScreen() {
   const router = useRouter();
@@ -39,6 +42,7 @@ export default function GrammarDetailScreen() {
   if (!grammar) {
     return (
       <View style={s.root}>
+        <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
         <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
           <View style={s.topBarInner}>
             <TouchableOpacity
@@ -52,6 +56,7 @@ export default function GrammarDetailScreen() {
             <View style={s.circleBtn} />
           </View>
         </SafeAreaView>
+        </LinearGradient>
         <View style={s.empty}>
           <Text style={s.emptyText}>Không tìm thấy mẫu ngữ pháp.</Text>
         </View>
@@ -64,6 +69,7 @@ export default function GrammarDetailScreen() {
       <StatusBar barStyle="light-content" backgroundColor={BLUE} />
 
       {/* Top bar */}
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity
@@ -77,6 +83,7 @@ export default function GrammarDetailScreen() {
           <View style={s.circleBtn} />
         </View>
       </SafeAreaView>
+      </LinearGradient>
 
       <ScrollView
         style={s.scroll}
@@ -148,7 +155,7 @@ export default function GrammarDetailScreen() {
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
-  topBar: { backgroundColor: BLUE },
+  topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",
     alignItems: "center",

@@ -14,6 +14,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { ALL_VOCAB, type RawVocab } from "../assets/vocab";
 import { AuthMenu } from "../components/AuthMenu";
@@ -21,9 +22,11 @@ import { useAuth } from "../hooks/useAuth";
 
 // ─── Màu chủ đạo ──────────────────────────────────────────────────────────────
 // TEAL      : #4ECDC4  rgb(78, 205, 196) — xanh ngọc, dùng cho header, nút, badge
-// TEAL_DARK : #3BB3AC                    — phiên bản tối hơn, dùng cho viền/hover
+// TEAL_DARK : #5e9a95                    — phiên bản tối hơn (cuối gradient)
+// GRAD      : mảng màu cho LinearGradient — từ trên #4ECDC4 xuống dưới #5e9a95
 const TEAL = "#4ECDC4";
-const TEAL_DARK = "#3BB3AC";
+const TEAL_DARK = "#5e9a95";
+const GRAD = ["#4ECDC4", "#5e9a95"] as const;
 
 interface Item {
   id: string;
@@ -187,6 +190,7 @@ export default function HomeScreen() {
       {/* ── Thanh trên cùng (Top Bar) ── */}
       {/* Khi chưa đăng nhập: chỉ hiển thị nút menu 3 vạch ở bên phải.
           Khi đã đăng nhập: hiển thị avatar + tên người dùng bên trái và nút menu bên phải. */}
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           {currentUser ? (
@@ -226,6 +230,7 @@ export default function HomeScreen() {
           </TouchableOpacity>
         </View>
       </SafeAreaView>
+      </LinearGradient>
 
       {/* Cửa sổ trượt từ phải chứa form đăng nhập / đăng ký / đăng xuất */}
       <AuthMenu visible={menuVisible} onClose={() => setMenuVisible(false)} />
@@ -463,7 +468,7 @@ const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
   /* Top bar */
-  topBar: { backgroundColor: TEAL },
+  topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",
     alignItems: "center",
