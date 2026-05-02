@@ -55,7 +55,7 @@ export function BottomTabBar() {
             activeOpacity={0.85}
             onPress={() => router.push("/")}
           >
-            <Text style={s.owlEmoji}>🦉</Text>
+            <Text style={s.owlEmoji}>🏠</Text>
           </TouchableOpacity>
         </View>
       </View>

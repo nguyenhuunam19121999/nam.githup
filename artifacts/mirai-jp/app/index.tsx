@@ -469,7 +469,7 @@ export default function HomeScreen() {
               activeOpacity={0.85}
               onPress={() => goFlashcard()}
             >
-              <Text style={s.mascotEmoji}>🦉</Text>
+              <Text style={s.mascotEmoji}>🏠</Text>
             </TouchableOpacity>
           </View>
         </View>
