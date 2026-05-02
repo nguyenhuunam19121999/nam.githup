@@ -977,51 +977,6 @@ export default function FlashcardScreen() {
             </View>
           </Modal>
 
-          {/* ── Chọn kiểu JLPT ── */}
-          <View style={s.typeRow}>
-            <TouchableOpacity
-              style={s.typeDropdown}
-              onPress={() => setTypeSheet(true)}
-              activeOpacity={0.7}
-            >
-              <Text style={s.typeDropdownText}>📖 Từ vựng</Text>
-              <Text style={s.typeDropdownCaret}>▾</Text>
-            </TouchableOpacity>
-          </View>
-
-          {/* Bottom sheet picker kiểu */}
-          <Modal visible={typeSheet} transparent animationType="slide" onRequestClose={() => setTypeSheet(false)}>
-            <View style={s.sheetOverlay}>
-              <Pressable style={s.sheetBackdrop} onPress={() => setTypeSheet(false)} />
-              <View style={s.sheet}>
-                <View style={s.sheetHeader}>
-                  <Text style={s.sheetTitle}>Chọn kiểu JLPT</Text>
-                  <TouchableOpacity onPress={() => setTypeSheet(false)} hitSlop={12}>
-                    <Text style={s.sheetClose}>Đóng</Text>
-                  </TouchableOpacity>
-                </View>
-                <View style={s.sheetBody}>
-                  {([
-                    { id: "vocab",   label: "Từ vựng" },
-                    { id: "kanji",   label: "Hán tự" },
-                    { id: "grammar", label: "Ngữ pháp" },
-                  ] as { id: "vocab"|"kanji"|"grammar"; label: string }[]).map(({ id, label }) => (
-                    <TouchableOpacity
-                      key={id}
-                      style={[s.sheetOption, id === "vocab" && s.sheetOptionActive]}
-                      onPress={() => { setTypeSheet(false); handleTypeChange(id); }}
-                      activeOpacity={0.7}
-                    >
-                      <Text style={[s.sheetOptionText, id === "vocab" && s.sheetOptionTextActive]}>
-                        {label}
-                      </Text>
-                    </TouchableOpacity>
-                  ))}
-                </View>
-              </View>
-            </View>
-          </Modal>
-
           {/* ── Mode Switch ── */}
           <View style={s.modeSwitch}>
             <TouchableOpacity
