@@ -203,8 +203,15 @@ export default function HomeScreen() {
       <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
+          {/* Logo badge — luôn ở bên trái */}
+          <View style={s.logoBadge}>
+            <Text style={s.logoText}>Mirai</Text>
+            <Text style={s.logoDot}>.</Text>
+            <Text style={s.logoJP}>JP</Text>
+          </View>
+
+          {/* Thông tin người dùng đã đăng nhập (ở giữa, flex:1) */}
           {currentUser ? (
-            // Khối hiển thị thông tin người dùng đã đăng nhập
             <View style={s.userRow}>
               <View style={s.userAvatar}>
                 <Text style={s.userAvatarText}>
@@ -219,18 +226,8 @@ export default function HomeScreen() {
               </View>
             </View>
           ) : (
-            // Hiển thị tên thương hiệu khi chưa đăng nhập
-            <View style={s.brandRow}>
-              <Text style={s.brandText}>Mirai.JP</Text>
-            </View>
+            <View style={{ flex: 1 }} />
           )}
-
-          {/* Logo thương hiệu — luôn hiển thị góc phải, kể cả khi đã đăng nhập */}
-          <View style={s.logoBadge}>
-            <Text style={s.logoText}>Mirai</Text>
-            <Text style={s.logoDot}>.</Text>
-            <Text style={s.logoJP}>JP</Text>
-          </View>
 
           {/* Nút menu 3 vạch — bấm vào sẽ mở cửa sổ đăng nhập / đăng ký */}
           <TouchableOpacity
@@ -531,7 +528,7 @@ const s = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 10,
     paddingVertical: 5,
-    marginLeft: 8,
+    marginRight: 10,
     borderWidth: 1,
     borderColor: "rgba(255,255,255,0.18)",
   },
