@@ -39,8 +39,10 @@ const PALETTE = [
 interface Props {
   /** Chữ Kanji cần vẽ, vd "候" */
   kanji: string;
-  /** Kích thước cạnh khung (pixel). Mặc định 220. */
+  /** Kích thước nét vẽ SVG (pixel). Mặc định 220. */
   size?: number;
+  /** Kích thước khung ngoài (pixel). Mặc định bằng size. */
+  containerSize?: number;
   /** Có tự chạy hoạt cảnh khi mở không (mặc định: có) */
   autoPlay?: boolean;
   /** Có hiển thị số thứ tự nét không */
@@ -161,9 +163,12 @@ function approxPathLength(d: string): number {
 export function KanjiStrokeOrder({
   kanji,
   size = 220,
+  containerSize,
   autoPlay = true,
   showNumbers = true,
 }: Props) {
+  const boxSize = containerSize ?? size;
+  const svgOffset = (boxSize - size) / 2;
   const paths = (strokesMap as Record<string, string[]>)[kanji];
 
   // Stage = số nét đã vẽ xong; nét đang vẽ có chỉ số = stage
@@ -255,12 +260,17 @@ export function KanjiStrokeOrder({
 
   return (
     <View style={{ alignItems: "center" }}>
-      <View style={[s.box, { width: size, height: size }]}>
+      <View style={[s.box, { width: boxSize, height: boxSize }]}>
         {/* Đường gióng dọc / ngang ở giữa khung */}
-        <View style={[s.gridV, { left: size / 2 - 0.5 }]} />
-        <View style={[s.gridH, { top: size / 2 - 0.5 }]} />
+        <View style={[s.gridV, { left: boxSize / 2 - 0.5 }]} />
+        <View style={[s.gridH, { top: boxSize / 2 - 0.5 }]} />
 
-        <Svg width={size} height={size} viewBox={`0 0 ${VB} ${VB}`}>
+        <Svg
+          width={size}
+          height={size}
+          viewBox={`0 0 ${VB} ${VB}`}
+          style={{ position: "absolute", left: svgOffset, top: svgOffset }}
+        >
           <G fill="none" strokeLinecap="round" strokeLinejoin="round">
             {paths.map((d, i) => {
               const color = PALETTE[i % PALETTE.length];
@@ -301,8 +311,8 @@ export function KanjiStrokeOrder({
             if (!done && i > stage) return null;
             const p = getStartPoint(d);
             if (!p) return null;
-            const left = p.x * scale - numberSize / 2;
-            const top = p.y * scale - numberSize / 2;
+            const left = p.x * scale - numberSize / 2 + svgOffset;
+            const top = p.y * scale - numberSize / 2 + svgOffset;
             return (
               <Text
                 key={`num-${i}`}
