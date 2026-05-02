@@ -209,13 +209,6 @@ export default function GrammarScreen() {
             value={showMeaning}
             onChange={setShowMeaning}
           />
-          <TouchableOpacity
-            style={s.shuffleBtn}
-            onPress={() => setShuffleSeed((x) => x + 1)}
-            hitSlop={10}
-          >
-            <Text style={s.shuffleIcon}>⇄</Text>
-          </TouchableOpacity>
         </View>
       </View>
 
@@ -393,19 +386,6 @@ const s = StyleSheet.create({
   checkBoxOn: { backgroundColor: BLUE, borderColor: BLUE },
   checkMark: { color: "#fff", fontSize: 12, fontWeight: "900" },
   checkLabel: { fontSize: 14, fontWeight: "600", color: "#0f172a" },
-  shuffleBtn: {
-    marginLeft: "auto",
-    width: 32,
-    height: 32,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  shuffleIcon: {
-    fontSize: 18,
-    color: "#0f172a",
-    fontWeight: "800",
-    transform: [{ rotate: "20deg" }],
-  },
 
   // List
   scroll: { flex: 1 },
