@@ -157,9 +157,12 @@ export default function GrammarScreen() {
             <Text style={s.circleBtnIcon}>‹</Text>
           </TouchableOpacity>
           <Text style={s.topTitle}>JLPT</Text>
-          <TouchableOpacity style={s.circleBtn} hitSlop={10} activeOpacity={0.7}>
-            <Text style={s.downloadIcon}>⤓</Text>
-          </TouchableOpacity>
+          {/* Logo thương hiệu góc phải */}
+          <View style={s.logoBadge}>
+            <Text style={s.logoText}>Mirai</Text>
+            <Text style={s.logoDot}>.</Text>
+            <Text style={s.logoJP}>JP</Text>
+          </View>
         </View>
       </SafeAreaView>
       </LinearGradient>
@@ -342,6 +345,10 @@ const s = StyleSheet.create({
   },
   downloadIcon: { color: "#fff", fontSize: 18, fontWeight: "700" },
   topTitle: { color: "#fff", fontSize: 18, fontWeight: "800" },
+  logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0,0,0,0.28)", borderRadius: 10, paddingHorizontal: 10, height: 40, borderWidth: 1, borderColor: "rgba(255,255,255,0.18)" },
+  logoText: { color: "#fff", fontSize: 15, fontWeight: "800" as const, letterSpacing: 0.3 },
+  logoDot:  { color: BLUE,   fontSize: 17, fontWeight: "900" as const },
+  logoJP:   { color: "#fff", fontSize: 15, fontWeight: "900" as const, letterSpacing: 0.5 },
 
   // Vùng controls (dropdown + checkbox)
   controls: {

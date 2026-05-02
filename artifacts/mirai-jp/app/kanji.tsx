@@ -332,6 +332,12 @@ export default function KanjiListScreen() {
 
         {/* Nút Thống kê + Menu */}
         <View style={s.headerBtns}>
+          {/* Logo badge nhỏ trong header trắng */}
+          <View style={s.logoBadgeWhite}>
+            <Text style={s.logoBadgeWhiteText}>Mirai</Text>
+            <Text style={s.logoBadgeWhiteDot}>.</Text>
+            <Text style={s.logoBadgeWhiteJP}>JP</Text>
+          </View>
           <TouchableOpacity style={s.headerActionBtn} onPress={() => setShowStats(true)} activeOpacity={0.8}>
             <Text style={s.statsBtnText}>📊</Text>
           </TouchableOpacity>
@@ -669,7 +675,11 @@ const s = StyleSheet.create({
   titleBlock: { flex: 1, marginRight: 10 },
   headerTitle: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
   headerSubtitle: { fontSize: 13, color: "#718096" },
-  headerBtns: { flexDirection: "row", gap: 8 },
+  headerBtns: { flexDirection: "row", gap: 8, alignItems: "center" },
+  logoBadgeWhite: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "#f0fdfc", borderRadius: 8, paddingHorizontal: 8, height: 34, borderWidth: 1.5, borderColor: BLUE },
+  logoBadgeWhiteText: { color: "#0f172a", fontSize: 12, fontWeight: "800" as const },
+  logoBadgeWhiteDot:  { color: BLUE,      fontSize: 14, fontWeight: "900" as const },
+  logoBadgeWhiteJP:   { color: "#0f172a", fontSize: 12, fontWeight: "900" as const },
   headerActionBtn: {
     width: 42, height: 42, backgroundColor: "#fff", borderRadius: 12,
     borderWidth: 1.5, borderColor: "#e2e8f0",

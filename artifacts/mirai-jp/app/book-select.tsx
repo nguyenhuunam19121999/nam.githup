@@ -109,8 +109,12 @@ export default function BookSelectScreen() {
           <Text style={s.topTitle} numberOfLines={1}>
             Chọn sách {level}
           </Text>
-          {/* Khoảng trống bên phải để cân bằng layout */}
-          <View style={s.backBtn} />
+          {/* Logo thương hiệu góc phải */}
+          <View style={s.logoBadge}>
+            <Text style={s.logoText}>Mirai</Text>
+            <Text style={s.logoDot}>.</Text>
+            <Text style={s.logoJP}>JP</Text>
+          </View>
         </View>
       </SafeAreaView>
       </LinearGradient>
@@ -167,6 +171,10 @@ const s = StyleSheet.create({
     justifyContent: "center",
   },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0,0,0,0.28)", borderRadius: 10, paddingHorizontal: 10, height: 40, borderWidth: 1, borderColor: "rgba(255,255,255,0.18)" },
+  logoText: { color: "#fff", fontSize: 15, fontWeight: "800" as const, letterSpacing: 0.3 },
+  logoDot:  { color: TEAL,   fontSize: 17, fontWeight: "900" as const },
+  logoJP:   { color: "#fff", fontSize: 15, fontWeight: "900" as const, letterSpacing: 0.5 },
   topTitle: {
     flex: 1,
     color: "#fff",

@@ -859,6 +859,12 @@ export default function FlashcardScreen() {
               <Text style={s.subtitle}>{ALL.length} từ vựng tiếng Nhật</Text>
             </View>
             <View style={s.headerButtons}>
+              {/* Logo badge nhỏ trong header trắng */}
+              <View style={s.logoBadgeWhite}>
+                <Text style={s.logoBadgeWhiteText}>Mirai</Text>
+                <Text style={s.logoBadgeWhiteDot}>.</Text>
+                <Text style={s.logoBadgeWhiteJP}>JP</Text>
+              </View>
               <TouchableOpacity
                 style={s.statsBtn}
                 onPress={() => setShowStats(true)}
@@ -1294,7 +1300,11 @@ const s = StyleSheet.create({
   titleBlock: { flex: 1, marginRight: 10 },
   title: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
   subtitle: { fontSize: 13, color: "#718096" },
-  headerButtons: { flexDirection: "row", gap: 8 },
+  headerButtons: { flexDirection: "row", gap: 8, alignItems: "center" },
+  logoBadgeWhite: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "#f0fdfc", borderRadius: 8, paddingHorizontal: 8, height: 34, borderWidth: 1.5, borderColor: "#4ECDC4" },
+  logoBadgeWhiteText: { color: "#0f172a", fontSize: 12, fontWeight: "800" as const },
+  logoBadgeWhiteDot:  { color: "#4ECDC4", fontSize: 14, fontWeight: "900" as const },
+  logoBadgeWhiteJP:   { color: "#0f172a", fontSize: 12, fontWeight: "900" as const },
   statsBtn: {
     width: 42,
     height: 42,
