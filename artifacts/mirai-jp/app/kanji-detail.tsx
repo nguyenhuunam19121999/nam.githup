@@ -161,7 +161,7 @@ export default function KanjiDetailScreen() {
 
           {/* Cách viết — từng nét được tô màu khác nhau, có đánh số thứ tự */}
           <View style={s.strokeWrap}>
-            <KanjiStrokeOrder kanji={kanji.kanji} size={240} />
+            <KanjiStrokeOrder kanji={kanji.kanji} size={180} />
             <Text style={s.strokeHint}>
               Mỗi màu là một nét, số bên cạnh là thứ tự viết (1 → {kanji.strokes}).
             </Text>
