@@ -21,9 +21,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-
-import { LinearGradient } from "expo-linear-gradient";
 import { getGrammar, type GrammarItem } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
@@ -144,29 +141,33 @@ export default function GrammarScreen() {
 
   return (
     <View style={s.root}>
-      <StatusBar barStyle="light-content" backgroundColor={BLUE} />
+      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
 
-      {/* ── Top bar xanh ────────────────────────────────────────────────── */}
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
-      <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
-        <View style={s.topBarInner}>
-          <TouchableOpacity
-            style={s.circleBtn}
-            onPress={() => router.back()}
-            hitSlop={10}
-          >
-            <Text style={s.circleBtnIcon}>‹</Text>
-          </TouchableOpacity>
-          <View style={{ flex: 1 }} />
-          {/* Logo thương hiệu góc phải */}
-          <View style={s.logoBadge}>
-            <Text style={s.logoText}>Mirai</Text>
-            <Text style={s.logoDot}>.</Text>
-            <Text style={s.logoJP}>JP</Text>
-          </View>
+      {/* ── Header trắng — giống kanji.tsx ──────────────────────────────── */}
+      <View style={s.headerRow}>
+        {/* Nút quay lại */}
+        <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
+          <Text style={s.backBtnText}>‹</Text>
+        </TouchableOpacity>
+
+        {/* Tiêu đề + số mục */}
+        <View style={s.titleBlock}>
+          <Text style={s.headerTitle} numberOfLines={1}>Ngữ pháp {level}</Text>
+          <Text style={s.headerSubtitle}>{items.length} mẫu ngữ pháp</Text>
         </View>
-      </SafeAreaView>
-      </LinearGradient>
+
+        {/* Nút Thống kê + Menu */}
+        <View style={s.headerBtns}>
+          <TouchableOpacity style={s.headerActionBtn} onPress={() => Alert.alert("Thống kê", "Tính năng sắp ra mắt.")} activeOpacity={0.8}>
+            <Text style={s.statsBtnText}>📊</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={s.headerActionBtn} onPress={() => Alert.alert("Tuỳ chọn", "Tính năng sắp ra mắt.")} activeOpacity={0.8}>
+            <View style={s.menuLine} />
+            <View style={s.menuLine} />
+            <View style={s.menuLine} />
+          </TouchableOpacity>
+        </View>
+      </View>
 
       {/* ── Khu dropdown + filter ───────────────────────────────────────── */}
       <View style={s.controls}>
@@ -319,38 +320,36 @@ function CheckBox({
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#fff" },
+  root: { flex: 1, backgroundColor: "#f0f4f8" },
 
-  // Top bar xanh
-  topBar: { backgroundColor: "transparent" },
-  topBarInner: {
+  // Header — nền trắng giống kanji.tsx
+  headerRow: {
     flexDirection: "row",
-    alignItems: "center",
+    alignItems: "flex-start",
     justifyContent: "space-between",
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+    paddingHorizontal: 16,
+    paddingTop: 56,
+    paddingBottom: 12,
+    backgroundColor: "#f0f4f8",
   },
-  circleBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-    backgroundColor: "rgba(255,255,255,0.18)",
-    alignItems: "center",
-    justifyContent: "center",
+  backBtn: {
+    width: 42, height: 42, backgroundColor: "#fff", borderRadius: 12,
+    borderWidth: 1.5, borderColor: "#e2e8f0",
+    alignItems: "center", justifyContent: "center", marginRight: 10,
   },
-  circleBtnIcon: {
-    color: "#fff",
-    fontSize: 28,
-    fontWeight: "300",
-    marginTop: -3,
-    marginLeft: -2,
+  backBtnText: { fontSize: 28, color: BLUE, lineHeight: 30 },
+  titleBlock: { flex: 1, marginRight: 10 },
+  headerTitle: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
+  headerSubtitle: { fontSize: 13, color: "#718096" },
+  headerBtns: { flexDirection: "row", gap: 8, alignItems: "center" },
+  headerActionBtn: {
+    width: 42, height: 42, backgroundColor: "#fff", borderRadius: 12,
+    borderWidth: 1.5, borderColor: "#e2e8f0",
+    alignItems: "center", justifyContent: "center",
+    shadowColor: "#000", shadowOpacity: 0.07, shadowRadius: 6, elevation: 3,
   },
-  downloadIcon: { color: "#fff", fontSize: 18, fontWeight: "700" },
-  topTitle: { color: "#fff", fontSize: 18, fontWeight: "800" },
-  logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 4, height: 50 },
-  logoText: { color: "#fff", fontSize: 22, fontWeight: "800" as const, letterSpacing: 0.3 },
-  logoDot:  { color: BLUE,   fontSize: 24, fontWeight: "900" as const },
-  logoJP:   { color: "#fff", fontSize: 22, fontWeight: "900" as const, letterSpacing: 0.5 },
+  statsBtnText: { fontSize: 20 },
+  menuLine: { width: 20, height: 2, backgroundColor: "#1e293b", borderRadius: 2, marginVertical: 2 },
 
   // Vùng controls (dropdown + checkbox)
   controls: {
