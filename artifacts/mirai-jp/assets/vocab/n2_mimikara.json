@@ -1212,12 +1212,6 @@
     "nghia": "chậm chạp, cùn"
   },
   {
-    "kanji": "鋭い",
-    "hira": "するどい",
-    "han": "Nhuệ",
-    "nghia": "sắc bén, nhạy cảm"
-  },
-  {
     "kanji": "粗い",
     "hira": "あらい",
     "han": "Thô",
@@ -2694,12 +2688,6 @@
     "nghia": "khó khăn, lúng túng"
   },
   {
-    "kanji": "妨げる",
-    "hira": "さまたげる",
-    "han": "Ngăn ngại",
-    "nghia": "ngăn cản, cản trở"
-  },
-  {
     "kanji": "触れ合う",
     "hira": "ふれあう",
     "han": "Xúc hợp",
@@ -3540,12 +3528,6 @@
     "nghia": "đánh lạc, chuyển hướng"
   },
   {
-    "kanji": "向き合う",
-    "hira": "むきあう",
-    "han": "Hướng hợp",
-    "nghia": "đối mặt nhau, đối diện"
-  },
-  {
     "kanji": "延びになる",
     "hira": "のびになる",
     "han": "Diên",
@@ -3966,12 +3948,6 @@
     "nghia": "dù sao đi nữa, thôi thì"
   },
   {
-    "kanji": "ともかく",
-    "hira": "ともかく",
-    "han": "Kệ",
-    "nghia": "dù sao, bất kể thế nào"
-  },
-  {
     "kanji": "せめて",
     "hira": "せめて",
     "han": "Thiểu",
@@ -4164,24 +4140,6 @@
     "nghia": "có lẽ, chắc"
   },
   {
-    "kanji": "むしろ",
-    "hira": "むしろ",
-    "han": "Thà",
-    "nghia": "hơn là, thà"
-  },
-  {
-    "kanji": "まさに",
-    "hira": "まさに",
-    "han": "Chính là",
-    "nghia": "đúng là, đúng như"
-  },
-  {
-    "kanji": "かえって",
-    "hira": "かえって",
-    "han": "Phản",
-    "nghia": "ngược lại, trái lại"
-  },
-  {
     "kanji": "かならずしも",
     "hira": "かならずしも",
     "han": "Tất",
@@ -4246,12 +4204,6 @@
     "hira": "もともと",
     "han": "Bản",
     "nghia": "vốn dĩ, ban đầu"
-  },
-  {
-    "kanji": "もとより",
-    "hira": "もとより",
-    "han": "Bản",
-    "nghia": "vốn là, đương nhiên"
   },
   {
     "kanji": "ある",
@@ -6610,12 +6562,6 @@
     "hira": "にがてぶんや",
     "han": "Khổ thủ phân dã",
     "nghia": "lĩnh vực không giỏi"
-  },
-  {
-    "kanji": "立場",
-    "hira": "たちば",
-    "han": "Lập trường",
-    "nghia": "quan điểm, lập trường"
   },
   {
     "kanji": "視点",
