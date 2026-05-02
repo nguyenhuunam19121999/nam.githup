@@ -82,5 +82,10 @@ export function getKanjiByBook(bookId: string): KanjiItem[] | null {
 }
 
 export function getKanjiById(id: string): KanjiItem | undefined {
+  // Tìm trong KANJI_BY_BOOK trước (mimikara, v.v.) rồi mới tìm ALL_KANJI
+  for (const list of Object.values(KANJI_BY_BOOK)) {
+    const found = list.find((k) => k.id === id);
+    if (found) return found;
+  }
   return ALL_KANJI.find((k) => k.id === id);
 }
