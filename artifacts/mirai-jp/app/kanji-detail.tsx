@@ -253,24 +253,6 @@ export default function KanjiDetailScreen() {
         onClose={() => setNotesItem(null)}
       />
 
-      {/* ── Thanh dưới (giống ảnh 2): nút trước / Đóng / sau ── */}
-      <SafeAreaView edges={["bottom"]} style={s.bottomBar}>
-        <View style={s.bottomInner}>
-          <TouchableOpacity style={s.navArrow} hitSlop={8}>
-            <Text style={s.navArrowText}>‹</Text>
-          </TouchableOpacity>
-          <TouchableOpacity
-            style={s.closeBtn}
-            onPress={() => router.back()}
-            activeOpacity={0.85}
-          >
-            <Text style={s.closeBtnText}>Đóng</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={s.navArrow} hitSlop={8}>
-            <Text style={s.navArrowText}>›</Text>
-          </TouchableOpacity>
-        </View>
-      </SafeAreaView>
       <BottomTabBar />
     </View>
   );
