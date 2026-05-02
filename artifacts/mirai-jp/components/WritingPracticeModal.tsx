@@ -43,10 +43,15 @@ export function WritingPracticeModal({
   // forceUpdate để vẽ realtime trong khi ngón tay đang di chuyển
   const [, forceUpdate]             = useState(0);
 
-  // Xoá canvas
+  // Xoá toàn bộ canvas
   const clearCanvas = () => {
     setStrokes([]);
     currentPath.current = "";
+  };
+
+  // Hoàn tác nét vừa vẽ (xoá phần tử cuối của mảng strokes)
+  const undoStroke = () => {
+    setStrokes((prev) => prev.slice(0, -1));
   };
 
   // Reset khi chuyển sang chữ khác
@@ -169,10 +174,29 @@ export function WritingPracticeModal({
             </Svg>
           </View>
 
-          {/* Xoá */}
-          <TouchableOpacity style={ws.clearBtn} onPress={clearCanvas} activeOpacity={0.8}>
-            <Text style={ws.clearBtnText}>🗑 Xoá và vẽ lại</Text>
-          </TouchableOpacity>
+          {/* Hàng nút: Hoàn tác + Xoá */}
+          <View style={ws.btnRow}>
+            <TouchableOpacity
+              style={[ws.undoBtn, strokes.length === 0 && ws.btnDisabled]}
+              onPress={undoStroke}
+              activeOpacity={0.8}
+              disabled={strokes.length === 0}
+            >
+              <Text style={[ws.undoBtnText, strokes.length === 0 && ws.btnTextDisabled]}>
+                ↩ Hoàn tác
+              </Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={[ws.clearBtn, strokes.length === 0 && ws.btnDisabled]}
+              onPress={clearCanvas}
+              activeOpacity={0.8}
+              disabled={strokes.length === 0}
+            >
+              <Text style={[ws.clearBtnText, strokes.length === 0 && ws.btnTextDisabled]}>
+                🗑 Xoá hết
+              </Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </Modal>
@@ -226,9 +250,24 @@ const ws = StyleSheet.create({
     marginBottom: 14,
   },
 
+  // Hàng chứa 2 nút hoàn tác + xoá hết
+  btnRow: { flexDirection: "row", gap: 10 },
+
+  // Nút hoàn tác (↩)
+  undoBtn: {
+    flex: 1, backgroundColor: "#eff6ff", borderRadius: 14,
+    paddingVertical: 13, alignItems: "center",
+  },
+  undoBtnText: { color: "#1d4ed8", fontWeight: "700", fontSize: 15 },
+
+  // Nút xoá hết (🗑)
   clearBtn: {
-    backgroundColor: "#fee2e2", borderRadius: 14,
+    flex: 1, backgroundColor: "#fee2e2", borderRadius: 14,
     paddingVertical: 13, alignItems: "center",
   },
   clearBtnText: { color: "#991b1b", fontWeight: "700", fontSize: 15 },
+
+  // Trạng thái bị vô hiệu (chưa có nét nào)
+  btnDisabled: { backgroundColor: "#f1f5f9" },
+  btnTextDisabled: { color: "#cbd5e1" },
 });
