@@ -11,7 +11,6 @@
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { LinearGradient } from "expo-linear-gradient";
 import React, { useEffect, useMemo, useState } from "react";
 import {
   Alert,
@@ -25,7 +24,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
@@ -144,6 +143,7 @@ function StatsModal({
 export default function KanjiListScreen() {
   const router = useRouter();
   const { scopedKey } = useAuth();
+  const insets = useSafeAreaInsets();
   const params = useLocalSearchParams<{ level?: string; title?: string }>();
   const level = (typeof params.level === "string" ? params.level : "N5").toUpperCase();
   const title =
@@ -309,45 +309,33 @@ export default function KanjiListScreen() {
 
   return (
     <View style={s.root}>
-      <StatusBar barStyle="light-content" backgroundColor={BLUE} />
+      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
 
-      {/* ── Header gradient ── */}
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
-        <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
-          <View style={s.topBarInner}>
-            {/* Nút quay lại */}
-            <TouchableOpacity style={s.iconBtn} onPress={() => router.back()} hitSlop={8}>
-              <Text style={s.backIcon}>‹</Text>
-            </TouchableOpacity>
+      {/* ── Header (giống flashcard: nằm trong scroll, tránh notch bằng insets.top) ── */}
+      <View style={[s.headerRow, { paddingTop: insets.top + 8 }]}>
+        {/* Nút quay lại */}
+        <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
+          <Text style={s.backBtnText}>‹</Text>
+        </TouchableOpacity>
 
-            {/* Tiêu đề */}
-            <View style={s.titleBlock}>
-              <Text style={s.topTitle} numberOfLines={1}>{title}</Text>
-              <Text style={s.topSubtitle}>{BASE.length} chữ Kanji</Text>
-            </View>
+        {/* Tiêu đề */}
+        <View style={s.titleBlock}>
+          <Text style={s.headerTitle} numberOfLines={1}>{title}</Text>
+          <Text style={s.headerSubtitle}>{BASE.length} chữ Kanji</Text>
+        </View>
 
-            {/* Nút Thống kê + Menu */}
-            <View style={s.headerBtns}>
-              <TouchableOpacity
-                style={s.iconBtn}
-                onPress={() => setShowStats(true)}
-                hitSlop={6}
-              >
-                <Text style={s.headerIcon}>📊</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={s.iconBtn}
-                onPress={() => setMenuOpen(true)}
-                hitSlop={6}
-              >
-                <View style={s.menuLine} />
-                <View style={s.menuLine} />
-                <View style={s.menuLine} />
-              </TouchableOpacity>
-            </View>
-          </View>
-        </SafeAreaView>
-      </LinearGradient>
+        {/* Nút Thống kê + Menu */}
+        <View style={s.headerBtns}>
+          <TouchableOpacity style={s.headerActionBtn} onPress={() => setShowStats(true)} activeOpacity={0.8}>
+            <Text style={s.statsBtnText}>📊</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={s.headerActionBtn} onPress={() => setMenuOpen(true)} activeOpacity={0.8}>
+            <View style={s.menuLine} />
+            <View style={s.menuLine} />
+            <View style={s.menuLine} />
+          </TouchableOpacity>
+        </View>
+      </View>
 
       {/* ── Tab bar: Quiz | Luyện viết ── */}
       <View style={s.tabBar}>
@@ -640,22 +628,35 @@ export default function KanjiListScreen() {
 
 // ─── Styles chính ─────────────────────────────────────────────────────────────
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f1f5f9" },
+  root: { flex: 1, backgroundColor: "#f0f4f8" },
 
-  // Header
-  topBar: { backgroundColor: "transparent" },
-  topBarInner: {
-    flexDirection: "row", alignItems: "center",
-    paddingHorizontal: 12, paddingVertical: 10,
+  // Header — giống flashcard.tsx: nền trắng, nút bo tròn
+  headerRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    justifyContent: "space-between",
+    paddingHorizontal: 16,
+    paddingBottom: 12,
+    backgroundColor: "#f0f4f8",
   },
-  iconBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
-  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-  titleBlock: { flex: 1, alignItems: "center" },
-  topTitle: { color: "#fff", fontSize: 17, fontWeight: "800", textAlign: "center" },
-  topSubtitle: { color: "rgba(255,255,255,0.82)", fontSize: 12, marginTop: 1 },
-  headerBtns: { flexDirection: "row", alignItems: "center", gap: 2 },
-  headerIcon: { fontSize: 20 },
-  menuLine: { width: 18, height: 2, backgroundColor: "#fff", borderRadius: 2, marginVertical: 2 },
+  backBtn: {
+    width: 42, height: 42, backgroundColor: "#fff", borderRadius: 12,
+    borderWidth: 1.5, borderColor: "#e2e8f0",
+    alignItems: "center", justifyContent: "center", marginRight: 10,
+  },
+  backBtnText: { fontSize: 28, color: BLUE, lineHeight: 30 },
+  titleBlock: { flex: 1, marginRight: 10 },
+  headerTitle: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
+  headerSubtitle: { fontSize: 13, color: "#718096" },
+  headerBtns: { flexDirection: "row", gap: 8 },
+  headerActionBtn: {
+    width: 42, height: 42, backgroundColor: "#fff", borderRadius: 12,
+    borderWidth: 1.5, borderColor: "#e2e8f0",
+    alignItems: "center", justifyContent: "center",
+    shadowColor: "#000", shadowOpacity: 0.07, shadowRadius: 6, elevation: 3,
+  },
+  statsBtnText: { fontSize: 20 },
+  menuLine: { width: 20, height: 2, backgroundColor: "#1e293b", borderRadius: 2, marginVertical: 2 },
 
   // Tab bar
   tabBar: {
