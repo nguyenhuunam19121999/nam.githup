@@ -434,12 +434,18 @@ const StatisticsModal = ({
   visible,
   onClose,
   totalCount,
+  bookmarkCount,
+  onShowBookmarks,
 }: {
   visible: boolean;
   onClose: () => void;
   totalCount: number;
+  // Số từ đang được ghim (truyền từ main component)
+  bookmarkCount: number;
+  // Callback khi nhấn ô "Từ đã ghim" → đóng modal + bật filter
+  onShowBookmarks: () => void;
 }) => {
-  // scopedKey: đọc thống kê quiz / từ đã ôn tập của riêng tài khoản hiện tại
+  // scopedKey: đọc thống kê quiz của riêng tài khoản hiện tại
   const { scopedKey } = useAuth();
   const [stats, setStats] = useState({
     bestScore: 0,
@@ -447,7 +453,6 @@ const StatisticsModal = ({
     avgScore: 0,
     lastScore: 0,
   });
-  const [reviewedCount, setReviewedCount] = useState(0);
 
   useEffect(() => {
     const loadStats = async () => {
@@ -456,8 +461,6 @@ const StatisticsModal = ({
         if (quizStats) setStats(JSON.parse(quizStats));
         else
           setStats({ bestScore: 0, totalPlayed: 0, avgScore: 0, lastScore: 0 });
-        const reviewed = await AsyncStorage.getItem(scopedKey("reviewedWords"));
-        setReviewedCount(reviewed ? JSON.parse(reviewed).length : 0);
       } catch (e) {
         console.log("Error loading stats");
       }
@@ -476,10 +479,15 @@ const StatisticsModal = ({
             <Text style={s.statLabel}>Tổng số từ vựng</Text>
           </View>
 
-          <View style={s.statCard}>
-            <Text style={s.statValue}>{reviewedCount}</Text>
-            <Text style={s.statLabel}>Từ đã ôn tập</Text>
-          </View>
+          {/* Nhấn vào ô này → đóng modal + chỉ hiển thị từ đã ghim */}
+          <TouchableOpacity
+            style={[s.statCard, s.statCardTappable]}
+            activeOpacity={0.75}
+            onPress={() => { onClose(); onShowBookmarks(); }}
+          >
+            <Text style={s.statValue}>⭐ {bookmarkCount}</Text>
+            <Text style={[s.statLabel, s.statLabelHint]}>Từ đã ghim · Nhấn để xem</Text>
+          </TouchableOpacity>
 
           <View style={s.statsDivider} />
 
@@ -543,6 +551,8 @@ export default function FlashcardScreen() {
   const [searchText, setSearchText] = useState(initialQuery);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  // Khi true → chỉ hiển thị những từ đang được ghim (⭐)
+  const [showBookmarksOnly, setShowBookmarksOnly] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<number>>(new Set());
 
   // Trường hiển thị mặt trước / sau
@@ -671,9 +681,14 @@ export default function FlashcardScreen() {
 
   // Lọc dữ liệu theo search và category
   const filteredData = (() => {
-    if (!searchText) return ALL;
+    // Bước 1: lọc theo filter ghim (nếu đang bật)
+    let base = showBookmarksOnly
+      ? ALL.filter((_, i) => bookmarks.has(i))
+      : ALL;
+    // Bước 2: lọc thêm theo từ khoá tìm kiếm
+    if (!searchText) return base;
     const q = normalize(searchText);
-    return ALL.filter(
+    return base.filter(
       (v) =>
         normalize(v.kanji).includes(q) ||
         normalize(v.hiragana).includes(q) ||
@@ -1009,6 +1024,19 @@ export default function FlashcardScreen() {
             onSubmitEditing={Keyboard.dismiss}
           />
 
+          {/* Banner khi đang lọc chỉ từ đã ghim — nhấn để tắt */}
+          {showBookmarksOnly && (
+            <TouchableOpacity
+              style={s.bookmarkBanner}
+              onPress={() => { setShowBookmarksOnly(false); setIdx(0); }}
+              activeOpacity={0.8}
+            >
+              <Text style={s.bookmarkBannerText}>
+                ⭐ Đang xem {filteredData.length} từ đã ghim · Nhấn để xem tất cả
+              </Text>
+            </TouchableOpacity>
+          )}
+
           {/* ══════════ CHẾ ĐỘ THẺ ══════════ */}
           {viewMode === "card" && (
             <View style={s.cardArea}>
@@ -1209,6 +1237,11 @@ export default function FlashcardScreen() {
           visible={showStats}
           onClose={() => setShowStats(false)}
           totalCount={ALL.length}
+          bookmarkCount={bookmarks.size}
+          onShowBookmarks={() => {
+            setIdx(0);
+            setShowBookmarksOnly(true);
+          }}
         />
       </View>
     </TouchableWithoutFeedback>
@@ -1428,6 +1461,22 @@ const s = StyleSheet.create({
   },
 
   /* Search */
+  // Banner "đang xem từ đã ghim" — hiển thị khi showBookmarksOnly = true
+  bookmarkBanner: {
+    backgroundColor: "#e6faf9",
+    borderWidth: 1,
+    borderColor: "#4ECDC4",
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 9,
+    marginBottom: 12,
+    alignItems: "center",
+  },
+  bookmarkBannerText: {
+    color: "#3BB3AC",
+    fontSize: 13,
+    fontWeight: "600",
+  },
   searchBox: {
     backgroundColor: "#fff",
     borderWidth: 1.5,
@@ -1777,6 +1826,13 @@ const s = StyleSheet.create({
   },
   statValue: { fontSize: 40, fontWeight: "800", color: "#3BB3AC" },
   statLabel: { fontSize: 14, color: "#4a5568", marginTop: 4 },
+  // Ô ghim có viền nhẹ để phân biệt có thể nhấn
+  statCardTappable: {
+    borderWidth: 1.5,
+    borderColor: "#4ECDC4",
+  },
+  // Chú thích nhỏ "Nhấn để xem"
+  statLabelHint: { color: "#4ECDC4", fontStyle: "italic" },
   statsDivider: {
     height: 1,
     backgroundColor: "#e2e8f0",
