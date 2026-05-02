@@ -89,7 +89,7 @@ function SunIcon() {
 const ITEMS: MenuItem[] = [
   {
     id: "guide",
-    label: "Hướng Dẫn Học",
+    label: "Đố vui",
     renderIcon: () => <HexIcon />,
   },
   {
