@@ -676,11 +676,13 @@ export default function FlashcardScreen() {
     }, Math.max(1, autoScrollSec) * 1000);
     return () => clearInterval(timer);
   }, [autoScroll, autoScrollSec, gameMode, total, menuOpen]);
+  const [isShuffled, setIsShuffled] = useState(false);
   const doShuffle = () => {
     setData(shuffle(ALL));
     setIdx(0);
     setFlipped(false);
     setSearchText("");
+    setIsShuffled(true);
     Alert.alert("🔀 Xáo trộn", "Các thẻ đã được xáo trộn ngẫu nhiên!");
   };
   const doReset = () => {
@@ -688,6 +690,7 @@ export default function FlashcardScreen() {
     setIdx(0);
     setFlipped(false);
     setSearchText("");
+    setIsShuffled(false);
   };
 
   // Phát âm
@@ -1057,8 +1060,13 @@ export default function FlashcardScreen() {
               </View>
 
               <View style={s.btnRow}>
-                <TouchableOpacity style={s.btnShuffle} onPress={doShuffle}>
-                  <Text style={s.btnTextWhite}>🔀 Xáo trộn</Text>
+                <TouchableOpacity
+                  style={isShuffled ? s.btnShuffle : s.btnReset}
+                  onPress={doShuffle}
+                >
+                  <Text style={isShuffled ? s.btnTextWhite : s.btnTextDark}>
+                    🔀 Xáo trộn
+                  </Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={s.btnReset} onPress={doReset}>
                   <Text style={s.btnTextDark}>↺ Đặt lại</Text>
