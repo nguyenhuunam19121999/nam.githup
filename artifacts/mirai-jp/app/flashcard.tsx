@@ -552,6 +552,8 @@ export default function FlashcardScreen() {
   const [searchText, setSearchText] = useState(initialQuery);
   const [menuOpen, setMenuOpen] = useState(false);
   const [showStats, setShowStats] = useState(false);
+  // Sheet chọn kiểu JLPT (Từ vựng / Hán tự / Ngữ pháp)
+  const [typeSheet, setTypeSheet] = useState(false);
   // Khi true → chỉ hiển thị những từ đang được ghim (⭐)
   const [showBookmarksOnly, setShowBookmarksOnly] = useState(false);
   const [bookmarks, setBookmarks] = useState<Set<number>>(new Set());
@@ -747,6 +749,17 @@ export default function FlashcardScreen() {
   const speak = (text: string) => {
     if (!text) return;
     Speech.speak(text, { language: "ja-JP", pitch: 1, rate: 0.8 });
+  };
+
+  // Chuyển kiểu học: Từ vựng (hiện tại) → Hán tự hoặc Ngữ pháp
+  const handleTypeChange = (next: "vocab" | "kanji" | "grammar") => {
+    if (next === "vocab") return;
+    const lvl = level ?? "N2";
+    if (next === "kanji") {
+      router.replace({ pathname: "/kanji", params: { level: lvl, title: `Học Kanji ${lvl}` } });
+    } else {
+      router.replace({ pathname: "/grammar", params: { level: lvl } });
+    }
   };
 
   const activeFront = ALL_FIELDS.filter((f) => frontSel[f]);
@@ -960,6 +973,51 @@ export default function FlashcardScreen() {
                     isLast={i === ALL_FIELDS.length - 1}
                   />
                 ))}
+              </View>
+            </View>
+          </Modal>
+
+          {/* ── Chọn kiểu JLPT ── */}
+          <View style={s.typeRow}>
+            <TouchableOpacity
+              style={s.typeDropdown}
+              onPress={() => setTypeSheet(true)}
+              activeOpacity={0.7}
+            >
+              <Text style={s.typeDropdownText}>📖 Từ vựng</Text>
+              <Text style={s.typeDropdownCaret}>▾</Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* Bottom sheet picker kiểu */}
+          <Modal visible={typeSheet} transparent animationType="slide" onRequestClose={() => setTypeSheet(false)}>
+            <View style={s.sheetOverlay}>
+              <Pressable style={s.sheetBackdrop} onPress={() => setTypeSheet(false)} />
+              <View style={s.sheet}>
+                <View style={s.sheetHeader}>
+                  <Text style={s.sheetTitle}>Chọn kiểu JLPT</Text>
+                  <TouchableOpacity onPress={() => setTypeSheet(false)} hitSlop={12}>
+                    <Text style={s.sheetClose}>Đóng</Text>
+                  </TouchableOpacity>
+                </View>
+                <View style={s.sheetBody}>
+                  {([
+                    { id: "vocab",   label: "Từ vựng" },
+                    { id: "kanji",   label: "Hán tự" },
+                    { id: "grammar", label: "Ngữ pháp" },
+                  ] as { id: "vocab"|"kanji"|"grammar"; label: string }[]).map(({ id, label }) => (
+                    <TouchableOpacity
+                      key={id}
+                      style={[s.sheetOption, id === "vocab" && s.sheetOptionActive]}
+                      onPress={() => { setTypeSheet(false); handleTypeChange(id); }}
+                      activeOpacity={0.7}
+                    >
+                      <Text style={[s.sheetOptionText, id === "vocab" && s.sheetOptionTextActive]}>
+                        {label}
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+                </View>
               </View>
             </View>
           </Modal>
@@ -1414,6 +1472,37 @@ const s = StyleSheet.create({
     borderBottomColor: "#f1f5f9",
   },
   menuRowLabel: { fontSize: 14, fontWeight: "500", color: "#1e293b" },
+
+  /* Type dropdown */
+  typeRow: {
+    marginBottom: 12,
+  },
+  typeDropdown: {
+    backgroundColor: "#fff",
+    borderRadius: 10,
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    borderWidth: 1,
+    borderColor: "#cbd5e1",
+  },
+  typeDropdownText: { fontSize: 15, fontWeight: "600", color: "#0f172a" },
+  typeDropdownCaret: { fontSize: 14, color: "#475569", marginLeft: 6 },
+
+  /* Bottom sheet picker */
+  sheetOverlay: { flex: 1, justifyContent: "flex-end" },
+  sheetBackdrop: { ...StyleSheet.absoluteFillObject, backgroundColor: "rgba(0,0,0,0.35)" },
+  sheet: { backgroundColor: "#fff", borderTopLeftRadius: 18, borderTopRightRadius: 18, paddingBottom: 32 },
+  sheetHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: 20, paddingVertical: 16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: "#e2e8f0" },
+  sheetTitle: { fontSize: 16, fontWeight: "700", color: "#0f172a" },
+  sheetClose: { fontSize: 15, color: "#4ECDC4", fontWeight: "600" },
+  sheetBody: { paddingHorizontal: 16, paddingTop: 8 },
+  sheetOption: { paddingVertical: 14, paddingHorizontal: 12, borderRadius: 10, marginBottom: 4 },
+  sheetOptionActive: { backgroundColor: "#e6faf9" },
+  sheetOptionText: { fontSize: 16, color: "#334155" },
+  sheetOptionTextActive: { color: "#4ECDC4", fontWeight: "700" },
 
   /* Mode Switch */
   modeSwitch: {
