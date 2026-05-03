@@ -3998,5 +3998,237 @@
     "nghia": "thay vào đó, thà... hơn",
     "lesson": 24,
     "week": 4
+  },
+  {
+    "kanji": "アップ",
+    "hira": "アップ",
+    "han": "Nâng Lên",
+    "nghia": "tăng lên, nâng cấp (up)",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "アマチュア",
+    "hira": "アマチュア",
+    "han": "Nghiệp Dư",
+    "nghia": "nghiệp dư (amateur)",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "アンケート",
+    "hira": "アンケート",
+    "han": "Khảo Sát",
+    "nghia": "phiếu khảo sát, bảng hỏi",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "アドバイス",
+    "hira": "アドバイス",
+    "han": "Lời Khuyên",
+    "nghia": "lời khuyên (advice)",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "アイデア",
+    "hira": "アイデア",
+    "han": "Ý Tưởng",
+    "nghia": "ý tưởng (idea)",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "イメージ",
+    "hira": "イメージ",
+    "han": "Hình Ảnh",
+    "nghia": "hình ảnh, ấn tượng (image)",
+    "lesson": 20,
+    "week": 4
+  },
+  {
+    "kanji": "インスタント",
+    "hira": "インスタント",
+    "han": "Tức Thì",
+    "nghia": "ăn liền, tức thì (instant)",
+    "lesson": 20,
+    "week": 4
+  },
+  {
+    "kanji": "インタビュー",
+    "hira": "インタビュー",
+    "han": "Phỏng Vấn",
+    "nghia": "phỏng vấn (interview)",
+    "lesson": 20,
+    "week": 4
+  },
+  {
+    "kanji": "インターネット",
+    "hira": "インターネット",
+    "han": "Internet",
+    "nghia": "mạng internet",
+    "lesson": 20,
+    "week": 4
+  },
+  {
+    "kanji": "ウイルス",
+    "hira": "ウイルス",
+    "han": "Vi Rút",
+    "nghia": "vi-rút (virus)",
+    "lesson": 20,
+    "week": 4
+  },
+  {
+    "kanji": "エネルギー",
+    "hira": "エネルギー",
+    "han": "Năng Lượng",
+    "nghia": "năng lượng (energy)",
+    "lesson": 21,
+    "week": 4
+  },
+  {
+    "kanji": "オフィス",
+    "hira": "オフィス",
+    "han": "Văn Phòng",
+    "nghia": "văn phòng (office)",
+    "lesson": 21,
+    "week": 4
+  },
+  {
+    "kanji": "クラスメート",
+    "hira": "クラスメート",
+    "han": "Bạn Cùng Lớp",
+    "nghia": "bạn cùng lớp (classmate)",
+    "lesson": 21,
+    "week": 4
+  },
+  {
+    "kanji": "コンテスト",
+    "hira": "コンテスト",
+    "han": "Cuộc Thi",
+    "nghia": "cuộc thi (contest)",
+    "lesson": 21,
+    "week": 4
+  },
+  {
+    "kanji": "コンタクトレンズ",
+    "hira": "コンタクトレンズ",
+    "han": "Kính Áp Tròng",
+    "nghia": "kính áp tròng (contact lens)",
+    "lesson": 21,
+    "week": 4
+  },
+  {
+    "kanji": "コンビニ",
+    "hira": "コンビニ",
+    "han": "Cửa Hàng Tiện Lợi",
+    "nghia": "cửa hàng tiện lợi (convenience store)",
+    "lesson": 22,
+    "week": 4
+  },
+  {
+    "kanji": "ショック",
+    "hira": "ショック",
+    "han": "Sốc",
+    "nghia": "sốc, bàng hoàng (shock)",
+    "lesson": 22,
+    "week": 4
+  },
+  {
+    "kanji": "ストーリー",
+    "hira": "ストーリー",
+    "han": "Cốt Truyện",
+    "nghia": "câu chuyện, cốt truyện (story)",
+    "lesson": 22,
+    "week": 4
+  },
+  {
+    "kanji": "スタイル",
+    "hira": "スタイル",
+    "han": "Phong Cách",
+    "nghia": "phong cách, dáng vóc (style)",
+    "lesson": 22,
+    "week": 4
+  },
+  {
+    "kanji": "スピード",
+    "hira": "スピード",
+    "han": "Tốc Độ",
+    "nghia": "tốc độ (speed)",
+    "lesson": 22,
+    "week": 4
+  },
+  {
+    "kanji": "タイトル",
+    "hira": "タイトル",
+    "han": "Tiêu Đề",
+    "nghia": "tiêu đề, tên (title)",
+    "lesson": 23,
+    "week": 4
+  },
+  {
+    "kanji": "タイプ",
+    "hira": "タイプ",
+    "han": "Kiểu Loại",
+    "nghia": "kiểu, loại (type); gõ máy tính",
+    "lesson": 23,
+    "week": 4
+  },
+  {
+    "kanji": "チーム",
+    "hira": "チーム",
+    "han": "Đội Nhóm",
+    "nghia": "đội, nhóm (team)",
+    "lesson": 23,
+    "week": 4
+  },
+  {
+    "kanji": "チャイム",
+    "hira": "チャイム",
+    "han": "Chuông",
+    "nghia": "tiếng chuông (chime)",
+    "lesson": 23,
+    "week": 4
+  },
+  {
+    "kanji": "トレーニング",
+    "hira": "トレーニング",
+    "han": "Huấn Luyện",
+    "nghia": "huấn luyện, luyện tập (training)",
+    "lesson": 23,
+    "week": 4
+  },
+  {
+    "kanji": "トップ",
+    "hira": "トップ",
+    "han": "Đứng Đầu",
+    "nghia": "đứng đầu, vị trí cao nhất (top)",
+    "lesson": 24,
+    "week": 4
+  },
+  {
+    "kanji": "セット",
+    "hira": "セット",
+    "han": "Bộ",
+    "nghia": "bộ, tập hợp (set)",
+    "lesson": 24,
+    "week": 4
+  },
+  {
+    "kanji": "フルーツ",
+    "hira": "フルーツ",
+    "han": "Hoa Quả",
+    "nghia": "hoa quả, trái cây (fruits)",
+    "lesson": 24,
+    "week": 4
+  },
+  {
+    "kanji": "ファストフード",
+    "hira": "ファストフード",
+    "han": "Thức Ăn Nhanh",
+    "nghia": "thức ăn nhanh (fast food)",
+    "lesson": 24,
+    "week": 4
   }
 ]
