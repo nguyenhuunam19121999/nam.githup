@@ -79,16 +79,22 @@ export default function BookSelectScreen() {
   // Lọc danh sách sách theo cấp độ đang chọn
   const books = BOOKS.filter((b) => b.level === level);
 
-  // Khi bấm 1 cuốn sách → mở màn hình học theo tuần/bài
-  // Soumatome N2 → màn hình riêng; các sách khác → level-book chung
+  // Khi bấm 1 cuốn sách:
+  // - Soumatome N2  → màn hình riêng (soumatome-n2)
+  // - Soumatome N3  → màn hình tuần/bài chung (level-book)
+  // - Mimikara N2/N3 → menu học như cũ (learning-menu)
   const handleSelect = (book: Book) => {
     if (book.id === "soumatome-n2") {
       router.push({ pathname: "/soumatome-n2" });
       return;
     }
+    if (book.id === "soumatome-n3") {
+      router.push({ pathname: "/level-book", params: { bookId: book.id } });
+      return;
+    }
     router.push({
-      pathname: "/level-book",
-      params: { bookId: book.id },
+      pathname: "/learning-menu",
+      params: { level: book.level, bookId: book.id, title: book.label },
     });
   };
 
