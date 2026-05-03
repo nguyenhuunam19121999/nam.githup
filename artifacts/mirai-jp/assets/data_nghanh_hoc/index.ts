@@ -46,15 +46,28 @@ export const INDUSTRY_INFO: Record<string, BookInfo> = {
   "industry-cleaning": { emoji: "🧹", jp: "ビルクリーニング", vi: "Vệ sinh" },
 };
 
+const JLPT_BOOK_INFO: Record<string, BookInfo> = {
+  "n5":           { emoji: "📖", jp: "日本語能力試験 N5", vi: "JLPT · N5" },
+  "n4":           { emoji: "📖", jp: "日本語能力試験 N4", vi: "JLPT · N4" },
+  "n3":           { emoji: "📖", jp: "日本語能力試験 N3", vi: "JLPT · N3" },
+  "n2":           { emoji: "📖", jp: "日本語能力試験 N2", vi: "JLPT · N2" },
+  "n1":           { emoji: "📖", jp: "日本語能力試験 N1", vi: "JLPT · N1" },
+  "soumatome-n3": { emoji: "📗", jp: "総まとめ N3",       vi: "Soumatome · N3" },
+  "soumatome-n2": { emoji: "📗", jp: "総まとめ N2",       vi: "Soumatome · N2" },
+  "mimikara-n3":  { emoji: "📘", jp: "耳から覚える N3",   vi: "Mimikara · N3" },
+  "mimikara-n2":  { emoji: "📘", jp: "耳から覚える N2",   vi: "Mimikara · N2" },
+};
+
 /**
  * Trả về thông tin tiêu đề cho một khoá / nhóm ngành.
- * Ưu tiên bookId (ngành nghề), nếu không có thì dựa vào cấp độ JLPT.
+ * Ưu tiên bookId (sách JLPT hoặc ngành nghề), nếu không có thì dựa vào cấp độ JLPT.
  * Khi không có cả hai → trả về tiêu đề chung "Tất cả từ vựng".
  */
 export function getBookInfo(
   level?: string,
   bookId?: string,
 ): BookInfo {
+  if (bookId && JLPT_BOOK_INFO[bookId]) return JLPT_BOOK_INFO[bookId];
   if (bookId && INDUSTRY_INFO[bookId]) return INDUSTRY_INFO[bookId];
   const lvl = (level ?? "").toUpperCase();
   if (["N5", "N4", "N3", "N2", "N1"].includes(lvl)) {

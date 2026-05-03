@@ -873,7 +873,9 @@ export default function FlashcardScreen() {
             </TouchableOpacity>
             <View style={s.titleBlock}>
               <Text style={s.title} numberOfLines={1}>
-                {`${headerInfo.emoji} ${headerInfo.jp} — ${headerInfo.vi}`}
+                {lessonParam !== null
+                  ? `${headerInfo.emoji} ${headerInfo.vi} · Bài ${lessonParam}`
+                  : `${headerInfo.emoji} ${headerInfo.jp} — ${headerInfo.vi}`}
               </Text>
               <Text style={s.subtitle}>{ALL.length} từ vựng tiếng Nhật</Text>
             </View>
