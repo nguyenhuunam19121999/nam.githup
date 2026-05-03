@@ -643,10 +643,10 @@
     "id": "n2-33",
     "pattern": "〜げ",
     "phienAm": "げ",
-    "meaning": "Trông có vẻ / Có vẻ như",
+    "meaning": "Trông có vẻ / Có vẻ như (biểu hiện cảm xúc/thái độ)",
     "level": "N2",
-    "structure": "[Aい / Aな / Vたい] + げ（な/に）",
-    "explanation": "Diễn tả cảm giác nhìn từ bên ngoài có vẻ như ai đó đang cảm thấy/muốn điều gì.",
+    "structure": "[Aい語幹 / Aな語幹 / Vます / Vたい語幹] + げ（な/に）",
+    "explanation": "Diễn tả vẻ ngoài hay thái độ biểu hiện cảm xúc/trạng thái của ai đó khi nhìn từ bên ngoài.",
     "examples": [
       {
         "jp": "彼は先生に対し何か言いたげな様子であった。",
@@ -655,6 +655,18 @@
       {
         "jp": "彼女は悲しげな顔をしていた。",
         "vi": "Cô ấy có vẻ buồn."
+      },
+      {
+        "jp": "息子は得意げに100点を取ったテストを差し出した。",
+        "vi": "Con trai tôi đã đưa ra bài kiểm tra được 100 điểm đầy vẻ tự hào."
+      },
+      {
+        "jp": "ハンバーガーショップは楽しげな若者たちでいっぱいだった。",
+        "vi": "Quán hamburger có nhiều bạn trẻ có vẻ đang rất vui vẻ."
+      },
+      {
+        "jp": "学生は自信なさげに答えた。",
+        "vi": "Học sinh có vẻ không tự tin trả lời câu hỏi."
       }
     ],
     "book": "soumatome"
@@ -803,10 +815,10 @@
     "id": "n2-41",
     "pattern": "〜ばかりに",
     "phienAm": "ばかりに",
-    "meaning": "Chỉ vì... mà...",
+    "meaning": "Chỉ vì... mà... (kết quả tiêu cực)",
     "level": "N2",
-    "structure": "[普通形 / Aなである / Nである] + ばかりに",
-    "explanation": "Chỉ vì một lý do duy nhất đó mà dẫn đến kết quả tiêu cực, đáng tiếc.",
+    "structure": "[V普通形 / Aい / Aなである / Nである] + ばかりに",
+    "explanation": "Chỉ vì một lý do duy nhất đó mà dẫn đến kết quả tiêu cực, đáng tiếc. Thường mang sắc thái hối hận.",
     "examples": [
       {
         "jp": "財布を忘れたばかりに、電車に乗ることができず、遅刻してしまった。",
@@ -815,6 +827,18 @@
       {
         "jp": "欲張ったばかりに、全部失ってしまった。",
         "vi": "Chỉ vì tham lam mà mất hết tất cả."
+      },
+      {
+        "jp": "私が遅刻をしたばかりに皆に迷惑をかけてしまった。",
+        "vi": "Chỉ vì đi muộn thôi mà tôi đã gây phiền phức cho mọi người."
+      },
+      {
+        "jp": "背が高いばかりにどこへいっても目立ってしまう。",
+        "vi": "Chỉ vì cao thôi mà đi đâu tôi cũng bị chú ý."
+      },
+      {
+        "jp": "外国人であるばかりに、アパート探しには苦労した。",
+        "vi": "Chỉ vì là người nước ngoài mà tôi gặp khó khăn trong việc tìm nhà ở."
       }
     ],
     "book": "soumatome"
@@ -3605,28 +3629,24 @@
   },
   {
     "id": "n2-178",
-    "pattern": "〜げ",
-    "phienAm": "げ",
-    "meaning": "Có vẻ / Trông như thể (tâm trạng/biểu hiện)",
+    "pattern": "〜ようか〜まいか",
+    "phienAm": "ようかまいか",
+    "meaning": "Làm hay là không làm / Có nên... hay không",
     "level": "N2",
-    "structure": "[Aい（語幹）/ Aな（語幹）/ V-ます] + げ",
-    "explanation": "Diễn tả vẻ ngoài hay thái độ biểu hiện cảm xúc/trạng thái của ai đó.",
+    "structure": "[Vよう] + か + [Vる / Vます] + まいか",
+    "explanation": "Diễn tả trạng thái phân vân, do dự về việc có nên thực hiện hành động hay không.",
     "examples": [
       {
-        "jp": "息子は得意げに100点を取ったテストを差し出した。",
-        "vi": "Con trai tôi đã đưa ra bài kiểm tra được 100 điểm đầy vẻ tự hào."
+        "jp": "彼女に告白しようかしまいか、ずっと迷っている。",
+        "vi": "Tôi cứ phân vân mãi không biết có nên tỏ tình với cô ấy hay không."
       },
       {
-        "jp": "ハンバーガーショップは楽しげな若者たちでいっぱいだった。",
-        "vi": "Quán hamburger có nhiều bạn trẻ có vẻ đang rất vui vẻ."
+        "jp": "会社を辞めようかやめまいか、悩んでいる。",
+        "vi": "Tôi đang đau đầu không biết có nên nghỉ việc hay không."
       },
       {
-        "jp": "学生は自信なさげに答えた。",
-        "vi": "Học sinh có vẻ không tự tin trả lời câu hỏi."
-      },
-      {
-        "jp": "彼は何か言いたげな様子で立っていた。",
-        "vi": "Anh ấy đứng với bộ dạng như thể đang muốn nói gì đó."
+        "jp": "傘を持っていこうかいくまいか、天気を見ながら考えた。",
+        "vi": "Tôi vừa nhìn thời tiết vừa suy nghĩ xem có nên mang ô hay không."
       }
     ],
     "book": "soumatome"
@@ -3745,32 +3765,28 @@
   },
   {
     "id": "n2-183",
-    "pattern": "〜ばかりに",
-    "phienAm": "ばかりに",
-    "meaning": "Chỉ vì... mà / Chỉ tại... nên (kết quả xấu)",
+    "pattern": "〜こと（命令・禁止）",
+    "phienAm": "こと（めいれい・きんし）",
+    "meaning": "Hãy / Phải (mệnh lệnh) / Không được (cấm đoán)",
     "level": "N2",
-    "structure": "[V普 / Aい / Aなな / N] + ばかりに",
-    "explanation": "Chỉ vì một nguyên nhân đó mà dẫn đến kết quả tiêu cực, thường mang sắc thái hối hận.",
+    "structure": "[Vる / Vない] + こと",
+    "explanation": "Dùng để ra lệnh hoặc cấm đoán một cách dứt khoát, thường xuất hiện trong bảng nội quy, quy định, thông báo trang trọng.",
     "examples": [
       {
-        "jp": "私が遅刻をしたばかりに皆に迷惑をかけてしまった。",
-        "vi": "Chỉ vì đi muộn thôi mà tôi đã gây phiền phức cho mọi người."
+        "jp": "この部屋では静かにすること。",
+        "vi": "Phải giữ yên lặng trong phòng này."
       },
       {
-        "jp": "彼の一言を信じたばかりにひどい目にあった。",
-        "vi": "Chỉ vì một lần tin lời anh ta thôi mà tôi đã gặp rắc rối."
+        "jp": "試験中は携帯電話を使用しないこと。",
+        "vi": "Không được dùng điện thoại trong giờ thi."
       },
       {
-        "jp": "背が高いばかりにどこへいっても目立ってしまう。",
-        "vi": "Chỉ vì cao thôi mà đi đâu tôi cũng bị chú ý."
+        "jp": "図書館内では飲食しないこと。",
+        "vi": "Không được ăn uống trong thư viện."
       },
       {
-        "jp": "兄は無口なばかりによく冷たい人だと誤解されるようだ。",
-        "vi": "Chỉ vì ít nói mà anh trai tôi hay bị hiểu nhầm là người lạnh lùng."
-      },
-      {
-        "jp": "外国人であるばかりに、アパート探しには苦労した。",
-        "vi": "Chỉ vì là người nước ngoài mà tôi gặp khó khăn trong việc tìm nhà ở."
+        "jp": "提出期限を必ず守ること。",
+        "vi": "Phải tuân thủ thời hạn nộp bài."
       }
     ],
     "book": "soumatome"
