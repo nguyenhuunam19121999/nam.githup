@@ -293,19 +293,19 @@ export default function LevelBookScreen() {
 
       <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
         <SafeAreaView edges={["top", "left", "right"]}>
-          <View style={s.headerRow}>
+          <View style={s.headerTopRow}>
             <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
               <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
-            <View style={s.titleWrap}>
-              <Text style={s.headerTitle}>{config.headerTitle}</Text>
-              <Text style={s.headerSub}>{config.headerSub}</Text>
-            </View>
             <View style={s.logoBadge}>
               <Text style={s.logoMirai}>Mirai</Text>
               <Text style={s.logoDot}>.</Text>
               <Text style={s.logoJP}>JP</Text>
             </View>
+          </View>
+          <View style={s.headerTitleRow}>
+            <Text style={s.headerTitle}>{config.headerTitle}</Text>
+            <Text style={s.headerSub}>{config.headerSub}</Text>
           </View>
 
           <View style={s.summaryRow}>
@@ -375,12 +375,12 @@ export default function LevelBookScreen() {
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
-  headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingTop: 14, paddingBottom: 6 },
+  headerTopRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 12, paddingTop: 6, paddingBottom: 0 },
+  headerTitleRow: { alignItems: "center", paddingHorizontal: 12, paddingTop: 4, paddingBottom: 6 },
   backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-  titleWrap: { flex: 1, alignItems: "center" },
   headerTitle: { color: "#fff", fontSize: 18, fontWeight: "900", letterSpacing: 0.3 },
-  headerSub:   { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600" },
+  headerSub:   { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600", marginTop: 2 },
   logoBadge: { flexDirection: "row", alignItems: "center" },
   logoMirai: { color: "#fff", fontSize: 18, fontWeight: "800" },
   logoDot:   { color: "#fff", fontSize: 18, fontWeight: "900" },
