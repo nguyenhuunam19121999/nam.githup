@@ -3,6 +3,8 @@ import n2 from "./n2.json";
 import n3 from "./n3.json";
 import n4 from "./n4.json";
 import n5 from "./n5.json";
+import n3Somatome from "./n3_somatome.json";
+import n3Mimikara from "./n3_mimikara.json";
 
 export interface GrammarItem {
   id: string;
@@ -12,6 +14,7 @@ export interface GrammarItem {
   level: "N5" | "N4" | "N3" | "N2" | "N1";
   structure: string;
   explanation: string;
+  book?: string;
   examples?: { jp: string; vi: string }[];
 }
 
@@ -21,6 +24,11 @@ export const GRAMMAR_BY_LEVEL: Record<string, GrammarItem[]> = {
   N3: n3 as GrammarItem[],
   N2: n2 as GrammarItem[],
   N1: n1 as GrammarItem[],
+};
+
+export const GRAMMAR_BY_BOOK: Record<string, GrammarItem[]> = {
+  "n3-somatome": n3Somatome as GrammarItem[],
+  "n3-mimikara": n3Mimikara as GrammarItem[],
 };
 
 export const ALL_GRAMMAR: GrammarItem[] = [
@@ -35,6 +43,10 @@ export function getGrammar(level?: string): GrammarItem[] {
   const lvl = (level ?? "").toUpperCase();
   if (GRAMMAR_BY_LEVEL[lvl]) return GRAMMAR_BY_LEVEL[lvl];
   return ALL_GRAMMAR;
+}
+
+export function getGrammarByBook(bookKey: string): GrammarItem[] {
+  return GRAMMAR_BY_BOOK[bookKey] ?? [];
 }
 
 export function getGrammarById(id: string): GrammarItem | undefined {
