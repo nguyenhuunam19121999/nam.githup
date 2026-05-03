@@ -1,7 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // level-book.tsx
-// Màn hình tổng quan học theo tuần / bài — dùng chung cho mọi cấp JLPT và sách.
-// Nhận param `bookId` (vd: "n5", "n4", "n1", "mimikara-n3", "soumatome-n3", "mimikara-n2").
+// Màn hình tổng quan học — dùng chung cho mọi cấp JLPT và sách.
+// useWeeks=true  → accordion tuần → bài (Soumatome N2/N3)
+// useWeeks=false → danh sách bài phẳng, không chia tuần (N5/N4/N1/Mimikara)
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -28,6 +29,7 @@ type Part = "kanji" | "vocab" | "grammar";
 interface BookConfig {
   headerTitle: string;
   headerSub: string;
+  useWeeks: boolean;
   kanjiWeeks: number;
   kanjiLPW: number;
   vocabWeeks: number;
@@ -36,13 +38,15 @@ interface BookConfig {
 }
 
 const BOOK_CONFIGS: Record<string, BookConfig> = {
-  "n5":          { headerTitle: "日本語能力試験 N5", headerSub: "JLPT · N5",       kanjiWeeks: 4, kanjiLPW: 5, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 4 },
-  "n4":          { headerTitle: "日本語能力試験 N4", headerSub: "JLPT · N4",       kanjiWeeks: 5, kanjiLPW: 4, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 4 },
-  "n1":          { headerTitle: "日本語能力試験 N1", headerSub: "JLPT · N1",       kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 8 },
-  "soumatome-n3":{ headerTitle: "総まとめ N3",       headerSub: "Soumatome · N3",  kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 3 },
-  "mimikara-n3": { headerTitle: "耳から覚える N3",   headerSub: "Mimikara · N3",   kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 4 },
-  "mimikara-n2": { headerTitle: "耳から覚える N2",   headerSub: "Mimikara · N2",   kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 4 },
+  "n5":          { headerTitle: "日本語能力試験 N5", headerSub: "JLPT · N5",      useWeeks: false, kanjiWeeks: 4, kanjiLPW: 5, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 4 },
+  "n4":          { headerTitle: "日本語能力試験 N4", headerSub: "JLPT · N4",      useWeeks: false, kanjiWeeks: 5, kanjiLPW: 4, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 4 },
+  "n1":          { headerTitle: "日本語能力試験 N1", headerSub: "JLPT · N1",      useWeeks: false, kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 8 },
+  "soumatome-n3":{ headerTitle: "総まとめ N3",      headerSub: "Soumatome · N3", useWeeks: true,  kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 3 },
+  "mimikara-n3": { headerTitle: "耳から覚える N3",  headerSub: "Mimikara · N3",  useWeeks: false, kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 4 },
+  "mimikara-n2": { headerTitle: "耳から覚える N2",  headerSub: "Mimikara · N2",  useWeeks: false, kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 4 },
 };
+
+// ── Helpers ───────────────────────────────────────────────────────────────────
 
 function groupByWeekLesson<T extends { week?: number; lesson?: number }>(
   items: T[],
@@ -55,49 +59,53 @@ function groupByWeekLesson<T extends { week?: number; lesson?: number }>(
       const l = wi * lessonsPerWeek + li + 1;
       return { lesson: l, items: items.filter((i) => i.lesson === l) };
     });
-    const total = lessons.reduce((s, l) => s + l.items.length, 0);
-    return { week: w, total, lessons };
+    return { week: w, total: lessons.reduce((s, l) => s + l.items.length, 0), lessons };
   });
 }
 
-function groupGrammarByWeek(
-  items: GrammarItem[],
-  numWeeks: number,
-): { week: number; items: GrammarItem[] }[] {
+function groupGrammarByWeek(items: GrammarItem[], numWeeks: number) {
   return Array.from({ length: numWeeks }, (_, wi) => {
     const w = wi + 1;
     return { week: w, items: items.filter((g) => (g as GrammarItem & { week?: number }).week === w) };
   });
 }
 
+function getFlatLessons<T extends { lesson?: number }>(items: T[]): { lesson: number; items: T[] }[] {
+  const max = items.reduce((m, i) => Math.max(m, i.lesson ?? 0), 0);
+  return Array.from({ length: max }, (_, i) => {
+    const l = i + 1;
+    return { lesson: l, items: items.filter((x) => x.lesson === l) };
+  }).filter((g) => g.items.length > 0);
+}
+
+// ── Main Screen ───────────────────────────────────────────────────────────────
+
 export default function LevelBookScreen() {
   const router = useRouter();
   const params = useLocalSearchParams<{ bookId?: string }>();
   const bookId = typeof params.bookId === "string" ? params.bookId : "n5";
-
   const config = BOOK_CONFIGS[bookId] ?? BOOK_CONFIGS["n5"];
 
   const [activePart, setActivePart] = useState<Part>("kanji");
   const [expandedWeeks, setExpandedWeeks] = useState<Set<number>>(new Set([1]));
 
-  const kanjiData = useMemo(
-    () => getKanjiByBook(bookId) as (KanjiItem & { lesson?: number; week?: number })[],
-    [bookId],
-  );
-  const vocabData = useMemo(
-    () => getVocab(undefined, bookId) as (RawVocab & { lesson?: number; week?: number })[],
-    [bookId],
-  );
+  const kanjiData  = useMemo(() => getKanjiByBook(bookId)  as (KanjiItem   & { lesson?: number; week?: number })[], [bookId]);
+  const vocabData  = useMemo(() => getVocab(undefined, bookId) as (RawVocab & { lesson?: number; week?: number })[], [bookId]);
   const grammarData = useMemo(() => getGrammarByBook(bookId), [bookId]);
 
-  const kanjiWeeks   = useMemo(() => groupByWeekLesson(kanjiData,   config.kanjiWeeks,   config.kanjiLPW),   [kanjiData,   config]);
-  const vocabWeeks   = useMemo(() => groupByWeekLesson(vocabData,   config.vocabWeeks,   config.vocabLPW),   [vocabData,   config]);
+  // Week-mode data
+  const kanjiWeeks   = useMemo(() => groupByWeekLesson(kanjiData,  config.kanjiWeeks,   config.kanjiLPW),  [kanjiData,  config]);
+  const vocabWeeks   = useMemo(() => groupByWeekLesson(vocabData,  config.vocabWeeks,   config.vocabLPW),  [vocabData,  config]);
   const grammarWeeks = useMemo(() => groupGrammarByWeek(grammarData, config.grammarWeeks), [grammarData, config]);
 
+  // Flat-mode data
+  const kanjiFlatLessons  = useMemo(() => getFlatLessons(kanjiData),  [kanjiData]);
+  const vocabFlatLessons  = useMemo(() => getFlatLessons(vocabData),  [vocabData]);
+
   const PARTS = [
-    { key: "kanji"   as Part, label: "Hán tự",   jpLabel: "漢字", color: "#E03131", weeks: config.kanjiWeeks,   lpw: config.kanjiLPW },
-    { key: "vocab"   as Part, label: "Từ vựng",  jpLabel: "語彙", color: "#2563EB", weeks: config.vocabWeeks,   lpw: config.vocabLPW },
-    { key: "grammar" as Part, label: "Ngữ pháp", jpLabel: "文法", color: "#7C3AED", weeks: config.grammarWeeks, lpw: 0 },
+    { key: "kanji"   as Part, label: "Hán tự",   jpLabel: "漢字", color: "#E03131" },
+    { key: "vocab"   as Part, label: "Từ vựng",  jpLabel: "語彙", color: "#2563EB" },
+    { key: "grammar" as Part, label: "Ngữ pháp", jpLabel: "文法", color: "#7C3AED" },
   ];
   const currentPart = PARTS.find((p) => p.key === activePart)!;
 
@@ -109,21 +117,19 @@ export default function LevelBookScreen() {
     });
   };
 
-  const switchPart = (p: Part) => {
-    setActivePart(p);
-    setExpandedWeeks(new Set([1]));
-  };
+  const switchPart = (p: Part) => { setActivePart(p); setExpandedWeeks(new Set([1])); };
 
-  const goKanjiLesson = (lesson: number) => {
+  // Navigation
+  const goKanjiLesson = (lesson: number) =>
     router.push({ pathname: "/kanji", params: { bookId, lesson: String(lesson), title: `漢字 · Bài ${lesson}` } });
-  };
-  const goVocabLesson = (lesson: number) => {
+  const goVocabLesson = (lesson: number) =>
     router.push({ pathname: "/flashcard", params: { bookId, lesson: String(lesson), title: `語彙 · Bài ${lesson}` } });
-  };
-  const goGrammarWeek = (week: number, count: number) => {
+  const goGrammarWeek = (week: number, count: number) =>
     router.push({ pathname: "/grammar", params: { bookId, week: String(week), title: `文法 · Tuần ${week} (${count} mẫu)` } });
-  };
+  const goGrammarAll = () =>
+    router.push({ pathname: "/grammar", params: { bookId, title: `文法 · ${grammarData.length} mẫu` } });
 
+  // ── Render: week accordion (Soumatome) ──────────────────────────────────────
   const renderWeekLesson = (
     weeks: ReturnType<typeof groupByWeekLesson>,
     color: string,
@@ -153,12 +159,7 @@ export default function LevelBookScreen() {
         {isOpen && (
           <View style={s.lessonsWrap}>
             {lessons.map(({ lesson, items }) => (
-              <TouchableOpacity
-                key={lesson}
-                style={s.lessonRow}
-                onPress={() => onLesson(lesson)}
-                activeOpacity={0.7}
-              >
+              <TouchableOpacity key={lesson} style={s.lessonRow} onPress={() => onLesson(lesson)} activeOpacity={0.7}>
                 <View style={[s.lessonNumCircle, { borderColor: color }]}>
                   <Text style={[s.lessonNumText, { color }]}>{lesson}</Text>
                 </View>
@@ -200,9 +201,7 @@ export default function LevelBookScreen() {
         </TouchableOpacity>
         {isOpen && (
           <View style={s.grammarContent}>
-            <Text style={s.grammarPreview} numberOfLines={2}>
-              {preview}{items.length > 4 ? "..." : ""}
-            </Text>
+            <Text style={s.grammarPreview} numberOfLines={2}>{preview}{items.length > 4 ? "..." : ""}</Text>
             <TouchableOpacity
               style={[s.grammarStudyBtn, { backgroundColor: color }]}
               onPress={() => goGrammarWeek(week, items.length)}
@@ -215,6 +214,78 @@ export default function LevelBookScreen() {
       </View>
     );
   });
+
+  // ── Render: flat lesson list (no weeks) ─────────────────────────────────────
+  const renderFlatLessons = (
+    lessons: { lesson: number; items: { lesson?: number }[] }[],
+    color: string,
+    onLesson: (l: number) => void,
+  ) => (
+    <View style={s.flatCard}>
+      {lessons.map(({ lesson, items }, idx) => (
+        <TouchableOpacity
+          key={lesson}
+          style={[s.flatRow, idx < lessons.length - 1 && s.flatRowBorder]}
+          onPress={() => onLesson(lesson)}
+          activeOpacity={0.7}
+        >
+          <View style={[s.lessonNumCircle, { borderColor: color }]}>
+            <Text style={[s.lessonNumText, { color }]}>{lesson}</Text>
+          </View>
+          <View style={s.lessonInfo}>
+            <Text style={s.lessonTitle}>Bài {lesson}</Text>
+            <Text style={s.lessonCount}>{items.length} mục</Text>
+          </View>
+          <View style={[s.studyBtn, { backgroundColor: color }]}>
+            <Text style={s.studyBtnText}>Học ▶</Text>
+          </View>
+        </TouchableOpacity>
+      ))}
+    </View>
+  );
+
+  const renderFlatGrammar = () => {
+    const color = "#7C3AED";
+    const preview = grammarData.slice(0, 5).map((g) => g.pattern).join("・");
+    return (
+      <View style={s.flatCard}>
+        <View style={[s.grammarAllHeader, { borderLeftColor: color }]}>
+          <View style={[s.grammarAllBadge, { backgroundColor: color }]}>
+            <Text style={s.grammarAllBadgeText}>{grammarData.length}</Text>
+            <Text style={s.grammarAllBadgeSub}>mẫu</Text>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={s.grammarAllTitle}>Tất cả mẫu ngữ pháp</Text>
+            <Text style={s.grammarAllPreview} numberOfLines={2}>{preview}...</Text>
+          </View>
+        </View>
+        <TouchableOpacity
+          style={[s.grammarStudyBtn, { backgroundColor: color, margin: 14, marginTop: 4 }]}
+          onPress={goGrammarAll}
+          activeOpacity={0.8}
+        >
+          <Text style={s.grammarStudyBtnText}>Học tất cả {grammarData.length} mẫu ngữ pháp  ▶</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+  // ── Section metadata label ──────────────────────────────────────────────────
+  const sectionMeta = () => {
+    if (activePart === "grammar") {
+      return config.useWeeks
+        ? `${config.grammarWeeks} tuần`
+        : `${grammarData.length} mẫu`;
+    }
+    if (activePart === "kanji") {
+      return config.useWeeks
+        ? `${config.kanjiWeeks} tuần · ${config.kanjiWeeks * config.kanjiLPW} bài`
+        : `${kanjiFlatLessons.length} bài`;
+    }
+    return config.useWeeks
+      ? `${config.vocabWeeks} tuần · ${config.vocabWeeks * config.vocabLPW} bài`
+      : `${vocabFlatLessons.length} bài`;
+  };
 
   return (
     <View style={s.root}>
@@ -273,26 +344,26 @@ export default function LevelBookScreen() {
         </SafeAreaView>
       </LinearGradient>
 
-      <ScrollView
-        style={s.scroll}
-        contentContainerStyle={s.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
+      <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={[s.sectionLabel, { borderLeftColor: currentPart.color }]}>
           <Text style={s.sectionLabelJP}>{currentPart.jpLabel}</Text>
           <Text style={s.sectionLabelVI}> · {currentPart.label}</Text>
-          {activePart !== "grammar" ? (
-            <Text style={s.sectionLabelMeta}>
-              {currentPart.weeks} tuần · {currentPart.weeks * currentPart.lpw} bài
-            </Text>
-          ) : (
-            <Text style={s.sectionLabelMeta}>{currentPart.weeks} tuần</Text>
-          )}
+          <Text style={s.sectionLabelMeta}>{sectionMeta()}</Text>
         </View>
 
-        {activePart === "kanji"   && renderWeekLesson(kanjiWeeks,         "#E03131", goKanjiLesson)}
-        {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any,  "#2563EB", goVocabLesson)}
-        {activePart === "grammar" && renderGrammarWeeks()}
+        {config.useWeeks ? (
+          <>
+            {activePart === "kanji"   && renderWeekLesson(kanjiWeeks,        "#E03131", goKanjiLesson)}
+            {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any, "#2563EB", goVocabLesson)}
+            {activePart === "grammar" && renderGrammarWeeks()}
+          </>
+        ) : (
+          <>
+            {activePart === "kanji"   && renderFlatLessons(kanjiFlatLessons,        "#E03131", goKanjiLesson)}
+            {activePart === "vocab"   && renderFlatLessons(vocabFlatLessons as any, "#2563EB", goVocabLesson)}
+            {activePart === "grammar" && renderFlatGrammar()}
+          </>
+        )}
 
         <View style={{ height: 48 }} />
       </ScrollView>
@@ -300,8 +371,10 @@ export default function LevelBookScreen() {
   );
 }
 
+// ─── Styles ───────────────────────────────────────────────────────────────────
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
+
   headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingTop: 6, paddingBottom: 4 },
   backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
@@ -334,6 +407,7 @@ const s = StyleSheet.create({
   sectionLabelVI:   { fontSize: 13, fontWeight: "700", color: "#475569" },
   sectionLabelMeta: { fontSize: 11, color: "#94a3b8", marginLeft: "auto" },
 
+  // Week accordion cards
   weekCard: { backgroundColor: "#fff", borderRadius: 14, marginBottom: 10, overflow: "hidden", elevation: 2, shadowColor: "#000", shadowOpacity: 0.06, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
   weekHeader: { flexDirection: "row", alignItems: "center", padding: 12, borderLeftWidth: 4, gap: 10 },
   weekBadge: { width: 56, height: 56, borderRadius: 10, alignItems: "center", justifyContent: "center" },
@@ -361,4 +435,17 @@ const s = StyleSheet.create({
   grammarPreview: { fontSize: 13, color: "#475569", lineHeight: 20, marginBottom: 10, fontWeight: "500" },
   grammarStudyBtn: { borderRadius: 10, paddingVertical: 10, alignItems: "center" },
   grammarStudyBtnText: { color: "#fff", fontSize: 14, fontWeight: "800" },
+
+  // Flat list card
+  flatCard: { backgroundColor: "#fff", borderRadius: 14, overflow: "hidden", elevation: 2, shadowColor: "#000", shadowOpacity: 0.06, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
+  flatRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 14, paddingVertical: 12, gap: 12 },
+  flatRowBorder: { borderBottomWidth: 1, borderBottomColor: "#f1f5f9" },
+
+  // Grammar all-in-one block
+  grammarAllHeader: { flexDirection: "row", alignItems: "center", padding: 14, borderLeftWidth: 4, gap: 12 },
+  grammarAllBadge: { width: 60, height: 60, borderRadius: 10, alignItems: "center", justifyContent: "center" },
+  grammarAllBadgeText: { color: "#fff", fontSize: 20, fontWeight: "900" },
+  grammarAllBadgeSub: { color: "rgba(255,255,255,0.85)", fontSize: 10, fontWeight: "700" },
+  grammarAllTitle: { fontSize: 15, fontWeight: "800", color: "#0f172a", marginBottom: 4 },
+  grammarAllPreview: { fontSize: 12, color: "#64748b", lineHeight: 18 },
 });

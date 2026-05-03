@@ -88,14 +88,7 @@ export default function BookSelectScreen() {
       router.push({ pathname: "/soumatome-n2" });
       return;
     }
-    if (book.id === "soumatome-n3") {
-      router.push({ pathname: "/level-book", params: { bookId: book.id } });
-      return;
-    }
-    router.push({
-      pathname: "/learning-menu",
-      params: { level: book.level, bookId: book.id, title: book.label },
-    });
+    router.push({ pathname: "/level-book", params: { bookId: book.id } });
   };
 
   return (

@@ -377,10 +377,7 @@ export default function HomeScreen() {
                           if (it.jp === "N3" || it.jp === "N2") {
                             goBookSelect(it.jp);
                           } else {
-                            goLearningMenu({
-                              level: it.jp,
-                              title: `Khoá học ${it.jp}`,
-                            });
+                            goLevelBook(it.jp.toLowerCase());
                           }
                         }}
                         activeOpacity={0.7}
