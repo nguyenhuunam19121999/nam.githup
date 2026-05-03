@@ -200,7 +200,7 @@
       },
       {
         "kanji": "㔰",
-        "hanViet": ""
+        "hanViet": "ẤN (bộ thủ)"
       }
     ],
     "meanings": [
@@ -1935,7 +1935,7 @@
       },
       {
         "kanji": "𠄌",
-        "hanViet": ""
+        "hanViet": "HÀM (bộ thủ)"
       }
     ],
     "meanings": [
@@ -5242,8 +5242,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "木",
-      "水"
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      },
+      {
+        "kanji": "水",
+        "hanViet": "THUỶ"
+      }
     ],
     "meanings": [
       "cầu xin",
@@ -5286,7 +5292,10 @@
     "strokes": 3,
     "level": "N3",
     "components": [
-      "又"
+      {
+        "kanji": "又",
+        "hanViet": "HỰU"
+      }
     ],
     "meanings": [
       "đạt đến",
@@ -5327,8 +5336,14 @@
     "strokes": 13,
     "level": "N3",
     "components": [
-      "心",
-      "音"
+      {
+        "kanji": "心",
+        "hanViet": "TÂM"
+      },
+      {
+        "kanji": "音",
+        "hanViet": "ÂM"
+      }
     ],
     "meanings": [
       "ý nghĩa",
@@ -5369,7 +5384,10 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "又"
+      {
+        "kanji": "又",
+        "hanViet": "HỰU"
+      }
     ],
     "meanings": [
       "da",
@@ -5410,7 +5428,10 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "艮"
+      {
+        "kanji": "艮",
+        "hanViet": "CẤN"
+      }
     ],
     "meanings": [
       "tốt",
@@ -5451,8 +5472,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "日",
-      "勿"
+      {
+        "kanji": "日",
+        "hanViet": "NHẬT"
+      },
+      {
+        "kanji": "勿",
+        "hanViet": "VẬT"
+      }
     ],
     "meanings": [
       "dễ dàng",
@@ -5492,8 +5519,14 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "工",
-      "匚"
+      {
+        "kanji": "工",
+        "hanViet": "CÔNG"
+      },
+      {
+        "kanji": "匚",
+        "hanViet": "PHƯƠNG"
+      }
     ],
     "meanings": [
       "to lớn",
@@ -5533,8 +5566,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "貝",
-      "刀"
+      {
+        "kanji": "貝",
+        "hanViet": "BỐI"
+      },
+      {
+        "kanji": "刀",
+        "hanViet": "ĐAO"
+      }
     ],
     "meanings": [
       "quy tắc",
@@ -5574,8 +5613,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "辶",
-      "師"
+      {
+        "kanji": "辶",
+        "hanViet": "SƯỚC"
+      },
+      {
+        "kanji": "師",
+        "hanViet": "SƯ"
+      }
     ],
     "meanings": [
       "đuổi theo",
@@ -5617,7 +5662,10 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "口"
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      }
     ],
     "meanings": [
       "bẻ cong",
@@ -5658,7 +5706,10 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "豆"
+      {
+        "kanji": "豆",
+        "hanViet": "ĐẬU"
+      }
     ],
     "meanings": [
       "đậu",
@@ -5699,7 +5750,10 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "角"
+      {
+        "kanji": "角",
+        "hanViet": "GIÁC"
+      }
     ],
     "meanings": [
       "góc",
@@ -5739,7 +5793,10 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "日"
+      {
+        "kanji": "日",
+        "hanViet": "NHẬT"
+      }
     ],
     "meanings": [
       "cũ",
@@ -5780,8 +5837,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "臼",
-      "儿"
+      {
+        "kanji": "臼",
+        "hanViet": "CỐU"
+      },
+      {
+        "kanji": "儿",
+        "hanViet": "NHÂN"
+      }
     ],
     "meanings": [
       "trẻ em",
@@ -5821,7 +5884,10 @@
     "strokes": 4,
     "level": "N3",
     "components": [
-      "戸"
+      {
+        "kanji": "戸",
+        "hanViet": "HỘ"
+      }
     ],
     "meanings": [
       "cánh cửa",
@@ -5861,7 +5927,10 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "非"
+      {
+        "kanji": "非",
+        "hanViet": "PHI"
+      }
     ],
     "meanings": [
       "không",
@@ -5901,8 +5970,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "耳",
-      "又"
+      {
+        "kanji": "耳",
+        "hanViet": "NHĨ"
+      },
+      {
+        "kanji": "又",
+        "hanViet": "HỰU"
+      }
     ],
     "meanings": [
       "lấy",
@@ -5943,7 +6018,10 @@
     "strokes": 3,
     "level": "N3",
     "components": [
-      "干"
+      {
+        "kanji": "干",
+        "hanViet": "CAN"
+      }
     ],
     "meanings": [
       "phơi khô",
@@ -5983,8 +6061,14 @@
     "strokes": 11,
     "level": "N3",
     "components": [
-      "朿",
-      "貝"
+      {
+        "kanji": "朿",
+        "hanViet": "THỨA"
+      },
+      {
+        "kanji": "貝",
+        "hanViet": "BỐI"
+      }
     ],
     "meanings": [
       "trách mắng",
@@ -6025,8 +6109,14 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "口",
-      "丁"
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      },
+      {
+        "kanji": "丁",
+        "hanViet": "ĐINH"
+      }
     ],
     "meanings": [
       "có thể",
@@ -6067,7 +6157,10 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "示"
+      {
+        "kanji": "示",
+        "hanViet": "THỊ"
+      }
     ],
     "meanings": [
       "chỉ ra",
@@ -6110,7 +6203,10 @@
     "strokes": 3,
     "level": "N3",
     "components": [
-      "亡"
+      {
+        "kanji": "亡",
+        "hanViet": "VONG"
+      }
     ],
     "meanings": [
       "chết",
@@ -6152,9 +6248,18 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "爪",
-      "舟",
-      "又"
+      {
+        "kanji": "爪",
+        "hanViet": "TRẢO"
+      },
+      {
+        "kanji": "舟",
+        "hanViet": "CHU"
+      },
+      {
+        "kanji": "又",
+        "hanViet": "HỰU"
+      }
     ],
     "meanings": [
       "nhận",
@@ -6195,8 +6300,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "木",
-      "口"
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      },
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      }
     ],
     "meanings": [
       "bó",
@@ -6236,7 +6347,10 @@
     "strokes": 3,
     "level": "N3",
     "components": [
-      "士"
+      {
+        "kanji": "士",
+        "hanViet": "SĨ"
+      }
     ],
     "meanings": [
       "người, võ sĩ",
@@ -6279,8 +6393,14 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "田",
-      "丨"
+      {
+        "kanji": "田",
+        "hanViet": "ĐIỀN"
+      },
+      {
+        "kanji": "丨",
+        "hanViet": "CỔN"
+      }
     ],
     "meanings": [
       "lý do",
@@ -6322,8 +6442,14 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "干",
-      "乎"
+      {
+        "kanji": "干",
+        "hanViet": "CAN"
+      },
+      {
+        "kanji": "乎",
+        "hanViet": "HỒ"
+      }
     ],
     "meanings": [
       "bằng phẳng",
@@ -6364,8 +6490,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "木",
-      "目"
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      },
+      {
+        "kanji": "目",
+        "hanViet": "MỤC"
+      }
     ],
     "meanings": [
       "tương",
@@ -6408,8 +6540,14 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "宀",
-      "畐"
+      {
+        "kanji": "宀",
+        "hanViet": "MIÊN"
+      },
+      {
+        "kanji": "畐",
+        "hanViet": "PHÚC"
+      }
     ],
     "meanings": [
       "giàu có",
@@ -6451,7 +6589,10 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "衣"
+      {
+        "kanji": "衣",
+        "hanViet": "Y"
+      }
     ],
     "meanings": [
       "quần áo",
@@ -6492,7 +6633,10 @@
     "strokes": 3,
     "level": "N3",
     "components": [
-      "与"
+      {
+        "kanji": "与",
+        "hanViet": "DỮ"
+      }
     ],
     "meanings": [
       "cho",
@@ -6534,8 +6678,14 @@
     "strokes": 16,
     "level": "N3",
     "components": [
-      "頁",
-      "豆"
+      {
+        "kanji": "頁",
+        "hanViet": "HIỆT"
+      },
+      {
+        "kanji": "豆",
+        "hanViet": "ĐẬU"
+      }
     ],
     "meanings": [
       "đầu",
@@ -6575,8 +6725,14 @@
     "strokes": 19,
     "level": "N3",
     "components": [
-      "言",
-      "戠"
+      {
+        "kanji": "言",
+        "hanViet": "NGÔN"
+      },
+      {
+        "kanji": "戠",
+        "hanViet": "CHẾ"
+      }
     ],
     "meanings": [
       "nhận thức",
@@ -6617,8 +6773,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "心",
-      "生"
+      {
+        "kanji": "心",
+        "hanViet": "TÂM"
+      },
+      {
+        "kanji": "生",
+        "hanViet": "SINH"
+      }
     ],
     "meanings": [
       "tính chất",
@@ -6658,8 +6820,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "彳",
-      "走"
+      {
+        "kanji": "彳",
+        "hanViet": "XÍCH"
+      },
+      {
+        "kanji": "走",
+        "hanViet": "TẨU"
+      }
     ],
     "meanings": [
       "học sinh",
@@ -6702,8 +6870,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "广",
-      "又"
+      {
+        "kanji": "广",
+        "hanViet": "NGHIỄM"
+      },
+      {
+        "kanji": "又",
+        "hanViet": "HỰU"
+      }
     ],
     "meanings": [
       "độ",
@@ -6745,8 +6919,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "囗",
-      "口"
+      {
+        "kanji": "囗",
+        "hanViet": "VI"
+      },
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      }
     ],
     "meanings": [
       "quay",
@@ -6788,8 +6968,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "米",
-      "分"
+      {
+        "kanji": "米",
+        "hanViet": "MỄ"
+      },
+      {
+        "kanji": "分",
+        "hanViet": "PHÂN"
+      }
     ],
     "meanings": [
       "bột",
@@ -6831,8 +7017,14 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "学",
-      "見"
+      {
+        "kanji": "学",
+        "hanViet": "HỌC"
+      },
+      {
+        "kanji": "見",
+        "hanViet": "KIẾN"
+      }
     ],
     "meanings": [
       "ghi nhớ",
@@ -6874,8 +7066,14 @@
     "strokes": 11,
     "level": "N3",
     "components": [
-      "谷",
-      "欠"
+      {
+        "kanji": "谷",
+        "hanViet": "CỐC"
+      },
+      {
+        "kanji": "欠",
+        "hanViet": "KHIẾM"
+      }
     ],
     "meanings": [
       "muốn",
@@ -6917,8 +7115,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "手",
-      "合"
+      {
+        "kanji": "手",
+        "hanViet": "THỦ"
+      },
+      {
+        "kanji": "合",
+        "hanViet": "HỢP"
+      }
     ],
     "meanings": [
       "nhặt",
@@ -6960,8 +7164,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "亦",
-      "心"
+      {
+        "kanji": "亦",
+        "hanViet": "DIỆC"
+      },
+      {
+        "kanji": "心",
+        "hanViet": "TÂM"
+      }
     ],
     "meanings": [
       "tình yêu",
@@ -7002,8 +7212,14 @@
     "strokes": 11,
     "level": "N3",
     "components": [
-      "尚",
-      "巾"
+      {
+        "kanji": "尚",
+        "hanViet": "THƯỢNG"
+      },
+      {
+        "kanji": "巾",
+        "hanViet": "CÂN"
+      }
     ],
     "meanings": [
       "thường xuyên",
@@ -7044,8 +7260,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "入",
-      "王"
+      {
+        "kanji": "入",
+        "hanViet": "NHẬP"
+      },
+      {
+        "kanji": "王",
+        "hanViet": "VƯƠNG"
+      }
     ],
     "meanings": [
       "toàn bộ",
@@ -7085,8 +7307,14 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "竹",
-      "聿"
+      {
+        "kanji": "竹",
+        "hanViet": "TRÚC"
+      },
+      {
+        "kanji": "聿",
+        "hanViet": "DUẬT"
+      }
     ],
     "meanings": [
       "bút",
@@ -7126,8 +7354,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "白",
-      "勺"
+      {
+        "kanji": "白",
+        "hanViet": "BẠCH"
+      },
+      {
+        "kanji": "勺",
+        "hanViet": "THƯỢC"
+      }
     ],
     "meanings": [
       "đích",
@@ -7167,8 +7401,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "人",
-      "牛"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "牛",
+        "hanViet": "NGƯU"
+      }
     ],
     "meanings": [
       "vụ việc",
@@ -7208,8 +7448,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "艹",
-      "云"
+      {
+        "kanji": "艹",
+        "hanViet": "THẢO"
+      },
+      {
+        "kanji": "云",
+        "hanViet": "VÂN"
+      }
     ],
     "meanings": [
       "nghệ thuật",
@@ -7249,8 +7495,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "工",
-      "弋"
+      {
+        "kanji": "工",
+        "hanViet": "CÔNG"
+      },
+      {
+        "kanji": "弋",
+        "hanViet": "VẸT"
+      }
     ],
     "meanings": [
       "hình thức",
@@ -7290,7 +7542,10 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "身"
+      {
+        "kanji": "身",
+        "hanViet": "THÂN"
+      }
     ],
     "meanings": [
       "thân thể",
@@ -7332,8 +7587,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "宀",
-      "寸"
+      {
+        "kanji": "宀",
+        "hanViet": "MIÊN"
+      },
+      {
+        "kanji": "寸",
+        "hanViet": "THỐN"
+      }
     ],
     "meanings": [
       "bảo vệ",
@@ -7375,9 +7636,18 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "口",
-      "亅",
-      "一"
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      },
+      {
+        "kanji": "亅",
+        "hanViet": "QUYẾT"
+      },
+      {
+        "kanji": "一",
+        "hanViet": "NHẤT"
+      }
     ],
     "meanings": [
       "sự việc",
@@ -7417,8 +7687,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "辶",
-      "印"
+      {
+        "kanji": "辶",
+        "hanViet": "SƯỚC"
+      },
+      {
+        "kanji": "印",
+        "hanViet": "ẤN"
+      }
     ],
     "meanings": [
       "đón",
@@ -7458,8 +7734,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "口",
-      "貝"
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      },
+      {
+        "kanji": "貝",
+        "hanViet": "BỐI"
+      }
     ],
     "meanings": [
       "thành viên",
@@ -7499,8 +7781,14 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "貝",
-      "代"
+      {
+        "kanji": "貝",
+        "hanViet": "BỐI"
+      },
+      {
+        "kanji": "代",
+        "hanViet": "ĐẠI"
+      }
     ],
     "meanings": [
       "cho mượn",
@@ -7541,8 +7829,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "人",
-      "系"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "系",
+        "hanViet": "HỆ"
+      }
     ],
     "meanings": [
       "liên quan",
@@ -7582,8 +7876,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "木",
-      "才"
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      },
+      {
+        "kanji": "才",
+        "hanViet": "TÀI"
+      }
     ],
     "meanings": [
       "tài liệu",
@@ -7623,8 +7923,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "人",
-      "呆"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "呆",
+        "hanViet": "ĐÁI"
+      }
     ],
     "meanings": [
       "giữ",
@@ -7664,8 +7970,14 @@
     "strokes": 11,
     "level": "N3",
     "components": [
-      "糸",
-      "召"
+      {
+        "kanji": "糸",
+        "hanViet": "TY"
+      },
+      {
+        "kanji": "召",
+        "hanViet": "TRIỆU"
+      }
     ],
     "meanings": [
       "giới thiệu"
@@ -7699,7 +8011,10 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "矢"
+      {
+        "kanji": "矢",
+        "hanViet": "THỈ"
+      }
     ],
     "meanings": [
       "mũi tên"
@@ -7733,8 +8048,14 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "禾",
-      "兑"
+      {
+        "kanji": "禾",
+        "hanViet": "HÒA"
+      },
+      {
+        "kanji": "兑",
+        "hanViet": "ĐÒI"
+      }
     ],
     "meanings": [
       "thuế"
@@ -7773,8 +8094,14 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "木",
-      "奉"
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      },
+      {
+        "kanji": "奉",
+        "hanViet": "PHỤNG"
+      }
     ],
     "meanings": [
       "cây gậy",
@@ -7815,8 +8142,14 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "水",
-      "冫"
+      {
+        "kanji": "水",
+        "hanViet": "THUỶ"
+      },
+      {
+        "kanji": "冫",
+        "hanViet": "BĂNG"
+      }
     ],
     "meanings": [
       "băng",
@@ -7858,8 +8191,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "人",
-      "申"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "申",
+        "hanViet": "THÂN"
+      }
     ],
     "meanings": [
       "duỗi",
@@ -7899,8 +8238,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "言",
-      "己"
+      {
+        "kanji": "言",
+        "hanViet": "NGÔN"
+      },
+      {
+        "kanji": "己",
+        "hanViet": "KỶ"
+      }
     ],
     "meanings": [
       "ghi chép",
@@ -7940,8 +8285,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "火",
-      "火"
+      {
+        "kanji": "火",
+        "hanViet": "HỎA"
+      },
+      {
+        "kanji": "火",
+        "hanViet": "HỎA"
+      }
     ],
     "meanings": [
       "lửa",
@@ -7981,8 +8332,14 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "宀",
-      "八"
+      {
+        "kanji": "宀",
+        "hanViet": "MIÊN"
+      },
+      {
+        "kanji": "八",
+        "hanViet": "BÁT"
+      }
     ],
     "meanings": [
       "lỗ hổng",
@@ -8022,8 +8379,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "尹",
-      "口"
+      {
+        "kanji": "尹",
+        "hanViet": "DUẪN"
+      },
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      }
     ],
     "meanings": [
       "bạn (nam)",
@@ -8064,8 +8427,14 @@
     "strokes": 4,
     "level": "N3",
     "components": [
-      "弓",
-      "丨"
+      {
+        "kanji": "弓",
+        "hanViet": "CUNG"
+      },
+      {
+        "kanji": "丨",
+        "hanViet": "CỔN"
+      }
     ],
     "meanings": [
       "kéo",
@@ -8106,8 +8475,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "孚",
-      "乙"
+      {
+        "kanji": "孚",
+        "hanViet": "PHÙ"
+      },
+      {
+        "kanji": "乙",
+        "hanViet": "ÁT"
+      }
     ],
     "meanings": [
       "sữa",
@@ -8149,7 +8524,10 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "無"
+      {
+        "kanji": "無",
+        "hanViet": "VÔ"
+      }
     ],
     "meanings": [
       "không có",
@@ -8189,7 +8567,10 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "羊"
+      {
+        "kanji": "羊",
+        "hanViet": "DƯƠNG"
+      }
     ],
     "meanings": [
       "con cừu"
@@ -8231,9 +8612,18 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "十",
-      "目",
-      "L"
+      {
+        "kanji": "十",
+        "hanViet": "THẬP"
+      },
+      {
+        "kanji": "目",
+        "hanViet": "MỤC"
+      },
+      {
+        "kanji": "L",
+        "hanViet": "L"
+      }
     ],
     "meanings": [
       "thẳng",
@@ -8274,8 +8664,14 @@
     "strokes": 4,
     "level": "N3",
     "components": [
-      "人",
-      "凵"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "凵",
+        "hanViet": "KHẢM"
+      }
     ],
     "meanings": [
       "thiếu",
@@ -8316,8 +8712,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "人",
-      "立"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "立",
+        "hanViet": "LẬP"
+      }
     ],
     "meanings": [
       "vị trí",
@@ -8357,8 +8759,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "人",
-      "咅"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "咅",
+        "hanViet": "BẮC"
+      }
     ],
     "meanings": [
       "gấp đôi",
@@ -8400,8 +8808,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "木",
-      "殳"
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      },
+      {
+        "kanji": "殳",
+        "hanViet": "THÙ"
+      }
     ],
     "meanings": [
       "giết",
@@ -8441,7 +8855,10 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "歯"
+      {
+        "kanji": "歯",
+        "hanViet": "XỈ"
+      }
     ],
     "meanings": [
       "răng"
@@ -8481,8 +8898,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "白",
-      "比"
+      {
+        "kanji": "白",
+        "hanViet": "BẠCH"
+      },
+      {
+        "kanji": "比",
+        "hanViet": "TỶ"
+      }
     ],
     "meanings": [
       "tất cả mọi người"
@@ -8523,8 +8946,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "禾",
-      "口"
+      {
+        "kanji": "禾",
+        "hanViet": "HÒA"
+      },
+      {
+        "kanji": "口",
+        "hanViet": "KHẨU"
+      }
     ],
     "meanings": [
       "hòa bình",
@@ -8565,8 +8994,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "歹",
-      "戋"
+      {
+        "kanji": "歹",
+        "hanViet": "ĐÃI"
+      },
+      {
+        "kanji": "戋",
+        "hanViet": "TÀN"
+      }
     ],
     "meanings": [
       "còn lại",
@@ -8607,8 +9042,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "辶",
-      "艮"
+      {
+        "kanji": "辶",
+        "hanViet": "SƯỚC"
+      },
+      {
+        "kanji": "艮",
+        "hanViet": "CẤN"
+      }
     ],
     "meanings": [
       "rút lui",
@@ -8650,8 +9091,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "土",
-      "一"
+      {
+        "kanji": "土",
+        "hanViet": "THỔ"
+      },
+      {
+        "kanji": "一",
+        "hanViet": "NHẤT"
+      }
     ],
     "meanings": [
       "hạnh phúc",
@@ -8692,8 +9139,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "廿",
-      "日"
+      {
+        "kanji": "廿",
+        "hanViet": "THẬP NHỊ"
+      },
+      {
+        "kanji": "日",
+        "hanViet": "NHẬT"
+      }
     ],
     "meanings": [
       "ngày xưa"
@@ -8732,8 +9185,14 @@
     "strokes": 12,
     "level": "N3",
     "components": [
-      "日",
-      "里"
+      {
+        "kanji": "日",
+        "hanViet": "NHẬT"
+      },
+      {
+        "kanji": "里",
+        "hanViet": "LÝ"
+      }
     ],
     "meanings": [
       "lượng",
@@ -8773,8 +9232,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "水",
-      "主"
+      {
+        "kanji": "水",
+        "hanViet": "THUỶ"
+      },
+      {
+        "kanji": "主",
+        "hanViet": "CHỦ"
+      }
     ],
     "meanings": [
       "chú ý",
@@ -8814,9 +9279,18 @@
     "strokes": 13,
     "level": "N3",
     "components": [
-      "土",
-      "臣",
-      "皿"
+      {
+        "kanji": "土",
+        "hanViet": "THỔ"
+      },
+      {
+        "kanji": "臣",
+        "hanViet": "THẦN"
+      },
+      {
+        "kanji": "皿",
+        "hanViet": "MÃNH"
+      }
     ],
     "meanings": [
       "muối"
@@ -8856,7 +9330,10 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "帯"
+      {
+        "kanji": "帯",
+        "hanViet": "ĐỚI"
+      }
     ],
     "meanings": [
       "đai",
@@ -8897,8 +9374,14 @@
     "strokes": 13,
     "level": "N3",
     "components": [
-      "宀",
-      "寢"
+      {
+        "kanji": "宀",
+        "hanViet": "MIÊN"
+      },
+      {
+        "kanji": "寢",
+        "hanViet": "TẨM"
+      }
     ],
     "meanings": [
       "ngủ",
@@ -8938,9 +9421,18 @@
     "strokes": 14,
     "level": "N3",
     "components": [
-      "竹",
-      "目",
-      "廾"
+      {
+        "kanji": "竹",
+        "hanViet": "TRÚC"
+      },
+      {
+        "kanji": "目",
+        "hanViet": "MỤC"
+      },
+      {
+        "kanji": "廾",
+        "hanViet": "CUNG"
+      }
     ],
     "meanings": [
       "tính toán"
@@ -8979,8 +9471,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "一",
-      "冂"
+      {
+        "kanji": "一",
+        "hanViet": "NHẤT"
+      },
+      {
+        "kanji": "冂",
+        "hanViet": "QUYNH"
+      }
     ],
     "meanings": [
       "cả hai",
@@ -9021,8 +9519,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "水",
-      "肖"
+      {
+        "kanji": "水",
+        "hanViet": "THUỶ"
+      },
+      {
+        "kanji": "肖",
+        "hanViet": "TIẾU"
+      }
     ],
     "meanings": [
       "tắt",
@@ -9064,8 +9568,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "宀",
-      "貫"
+      {
+        "kanji": "宀",
+        "hanViet": "MIÊN"
+      },
+      {
+        "kanji": "貫",
+        "hanViet": "QUÁN"
+      }
     ],
     "meanings": [
       "thực",
@@ -9105,8 +9615,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "刀",
-      "券"
+      {
+        "kanji": "刀",
+        "hanViet": "ĐAO"
+      },
+      {
+        "kanji": "券",
+        "hanViet": "KHOÁN"
+      }
     ],
     "meanings": [
       "vé",
@@ -9146,8 +9662,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "土",
-      "刑"
+      {
+        "kanji": "土",
+        "hanViet": "THỔ"
+      },
+      {
+        "kanji": "刑",
+        "hanViet": "HÌNH"
+      }
     ],
     "meanings": [
       "kiểu dáng",
@@ -9190,8 +9712,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "田",
-      "木"
+      {
+        "kanji": "田",
+        "hanViet": "ĐIỀN"
+      },
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      }
     ],
     "meanings": [
       "kết quả",
@@ -9231,8 +9759,14 @@
     "strokes": 10,
     "level": "N3",
     "components": [
-      "糸",
-      "氏"
+      {
+        "kanji": "糸",
+        "hanViet": "TY"
+      },
+      {
+        "kanji": "氏",
+        "hanViet": "THỊ"
+      }
     ],
     "meanings": [
       "giấy"
@@ -9271,7 +9805,10 @@
     "strokes": 11,
     "level": "N3",
     "components": [
-      "鳥"
+      {
+        "kanji": "鳥",
+        "hanViet": "ĐIỂU"
+      }
     ],
     "meanings": [
       "chim"
@@ -9310,8 +9847,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "川",
-      "丶"
+      {
+        "kanji": "川",
+        "hanViet": "XUYÊN"
+      },
+      {
+        "kanji": "丶",
+        "hanViet": "CHÚ"
+      }
     ],
     "meanings": [
       "châu lục",
@@ -9351,8 +9894,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "今",
-      "心"
+      {
+        "kanji": "今",
+        "hanViet": "KIM"
+      },
+      {
+        "kanji": "心",
+        "hanViet": "TÂM"
+      }
     ],
     "meanings": [
       "niệm",
@@ -9392,9 +9941,18 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "亠",
-      "人",
-      "十"
+      {
+        "kanji": "亠",
+        "hanViet": "ĐẦU"
+      },
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "十",
+        "hanViet": "THẬP"
+      }
     ],
     "meanings": [
       "tốt nghiệp"
@@ -9433,8 +9991,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "木",
-      "几"
+      {
+        "kanji": "木",
+        "hanViet": "MỘC"
+      },
+      {
+        "kanji": "几",
+        "hanViet": "KỶ"
+      }
     ],
     "meanings": [
       "bàn học"
@@ -9468,8 +10032,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "示",
-      "斤"
+      {
+        "kanji": "示",
+        "hanViet": "THỊ"
+      },
+      {
+        "kanji": "斤",
+        "hanViet": "CÂN"
+      }
     ],
     "meanings": [
       "cầu nguyện"
@@ -9508,8 +10078,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "止",
-      "月"
+      {
+        "kanji": "止",
+        "hanViet": "CHỈ"
+      },
+      {
+        "kanji": "月",
+        "hanViet": "NGUYỆT"
+      }
     ],
     "meanings": [
       "đồng ý",
@@ -9545,8 +10121,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "冂",
-      "土"
+      {
+        "kanji": "冂",
+        "hanViet": "QUYNH"
+      },
+      {
+        "kanji": "土",
+        "hanViet": "THỔ"
+      }
     ],
     "meanings": [
       "lại, tái"
@@ -9587,8 +10169,14 @@
     "strokes": 8,
     "level": "N3",
     "components": [
-      "艹",
-      "古"
+      {
+        "kanji": "艹",
+        "hanViet": "THẢO"
+      },
+      {
+        "kanji": "古",
+        "hanViet": "CỔ"
+      }
     ],
     "meanings": [
       "khổ sở",
@@ -9629,7 +10217,10 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "舟"
+      {
+        "kanji": "舟",
+        "hanViet": "CHU"
+      }
     ],
     "meanings": [
       "thuyền"
@@ -9666,8 +10257,14 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "衣",
-      "刀"
+      {
+        "kanji": "衣",
+        "hanViet": "Y"
+      },
+      {
+        "kanji": "刀",
+        "hanViet": "ĐAO"
+      }
     ],
     "meanings": [
       "đầu tiên",
@@ -9707,7 +10304,10 @@
     "strokes": 7,
     "level": "N3",
     "components": [
-      "卵"
+      {
+        "kanji": "卵",
+        "hanViet": "NOÃN"
+      }
     ],
     "meanings": [
       "trứng"
@@ -9746,8 +10346,14 @@
     "strokes": 9,
     "level": "N3",
     "components": [
-      "日",
-      "乍"
+      {
+        "kanji": "日",
+        "hanViet": "NHẬT"
+      },
+      {
+        "kanji": "乍",
+        "hanViet": "TÁ"
+      }
     ],
     "meanings": [
       "hôm qua",
@@ -9787,8 +10393,14 @@
     "strokes": 5,
     "level": "N3",
     "components": [
-      "勹",
-      "己"
+      {
+        "kanji": "勹",
+        "hanViet": "BAO"
+      },
+      {
+        "kanji": "己",
+        "hanViet": "KỶ"
+      }
     ],
     "meanings": [
       "bao bọc",
@@ -9828,8 +10440,14 @@
     "strokes": 4,
     "level": "N3",
     "components": [
-      "人",
-      "八"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "八",
+        "hanViet": "BÁT"
+      }
     ],
     "meanings": [
       "giới thiệu",
@@ -9871,8 +10489,14 @@
     "strokes": 6,
     "level": "N3",
     "components": [
-      "人",
-      "厄"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "厄",
+        "hanViet": "ÁCH"
+      }
     ],
     "meanings": [
       "nguy hiểm"
@@ -9912,8 +10536,14 @@
     "strokes": 4,
     "level": "N3",
     "components": [
-      "又",
-      "丩"
+      {
+        "kanji": "又",
+        "hanViet": "HỰU"
+      },
+      {
+        "kanji": "丩",
+        "hanViet": "CỬU"
+      }
     ],
     "meanings": [
       "thu nhập",
@@ -9954,8 +10584,14 @@
     "strokes": 3,
     "level": "N3",
     "components": [
-      "人",
-      "乀"
+      {
+        "kanji": "人",
+        "hanViet": "NHÂN"
+      },
+      {
+        "kanji": "乀",
+        "hanViet": "PHẾ"
+      }
     ],
     "meanings": [
       "lâu",
@@ -9996,7 +10632,10 @@
     "strokes": 3,
     "level": "N3",
     "components": [
-      "巾"
+      {
+        "kanji": "巾",
+        "hanViet": "CÂN"
+      }
     ],
     "meanings": [
       "khăn",
