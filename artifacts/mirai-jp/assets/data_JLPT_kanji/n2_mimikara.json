@@ -28,7 +28,9 @@
       }
     ],
     "frequency": 2,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0002",
@@ -48,7 +50,9 @@
         "vi": "lịch sự, chu đáo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0003",
@@ -79,7 +83,9 @@
       }
     ],
     "frequency": 7,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0004",
@@ -110,7 +116,9 @@
       }
     ],
     "frequency": 11,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0005",
@@ -140,7 +148,9 @@
         "vi": "bất tiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0006",
@@ -160,7 +170,9 @@
         "vi": "cho, đưa, gây ra"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0007",
@@ -180,7 +192,9 @@
         "vi": "thế giới quan"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0008",
@@ -200,7 +214,9 @@
         "vi": "cha mẹ, bố mẹ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0009",
@@ -226,7 +242,9 @@
       }
     ],
     "frequency": 6,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0010",
@@ -256,7 +274,9 @@
         "vi": "vượt qua rào cản"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0011",
@@ -281,7 +301,9 @@
         "vi": "gây rối loạn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0012",
@@ -301,7 +323,9 @@
         "vi": "dự định, kế hoạch"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0013",
@@ -331,7 +355,9 @@
         "vi": "chiến tranh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0014",
@@ -362,7 +388,9 @@
       }
     ],
     "frequency": 10,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0015",
@@ -392,7 +420,9 @@
         "vi": "phụ thuộc lẫn nhau"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0016",
@@ -412,7 +442,9 @@
         "vi": "mất đi, mất người thân"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0017",
@@ -442,7 +474,9 @@
         "vi": "đàm phán, thương lượng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0018",
@@ -473,7 +507,9 @@
       }
     ],
     "frequency": 5,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0019",
@@ -494,7 +530,9 @@
       }
     ],
     "frequency": 17,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0020",
@@ -514,7 +552,9 @@
         "vi": "chăm sóc người già"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0021",
@@ -539,7 +579,9 @@
         "vi": "không có cách nào, đành thôi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0022",
@@ -560,7 +602,9 @@
       }
     ],
     "frequency": 68,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2mk-0023",
@@ -586,7 +630,9 @@
       }
     ],
     "frequency": 110,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0024",
@@ -611,7 +657,9 @@
         "vi": "thời đại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0025",
@@ -631,7 +679,9 @@
         "vi": "từ đó đến nay"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0026",
@@ -651,7 +701,9 @@
         "vi": "điều kiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0027",
@@ -676,7 +728,9 @@
         "vi": "chịu trách nhiệm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0028",
@@ -696,7 +750,9 @@
         "vi": "công ty, doanh nghiệp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0029",
@@ -716,7 +772,9 @@
         "vi": "kỳ nghỉ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0030",
@@ -747,7 +805,9 @@
       }
     ],
     "frequency": 30,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0031",
@@ -772,7 +832,9 @@
         "vi": "truyền thống"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0032",
@@ -792,7 +854,9 @@
         "vi": "kéo dài, vươn lên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0033",
@@ -812,7 +876,9 @@
         "vi": "vị trí đứng, quan điểm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0034",
@@ -838,7 +904,9 @@
       }
     ],
     "frequency": 150,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0035",
@@ -859,7 +927,9 @@
       }
     ],
     "frequency": 8,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0036",
@@ -890,7 +960,9 @@
       }
     ],
     "frequency": 50,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0037",
@@ -915,7 +987,9 @@
         "vi": "quá đáng, không thể bỏ qua"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0038",
@@ -946,7 +1020,9 @@
       }
     ],
     "frequency": 45,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0039",
@@ -972,7 +1048,9 @@
       }
     ],
     "frequency": 48,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0040",
@@ -992,7 +1070,9 @@
         "vi": "ngoại lệ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0041",
@@ -1017,7 +1097,9 @@
         "vi": "trẻ em"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0042",
@@ -1042,7 +1124,9 @@
         "vi": "phụ thuộc lẫn nhau"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0043",
@@ -1072,7 +1156,9 @@
         "vi": "giá cả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0044",
@@ -1097,7 +1183,9 @@
         "vi": "bất tiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2mk-0045",
@@ -1122,7 +1210,9 @@
         "vi": "người liên quan"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0046",
@@ -1142,7 +1232,9 @@
         "vi": "thúc đẩy, xúc tiến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0047",
@@ -1163,7 +1255,9 @@
       }
     ],
     "frequency": 89,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0048",
@@ -1193,7 +1287,9 @@
         "vi": "thông tin liên lạc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0049",
@@ -1218,7 +1314,9 @@
         "vi": "cá tính, độc đáo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0050",
@@ -1238,7 +1336,9 @@
         "vi": "ngã, sụp đổ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0051",
@@ -1258,7 +1358,9 @@
         "vi": "mượn, vay"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0052",
@@ -1283,7 +1385,9 @@
         "vi": "quan điểm giá trị"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0053",
@@ -1303,7 +1407,9 @@
         "vi": "định kiến, thiên vị"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0054",
@@ -1328,7 +1434,9 @@
         "vi": "tính ngẫu nhiên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0055",
@@ -1348,7 +1456,9 @@
         "vi": "đồ giả, hàng giả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0056",
@@ -1373,7 +1483,9 @@
         "vi": "trang thiết bị, cơ sở vật chất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0057",
@@ -1398,7 +1510,9 @@
         "vi": "lắng nghe, chú ý nghe"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0058",
@@ -1418,7 +1532,9 @@
         "vi": "cách làm việc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0059",
@@ -1438,7 +1554,9 @@
         "vi": "đồng nghiệp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0060",
@@ -1458,7 +1576,9 @@
         "vi": "cảm giác sung mãn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0061",
@@ -1489,7 +1609,9 @@
       }
     ],
     "frequency": 24,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0062",
@@ -1510,7 +1632,9 @@
       }
     ],
     "frequency": 93,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0063",
@@ -1530,7 +1654,9 @@
         "vi": "khắc phục, vượt qua"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0064",
@@ -1550,7 +1676,9 @@
         "vi": "giấy phép, bằng lái"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0065",
@@ -1570,7 +1698,9 @@
         "vi": "nuôi dạy con nhỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0066",
@@ -1601,7 +1731,9 @@
       }
     ],
     "frequency": 22,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2mk-0067",
@@ -1627,7 +1759,9 @@
       }
     ],
     "frequency": 36,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0068",
@@ -1652,7 +1786,9 @@
         "vi": "tính công bằng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0069",
@@ -1682,7 +1818,9 @@
         "vi": "chia sẻ, dùng chung"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0070",
@@ -1702,7 +1840,9 @@
         "vi": "cụ thể"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0071",
@@ -1733,7 +1873,9 @@
       }
     ],
     "frequency": 74,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0072",
@@ -1753,7 +1895,9 @@
         "vi": "ảnh, hình ảnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0073",
@@ -1774,7 +1918,9 @@
       }
     ],
     "frequency": 4,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0074",
@@ -1794,7 +1940,9 @@
         "vi": "lạnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0075",
@@ -1814,7 +1962,9 @@
         "vi": "xử lý"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0076",
@@ -1845,7 +1995,9 @@
       }
     ],
     "frequency": 14,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0077",
@@ -1876,7 +2028,9 @@
       }
     ],
     "frequency": 15,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0078",
@@ -1906,7 +2060,9 @@
         "vi": "tử tế, thân thiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0079",
@@ -1926,7 +2082,9 @@
         "vi": "đầu tiên, ban đầu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0080",
@@ -1956,7 +2114,9 @@
         "vi": "khả năng phán đoán"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0081",
@@ -1986,7 +2146,9 @@
         "vi": "đặc biệt"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0082",
@@ -2016,7 +2178,9 @@
         "vi": "tiện lợi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0083",
@@ -2036,7 +2200,9 @@
         "vi": "đến nơi, đến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0084",
@@ -2066,7 +2232,9 @@
         "vi": "giới hạn, hạn chế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0085",
@@ -2086,7 +2254,9 @@
         "vi": "đối chiếu, hiệu chỉnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0086",
@@ -2106,7 +2276,9 @@
         "vi": "khắc ghi trong lòng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0087",
@@ -2126,7 +2298,9 @@
         "vi": "quy tắc, quy định"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0088",
@@ -2157,7 +2331,9 @@
       }
     ],
     "frequency": 24,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2mk-0089",
@@ -2187,7 +2363,9 @@
         "vi": "chia, bẻ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0090",
@@ -2217,7 +2395,9 @@
         "vi": "tính sáng tạo độc đáo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0091",
@@ -2248,7 +2428,9 @@
       }
     ],
     "frequency": 47,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0092",
@@ -2268,7 +2450,9 @@
         "vi": "thành công"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0093",
@@ -2298,7 +2482,9 @@
         "vi": "người tham gia"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0094",
@@ -2318,7 +2504,9 @@
         "vi": "kém hơn, thua"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0095",
@@ -2343,7 +2531,9 @@
         "vi": "giúp đỡ nhau"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0096",
@@ -2368,7 +2558,9 @@
         "vi": "nỗ lực, cố gắng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0097",
@@ -2393,7 +2585,9 @@
         "vi": "khích lệ, động viên nhau"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0098",
@@ -2413,7 +2607,9 @@
         "vi": "vất vả, khó nhọc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0099",
@@ -2443,7 +2639,9 @@
         "vi": "có hiệu lực, hiệu quả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0100",
@@ -2463,7 +2661,9 @@
         "vi": "lòng dũng cảm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0101",
@@ -2494,7 +2694,9 @@
       }
     ],
     "frequency": 55,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0102",
@@ -2514,7 +2716,9 @@
         "vi": "nghĩa vụ, trách nhiệm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0103",
@@ -2534,7 +2738,9 @@
         "vi": "thắng, chiến thắng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0104",
@@ -2554,7 +2760,9 @@
         "vi": "chuyển công tác"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0105",
@@ -2574,7 +2782,9 @@
         "vi": "khuyến khích, giới thiệu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0106",
@@ -2594,7 +2804,9 @@
         "vi": "lãng phí, tiếc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0107",
@@ -2614,7 +2826,9 @@
         "vi": "có mùi, thoảng mùi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0108",
@@ -2634,7 +2848,9 @@
         "vi": "tính bao quát, toàn diện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0109",
@@ -2664,7 +2880,9 @@
         "vi": "văn hóa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2mk-0110",
@@ -2684,7 +2902,9 @@
         "vi": "phân biệt, phân loại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0111",
@@ -2709,7 +2929,9 @@
         "vi": "bác sĩ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0112",
@@ -2730,7 +2952,9 @@
       }
     ],
     "frequency": 70,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0113",
@@ -2750,7 +2974,9 @@
         "vi": "tốt nghiệp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0114",
@@ -2780,7 +3006,9 @@
         "vi": "hiệp định, thỏa thuận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0115",
@@ -2800,7 +3028,9 @@
         "vi": "đơn giản"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0116",
@@ -2820,7 +3050,9 @@
         "vi": "chiếm, giữ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0117",
@@ -2840,7 +3072,9 @@
         "vi": "ấn tượng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0118",
@@ -2865,7 +3099,9 @@
         "vi": "nguy hiểm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0119",
@@ -2885,7 +3121,9 @@
         "vi": "dày"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0120",
@@ -2905,7 +3143,9 @@
         "vi": "nguyên nhân, lý do"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0121",
@@ -2925,7 +3165,9 @@
         "vi": "nghiêm ngặt, chính xác"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0122",
@@ -2945,7 +3187,9 @@
         "vi": "quá khứ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0123",
@@ -2970,7 +3214,9 @@
         "vi": "người tham gia"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0124",
@@ -2995,7 +3241,9 @@
         "vi": "đạt đến, vươn tới"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0125",
@@ -3021,7 +3269,9 @@
       }
     ],
     "frequency": 107,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0126",
@@ -3051,7 +3301,9 @@
         "vi": "nhìn lại, kiểm điểm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0127",
@@ -3071,7 +3323,9 @@
         "vi": "lắng xuống, ổn định"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0128",
@@ -3102,7 +3356,9 @@
       }
     ],
     "frequency": 58,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0129",
@@ -3132,7 +3388,9 @@
         "vi": "dự thi, thi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0130",
@@ -3158,7 +3416,9 @@
       }
     ],
     "frequency": 55,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2mk-0131",
@@ -3188,7 +3448,9 @@
         "vi": "cho phép, cấp phép"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0132",
@@ -3209,7 +3471,9 @@
       }
     ],
     "frequency": 157,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0133",
@@ -3229,7 +3493,9 @@
         "vi": "lịch sử"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0134",
@@ -3249,7 +3515,9 @@
         "vi": "thực hiện ước mơ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0135",
@@ -3269,7 +3537,9 @@
         "vi": "cấp trên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0136",
@@ -3299,7 +3569,9 @@
         "vi": "tỉ lệ, tương đối"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0137",
@@ -3325,7 +3597,9 @@
       }
     ],
     "frequency": 38,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0138",
@@ -3351,7 +3625,9 @@
       }
     ],
     "frequency": 33,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0139",
@@ -3381,7 +3657,9 @@
         "vi": "phương hướng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0140",
@@ -3406,7 +3684,9 @@
         "vi": "từ chối, bác bỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0141",
@@ -3431,7 +3711,9 @@
         "vi": "bao gồm, kể cả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0142",
@@ -3451,7 +3733,9 @@
         "vi": "thổi bay, xóa sạch"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0143",
@@ -3471,7 +3755,9 @@
         "vi": "báo cáo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0144",
@@ -3501,7 +3787,9 @@
         "vi": "ý nghĩa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0145",
@@ -3526,7 +3814,9 @@
         "vi": "kêu gọi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0146",
@@ -3546,7 +3836,9 @@
         "vi": "số phận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0147",
@@ -3576,7 +3868,9 @@
         "vi": "cảm giác không phù hợp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0148",
@@ -3601,7 +3895,9 @@
         "vi": "hàng hoá, đồ vật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0149",
@@ -3621,7 +3917,9 @@
         "vi": "nhân viên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0150",
@@ -3641,7 +3939,9 @@
         "vi": "thương mại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0151",
@@ -3666,7 +3966,9 @@
         "vi": "vấn đề"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2mk-0152",
@@ -3691,7 +3993,9 @@
         "vi": "biện pháp cải thiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0153",
@@ -3711,7 +4015,9 @@
         "vi": "niềm vui"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0154",
@@ -3736,7 +4042,9 @@
         "vi": "điều hành, vận hành"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0155",
@@ -3767,7 +4075,9 @@
       }
     ],
     "frequency": 56,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0156",
@@ -3792,7 +4102,9 @@
         "vi": "yếu tố"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0157",
@@ -3812,7 +4124,9 @@
         "vi": "đoàn thể, tổ chức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0158",
@@ -3837,7 +4151,9 @@
         "vi": "nghèo đói"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0159",
@@ -3857,7 +4173,9 @@
         "vi": "phạm vi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0160",
@@ -3888,7 +4206,9 @@
       }
     ],
     "frequency": 126,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0161",
@@ -3919,7 +4239,9 @@
       }
     ],
     "frequency": 12,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0162",
@@ -3939,7 +4261,9 @@
         "vi": "hiện tại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0163",
@@ -3969,7 +4293,9 @@
         "vi": "động đất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0164",
@@ -3989,7 +4315,9 @@
         "vi": "bình quân, trung bình"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0165",
@@ -4009,7 +4337,9 @@
         "vi": "địa vực, khu vực"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0166",
@@ -4034,7 +4364,9 @@
         "vi": "dựa trên, căn cứ vào"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0167",
@@ -4064,7 +4396,9 @@
         "vi": "xã hội thông tin"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0168",
@@ -4094,7 +4428,9 @@
         "vi": "nơi chốn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0169",
@@ -4114,7 +4450,9 @@
         "vi": "môi trường"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0170",
@@ -4139,7 +4477,9 @@
         "vi": "tăng lên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0171",
@@ -4169,7 +4509,9 @@
         "vi": "bức tường, rào cản"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0172",
@@ -4189,7 +4531,9 @@
         "vi": "phá hủy"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2mk-0173",
@@ -4209,7 +4553,9 @@
         "vi": "luật sư"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0174",
@@ -4235,7 +4581,9 @@
       }
     ],
     "frequency": 111,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0175",
@@ -4265,7 +4613,9 @@
         "vi": "khó khăn, vất vả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0176",
@@ -4296,7 +4646,9 @@
       }
     ],
     "frequency": 53,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0177",
@@ -4317,7 +4669,9 @@
       }
     ],
     "frequency": 41,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0178",
@@ -4338,7 +4692,9 @@
       }
     ],
     "frequency": 73,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0179",
@@ -4363,7 +4719,9 @@
         "vi": "thực hiện ước mơ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0180",
@@ -4394,7 +4752,9 @@
       }
     ],
     "frequency": 5,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0181",
@@ -4414,7 +4774,9 @@
         "vi": "mặt trời"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0182",
@@ -4434,7 +4796,9 @@
         "vi": "nghĩ cách, sáng tạo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0183",
@@ -4464,7 +4828,9 @@
         "vi": "thất bại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0184",
@@ -4484,7 +4850,9 @@
         "vi": "hợp đồng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0185",
@@ -4514,7 +4882,9 @@
         "vi": "kích thích, phát huy"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0186",
@@ -4535,7 +4905,9 @@
       }
     ],
     "frequency": 26,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0187",
@@ -4566,7 +4938,9 @@
       }
     ],
     "frequency": 121,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0188",
@@ -4586,7 +4960,9 @@
         "vi": "tế nhị, vi tế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0189",
@@ -4611,7 +4987,9 @@
         "vi": "tính hợp lý, tính phù hợp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0190",
@@ -4631,7 +5009,9 @@
         "vi": "cản trở, ngăn cản"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0191",
@@ -4656,7 +5036,9 @@
         "vi": "ly hôn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0192",
@@ -4676,7 +5058,9 @@
         "vi": "ghét, không thích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0193",
@@ -4696,7 +5080,9 @@
         "vi": "vui mừng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2mk-0194",
@@ -4727,7 +5113,9 @@
       }
     ],
     "frequency": 30,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0195",
@@ -4747,7 +5135,9 @@
         "vi": "con số, số"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0196",
@@ -4772,7 +5162,9 @@
         "vi": "cùng tồn tại, chung sống"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0197",
@@ -4792,7 +5184,9 @@
         "vi": "mùa, mùa vụ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0198",
@@ -4812,7 +5206,9 @@
         "vi": "cô đơn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0199",
@@ -4843,7 +5239,9 @@
       }
     ],
     "frequency": 52,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0200",
@@ -4863,7 +5261,9 @@
         "vi": "về nhà"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0201",
@@ -4883,7 +5283,9 @@
         "vi": "vũ trụ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0202",
@@ -4913,7 +5315,9 @@
         "vi": "giữ lời hứa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0203",
@@ -4944,7 +5348,9 @@
       }
     ],
     "frequency": 66,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0204",
@@ -4964,7 +5370,9 @@
         "vi": "hoàn toàn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0205",
@@ -4984,7 +5392,9 @@
         "vi": "vũ trụ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0206",
@@ -5015,7 +5425,9 @@
       }
     ],
     "frequency": 67,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0207",
@@ -5046,7 +5458,9 @@
       }
     ],
     "frequency": 49,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0208",
@@ -5066,7 +5480,9 @@
         "vi": "khán giả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0209",
@@ -5086,7 +5502,9 @@
         "vi": "thiệt hại, tổn thất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0210",
@@ -5117,7 +5535,9 @@
       }
     ],
     "frequency": 27,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0211",
@@ -5137,7 +5557,9 @@
         "vi": "nội dung"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0212",
@@ -5157,7 +5579,9 @@
         "vi": "cô đơn, buồn bã"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0213",
@@ -5187,7 +5611,9 @@
         "vi": "đồng hành, sát cánh bên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0214",
@@ -5212,7 +5638,9 @@
         "vi": "bí mật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2mk-0215",
@@ -5237,7 +5665,9 @@
         "vi": "cảnh sát"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0216",
@@ -5257,7 +5687,9 @@
         "vi": "lịch sự, chu đáo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0217",
@@ -5287,7 +5719,9 @@
         "vi": "đối lập, mâu thuẫn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0218",
@@ -5312,7 +5746,9 @@
         "vi": "chuyên gia"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0219",
@@ -5342,7 +5778,9 @@
         "vi": "tôn kính, kính trọng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0220",
@@ -5362,7 +5800,9 @@
         "vi": "đưa vào, giới thiệu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0221",
@@ -5388,7 +5828,9 @@
       }
     ],
     "frequency": 47,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0222",
@@ -5419,7 +5861,9 @@
       }
     ],
     "frequency": 88,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0223",
@@ -5439,7 +5883,9 @@
         "vi": "xin việc, tìm việc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0224",
@@ -5459,7 +5905,9 @@
         "vi": "làm hết sức, cố gắng hết sức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0225",
@@ -5479,7 +5927,9 @@
         "vi": "chỗ đứng, nơi thuộc về"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0226",
@@ -5509,7 +5959,9 @@
         "vi": "không với tới, không đạt được"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0227",
@@ -5529,7 +5981,9 @@
         "vi": "căn phòng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0228",
@@ -5554,7 +6008,9 @@
         "vi": "phát triển"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0229",
@@ -5574,7 +6030,9 @@
         "vi": "thuộc về"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0230",
@@ -5595,7 +6053,9 @@
       }
     ],
     "frequency": 89,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0231",
@@ -5620,7 +6080,9 @@
         "vi": "phá hủy, làm sụp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0232",
@@ -5641,7 +6103,9 @@
       }
     ],
     "frequency": 99,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0233",
@@ -5661,7 +6125,9 @@
         "vi": "tình cờ gặp, có duyên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0234",
@@ -5686,7 +6152,9 @@
         "vi": "công nghiệp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0235",
@@ -5706,7 +6174,9 @@
         "vi": "khéo léo, tài tình"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2mk-0236",
@@ -5731,7 +6201,9 @@
         "vi": "phân biệt đối xử"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0237",
@@ -5751,7 +6223,9 @@
         "vi": "kéo vào, lôi cuốn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0238",
@@ -5776,7 +6250,9 @@
         "vi": "công dân, thị dân"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0239",
@@ -5796,7 +6272,9 @@
         "vi": "hy vọng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0240",
@@ -5816,7 +6294,9 @@
         "vi": "giáo viên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0241",
@@ -5842,7 +6322,9 @@
       }
     ],
     "frequency": 6,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0242",
@@ -5872,7 +6354,9 @@
         "vi": "bất bình đẳng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0243",
@@ -5903,7 +6387,9 @@
       }
     ],
     "frequency": 13,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0244",
@@ -5923,7 +6409,9 @@
         "vi": "hạnh phúc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0245",
@@ -5943,7 +6431,9 @@
         "vi": "non nớt, còn nhỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0246",
@@ -5969,7 +6459,9 @@
       }
     ],
     "frequency": 103,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0247",
@@ -5989,7 +6481,9 @@
         "vi": "trật tự"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0248",
@@ -6010,7 +6504,9 @@
       }
     ],
     "frequency": 8,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0249",
@@ -6030,7 +6526,9 @@
         "vi": "chính phủ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0250",
@@ -6060,7 +6558,9 @@
         "vi": "chế độ, thể chế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0251",
@@ -6080,7 +6580,9 @@
         "vi": "gia đình"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0252",
@@ -6105,7 +6607,9 @@
         "vi": "bãi bỏ, loại bỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0253",
@@ -6130,7 +6634,9 @@
         "vi": "bị hoãn lại, bị trì hoãn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0254",
@@ -6150,7 +6656,9 @@
         "vi": "xây dựng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0255",
@@ -6170,7 +6678,9 @@
         "vi": "luật sư"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0256",
@@ -6190,7 +6700,9 @@
         "vi": "hình thức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2mk-0257",
@@ -6220,7 +6732,9 @@
         "vi": "chuyển nhà"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0258",
@@ -6245,7 +6759,9 @@
         "vi": "điểm yếu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0259",
@@ -6275,7 +6791,9 @@
         "vi": "cố gắng, kiên trì"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0260",
@@ -6306,7 +6824,9 @@
       }
     ],
     "frequency": 78,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0261",
@@ -6336,7 +6856,9 @@
         "vi": "tính hợp lý, tính phù hợp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0262",
@@ -6362,7 +6884,9 @@
       }
     ],
     "frequency": 90,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0263",
@@ -6387,7 +6911,9 @@
         "vi": "bóng, bóng tối"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0264",
@@ -6412,7 +6938,9 @@
         "vi": "tận dụng, làm có ích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0265",
@@ -6437,7 +6965,9 @@
         "vi": "hẹn gặp, điểm hẹn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0266",
@@ -6457,7 +6987,9 @@
         "vi": "pháp luật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0267",
@@ -6488,7 +7020,9 @@
       }
     ],
     "frequency": 16,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0268",
@@ -6508,7 +7042,9 @@
         "vi": "nhân viên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0269",
@@ -6538,7 +7074,9 @@
         "vi": "được tin tưởng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0270",
@@ -6563,7 +7101,9 @@
         "vi": "mỉm cười"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0271",
@@ -6583,7 +7123,9 @@
         "vi": "đặc điểm, đặc trưng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0272",
@@ -6614,7 +7156,9 @@
       }
     ],
     "frequency": 44,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0273",
@@ -6639,7 +7183,9 @@
         "vi": "tính tất nhiên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0274",
@@ -6659,7 +7205,9 @@
         "vi": "sức chịu đựng, kiên nhẫn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0275",
@@ -6679,7 +7227,9 @@
         "vi": "ý chí, ý muốn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0276",
@@ -6699,7 +7249,9 @@
         "vi": "quên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0277",
@@ -6719,7 +7271,9 @@
         "vi": "bận rộn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2mk-0278",
@@ -6749,7 +7303,9 @@
         "vi": "khả năng thích nghi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0279",
@@ -6774,7 +7330,9 @@
         "vi": "niềm tin"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0280",
@@ -6799,7 +7357,9 @@
         "vi": "tức giận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0281",
@@ -6819,7 +7379,9 @@
         "vi": "đáng sợ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0282",
@@ -6850,7 +7412,9 @@
       }
     ],
     "frequency": 35,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0283",
@@ -6870,7 +7434,9 @@
         "vi": "lười biếng, xao nhãng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0284",
@@ -6890,7 +7456,9 @@
         "vi": "vội vàng, gấp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0285",
@@ -6920,7 +7488,9 @@
         "vi": "phụ nữ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0286",
@@ -6940,7 +7510,9 @@
         "vi": "đáng ngờ, kỳ lạ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0287",
@@ -6960,7 +7532,9 @@
         "vi": "sợ hãi, lo ngại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0288",
@@ -6985,7 +7559,9 @@
         "vi": "sự xấu hổ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0289",
@@ -7015,7 +7591,9 @@
         "vi": "hối hận, ăn năn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0290",
@@ -7035,7 +7613,9 @@
         "vi": "bệnh nhân"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0291",
@@ -7055,7 +7635,9 @@
         "vi": "nỗi lo lắng, vấn đề"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0292",
@@ -7075,7 +7657,9 @@
         "vi": "trở xấu, xấu đi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0293",
@@ -7095,7 +7679,9 @@
         "vi": "buồn bã"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0294",
@@ -7125,7 +7711,9 @@
         "vi": "đam mê, nhiệt huyết"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0295",
@@ -7150,7 +7738,9 @@
         "vi": "tiếc, xót xa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0296",
@@ -7170,7 +7760,9 @@
         "vi": "lạnh lùng, thờ ơ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0297",
@@ -7200,7 +7792,9 @@
         "vi": "ý định, mục đích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0298",
@@ -7230,7 +7824,9 @@
         "vi": "lạnh lùng, thờ ơ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2mk-0299",
@@ -7260,7 +7856,9 @@
         "vi": "cảm xúc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0300",
@@ -7285,7 +7883,9 @@
         "vi": "trạng thái"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0301",
@@ -7305,7 +7905,9 @@
         "vi": "hoảng loạn, vội vã"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0302",
@@ -7325,7 +7927,9 @@
         "vi": "thận trọng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0303",
@@ -7345,7 +7949,9 @@
         "vi": "tập quán, thói quen"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0304",
@@ -7365,7 +7971,9 @@
         "vi": "sự ngưỡng mộ, ước mơ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0305",
@@ -7385,7 +7993,9 @@
         "vi": "ký ức, trí nhớ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0306",
@@ -7415,7 +8025,9 @@
         "vi": "đạt được, hoàn thành"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0307",
@@ -7440,7 +8052,9 @@
         "vi": "chiến tranh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0308",
@@ -7465,7 +8079,9 @@
         "vi": "trở về điểm xuất phát"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0309",
@@ -7495,7 +8111,9 @@
         "vi": "điểm mạnh, ưu điểm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0310",
@@ -7526,7 +8144,9 @@
       }
     ],
     "frequency": 18,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0311",
@@ -7556,7 +8176,9 @@
         "vi": "họp bàn, phối hợp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0312",
@@ -7576,7 +8198,9 @@
         "vi": "trả, thanh toán"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0313",
@@ -7596,7 +8220,9 @@
         "vi": "xử lý, đối xử"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0314",
@@ -7616,7 +8242,9 @@
         "vi": "phê phán, chỉ trích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0315",
@@ -7636,7 +8264,9 @@
         "vi": "phê duyệt, công nhận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0316",
@@ -7661,7 +8291,9 @@
         "vi": "khoa học kỹ thuật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0317",
@@ -7681,7 +8313,9 @@
         "vi": "kiềm chế, kiểm soát"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0318",
@@ -7711,7 +8345,9 @@
         "vi": "thất bại, bỏ cuộc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0319",
@@ -7731,7 +8367,9 @@
         "vi": "mất hết sức, buông lỏng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2mk-0320",
@@ -7751,7 +8389,9 @@
         "vi": "sự lựa chọn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0321",
@@ -7771,7 +8411,9 @@
         "vi": "ôm ấp, đang đương đầu với"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0322",
@@ -7801,7 +8443,9 @@
         "vi": "cố thực hiện, kiên trì"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0323",
@@ -7821,7 +8465,9 @@
         "vi": "trừu tượng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0324",
@@ -7841,7 +8487,9 @@
         "vi": "phụ trách, đảm nhiệm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0325",
@@ -7861,7 +8509,9 @@
         "vi": "từ chối, bác bỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0326",
@@ -7886,7 +8536,9 @@
         "vi": "bằng chứng, chứng cớ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0327",
@@ -7906,7 +8558,9 @@
         "vi": "mở rộng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0328",
@@ -7926,7 +8580,9 @@
         "vi": "tính bao quát, toàn diện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0329",
@@ -7957,7 +8613,9 @@
       }
     ],
     "frequency": 54,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0330",
@@ -7977,7 +8635,9 @@
         "vi": "nhắm đến, hướng đến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0331",
@@ -8002,7 +8662,9 @@
         "vi": "thách thức, đương đầu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0332",
@@ -8027,7 +8689,9 @@
         "vi": "thất bại, bỏ cuộc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0333",
@@ -8057,7 +8721,9 @@
         "vi": "quay lại, nhìn lại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0334",
@@ -8077,7 +8743,9 @@
         "vi": "vứt bỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0335",
@@ -8097,7 +8765,9 @@
         "vi": "dựa vào, tựa vào"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0336",
@@ -8117,7 +8787,9 @@
         "vi": "tuyển dụng, áp dụng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0337",
@@ -8137,7 +8809,9 @@
         "vi": "tìm kiếm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0338",
@@ -8162,7 +8836,9 @@
         "vi": "gián tiếp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0339",
@@ -8192,7 +8868,9 @@
         "vi": "hợp tác, liên kết"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0340",
@@ -8212,7 +8890,9 @@
         "vi": "chuyển đổi, biến đổi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2mk-0341",
@@ -8237,7 +8917,9 @@
         "vi": "hỗ trợ, viện trợ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0342",
@@ -8257,7 +8939,9 @@
         "vi": "lay động, rung"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0343",
@@ -8277,7 +8961,9 @@
         "vi": "thiệt hại, tổn thất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0344",
@@ -8302,7 +8988,9 @@
         "vi": "phối hợp, liên kết"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0345",
@@ -8322,7 +9010,9 @@
         "vi": "ma sát, mâu thuẫn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0346",
@@ -8342,7 +9032,9 @@
         "vi": "ma sát, mâu thuẫn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0347",
@@ -8372,7 +9064,9 @@
         "vi": "đỡ đần nhau"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0348",
@@ -8402,7 +9096,9 @@
         "vi": "được đổi mới, trở nên trang trọng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0349",
@@ -8422,7 +9118,9 @@
         "vi": "thả ra, bắn ra"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0350",
@@ -8452,7 +9150,9 @@
         "vi": "chính trị gia"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0351",
@@ -8472,7 +9172,9 @@
         "vi": "tai nạn, sự cố"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0352",
@@ -8492,7 +9194,9 @@
         "vi": "thất bại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0353",
@@ -8522,7 +9226,9 @@
         "vi": "giáo viên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0354",
@@ -8542,7 +9248,9 @@
         "vi": "mất tập trung, sao nhãng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0355",
@@ -8567,7 +9275,9 @@
         "vi": "tôn kính, kính trọng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0356",
@@ -8588,7 +9298,9 @@
       }
     ],
     "frequency": 80,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0357",
@@ -8608,7 +9320,9 @@
         "vi": "điều chỉnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0358",
@@ -8633,7 +9347,9 @@
         "vi": "văn minh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0359",
@@ -8658,7 +9374,9 @@
         "vi": "lương"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0360",
@@ -8688,7 +9406,9 @@
         "vi": "khả năng phán đoán"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0361",
@@ -8714,7 +9434,9 @@
       }
     ],
     "frequency": 32,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2mk-0362",
@@ -8745,7 +9467,9 @@
       }
     ],
     "frequency": 9,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0363",
@@ -8770,7 +9494,9 @@
         "vi": "thực thi, thực hiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0364",
@@ -8791,7 +9517,9 @@
       }
     ],
     "frequency": 6,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0365",
@@ -8811,7 +9539,9 @@
         "vi": "đã, rồi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0366",
@@ -8842,7 +9572,9 @@
       }
     ],
     "frequency": 59,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0367",
@@ -8868,7 +9600,9 @@
       }
     ],
     "frequency": 160,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0368",
@@ -8888,7 +9622,9 @@
         "vi": "ngôi sao"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0369",
@@ -8908,7 +9644,9 @@
         "vi": "phim, điện ảnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0370",
@@ -8929,7 +9667,9 @@
       }
     ],
     "frequency": 2,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0371",
@@ -8949,7 +9689,9 @@
         "vi": "mơ hồ, không rõ ràng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0372",
@@ -8970,7 +9712,9 @@
       }
     ],
     "frequency": 155,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0373",
@@ -8996,7 +9740,9 @@
       }
     ],
     "frequency": 8,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0374",
@@ -9016,7 +9762,9 @@
         "vi": "phổ biến, lan rộng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0375",
@@ -9036,7 +9784,9 @@
         "vi": "bối cảnh, nền tảng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0376",
@@ -9057,7 +9807,9 @@
       }
     ],
     "frequency": 176,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0377",
@@ -9077,7 +9829,9 @@
         "vi": "kỳ nghỉ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0378",
@@ -9098,7 +9852,9 @@
       }
     ],
     "frequency": 2,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0379",
@@ -9123,7 +9879,9 @@
         "vi": "cuộc sống, sinh kế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0380",
@@ -9143,7 +9901,9 @@
         "vi": "mơ hồ, không rõ ràng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0381",
@@ -9174,7 +9934,9 @@
       }
     ],
     "frequency": 85,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0382",
@@ -9194,7 +9956,9 @@
         "vi": "chuyển đổi, thay đổi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2mk-0383",
@@ -9224,7 +9988,9 @@
         "vi": "cao nhất, tốt nhất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0384",
@@ -9245,7 +10011,9 @@
       }
     ],
     "frequency": 23,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0385",
@@ -9275,7 +10043,9 @@
         "vi": "có ích, bổ ích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0386",
@@ -9295,7 +10065,9 @@
         "vi": "khắc phục, vượt qua"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0387",
@@ -9325,7 +10097,9 @@
         "vi": "thất vọng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0388",
@@ -9346,7 +10120,9 @@
       }
     ],
     "frequency": 96,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0389",
@@ -9376,7 +10152,9 @@
         "vi": "ngắn hạn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0390",
@@ -9397,7 +10175,9 @@
       }
     ],
     "frequency": 60,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0391",
@@ -9422,7 +10202,9 @@
         "vi": "tương lai"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0392",
@@ -9453,7 +10235,9 @@
       }
     ],
     "frequency": 2,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0393",
@@ -9473,7 +10257,9 @@
         "vi": "bàn, bàn học"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0394",
@@ -9493,7 +10279,9 @@
         "vi": "nguyên liệu, vật liệu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0395",
@@ -9513,7 +10301,9 @@
         "vi": "giữ lời hứa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0396",
@@ -9538,7 +10328,9 @@
         "vi": "điều kiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0397",
@@ -9569,7 +10361,9 @@
       }
     ],
     "frequency": 25,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0398",
@@ -9589,7 +10383,9 @@
         "vi": "phân tích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0399",
@@ -9619,7 +10415,9 @@
         "vi": "có hiệu quả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0400",
@@ -9639,7 +10437,9 @@
         "vi": "linh hoạt, mềm dẻo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0401",
@@ -9659,7 +10459,9 @@
         "vi": "điều tra, khảo sát"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0402",
@@ -9680,7 +10482,9 @@
       }
     ],
     "frequency": 6,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0403",
@@ -9705,7 +10509,9 @@
         "vi": "bám rễ, ăn sâu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2mk-0404",
@@ -9735,7 +10541,9 @@
         "vi": "đỗ, vượt qua kỳ thi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0405",
@@ -9760,7 +10568,9 @@
         "vi": "đề nghị, đề xuất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0406",
@@ -9781,7 +10591,9 @@
       }
     ],
     "frequency": 2,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0407",
@@ -9801,7 +10613,9 @@
         "vi": "xem xét, nghiên cứu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0408",
@@ -9831,7 +10645,9 @@
         "vi": "công nghiệp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0409",
@@ -9851,7 +10667,9 @@
         "vi": "đánh giá chính xác, phán đoán đúng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0410",
@@ -9881,7 +10699,9 @@
         "vi": "nhẹ nhõm, thoải mái"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0411",
@@ -9901,7 +10721,9 @@
         "vi": "tư thế tâm lý, sự chuẩn bị tinh thần"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0412",
@@ -9931,7 +10753,9 @@
         "vi": "tính đa dạng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0413",
@@ -9961,7 +10785,9 @@
         "vi": "đặt mục tiêu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0414",
@@ -9986,7 +10812,9 @@
         "vi": "nhân quyền"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0415",
@@ -10011,7 +10839,9 @@
         "vi": "chức năng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0416",
@@ -10031,7 +10861,9 @@
         "vi": "thiếu, vắng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0417",
@@ -10051,7 +10883,9 @@
         "vi": "lần lượt, liên tiếp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0418",
@@ -10076,7 +10910,9 @@
         "vi": "ham muốn, dục vọng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0419",
@@ -10096,7 +10932,9 @@
         "vi": "bài hát"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0420",
@@ -10127,7 +10965,9 @@
       }
     ],
     "frequency": 150,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0421",
@@ -10153,7 +10993,9 @@
       }
     ],
     "frequency": 71,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0422",
@@ -10183,7 +11025,9 @@
         "vi": "bước ra, tiến thêm một bước"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0423",
@@ -10208,7 +11052,9 @@
         "vi": "kinh nghiệm, lý lịch"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0424",
@@ -10238,7 +11084,9 @@
         "vi": "để lại, còn lại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2mk-0425",
@@ -10258,7 +11106,9 @@
         "vi": "giai đoạn, bước"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0426",
@@ -10288,7 +11138,9 @@
         "vi": "tỷ lệ, tỷ suất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0427",
@@ -10318,7 +11170,9 @@
         "vi": "nhân dân, quốc dân"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0428",
@@ -10349,7 +11203,9 @@
       }
     ],
     "frequency": 28,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0429",
@@ -10375,7 +11231,9 @@
       }
     ],
     "frequency": 130,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0430",
@@ -10405,7 +11263,9 @@
         "vi": "theo đuổi, truy cầu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0431",
@@ -10425,7 +11285,9 @@
         "vi": "bẩn thỉu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0432",
@@ -10445,7 +11307,9 @@
         "vi": "ao"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0433",
@@ -10471,7 +11335,9 @@
       }
     ],
     "frequency": 75,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0434",
@@ -10491,7 +11357,9 @@
         "vi": "xa xỉ, hoang phí"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0435",
@@ -10516,7 +11384,9 @@
         "vi": "chính trị gia"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0436",
@@ -10536,7 +11406,9 @@
         "vi": "tình trạng, hoàn cảnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0437",
@@ -10556,7 +11428,9 @@
         "vi": "ở bên ngoài qua đêm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0438",
@@ -10576,7 +11450,9 @@
         "vi": "pháp luật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0439",
@@ -10597,7 +11473,9 @@
       }
     ],
     "frequency": 146,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0440",
@@ -10617,7 +11495,9 @@
         "vi": "chú ý, cẩn thận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0441",
@@ -10637,7 +11517,9 @@
         "vi": "khả năng nhìn nhận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0442",
@@ -10657,7 +11539,9 @@
         "vi": "sóng thần"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0443",
@@ -10687,7 +11571,9 @@
         "vi": "hoạt động tích cực"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0444",
@@ -10707,7 +11593,9 @@
         "vi": "sặc sỡ, phô trương"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0445",
@@ -10737,7 +11625,9 @@
         "vi": "lờ đi, nghe qua tai"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2mk-0446",
@@ -10758,7 +11648,9 @@
       }
     ],
     "frequency": 210,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0447",
@@ -10779,7 +11671,9 @@
       }
     ],
     "frequency": 65,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0448",
@@ -10809,7 +11703,9 @@
         "vi": "người tiêu dùng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0449",
@@ -10834,7 +11730,9 @@
         "vi": "đồng hành, sát cánh bên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0450",
@@ -10854,7 +11752,9 @@
         "vi": "kinh tế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0451",
@@ -10874,7 +11774,9 @@
         "vi": "đàm phán, thương lượng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0452",
@@ -10899,7 +11801,9 @@
         "vi": "giảm xuống"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0453",
@@ -10924,7 +11828,9 @@
         "vi": "lan rộng, đến khắp nơi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0454",
@@ -10954,7 +11860,9 @@
         "vi": "ôn hòa, dịu dàng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0455",
@@ -10979,7 +11887,9 @@
         "vi": "sự thỏa mãn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0456",
@@ -10999,7 +11909,9 @@
         "vi": "tài nguyên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0457",
@@ -11029,7 +11941,9 @@
         "vi": "mức, tiêu chuẩn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0458",
@@ -11049,7 +11963,9 @@
         "vi": "tràn đầy, dư thừa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0459",
@@ -11069,7 +11985,9 @@
         "vi": "mãnh liệt, dữ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0460",
@@ -11094,7 +12012,9 @@
         "vi": "nói mơ hồ, nói vòng vo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0461",
@@ -11115,7 +12035,9 @@
       }
     ],
     "frequency": 9,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0462",
@@ -11146,7 +12068,9 @@
       }
     ],
     "frequency": 115,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0463",
@@ -11176,7 +12100,9 @@
         "vi": "lạnh lùng, thờ ơ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0464",
@@ -11201,7 +12127,9 @@
         "vi": "tiêu điểm, trọng tâm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0465",
@@ -11231,7 +12159,9 @@
         "vi": "tính tất nhiên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0466",
@@ -11256,7 +12186,9 @@
         "vi": "nhiệt tình, đam mê"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2mk-0467",
@@ -11276,7 +12208,9 @@
         "vi": "bùng cháy"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0468",
@@ -11306,7 +12240,9 @@
         "vi": "đồ giả, hàng giả"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0469",
@@ -11331,7 +12267,9 @@
         "vi": "đặc biệt"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0470",
@@ -11361,7 +12299,9 @@
         "vi": "trạng thái"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0471",
@@ -11391,7 +12331,9 @@
         "vi": "tính sáng tạo độc đáo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0472",
@@ -11412,7 +12354,9 @@
       }
     ],
     "frequency": 200,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0473",
@@ -11432,7 +12376,9 @@
         "vi": "cống hiến, đóng góp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0474",
@@ -11462,7 +12408,9 @@
         "vi": "nâng cao hiệu suất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0475",
@@ -11482,7 +12430,9 @@
         "vi": "hiếm, lạ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0476",
@@ -11512,7 +12462,9 @@
         "vi": "thực tế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0477",
@@ -11532,7 +12484,9 @@
         "vi": "trái đất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0478",
@@ -11562,7 +12516,9 @@
         "vi": "logic, luận lý"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0479",
@@ -11582,7 +12538,9 @@
         "vi": "môi trường"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0480",
@@ -11613,7 +12571,9 @@
       }
     ],
     "frequency": 16,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0481",
@@ -11643,7 +12603,9 @@
         "vi": "bất động sản"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0482",
@@ -11673,7 +12635,9 @@
         "vi": "ứng dụng, áp dụng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0483",
@@ -11703,7 +12667,9 @@
         "vi": "tự do"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0484",
@@ -11728,7 +12694,9 @@
         "vi": "đơn xin, yêu cầu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0485",
@@ -11749,7 +12717,9 @@
       }
     ],
     "frequency": 80,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0486",
@@ -11774,7 +12744,9 @@
         "vi": "phim, điện ảnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0487",
@@ -11799,7 +12771,9 @@
         "vi": "thế giới quan"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2mk-0488",
@@ -11819,7 +12793,9 @@
         "vi": "số một, nhất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0489",
@@ -11839,7 +12815,9 @@
         "vi": "khác nhau"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0490",
@@ -11859,7 +12837,9 @@
         "vi": "câu hỏi, điều thắc mắc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0491",
@@ -11879,7 +12859,9 @@
         "vi": "mệt mỏi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0492",
@@ -11900,7 +12882,9 @@
       }
     ],
     "frequency": 115,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0493",
@@ -11920,7 +12904,9 @@
         "vi": "y tế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0494",
@@ -11950,7 +12936,9 @@
         "vi": "phát triển"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0495",
@@ -11976,7 +12964,9 @@
       }
     ],
     "frequency": 95,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0496",
@@ -12006,7 +12996,9 @@
         "vi": "sáng tạo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0497",
@@ -12026,7 +13018,9 @@
         "vi": "có ích, bổ ích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0498",
@@ -12046,7 +13040,9 @@
         "vi": "sôi nổi, lên cao"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0499",
@@ -12066,7 +13062,9 @@
         "vi": "giám sát, theo dõi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0500",
@@ -12097,7 +13095,9 @@
       }
     ],
     "frequency": 37,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0501",
@@ -12128,7 +13128,9 @@
       }
     ],
     "frequency": 77,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0502",
@@ -12158,7 +13160,9 @@
         "vi": "hiểu nhau, tương hiểu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0503",
@@ -12183,7 +13187,9 @@
         "vi": "về thăm quê"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0504",
@@ -12208,7 +13214,9 @@
         "vi": "ảnh, hình ảnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0505",
@@ -12228,7 +13236,9 @@
         "vi": "điểm chú ý, điểm nhìn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0506",
@@ -12253,7 +13263,9 @@
         "vi": "đến nơi, đến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0507",
@@ -12273,7 +13285,9 @@
         "vi": "khoảnh khắc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0508",
@@ -12304,7 +13318,9 @@
       }
     ],
     "frequency": 43,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2mk-0509",
@@ -12330,7 +13346,9 @@
       }
     ],
     "frequency": 170,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0510",
@@ -12351,7 +13369,9 @@
       }
     ],
     "frequency": 96,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0511",
@@ -12376,7 +13396,9 @@
         "vi": "nhà nghiên cứu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0512",
@@ -12406,7 +13428,9 @@
         "vi": "chắc chắn, đúng là"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0513",
@@ -12426,7 +13450,9 @@
         "vi": "chỉ ra, thể hiện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0514",
@@ -12452,7 +13478,9 @@
       }
     ],
     "frequency": 35,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0515",
@@ -12472,7 +13500,9 @@
         "vi": "phúc lợi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0516",
@@ -12492,7 +13522,9 @@
         "vi": "cấm đoán, cấm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0517",
@@ -12517,7 +13549,9 @@
         "vi": "phúc lợi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0518",
@@ -12542,7 +13576,9 @@
         "vi": "nhà khoa học"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0519",
@@ -12562,7 +13598,9 @@
         "vi": "bí mật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0520",
@@ -12582,7 +13620,9 @@
         "vi": "trật tự"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0521",
@@ -12602,7 +13642,9 @@
         "vi": "ca ngợi, khen ngợi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0522",
@@ -12622,7 +13664,9 @@
         "vi": "di dân, người nhập cư"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0523",
@@ -12647,7 +13691,9 @@
         "vi": "quá trình, giai đoạn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0524",
@@ -12667,7 +13713,9 @@
         "vi": "thuế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0525",
@@ -12697,7 +13745,9 @@
         "vi": "tích lũy, để dành"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0526",
@@ -12717,7 +13767,9 @@
         "vi": "lỗ, hố"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0527",
@@ -12742,7 +13794,9 @@
         "vi": "nhà nghiên cứu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0528",
@@ -12773,7 +13827,9 @@
       }
     ],
     "frequency": 51,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0529",
@@ -12793,7 +13849,9 @@
         "vi": "xung đột, va chạm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2mk-0530",
@@ -12813,7 +13871,9 @@
         "vi": "cửa sổ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0531",
@@ -12843,7 +13903,9 @@
         "vi": "tận dụng, làm có ích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0532",
@@ -12873,7 +13935,9 @@
         "vi": "cạnh tranh nhau"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0533",
@@ -12898,7 +13962,9 @@
         "vi": "mỉm cười"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0534",
@@ -12923,7 +13989,9 @@
         "vi": "bình đẳng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0535",
@@ -12943,7 +14011,9 @@
         "vi": "trả lời, đáp lại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0536",
@@ -12973,7 +14043,9 @@
         "vi": "biện pháp giải quyết"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0537",
@@ -12993,7 +14065,9 @@
         "vi": "quản lý, điều hành"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0538",
@@ -13013,7 +14087,9 @@
         "vi": "mùa, mùa vụ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0539",
@@ -13033,7 +14109,9 @@
         "vi": "phạm vi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0540",
@@ -13058,7 +14136,9 @@
         "vi": "đơn giản hóa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0541",
@@ -13078,7 +14158,9 @@
         "vi": "thô, thưa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0542",
@@ -13108,7 +14190,9 @@
         "vi": "giữ lời hứa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0543",
@@ -13128,7 +14212,9 @@
         "vi": "chấp nhận, thuyết phục được"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0544",
@@ -13148,7 +14234,9 @@
         "vi": "xung đột, tranh chấp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0545",
@@ -13178,7 +14266,9 @@
         "vi": "giản dị, đơn giản"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0546",
@@ -13198,7 +14288,9 @@
         "vi": "chi tiết, nhỏ nhặt"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0547",
@@ -13223,7 +14315,9 @@
         "vi": "tổ chức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0548",
@@ -13248,7 +14342,9 @@
         "vi": "xây dựng mối quan hệ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0549",
@@ -13278,7 +14374,9 @@
         "vi": "trôi qua (thời gian)"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0550",
@@ -13303,7 +14401,9 @@
         "vi": "xây dựng mối quan hệ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2mk-0551",
@@ -13323,7 +14423,9 @@
         "vi": "liên lạc, thông báo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0552",
@@ -13343,7 +14445,9 @@
         "vi": "lương"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0553",
@@ -13368,7 +14472,9 @@
         "vi": "thống nhất, hợp nhất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0554",
@@ -13388,7 +14494,9 @@
         "vi": "tranh, hình vẽ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0555",
@@ -13408,7 +14516,9 @@
         "vi": "kế thừa, tiếp nối"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0556",
@@ -13438,7 +14548,9 @@
         "vi": "tính bền vững"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0557",
@@ -13463,7 +14575,9 @@
         "vi": "duy trì, giữ gìn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0558",
@@ -13483,7 +14597,9 @@
         "vi": "căng thẳng, lo lắng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0559",
@@ -13508,7 +14624,9 @@
         "vi": "nới lỏng, thả ra"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0560",
@@ -13528,7 +14646,9 @@
         "vi": "sự luyến tiếc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0561",
@@ -13558,7 +14678,9 @@
         "vi": "cắt đứt mối quan hệ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0562",
@@ -13578,7 +14700,9 @@
         "vi": "thu nhỏ, giảm bớt"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0563",
@@ -13598,7 +14722,9 @@
         "vi": "thành tích, kết quả kinh doanh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0564",
@@ -13618,7 +14744,9 @@
         "vi": "tổ chức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0565",
@@ -13638,7 +14766,9 @@
         "vi": "lặp đi lặp lại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0566",
@@ -13659,7 +14789,9 @@
       }
     ],
     "frequency": 130,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0567",
@@ -13679,7 +14811,9 @@
         "vi": "ghen tị, thèm muốn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0568",
@@ -13704,7 +14838,9 @@
         "vi": "định nghĩa"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0569",
@@ -13724,7 +14860,9 @@
         "vi": "tập quán, thói quen"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0570",
@@ -13744,7 +14882,9 @@
         "vi": "dịch thuật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0571",
@@ -13774,7 +14914,9 @@
         "vi": "cách suy nghĩ, quan điểm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2mk-0572",
@@ -13804,7 +14946,9 @@
         "vi": "bác sĩ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0573",
@@ -13824,7 +14968,9 @@
         "vi": "sức chịu đựng, kiên nhẫn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0574",
@@ -13850,7 +14996,9 @@
       }
     ],
     "frequency": 130,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0575",
@@ -13881,7 +15029,9 @@
       }
     ],
     "frequency": 72,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0576",
@@ -13911,7 +15061,9 @@
         "vi": "nghỉ việc, từ chức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0577",
@@ -13931,7 +15083,9 @@
         "vi": "khẳng định, thừa nhận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0578",
@@ -13961,7 +15115,9 @@
         "vi": "nuôi dạy con nhỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0579",
@@ -13981,7 +15137,9 @@
         "vi": "bối cảnh, nền tảng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0580",
@@ -14006,7 +15164,9 @@
         "vi": "cảm động, xúc động"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0581",
@@ -14036,7 +15196,9 @@
         "vi": "năng lực"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0582",
@@ -14056,7 +15218,9 @@
         "vi": "cánh tay, kỹ năng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0583",
@@ -14076,7 +15240,9 @@
         "vi": "nổi giận, bực mình"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0584",
@@ -14107,7 +15273,9 @@
       }
     ],
     "frequency": 26,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0585",
@@ -14127,7 +15295,9 @@
         "vi": "đến, dẫn đến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0586",
@@ -14147,7 +15317,9 @@
         "vi": "sự kích thích, phấn khích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0587",
@@ -14172,7 +15344,9 @@
         "vi": "nói chung, phổ biến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0588",
@@ -14192,7 +15366,9 @@
         "vi": "tốt lành, thuận lợi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0589",
@@ -14213,7 +15389,9 @@
       }
     ],
     "frequency": 79,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0590",
@@ -14233,7 +15411,9 @@
         "vi": "nghệ sĩ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0591",
@@ -14258,7 +15438,9 @@
         "vi": "trẻ, còn trẻ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0592",
@@ -14288,7 +15470,9 @@
         "vi": "yếu, không giỏi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2mk-0593",
@@ -14309,7 +15493,9 @@
       }
     ],
     "frequency": 130,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0594",
@@ -14329,7 +15515,9 @@
         "vi": "thô lỗ, dữ dội"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0595",
@@ -14349,7 +15537,9 @@
         "vi": "hành lý, đồ đạc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0596",
@@ -14374,7 +15564,9 @@
         "vi": "chán nản, sa xuống"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0597",
@@ -14394,7 +15586,9 @@
         "vi": "ngôn từ, lời nói"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0598",
@@ -14414,7 +15608,9 @@
         "vi": "mỏng, nhạt"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0599",
@@ -14434,7 +15630,9 @@
         "vi": "khiêm tốn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0600",
@@ -14464,7 +15662,9 @@
         "vi": "hợp nhất, kết hợp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0601",
@@ -14495,7 +15695,9 @@
       }
     ],
     "frequency": 20,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0602",
@@ -14525,7 +15727,9 @@
         "vi": "nghệ sĩ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0603",
@@ -14545,7 +15749,9 @@
         "vi": "xung đột, va chạm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0604",
@@ -14570,7 +15776,9 @@
         "vi": "diễn đạt"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0605",
@@ -14590,7 +15798,9 @@
         "vi": "phân liệt, chia rẽ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0606",
@@ -14610,7 +15820,9 @@
         "vi": "여유, dư dả, th余裕"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0607",
@@ -14630,7 +15842,9 @@
         "vi": "bổ sung, bù đắp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0608",
@@ -14650,7 +15864,9 @@
         "vi": "phức tạp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0609",
@@ -14680,7 +15896,9 @@
         "vi": "yếu tố"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0610",
@@ -14711,7 +15929,9 @@
       }
     ],
     "frequency": 21,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0611",
@@ -14736,7 +15956,9 @@
         "vi": "quy định, kiểm soát"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0612",
@@ -14761,7 +15983,9 @@
         "vi": "giám sát, theo dõi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0613",
@@ -14791,7 +16015,9 @@
         "vi": "tỉnh dậy, nhận ra"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2mk-0614",
@@ -14822,7 +16048,9 @@
       }
     ],
     "frequency": 69,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0615",
@@ -14852,7 +16080,9 @@
         "vi": "thế giới quan"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0616",
@@ -14882,7 +16112,9 @@
         "vi": "quan điểm, ý kiến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0617",
@@ -14907,7 +16139,9 @@
         "vi": "chạm vào, tiếp xúc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0618",
@@ -14938,7 +16172,9 @@
       }
     ],
     "frequency": 19,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0619",
@@ -14959,7 +16195,9 @@
       }
     ],
     "frequency": 109,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0620",
@@ -14979,7 +16217,9 @@
         "vi": "xem xét, nghiên cứu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0621",
@@ -15009,7 +16249,9 @@
         "vi": "ký ức, trí nhớ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0622",
@@ -15029,7 +16271,9 @@
         "vi": "thăm, đến thăm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0623",
@@ -15054,7 +16298,9 @@
         "vi": "cơ sở, trang thiết bị"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0624",
@@ -15084,7 +16330,9 @@
         "vi": "cho phép, cấp phép"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0625",
@@ -15109,7 +16357,9 @@
         "vi": "dịch thuật"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0626",
@@ -15129,7 +16379,9 @@
         "vi": "kêu cầu, kiện, kêu oan"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0627",
@@ -15154,7 +16406,9 @@
         "vi": "xác thực, chứng nhận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0628",
@@ -15179,7 +16433,9 @@
         "vi": "danh tiếng, đánh giá"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0629",
@@ -15204,7 +16460,9 @@
         "vi": "thử, nỗ lực"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0630",
@@ -15234,7 +16492,9 @@
         "vi": "bế tắc, không tiến được"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0631",
@@ -15265,7 +16525,9 @@
       }
     ],
     "frequency": 63,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0632",
@@ -15295,7 +16557,9 @@
         "vi": "nhận thức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0633",
@@ -15315,7 +16579,9 @@
         "vi": "thề, thề nguyện"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0634",
@@ -15335,7 +16601,9 @@
         "vi": "rủ, mời"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2mk-0635",
@@ -15355,7 +16623,9 @@
         "vi": "thành thật, trung thực"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0636",
@@ -15380,7 +16650,9 @@
         "vi": "sức thuyết phục"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0637",
@@ -15406,7 +16678,9 @@
       }
     ],
     "frequency": 94,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0638",
@@ -15426,7 +16700,9 @@
         "vi": "bài tập, nhiệm vụ, vấn đề"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0639",
@@ -15456,7 +16732,9 @@
         "vi": "nhấn mạnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0640",
@@ -15476,7 +16754,9 @@
         "vi": "tư vấn, bàn bạc"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0641",
@@ -15501,7 +16781,9 @@
         "vi": "yêu cầu, đòi hỏi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0642",
@@ -15531,7 +16813,9 @@
         "vi": "luận điểm, vấn đề tranh luận"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0643",
@@ -15556,7 +16840,9 @@
         "vi": "không từ bỏ, kiên quyết"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0644",
@@ -15576,7 +16862,9 @@
         "vi": "khiêm tốn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0645",
@@ -15596,7 +16884,9 @@
         "vi": "lòng biết ơn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0646",
@@ -15626,7 +16916,9 @@
         "vi": "nhận thức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0647",
@@ -15646,7 +16938,9 @@
         "vi": "cảnh sát"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0648",
@@ -15676,7 +16970,9 @@
         "vi": "thương lượng, hội đàm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0649",
@@ -15701,7 +16997,9 @@
         "vi": "luật sư"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0650",
@@ -15731,7 +17029,9 @@
         "vi": "trừu tượng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0651",
@@ -15751,7 +17051,9 @@
         "vi": "không thể kiểm soát, quá tay"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0652",
@@ -15771,7 +17073,9 @@
         "vi": "cống hiến, đóng góp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0653",
@@ -15791,7 +17095,9 @@
         "vi": "nghèo đói"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0654",
@@ -15816,7 +17122,9 @@
         "vi": "chịu trách nhiệm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0655",
@@ -15836,7 +17144,9 @@
         "vi": "cho mượn, cho thuê"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2mk-0656",
@@ -15866,7 +17176,9 @@
         "vi": "người tiêu dùng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0657",
@@ -15886,7 +17198,9 @@
         "vi": "thương mại, buôn bán"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0658",
@@ -15906,7 +17220,9 @@
         "vi": "tiền thuê nhà"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0659",
@@ -15931,7 +17247,9 @@
         "vi": "tư cách, bằng cấp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0660",
@@ -15951,7 +17269,9 @@
         "vi": "náo nhiệt, sôi động"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0661",
@@ -15971,7 +17291,9 @@
         "vi": "ca ngợi, khen ngợi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0662",
@@ -16001,7 +17323,9 @@
         "vi": "tố chất, tài năng bẩm sinh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0663",
@@ -16021,7 +17345,9 @@
         "vi": "xa xỉ, hoang phí"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0664",
@@ -16042,7 +17368,9 @@
       }
     ],
     "frequency": 155,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0665",
@@ -16072,7 +17400,9 @@
         "vi": "đứng dậy"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0666",
@@ -16102,7 +17432,9 @@
         "vi": "vượt qua, bắt kịp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0667",
@@ -16122,7 +17454,9 @@
         "vi": "sở thích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0668",
@@ -16148,7 +17482,9 @@
       }
     ],
     "frequency": 86,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0669",
@@ -16168,7 +17504,9 @@
         "vi": "dấu vết, tàn tích"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0670",
@@ -16198,7 +17536,9 @@
         "vi": "bước ra, tiến thêm một bước"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0671",
@@ -16218,7 +17558,9 @@
         "vi": "do dự, ngần ngại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0672",
@@ -16238,7 +17580,9 @@
         "vi": "do dự, ngần ngại"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0673",
@@ -16258,7 +17602,9 @@
         "vi": "hoạt động tích cực"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0674",
@@ -16279,7 +17625,9 @@
       }
     ],
     "frequency": 60,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0675",
@@ -16299,7 +17647,9 @@
         "vi": "linh hoạt, mềm dẻo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0676",
@@ -16324,7 +17674,9 @@
         "vi": "chuyển công tác"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2mk-0677",
@@ -16345,7 +17697,9 @@
       }
     ],
     "frequency": 145,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0678",
@@ -16365,7 +17719,9 @@
         "vi": "so sánh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0679",
@@ -16390,7 +17746,9 @@
         "vi": "đàn em, hậu bối"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0680",
@@ -16415,7 +17773,9 @@
         "vi": "nhập khẩu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0681",
@@ -16435,7 +17795,9 @@
         "vi": "nông nghiệp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0682",
@@ -16465,7 +17827,9 @@
         "vi": "chán nản, sa xuống"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0683",
@@ -16485,7 +17849,9 @@
         "vi": "đón tiếp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0684",
@@ -16510,7 +17876,9 @@
         "vi": "nhìn lại, hồi tưởng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0685",
@@ -16535,7 +17903,9 @@
         "vi": "lạc đường, không biết đường đi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0686",
@@ -16565,7 +17935,9 @@
         "vi": "đuổi kịp, theo kịp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0687",
@@ -16585,7 +17957,9 @@
         "vi": "nghỉ việc, từ chức"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0688",
@@ -16605,7 +17979,9 @@
         "vi": "gửi, đưa tiễn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0689",
@@ -16630,7 +18006,9 @@
         "vi": "thoát khỏi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0690",
@@ -16650,7 +18028,9 @@
         "vi": "tính minh bạch"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0691",
@@ -16681,7 +18061,9 @@
       }
     ],
     "frequency": 48,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0692",
@@ -16706,7 +18088,9 @@
         "vi": "tính sáng tạo"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0693",
@@ -16731,7 +18115,9 @@
         "vi": "phối hợp, liên kết"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0694",
@@ -16761,7 +18147,9 @@
         "vi": "thúc đẩy, xúc tiến"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0695",
@@ -16781,7 +18169,9 @@
         "vi": "đánh lạc, chuyển hướng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0696",
@@ -16806,7 +18196,9 @@
         "vi": "điều hành, vận hành"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0697",
@@ -16836,7 +18228,9 @@
         "vi": "quá trình, giai đoạn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2mk-0698",
@@ -16867,7 +18261,9 @@
       }
     ],
     "frequency": 39,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0699",
@@ -16897,7 +18293,9 @@
         "vi": "phát triển"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0700",
@@ -16917,7 +18315,9 @@
         "vi": "cảm giác không phù hợp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0701",
@@ -16947,7 +18347,9 @@
         "vi": "áp dụng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0702",
@@ -16978,7 +18380,9 @@
       }
     ],
     "frequency": 105,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0703",
@@ -16998,7 +18402,9 @@
         "vi": "tránh, né tránh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0704",
@@ -17028,7 +18434,9 @@
         "vi": "cấp dưới, nhân viên dưới quyền"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0705",
@@ -17053,7 +18461,9 @@
         "vi": "sự thuận tiện, tình huống"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0706",
@@ -17073,7 +18483,9 @@
         "vi": "lo lắng"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0707",
@@ -17093,7 +18505,9 @@
         "vi": "giải thích, diễn giải"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0708",
@@ -17124,7 +18538,9 @@
       }
     ],
     "frequency": 57,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0709",
@@ -17149,7 +18565,9 @@
         "vi": "lĩnh vực không giỏi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0710",
@@ -17170,7 +18588,9 @@
       }
     ],
     "frequency": 139,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0711",
@@ -17201,7 +18621,9 @@
       }
     ],
     "frequency": 20,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0712",
@@ -17221,7 +18643,9 @@
         "vi": "phương hướng, chính sách"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0713",
@@ -17241,7 +18665,9 @@
         "vi": "chậm chạp, cùn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0714",
@@ -17261,7 +18687,9 @@
         "vi": "nhọn, sắc bén"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0715",
@@ -17281,7 +18709,9 @@
         "vi": "bị gỉ sét"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0716",
@@ -17312,7 +18742,9 @@
       }
     ],
     "frequency": 40,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0717",
@@ -17337,7 +18769,9 @@
         "vi": "chuyên gia"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0718",
@@ -17368,7 +18802,9 @@
       }
     ],
     "frequency": 58,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2mk-0719",
@@ -17398,7 +18834,9 @@
         "vi": "thời gian"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0720",
@@ -17428,7 +18866,9 @@
         "vi": "liên quan, dính líu"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0721",
@@ -17453,7 +18893,9 @@
         "vi": "giới hạn, hạn chế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0722",
@@ -17474,7 +18916,9 @@
       }
     ],
     "frequency": 5,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0723",
@@ -17494,7 +18938,9 @@
         "vi": "loại bỏ, gỡ bỏ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0724",
@@ -17519,7 +18965,9 @@
         "vi": "bảo hiểm"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0725",
@@ -17539,7 +18987,9 @@
         "vi": "mặt trời"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0726",
@@ -17559,7 +19009,9 @@
         "vi": "giai đoạn, bước"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0727",
@@ -17579,7 +19031,9 @@
         "vi": "quốc tế"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0728",
@@ -17604,7 +19058,9 @@
         "vi": "khả năng tập trung"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0729",
@@ -17624,7 +19080,9 @@
         "vi": "phức tạp"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0730",
@@ -17649,7 +19107,9 @@
         "vi": "không thể rời mắt, cuốn hút"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0731",
@@ -17675,7 +19135,9 @@
       }
     ],
     "frequency": 108,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0732",
@@ -17696,7 +19158,9 @@
       }
     ],
     "frequency": 104,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0733",
@@ -17717,7 +19181,9 @@
       }
     ],
     "frequency": 148,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0734",
@@ -17737,7 +19203,9 @@
         "vi": "tràn ra, đổ ra"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0735",
@@ -17758,7 +19226,9 @@
       }
     ],
     "frequency": 68,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0736",
@@ -17778,7 +19248,9 @@
         "vi": "động đất"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0737",
@@ -17798,7 +19270,9 @@
         "vi": "yên tĩnh"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0738",
@@ -17824,7 +19298,9 @@
       }
     ],
     "frequency": 136,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0739",
@@ -17849,7 +19325,9 @@
         "vi": "tính cách tân, đổi mới"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2mk-0740",
@@ -17875,7 +19353,9 @@
       }
     ],
     "frequency": 112,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0741",
@@ -17895,7 +19375,9 @@
         "vi": "ảnh hưởng, tác động"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0742",
@@ -17920,7 +19402,9 @@
         "vi": "thuận lợi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0743",
@@ -17945,7 +19429,9 @@
         "vi": "sự cố gắng, nỗ lực"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0744",
@@ -17966,7 +19452,9 @@
       }
     ],
     "frequency": 91,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0745",
@@ -17996,7 +19484,9 @@
         "vi": "nhờ cậy, ủy thác"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0746",
@@ -18026,7 +19516,9 @@
         "vi": "chủ đề, đề tài"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0747",
@@ -18047,7 +19539,9 @@
       }
     ],
     "frequency": 119,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0748",
@@ -18073,7 +19567,9 @@
       }
     ],
     "frequency": 81,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0749",
@@ -18103,7 +19599,9 @@
         "vi": "nhảy ra, bay ra"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0750",
@@ -18124,7 +19622,9 @@
       }
     ],
     "frequency": 98,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0751",
@@ -18144,7 +19644,9 @@
         "vi": "đói, khát khao"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0752",
@@ -18164,7 +19666,9 @@
         "vi": "chán, ngán"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0753",
@@ -18184,7 +19688,9 @@
         "vi": "vô ích, lãng phí"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0754",
@@ -18205,7 +19711,9 @@
       }
     ],
     "frequency": 200,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0755",
@@ -18225,7 +19733,9 @@
         "vi": "ồn ào, náo loạn"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0756",
@@ -18255,7 +19765,9 @@
         "vi": "dự thi, thi"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0757",
@@ -18275,7 +19787,9 @@
         "vi": "ngạc nhiên"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0758",
@@ -18301,7 +19815,9 @@
       }
     ],
     "frequency": 29,
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0759",
@@ -18321,7 +19837,9 @@
         "vi": "hấp dẫn, quyến rũ"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2mk-0760",
@@ -18341,6 +19859,8 @@
         "vi": "già hóa dân số"
       }
     ],
-    "book": "mimikara"
+    "book": "mimikara",
+    "lesson": 36,
+    "week": 6
   }
 ]

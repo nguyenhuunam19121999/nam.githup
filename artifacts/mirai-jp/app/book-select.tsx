@@ -79,20 +79,16 @@ export default function BookSelectScreen() {
   // Lọc danh sách sách theo cấp độ đang chọn
   const books = BOOKS.filter((b) => b.level === level);
 
-  // Khi bấm 1 cuốn sách → mở trang menu học, kèm tên sách trong tiêu đề
-  // Riêng Soumatome N2 có màn hình riêng chia theo tuần/bài
+  // Khi bấm 1 cuốn sách → mở màn hình học theo tuần/bài
+  // Soumatome N2 → màn hình riêng; các sách khác → level-book chung
   const handleSelect = (book: Book) => {
     if (book.id === "soumatome-n2") {
       router.push({ pathname: "/soumatome-n2" });
       return;
     }
     router.push({
-      pathname: "/learning-menu",
-      params: {
-        level: book.level,
-        bookId: book.id,
-        title: book.label,
-      },
+      pathname: "/level-book",
+      params: { bookId: book.id },
     });
   };
 

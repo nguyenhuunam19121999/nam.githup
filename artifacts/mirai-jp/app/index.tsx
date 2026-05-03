@@ -188,6 +188,14 @@ export default function HomeScreen() {
     });
   };
 
+  // Mở màn hình học theo tuần/bài (N5, N4, N1 không qua book-select)
+  const goLevelBook = (bookId: string) => {
+    router.push({
+      pathname: "/level-book",
+      params: { bookId },
+    });
+  };
+
   const onBannerScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     const x = e.nativeEvent.contentOffset.x;
     setBannerIdx(Math.round(x / BANNER_WIDTH));
@@ -369,10 +377,7 @@ export default function HomeScreen() {
                           if (it.jp === "N3" || it.jp === "N2") {
                             goBookSelect(it.jp);
                           } else {
-                            goLearningMenu({
-                              level: it.jp,
-                              title: `Khoá học ${it.jp}`,
-                            });
+                            goLevelBook(it.jp.toLowerCase());
                           }
                         }}
                         activeOpacity={0.7}
