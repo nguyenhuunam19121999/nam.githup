@@ -1,10 +1,9 @@
 import n1 from "./n1.json";
-import n2 from "./n2.json";
-import n3 from "./n3.json";
+import n2Soumatome from "./n2_soumatome.json";
+import n3Mimikara from "./n3_mimikara.json";
+import n3Soumatome from "./n3_soumatome.json";
 import n4 from "./n4.json";
 import n5 from "./n5.json";
-import n3Somatome from "./n3_somatome.json";
-import n3Mimikara from "./n3_mimikara.json";
 
 export interface GrammarItem {
   id: string;
@@ -18,35 +17,48 @@ export interface GrammarItem {
   examples?: { jp: string; vi: string }[];
 }
 
-export const GRAMMAR_BY_LEVEL: Record<string, GrammarItem[]> = {
-  N5: n5 as GrammarItem[],
-  N4: n4 as GrammarItem[],
-  N3: n3 as GrammarItem[],
-  N2: n2 as GrammarItem[],
-  N1: n1 as GrammarItem[],
+const JLPT_GRAMMAR: Record<string, GrammarItem[]> = {
+  "n5": n5 as GrammarItem[],
+  "n4": n4 as GrammarItem[],
+  "mimikara-n3": n3Mimikara as GrammarItem[],
+  "soumatome-n3": n3Soumatome as GrammarItem[],
+  "soumatome-n2": n2Soumatome as GrammarItem[],
+  "n1": n1 as GrammarItem[],
 };
 
 export const GRAMMAR_BY_BOOK: Record<string, GrammarItem[]> = {
-  "n3-somatome": n3Somatome as GrammarItem[],
-  "n3-mimikara": n3Mimikara as GrammarItem[],
+  ...JLPT_GRAMMAR,
+};
+
+export const GRAMMAR_BY_LEVEL: Record<string, GrammarItem[]> = {
+  N5: n5 as GrammarItem[],
+  N4: n4 as GrammarItem[],
+  N3: [
+    ...(n3Soumatome as GrammarItem[]),
+    ...(n3Mimikara as GrammarItem[]),
+  ],
+  N2: n2Soumatome as GrammarItem[],
+  N1: n1 as GrammarItem[],
 };
 
 export const ALL_GRAMMAR: GrammarItem[] = [
   ...(n5 as GrammarItem[]),
   ...(n4 as GrammarItem[]),
-  ...(n3 as GrammarItem[]),
-  ...(n2 as GrammarItem[]),
+  ...(n3Soumatome as GrammarItem[]),
+  ...(n3Mimikara as GrammarItem[]),
+  ...(n2Soumatome as GrammarItem[]),
   ...(n1 as GrammarItem[]),
 ];
 
-export function getGrammar(level?: string): GrammarItem[] {
+export function getGrammar(level?: string, bookId?: string): GrammarItem[] {
+  if (bookId && GRAMMAR_BY_BOOK[bookId]) return GRAMMAR_BY_BOOK[bookId];
   const lvl = (level ?? "").toUpperCase();
   if (GRAMMAR_BY_LEVEL[lvl]) return GRAMMAR_BY_LEVEL[lvl];
   return ALL_GRAMMAR;
 }
 
-export function getGrammarByBook(bookKey: string): GrammarItem[] {
-  return GRAMMAR_BY_BOOK[bookKey] ?? [];
+export function getGrammarByBook(bookId: string): GrammarItem[] {
+  return GRAMMAR_BY_BOOK[bookId] ?? [];
 }
 
 export function getGrammarById(id: string): GrammarItem | undefined {

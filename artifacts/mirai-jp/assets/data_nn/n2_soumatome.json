@@ -16,7 +16,8 @@
         "jp": "会議の時間が変わった。そこで、連絡した。",
         "vi": "Giờ họp thay đổi. Do đó tôi đã liên lạc."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-2",
@@ -35,7 +36,8 @@
         "jp": "留学するにあたって、ビザが必要だ。",
         "vi": "Khi du học, cần có visa."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-3",
@@ -54,7 +56,8 @@
         "jp": "事業を始めるにあたり、準備を整えた。",
         "vi": "Trước khi bắt đầu kinh doanh, tôi đã chuẩn bị đầy đủ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-4",
@@ -73,7 +76,8 @@
         "jp": "今後の対応いかんでは、契約を打ち切ることもある。",
         "vi": "Tùy cách xử lý tiếp theo mà có thể chấm dứt hợp đồng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-5",
@@ -92,7 +96,8 @@
         "jp": "天気いかんにかかわらず、決行する。",
         "vi": "Bất kể thời tiết ra sao cũng vẫn thực hiện."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-6",
@@ -111,7 +116,8 @@
         "jp": "努力をもって、困難を乗り越えた。",
         "vi": "Bằng sự cố gắng, họ đã vượt qua khó khăn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-7",
@@ -130,7 +136,8 @@
         "jp": "データをもとに、分析しました。",
         "vi": "Tôi đã phân tích dựa trên dữ liệu."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-8",
@@ -149,7 +156,8 @@
         "jp": "事実に基づいた報道が大切だ。",
         "vi": "Đưa tin dựa trên sự thật là điều quan trọng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-9",
@@ -168,7 +176,8 @@
         "jp": "試験に際して、注意事項を守ってください。",
         "vi": "Khi thi, hãy tuân thủ các lưu ý."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-10",
@@ -187,7 +196,8 @@
         "jp": "過去の失敗を踏まえて、改善策を考えた。",
         "vi": "Xét đến những thất bại trong quá khứ, tôi đã nghĩ ra biện pháp cải thiện."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-11",
@@ -206,7 +216,8 @@
         "jp": "マニュアルに従い、操作してください。",
         "vi": "Hãy thao tác theo sách hướng dẫn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-12",
@@ -225,7 +236,8 @@
         "jp": "合格したものとして、入学の手続きをしてください。",
         "vi": "Coi như đã đậu, hãy làm thủ tục nhập học."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-13",
@@ -244,7 +256,8 @@
         "jp": "発売に先立って、試作品を試しました。",
         "vi": "Trước khi phát hành, tôi đã thử sản phẩm mẫu."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-14",
@@ -263,7 +276,8 @@
         "jp": "個人のみならず、社会全体の問題だ。",
         "vi": "Đây không chỉ là vấn đề cá nhân mà còn của toàn xã hội."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-15",
@@ -282,7 +296,8 @@
         "jp": "これは彼の功績にほかならない。",
         "vi": "Đây chính là công lao của anh ấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-16",
@@ -301,7 +316,8 @@
         "jp": "難しいとはいえ、あきらめてはいけない。",
         "vi": "Dù khó nhưng không được bỏ cuộc."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-17",
@@ -320,7 +336,8 @@
         "jp": "諦めることなく、挑戦し続けた。",
         "vi": "Không bỏ cuộc, vẫn tiếp tục thử thách."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-18",
@@ -339,7 +356,8 @@
         "jp": "友達が助けてくれて、お金を払わずに済んだ。",
         "vi": "Nhờ bạn giúp nên không phải trả tiền."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-19",
@@ -358,7 +376,8 @@
         "jp": "彼の実力には及ばない。",
         "vi": "Không thể so bằng thực lực của anh ấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-20",
@@ -377,7 +396,8 @@
         "jp": "この本は子供向けです。",
         "vi": "Cuốn sách này dành cho trẻ em."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-21",
@@ -396,7 +416,8 @@
         "jp": "形が三角であることから、そう呼ばれる。",
         "vi": "Vì có hình tam giác nên được gọi như vậy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-22",
@@ -415,7 +436,8 @@
         "jp": "悩んだ末に、会社を辞めた。",
         "vi": "Sau khi trăn trở mãi, cuối cùng anh ấy nghỉ việc."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-23",
@@ -434,7 +456,8 @@
         "jp": "けんかのあげく、仲が悪くなった。",
         "vi": "Sau khi cãi nhau, quan hệ trở nên xấu đi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-24",
@@ -453,7 +476,8 @@
         "jp": "彼の行動は理解しがたい。",
         "vi": "Hành động của anh ấy thật khó hiểu."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-25",
@@ -472,7 +496,8 @@
         "jp": "彼女には話さないわけにはいかない。",
         "vi": "Không thể không nói với cô ấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-26",
@@ -491,7 +516,8 @@
         "jp": "少なくとも一週間はかかる。",
         "vi": "Ít nhất cũng mất một tuần."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-27",
@@ -510,7 +536,8 @@
         "jp": "結婚を機に、タバコをやめた。",
         "vi": "Nhân dịp kết hôn, tôi bỏ thuốc lá."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-28",
@@ -529,7 +556,8 @@
         "jp": "この事故を契機に、対策が強化された。",
         "vi": "Lấy tai nạn này làm cơ hội để tăng cường biện pháp."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-29",
@@ -548,7 +576,8 @@
         "jp": "厳しい経済状況にあっても、諦めない。",
         "vi": "Dù đang trong hoàn cảnh kinh tế khó khăn cũng không bỏ cuộc."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-30",
@@ -567,7 +596,8 @@
         "jp": "勉強のかたわら、アルバイトもしている。",
         "vi": "Vừa học vừa làm thêm."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-31",
@@ -586,7 +616,8 @@
         "jp": "プロともなれば、そのくらいできて当然だ。",
         "vi": "Khi đã là chuyên nghiệp thì chuyện đó là hiển nhiên."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-32",
@@ -605,7 +636,8 @@
         "jp": "今日は彼の誕生日にあたる。",
         "vi": "Hôm nay đúng vào ngày sinh nhật của anh ấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-33",
@@ -624,7 +656,8 @@
         "jp": "彼女は悲しげな顔をしていた。",
         "vi": "Cô ấy có vẻ buồn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-34",
@@ -643,7 +676,8 @@
         "jp": "田中さんは来週引っ越すとか。",
         "vi": "Nghe nói anh Tanaka tuần sau chuyển nhà."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-35",
@@ -662,7 +696,8 @@
         "jp": "公園で遊んでいたら、母が声をかけてきた。",
         "vi": "Khi tôi đang chơi ở công viên, mẹ đã gọi tôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-36",
@@ -681,7 +716,8 @@
         "jp": "春になったかと思ったら、また寒くなった。",
         "vi": "Vừa mới thấy xuân đến lại lạnh ngay rồi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-37",
@@ -700,7 +736,8 @@
         "jp": "ドアを開けるか開けないかのうちに、猫が飛び出した。",
         "vi": "Cửa vừa mở là con mèo nhảy ra ngay."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-38",
@@ -719,7 +756,8 @@
         "jp": "プロだけあって、仕事が速い。",
         "vi": "Đúng là chuyên nghiệp nên làm việc nhanh thật."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-39",
@@ -738,7 +776,8 @@
         "jp": "一生懸命練習しただけに試合で負けたことは大変ショックだった。",
         "vi": "Chính vì đã luyện tập hết mình nên việc thua trận đấu lại càng shock."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-40",
@@ -757,7 +796,8 @@
         "jp": "あなたがいればこそ、頑張れる。",
         "vi": "Chính vì có bạn nên tôi mới cố gắng được."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-41",
@@ -776,7 +816,8 @@
         "jp": "欲張ったばかりに、全部失ってしまった。",
         "vi": "Chỉ vì tham lam mà mất hết tất cả."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-42",
@@ -795,7 +836,8 @@
         "jp": "人の物を勝手に使うものではない。",
         "vi": "Không nên tự ý dùng đồ của người khác."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-43",
@@ -814,7 +856,8 @@
         "jp": "それは失礼というものだ。",
         "vi": "Điều đó thật là thất lễ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-44",
@@ -833,7 +876,8 @@
         "jp": "薬を飲んだものの、熱が下がらない。",
         "vi": "Mặc dù đã uống thuốc nhưng không hạ sốt."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-45",
@@ -852,7 +896,8 @@
         "jp": "できるものならやってみろ。",
         "vi": "Nếu làm được thì cứ thử đi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-46",
@@ -871,7 +916,8 @@
         "jp": "お金があれば幸せだというものでもない。",
         "vi": "Không phải cứ có tiền là hạnh phúc."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-47",
@@ -890,7 +936,8 @@
         "jp": "この曲には聴く人を引き込むものがある。",
         "vi": "Bài nhạc này có điều gì đó cuốn hút người nghe."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-48",
@@ -909,7 +956,8 @@
         "jp": "来月から海外に転勤することになった。",
         "vi": "Kết quả là tôi sẽ chuyển sang làm việc ở nước ngoài từ tháng sau."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-49",
@@ -928,7 +976,8 @@
         "jp": "嬉しいことに、奨学金をもらえることになった。",
         "vi": "Thật vui là tôi được nhận học bổng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-50",
@@ -947,7 +996,8 @@
         "jp": "彼のことだから、きっと時間通りに来るだろう。",
         "vi": "Vì là anh ấy nên chắc chắn sẽ đến đúng giờ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-51",
@@ -966,7 +1016,8 @@
         "jp": "やってみないことには、成功するかどうかわからない。",
         "vi": "Nếu không thử thì không biết có thành công hay không."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-52",
@@ -985,7 +1036,8 @@
         "jp": "そんなに焦ることはない。",
         "vi": "Không cần phải vội vàng như vậy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-53",
@@ -1004,7 +1056,8 @@
         "jp": "屋根から落ちるなんて大変なことだ。",
         "vi": "Bị rơi từ mái nhà xuống thật là nguy hiểm."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-54",
@@ -1023,7 +1076,8 @@
         "jp": "どれだけ心配したことか。",
         "vi": "Tôi đã lo lắng biết bao nhiêu."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-55",
@@ -1042,7 +1096,8 @@
         "jp": "できないことはないが、時間がかかる。",
         "vi": "Không phải là không làm được, nhưng sẽ mất thời gian."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-56",
@@ -1061,7 +1116,8 @@
         "jp": "せっかく来たことだし、もう少し見ていこう。",
         "vi": "Vì đã cất công đến đây rồi, xem thêm chút nữa thôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-57",
@@ -1080,7 +1136,8 @@
         "jp": "お会いできて光栄な限りです。",
         "vi": "Được gặp anh/chị tôi cảm thấy vô cùng vinh dự."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-58",
@@ -1099,7 +1156,8 @@
         "jp": "日本人に限らず、外国人にも人気だ。",
         "vi": "Không chỉ người Nhật mà người nước ngoài cũng yêu thích."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-59",
@@ -1118,7 +1176,8 @@
         "jp": "見た限りでは問題なさそうだ。",
         "vi": "Trong phạm vi nhìn thấy thì có vẻ không có vấn đề."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-60",
@@ -1137,7 +1196,8 @@
         "jp": "命がある限り、希望を持ち続ける。",
         "vi": "Khi còn sống thì tiếp tục giữ hy vọng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-61",
@@ -1156,7 +1216,8 @@
         "jp": "夏はビールに限る。",
         "vi": "Mùa hè không gì bằng bia."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-62",
@@ -1175,7 +1236,8 @@
         "jp": "デートの日に限って雨が降る。",
         "vi": "Vào đúng ngày hẹn hò thì trời mưa."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-63",
@@ -1194,7 +1256,8 @@
         "jp": "あの人はよく嘘をつくので、誰も信じまい。",
         "vi": "Vì người đó hay nói dối nên sẽ chẳng có ai tin nữa."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-64",
@@ -1213,7 +1276,8 @@
         "jp": "行くにせよ行かないにせよ、早く決めてほしい。",
         "vi": "Dù có đi hay không, hãy quyết định sớm giúp tôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-65",
@@ -1232,7 +1296,8 @@
         "jp": "年齢にかかわらず、誰でも応募できる。",
         "vi": "Bất kể tuổi tác, ai cũng có thể nộp đơn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-66",
@@ -1251,7 +1316,8 @@
         "jp": "雨にもかかわらず、大勢の人が集まった。",
         "vi": "Mặc dù trời mưa nhưng vẫn có rất nhiều người tập trung."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-67",
@@ -1270,7 +1336,8 @@
         "jp": "何かにつけ、母の顔が浮かんでくる。",
         "vi": "Bất cứ lúc nào tôi cũng nhớ đến mặt mẹ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-68",
@@ -1289,7 +1356,8 @@
         "jp": "予想に反して、試験は簡単だった。",
         "vi": "Trái với dự đoán, kỳ thi lại dễ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-69",
@@ -1308,7 +1376,8 @@
         "jp": "能力に応じた仕事を任せる。",
         "vi": "Giao việc tương ứng với năng lực."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-70",
@@ -1327,7 +1396,8 @@
         "jp": "疲れに加えて風邪もひいてしまった。",
         "vi": "Thêm vào sự mệt mỏi còn bị cảm nữa."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-71",
@@ -1346,7 +1416,8 @@
         "jp": "その映画は好評につき公開期間が延長された。",
         "vi": "Vì bộ phim được đánh giá cao nên thời hạn công chiếu được kéo dài."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-72",
@@ -1365,7 +1436,8 @@
         "jp": "暑くなるにしたがって、やる気がなくなってくる。",
         "vi": "Khi càng nóng sẽ càng mất hứng thú làm việc."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-73",
@@ -1384,7 +1456,8 @@
         "jp": "こちらにお越しの際は、ぜひお知らせください。",
         "vi": "Khi đến đây, xin vui lòng cho biết trước."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-74",
@@ -1403,7 +1476,8 @@
         "jp": "川にそって歩いた。",
         "vi": "Tôi đi bộ dọc theo bờ sông."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-75",
@@ -1422,7 +1496,8 @@
         "jp": "大学進学にともない東京に引っ越した。",
         "vi": "Vì tiếp tục học lên Đại học nên đã chuyển đến Tokyo."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-76",
@@ -1441,7 +1516,8 @@
         "jp": "サッカーにかけては誰にも負けない。",
         "vi": "Về bóng đá thì tôi không thua ai."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-77",
@@ -1460,7 +1536,8 @@
         "jp": "初めてにしては上手だ。",
         "vi": "Xét là lần đầu tiên thì giỏi đấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-78",
@@ -1479,7 +1556,8 @@
         "jp": "冗談にしても、そんなことを言ってはいけない。",
         "vi": "Dù là đùa thì cũng không được nói những điều như vậy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-79",
@@ -1498,7 +1576,8 @@
         "jp": "雨もかまわず出かけた。",
         "vi": "Chẳng màng đến mưa, vẫn ra ngoài."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-80",
@@ -1517,7 +1596,8 @@
         "jp": "心を込めてお礼を申し上げます。",
         "vi": "Tôi xin cảm ơn với tất cả tấm lòng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-81",
@@ -1536,7 +1616,8 @@
         "jp": "彼女をぬきにしてはこのプロジェクトは成功しない。",
         "vi": "Không có cô ấy thì dự án này không thể thành công."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-82",
@@ -1555,7 +1636,8 @@
         "jp": "年齢を問わず参加できます。",
         "vi": "Có thể tham gia bất kể tuổi tác."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-83",
@@ -1574,7 +1656,8 @@
         "jp": "山田さんをはじめとするチームが優勝した。",
         "vi": "Đội đứng đầu là anh Yamada và các thành viên đã vô địch."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-84",
@@ -1593,7 +1676,8 @@
         "jp": "政策をめぐって激しい議論が行われた。",
         "vi": "Cuộc tranh luận gay gắt diễn ra xoay quanh chính sách đó."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-85",
@@ -1612,7 +1696,8 @@
         "jp": "法律のもとで平等に扱われる。",
         "vi": "Được đối xử bình đẳng dưới pháp luật."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-86",
@@ -1631,7 +1716,8 @@
         "jp": "日本人はもとより、外国人にも人気がある。",
         "vi": "Không chỉ người Nhật, người nước ngoài cũng yêu thích."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-87",
@@ -1650,7 +1736,8 @@
         "jp": "費用はともかく、まずやってみよう。",
         "vi": "Khoan bàn đến chi phí, trước tiên cứ thử đi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-88",
@@ -1669,7 +1756,8 @@
         "jp": "冗談はさておき、真剣に話し合おう。",
         "vi": "Thôi dừng đùa lại, hãy nói chuyện nghiêm túc nào."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-89",
@@ -1688,7 +1776,8 @@
         "jp": "やると言った以上は、最後までやり遂げる。",
         "vi": "Đã nói làm thì dứt khoát phải làm đến cùng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-90",
@@ -1707,7 +1796,8 @@
         "jp": "経験からいえば、この方法が最善だ。",
         "vi": "Xét từ kinh nghiệm thì phương pháp này là tốt nhất."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-91",
@@ -1726,7 +1816,8 @@
         "jp": "雰囲気からして、彼女はただ者じゃないぞ。",
         "vi": "Xét từ phong thái, cô ấy không phải người bình thường đâu."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-92",
@@ -1745,7 +1836,8 @@
         "jp": "こんなに失礼なことを言うとは、思わなかった。",
         "vi": "Tôi không ngờ anh ấy lại nói điều thất lễ như vậy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-93",
@@ -1764,7 +1856,8 @@
         "jp": "サッカーや野球といったスポーツが人気だ。",
         "vi": "Những môn thể thao như bóng đá hay bóng chày rất phổ biến."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-94",
@@ -1783,7 +1876,8 @@
         "jp": "冗談だとしても、そんなことを言ってはいけない。",
         "vi": "Dù cho là đùa cũng không được nói những điều như vậy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-95",
@@ -1802,7 +1896,8 @@
         "jp": "季節の変化とともに木の葉の色も変わる。",
         "vi": "Cùng với sự thay đổi của thời tiết thì màu lá cây cũng đổi màu theo."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-96",
@@ -1821,7 +1916,8 @@
         "jp": "もし自分が社長だとしたら、どうするだろうか。",
         "vi": "Nếu giả sử mình là giám đốc thì sẽ làm gì nhỉ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-97",
@@ -1840,7 +1936,8 @@
         "jp": "彼の料理の腕前といったら、プロ並みだ。",
         "vi": "Nói về tay nghề nấu ăn của anh ấy thì đúng là cỡ chuyên nghiệp."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-98",
@@ -1859,7 +1956,8 @@
         "jp": "連絡がないということは、問題ないということだ。",
         "vi": "Việc không có liên lạc có nghĩa là không có vấn đề gì."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-99",
@@ -1878,7 +1976,8 @@
         "jp": "このラーメン、辛いのなんのって。",
         "vi": "Cái ramen này cay cực kì đấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-100",
@@ -1897,7 +1996,8 @@
         "jp": "嬉しさのあまり、泣いてしまった。",
         "vi": "Vì quá vui mà khóc mất."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-101",
@@ -1916,7 +2016,8 @@
         "jp": "あの映画のことが気になってならない。",
         "vi": "Tôi cứ cảm thấy tò mò về bộ phim đó mà không kìm được."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-102",
@@ -1935,7 +2036,8 @@
         "jp": "この問題が気になってたまらない。",
         "vi": "Tôi lo lắng về vấn đề này đến mức không chịu được."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-103",
@@ -1954,7 +2056,8 @@
         "jp": "そんなことは起こり得ない。",
         "vi": "Chuyện như vậy không thể xảy ra được."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-104",
@@ -1973,7 +2076,8 @@
         "jp": "嬉しいやら悲しいやら、複雑な気持ちだ。",
         "vi": "Vừa vui vừa buồn, tâm trạng phức tạp lắm."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-105",
@@ -1992,7 +2096,8 @@
         "jp": "お金もなければ時間もない。",
         "vi": "Không có tiền cũng không có thời gian."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-106",
@@ -2011,7 +2116,8 @@
         "jp": "SNSで何度もやり取りをした上で、彼と実際に会うことに決めた。",
         "vi": "Sau khi liên lạc nhiều lần qua mạng xã hội, tôi quyết định gặp anh ấy ngoài đời."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-107",
@@ -2030,7 +2136,8 @@
         "jp": "着き次第、連絡します。",
         "vi": "Vừa đến nơi là tôi liên lạc ngay."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-108",
@@ -2049,7 +2156,8 @@
         "jp": "彼とは大学で知り合い、卒業後にプロポーズされて結婚した次第だ。",
         "vi": "Tôi quen anh ấy ở Đại học, sau khi tốt nghiệp được cầu hôn nên đã kết hôn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-109",
@@ -2068,7 +2176,8 @@
         "jp": "英語ができないどころか、日本語も怪しい。",
         "vi": "Không chỉ không biết tiếng Anh, mà tiếng Nhật cũng mơ hồ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-110",
@@ -2087,7 +2196,8 @@
         "jp": "仕事が忙しくて、休むどころではない。",
         "vi": "Công việc bận rộn đến mức không có lúc để nghỉ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-111",
@@ -2106,7 +2216,8 @@
         "jp": "台風が上陸するおそれがあります。",
         "vi": "Có khả năng bão sẽ đổ bộ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-112",
@@ -2125,7 +2236,8 @@
         "jp": "失ってはじめて、その大切さに気づく。",
         "vi": "Phải mất đi rồi mới nhận ra giá trị của nó."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-113",
@@ -2144,7 +2256,8 @@
         "jp": "一度会ったきり、その後は全然連絡がない。",
         "vi": "Sau lần gặp đó thì không có liên lạc gì nữa."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-114",
@@ -2163,7 +2276,8 @@
         "jp": "電話したところ、すでに終わっていた。",
         "vi": "Khi gọi điện thì hóa ra đã kết thúc rồi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-115",
@@ -2182,7 +2296,8 @@
         "jp": "このまま放置しておくようでは、悪化するだろう。",
         "vi": "Nếu cứ bỏ mặc như vậy thì sẽ trở nên tệ hơn thôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-116",
@@ -2201,7 +2316,8 @@
         "jp": "知りながらも黙っていた。",
         "vi": "Mặc dù biết nhưng vẫn im lặng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-117",
@@ -2220,7 +2336,8 @@
         "jp": "環境問題はますます悪化しつつある。",
         "vi": "Vấn đề môi trường đang ngày càng trở nên tệ hơn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-118",
@@ -2239,7 +2356,8 @@
         "jp": "頑張ったわりには、結果がよくなかった。",
         "vi": "Xét ra so với sự cố gắng thì kết quả không được tốt."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-119",
@@ -2258,7 +2376,8 @@
         "jp": "仕事をする一方で、資格の勉強もしている。",
         "vi": "Trong khi làm việc, tôi cũng đang học lấy bằng cấp."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-120",
@@ -2277,7 +2396,8 @@
         "jp": "健康状態が悪くなるばかりだ。",
         "vi": "Tình trạng sức khỏe chỉ ngày càng xấu đi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-121",
@@ -2296,7 +2416,8 @@
         "jp": "状況は改善されつつある。",
         "vi": "Tình hình đang dần được cải thiện."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-122",
@@ -2315,7 +2436,8 @@
         "jp": "事情を説明せざるをえなかった。",
         "vi": "Tôi đành phải giải thích tình huống."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-123",
@@ -2334,7 +2456,8 @@
         "jp": "体調が悪くても、仕事を休むわけにはいかない。",
         "vi": "Dù sức khỏe không tốt cũng không thể nghỉ làm."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-124",
@@ -2353,7 +2476,8 @@
         "jp": "やれるだけやって、後は結果を待つよりしかたない。",
         "vi": "Làm hết sức rồi chỉ còn cách chờ kết quả thôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-125",
@@ -2372,7 +2496,8 @@
         "jp": "皆が頑張っているのに、座ってはいられない。",
         "vi": "Mọi người đang cố gắng mà mình không thể cứ ngồi không mãi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-126",
@@ -2391,7 +2516,8 @@
         "jp": "電話に出ないのは、忙しいに違いない。",
         "vi": "Việc không nghe máy chắc chắn là vì bận."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-127",
@@ -2410,7 +2536,8 @@
         "jp": "昨日会ったばかりなのに、もう忘れたはずがない。",
         "vi": "Vừa mới gặp hôm qua thôi, không thể nào đã quên rồi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-128",
@@ -2429,7 +2556,8 @@
         "jp": "友達の秘密を他の人に話すべきではない。",
         "vi": "Không nên kể bí mật của bạn bè cho người khác."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-129",
@@ -2448,7 +2576,8 @@
         "jp": "このまま放置すると、大きな問題になりかねない。",
         "vi": "Nếu cứ bỏ mặc như vậy thì có thể trở thành vấn đề lớn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-130",
@@ -2467,7 +2596,8 @@
         "jp": "彼女は知っているにすぎないことを、まるで専門家のように話している。",
         "vi": "Cô ấy chỉ biết sơ sơ thôi mà lại nói như chuyên gia vậy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-131",
@@ -2486,7 +2616,8 @@
         "jp": "健康でさえあれば、他には何もいらない。",
         "vi": "Chỉ cần khỏe mạnh là không cần gì khác nữa."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-132",
@@ -2505,7 +2636,8 @@
         "jp": "彼女は歌がうまいばかりか、ダンスも得意だ。",
         "vi": "Cô ấy không chỉ hát hay mà còn nhảy giỏi nữa."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-133",
@@ -2524,7 +2656,8 @@
         "jp": "旅行するたびに、その地域のお土産を買う。",
         "vi": "Mỗi lần đi du lịch là mua quà lưu niệm của vùng đó."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-134",
@@ -2543,7 +2676,8 @@
         "jp": "料理が冷めないうちに食べてください。",
         "vi": "Hãy ăn trong khi đồ ăn còn chưa nguội."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-135",
@@ -2562,7 +2696,8 @@
         "jp": "散歩のついでに、近くの公園を見てきた。",
         "vi": "Nhân thể đi dạo, ghé xem công viên gần đó."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-136",
@@ -2581,7 +2716,8 @@
         "jp": "田中さんによれば、その店はもう閉店したらしい。",
         "vi": "Theo anh Tanaka thì cửa hàng đó hình như đã đóng cửa rồi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-137",
@@ -2600,7 +2736,8 @@
         "jp": "日本における少子化問題は深刻だ。",
         "vi": "Vấn đề giảm tỷ lệ sinh tại Nhật Bản rất nghiêm trọng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-138",
@@ -2619,7 +2756,8 @@
         "jp": "兄が活発なのに対して、弟はおとなしい。",
         "vi": "Trong khi anh cả hiếu động thì em lại trầm tính."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-139",
@@ -2638,7 +2776,8 @@
         "jp": "この問題は広い範囲にわたって影響を与えている。",
         "vi": "Vấn đề này có ảnh hưởng trên một phạm vi rộng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-140",
@@ -2657,7 +2796,8 @@
         "jp": "私にとって、家族が一番大切だ。",
         "vi": "Với tôi, gia đình là quan trọng nhất."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-141",
@@ -2676,7 +2816,8 @@
         "jp": "兄に比べて、私は背が低い。",
         "vi": "So với anh, tôi thấp hơn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-142",
@@ -2695,7 +2836,8 @@
         "jp": "環境問題に関する本を読んだ。",
         "vi": "Tôi đã đọc cuốn sách liên quan đến vấn đề môi trường."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-143",
@@ -2714,7 +2856,8 @@
         "jp": "ボランティア活動を通して、多くのことを学んだ。",
         "vi": "Thông qua hoạt động tình nguyện, tôi đã học được nhiều điều."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-144",
@@ -2733,7 +2876,8 @@
         "jp": "毎日練習したおかげで、上達した。",
         "vi": "Nhờ luyện tập mỗi ngày mà tiến bộ hơn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-145",
@@ -2752,7 +2896,8 @@
         "jp": "睡眠不足のせいで、集中できない。",
         "vi": "Vì thiếu ngủ mà không thể tập trung."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-146",
@@ -2771,7 +2916,8 @@
         "jp": "このレポートは間違いだらけだ。",
         "vi": "Bản báo cáo này đầy lỗi sai."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-147",
@@ -2790,7 +2936,8 @@
         "jp": "交通渋滞のために、会議に遅刻した。",
         "vi": "Vì tắc đường mà đến họp trễ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-148",
@@ -2809,7 +2956,8 @@
         "jp": "夜通し起きていてでも、締め切りに間に合わせる。",
         "vi": "Dù phải thức suốt đêm cũng sẽ kịp deadline."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-149",
@@ -2828,7 +2976,8 @@
         "jp": "努力しないことには、成功しない。",
         "vi": "Nếu không cố gắng thì không thể thành công."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-150",
@@ -2847,7 +2996,8 @@
         "jp": "子供は野菜を食べようとしない。",
         "vi": "Đứa bé không chịu ăn rau."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-151",
@@ -2866,7 +3016,8 @@
         "jp": "お金を出す代わりに、手伝ってもらった。",
         "vi": "Bù lại việc bỏ tiền ra, tôi được nhờ giúp đỡ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-152",
@@ -2885,7 +3036,8 @@
         "jp": "準備することなしに、試験に臨んではいけない。",
         "vi": "Không nên bước vào kỳ thi mà không chuẩn bị."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-153",
@@ -2904,7 +3056,8 @@
         "jp": "私なんかにできるわけがない。",
         "vi": "Người như tôi thì không thể làm được."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-154",
@@ -2923,7 +3076,8 @@
         "jp": "彼女はすぐ忘れっぽい。",
         "vi": "Cô ấy hay quên lắm."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-155",
@@ -2942,7 +3096,8 @@
         "jp": "仕事が忙しくて疲れ気味だ。",
         "vi": "Công việc bận nên hơi mệt mỏi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-156",
@@ -2961,7 +3116,8 @@
         "jp": "一人暮らしをすると、食事が偏りがちになる。",
         "vi": "Khi sống một mình thường dễ ăn uống thiếu cân bằng dinh dưỡng."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-157",
@@ -2980,7 +3136,8 @@
         "jp": "好きだからこそ、正直に言った。",
         "vi": "Chính vì yêu mới nói thật."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-158",
@@ -2999,7 +3156,8 @@
         "jp": "故郷を愛してやまない。",
         "vi": "Yêu quê hương không ngừng nghỉ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-159",
@@ -3018,7 +3176,8 @@
         "jp": "彼の勇気ある行動に感動を禁じ得ない。",
         "vi": "Không thể kìm được sự cảm động trước hành động dũng cảm của anh ấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-160",
@@ -3037,7 +3196,8 @@
         "jp": "ベッドに横になったとたんに、眠ってしまった。",
         "vi": "Vừa nằm xuống giường là ngủ ngay lập tức."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-161",
@@ -3056,7 +3216,8 @@
         "jp": "この新製品を皮切りに、新しいシリーズが展開される。",
         "vi": "Bắt đầu từ sản phẩm mới này, series mới sẽ được triển khai."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-162",
@@ -3075,7 +3236,8 @@
         "jp": "火事によって、家が全焼した。",
         "vi": "Do hỏa hoạn, căn nhà bị thiêu rụi hoàn toàn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-163",
@@ -3094,7 +3256,8 @@
         "jp": "初めての試みとして、とても良い出来だ。",
         "vi": "Là một thử nghiệm đầu tiên, kết quả rất tốt."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-164",
@@ -3113,7 +3276,8 @@
         "jp": "彼が来ないわけだ。今日は休みだったんだ。",
         "vi": "Thế là anh ấy không đến. Hóa ra hôm nay nghỉ rồi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-165",
@@ -3132,7 +3296,8 @@
         "jp": "全員が賛成したわけではない。",
         "vi": "Không phải là tất cả mọi người đều đồng ý."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-166",
@@ -3151,7 +3316,8 @@
         "jp": "一日で覚えられるわけがない。",
         "vi": "Không thể nào học thuộc trong một ngày được."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-167",
@@ -3170,7 +3336,8 @@
         "jp": "初めてのことで分からないもので、教えていただけますか。",
         "vi": "Vì đây là lần đầu nên không biết, bạn có thể chỉ cho tôi không?"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-168",
@@ -3189,7 +3356,8 @@
         "jp": "周囲の反対をよそに、二人は結婚した。",
         "vi": "Bất chấp sự phản đối của mọi người, hai người đã kết hôn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-169",
@@ -3208,7 +3376,8 @@
         "jp": "春になるにつれて、日が長くなる。",
         "vi": "Khi mùa xuân đến thì ngày càng dài hơn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-170",
@@ -3227,7 +3396,8 @@
         "jp": "言うまでもなく、健康が一番大切だ。",
         "vi": "Không cần phải nói cũng biết, sức khỏe là quan trọng nhất."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-171",
@@ -3254,7 +3424,8 @@
         "jp": "1日が30時間にならないものかなあ。そうすれば、好きなことができるのに。",
         "vi": "Phải chi 1 ngày có 30 giờ nhỉ. Nếu thế thì sẽ có thể làm điều mình thích."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-172",
@@ -3281,7 +3452,8 @@
         "jp": "いまどきの若者は敬語も使えない上、礼儀も知らない。",
         "vi": "Giới trẻ bây giờ không chỉ không biết sử dụng kính ngữ mà còn không biết phép tắc gì cả."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-173",
@@ -3316,7 +3488,8 @@
         "jp": "祖母は孫がかわいくてしようがない様子だ。",
         "vi": "Bà tôi có vẻ rất cưng chiều cháu."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-174",
@@ -3339,7 +3512,8 @@
         "jp": "あんなに毎日練習しているのだから、彼女は天才に相違ない。",
         "vi": "Ngày nào cũng luyện tập như thế, cô ấy chắc chắn là thiên tài."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-175",
@@ -3370,7 +3544,8 @@
         "jp": "人間は「見てはいけない」と言われると、かえって見ずにはいられなくなるものらしい。",
         "vi": "Con người mà, hễ bị nhắc không được nhìn là dường như sẽ làm ngược lại, phải nhìn bằng được."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-176",
@@ -3401,7 +3576,8 @@
         "jp": "文句を言われっぱなしで言い返せなかった。悔しい。",
         "vi": "Tôi cứ bị mắng thế mà không thể nói lại được câu nào. Thật cay cú!"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-177",
@@ -3424,7 +3600,8 @@
         "jp": "「お母さんには私の気持ちなんか、わかりっこないわよ」",
         "vi": "Mẹ chắc chắn không thể hiểu tâm trạng của tôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-178",
@@ -3451,7 +3628,8 @@
         "jp": "彼は何か言いたげな様子で立っていた。",
         "vi": "Anh ấy đứng với bộ dạng như thể đang muốn nói gì đó."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-179",
@@ -3478,7 +3656,8 @@
         "jp": "「あれ、めがねがない。どこに置いたものやら」",
         "vi": "Ơ, không thấy kính đâu. Đặt đâu rồi nhỉ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-180",
@@ -3505,7 +3684,8 @@
         "jp": "うちの親は毎日のように勉強しろだの、無駄づかいするなだの、うるさくて嫌になる。",
         "vi": "Bố mẹ tôi mỗi ngày đều bắt tôi phải học, không được lãng phí thời gian, thật phiền phức."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-181",
@@ -3532,7 +3712,8 @@
         "jp": "私は成績が悪く、親の期待に応えることができなかった。",
         "vi": "Với thành tích kém tôi đã không thể đáp lại sự kỳ vọng của bố mẹ."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-182",
@@ -3559,7 +3740,8 @@
         "jp": "A氏は戦時下を生き抜き、戦後は祖国の復興に尽くした。",
         "vi": "Sống sót qua thời chiến, sau chiến tranh anh A đã cống hiến cho công cuộc phục hưng đất nước."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-183",
@@ -3590,7 +3772,8 @@
         "jp": "外国人であるばかりに、アパート探しには苦労した。",
         "vi": "Chỉ vì là người nước ngoài mà tôi gặp khó khăn trong việc tìm nhà ở."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-184",
@@ -3613,7 +3796,8 @@
         "jp": "お休みのところを、早朝からお電話して申し訳ありません。",
         "vi": "Tôi rất xin lỗi vì đã gọi cho anh vào sáng sớm giữa lúc đang nghỉ ngơi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-185",
@@ -3644,7 +3828,8 @@
         "jp": "彼女は体力があるから、2、3日徹夜したところで平気だろう。",
         "vi": "Cô ấy vì có thể lực tốt nên thức trắng vài ngày cũng không sao."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-186",
@@ -3675,7 +3860,8 @@
         "jp": "オフィスを出ようとした矢先に課長に呼び止められた。",
         "vi": "Vừa lúc định đi ra ngoài thì trưởng phòng gọi lại."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-187",
@@ -3702,7 +3888,8 @@
         "jp": "業績悪化のため、ボーナスが減額されるにとどまらず、手当までカットされた。",
         "vi": "Vì tình hình kinh doanh xấu đi nên không những tiền thưởng bị giảm mà đến cả trợ cấp cũng bị cắt."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-188",
@@ -3729,7 +3916,8 @@
         "jp": "「同窓会、行った？」「行ったことは行ったんだけど、風邪気味だったんで、30分ほどで帰ってきちゃったんだ」",
         "vi": "Đã tổ chức họp hội cựu sinh viên à? Tổ chức thì có đấy nhưng chỉ khoảng 30 phút rồi về thôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-189",
@@ -3752,7 +3940,8 @@
         "jp": "「山本のやつ、会社を辞めて自転車で世界一周旅行をするんだって。勇気があるというか無謀というか。でも、ちょっとうらやましいなあ」",
         "vi": "Cái tên Yamamoto, nghe nói nghỉ việc cái là đi du lịch bằng xe đạp vòng quanh thế giới. Vừa can đảm lại vừa liều lĩnh. Cơ mà, có chút ghen tị nhỉ!"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-190",
@@ -3779,7 +3968,8 @@
         "jp": "インターネットで買い物は、用心するに越したことはない。",
         "vi": "Mua đồ qua mạng tốt hơn hết là nên cẩn thận."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-191",
@@ -3810,7 +4000,8 @@
         "jp": "高熱が出たのだが、すぐに病院へ行こうにも、日曜でどこも休診だった。",
         "vi": "Tôi bị sốt cao nhưng dù muốn đến bệnh viện ngay thì vì Chủ Nhật chỗ nào cũng nghỉ khám cả."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-192",
@@ -3837,7 +4028,8 @@
         "jp": "目的が達成できるかどうかは、事前準備がどれだけしっかりできたかにかかっている。",
         "vi": "Có đạt được mục đích hay không phụ thuộc vào khâu chuẩn bị trước kỹ càng như nào."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-193",
@@ -3864,7 +4056,8 @@
         "jp": "病院では、生まれようとする命と消えようとする命の交代が、日々くり返されている。",
         "vi": "Ở bệnh viện, việc những sinh linh mới ra đời thay thế cho những sinh mệnh vừa lụi tắt được lặp lại mỗi ngày."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-194",
@@ -3887,7 +4080,8 @@
         "jp": "「目標に向かってお互いがんばろうじゃないか！」",
         "vi": "Hãy cùng nhau cố gắng hướng tới mục tiêu!"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-195",
@@ -3914,7 +4108,8 @@
         "jp": "彼とは仕事の上での付き合いしかない。",
         "vi": "Với anh ấy, tôi chỉ có mối quan hệ trong công việc."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-196",
@@ -3941,7 +4136,8 @@
         "jp": "妻「会社の高橋さんからお電話よ」夫「今、いないということにしておいてくれ」",
         "vi": "Vợ: Có điện thoại từ anh Takahashi công ty anh đó. Chồng: Cứ nói là anh không có đây đi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-197",
@@ -3972,7 +4168,8 @@
         "jp": "林君は大金持ちであるかのように、気前よく友だちにごちそうした。",
         "vi": "Hayashi thường chiêu đãi mọi người hào phóng như thể mình giàu lắm vậy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-198",
@@ -4003,7 +4200,8 @@
         "jp": "「小学生ならともかく、高校生のあなたがこんな漢字も読めないのですか」",
         "vi": "Học sinh tiểu học thì không nói làm gì, nhưng bạn là học sinh trung học mà không đọc được chữ kanji này sao?"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-199",
@@ -4038,7 +4236,8 @@
         "jp": "あの親は子どもが迷惑をかけていても注意しようとしない。まったく、親も親なら子も子だ。",
         "vi": "Người cha đó dù con mình gây phiền phức cũng không chịu nhắc nhở. Đúng là, bố mẹ thế nào con thế ấy."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-200",
@@ -4065,7 +4264,8 @@
         "jp": "私にとって留学は、海外で学ぶというより家を出る手段であった。",
         "vi": "Du học đối với tôi mà nói thì là đó là cách để tôi rời khỏi nhà hơn là đi học ở nước ngoài."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-201",
@@ -4088,7 +4288,8 @@
         "jp": "始業ベルが鳴り終わるか終わらないかのうちに先生が教室に入ってきた。",
         "vi": "Chuông vào giờ vừa dứt thì thầy giáo đã bước vào lớp."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-202",
@@ -4111,7 +4312,8 @@
         "jp": "子供にしたら、2年ごとに転校させられて嫌だと思っているだろう。私にしても、引っ越しのたびに気が重い。",
         "vi": "Với bọn trẻ thì tôi nghĩ việc cứ 2 năm phải chuyển trường là điều không hay. Về phía mình, tôi cũng cảm thấy thật nặng nề mỗi khi chuyển nhà."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-203",
@@ -4142,7 +4344,8 @@
         "jp": "留学のために貯金をしているのだが、なかなかたまらない。貯金通帳を見てはため息をつく毎日だ。",
         "vi": "Tôi đang để dành tiền để đi du học nhưng mãi mà không dành được. Mỗi ngày, cứ nhìn đến tài khoản tiết kiệm tôi lại thở dài."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-204",
@@ -4173,7 +4376,8 @@
         "jp": "一見悩みがないように見えて、実はいろいろな問題を抱えている人も多い。",
         "vi": "Nhiều người trông không có vẻ gì là phiền não nhưng thực ra đang gặp rất nhiều vấn đề."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-205",
@@ -4204,7 +4408,8 @@
         "jp": "恋人と別れたときの寂しさといったら、泣きたいぐらいだった。",
         "vi": "Nói về nỗi cô đơn khi chia tay người yêu thì đến nỗi muốn khóc luôn."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-206",
@@ -4231,7 +4436,8 @@
         "jp": "「週末は時々旅行に行くんです。といっても日帰りですけどね」",
         "vi": "Cuối tuần thi thoảng tôi đi du lịch. Nói vậy chứ cũng chỉ là đi trong ngày thôi."
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-207",
@@ -4262,6 +4468,7 @@
         "jp": "T大学合格には、ただ努力あるのみ！",
         "vi": "Để thi đỗ Đại học T, chỉ có cách nỗ lực thôi!"
       }
-    ]
+    ],
+    "book": "soumatome"
   }
 ]

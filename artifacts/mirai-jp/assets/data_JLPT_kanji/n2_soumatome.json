@@ -38,7 +38,8 @@
         "reading": "よとう",
         "vi": "đảng cầm quyền"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-002",
@@ -83,7 +84,8 @@
         "reading": "いぜん",
         "vi": "vẫn còn"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-003",
@@ -127,7 +129,8 @@
         "reading": "いじん",
         "vi": "vĩ nhân"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-004",
@@ -169,7 +172,8 @@
         "reading": "いしん",
         "vi": "duy tân"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-005",
@@ -214,7 +218,8 @@
         "reading": "うつす",
         "vi": "di chuyển"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-006",
@@ -258,7 +263,8 @@
         "reading": "さい",
         "vi": "sự khác biệt"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-007",
@@ -300,7 +306,8 @@
         "reading": "りょういき",
         "vi": "lĩnh vực"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-008",
@@ -337,7 +344,8 @@
         "reading": "うちゅうじん",
         "vi": "người ngoài hành tinh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-009",
@@ -382,7 +390,8 @@
         "reading": "うきよ",
         "vi": "cõi đời"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-010",
@@ -426,7 +435,8 @@
         "reading": "ひっこす",
         "vi": "chuyển nhà"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-011",
@@ -470,7 +480,8 @@
         "reading": "えんせん",
         "vi": "dọc tuyến đường"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-012",
@@ -514,7 +525,8 @@
         "reading": "おうえん",
         "vi": "cổ vũ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-013",
@@ -556,7 +568,8 @@
         "reading": "いおう",
         "vi": "từ trước"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-014",
@@ -601,7 +614,8 @@
         "reading": "おしいれ",
         "vi": "tủ âm tường"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-015",
@@ -646,7 +660,8 @@
         "reading": "かそう",
         "vi": "giả tưởng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-016",
@@ -693,7 +708,8 @@
         "reading": "かこ",
         "vi": "quá khứ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-017",
@@ -737,7 +753,8 @@
         "reading": "ぶっか",
         "vi": "giá cả hàng hóa"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-018",
@@ -777,7 +794,8 @@
         "reading": "かくしん",
         "vi": "cách tân"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-019",
@@ -822,7 +840,8 @@
         "reading": "かくさん",
         "vi": "lan rộng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-020",
@@ -864,7 +883,8 @@
         "reading": "けっかく",
         "vi": "lao (bệnh)"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-021",
@@ -909,7 +929,8 @@
         "reading": "かまいません",
         "vi": "không sao"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-022",
@@ -951,7 +972,8 @@
         "reading": "しょかん",
         "vi": "thư từ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-023",
@@ -993,7 +1015,8 @@
         "reading": "どうき",
         "vi": "động cơ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-024",
@@ -1041,7 +1064,8 @@
         "reading": "あぶない",
         "vi": "nguy hiểm"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-025",
@@ -1086,7 +1110,8 @@
         "reading": "きそ",
         "vi": "nền tảng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-026",
@@ -1129,7 +1154,8 @@
         "reading": "がっき",
         "vi": "học kỳ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-027",
@@ -1170,7 +1196,8 @@
         "reading": "きせい",
         "vi": "quy định"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-028",
@@ -1214,7 +1241,8 @@
         "reading": "きんこう",
         "vi": "cân bằng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-029",
@@ -1256,7 +1284,8 @@
         "reading": "せいぎ",
         "vi": "chính nghĩa"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-030",
@@ -1301,7 +1330,8 @@
         "reading": "こっきょう",
         "vi": "biên giới"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-031",
@@ -1342,7 +1372,8 @@
         "reading": "きんだん",
         "vi": "cấm kỵ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-032",
@@ -1384,7 +1415,8 @@
         "reading": "はいく",
         "vi": "thơ haiku"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-033",
@@ -1430,7 +1462,8 @@
         "reading": "ぐんとう",
         "vi": "quần đảo"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-034",
@@ -1474,7 +1507,8 @@
         "reading": "しんがた",
         "vi": "kiểu mới"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-035",
@@ -1515,7 +1549,8 @@
         "reading": "けってん",
         "vi": "khuyết điểm"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-036",
@@ -1557,7 +1592,8 @@
         "reading": "けんりょく",
         "vi": "quyền lực"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-037",
@@ -1594,7 +1630,8 @@
         "reading": "りっけん",
         "vi": "lập hiến"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-038",
@@ -1633,7 +1670,8 @@
         "reading": "けんじゃ",
         "vi": "hiền giả"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-039",
@@ -1677,7 +1715,8 @@
         "reading": "きげん",
         "vi": "nguồn gốc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-040",
@@ -1722,7 +1761,8 @@
         "reading": "あやまり",
         "vi": "lỗi sai"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-041",
@@ -1764,7 +1804,8 @@
         "reading": "こうざ",
         "vi": "khoá học"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-042",
@@ -1807,7 +1848,8 @@
         "reading": "きく",
         "vi": "có tác dụng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-043",
@@ -1851,7 +1893,8 @@
         "reading": "さいてん",
         "vi": "chấm điểm"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-044",
@@ -1895,7 +1938,8 @@
         "reading": "じっさい",
         "vi": "thực tế"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-045",
@@ -1937,7 +1981,8 @@
         "reading": "しんさ",
         "vi": "xét duyệt"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-046",
@@ -1979,7 +2024,8 @@
         "reading": "しげき",
         "vi": "kích thích"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-047",
@@ -2021,7 +2067,8 @@
         "reading": "にほんし",
         "vi": "lịch sử Nhật"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-048",
@@ -2066,7 +2113,8 @@
         "reading": "しごと",
         "vi": "công việc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-049",
@@ -2112,7 +2160,8 @@
         "reading": "げんじつ",
         "vi": "thực tại"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-050",
@@ -2157,7 +2206,8 @@
         "reading": "じゃっかん",
         "vi": "một số ít"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-051",
@@ -2201,7 +2251,8 @@
         "reading": "うけとる",
         "vi": "nhận lấy"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-052",
@@ -2246,7 +2297,8 @@
         "reading": "かいしゅう",
         "vi": "thu hồi"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-053",
@@ -2288,7 +2340,8 @@
         "reading": "げいじゅつ",
         "vi": "nghệ thuật"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-054",
@@ -2332,7 +2385,8 @@
         "reading": "ほしょう",
         "vi": "bảo đảm"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-055",
@@ -2374,7 +2428,8 @@
         "reading": "くんしょう",
         "vi": "huân chương"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-056",
@@ -2418,7 +2473,8 @@
         "reading": "ふしょう",
         "vi": "bị thương"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-057",
@@ -2457,7 +2513,8 @@
         "reading": "ぞう",
         "vi": "con voi"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-058",
@@ -2501,7 +2558,8 @@
         "reading": "りょうしょう",
         "vi": "chấp thuận"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-059",
@@ -2548,7 +2606,8 @@
         "reading": "しょうだん",
         "vi": "đàm phán thương mại"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-060",
@@ -2590,7 +2649,8 @@
         "reading": "じゅしょう",
         "vi": "nhận giải"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-061",
@@ -2634,7 +2694,8 @@
         "reading": "とけいのはり",
         "vi": "kim đồng hồ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-062",
@@ -2678,7 +2739,8 @@
         "reading": "すがたかたち",
         "vi": "hình dáng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-063",
@@ -2721,7 +2783,8 @@
         "reading": "ようそ",
         "vi": "yếu tố"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-064",
@@ -2758,7 +2821,8 @@
         "reading": "しょち",
         "vi": "xử lý"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-065",
@@ -2802,7 +2866,8 @@
         "reading": "きぞう",
         "vi": "hiến tặng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-066",
@@ -2846,7 +2911,8 @@
         "reading": "そくじ",
         "vi": "tức thì"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-067",
@@ -2890,7 +2956,8 @@
         "reading": "さいそく",
         "vi": "thúc giục"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-068",
@@ -2935,7 +3002,8 @@
         "reading": "そこなう",
         "vi": "làm hỏng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-069",
@@ -2980,7 +3048,8 @@
         "reading": "たいいん",
         "vi": "xuất viện"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-070",
@@ -3022,7 +3091,8 @@
         "reading": "じゅうたく",
         "vi": "nhà ở"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-071",
@@ -3069,7 +3139,8 @@
         "reading": "きずく",
         "vi": "xây dựng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-072",
@@ -3114,7 +3185,8 @@
         "reading": "ちょうこうそう",
         "vi": "siêu cao tầng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-073",
@@ -3158,7 +3230,8 @@
         "reading": "きんちょう",
         "vi": "căng thẳng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-074",
@@ -3195,7 +3268,8 @@
         "reading": "たいてい",
         "vi": "thường thường"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-075",
@@ -3239,7 +3313,8 @@
         "reading": "ていしゅつ",
         "vi": "nộp"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-076",
@@ -3283,7 +3358,8 @@
         "reading": "かてい",
         "vi": "quá trình"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-077",
@@ -3327,7 +3403,8 @@
         "reading": "てんてき",
         "vi": "thiên địch"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-078",
@@ -3364,7 +3441,8 @@
         "reading": "てつじん",
         "vi": "triết nhân"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-079",
@@ -3411,7 +3489,8 @@
         "reading": "こうつう",
         "vi": "giao thông"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-080",
@@ -3455,7 +3534,8 @@
         "reading": "とういつ",
         "vi": "thống nhất"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-081",
@@ -3492,7 +3572,8 @@
         "reading": "とく",
         "vi": "đức hạnh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-082",
@@ -3538,7 +3619,8 @@
         "reading": "なんみん",
         "vi": "dân tị nạn"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-083",
@@ -3583,7 +3665,8 @@
         "reading": "ねあげ",
         "vi": "tăng giá"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-084",
@@ -3627,7 +3710,8 @@
         "reading": "しょうにん",
         "vi": "phê duyệt"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-085",
@@ -3673,7 +3757,8 @@
         "reading": "ずのう",
         "vi": "trí não"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-086",
@@ -3715,7 +3800,8 @@
         "reading": "りっぱ",
         "vi": "xuất sắc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-087",
@@ -3759,7 +3845,8 @@
         "reading": "はいせつ",
         "vi": "bài tiết"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-088",
@@ -3799,7 +3886,8 @@
         "reading": "ひりつ",
         "vi": "tỷ lệ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-089",
@@ -3841,7 +3929,8 @@
         "reading": "ひじゅん",
         "vi": "phê chuẩn"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-090",
@@ -3883,7 +3972,8 @@
         "reading": "こうひょう",
         "vi": "được đánh giá tốt"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-091",
@@ -3925,7 +4015,8 @@
         "reading": "ふだん",
         "vi": "thường ngày"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-092",
@@ -3967,7 +4058,8 @@
         "reading": "ゆにゅう",
         "vi": "nhập khẩu"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-093",
@@ -4012,7 +4104,8 @@
         "reading": "ほうよう",
         "vi": "kiểu cách"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-094",
@@ -4057,7 +4150,8 @@
         "reading": "ゆうしょう",
         "vi": "vô địch"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-095",
@@ -4102,7 +4196,8 @@
         "reading": "よくばる",
         "vi": "tham lam"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-096",
@@ -4144,7 +4239,8 @@
         "reading": "ようし",
         "vi": "diện mạo"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-097",
@@ -4189,7 +4285,8 @@
         "reading": "つれる",
         "vi": "đi cùng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-098",
@@ -4231,7 +4328,8 @@
         "reading": "ひろう",
         "vi": "mệt mỏi"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-099",
@@ -4271,7 +4369,8 @@
         "reading": "せきゆいど",
         "vi": "giếng dầu"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-100",
@@ -4312,7 +4411,8 @@
         "reading": "どんぶりもの",
         "vi": "món cơm tô"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-101",
@@ -4353,7 +4453,8 @@
         "reading": "ほうい",
         "vi": "bao vây"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-102",
@@ -4393,7 +4494,8 @@
         "reading": "めんえき",
         "vi": "miễn dịch"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-103",
@@ -4433,7 +4535,8 @@
         "reading": "ばんねん",
         "vi": "tuổi già"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-104",
@@ -4474,7 +4577,8 @@
         "reading": "いつわ",
         "vi": "câu chuyện thú vị"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-105",
@@ -4512,7 +4616,8 @@
         "reading": "れいわ",
         "vi": "Reiwa (niên hiệu)"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-106",
@@ -4550,7 +4655,8 @@
         "reading": "りょうしゅうしょ",
         "vi": "biên lai"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-107",
@@ -4591,7 +4697,8 @@
         "reading": "れいとう",
         "vi": "đông lạnh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-108",
@@ -4631,7 +4738,8 @@
         "reading": "ぜんちょう",
         "vi": "điềm báo"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-109",
@@ -4672,7 +4780,8 @@
         "reading": "のがれる",
         "vi": "trốn tránh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-110",
@@ -4712,7 +4821,8 @@
         "reading": "ももいろ",
         "vi": "màu hồng đào"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-111",
@@ -4752,7 +4862,8 @@
         "reading": "みんかん",
         "vi": "tư nhân"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-112",
@@ -4793,7 +4904,8 @@
         "reading": "ふみん",
         "vi": "mất ngủ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-113",
@@ -4831,7 +4943,8 @@
         "reading": "でんぴょう",
         "vi": "phiếu thu"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-114",
@@ -4868,7 +4981,8 @@
         "reading": "けんじょうご",
         "vi": "kính ngữ khiêm nhường"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-115",
@@ -4909,7 +5023,8 @@
         "reading": "よふかし",
         "vi": "thức đêm"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-116",
@@ -4950,7 +5065,8 @@
         "reading": "わる",
         "vi": "chia, vỡ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-117",
@@ -4990,7 +5106,8 @@
         "reading": "こうか",
         "vi": "đồng xu"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-118",
@@ -5030,7 +5147,8 @@
         "reading": "じこむじゅん",
         "vi": "tự mâu thuẫn"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-119",
@@ -5070,7 +5188,8 @@
         "reading": "じゅうぶん",
         "vi": "đầy đủ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-120",
@@ -5112,7 +5231,8 @@
         "reading": "じゅうなん",
         "vi": "mềm dẻo, linh hoạt"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-121",
@@ -5149,7 +5269,8 @@
         "reading": "じゅうげき",
         "vi": "bắn súng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-122",
@@ -5189,7 +5310,8 @@
         "reading": "けんご",
         "vi": "vững chắc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-123",
@@ -5227,7 +5349,8 @@
         "reading": "きんぱく",
         "vi": "căng thẳng, gấp gáp"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-124",
@@ -5268,7 +5391,8 @@
         "reading": "ふっき",
         "vi": "quay trở lại"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-125",
@@ -5306,7 +5430,8 @@
         "reading": "さんふじんか",
         "vi": "khoa sản"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-126",
@@ -5346,7 +5471,8 @@
         "reading": "せいそう",
         "vi": "dọn vệ sinh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-127",
@@ -5384,7 +5510,8 @@
         "reading": "てっぽう",
         "vi": "súng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-128",
@@ -5422,7 +5549,8 @@
         "reading": "わくない",
         "vi": "trong phạm vi"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-129",
@@ -5462,7 +5590,8 @@
         "reading": "ふつかよい",
         "vi": "say rượu hôm sau"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-130",
@@ -5502,7 +5631,8 @@
         "reading": "いきな",
         "vi": "thanh lịch, sành điệu"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-131",
@@ -5542,7 +5672,8 @@
         "reading": "すいはんき",
         "vi": "nồi cơm điện"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-132",
@@ -5580,7 +5711,8 @@
         "reading": "じどうはんばいき",
         "vi": "máy bán hàng tự động"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-133",
@@ -5621,7 +5753,8 @@
         "reading": "さつがい",
         "vi": "sát hại"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-134",
@@ -5662,7 +5795,8 @@
         "reading": "ちょうせい",
         "vi": "điều chỉnh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-135",
@@ -5700,7 +5834,8 @@
         "reading": "こういしょう",
         "vi": "di chứng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-136",
@@ -5738,7 +5873,8 @@
         "reading": "ちょうしゃ",
         "vi": "tòa nhà cơ quan"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-137",
@@ -5778,7 +5914,8 @@
         "reading": "ちょぞう",
         "vi": "cất giữ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-138",
@@ -5816,7 +5953,8 @@
         "reading": "ちゅうていしゃ",
         "vi": "đỗ xe"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-139",
@@ -5856,7 +5994,8 @@
         "reading": "ぼうさい",
         "vi": "phòng chống thảm họa"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-140",
@@ -5897,7 +6036,8 @@
         "reading": "いっぱく",
         "vi": "một đêm"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-141",
@@ -5938,7 +6078,8 @@
         "reading": "たんしゅく",
         "vi": "rút ngắn"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-142",
@@ -5979,7 +6120,8 @@
         "reading": "りんせつ",
         "vi": "tiếp giáp"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-143",
@@ -6020,7 +6162,8 @@
         "reading": "しゅくが",
         "vi": "chúc mừng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-144",
@@ -6060,7 +6203,8 @@
         "reading": "しょっき",
         "vi": "bát đĩa"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-145",
@@ -6098,7 +6242,8 @@
         "reading": "まして",
         "vi": "huống chi"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-146",
@@ -6139,7 +6284,8 @@
         "reading": "たいそう",
         "vi": "thể dục"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-147",
@@ -6172,7 +6318,8 @@
         "reading": "そう",
         "vi": "khô"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-148",
@@ -6213,7 +6360,8 @@
         "reading": "まちかど",
         "vi": "góc phố"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-149",
@@ -6251,7 +6399,8 @@
         "reading": "えいせい",
         "vi": "vệ sinh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-150",
@@ -6291,7 +6440,8 @@
         "reading": "おかず",
         "vi": "thức ăn"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-151",
@@ -6331,7 +6481,8 @@
         "reading": "たさい",
         "vi": "đa dạng, phong phú"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-152",
@@ -6372,7 +6523,8 @@
         "reading": "じゅうなん",
         "vi": "mềm dẻo"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-153",
@@ -6412,7 +6564,8 @@
         "reading": "いっけん",
         "vi": "một căn nhà"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-154",
@@ -6450,7 +6603,8 @@
         "reading": "てきとう",
         "vi": "phù hợp"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-155",
@@ -6491,7 +6645,8 @@
         "reading": "しずく",
         "vi": "giọt"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-156",
@@ -6531,7 +6686,8 @@
         "reading": "げんせん",
         "vi": "nguồn gốc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-157",
@@ -6573,7 +6729,8 @@
         "reading": "こたい",
         "vi": "chất rắn"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-158",
@@ -6614,7 +6771,8 @@
         "reading": "かれき",
         "vi": "cây khô"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-159",
@@ -6654,7 +6812,8 @@
         "reading": "はちのす",
         "vi": "tổ ong"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-160",
@@ -6692,7 +6851,8 @@
         "reading": "ようがし",
         "vi": "bánh kẹo phương Tây"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-161",
@@ -6730,7 +6890,8 @@
         "reading": "しょめい",
         "vi": "ký tên"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-162",
@@ -6771,7 +6932,8 @@
         "reading": "いちじるしい",
         "vi": "đáng kể, rõ rệt"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-163",
@@ -6806,7 +6968,8 @@
         "reading": "すなあらし",
         "vi": "bão cát"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-164",
@@ -6844,7 +7007,8 @@
         "reading": "しゃいんりょう",
         "vi": "khu nhà ở nhân viên"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-165",
@@ -6882,7 +7046,8 @@
         "reading": "いりょう",
         "vi": "y tế"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-166",
@@ -6920,7 +7085,8 @@
         "reading": "かくりょう",
         "vi": "thành viên nội các"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-167",
@@ -6961,7 +7127,8 @@
         "reading": "ちょうせつ",
         "vi": "điều chỉnh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-168",
@@ -6999,7 +7166,8 @@
         "reading": "ぐうぞう",
         "vi": "thần tượng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-169",
@@ -7039,7 +7207,8 @@
         "reading": "よすみ",
         "vi": "bốn góc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-170",
@@ -7081,7 +7250,8 @@
         "reading": "ばくろ",
         "vi": "phơi bày"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-171",
@@ -7119,7 +7289,8 @@
         "reading": "ばくすい",
         "vi": "ngủ say"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-172",
@@ -7152,7 +7323,8 @@
         "reading": "かいろう",
         "vi": "hành lang vòng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-173",
@@ -7192,7 +7364,8 @@
         "reading": "ろうほう",
         "vi": "tin vui"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-174",
@@ -7232,7 +7405,8 @@
         "reading": "ろうひ",
         "vi": "lãng phí"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-175",
@@ -7270,7 +7444,8 @@
         "reading": "べんしょう",
         "vi": "bồi thường"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-176",
@@ -7310,7 +7485,8 @@
         "reading": "かんこく",
         "vi": "khuyến cáo"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-177",
@@ -7348,7 +7524,8 @@
         "reading": "かんせい",
         "vi": "tiếng歓呼"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-178",
@@ -7390,7 +7567,8 @@
         "reading": "かんでんち",
         "vi": "pin khô"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-179",
@@ -7428,7 +7606,8 @@
         "reading": "ちょっかん",
         "vi": "trực giác"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-180",
@@ -7466,7 +7645,8 @@
         "reading": "ちょうえん",
         "vi": "viêm ruột"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-181",
@@ -7508,7 +7688,8 @@
         "reading": "かいまく",
         "vi": "khai mạc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-182",
@@ -7546,7 +7727,8 @@
         "reading": "なんまい",
         "vi": "bao nhiêu tờ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-183",
@@ -7586,7 +7768,8 @@
         "reading": "しりょう",
         "vi": "thức ăn gia súc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-184",
@@ -7627,7 +7810,8 @@
         "reading": "けいたいする",
         "vi": "mang theo"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-185",
@@ -7668,7 +7852,8 @@
         "reading": "ねったい",
         "vi": "nhiệt đới"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-186",
@@ -7707,7 +7892,8 @@
         "reading": "ちょうど",
         "vi": "đúng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-187",
@@ -7747,7 +7933,8 @@
         "reading": "もろは",
         "vi": "hai lưỡi"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-188",
@@ -7787,7 +7974,8 @@
         "reading": "しょうしゅう",
         "vi": "triệu tập"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-189",
@@ -7828,7 +8016,8 @@
         "reading": "かんれい",
         "vi": "thông lệ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-190",
@@ -7868,7 +8057,8 @@
         "reading": "さまたげ",
         "vi": "cản trở"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-191",
@@ -7901,7 +8091,8 @@
         "reading": "ごらくしせつ",
         "vi": "cơ sở giải trí"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-192",
@@ -7941,7 +8132,8 @@
         "reading": "ちょうこくとう",
         "vi": "dao khắc"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-193",
@@ -7982,7 +8174,8 @@
         "reading": "すいちょく",
         "vi": "thẳng đứng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-194",
@@ -8023,7 +8216,8 @@
         "reading": "まつり",
         "vi": "lễ hội"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-195",
@@ -8063,7 +8257,8 @@
         "reading": "しんさつ",
         "vi": "khám bệnh"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-196",
@@ -8101,7 +8296,8 @@
         "reading": "ゆうそう",
         "vi": "gửi qua bưu điện"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-197",
@@ -8139,7 +8335,8 @@
         "reading": "すいみんぶそく",
         "vi": "thiếu ngủ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-198",
@@ -8181,7 +8378,8 @@
         "reading": "きげん",
         "vi": "tâm trạng"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-199",
@@ -8221,7 +8419,8 @@
         "reading": "けんぎょう",
         "vi": "nghề phụ"
       }
-    ]
+    ],
+    "book": "soumatome"
   },
   {
     "id": "n2-200",
@@ -8262,6 +8461,7 @@
         "reading": "ちょうさ",
         "vi": "điều tra"
       }
-    ]
+    ],
+    "book": "soumatome"
   }
 ]

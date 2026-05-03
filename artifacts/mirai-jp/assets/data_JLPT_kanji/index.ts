@@ -1,15 +1,14 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // data_JLPT_kanji
 // Dữ liệu Kanji theo cấp độ JLPT (N5 → N1).
-// Mỗi cấp được lưu trong 1 file JSON riêng, dễ chỉnh sửa / mở rộng về sau.
-// Cấu trúc tương tự `data_nn` (ngữ pháp).
+// Cấu trúc giống vocab: mỗi cấp có thể chia theo sách (Mimikara / Soumatome).
 // ─────────────────────────────────────────────────────────────────────────────
 
 import n1 from "./n1.json";
-import n2 from "./n2.json";
 import n2Mimikara from "./n2_mimikara.json";
-import n3 from "./n3.json";
+import n2Soumatome from "./n2_soumatome.json";
 import n3Mimikara from "./n3_mimikara.json";
+import n3Soumatome from "./n3_soumatome.json";
 import n4 from "./n4.json";
 import n5 from "./n5.json";
 
@@ -45,49 +44,63 @@ export interface KanjiItem {
   components?: KanjiComponent[];
   /** Danh sách nghĩa tiếng Việt */
   meanings: string[];
+  /** Sách nguồn */
+  book?: string;
   /** Ví dụ từ ghép minh hoạ (không bắt buộc) */
   examples?: KanjiExample[];
 }
 
+const JLPT_KANJI: Record<string, KanjiItem[]> = {
+  "n5": n5 as KanjiItem[],
+  "n4": n4 as KanjiItem[],
+  "mimikara-n3": n3Mimikara as KanjiItem[],
+  "soumatome-n3": n3Soumatome as KanjiItem[],
+  "mimikara-n2": n2Mimikara as KanjiItem[],
+  "soumatome-n2": n2Soumatome as KanjiItem[],
+  "n1": n1 as KanjiItem[],
+};
+
+export const KANJI_BY_BOOK: Record<string, KanjiItem[]> = {
+  ...JLPT_KANJI,
+};
+
 export const KANJI_BY_LEVEL: Record<string, KanjiItem[]> = {
   N5: n5 as KanjiItem[],
   N4: n4 as KanjiItem[],
-  N3: n3 as KanjiItem[],
-  N2: n2 as KanjiItem[],
+  N3: [
+    ...(n3Soumatome as KanjiItem[]),
+    ...(n3Mimikara as KanjiItem[]),
+  ],
+  N2: [
+    ...(n2Soumatome as KanjiItem[]),
+    ...(n2Mimikara as KanjiItem[]),
+  ],
   N1: n1 as KanjiItem[],
-};
-
-/** Kanji theo sách giáo trình — bookId giống với vocab */
-export const KANJI_BY_BOOK: Record<string, KanjiItem[]> = {
-  "mimikara-n3": n3Mimikara as KanjiItem[],
-  "mimikara-n2": n2Mimikara as KanjiItem[],
 };
 
 export const ALL_KANJI: KanjiItem[] = [
   ...(n5 as KanjiItem[]),
   ...(n4 as KanjiItem[]),
-  ...(n3 as KanjiItem[]),
-  ...(n2 as KanjiItem[]),
+  ...(n3Soumatome as KanjiItem[]),
+  ...(n3Mimikara as KanjiItem[]),
+  ...(n2Soumatome as KanjiItem[]),
+  ...(n2Mimikara as KanjiItem[]),
   ...(n1 as KanjiItem[]),
 ];
 
-/** Trả về danh sách Kanji theo cấp độ; nếu không có cấp hợp lệ → trả tất cả */
-export function getKanji(level?: string): KanjiItem[] {
+/** Trả về danh sách Kanji theo cấp độ hoặc bookId */
+export function getKanji(level?: string, bookId?: string): KanjiItem[] {
+  if (bookId && KANJI_BY_BOOK[bookId]) return KANJI_BY_BOOK[bookId];
   const lvl = (level ?? "").toUpperCase();
   if (KANJI_BY_LEVEL[lvl]) return KANJI_BY_LEVEL[lvl];
   return ALL_KANJI;
 }
 
 /** Trả về danh sách Kanji theo bookId (ví dụ "mimikara-n2") */
-export function getKanjiByBook(bookId: string): KanjiItem[] | null {
-  return KANJI_BY_BOOK[bookId] ?? null;
+export function getKanjiByBook(bookId: string): KanjiItem[] {
+  return KANJI_BY_BOOK[bookId] ?? [];
 }
 
 export function getKanjiById(id: string): KanjiItem | undefined {
-  // Tìm trong KANJI_BY_BOOK trước (mimikara, v.v.) rồi mới tìm ALL_KANJI
-  for (const list of Object.values(KANJI_BY_BOOK)) {
-    const found = list.find((k) => k.id === id);
-    if (found) return found;
-  }
   return ALL_KANJI.find((k) => k.id === id);
 }
