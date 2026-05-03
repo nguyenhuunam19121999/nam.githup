@@ -375,7 +375,7 @@ export default function LevelBookScreen() {
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
-  headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingTop: 6, paddingBottom: 4 },
+  headerRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingTop: 14, paddingBottom: 6 },
   backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
   titleWrap: { flex: 1, alignItems: "center" },

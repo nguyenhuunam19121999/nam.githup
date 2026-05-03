@@ -319,8 +319,8 @@ const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 12,
-    paddingTop: 6,
-    paddingBottom: 4,
+    paddingTop: 14,
+    paddingBottom: 6,
   },
   backBtn: {
     width: 40, height: 40, borderRadius: 20,
