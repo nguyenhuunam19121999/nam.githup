@@ -1,4 +1,5 @@
 import { useRouter } from "expo-router";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Dimensions,
@@ -440,45 +441,7 @@ export default function HomeScreen() {
         </TouchableOpacity>
       </View>
 
-      {/* ── Bottom Tab Bar ── */}
-      <SafeAreaView style={s.tabBarSafe} edges={["bottom", "left", "right"]}>
-        <View style={s.tabBar}>
-          <TouchableOpacity style={s.tab} activeOpacity={0.7}>
-            <Text style={s.tabIcon}>📖</Text>
-            <Text style={s.tabLabel}>Sách</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={s.tab} activeOpacity={0.7}>
-            <Text style={s.tabIcon}>📊</Text>
-            <Text style={s.tabLabel}>Năng lực</Text>
-          </TouchableOpacity>
-
-          <View style={s.tabSpacer} />
-
-          <TouchableOpacity
-            style={s.tab}
-            activeOpacity={0.7}
-            onPress={() => goFlashcard()}
-          >
-            <Text style={s.tabIcon}>🃏</Text>
-            <Text style={s.tabLabel}>Flashcard</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={s.tab} activeOpacity={0.7}>
-            <Text style={s.tabIcon}>🎓</Text>
-            <Text style={s.tabLabel}>Lớp học</Text>
-          </TouchableOpacity>
-
-          {/* Center floating mascot */}
-          <View style={[s.tabCenter, { pointerEvents: "box-none" }]}>
-            <TouchableOpacity
-              style={s.mascotBtn}
-              activeOpacity={0.85}
-              onPress={() => goFlashcard()}
-            >
-              <Text style={s.mascotEmoji}>🦉</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </SafeAreaView>
+      <BottomTabBar />
     </View>
   );
 }

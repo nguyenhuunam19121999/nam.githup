@@ -8,6 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useRouter } from "expo-router";
+import { BottomTabBar } from "@/components/BottomTabBar";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useMemo, useState } from "react";
 import {
@@ -306,8 +307,9 @@ export default function SoumatomeN2Screen() {
         {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any, "#2563EB", goVocabLesson)}
         {activePart === "grammar" && renderGrammarWeeks()}
 
-        <View style={{ height: 48 }} />
+        <View style={{ height: 16 }} />
       </ScrollView>
+      <BottomTabBar />
     </View>
   );
 }
