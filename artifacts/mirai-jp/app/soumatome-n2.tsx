@@ -231,15 +231,17 @@ export default function SoumatomeN2Screen() {
             <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
               <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
+          </View>
+          <View style={s.headerTitleRow}>
+            <View style={s.titleWrap}>
+              <Text style={s.headerTitle}>総まとめ N2</Text>
+              <Text style={s.headerSub}>Soumatome · N2</Text>
+            </View>
             <View style={s.logoBadge}>
               <Text style={s.logoMirai}>Mirai</Text>
               <Text style={s.logoDot}>.</Text>
               <Text style={s.logoJP}>JP</Text>
             </View>
-          </View>
-          <View style={s.headerTitleRow}>
-            <Text style={s.headerTitle}>総まとめ N2</Text>
-            <Text style={s.headerSub}>Soumatome · N2</Text>
           </View>
 
           {/* Summary chips */}
@@ -318,17 +320,19 @@ const s = StyleSheet.create({
   headerTopRow: {
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     paddingHorizontal: 12,
     paddingTop: 6,
     paddingBottom: 0,
   },
   headerTitleRow: {
+    flexDirection: "row",
     alignItems: "center",
-    paddingHorizontal: 12,
+    justifyContent: "space-between",
+    paddingHorizontal: 16,
     paddingTop: 4,
-    paddingBottom: 6,
+    paddingBottom: 8,
   },
+  titleWrap: { flex: 1 },
   backBtn: {
     width: 40, height: 40, borderRadius: 20,
     alignItems: "center", justifyContent: "center",

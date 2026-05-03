@@ -297,15 +297,17 @@ export default function LevelBookScreen() {
             <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
               <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
+          </View>
+          <View style={s.headerTitleRow}>
+            <View style={s.titleWrap}>
+              <Text style={s.headerTitle}>{config.headerTitle}</Text>
+              <Text style={s.headerSub}>{config.headerSub}</Text>
+            </View>
             <View style={s.logoBadge}>
               <Text style={s.logoMirai}>Mirai</Text>
               <Text style={s.logoDot}>.</Text>
               <Text style={s.logoJP}>JP</Text>
             </View>
-          </View>
-          <View style={s.headerTitleRow}>
-            <Text style={s.headerTitle}>{config.headerTitle}</Text>
-            <Text style={s.headerSub}>{config.headerSub}</Text>
           </View>
 
           <View style={s.summaryRow}>
@@ -375,8 +377,9 @@ export default function LevelBookScreen() {
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
-  headerTopRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 12, paddingTop: 6, paddingBottom: 0 },
-  headerTitleRow: { alignItems: "center", paddingHorizontal: 12, paddingTop: 4, paddingBottom: 6 },
+  headerTopRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 12, paddingTop: 6, paddingBottom: 0 },
+  headerTitleRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: 16, paddingTop: 4, paddingBottom: 8 },
+  titleWrap: { flex: 1 },
   backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
   headerTitle: { color: "#fff", fontSize: 18, fontWeight: "900", letterSpacing: 0.3 },
