@@ -1,33 +1,257 @@
 [
   {
-    "kanji": "朝",
-    "hira": "あさ",
-    "han": "",
-    "nghia": "buổi sáng",
+    "kanji": "私",
+    "hira": "わたし",
+    "han": "ngã",
+    "nghia": "tôi",
     "lesson": 1,
     "week": 1
   },
   {
-    "kanji": "あさって",
-    "hira": "あさって",
-    "han": "",
-    "nghia": "ngày kia",
+    "kanji": "私たち",
+    "hira": "わたしたち",
+    "han": "ngã",
+    "nghia": "chúng tôi, chúng ta",
     "lesson": 1,
     "week": 1
   },
   {
-    "kanji": "足",
-    "hira": "あし",
-    "han": "",
-    "nghia": "chân",
+    "kanji": "彼",
+    "hira": "かれ",
+    "han": "bỉ",
+    "nghia": "anh ấy, bạn trai",
     "lesson": 1,
     "week": 1
   },
   {
-    "kanji": "明日",
-    "hira": "あした",
+    "kanji": "彼女",
+    "hira": "かのじょ",
+    "han": "bỉ nữ",
+    "nghia": "cô ấy, bạn gái",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "皆さん",
+    "hira": "みなさん",
+    "han": "giai",
+    "nghia": "các anh chị, quý vị",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "あなた",
+    "hira": "あなた",
     "han": "",
-    "nghia": "ngày mai",
+    "nghia": "anh/chị/bạn (ngôi thứ II)",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "あの人",
+    "hira": "あのひと",
+    "han": "",
+    "nghia": "người đó, anh/chị kia",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "教師",
+    "hira": "きょうし",
+    "han": "giáo sư",
+    "nghia": "giáo viên",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "先生",
+    "hira": "せんせい",
+    "han": "tiên sinh",
+    "nghia": "thầy/cô giáo",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "学生",
+    "hira": "がくせい",
+    "han": "học sinh",
+    "nghia": "học sinh, sinh viên",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "運転手",
+    "hira": "うんてんしゅ",
+    "han": "vận chuyển thủ",
+    "nghia": "tài xế",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "会社員",
+    "hira": "かいしゃいん",
+    "han": "hội xã viên",
+    "nghia": "nhân viên công ty",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "社員",
+    "hira": "しゃいん",
+    "han": "xã viên",
+    "nghia": "nhân viên công ty",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "銀行員",
+    "hira": "ぎんこういん",
+    "han": "ngân hàng viên",
+    "nghia": "nhân viên ngân hàng",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "医者",
+    "hira": "いしゃ",
+    "han": "y giả",
+    "nghia": "bác sĩ",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "エンジニア",
+    "hira": "エンジニア",
+    "han": "",
+    "nghia": "kỹ sư",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "研究者",
+    "hira": "けんきゅうしゃ",
+    "han": "nghiên cứu giả",
+    "nghia": "nhà nghiên cứu",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "留学生",
+    "hira": "りゅうがくせい",
+    "han": "lưu học sinh",
+    "nghia": "du học sinh",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "だれ",
+    "hira": "だれ",
+    "han": "",
+    "nghia": "ai (từ hỏi)",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "大学",
+    "hira": "だいがく",
+    "han": "đại học",
+    "nghia": "trường đại học",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "病院",
+    "hira": "びょういん",
+    "han": "bệnh viện",
+    "nghia": "bệnh viện",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "日本",
+    "hira": "にほん",
+    "han": "nhật bản",
+    "nghia": "Nhật Bản",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "ベトナム",
+    "hira": "ベトナム",
+    "han": "",
+    "nghia": "Việt Nam",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "韓国",
+    "hira": "かんこく",
+    "han": "hàn quốc",
+    "nghia": "Hàn Quốc",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "中国",
+    "hira": "ちゅうごく",
+    "han": "trung quốc",
+    "nghia": "Trung Quốc",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "アメリカ",
+    "hira": "アメリカ",
+    "han": "",
+    "nghia": "Mỹ",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "イギリス",
+    "hira": "イギリス",
+    "han": "",
+    "nghia": "Anh (quốc)",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "～人",
+    "hira": "～じん",
+    "han": "nhân",
+    "nghia": "người ~ (quốc tịch)",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "～語",
+    "hira": "～ご",
+    "han": "ngữ",
+    "nghia": "tiếng ~",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "出身",
+    "hira": "しゅっしん",
+    "han": "xuất thân",
+    "nghia": "xuất thân, quê quán",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "はい",
+    "hira": "はい",
+    "han": "",
+    "nghia": "vâng, dạ (đồng ý)",
+    "lesson": 1,
+    "week": 1
+  },
+  {
+    "kanji": "いいえ",
+    "hira": "いいえ",
+    "han": "",
+    "nghia": "không (phủ định)",
     "lesson": 1,
     "week": 1
   },
@@ -35,183 +259,295 @@
     "kanji": "これ",
     "hira": "これ",
     "han": "",
-    "nghia": "cái này",
-    "lesson": 1,
+    "nghia": "cái này, đây",
+    "lesson": 2,
     "week": 1
   },
   {
     "kanji": "それ",
     "hira": "それ",
     "han": "",
-    "nghia": "cái đó",
-    "lesson": 1,
+    "nghia": "cái đó, đó",
+    "lesson": 2,
     "week": 1
   },
   {
     "kanji": "あれ",
     "hira": "あれ",
     "han": "",
-    "nghia": "cái kia",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "ここ",
-    "hira": "ここ",
-    "han": "",
-    "nghia": "chỗ này",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "そこ",
-    "hira": "そこ",
-    "han": "",
-    "nghia": "chỗ đó",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "あそこ",
-    "hira": "あそこ",
-    "han": "",
-    "nghia": "Chỗ kia, đằng kia",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "こちら",
-    "hira": "こちら",
-    "han": "",
-    "nghia": "phía này",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "そちら",
-    "hira": "そちら",
-    "han": "",
-    "nghia": "phía đó",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "あちら",
-    "hira": "あちら",
-    "han": "",
-    "nghia": "phía kia",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "春",
-    "hira": "はる",
-    "han": "",
-    "nghia": "mùa xuân",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "夏",
-    "hira": "なつ",
-    "han": "",
-    "nghia": "mùa hạ",
-    "lesson": 1,
-    "week": 1
-  },
-  {
-    "kanji": "秋",
-    "hira": "あき",
-    "han": "",
-    "nghia": "mùa thu",
+    "nghia": "cái kia, kia",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "冬",
-    "hira": "ふゆ",
+    "kanji": "この～",
+    "hira": "この",
     "han": "",
-    "nghia": "mùa đông",
+    "nghia": "~ này",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "頭",
-    "hira": "あたま",
+    "kanji": "その～",
+    "hira": "その",
     "han": "",
-    "nghia": "đầu",
+    "nghia": "~ đó",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "あなた",
-    "hira": "あなた",
+    "kanji": "あの～",
+    "hira": "あの",
     "han": "",
-    "nghia": "bạn",
+    "nghia": "~ kia",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "兄",
-    "hira": "あに",
+    "kanji": "パソコン",
+    "hira": "パソコン",
     "han": "",
-    "nghia": "Anh trai (mình)",
+    "nghia": "máy tính cá nhân",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "姉",
-    "hira": "あね",
-    "han": "",
-    "nghia": "Chị gái (mình)",
+    "kanji": "携帯",
+    "hira": "けいたい",
+    "han": "huề đới",
+    "nghia": "điện thoại di động",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "アパート",
-    "hira": "あぱーと",
-    "han": "",
-    "nghia": "căn hộ",
+    "kanji": "電話",
+    "hira": "でんわ",
+    "han": "điện thoại",
+    "nghia": "điện thoại",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "雨",
-    "hira": "あめ",
+    "kanji": "アイフォン",
+    "hira": "アイフォン",
     "han": "",
-    "nghia": "mưa",
+    "nghia": "iPhone",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "飴",
-    "hira": "あめ",
-    "han": "",
-    "nghia": "kẹo (ngậm)",
+    "kanji": "充電器",
+    "hira": "じゅうでんき",
+    "han": "sung điện khí",
+    "nghia": "sạc pin",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "家",
-    "hira": "いえ",
+    "kanji": "ヘッドフォン",
+    "hira": "ヘッドフォン",
     "han": "",
-    "nghia": "nhà",
+    "nghia": "tai nghe",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "池",
-    "hira": "いけ",
+    "kanji": "カメラ",
+    "hira": "カメラ",
     "han": "",
-    "nghia": "cái ao",
+    "nghia": "máy ảnh",
     "lesson": 2,
     "week": 1
   },
   {
-    "kanji": "医者",
-    "hira": "いしゃ",
+    "kanji": "テレビ",
+    "hira": "テレビ",
     "han": "",
-    "nghia": "bác sĩ",
+    "nghia": "tivi",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "車",
+    "hira": "くるま",
+    "han": "xa",
+    "nghia": "ô tô, xe hơi",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "時計",
+    "hira": "とけい",
+    "han": "thời kế",
+    "nghia": "đồng hồ",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "ペン",
+    "hira": "ペン",
+    "han": "",
+    "nghia": "bút",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "ボールペン",
+    "hira": "ボールペン",
+    "han": "",
+    "nghia": "bút bi",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "鉛筆",
+    "hira": "えんぴつ",
+    "han": "diên bút",
+    "nghia": "bút chì",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "消しゴム",
+    "hira": "けしゴム",
+    "han": "",
+    "nghia": "tẩy",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "本",
+    "hira": "ほん",
+    "han": "bản",
+    "nghia": "sách",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "ノート",
+    "hira": "ノート",
+    "han": "",
+    "nghia": "vở",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "手帳",
+    "hira": "てちょう",
+    "han": "thủ trướng",
+    "nghia": "sổ tay",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "辞書",
+    "hira": "じしょ",
+    "han": "từ thư",
+    "nghia": "từ điển",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "新聞",
+    "hira": "しんぶん",
+    "han": "tân văn",
+    "nghia": "báo",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "雑誌",
+    "hira": "ざっし",
+    "han": "tạp chí",
+    "nghia": "tạp chí",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "名刺",
+    "hira": "めいし",
+    "han": "danh thiếp",
+    "nghia": "danh thiếp",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "カード",
+    "hira": "カード",
+    "han": "",
+    "nghia": "thẻ",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "帽子",
+    "hira": "ぼうし",
+    "han": "mạo tử",
+    "nghia": "mũ",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "財布",
+    "hira": "さいふ",
+    "han": "tài bố",
+    "nghia": "ví, bóp tiền",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "かばん",
+    "hira": "かばん",
+    "han": "",
+    "nghia": "túi, cặp sách",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "靴",
+    "hira": "くつ",
+    "han": "",
+    "nghia": "giày",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "スリッパ",
+    "hira": "スリッパ",
+    "han": "",
+    "nghia": "dép đi trong nhà",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "靴下",
+    "hira": "くつした",
+    "han": "",
+    "nghia": "tất, vớ",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "鍵",
+    "hira": "かぎ",
+    "han": "",
+    "nghia": "chìa khóa",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "傘",
+    "hira": "かさ",
+    "han": "",
+    "nghia": "ô, dù",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "机",
+    "hira": "つくえ",
+    "han": "",
+    "nghia": "bàn làm việc",
     "lesson": 2,
     "week": 1
   },
@@ -224,827 +560,1315 @@
     "week": 1
   },
   {
-    "kanji": "一",
-    "hira": "いち",
-    "han": "",
-    "nghia": "một",
-    "lesson": 2,
-    "week": 1
-  },
-  {
-    "kanji": "二日",
-    "hira": "ふつか",
-    "han": "",
-    "nghia": "2 ngày, ngày mồng 2",
-    "lesson": 2,
-    "week": 1
-  },
-  {
-    "kanji": "三日",
-    "hira": "みっか",
-    "han": "",
-    "nghia": "3 ngày, ngày mồng 3",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "四日",
-    "hira": "よっか",
-    "han": "",
-    "nghia": "4 ngày, ngày mồng 4",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "五日",
-    "hira": "いつか",
-    "han": "",
-    "nghia": "năm ngày, ngày mồng 5",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "六日",
-    "hira": "むいか",
-    "han": "",
-    "nghia": "6 ngày, ngày mồng 6",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "七日",
-    "hira": "なのか",
-    "han": "",
-    "nghia": "7 ngày, ngày mồng 7",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "八日",
-    "hira": "ようか",
-    "han": "",
-    "nghia": "8 ngày, ngày mồng 8",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "十日",
-    "hira": "とおか",
-    "han": "",
-    "nghia": "10 ngày, ngày mồng 10",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "犬",
-    "hira": "いぬ",
-    "han": "",
-    "nghia": "con chó",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "今",
-    "hira": "いま",
-    "han": "",
-    "nghia": "bây giờ",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "意味",
-    "hira": "いみ",
-    "han": "",
-    "nghia": "ý nghĩa",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "妹",
-    "hira": "いもうと",
-    "han": "",
-    "nghia": "em gái (mình)",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "入口",
-    "hira": "いりぐち",
-    "han": "",
-    "nghia": "lối vào",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "色",
-    "hira": "いろ",
-    "han": "",
-    "nghia": "màu",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "上",
-    "hira": "うえ",
-    "han": "",
-    "nghia": "trên",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "後ろ",
-    "hira": "うしろ",
-    "han": "",
-    "nghia": "đằng sau",
-    "lesson": 3,
-    "week": 1
-  },
-  {
-    "kanji": "歌",
-    "hira": "うた",
-    "han": "",
-    "nghia": "bài hát",
-    "lesson": 4,
-    "week": 1
-  },
-  {
-    "kanji": "海",
-    "hira": "うみ",
-    "han": "",
-    "nghia": "biển",
-    "lesson": 4,
-    "week": 1
-  },
-  {
-    "kanji": "上着",
-    "hira": "うわぎ",
-    "han": "",
-    "nghia": "áo khoác",
-    "lesson": 4,
-    "week": 1
-  },
-  {
-    "kanji": "絵",
-    "hira": "え",
-    "han": "",
-    "nghia": "bức tranh",
-    "lesson": 4,
-    "week": 1
-  },
-  {
-    "kanji": "映画",
-    "hira": "えいが",
-    "han": "",
-    "nghia": "phim (điện ảnh)",
-    "lesson": 4,
-    "week": 1
-  },
-  {
     "kanji": "英語",
     "hira": "えいご",
+    "han": "anh ngữ",
+    "nghia": "tiếng Anh",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "何",
+    "hira": "なに",
+    "han": "hà",
+    "nghia": "cái gì (từ hỏi)",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "そう",
+    "hira": "そう",
     "han": "",
-    "nghia": "Tiếng Anh",
-    "lesson": 4,
+    "nghia": "đúng, vậy",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "違います",
+    "hira": "ちがいます",
+    "han": "",
+    "nghia": "không phải, sai rồi",
+    "lesson": 2,
+    "week": 1
+  },
+  {
+    "kanji": "ここ",
+    "hira": "ここ",
+    "han": "",
+    "nghia": "chỗ này, đây",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "そこ",
+    "hira": "そこ",
+    "han": "",
+    "nghia": "chỗ đó, đó",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "あそこ",
+    "hira": "あそこ",
+    "han": "",
+    "nghia": "chỗ kia, kia",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "どこ",
+    "hira": "どこ",
+    "han": "",
+    "nghia": "chỗ nào, đâu",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "こちら",
+    "hira": "こちら",
+    "han": "",
+    "nghia": "phía này",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "そちら",
+    "hira": "そちら",
+    "han": "",
+    "nghia": "phía đó",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "あちら",
+    "hira": "あちら",
+    "han": "",
+    "nghia": "phía kia",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "どちら",
+    "hira": "どちら",
+    "han": "",
+    "nghia": "phía nào",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "受付",
+    "hira": "うけつけ",
+    "han": "thụ phó",
+    "nghia": "quầy lễ tân (cơ quan)",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "フロント",
+    "hira": "フロント",
+    "han": "",
+    "nghia": "quầy lễ tân (khách sạn)",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "階段",
+    "hira": "かいだん",
+    "han": "giai đoạn",
+    "nghia": "cầu thang",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "エレベーター",
+    "hira": "エレベーター",
+    "han": "",
+    "nghia": "thang máy",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "エスカレーター",
+    "hira": "エスカレーター",
+    "han": "",
+    "nghia": "thang cuốn",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "お手洗い",
+    "hira": "おてあらい",
+    "han": "",
+    "nghia": "phòng vệ sinh",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "トイレ",
+    "hira": "トイレ",
+    "han": "",
+    "nghia": "nhà vệ sinh",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "うち",
+    "hira": "うち",
+    "han": "",
+    "nghia": "nhà (thân mật)",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "部屋",
+    "hira": "へや",
+    "han": "bộ ốc",
+    "nghia": "căn phòng",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "教室",
+    "hira": "きょうしつ",
+    "han": "giáo thất",
+    "nghia": "phòng học",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "事務所",
+    "hira": "じむしょ",
+    "han": "sự vụ sở",
+    "nghia": "văn phòng",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "会議室",
+    "hira": "かいぎしつ",
+    "han": "hội nghị thất",
+    "nghia": "phòng họp",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "食堂",
+    "hira": "しょくどう",
+    "han": "thực đường",
+    "nghia": "nhà ăn, căn-tin",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "ビル",
+    "hira": "ビル",
+    "han": "",
+    "nghia": "tòa nhà",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "デパート",
+    "hira": "デパート",
+    "han": "",
+    "nghia": "trung tâm thương mại",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "スーパー",
+    "hira": "スーパー",
+    "han": "",
+    "nghia": "siêu thị",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "映画館",
+    "hira": "えいがかん",
+    "han": "điện ảnh quán",
+    "nghia": "rạp chiếu phim",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "喫茶店",
+    "hira": "きっさてん",
+    "han": "cật trà điếm",
+    "nghia": "quán cà phê, quán trà",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "図書館",
+    "hira": "としょかん",
+    "han": "đồ thư quán",
+    "nghia": "thư viện",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "会社",
+    "hira": "かいしゃ",
+    "han": "hội xã",
+    "nghia": "công ty",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "学校",
+    "hira": "がっこう",
+    "han": "học hiệu",
+    "nghia": "trường học",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "郵便局",
+    "hira": "ゆうびんきょく",
+    "han": "bưu tiện cục",
+    "nghia": "bưu điện",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "銀行",
+    "hira": "ぎんこう",
+    "han": "ngân hàng",
+    "nghia": "ngân hàng",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "バスてい",
+    "hira": "バスてい",
+    "han": "",
+    "nghia": "trạm xe bus",
+    "lesson": 3,
     "week": 1
   },
   {
     "kanji": "駅",
     "hira": "えき",
-    "han": "",
+    "han": "dịch",
     "nghia": "nhà ga",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "いくら",
+    "hira": "いくら",
+    "han": "",
+    "nghia": "bao nhiêu tiền",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "円",
+    "hira": "えん",
+    "han": "viên",
+    "nghia": "yên (tiền Nhật)",
+    "lesson": 3,
+    "week": 1
+  },
+  {
+    "kanji": "綺麗",
+    "hira": "きれい",
+    "han": "",
+    "nghia": "xinh, đẹp, sạch",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "お菓子",
-    "hira": "おかし",
-    "han": "",
-    "nghia": "Bánh, kẹo",
+    "kanji": "親切",
+    "hira": "しんせつ",
+    "han": "thân thiết",
+    "nghia": "tốt bụng, thân thiện",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "お金",
-    "hira": "おかね",
-    "han": "",
-    "nghia": "tiền",
+    "kanji": "元気",
+    "hira": "げんき",
+    "han": "nguyên khí",
+    "nghia": "khỏe mạnh, vui vẻ",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "お酒",
-    "hira": "おさけ",
+    "kanji": "静か",
+    "hira": "しずか",
     "han": "",
-    "nghia": "rượu",
+    "nghia": "yên tĩnh",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "お皿",
-    "hira": "おさら",
+    "kanji": "賑やか",
+    "hira": "にぎやか",
     "han": "",
-    "nghia": "Cái đĩa",
+    "nghia": "náo nhiệt, sầm uất",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "おじさん",
-    "hira": "おじさん",
-    "han": "",
-    "nghia": "chú, bác (người đàn ông trung niên)",
+    "kanji": "有名",
+    "hira": "ゆうめい",
+    "han": "hữu danh",
+    "nghia": "nổi tiếng",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "お茶",
-    "hira": "おちゃ",
-    "han": "",
-    "nghia": "trà",
+    "kanji": "便利",
+    "hira": "べんり",
+    "han": "tiện lợi",
+    "nghia": "tiện lợi",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "弟",
-    "hira": "おとうと",
-    "han": "",
-    "nghia": "em trai (mình)",
+    "kanji": "大切",
+    "hira": "たいせつ",
+    "han": "đại thiết",
+    "nghia": "quan trọng",
     "lesson": 4,
     "week": 1
   },
   {
-    "kanji": "男",
-    "hira": "おとこ",
+    "kanji": "暇",
+    "hira": "ひま",
+    "han": "hà",
+    "nghia": "rảnh rỗi",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "忙しい",
+    "hira": "いそがしい",
     "han": "",
-    "nghia": "nam giới, con trai",
+    "nghia": "bận rộn",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "大きい",
+    "hira": "おおきい",
+    "han": "",
+    "nghia": "to, lớn",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "小さい",
+    "hira": "ちいさい",
+    "han": "",
+    "nghia": "nhỏ, bé",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "新しい",
+    "hira": "あたらしい",
+    "han": "",
+    "nghia": "mới",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "古い",
+    "hira": "ふるい",
+    "han": "",
+    "nghia": "cũ",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "いい",
+    "hira": "いい",
+    "han": "",
+    "nghia": "tốt",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "悪い",
+    "hira": "わるい",
+    "han": "",
+    "nghia": "xấu, tệ",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "暑い",
+    "hira": "あつい",
+    "han": "",
+    "nghia": "nóng (thời tiết)",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "寒い",
+    "hira": "さむい",
+    "han": "",
+    "nghia": "lạnh, rét (thời tiết)",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "熱い",
+    "hira": "あつい",
+    "han": "",
+    "nghia": "nóng (cảm giác, vật)",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "冷たい",
+    "hira": "つめたい",
+    "han": "",
+    "nghia": "lạnh, buốt (cảm giác)",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "難しい",
+    "hira": "むずかしい",
+    "han": "",
+    "nghia": "khó",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "易しい",
+    "hira": "やさしい",
+    "han": "",
+    "nghia": "dễ, hiền lành",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "高い",
+    "hira": "たかい",
+    "han": "",
+    "nghia": "đắt, cao",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "安い",
+    "hira": "やすい",
+    "han": "",
+    "nghia": "rẻ",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "低い",
+    "hira": "ひくい",
+    "han": "",
+    "nghia": "thấp",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "明るい",
+    "hira": "あかるい",
+    "han": "",
+    "nghia": "sáng sủa, tươi sáng",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "暗い",
+    "hira": "くらい",
+    "han": "",
+    "nghia": "tối, u ám",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "面白い",
+    "hira": "おもしろい",
+    "han": "",
+    "nghia": "thú vị",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "可愛い",
+    "hira": "かわいい",
+    "han": "",
+    "nghia": "dễ thương",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "美味しい",
+    "hira": "おいしい",
+    "han": "",
+    "nghia": "ngon",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "楽しい",
+    "hira": "たのしい",
+    "han": "",
+    "nghia": "vui vẻ",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "白い",
+    "hira": "しろい",
+    "han": "",
+    "nghia": "trắng",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "赤い",
+    "hira": "あかい",
+    "han": "",
+    "nghia": "đỏ",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "青い",
+    "hira": "あおい",
+    "han": "",
+    "nghia": "xanh (lam, lục)",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "黒い",
+    "hira": "くろい",
+    "han": "",
+    "nghia": "đen",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "花",
+    "hira": "はな",
+    "han": "hoa",
+    "nghia": "hoa",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "桜",
+    "hira": "さくら",
+    "han": "",
+    "nghia": "hoa anh đào",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "山",
+    "hira": "やま",
+    "han": "sơn",
+    "nghia": "núi",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "富士山",
+    "hira": "ふじさん",
+    "han": "phú sĩ sơn",
+    "nghia": "núi Phú Sĩ",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "町",
+    "hira": "まち",
+    "han": "",
+    "nghia": "thị trấn, thành phố",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "食べ物",
+    "hira": "たべもの",
+    "han": "thực vật",
+    "nghia": "đồ ăn, thức ăn",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "着物",
+    "hira": "きもの",
+    "han": "",
+    "nghia": "kimono",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "所",
+    "hira": "ところ",
+    "han": "sở",
+    "nghia": "nơi, chỗ",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "勉強",
+    "hira": "べんきょう",
+    "han": "miễn cưỡng",
+    "nghia": "học, việc học",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "生活",
+    "hira": "せいかつ",
+    "han": "sinh hoạt",
+    "nghia": "cuộc sống, sinh hoạt",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "料理",
+    "hira": "りょうり",
+    "han": "liệu lý",
+    "nghia": "món ăn, nấu ăn",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "パスポート",
+    "hira": "パスポート",
+    "han": "",
+    "nghia": "hộ chiếu",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "どう",
+    "hira": "どう",
+    "han": "",
+    "nghia": "thế nào",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "どんな",
+    "hira": "どんな",
+    "han": "",
+    "nghia": "như thế nào, loại gì",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "とても",
+    "hira": "とても",
+    "han": "",
+    "nghia": "rất",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "あまり",
+    "hira": "あまり",
+    "han": "",
+    "nghia": "không ~ lắm",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "そして",
+    "hira": "そして",
+    "han": "",
+    "nghia": "hơn nữa, và",
+    "lesson": 4,
+    "week": 1
+  },
+  {
+    "kanji": "月曜日",
+    "hira": "げつようび",
+    "han": "nguyệt diệu nhật",
+    "nghia": "thứ Hai",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "火曜日",
+    "hira": "かようび",
+    "han": "hỏa diệu nhật",
+    "nghia": "thứ Ba",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "水曜日",
+    "hira": "すいようび",
+    "han": "thủy diệu nhật",
+    "nghia": "thứ Tư",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "木曜日",
+    "hira": "もくようび",
+    "han": "mộc diệu nhật",
+    "nghia": "thứ Năm",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "金曜日",
+    "hira": "きんようび",
+    "han": "kim diệu nhật",
+    "nghia": "thứ Sáu",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "土曜日",
+    "hira": "どようび",
+    "han": "thổ diệu nhật",
+    "nghia": "thứ Bảy",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "日曜日",
+    "hira": "にちようび",
+    "han": "nhật diệu nhật",
+    "nghia": "Chủ nhật",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "何曜日",
+    "hira": "なんようび",
+    "han": "hà diệu nhật",
+    "nghia": "thứ mấy",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "今",
+    "hira": "いま",
+    "han": "kim",
+    "nghia": "bây giờ",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "午前",
+    "hira": "ごぜん",
+    "han": "ngọ tiền",
+    "nghia": "buổi sáng, AM",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "午後",
+    "hira": "ごご",
+    "han": "ngọ hậu",
+    "nghia": "buổi chiều, PM",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "半",
+    "hira": "はん",
+    "han": "bán",
+    "nghia": "nửa (giờ)",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "朝",
+    "hira": "あさ",
+    "han": "triêu",
+    "nghia": "buổi sáng",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "昼",
+    "hira": "ひる",
+    "han": "trú",
+    "nghia": "buổi trưa",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "夕方",
+    "hira": "ゆうがた",
+    "han": "",
+    "nghia": "chiều tối, hoàng hôn",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "晩",
+    "hira": "ばん",
+    "han": "vãn",
+    "nghia": "buổi tối",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "夜",
+    "hira": "よる",
+    "han": "dạ",
+    "nghia": "ban đêm",
     "lesson": 5,
     "week": 1
   },
   {
     "kanji": "一昨日",
     "hira": "おととい",
-    "han": "",
+    "han": "tiền nhật",
     "nghia": "hôm kia",
     "lesson": 5,
     "week": 1
   },
   {
-    "kanji": "大人",
-    "hira": "おとな",
-    "han": "",
-    "nghia": "người lớn",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "おなか",
-    "hira": "おなか",
-    "han": "",
-    "nghia": "bụng",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "同じ",
-    "hira": "おなじ",
-    "han": "",
-    "nghia": "giống nhau",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "お風呂",
-    "hira": "おふろ",
-    "han": "",
-    "nghia": "Bồn tắm",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "かぎ",
-    "hira": "かぎ",
-    "han": "",
-    "nghia": "chìa khóa",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "傘",
-    "hira": "かさ",
-    "han": "",
-    "nghia": "cái ô",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "風",
-    "hira": "かぜ",
-    "han": "",
-    "nghia": "gió",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "風邪",
-    "hira": "かぜ",
-    "han": "",
-    "nghia": "cảm, cúm",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "家族",
-    "hira": "かぞく",
-    "han": "",
-    "nghia": "Gia đình",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "家庭",
-    "hira": "かてい",
-    "han": "",
-    "nghia": "gia đình",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "角",
-    "hira": "かど",
-    "han": "",
-    "nghia": "góc (bàn, cua, quẹo)",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "紙",
-    "hira": "かみ",
-    "han": "",
-    "nghia": "giấy",
-    "lesson": 5,
-    "week": 1
-  },
-  {
-    "kanji": "川",
-    "hira": "かわ",
-    "han": "",
-    "nghia": "sông",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "漢字",
-    "hira": "かんじ",
-    "han": "",
-    "nghia": "chữ Hán",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "木",
-    "hira": "き",
-    "han": "",
-    "nghia": "cây, gỗ",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "黄色",
-    "hira": "きいろ",
-    "han": "",
-    "nghia": "màu vàng",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "北",
-    "hira": "きた",
-    "han": "",
-    "nghia": "phía Bắc",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "切手",
-    "hira": "きって",
-    "han": "",
-    "nghia": "tem",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "切符",
-    "hira": "きっぷ",
-    "han": "",
-    "nghia": "vé (tàu, xe)",
-    "lesson": 6,
-    "week": 1
-  },
-  {
     "kanji": "昨日",
     "hira": "きのう",
-    "han": "",
-    "nghia": "Hôm qua",
-    "lesson": 6,
+    "han": "tạc nhật",
+    "nghia": "hôm qua",
+    "lesson": 5,
     "week": 1
   },
   {
     "kanji": "今日",
     "hira": "きょう",
-    "han": "",
-    "nghia": "Hôm nay",
-    "lesson": 6,
+    "han": "kim nhật",
+    "nghia": "hôm nay",
+    "lesson": 5,
     "week": 1
   },
   {
-    "kanji": "去年",
-    "hira": "きょねん",
-    "han": "",
-    "nghia": "năm ngoái",
-    "lesson": 6,
+    "kanji": "明日",
+    "hira": "あした",
+    "han": "minh nhật",
+    "nghia": "ngày mai",
+    "lesson": 5,
     "week": 1
   },
   {
-    "kanji": "銀行",
-    "hira": "ぎんこう",
+    "kanji": "明後日",
+    "hira": "あさって",
     "han": "",
-    "nghia": "Ngân hàng",
-    "lesson": 6,
+    "nghia": "ngày kia",
+    "lesson": 5,
     "week": 1
-  },
-  {
-    "kanji": "薬",
-    "hira": "くすり",
-    "han": "",
-    "nghia": "thuốc",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "果物",
-    "hira": "くだもの",
-    "han": "",
-    "nghia": "hoa quả, trái cây",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "口",
-    "hira": "くち",
-    "han": "",
-    "nghia": "miệng",
-    "lesson": 6,
-    "week": 1
-  },
-  {
-    "kanji": "靴",
-    "hira": "くつ",
-    "han": "",
-    "nghia": "giày dép",
-    "lesson": 7,
-    "week": 2
-  },
-  {
-    "kanji": "靴下",
-    "hira": "くつした",
-    "han": "",
-    "nghia": "cái tất",
-    "lesson": 7,
-    "week": 2
-  },
-  {
-    "kanji": "国",
-    "hira": "くに",
-    "han": "",
-    "nghia": "đất nước",
-    "lesson": 7,
-    "week": 2
-  },
-  {
-    "kanji": "車",
-    "hira": "くるま",
-    "han": "",
-    "nghia": "xe hơi, xe",
-    "lesson": 7,
-    "week": 2
-  },
-  {
-    "kanji": "黒",
-    "hira": "くろ",
-    "han": "",
-    "nghia": "đen, màu đen",
-    "lesson": 7,
-    "week": 2
   },
   {
     "kanji": "今朝",
     "hira": "けさ",
-    "han": "",
+    "han": "kim triêu",
     "nghia": "sáng nay",
-    "lesson": 7,
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "今晩",
+    "hira": "こんばん",
+    "han": "kim vãn",
+    "nghia": "tối nay",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "休み",
+    "hira": "やすみ",
+    "han": "",
+    "nghia": "ngày nghỉ, kỳ nghỉ",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "昼休み",
+    "hira": "ひるやすみ",
+    "han": "",
+    "nghia": "nghỉ trưa",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "毎朝",
+    "hira": "まいあさ",
+    "han": "mỗi triêu",
+    "nghia": "mỗi buổi sáng",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "毎晩",
+    "hira": "まいばん",
+    "han": "mỗi vãn",
+    "nghia": "mỗi buổi tối",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "毎日",
+    "hira": "まいにち",
+    "han": "mỗi nhật",
+    "nghia": "mỗi ngày",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "何時",
+    "hira": "なんじ",
+    "han": "hà thời",
+    "nghia": "mấy giờ",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "何分",
+    "hira": "なんぷん",
+    "han": "hà phân",
+    "nghia": "mấy phút",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "働く",
+    "hira": "はたらく",
+    "han": "",
+    "nghia": "làm việc",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "休む",
+    "hira": "やすむ",
+    "han": "",
+    "nghia": "nghỉ ngơi",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "終わる",
+    "hira": "おわる",
+    "han": "",
+    "nghia": "kết thúc",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "起きる",
+    "hira": "おきる",
+    "han": "",
+    "nghia": "thức dậy",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "寝る",
+    "hira": "ねる",
+    "han": "",
+    "nghia": "ngủ",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "勉強する",
+    "hira": "べんきょうする",
+    "han": "",
+    "nghia": "học bài, học",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "試験",
+    "hira": "しけん",
+    "han": "thí nghiệm",
+    "nghia": "kỳ thi",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "会議",
+    "hira": "かいぎ",
+    "han": "hội nghị",
+    "nghia": "cuộc họp",
+    "lesson": 5,
+    "week": 1
+  },
+  {
+    "kanji": "飛行機",
+    "hira": "ひこうき",
+    "han": "phi hành cơ",
+    "nghia": "máy bay",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "結婚",
-    "hira": "けっこん",
-    "han": "",
-    "nghia": "kết hôn",
-    "lesson": 7,
+    "kanji": "船",
+    "hira": "ふね",
+    "han": "thuyền",
+    "nghia": "tàu thuyền",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "公園",
-    "hira": "こうえん",
-    "han": "",
-    "nghia": "công viên",
-    "lesson": 7,
+    "kanji": "地下鉄",
+    "hira": "ちかてつ",
+    "han": "địa hạ thiết",
+    "nghia": "tàu điện ngầm, metro",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "紅茶",
-    "hira": "こうちゃ",
-    "han": "",
-    "nghia": "trà đen",
-    "lesson": 7,
+    "kanji": "電車",
+    "hira": "でんしゃ",
+    "han": "điện xa",
+    "nghia": "tàu điện",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "声",
-    "hira": "こえ",
+    "kanji": "バイク",
+    "hira": "バイク",
     "han": "",
-    "nghia": "tiếng, giọng nói",
-    "lesson": 7,
+    "nghia": "xe máy, mô-tô",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "午後",
-    "hira": "ごご",
+    "kanji": "バス",
+    "hira": "バス",
     "han": "",
-    "nghia": "buổi chiều",
-    "lesson": 7,
+    "nghia": "xe bus",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "午前",
-    "hira": "ごぜん",
+    "kanji": "タクシー",
+    "hira": "タクシー",
     "han": "",
-    "nghia": "buổi sáng",
-    "lesson": 7,
+    "nghia": "taxi",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "今年",
-    "hira": "ことし",
-    "han": "",
-    "nghia": "năm nay",
-    "lesson": 7,
+    "kanji": "自転車",
+    "hira": "じてんしゃ",
+    "han": "tự chuyển xa",
+    "nghia": "xe đạp",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "言葉",
-    "hira": "ことば",
+    "kanji": "歩いて",
+    "hira": "あるいて",
     "han": "",
-    "nghia": "từ, từ vựng",
-    "lesson": 7,
+    "nghia": "đi bộ",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "子供",
-    "hira": "こども",
+    "kanji": "ホテル",
+    "hira": "ホテル",
     "han": "",
-    "nghia": "trẻ em, con cái",
-    "lesson": 8,
+    "nghia": "khách sạn",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "御飯",
-    "hira": "ごはん",
-    "han": "",
-    "nghia": "cơm, bữa ăn",
-    "lesson": 8,
+    "kanji": "美術館",
+    "hira": "びじゅつかん",
+    "han": "mỹ thuật quán",
+    "nghia": "bảo tàng mỹ thuật",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "これ",
-    "hira": "これ",
-    "han": "",
-    "nghia": "cái này",
-    "lesson": 8,
+    "kanji": "友達",
+    "hira": "ともだち",
+    "han": "hữu đạt",
+    "nghia": "bạn bè",
+    "lesson": 6,
+    "week": 2
+  },
+  {
+    "kanji": "一人で",
+    "hira": "ひとりで",
+    "han": "nhất nhân",
+    "nghia": "một mình",
+    "lesson": 6,
+    "week": 2
+  },
+  {
+    "kanji": "家族",
+    "hira": "かぞく",
+    "han": "gia tộc",
+    "nghia": "gia đình",
+    "lesson": 6,
+    "week": 2
+  },
+  {
+    "kanji": "先週",
+    "hira": "せんしゅう",
+    "han": "tiên chu",
+    "nghia": "tuần trước",
+    "lesson": 6,
+    "week": 2
+  },
+  {
+    "kanji": "今週",
+    "hira": "こんしゅう",
+    "han": "kim chu",
+    "nghia": "tuần này",
+    "lesson": 6,
+    "week": 2
+  },
+  {
+    "kanji": "来週",
+    "hira": "らいしゅう",
+    "han": "lai chu",
+    "nghia": "tuần tới",
+    "lesson": 6,
+    "week": 2
+  },
+  {
+    "kanji": "先月",
+    "hira": "せんげつ",
+    "han": "tiên nguyệt",
+    "nghia": "tháng trước",
+    "lesson": 6,
     "week": 2
   },
   {
     "kanji": "今月",
     "hira": "こんげつ",
-    "han": "",
+    "han": "kim nguyệt",
     "nghia": "tháng này",
-    "lesson": 8,
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "こんな",
-    "hira": "こんな",
-    "han": "",
-    "nghia": "như thế này",
-    "lesson": 8,
+    "kanji": "来月",
+    "hira": "らいげつ",
+    "han": "lai nguyệt",
+    "nghia": "tháng tới",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "今晩",
-    "hira": "こんばん",
-    "han": "",
-    "nghia": "tối nay",
-    "lesson": 8,
+    "kanji": "去年",
+    "hira": "きょねん",
+    "han": "khứ niên",
+    "nghia": "năm ngoái",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "財布",
-    "hira": "さいふ",
-    "han": "",
-    "nghia": "cái ví",
-    "lesson": 8,
+    "kanji": "今年",
+    "hira": "ことし",
+    "han": "kim niên",
+    "nghia": "năm nay",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "魚",
-    "hira": "さかな",
-    "han": "",
-    "nghia": "cá",
-    "lesson": 8,
+    "kanji": "来年",
+    "hira": "らいねん",
+    "han": "lai niên",
+    "nghia": "năm tới",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "作文",
-    "hira": "さくぶん",
-    "han": "",
-    "nghia": "làm văn",
-    "lesson": 8,
+    "kanji": "誕生日",
+    "hira": "たんじょうび",
+    "han": "đản sinh nhật",
+    "nghia": "sinh nhật",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "雑誌",
-    "hira": "ざっし",
-    "han": "",
-    "nghia": "tạp chí",
-    "lesson": 8,
+    "kanji": "何日",
+    "hira": "なんにち",
+    "han": "hà nhật",
+    "nghia": "ngày mấy",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "砂糖",
-    "hira": "さとう",
-    "han": "",
-    "nghia": "đường",
-    "lesson": 8,
+    "kanji": "何月",
+    "hira": "なんがつ",
+    "han": "hà nguyệt",
+    "nghia": "tháng mấy",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "三",
-    "hira": "さん",
+    "kanji": "いつ",
+    "hira": "いつ",
     "han": "",
-    "nghia": "ba",
-    "lesson": 8,
+    "nghia": "khi nào, lúc nào",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "四",
-    "hira": "し/よん",
-    "han": "",
-    "nghia": "bốn",
-    "lesson": 8,
+    "kanji": "行く",
+    "hira": "いく",
+    "han": "hành",
+    "nghia": "đi",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "塩",
-    "hira": "しお",
-    "han": "",
-    "nghia": "muối",
-    "lesson": 8,
+    "kanji": "来る",
+    "hira": "くる",
+    "han": "lai",
+    "nghia": "đến, tới",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "時間",
-    "hira": "じかん",
+    "kanji": "帰る",
+    "hira": "かえる",
     "han": "",
-    "nghia": "Thời gian",
-    "lesson": 9,
+    "nghia": "về",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "仕事",
-    "hira": "しごと",
-    "han": "",
-    "nghia": "công việc",
-    "lesson": 9,
+    "kanji": "空港",
+    "hira": "くうこう",
+    "han": "không cảng",
+    "nghia": "sân bay",
+    "lesson": 6,
     "week": 2
   },
   {
-    "kanji": "辞書",
-    "hira": "じしょ",
+    "kanji": "チョコレート",
+    "hira": "チョコレート",
     "han": "",
-    "nghia": "từ điển",
-    "lesson": 9,
+    "nghia": "sô-cô-la",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "下",
-    "hira": "した",
+    "kanji": "パン",
+    "hira": "パン",
     "han": "",
-    "nghia": "dưới",
-    "lesson": 9,
+    "nghia": "bánh mì",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "自動車",
-    "hira": "じどうしゃ",
+    "kanji": "ご飯",
+    "hira": "ごはん",
     "han": "",
-    "nghia": "ô tô, xe hơi",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "自分",
-    "hira": "じぶん",
-    "han": "",
-    "nghia": "bản thân, tự mình",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "写真",
-    "hira": "しゃしん",
-    "han": "",
-    "nghia": "ảnh",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "十",
-    "hira": "じゅう",
-    "han": "",
-    "nghia": "mười",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "授業",
-    "hira": "じゅぎょう",
-    "han": "",
-    "nghia": "giờ học",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "宿題",
-    "hira": "しゅくだい",
-    "han": "",
-    "nghia": "bài tập về nhà",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "背",
-    "hira": "せ",
-    "han": "",
-    "nghia": "lưng",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "生徒",
-    "hira": "せいと",
-    "han": "",
-    "nghia": "học sinh",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "千",
-    "hira": "せん",
-    "han": "",
-    "nghia": "nghìn",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "掃除",
-    "hira": "そうじ",
-    "han": "",
-    "nghia": "dọn dẹp",
-    "lesson": 9,
-    "week": 2
-  },
-  {
-    "kanji": "外",
-    "hira": "そと",
-    "han": "",
-    "nghia": "ngoài",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "空",
-    "hira": "そら",
-    "han": "",
-    "nghia": "bầu trời",
-    "lesson": 10,
+    "nghia": "cơm, bữa ăn",
+    "lesson": 7,
     "week": 2
   },
   {
@@ -1052,287 +1876,431 @@
     "hira": "たまご",
     "han": "",
     "nghia": "trứng",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "地図",
-    "hira": "ちず",
-    "han": "",
-    "nghia": "Bản đồ",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "机",
-    "hira": "つくえ",
-    "han": "",
-    "nghia": "bàn",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "手",
-    "hira": "て",
-    "han": "",
-    "nghia": "tay",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "手紙",
-    "hira": "てがみ",
-    "han": "",
-    "nghia": "thư",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "出口",
-    "hira": "でぐち",
-    "han": "",
-    "nghia": "cửa ra, lối ra",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "天気",
-    "hira": "てんき",
-    "han": "",
-    "nghia": "thời tiết",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "電気",
-    "hira": "でんき",
-    "han": "",
-    "nghia": "điện, đèn điện",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "電車",
-    "hira": "でんしゃ",
-    "han": "",
-    "nghia": "tàu điện",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "電話",
-    "hira": "でんわ",
-    "han": "",
-    "nghia": "điện thoại",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "戸",
-    "hira": "と",
-    "han": "",
-    "nghia": "Cửa",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "所",
-    "hira": "ところ",
-    "han": "",
-    "nghia": "nơi, chỗ",
-    "lesson": 10,
-    "week": 2
-  },
-  {
-    "kanji": "年",
-    "hira": "とし",
-    "han": "",
-    "nghia": "năm",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "動物",
-    "hira": "どうぶつ",
-    "han": "",
-    "nghia": "động vật",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "時々",
-    "hira": "ときどき",
-    "han": "",
-    "nghia": "thỉnh thoảng",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "時計",
-    "hira": "とけい",
-    "han": "",
-    "nghia": "đồng hồ",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "隣",
-    "hira": "となり",
-    "han": "",
-    "nghia": "bên cạnh",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "土曜日",
-    "hira": "どようび",
-    "han": "",
-    "nghia": "Thứ bảy",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "鳥",
-    "hira": "とり",
-    "han": "",
-    "nghia": "con chim",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "とり肉",
-    "hira": "とりにく",
-    "han": "",
-    "nghia": "thịt gà",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "ナイフ",
-    "hira": "naifu",
-    "han": "",
-    "nghia": "dao",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "中",
-    "hira": "なか",
-    "han": "",
-    "nghia": "trong",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "夏",
-    "hira": "なつ",
-    "han": "",
-    "nghia": "mùa hè",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "七つ",
-    "hira": "ななつ",
-    "han": "",
-    "nghia": "bảy cái (đếm vật nói chung)",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "名前",
-    "hira": "なまえ",
-    "han": "",
-    "nghia": "tên",
-    "lesson": 11,
-    "week": 2
-  },
-  {
-    "kanji": "二",
-    "hira": "に",
-    "han": "",
-    "nghia": "hai",
-    "lesson": 11,
+    "lesson": 7,
     "week": 2
   },
   {
     "kanji": "肉",
     "hira": "にく",
-    "han": "",
+    "han": "nhục",
     "nghia": "thịt",
-    "lesson": 12,
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "西",
-    "hira": "にし",
-    "han": "",
-    "nghia": "phía Tây",
-    "lesson": 12,
+    "kanji": "牛肉",
+    "hira": "ぎゅうにく",
+    "han": "ngưu nhục",
+    "nghia": "thịt bò",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "荷物",
-    "hira": "にもつ",
+    "kanji": "魚",
+    "hira": "さかな",
+    "han": "ngư",
+    "nghia": "cá",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "野菜",
+    "hira": "やさい",
+    "han": "dã thái",
+    "nghia": "rau củ",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "果物",
+    "hira": "くだもの",
+    "han": "quả vật",
+    "nghia": "hoa quả, trái cây",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "水",
+    "hira": "みず",
+    "han": "thủy",
+    "nghia": "nước",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "お茶",
+    "hira": "おちゃ",
+    "han": "trà",
+    "nghia": "trà",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "コーヒー",
+    "hira": "コーヒー",
     "han": "",
-    "nghia": "hành lý, đồ đạc",
-    "lesson": 12,
+    "nghia": "cà phê",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "ワイン",
+    "hira": "ワイン",
+    "han": "",
+    "nghia": "rượu vang",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "ジュース",
+    "hira": "ジュース",
+    "han": "",
+    "nghia": "nước hoa quả",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "ビール",
+    "hira": "ビール",
+    "han": "",
+    "nghia": "bia",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "お酒",
+    "hira": "おさけ",
+    "han": "tửu",
+    "nghia": "rượu",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "たばこ",
+    "hira": "たばこ",
+    "han": "",
+    "nghia": "thuốc lá",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "薬",
+    "hira": "くすり",
+    "han": "dược",
+    "nghia": "thuốc",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "手紙",
+    "hira": "てがみ",
+    "han": "thủ chỉ",
+    "nghia": "thư tay",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "メール",
+    "hira": "メール",
+    "han": "",
+    "nghia": "email, tin nhắn",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "レポート",
+    "hira": "レポート",
+    "han": "",
+    "nghia": "báo cáo",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "音楽",
+    "hira": "おんがく",
+    "han": "âm nhạc",
+    "nghia": "âm nhạc",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "映画",
+    "hira": "えいが",
+    "han": "điện ảnh",
+    "nghia": "phim",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "写真",
+    "hira": "しゃしん",
+    "han": "tả chân",
+    "nghia": "ảnh, hình",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "宿題",
+    "hira": "しゅくだい",
+    "han": "túc đề",
+    "nghia": "bài tập về nhà",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "テニス",
+    "hira": "テニス",
+    "han": "",
+    "nghia": "tennis",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "サッカー",
+    "hira": "サッカー",
+    "han": "",
+    "nghia": "bóng đá",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "お花見",
+    "hira": "おはなみ",
+    "han": "",
+    "nghia": "ngắm hoa anh đào",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "レストラン",
+    "hira": "レストラン",
+    "han": "",
+    "nghia": "nhà hàng",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "カフェ",
+    "hira": "カフェ",
+    "han": "",
+    "nghia": "quán cà phê",
+    "lesson": 7,
     "week": 2
   },
   {
     "kanji": "庭",
     "hira": "にわ",
     "han": "",
-    "nghia": "vườn",
-    "lesson": 12,
+    "nghia": "vườn, sân",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "猫",
-    "hira": "ねこ",
-    "han": "",
-    "nghia": "mèo",
-    "lesson": 12,
+    "kanji": "店",
+    "hira": "みせ",
+    "han": "điếm",
+    "nghia": "cửa hàng",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "歯",
-    "hira": "は",
+    "kanji": "読む",
+    "hira": "よむ",
     "han": "",
-    "nghia": "răng",
-    "lesson": 12,
+    "nghia": "đọc",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "灰皿",
-    "hira": "はいざら",
+    "kanji": "書く",
+    "hira": "かく",
     "han": "",
-    "nghia": "gạt tàn thuốc",
-    "lesson": 12,
+    "nghia": "viết",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "葉書",
-    "hira": "はがき",
+    "kanji": "買う",
+    "hira": "かう",
     "han": "",
-    "nghia": "bưu thiếp",
-    "lesson": 12,
+    "nghia": "mua",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "箱",
-    "hira": "はこ",
+    "kanji": "撮る",
+    "hira": "とる",
     "han": "",
-    "nghia": "cái hộp",
-    "lesson": 12,
+    "nghia": "chụp (ảnh)",
+    "lesson": 7,
     "week": 2
   },
   {
-    "kanji": "橋",
-    "hira": "はし",
+    "kanji": "聞く",
+    "hira": "きく",
     "han": "",
-    "nghia": "cầu",
-    "lesson": 12,
+    "nghia": "nghe, hỏi",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "する",
+    "hira": "する",
+    "han": "",
+    "nghia": "làm",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "会う",
+    "hira": "あう",
+    "han": "",
+    "nghia": "gặp",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "飲む",
+    "hira": "のむ",
+    "han": "",
+    "nghia": "uống",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "食べる",
+    "hira": "たべる",
+    "han": "",
+    "nghia": "ăn",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "見る",
+    "hira": "みる",
+    "han": "",
+    "nghia": "xem, nhìn",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "一緒に",
+    "hira": "いっしょに",
+    "han": "nhất thự",
+    "nghia": "cùng nhau",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "いつも",
+    "hira": "いつも",
+    "han": "",
+    "nghia": "luôn luôn",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "時々",
+    "hira": "ときどき",
+    "han": "thời thời",
+    "nghia": "thỉnh thoảng",
+    "lesson": 7,
+    "week": 2
+  },
+  {
+    "kanji": "毎週",
+    "hira": "まいしゅう",
+    "han": "mỗi chu",
+    "nghia": "mỗi tuần",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "毎月",
+    "hira": "まいつき",
+    "han": "mỗi nguyệt",
+    "nghia": "mỗi tháng",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "毎年",
+    "hira": "まいとし",
+    "han": "mỗi niên",
+    "nghia": "mỗi năm",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "父",
+    "hira": "ちち",
+    "han": "phụ",
+    "nghia": "cha, bố (của mình)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "母",
+    "hira": "はは",
+    "han": "mẫu",
+    "nghia": "mẹ (của mình)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "お父さん",
+    "hira": "おとうさん",
+    "han": "",
+    "nghia": "bố (của người khác)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "お母さん",
+    "hira": "おかあさん",
+    "han": "",
+    "nghia": "mẹ (của người khác)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "夫",
+    "hira": "おっと",
+    "han": "",
+    "nghia": "chồng (của mình)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "妻",
+    "hira": "つま",
+    "han": "",
+    "nghia": "vợ (của mình)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "ご主人",
+    "hira": "ごしゅじん",
+    "han": "",
+    "nghia": "chồng (của người khác)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "奥さん",
+    "hira": "おくさん",
+    "han": "",
+    "nghia": "vợ (của người khác)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "手",
+    "hira": "て",
+    "han": "thủ",
+    "nghia": "tay",
+    "lesson": 8,
     "week": 2
   },
   {
@@ -1340,255 +2308,775 @@
     "hira": "はし",
     "han": "",
     "nghia": "đũa",
-    "lesson": 12,
+    "lesson": 8,
     "week": 2
   },
   {
-    "kanji": "八",
-    "hira": "はち",
+    "kanji": "スプーン",
+    "hira": "スプーン",
     "han": "",
-    "nghia": "tám",
-    "lesson": 12,
+    "nghia": "thìa, muỗng",
+    "lesson": 8,
     "week": 2
   },
   {
-    "kanji": "花",
-    "hira": "はな",
+    "kanji": "フォーク",
+    "hira": "フォーク",
     "han": "",
-    "nghia": "hoa",
-    "lesson": 12,
+    "nghia": "nĩa",
+    "lesson": 8,
     "week": 2
   },
   {
-    "kanji": "鼻",
-    "hira": "はな",
+    "kanji": "ナイフ",
+    "hira": "ナイフ",
     "han": "",
-    "nghia": "mũi",
-    "lesson": 12,
+    "nghia": "dao",
+    "lesson": 8,
     "week": 2
   },
   {
-    "kanji": "話",
-    "hira": "はなし",
+    "kanji": "はさみ",
+    "hira": "はさみ",
     "han": "",
-    "nghia": "câu chuyện",
-    "lesson": 13,
-    "week": 3
+    "nghia": "kéo",
+    "lesson": 8,
+    "week": 2
   },
   {
-    "kanji": "春",
-    "hira": "はる",
-    "han": "",
-    "nghia": "mùa xuân",
-    "lesson": 13,
-    "week": 3
+    "kanji": "紙",
+    "hira": "かみ",
+    "han": "chỉ",
+    "nghia": "giấy",
+    "lesson": 8,
+    "week": 2
   },
   {
-    "kanji": "半",
-    "hira": "はん",
+    "kanji": "シャツ",
+    "hira": "シャツ",
     "han": "",
-    "nghia": "một nửa",
-    "lesson": 13,
-    "week": 3
+    "nghia": "áo sơ mi",
+    "lesson": 8,
+    "week": 2
   },
   {
-    "kanji": "晩",
-    "hira": "ばん",
+    "kanji": "プレゼント",
+    "hira": "プレゼント",
     "han": "",
-    "nghia": "buổi tối",
-    "lesson": 13,
-    "week": 3
+    "nghia": "quà tặng",
+    "lesson": 8,
+    "week": 2
   },
   {
-    "kanji": "番号",
-    "hira": "ばんごう",
-    "han": "",
-    "nghia": "số",
-    "lesson": 13,
-    "week": 3
+    "kanji": "切符",
+    "hira": "きっぷ",
+    "han": "thiết phù",
+    "nghia": "vé",
+    "lesson": 8,
+    "week": 2
   },
   {
-    "kanji": "半分",
-    "hira": "はんぶん",
-    "han": "",
-    "nghia": "một nửa",
-    "lesson": 13,
-    "week": 3
+    "kanji": "お金",
+    "hira": "おかね",
+    "han": "kim",
+    "nghia": "tiền",
+    "lesson": 8,
+    "week": 2
   },
   {
-    "kanji": "東",
-    "hira": "ひがし",
+    "kanji": "クリスマス",
+    "hira": "クリスマス",
     "han": "",
-    "nghia": "phía Đông",
-    "lesson": 13,
-    "week": 3
+    "nghia": "Giáng sinh",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "インターネット",
+    "hira": "インターネット",
+    "han": "",
+    "nghia": "internet",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "ニュース",
+    "hira": "ニュース",
+    "han": "",
+    "nghia": "tin tức",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "切る",
+    "hira": "きる",
+    "han": "",
+    "nghia": "cắt",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "送る",
+    "hira": "おくる",
+    "han": "",
+    "nghia": "gửi",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "もらう",
+    "hira": "もらう",
+    "han": "",
+    "nghia": "nhận, được cho",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "習う",
+    "hira": "ならう",
+    "han": "",
+    "nghia": "học (từ thầy)",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "貸す",
+    "hira": "かす",
+    "han": "",
+    "nghia": "cho mượn",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "あげる",
+    "hira": "あげる",
+    "han": "",
+    "nghia": "tặng, cho",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "教える",
+    "hira": "おしえる",
+    "han": "",
+    "nghia": "dạy, chỉ",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "電話をかける",
+    "hira": "でんわをかける",
+    "han": "",
+    "nghia": "gọi điện thoại",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "借りる",
+    "hira": "かりる",
+    "han": "",
+    "nghia": "mượn",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "もう",
+    "hira": "もう",
+    "han": "",
+    "nghia": "rồi, đã",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "まだ",
+    "hira": "まだ",
+    "han": "",
+    "nghia": "vẫn còn, chưa",
+    "lesson": 8,
+    "week": 2
+  },
+  {
+    "kanji": "好き",
+    "hira": "すき",
+    "han": "",
+    "nghia": "thích",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "嫌い",
+    "hira": "きらい",
+    "han": "",
+    "nghia": "ghét, không thích",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "上手",
+    "hira": "じょうず",
+    "han": "thượng thủ",
+    "nghia": "giỏi, khéo léo",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "下手",
+    "hira": "へた",
+    "han": "hạ thủ",
+    "nghia": "kém, vụng về",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "お祖父さん",
+    "hira": "おじいさん",
+    "han": "",
+    "nghia": "ông (người khác)",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "お祖母さん",
+    "hira": "おばあさん",
+    "han": "",
+    "nghia": "bà (người khác)",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "歯医者",
+    "hira": "はいしゃ",
+    "han": "nha y giả",
+    "nghia": "nha sĩ",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "料理",
+    "hira": "りょうり",
+    "han": "liệu lý",
+    "nghia": "nấu ăn, món ăn",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "飲み物",
+    "hira": "のみもの",
+    "han": "",
+    "nghia": "đồ uống",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "スポーツ",
+    "hira": "スポーツ",
+    "han": "",
+    "nghia": "thể thao",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "野球",
+    "hira": "やきゅう",
+    "han": "dã cầu",
+    "nghia": "bóng chày",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "ダンス",
+    "hira": "ダンス",
+    "han": "",
+    "nghia": "khiêu vũ",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "カラオケ",
+    "hira": "カラオケ",
+    "han": "",
+    "nghia": "karaoke",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "歌",
+    "hira": "うた",
+    "han": "ca",
+    "nghia": "bài hát",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "歌舞伎",
+    "hira": "かぶき",
+    "han": "ca vũ kỳ",
+    "nghia": "ca kịch truyền thống Nhật",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "絵",
+    "hira": "え",
+    "han": "họa",
+    "nghia": "tranh, hình vẽ",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "字",
+    "hira": "じ",
+    "han": "tự",
+    "nghia": "chữ",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "漢字",
+    "hira": "かんじ",
+    "han": "hán tự",
+    "nghia": "chữ Hán, kanji",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "風邪",
+    "hira": "かぜ",
+    "han": "phong tà",
+    "nghia": "cảm cúm",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "熱",
+    "hira": "ねつ",
+    "han": "nhiệt",
+    "nghia": "sốt, nhiệt",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "時間",
+    "hira": "じかん",
+    "han": "thời gian",
+    "nghia": "thời gian",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "用事",
+    "hira": "ようじ",
+    "han": "dụng sự",
+    "nghia": "việc cần làm",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "約束",
+    "hira": "やくそく",
+    "han": "ước thúc",
+    "nghia": "hẹn, lời hứa",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "歯",
+    "hira": "は",
+    "han": "nha",
+    "nghia": "răng",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "分かる",
+    "hira": "わかる",
+    "han": "",
+    "nghia": "hiểu",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "有る",
+    "hira": "ある",
+    "han": "",
+    "nghia": "có (vật)",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "よく",
+    "hira": "よく",
+    "han": "",
+    "nghia": "thường xuyên, tốt",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "だいたい",
+    "hira": "だいたい",
+    "han": "",
+    "nghia": "hầu hết, đại khái",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "たくさん",
+    "hira": "たくさん",
+    "han": "",
+    "nghia": "nhiều",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "少し",
+    "hira": "すこし",
+    "han": "",
+    "nghia": "một chút, ít",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "全然",
+    "hira": "ぜんぜん",
+    "han": "toàn nhiên",
+    "nghia": "hoàn toàn không (+ phủ định)",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "コンサート",
+    "hira": "コンサート",
+    "han": "",
+    "nghia": "buổi hòa nhạc",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "チケット",
+    "hira": "チケット",
+    "han": "",
+    "nghia": "vé",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "残念",
+    "hira": "ざんねん",
+    "han": "tàn niệm",
+    "nghia": "tiếc, đáng tiếc",
+    "lesson": 9,
+    "week": 2
+  },
+  {
+    "kanji": "色々",
+    "hira": "いろいろ",
+    "han": "",
+    "nghia": "nhiều loại, đủ thứ",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "男の人",
+    "hira": "おとこのひと",
+    "han": "",
+    "nghia": "đàn ông, nam giới",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "女の人",
+    "hira": "おんなのひと",
+    "han": "",
+    "nghia": "phụ nữ, nữ giới",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "男の子",
+    "hira": "おとこのこ",
+    "han": "",
+    "nghia": "bé trai",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "女の子",
+    "hira": "おんなのこ",
+    "han": "",
+    "nghia": "bé gái",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "犬",
+    "hira": "いぬ",
+    "han": "khuyển",
+    "nghia": "chó",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "猫",
+    "hira": "ねこ",
+    "han": "miêu",
+    "nghia": "mèo",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "木",
+    "hira": "き",
+    "han": "mộc",
+    "nghia": "cây",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "物",
+    "hira": "もの",
+    "han": "vật",
+    "nghia": "vật, thứ",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "箱",
+    "hira": "はこ",
+    "han": "",
+    "nghia": "hộp",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "冷蔵庫",
+    "hira": "れいぞうこ",
+    "han": "lãnh tạng khố",
+    "nghia": "tủ lạnh",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "テーブル",
+    "hira": "テーブル",
+    "han": "",
+    "nghia": "bàn ăn",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "ベッド",
+    "hira": "ベッド",
+    "han": "",
+    "nghia": "giường",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "公園",
+    "hira": "こうえん",
+    "han": "công viên",
+    "nghia": "công viên",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "本屋",
+    "hira": "ほんや",
+    "han": "",
+    "nghia": "nhà sách, hiệu sách",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "池",
+    "hira": "いけ",
+    "han": "trì",
+    "nghia": "ao, hồ nhỏ",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "上",
+    "hira": "うえ",
+    "han": "thượng",
+    "nghia": "trên, phía trên",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "下",
+    "hira": "した",
+    "han": "hạ",
+    "nghia": "dưới, phía dưới",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "前",
+    "hira": "まえ",
+    "han": "tiền",
+    "nghia": "trước, phía trước",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "後ろ",
+    "hira": "うしろ",
+    "han": "hậu",
+    "nghia": "sau, phía sau",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "右",
+    "hira": "みぎ",
+    "han": "hữu",
+    "nghia": "bên phải",
+    "lesson": 10,
+    "week": 2
   },
   {
     "kanji": "左",
     "hira": "ひだり",
+    "han": "tả",
+    "nghia": "bên trái",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "中",
+    "hira": "なか",
+    "han": "trung",
+    "nghia": "trong, bên trong",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "外",
+    "hira": "そと",
+    "han": "ngoại",
+    "nghia": "ngoài, bên ngoài",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "隣",
+    "hira": "となり",
+    "han": "lân",
+    "nghia": "bên cạnh",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "近く",
+    "hira": "ちかく",
     "han": "",
-    "nghia": "phía bên tay trái",
-    "lesson": 13,
+    "nghia": "gần, vùng lân cận",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "間",
+    "hira": "あいだ",
+    "han": "gian",
+    "nghia": "khoảng giữa",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "居る",
+    "hira": "いる",
+    "han": "",
+    "nghia": "có (người, động vật)",
+    "lesson": 10,
+    "week": 2
+  },
+  {
+    "kanji": "恋人",
+    "hira": "こいびと",
+    "han": "luyến nhân",
+    "nghia": "người yêu",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "人",
-    "hira": "ひと",
-    "han": "",
-    "nghia": "người",
-    "lesson": 13,
+    "kanji": "兄",
+    "hira": "あに",
+    "han": "huynh",
+    "nghia": "anh trai (của mình)",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "一つ",
-    "hira": "ひとつ",
+    "kanji": "お兄さん",
+    "hira": "おにいさん",
     "han": "",
-    "nghia": "một cái (đếm vật nói chung)",
-    "lesson": 13,
+    "nghia": "anh trai (của người khác)",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "一月",
-    "hira": "いちがつ",
-    "han": "",
-    "nghia": "tháng 1",
-    "lesson": 13,
+    "kanji": "姉",
+    "hira": "あね",
+    "han": "tỷ",
+    "nghia": "chị gái (của mình)",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "一人",
-    "hira": "ひとり",
+    "kanji": "お姉さん",
+    "hira": "おねえさん",
     "han": "",
-    "nghia": "một người",
-    "lesson": 13,
+    "nghia": "chị gái (của người khác)",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "百",
-    "hira": "ひゃく",
-    "han": "",
-    "nghia": "trăm",
-    "lesson": 13,
+    "kanji": "弟",
+    "hira": "おとうと",
+    "han": "đệ",
+    "nghia": "em trai",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "病院",
-    "hira": "びょういん",
-    "han": "",
-    "nghia": "bệnh viện",
-    "lesson": 13,
+    "kanji": "妹",
+    "hira": "いもうと",
+    "han": "muội",
+    "nghia": "em gái",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "病気",
-    "hira": "びょうき",
-    "han": "",
-    "nghia": "bệnh",
-    "lesson": 14,
+    "kanji": "兄弟",
+    "hira": "きょうだい",
+    "han": "huynh đệ",
+    "nghia": "anh chị em",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "昼",
-    "hira": "ひる",
-    "han": "",
-    "nghia": "buổi trưa, ban ngày",
-    "lesson": 14,
+    "kanji": "子供",
+    "hira": "こども",
+    "han": "tử cung",
+    "nghia": "trẻ em",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "封筒",
-    "hira": "ふうとう",
+    "kanji": "アイスクリーム",
+    "hira": "アイスクリーム",
     "han": "",
-    "nghia": "phong bì",
-    "lesson": 14,
+    "nghia": "kem",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "服",
-    "hira": "ふく",
+    "kanji": "はがき",
+    "hira": "はがき",
     "han": "",
-    "nghia": "quần áo",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "二つ",
-    "hira": "ふたつ",
-    "han": "",
-    "nghia": "hai cái (đếm vật nói chung)",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "豚肉",
-    "hira": "ぶたにく",
-    "han": "",
-    "nghia": "thịt lợn",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "二人",
-    "hira": "ふたり",
-    "han": "",
-    "nghia": "hai người",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "二日",
-    "hira": "ふつか",
-    "han": "",
-    "nghia": "hai ngày, ngày mồng 2",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "冬",
-    "hira": "ふゆ",
-    "han": "",
-    "nghia": "mùa đông",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "文章",
-    "hira": "ぶんしょう",
-    "han": "",
-    "nghia": "câu văn, đoạn văn",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "部屋",
-    "hira": "へや",
-    "han": "",
-    "nghia": "căn phòng",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "辺",
-    "hira": "へん",
-    "han": "",
-    "nghia": "khu vực",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "帽子",
-    "hira": "ぼうし",
-    "han": "",
-    "nghia": "mũ",
-    "lesson": 14,
-    "week": 3
-  },
-  {
-    "kanji": "本",
-    "hira": "ほん",
-    "han": "",
-    "nghia": "cuốn sách",
-    "lesson": 14,
+    "nghia": "bưu thiếp",
+    "lesson": 11,
     "week": 3
   },
   {
@@ -1596,63 +3084,703 @@
     "hira": "ほんだな",
     "han": "",
     "nghia": "giá sách",
-    "lesson": 15,
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "本当",
-    "hira": "ほんとう",
-    "han": "",
-    "nghia": "sự thật",
-    "lesson": 15,
+    "kanji": "寮",
+    "hira": "りょう",
+    "han": "liêu",
+    "nghia": "ký túc xá",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "毎朝",
-    "hira": "まいあさ",
-    "han": "",
-    "nghia": "mỗi buổi sáng",
-    "lesson": 15,
+    "kanji": "田舎",
+    "hira": "いなか",
+    "han": "điền xá",
+    "nghia": "vùng quê",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "毎週",
-    "hira": "まいしゅう",
-    "han": "",
-    "nghia": "mỗi tuần",
-    "lesson": 15,
+    "kanji": "外国",
+    "hira": "がいこく",
+    "han": "ngoại quốc",
+    "nghia": "nước ngoài",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "毎日",
-    "hira": "まいにち",
-    "han": "",
-    "nghia": "mỗi ngày",
-    "lesson": 15,
+    "kanji": "動物",
+    "hira": "どうぶつ",
+    "han": "động vật",
+    "nghia": "động vật",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "毎晩",
-    "hira": "まいばん",
-    "han": "",
-    "nghia": "mỗi tối",
-    "lesson": 15,
+    "kanji": "昼寝",
+    "hira": "ひるね",
+    "han": "trú ngủ",
+    "nghia": "ngủ trưa",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "前",
-    "hira": "まえ",
-    "han": "",
-    "nghia": "trước",
-    "lesson": 15,
+    "kanji": "一つ",
+    "hira": "ひとつ",
+    "han": "nhất",
+    "nghia": "một (cái)",
+    "lesson": 11,
     "week": 3
   },
   {
-    "kanji": "町",
-    "hira": "まち",
+    "kanji": "二つ",
+    "hira": "ふたつ",
+    "han": "nhị",
+    "nghia": "hai (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "三つ",
+    "hira": "みっつ",
+    "han": "tam",
+    "nghia": "ba (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "四つ",
+    "hira": "よっつ",
+    "han": "tứ",
+    "nghia": "bốn (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "五つ",
+    "hira": "いつつ",
+    "han": "ngũ",
+    "nghia": "năm (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "六つ",
+    "hira": "むっつ",
+    "han": "lục",
+    "nghia": "sáu (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "七つ",
+    "hira": "ななつ",
+    "han": "thất",
+    "nghia": "bảy (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "八つ",
+    "hira": "やっつ",
+    "han": "bát",
+    "nghia": "tám (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "九つ",
+    "hira": "ここのつ",
+    "han": "cửu",
+    "nghia": "chín (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "十",
+    "hira": "とお",
+    "han": "thập",
+    "nghia": "mười (cái)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "一人",
+    "hira": "ひとり",
+    "han": "nhất nhân",
+    "nghia": "một người",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "二人",
+    "hira": "ふたり",
+    "han": "nhị nhân",
+    "nghia": "hai người",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "～台",
+    "hira": "～だい",
+    "han": "đài",
+    "nghia": "~ cái (xe, máy móc)",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "～枚",
+    "hira": "～まい",
+    "han": "mai",
+    "nghia": "~ tờ, ~ tấm",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "～回",
+    "hira": "～かい",
+    "han": "hồi",
+    "nghia": "~ lần",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "～時間",
+    "hira": "～じかん",
+    "han": "thời gian",
+    "nghia": "~ tiếng đồng hồ",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "いくつ",
+    "hira": "いくつ",
     "han": "",
-    "nghia": "thị xã, thành phố",
-    "lesson": 15,
+    "nghia": "bao nhiêu (cái), mấy tuổi",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "どのくらい",
+    "hira": "どのくらい",
+    "han": "",
+    "nghia": "khoảng bao nhiêu",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "全部で",
+    "hira": "ぜんぶで",
+    "han": "toàn bộ",
+    "nghia": "tất cả là",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "必要",
+    "hira": "ひつよう",
+    "han": "tất yếu",
+    "nghia": "cần thiết",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "両親",
+    "hira": "りょうしん",
+    "han": "lưỡng thân",
+    "nghia": "bố mẹ, cha mẹ",
+    "lesson": 11,
+    "week": 3
+  },
+  {
+    "kanji": "簡単",
+    "hira": "かんたん",
+    "han": "giản đơn",
+    "nghia": "đơn giản, dễ",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "近い",
+    "hira": "ちかい",
+    "han": "",
+    "nghia": "gần",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "遠い",
+    "hira": "とおい",
+    "han": "",
+    "nghia": "xa",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "早い",
+    "hira": "はやい",
+    "han": "",
+    "nghia": "nhanh, sớm",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "遅い",
+    "hira": "おそい",
+    "han": "",
+    "nghia": "chậm, muộn",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "多い",
+    "hira": "おおい",
+    "han": "",
+    "nghia": "nhiều",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "少ない",
+    "hira": "すくない",
+    "han": "",
+    "nghia": "ít",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "暖かい",
+    "hira": "あたたかい",
+    "han": "",
+    "nghia": "ấm áp",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "涼しい",
+    "hira": "すずしい",
+    "han": "",
+    "nghia": "mát mẻ",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "甘い",
+    "hira": "あまい",
+    "han": "",
+    "nghia": "ngọt",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "辛い",
+    "hira": "からい",
+    "han": "",
+    "nghia": "cay",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "重い",
+    "hira": "おもい",
+    "han": "",
+    "nghia": "nặng",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "軽い",
+    "hira": "かるい",
+    "han": "",
+    "nghia": "nhẹ",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "季節",
+    "hira": "きせつ",
+    "han": "quý tiết",
+    "nghia": "mùa, thời tiết",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "春",
+    "hira": "はる",
+    "han": "xuân",
+    "nghia": "mùa xuân",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "夏",
+    "hira": "なつ",
+    "han": "hạ",
+    "nghia": "mùa hè",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "秋",
+    "hira": "あき",
+    "han": "thu",
+    "nghia": "mùa thu",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "冬",
+    "hira": "ふゆ",
+    "han": "đông",
+    "nghia": "mùa đông",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "天気",
+    "hira": "てんき",
+    "han": "thiên khí",
+    "nghia": "thời tiết",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "雨",
+    "hira": "あめ",
+    "han": "vũ",
+    "nghia": "mưa",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "雪",
+    "hira": "ゆき",
+    "han": "tuyết",
+    "nghia": "tuyết",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "曇り",
+    "hira": "くもり",
+    "han": "",
+    "nghia": "trời âm u",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "りんご",
+    "hira": "りんご",
+    "han": "",
+    "nghia": "táo",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "オレンジ",
+    "hira": "オレンジ",
+    "han": "",
+    "nghia": "cam (quả)",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "みかん",
+    "hira": "みかん",
+    "han": "",
+    "nghia": "quýt",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "海",
+    "hira": "うみ",
+    "han": "hải",
+    "nghia": "biển",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "世界",
+    "hira": "せかい",
+    "han": "thế giới",
+    "nghia": "thế giới",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "パーティー",
+    "hira": "パーティー",
+    "han": "",
+    "nghia": "bữa tiệc",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "お祭り",
+    "hira": "おまつり",
+    "han": "tế",
+    "nghia": "lễ hội",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "テスト",
+    "hira": "テスト",
+    "han": "",
+    "nghia": "kiểm tra",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "一番",
+    "hira": "いちばん",
+    "han": "nhất",
+    "nghia": "nhất, số một",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "どちら",
+    "hira": "どちら",
+    "han": "",
+    "nghia": "cái nào (trong hai)",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "ずっと",
+    "hira": "ずっと",
+    "han": "",
+    "nghia": "suốt, mãi",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "初めて",
+    "hira": "はじめて",
+    "han": "",
+    "nghia": "lần đầu tiên",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "一生懸命",
+    "hira": "いっしょうけんめい",
+    "han": "nhất sinh huyền mệnh",
+    "nghia": "cố hết sức",
+    "lesson": 12,
+    "week": 3
+  },
+  {
+    "kanji": "欲しい",
+    "hira": "ほしい",
+    "han": "",
+    "nghia": "muốn (có vật)",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "眠い",
+    "hira": "ねむい",
+    "han": "",
+    "nghia": "buồn ngủ",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "校長",
+    "hira": "こうちょう",
+    "han": "hiệu trưởng",
+    "nghia": "hiệu trưởng",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "美術",
+    "hira": "びじゅつ",
+    "han": "mỹ thuật",
+    "nghia": "mỹ thuật",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "つり",
+    "hira": "つり",
+    "han": "",
+    "nghia": "câu cá",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "スキー",
+    "hira": "スキー",
+    "han": "",
+    "nghia": "trượt tuyết",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "市役所",
+    "hira": "しやくしょ",
+    "han": "thị dịch sở",
+    "nghia": "tòa thị chính",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "プール",
+    "hira": "プール",
+    "han": "",
+    "nghia": "bể bơi",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "川",
+    "hira": "かわ",
+    "han": "xuyên",
+    "nghia": "sông",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "刺身",
+    "hira": "さしみ",
+    "han": "",
+    "nghia": "sashimi (hải sản sống)",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "牛丼",
+    "hira": "ぎゅうどん",
+    "han": "ngưu đôn",
+    "nghia": "cơm bò",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "牛乳",
+    "hira": "ぎゅうにゅう",
+    "han": "ngưu nhũ",
+    "nghia": "sữa bò",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "遊ぶ",
+    "hira": "あそぶ",
+    "han": "",
+    "nghia": "chơi, vui chơi",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "泳ぐ",
+    "hira": "およぐ",
+    "han": "",
+    "nghia": "bơi",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "出す",
+    "hira": "だす",
+    "han": "",
+    "nghia": "nộp, gửi ra",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "入る",
+    "hira": "はいる",
+    "han": "",
+    "nghia": "vào, bước vào",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "迎える",
+    "hira": "むかえる",
+    "han": "",
+    "nghia": "đón, tiếp đón",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "結婚する",
+    "hira": "けっこんする",
+    "han": "kết hôn",
+    "nghia": "kết hôn",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "散歩する",
+    "hira": "さんぽする",
+    "han": "tản bộ",
+    "nghia": "đi dạo",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "買い物する",
+    "hira": "かいものする",
+    "han": "",
+    "nghia": "mua sắm",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "なにか",
+    "hira": "なにか",
+    "han": "",
+    "nghia": "điều gì đó",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "どこか",
+    "hira": "どこか",
+    "han": "",
+    "nghia": "đâu đó, nơi nào đó",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "また",
+    "hira": "また",
+    "han": "",
+    "nghia": "lại, một lần nữa",
+    "lesson": 13,
+    "week": 3
+  },
+  {
+    "kanji": "塩",
+    "hira": "しお",
+    "han": "diêm",
+    "nghia": "muối",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "砂糖",
+    "hira": "さとう",
+    "han": "sa đường",
+    "nghia": "đường",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "布団",
+    "hira": "ふとん",
+    "han": "bố đoàn",
+    "nghia": "chăn đệm, futon",
+    "lesson": 14,
     "week": 3
   },
   {
@@ -1660,478 +3788,1134 @@
     "hira": "まど",
     "han": "",
     "nghia": "cửa sổ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "ドア",
+    "hira": "ドア",
+    "han": "",
+    "nghia": "cửa",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "エアコン",
+    "hira": "エアコン",
+    "han": "",
+    "nghia": "điều hòa không khí",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "電気",
+    "hira": "でんき",
+    "han": "điện khí",
+    "nghia": "điện, đèn điện",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "名前",
+    "hira": "なまえ",
+    "han": "danh tiền",
+    "nghia": "tên",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "住所",
+    "hira": "じゅうしょ",
+    "han": "trú sở",
+    "nghia": "địa chỉ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "電話番号",
+    "hira": "でんわばんごう",
+    "han": "điện thoại phán hiệu",
+    "nghia": "số điện thoại",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "切手",
+    "hira": "きって",
+    "han": "thiết thủ",
+    "nghia": "tem thư",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "封筒",
+    "hira": "ふうとう",
+    "han": "phong đào",
+    "nghia": "phong bì",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "現金",
+    "hira": "げんきん",
+    "han": "hiện kim",
+    "nghia": "tiền mặt",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "意味",
+    "hira": "いみ",
+    "han": "ý nghĩa",
+    "nghia": "ý nghĩa",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "言葉",
+    "hira": "ことば",
+    "han": "ngôn",
+    "nghia": "từ ngữ, lời nói",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "読み方",
+    "hira": "よみかた",
+    "han": "",
+    "nghia": "cách đọc",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "同じ",
+    "hira": "おなじ",
+    "han": "đồng",
+    "nghia": "giống nhau, cùng",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "手伝う",
+    "hira": "てつだう",
+    "han": "",
+    "nghia": "giúp đỡ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "話す",
+    "hira": "はなす",
+    "han": "",
+    "nghia": "nói, kể",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "待つ",
+    "hira": "まつ",
+    "han": "",
+    "nghia": "đợi, chờ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "持つ",
+    "hira": "もつ",
+    "han": "",
+    "nghia": "cầm, giữ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "取る",
+    "hira": "とる",
+    "han": "",
+    "nghia": "lấy, lấy xuống",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "降る",
+    "hira": "ふる",
+    "han": "",
+    "nghia": "rơi (mưa, tuyết)",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "曲がる",
+    "hira": "まがる",
+    "han": "",
+    "nghia": "quẹo, rẽ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "急ぐ",
+    "hira": "いそぐ",
+    "han": "",
+    "nghia": "vội, gấp",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "呼ぶ",
+    "hira": "よぶ",
+    "han": "",
+    "nghia": "gọi",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "つける",
+    "hira": "つける",
+    "han": "",
+    "nghia": "bật (đèn, máy)",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "消す",
+    "hira": "けす",
+    "han": "",
+    "nghia": "tắt (đèn, máy), xóa",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "開ける",
+    "hira": "あける",
+    "han": "",
+    "nghia": "mở (cửa)",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "止める",
+    "hira": "とめる",
+    "han": "",
+    "nghia": "dừng, đỗ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "見せる",
+    "hira": "みせる",
+    "han": "",
+    "nghia": "cho xem, chỉ",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "始める",
+    "hira": "はじめる",
+    "han": "",
+    "nghia": "bắt đầu",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "コピーする",
+    "hira": "コピーする",
+    "han": "",
+    "nghia": "photocopy, sao chép",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "ゆっくり",
+    "hira": "ゆっくり",
+    "han": "",
+    "nghia": "từ từ, chậm rãi",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "すぐ",
+    "hira": "すぐ",
+    "han": "",
+    "nghia": "ngay, lập tức",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "後で",
+    "hira": "あとで",
+    "han": "",
+    "nghia": "sau đó",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "もう少し",
+    "hira": "もうすこし",
+    "han": "",
+    "nghia": "thêm một chút nữa",
+    "lesson": 14,
+    "week": 3
+  },
+  {
+    "kanji": "危ない",
+    "hira": "あぶない",
+    "han": "",
+    "nghia": "nguy hiểm",
     "lesson": 15,
     "week": 3
   },
   {
-    "kanji": "万",
-    "hira": "まん",
-    "han": "",
-    "nghia": "mười nghìn",
+    "kanji": "日記",
+    "hira": "にっき",
+    "han": "nhật ký",
+    "nghia": "nhật ký",
     "lesson": 15,
     "week": 3
   },
   {
-    "kanji": "右",
-    "hira": "みぎ",
-    "han": "",
-    "nghia": "bên phải",
+    "kanji": "資料",
+    "hira": "しりょう",
+    "han": "tư liệu",
+    "nghia": "tài liệu",
     "lesson": 15,
     "week": 3
   },
   {
-    "kanji": "水",
-    "hira": "みず",
+    "kanji": "カタログ",
+    "hira": "カタログ",
     "han": "",
-    "nghia": "nước",
+    "nghia": "catalog",
     "lesson": 15,
     "week": 3
   },
   {
-    "kanji": "店",
-    "hira": "みせ",
+    "kanji": "フェイスブック",
+    "hira": "フェイスブック",
     "han": "",
-    "nghia": "cửa hàng, cửa tiệm",
+    "nghia": "Facebook",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "ファイル",
+    "hira": "ファイル",
+    "han": "",
+    "nghia": "file, tập tin",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "電子辞書",
+    "hira": "でんしじしょ",
+    "han": "điện tử từ thư",
+    "nghia": "từ điển điện tử",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "ソフト",
+    "hira": "ソフト",
+    "han": "",
+    "nghia": "phần mềm",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "ケーキ",
+    "hira": "ケーキ",
+    "han": "",
+    "nghia": "bánh ngọt",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "お菓子",
+    "hira": "おかし",
+    "han": "",
+    "nghia": "bánh kẹo",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "時刻表",
+    "hira": "じこくひょう",
+    "han": "thời khắc biểu",
+    "nghia": "bảng giờ tàu xe",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "服",
+    "hira": "ふく",
+    "han": "phục",
+    "nghia": "quần áo",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "動画",
+    "hira": "どうが",
+    "han": "động họa",
+    "nghia": "video",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "専門",
+    "hira": "せんもん",
+    "han": "chuyên môn",
+    "nghia": "chuyên môn",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "週末",
+    "hira": "しゅうまつ",
+    "han": "chu mạt",
+    "nghia": "cuối tuần",
     "lesson": 15,
     "week": 3
   },
   {
     "kanji": "道",
     "hira": "みち",
-    "han": "",
-    "nghia": "đường phố",
+    "han": "đạo",
+    "nghia": "đường, con đường",
     "lesson": 15,
     "week": 3
   },
   {
-    "kanji": "三つ",
-    "hira": "みっつ",
-    "han": "",
-    "nghia": "ba cái (đếm đồ vật nói chung)",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "緑",
-    "hira": "みどり",
-    "han": "",
-    "nghia": "màu xanh lá cây",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "耳",
-    "hira": "みみ",
-    "han": "",
-    "nghia": "tai",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "向こう",
-    "hira": "むこう",
-    "han": "",
-    "nghia": "phía bên kia",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "六つ",
-    "hira": "むっつ",
-    "han": "",
-    "nghia": "sáu cái (đếm đồ vật nói chung)",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "村",
-    "hira": "むら",
-    "han": "",
-    "nghia": "làng",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "目",
-    "hira": "め",
-    "han": "",
-    "nghia": "mắt",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "物",
-    "hira": "もの",
-    "han": "",
-    "nghia": "đồ vật",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "門",
-    "hira": "もん",
-    "han": "",
-    "nghia": "cổng, cửa",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "野菜",
-    "hira": "やさい",
-    "han": "",
-    "nghia": "rau",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "八つ",
-    "hira": "やっつ",
-    "han": "",
-    "nghia": "tám cái (đếm vật nói chung)",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "山",
-    "hira": "やま",
-    "han": "",
-    "nghia": "núi",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "ゆうべ",
-    "hira": "ゆうべ",
-    "han": "",
-    "nghia": "đêm qua",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "横",
-    "hira": "よこ",
-    "han": "",
-    "nghia": "bên cạnh, bên, chiều rộng",
-    "lesson": 16,
-    "week": 3
-  },
-  {
-    "kanji": "夜",
-    "hira": "よる",
-    "han": "",
-    "nghia": "buổi tối, ban đêm",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "来年",
-    "hira": "らいねん",
-    "han": "",
-    "nghia": "năm sau",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "料理",
-    "hira": "りょうり",
-    "han": "",
-    "nghia": "nấu ăn, món ăn",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "廊下",
-    "hira": "ろうか",
-    "han": "",
-    "nghia": "hành lang",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "六",
-    "hira": "ろく",
-    "han": "",
-    "nghia": "sáu",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "会う",
-    "hira": "あう",
-    "han": "",
-    "nghia": "Gặp mặt",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "開く",
-    "hira": "あく",
-    "han": "",
-    "nghia": "Mở (tự động từ)",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "洗う",
-    "hira": "あらう",
-    "han": "",
-    "nghia": "Rửa",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "歩く",
-    "hira": "あるく",
-    "han": "",
-    "nghia": "Đi bộ",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "要る",
-    "hira": "いる",
-    "han": "",
-    "nghia": "Cần",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "歌う",
-    "hira": "うたう",
-    "han": "",
-    "nghia": "Hát",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "売る",
-    "hira": "うる",
-    "han": "",
-    "nghia": "Bán",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "降りる",
-    "hira": "おりる",
-    "han": "",
-    "nghia": "Xuống",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "買う",
-    "hira": "かう",
-    "han": "",
-    "nghia": "Mua",
-    "lesson": 17,
-    "week": 3
-  },
-  {
-    "kanji": "帰る",
-    "hira": "かえる",
-    "han": "",
-    "nghia": "Về",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "書く",
-    "hira": "かく",
-    "han": "",
-    "nghia": "Viết",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "貸す",
-    "hira": "かす",
-    "han": "",
-    "nghia": "Cho vay, cho mượn",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "借りる",
-    "hira": "かりる",
-    "han": "",
-    "nghia": "Vay, mượn",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "聞く",
-    "hira": "きく",
-    "han": "",
-    "nghia": "Nghe, hỏi",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "切る",
-    "hira": "きる",
-    "han": "",
-    "nghia": "Cắt",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "着る",
-    "hira": "きる",
-    "han": "",
-    "nghia": "Mặc (đưa từ trên xuống như áo...)",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "来る",
-    "hira": "くる",
-    "han": "",
-    "nghia": "Đến",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "知る",
-    "hira": "しる",
-    "han": "",
-    "nghia": "Biết",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "吸う",
-    "hira": "すう",
-    "han": "",
-    "nghia": "Hút",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "住む",
-    "hira": "すむ",
-    "han": "",
-    "nghia": "Sống",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "出す",
-    "hira": "だす",
-    "han": "",
-    "nghia": "Lấy ra, nộp, gửi (thư)",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "立つ",
-    "hira": "たつ",
-    "han": "",
-    "nghia": "Đứng",
-    "lesson": 18,
-    "week": 3
-  },
-  {
-    "kanji": "食べる",
-    "hira": "たべる",
-    "han": "",
-    "nghia": "Ăn",
-    "lesson": 18,
+    "kanji": "高校",
+    "hira": "こうこう",
+    "han": "cao hiệu",
+    "nghia": "trường trung học phổ thông",
+    "lesson": 15,
     "week": 3
   },
   {
     "kanji": "使う",
     "hira": "つかう",
     "han": "",
-    "nghia": "Sử dụng",
-    "lesson": 19,
-    "week": 4
+    "nghia": "sử dụng",
+    "lesson": 15,
+    "week": 3
   },
   {
-    "kanji": "着く",
-    "hira": "つく",
+    "kanji": "立つ",
+    "hira": "たつ",
     "han": "",
-    "nghia": "Đến",
-    "lesson": 19,
-    "week": 4
+    "nghia": "đứng dậy",
+    "lesson": 15,
+    "week": 3
   },
   {
-    "kanji": "出る",
-    "hira": "でる",
+    "kanji": "座る",
+    "hira": "すわる",
     "han": "",
-    "nghia": "Ra, rời khỏi, xuất hiện",
-    "lesson": 19,
-    "week": 4
+    "nghia": "ngồi",
+    "lesson": 15,
+    "week": 3
   },
   {
-    "kanji": "飛ぶ",
-    "hira": "とぶ",
+    "kanji": "作る",
+    "hira": "つくる",
     "han": "",
-    "nghia": "Bay, nhảy",
-    "lesson": 19,
-    "week": 4
+    "nghia": "làm, tạo ra",
+    "lesson": 15,
+    "week": 3
   },
   {
-    "kanji": "取る",
-    "hira": "とる",
+    "kanji": "売る",
+    "hira": "うる",
     "han": "",
-    "nghia": "Lấy (muối...)",
-    "lesson": 19,
-    "week": 4
+    "nghia": "bán",
+    "lesson": 15,
+    "week": 3
   },
   {
-    "kanji": "撮る",
-    "hira": "とる",
+    "kanji": "知る",
+    "hira": "しる",
     "han": "",
-    "nghia": "Chụp ảnh hoặc quay phim",
-    "lesson": 19,
-    "week": 4
+    "nghia": "biết",
+    "lesson": 15,
+    "week": 3
   },
   {
-    "kanji": "鳴く",
-    "hira": "なく",
+    "kanji": "置く",
+    "hira": "おく",
     "han": "",
-    "nghia": "Kêu, hót",
-    "lesson": 19,
+    "nghia": "đặt, để",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "住む",
+    "hira": "すむ",
+    "han": "",
+    "nghia": "sinh sống, ở",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "辞める",
+    "hira": "やめる",
+    "han": "",
+    "nghia": "nghỉ việc, bỏ",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "旅行する",
+    "hira": "りょこうする",
+    "han": "lữ hành",
+    "nghia": "đi du lịch",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "研究する",
+    "hira": "けんきゅうする",
+    "han": "nghiên cứu",
+    "nghia": "nghiên cứu",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "知っている",
+    "hira": "しっている",
+    "han": "",
+    "nghia": "đang biết (đã biết rồi)",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "住んでいる",
+    "hira": "すんでいる",
+    "han": "",
+    "nghia": "đang sống ở",
+    "lesson": 15,
+    "week": 3
+  },
+  {
+    "kanji": "強い",
+    "hira": "つよい",
+    "han": "",
+    "nghia": "mạnh",
+    "lesson": 16,
     "week": 4
   },
   {
-    "kanji": "無くす",
+    "kanji": "弱い",
+    "hira": "よわい",
+    "han": "",
+    "nghia": "yếu",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "若い",
+    "hira": "わかい",
+    "han": "",
+    "nghia": "trẻ",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "頭がいい",
+    "hira": "あたまがいい",
+    "han": "",
+    "nghia": "thông minh",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "髪",
+    "hira": "かみ",
+    "han": "",
+    "nghia": "tóc",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "顔",
+    "hira": "かお",
+    "han": "",
+    "nghia": "mặt, khuôn mặt",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "口",
+    "hira": "くち",
+    "han": "khẩu",
+    "nghia": "miệng",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "耳",
+    "hira": "みみ",
+    "han": "nhĩ",
+    "nghia": "tai",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "目",
+    "hira": "め",
+    "han": "mục",
+    "nghia": "mắt",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "足",
+    "hira": "あし",
+    "han": "túc",
+    "nghia": "chân, bàn chân",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "湖",
+    "hira": "みずうみ",
+    "han": "hồ",
+    "nghia": "hồ (nước)",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "ボタン",
+    "hira": "ボタン",
+    "han": "",
+    "nghia": "nút bấm",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "ジョギング",
+    "hira": "ジョギング",
+    "han": "",
+    "nghia": "chạy bộ",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "シャワー",
+    "hira": "シャワー",
+    "han": "",
+    "nghia": "vòi hoa sen",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "お風呂",
+    "hira": "おふろ",
+    "han": "",
+    "nghia": "bồn tắm, tắm",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "確認",
+    "hira": "かくにん",
+    "han": "xác nhận",
+    "nghia": "xác nhận",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "どうやって",
+    "hira": "どうやって",
+    "han": "",
+    "nghia": "bằng cách nào",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "乗る",
+    "hira": "のる",
+    "han": "",
+    "nghia": "lên (xe), đi (phương tiện)",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "入れる",
+    "hira": "いれる",
+    "han": "",
+    "nghia": "cho vào, nhập",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "降りる",
+    "hira": "おりる",
+    "han": "",
+    "nghia": "xuống (xe)",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "乗り換える",
+    "hira": "のりかえる",
+    "han": "",
+    "nghia": "chuyển xe",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "浴びる",
+    "hira": "あびる",
+    "han": "",
+    "nghia": "tắm (vòi sen)",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "まず",
+    "hira": "まず",
+    "han": "",
+    "nghia": "trước tiên",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "次に",
+    "hira": "つぎに",
+    "han": "",
+    "nghia": "tiếp theo",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "磨く",
+    "hira": "みがく",
+    "han": "",
+    "nghia": "đánh (răng), chà",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "選ぶ",
+    "hira": "えらぶ",
+    "han": "",
+    "nghia": "chọn, lựa",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "お寺",
+    "hira": "おてら",
+    "han": "tự",
+    "nghia": "chùa, đền",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "神社",
+    "hira": "じんじゃ",
+    "han": "thần xã",
+    "nghia": "đền thờ Thần đạo",
+    "lesson": 16,
+    "week": 4
+  },
+  {
+    "kanji": "広い",
+    "hira": "ひろい",
+    "han": "",
+    "nghia": "rộng",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "狭い",
+    "hira": "せまい",
+    "han": "",
+    "nghia": "hẹp",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "問題",
+    "hira": "もんだい",
+    "han": "vấn đề",
+    "nghia": "vấn đề, câu hỏi",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "答え",
+    "hira": "こたえ",
+    "han": "",
+    "nghia": "câu trả lời",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "荷物",
+    "hira": "にもつ",
+    "han": "hành lý",
+    "nghia": "hành lý",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "禁煙",
+    "hira": "きんえん",
+    "han": "cấm yên",
+    "nghia": "cấm hút thuốc",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "準備",
+    "hira": "じゅんび",
+    "han": "chuẩn bị",
+    "nghia": "chuẩn bị",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "残業",
+    "hira": "ざんぎょう",
+    "han": "tàn nghiệp",
+    "nghia": "làm thêm giờ",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "病気",
+    "hira": "びょうき",
+    "han": "bệnh khí",
+    "nghia": "bệnh, ốm",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "上着",
+    "hira": "うわぎ",
+    "han": "",
+    "nghia": "áo khoác",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "下着",
+    "hira": "したぎ",
+    "han": "",
+    "nghia": "đồ lót",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "払う",
+    "hira": "はらう",
+    "han": "",
+    "nghia": "trả (tiền)",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "なくす",
     "hira": "なくす",
     "han": "",
-    "nghia": "Làm mất, đánh mất",
-    "lesson": 19,
+    "nghia": "làm mất",
+    "lesson": 17,
     "week": 4
   },
   {
-    "kanji": "習う",
-    "hira": "ならう",
+    "kanji": "返す",
+    "hira": "かえす",
     "han": "",
-    "nghia": "Học",
-    "lesson": 19,
-    "week": 4
-  },
-  {
-    "kanji": "並ぶ",
-    "hira": "ならぶ",
-    "han": "",
-    "nghia": "Xếp hàng, ngang bằng",
-    "lesson": 19,
+    "nghia": "trả lại",
+    "lesson": 17,
     "week": 4
   },
   {
     "kanji": "脱ぐ",
     "hira": "ぬぐ",
     "han": "",
-    "nghia": "Cởi",
+    "nghia": "cởi (áo, giày)",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "持って行く",
+    "hira": "もっていく",
+    "han": "",
+    "nghia": "mang đi",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "持って来る",
+    "hira": "もってくる",
+    "han": "",
+    "nghia": "mang lại",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "出かける",
+    "hira": "でかける",
+    "han": "",
+    "nghia": "ra ngoài, đi ra",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "覚える",
+    "hira": "おぼえる",
+    "han": "",
+    "nghia": "ghi nhớ, học thuộc",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "忘れる",
+    "hira": "わすれる",
+    "han": "",
+    "nghia": "quên",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "心配する",
+    "hira": "しんぱいする",
+    "han": "tâm phối",
+    "nghia": "lo lắng",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "出張する",
+    "hira": "しゅっちょうする",
+    "han": "xuất trương",
+    "nghia": "đi công tác",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "引っ越しする",
+    "hira": "ひっこしする",
+    "han": "",
+    "nghia": "chuyển nhà",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "自分で",
+    "hira": "じぶんで",
+    "han": "tự phân",
+    "nghia": "tự mình",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "ですから",
+    "hira": "ですから",
+    "han": "",
+    "nghia": "vì vậy, do đó",
+    "lesson": 17,
+    "week": 4
+  },
+  {
+    "kanji": "課長",
+    "hira": "かちょう",
+    "han": "khóa trưởng",
+    "nghia": "trưởng phòng",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "部長",
+    "hira": "ぶちょう",
+    "han": "bộ trưởng",
+    "nghia": "giám đốc bộ phận",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "社長",
+    "hira": "しゃちょう",
+    "han": "xã trưởng",
+    "nghia": "giám đốc công ty",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "ピアノ",
+    "hira": "ピアノ",
+    "han": "",
+    "nghia": "đàn piano",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "趣味",
+    "hira": "しゅみ",
+    "han": "thú vị",
+    "nghia": "sở thích",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "象",
+    "hira": "ぞう",
+    "han": "tượng",
+    "nghia": "voi",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "鳥",
+    "hira": "とり",
+    "han": "điểu",
+    "nghia": "chim",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "大使館",
+    "hira": "たいしかん",
+    "han": "đại sứ quán",
+    "nghia": "đại sứ quán",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "国際",
+    "hira": "こくさい",
+    "han": "quốc tế",
+    "nghia": "quốc tế",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "洗う",
+    "hira": "あらう",
+    "han": "",
+    "nghia": "rửa",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "歌う",
+    "hira": "うたう",
+    "han": "",
+    "nghia": "hát",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "弾く",
+    "hira": "ひく",
+    "han": "",
+    "nghia": "chơi (nhạc cụ)",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "できる",
+    "hira": "できる",
+    "han": "",
+    "nghia": "có thể, được",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "捨てる",
+    "hira": "すてる",
+    "han": "",
+    "nghia": "vứt bỏ",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "調べる",
+    "hira": "しらべる",
+    "han": "",
+    "nghia": "tra cứu, điều tra",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "集める",
+    "hira": "あつめる",
+    "han": "",
+    "nghia": "thu thập, tập hợp",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "運転する",
+    "hira": "うんてんする",
+    "han": "vận chuyển",
+    "nghia": "lái xe",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "予約する",
+    "hira": "よやくする",
+    "han": "dự ước",
+    "nghia": "đặt trước",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "見学する",
+    "hira": "けんがくする",
+    "han": "kiến học",
+    "nghia": "tham quan",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "なかなか",
+    "hira": "なかなか",
+    "han": "",
+    "nghia": "mãi mà không (+ phủ định); khá (+ khẳng định)",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "是非",
+    "hira": "ぜひ",
+    "han": "thị phi",
+    "nghia": "nhất định, tha thiết",
+    "lesson": 18,
+    "week": 4
+  },
+  {
+    "kanji": "茶道",
+    "hira": "さどう",
+    "han": "trà đạo",
+    "nghia": "trà đạo",
     "lesson": 19,
     "week": 4
   },
   {
-    "kanji": "寝る",
-    "hira": "ねる",
+    "kanji": "彼氏",
+    "hira": "かれし",
+    "han": "bỉ thị",
+    "nghia": "bạn trai",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "デート",
+    "hira": "デート",
     "han": "",
-    "nghia": "Đi ngủ, ngủ",
+    "nghia": "hẹn hò",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "そろそろ",
+    "hira": "そろそろ",
+    "han": "",
+    "nghia": "sắp đến lúc, đã đến lúc",
     "lesson": 19,
     "week": 4
   },
@@ -2139,576 +4923,872 @@
     "kanji": "登る",
     "hira": "のぼる",
     "han": "",
-    "nghia": "Leo lên",
+    "nghia": "leo, trèo",
     "lesson": 19,
     "week": 4
   },
   {
-    "kanji": "飲む",
-    "hira": "のむ",
+    "kanji": "泊まる",
+    "hira": "とまる",
     "han": "",
-    "nghia": "Uống",
+    "nghia": "nghỉ lại, ở qua đêm",
     "lesson": 19,
     "week": 4
   },
   {
-    "kanji": "乗る",
-    "hira": "のる",
+    "kanji": "なる",
+    "hira": "なる",
     "han": "",
-    "nghia": "Lên (tàu, xe...), cưỡi ngựa",
+    "nghia": "trở thành, trở nên",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "掃除する",
+    "hira": "そうじする",
+    "han": "tảo trừ",
+    "nghia": "dọn dẹp",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "洗濯する",
+    "hira": "せんたくする",
+    "han": "tẩy trạch",
+    "nghia": "giặt (quần áo)",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "練習する",
+    "hira": "れんしゅうする",
+    "han": "luyện tập",
+    "nghia": "luyện tập",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "将来",
+    "hira": "しょうらい",
+    "han": "tương lai",
+    "nghia": "tương lai",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "一度",
+    "hira": "いちど",
+    "han": "nhất độ",
+    "nghia": "một lần",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "段々",
+    "hira": "だんだん",
+    "han": "",
+    "nghia": "dần dần",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "もうすぐ",
+    "hira": "もうすぐ",
+    "han": "",
+    "nghia": "sắp, chẳng bao lâu nữa",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "汚い",
+    "hira": "きたない",
+    "han": "",
+    "nghia": "bẩn, dơ",
+    "lesson": 19,
+    "week": 4
+  },
+  {
+    "kanji": "僕",
+    "hira": "ぼく",
+    "han": "bộc",
+    "nghia": "tôi (nam, thân mật)",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "入る",
-    "hira": "はいる",
-    "han": "",
-    "nghia": "Vào, đi vào",
+    "kanji": "君",
+    "hira": "きみ",
+    "han": "quân",
+    "nghia": "bạn, cậu (thân mật)",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "履く",
-    "hira": "はく",
+    "kanji": "ビザ",
+    "hira": "ビザ",
     "han": "",
-    "nghia": "Mặc, đi (từ dưới lên)",
+    "nghia": "visa",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "走る",
-    "hira": "はしる",
+    "kanji": "どっち",
+    "hira": "どっち",
     "han": "",
-    "nghia": "Chạy",
+    "nghia": "cái nào (thông thường)",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "話す",
-    "hira": "はなす",
+    "kanji": "要る",
+    "hira": "いる",
     "han": "",
-    "nghia": "Nói chuyện",
+    "nghia": "cần",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "貼る",
-    "hira": "はる",
+    "kanji": "直す",
+    "hira": "なおす",
     "han": "",
-    "nghia": "Dán",
+    "nghia": "sửa chữa",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "晴れる",
-    "hira": "はれる",
-    "han": "",
-    "nghia": "Có nắng, thời tiết đẹp",
+    "kanji": "修理する",
+    "hira": "しゅうりする",
+    "han": "tu lý",
+    "nghia": "sửa chữa",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "引く",
-    "hira": "ひく",
+    "kanji": "電話する",
+    "hira": "でんわする",
     "han": "",
-    "nghia": "Kéo",
+    "nghia": "gọi điện",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "弾く",
-    "hira": "ひく",
+    "kanji": "うん",
+    "hira": "うん",
     "han": "",
-    "nghia": "Chơi (nhạc cụ)",
+    "nghia": "ừ (đồng ý thông thường)",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "吹く",
-    "hira": "ふく",
+    "kanji": "ううん",
+    "hira": "ううん",
     "han": "",
-    "nghia": "Thổi",
+    "nghia": "ừ không (phủ định thông thường)",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "降る",
-    "hira": "ふる",
+    "kanji": "初め",
+    "hira": "はじめ",
     "han": "",
-    "nghia": "Rơi (mưa, tuyết)",
+    "nghia": "lúc đầu, ban đầu",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "曲る",
-    "hira": "まがる",
+    "kanji": "終わり",
+    "hira": "おわり",
     "han": "",
-    "nghia": "Rẽ, cong",
+    "nghia": "kết thúc, cuối",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "待つ",
-    "hira": "まつ",
-    "han": "",
-    "nghia": "Chờ đợi",
+    "kanji": "調味料",
+    "hira": "ちょうみりょう",
+    "han": "điều vị liệu",
+    "nghia": "gia vị",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "右",
-    "hira": "みぎ",
+    "kanji": "お酢",
+    "hira": "おす",
     "han": "",
-    "nghia": "Bên phải",
+    "nghia": "giấm",
     "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "見せる",
-    "hira": "みせる",
+    "kanji": "しょうゆ",
+    "hira": "しょうゆ",
     "han": "",
-    "nghia": "Cho xem",
-    "lesson": 21,
+    "nghia": "nước tương",
+    "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "見る",
-    "hira": "みる",
-    "han": "",
-    "nghia": "Xem, nhìn, trông",
-    "lesson": 21,
+    "kanji": "味噌",
+    "hira": "みそ",
+    "han": "vị tương",
+    "nghia": "tương miso",
+    "lesson": 20,
     "week": 4
   },
   {
-    "kanji": "持つ",
-    "hira": "もつ",
-    "han": "",
-    "nghia": "Mang, cầm",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "休む",
-    "hira": "やすむ",
-    "han": "",
-    "nghia": "Nghỉ, nghỉ ngơi",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "呼ぶ",
-    "hira": "よぶ",
-    "han": "",
-    "nghia": "Gọi",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "読む",
-    "hira": "よむ",
-    "han": "",
-    "nghia": "Đọc",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "渡す",
-    "hira": "わたす",
-    "han": "",
-    "nghia": "Đưa cho",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "渡る",
-    "hira": "わたる",
-    "han": "",
-    "nghia": "Đi qua, băng qua",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "青い",
-    "hira": "あおい",
-    "han": "",
-    "nghia": "Xanh da trời",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "赤い",
-    "hira": "あかい",
-    "han": "",
-    "nghia": "Màu đỏ",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "暑い",
-    "hira": "あつい",
-    "han": "",
-    "nghia": "Nóng (thời tiết)",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "熱い",
-    "hira": "あつい",
-    "han": "",
-    "nghia": "Nóng (khi chạm vào)",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "厚い",
-    "hira": "あつい",
-    "han": "",
-    "nghia": "Dày",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "甘い",
-    "hira": "あまい",
-    "han": "",
-    "nghia": "Ngọt, ngọt ngào",
-    "lesson": 21,
-    "week": 4
-  },
-  {
-    "kanji": "痛い",
-    "hira": "いたい",
-    "han": "",
-    "nghia": "Đau",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "多い",
-    "hira": "おおい",
-    "han": "",
-    "nghia": "Nhiều",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "遅い",
-    "hira": "おそい",
-    "han": "",
-    "nghia": "Muộn, chậm",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "重い",
-    "hira": "おもい",
-    "han": "",
-    "nghia": "Nặng",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "辛い",
-    "hira": "からい",
-    "han": "",
-    "nghia": "Cay",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "軽い",
-    "hira": "かるい",
-    "han": "",
-    "nghia": "Nhẹ",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "暗い",
-    "hira": "くらい",
-    "han": "",
-    "nghia": "Tối",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "寒い",
-    "hira": "さむい",
-    "han": "",
-    "nghia": "Lạnh",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "白い",
-    "hira": "しろい",
-    "han": "",
-    "nghia": "Trắng",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "狭い",
-    "hira": "せまい",
-    "han": "",
-    "nghia": "Hẹp",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "小さい",
-    "hira": "ちいさい",
-    "han": "",
-    "nghia": "Nhỏ",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "近い",
-    "hira": "ちかい",
-    "han": "",
-    "nghia": "Gần",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "遠い",
-    "hira": "とおい",
-    "han": "",
-    "nghia": "Xa",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "長い",
-    "hira": "ながい",
-    "han": "",
-    "nghia": "Dài",
-    "lesson": 22,
-    "week": 4
-  },
-  {
-    "kanji": "早い",
-    "hira": "はやい",
-    "han": "",
-    "nghia": "Sớm",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "速い",
-    "hira": "はやい",
-    "han": "",
-    "nghia": "Nhanh chóng",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "広い",
-    "hira": "ひろい",
-    "han": "",
-    "nghia": "Rộng rãi, rộng",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "太い",
-    "hira": "ふとい",
-    "han": "",
-    "nghia": "Béo",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "古い",
-    "hira": "ふるい",
-    "han": "",
-    "nghia": "Cũ (không dùng cho người)",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "欲しい",
-    "hira": "ほしい",
-    "han": "",
-    "nghia": "Muốn",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "細い",
-    "hira": "ほそい",
-    "han": "",
-    "nghia": "Gầy, hẹp, thon",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "丸い",
-    "hira": "まるい",
-    "han": "",
-    "nghia": "Tròn",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "安い",
-    "hira": "やすい",
-    "han": "",
-    "nghia": "Giá rẻ",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "弱い",
-    "hira": "よわい",
-    "han": "",
-    "nghia": "Yếu",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "強い",
-    "hira": "つよい",
-    "han": "",
-    "nghia": "Mạnh",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "若い",
-    "hira": "わかい",
-    "han": "",
-    "nghia": "Trẻ",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "悪い",
-    "hira": "わるい",
-    "han": "",
-    "nghia": "Xấu",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "嫌",
-    "hira": "いや",
-    "han": "",
-    "nghia": "Chán, ghét, khó chịu",
-    "lesson": 23,
-    "week": 4
-  },
-  {
-    "kanji": "嫌い",
-    "hira": "きらい",
-    "han": "",
-    "nghia": "Ghét, không thích",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "結構",
-    "hira": "けっこう",
-    "han": "",
-    "nghia": "Đủ",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "元気",
-    "hira": "げんき",
-    "han": "",
-    "nghia": "Khỏe mạnh",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "上手",
-    "hira": "じょうず",
-    "han": "",
-    "nghia": "Giỏi, khéo",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "丈夫",
-    "hira": "じょうぶ",
-    "han": "",
-    "nghia": "Chắc, bền",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "好き",
-    "hira": "すき",
-    "han": "",
-    "nghia": "Thích",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "大変",
-    "hira": "たいへん",
-    "han": "",
-    "nghia": "Khó khăn, vất vả",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "暇",
-    "hira": "ひま",
-    "han": "",
-    "nghia": "Rảnh rỗi",
-    "lesson": 24,
-    "week": 4
-  },
-  {
-    "kanji": "便利",
-    "hira": "べんり",
-    "han": "",
-    "nghia": "Tiện lợi",
-    "lesson": 24,
+    "kanji": "胡椒",
+    "hira": "こしょう",
+    "han": "hồ tiêu",
+    "nghia": "hồ tiêu, tiêu",
+    "lesson": 20,
     "week": 4
   },
   {
     "kanji": "不便",
     "hira": "ふべん",
-    "han": "",
-    "nghia": "Bất tiện",
-    "lesson": 24,
-    "week": 4
+    "han": "bất tiện",
+    "nghia": "bất tiện",
+    "lesson": 21,
+    "week": 5
   },
   {
-    "kanji": "簡単",
-    "hira": "かんたん",
-    "han": "",
-    "nghia": "Đơn giản",
-    "lesson": 24,
-    "week": 4
+    "kanji": "大丈夫",
+    "hira": "だいじょうぶ",
+    "han": "đại trượng phu",
+    "nghia": "ổn, không sao",
+    "lesson": 21,
+    "week": 5
   },
   {
-    "kanji": "後",
-    "hira": "あと",
-    "han": "",
-    "nghia": "Sau đó",
-    "lesson": 24,
-    "week": 4
+    "kanji": "息子",
+    "hira": "むすこ",
+    "han": "tức tử",
+    "nghia": "con trai",
+    "lesson": 21,
+    "week": 5
   },
   {
-    "kanji": "先",
-    "hira": "さき",
-    "han": "",
-    "nghia": "Trước (làm cái gì đó trước)",
-    "lesson": 24,
-    "week": 4
+    "kanji": "娘",
+    "hira": "むすめ",
+    "han": "nữ",
+    "nghia": "con gái",
+    "lesson": 21,
+    "week": 5
   },
   {
-    "kanji": "誰",
-    "hira": "だれ",
+    "kanji": "夕食",
+    "hira": "ゆうしょく",
+    "han": "tịch thực",
+    "nghia": "bữa tối",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "雲",
+    "hira": "くも",
+    "han": "vân",
+    "nghia": "mây",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "試合",
+    "hira": "しあい",
+    "han": "thí hợp",
+    "nghia": "trận đấu, cuộc thi",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "意見",
+    "hira": "いけん",
+    "han": "ý kiến",
+    "nghia": "ý kiến",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "交通",
+    "hira": "こうつう",
+    "han": "giao thông",
+    "nghia": "giao thông",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "思う",
+    "hira": "おもう",
     "han": "",
-    "nghia": "Ai, người nào",
+    "nghia": "nghĩ, cho rằng",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "言う",
+    "hira": "いう",
+    "han": "",
+    "nghia": "nói",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "役に立つ",
+    "hira": "やくにたつ",
+    "han": "",
+    "nghia": "hữu ích",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "勝つ",
+    "hira": "かつ",
+    "han": "",
+    "nghia": "thắng",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "負ける",
+    "hira": "まける",
+    "han": "",
+    "nghia": "thua",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "足りる",
+    "hira": "たりる",
+    "han": "",
+    "nghia": "đủ",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "気を付ける",
+    "hira": "きをつける",
+    "han": "",
+    "nghia": "chú ý, cẩn thận",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "最近",
+    "hira": "さいきん",
+    "han": "tối cận",
+    "nghia": "gần đây",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "多分",
+    "hira": "たぶん",
+    "han": "đa phần",
+    "nghia": "có lẽ",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "きっと",
+    "hira": "きっと",
+    "han": "",
+    "nghia": "chắc chắn",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "本当に",
+    "hira": "ほんとうに",
+    "han": "",
+    "nghia": "thực sự, thật sự",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "～について",
+    "hira": "～について",
+    "han": "",
+    "nghia": "về ~, liên quan đến ~",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "仕方がありません",
+    "hira": "しかたがありません",
+    "han": "",
+    "nghia": "không có cách nào, đành vậy",
+    "lesson": 21,
+    "week": 5
+  },
+  {
+    "kanji": "大変",
+    "hira": "たいへん",
+    "han": "đại biến",
+    "nghia": "vất vả, khổ sở",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "台風",
+    "hira": "たいふう",
+    "han": "thai phong",
+    "nghia": "bão nhiệt đới",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "お土産",
+    "hira": "おみやげ",
+    "han": "",
+    "nghia": "quà lưu niệm",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "スーツ",
+    "hira": "スーツ",
+    "han": "",
+    "nghia": "bộ vest",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "セーター",
+    "hira": "セーター",
+    "han": "",
+    "nghia": "áo len",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "眼鏡",
+    "hira": "めがね",
+    "han": "nhãn kính",
+    "nghia": "kính mắt",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "押入れ",
+    "hira": "おしいれ",
+    "han": "",
+    "nghia": "ngăn tủ âm tường",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "地図",
+    "hira": "ちず",
+    "han": "địa đồ",
+    "nghia": "bản đồ",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "履く",
+    "hira": "はく",
+    "han": "",
+    "nghia": "mang (giày, dép, quần)",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "被る",
+    "hira": "かぶる",
+    "han": "",
+    "nghia": "đội (mũ)",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "着る",
+    "hira": "きる",
+    "han": "",
+    "nghia": "mặc (áo)",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "かける",
+    "hira": "かける",
+    "han": "",
+    "nghia": "đeo (kính)",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "生まれる",
+    "hira": "うまれる",
+    "han": "",
+    "nghia": "được sinh ra",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "怒る",
+    "hira": "おこる",
+    "han": "",
+    "nghia": "tức giận",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "コンビニ",
+    "hira": "コンビニ",
+    "han": "",
+    "nghia": "cửa hàng tiện lợi",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "復習する",
+    "hira": "ふくしゅうする",
+    "han": "phục tập",
+    "nghia": "ôn tập",
+    "lesson": 22,
+    "week": 5
+  },
+  {
+    "kanji": "長い",
+    "hira": "ながい",
+    "han": "",
+    "nghia": "dài",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "短い",
+    "hira": "みじかい",
+    "han": "",
+    "nghia": "ngắn",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "音",
+    "hira": "おと",
+    "han": "",
+    "nghia": "âm thanh, tiếng",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "交差点",
+    "hira": "こうさてん",
+    "han": "giao thoa điểm",
+    "nghia": "ngã tư, giao lộ",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "信号",
+    "hira": "しんごう",
+    "han": "tín hiệu",
+    "nghia": "đèn giao thông",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "橋",
+    "hira": "はし",
+    "han": "kiều",
+    "nghia": "cầu",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "駐車場",
+    "hira": "ちゅうしゃじょう",
+    "han": "trú xa trường",
+    "nghia": "bãi đỗ xe",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "保険証",
+    "hira": "ほけんしょう",
+    "han": "bảo hiểm chứng",
+    "nghia": "thẻ bảo hiểm",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "電池",
+    "hira": "でんち",
+    "han": "điện trì",
+    "nghia": "pin (điện)",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "サイズ",
+    "hira": "サイズ",
+    "han": "",
+    "nghia": "kích cỡ",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "角",
+    "hira": "かど",
+    "han": "",
+    "nghia": "góc đường",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "動く",
+    "hira": "うごく",
+    "han": "",
+    "nghia": "di chuyển, cử động",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "歩く",
+    "hira": "あるく",
+    "han": "",
+    "nghia": "đi bộ",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "触る",
+    "hira": "さわる",
+    "han": "",
+    "nghia": "chạm, sờ vào",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "渡る",
+    "hira": "わたる",
+    "han": "",
+    "nghia": "băng qua (đường, cầu)",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "変える",
+    "hira": "かえる",
+    "han": "",
+    "nghia": "thay đổi",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "疲れる",
+    "hira": "つかれる",
+    "han": "",
+    "nghia": "mệt mỏi",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "注意する",
+    "hira": "ちゅういする",
+    "han": "chú ý",
+    "nghia": "chú ý, cẩn thận",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "まっすぐ",
+    "hira": "まっすぐ",
+    "han": "",
+    "nghia": "thẳng, đi thẳng",
+    "lesson": 23,
+    "week": 5
+  },
+  {
+    "kanji": "お弁当",
+    "hira": "おべんとう",
+    "han": "",
+    "nghia": "cơm hộp, bento",
     "lesson": 24,
-    "week": 4
+    "week": 5
+  },
+  {
+    "kanji": "洋服",
+    "hira": "ようふく",
+    "han": "dương phục",
+    "nghia": "quần áo (kiểu Tây)",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "連れていく",
+    "hira": "つれていく",
+    "han": "",
+    "nghia": "dẫn đi",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "連れてくる",
+    "hira": "つれてくる",
+    "han": "",
+    "nghia": "dẫn lại",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "コーヒーをいれる",
+    "hira": "コーヒーをいれる",
+    "han": "",
+    "nghia": "pha cà phê",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "くれる",
+    "hira": "くれる",
+    "han": "",
+    "nghia": "cho, tặng (cho mình)",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "紹介する",
+    "hira": "しょうかいする",
+    "han": "giới thiệu",
+    "nghia": "giới thiệu",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "案内する",
+    "hira": "あんないする",
+    "han": "án nội",
+    "nghia": "dẫn đường, hướng dẫn",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "説明する",
+    "hira": "せつめいする",
+    "han": "thuyết minh",
+    "nghia": "giải thích",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "全部",
+    "hira": "ぜんぶ",
+    "han": "toàn bộ",
+    "nghia": "tất cả",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "指輪",
+    "hira": "ゆびわ",
+    "han": "",
+    "nghia": "nhẫn",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "工場",
+    "hira": "こうじょう",
+    "han": "công xưởng",
+    "nghia": "nhà máy, xưởng",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "故郷",
+    "hira": "こきょう",
+    "han": "cố hương",
+    "nghia": "quê hương",
+    "lesson": 24,
+    "week": 5
+  },
+  {
+    "kanji": "体",
+    "hira": "からだ",
+    "han": "thể",
+    "nghia": "cơ thể",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "調子",
+    "hira": "ちょうし",
+    "han": "điều tử",
+    "nghia": "trạng thái sức khỏe",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "グループ",
+    "hira": "グループ",
+    "han": "",
+    "nghia": "nhóm",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "チャンス",
+    "hira": "チャンス",
+    "han": "",
+    "nghia": "cơ hội",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "日本製",
+    "hira": "にほんせい",
+    "han": "nhật bản chế",
+    "nghia": "hàng sản xuất tại Nhật",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "着く",
+    "hira": "つく",
+    "han": "",
+    "nghia": "đến nơi, tới",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "考える",
+    "hira": "かんがえる",
+    "han": "",
+    "nghia": "suy nghĩ, xem xét",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "留学する",
+    "hira": "りゅうがくする",
+    "han": "lưu học",
+    "nghia": "du học",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "体にいい",
+    "hira": "からだにいい",
+    "han": "",
+    "nghia": "tốt cho sức khỏe",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "給料",
+    "hira": "きゅうりょう",
+    "han": "cấp liệu",
+    "nghia": "lương",
+    "lesson": 25,
+    "week": 5
+  },
+  {
+    "kanji": "目が覚める",
+    "hira": "めがさめる",
+    "han": "",
+    "nghia": "thức giấc, tỉnh dậy",
+    "lesson": 25,
+    "week": 5
   }
 ]
