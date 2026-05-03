@@ -37,6 +37,8 @@ function RootLayoutNav() {
       {/* Trang kanji */}
       <Stack.Screen name="kanji" options={{ headerShown: false }} />
       <Stack.Screen name="kanji-detail" options={{ headerShown: false }} />
+      <Stack.Screen name="soumatome-n2" options={{ headerShown: false }} />
+      <Stack.Screen name="level-book" options={{ headerShown: false }} />
     </Stack>
   );
 }
