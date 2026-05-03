@@ -1,6 +1,8 @@
 import n1 from "./n1.json";
 import n2Mimikara from "./n2_mimikara.json";
 import n2Soumatome from "./n2_soumatome.json";
+import n2SoumatomeKanji from "./n2_soumatome_kanji.json";
+import n2SoumatomeVocab from "./n2_soumatome_vocab.json";
 import n3Mimikara from "./n3_mimikara.json";
 import n3Soumatome from "./n3_soumatome.json";
 import n4 from "./n4.json";
@@ -16,6 +18,33 @@ export interface GrammarItem {
   explanation: string;
   book?: string;
   examples?: { jp: string; vi: string }[];
+}
+
+export interface KanjiCompound {
+  word: string;
+  reading: string;
+  meaning: string;
+}
+
+export interface KanjiItem {
+  id: string;
+  lesson: number;
+  kanji: string;
+  sinon: string;
+  compounds: KanjiCompound[];
+  level: string;
+  book: string;
+}
+
+export interface VocabItem {
+  id: string;
+  lesson: number;
+  word: string;
+  reading: string;
+  meaning: string;
+  category: string;
+  level: string;
+  book: string;
 }
 
 const JLPT_GRAMMAR: Record<string, GrammarItem[]> = {
@@ -69,4 +98,20 @@ export function getGrammarByBook(bookId: string): GrammarItem[] {
 
 export function getGrammarById(id: string): GrammarItem | undefined {
   return ALL_GRAMMAR.find((g) => g.id === id);
+}
+
+export const N2_SOUMATOME_KANJI: KanjiItem[] = n2SoumatomeKanji as KanjiItem[];
+
+export const N2_SOUMATOME_VOCAB: VocabItem[] = n2SoumatomeVocab as VocabItem[];
+
+export function getKanjiByLesson(lesson: number): KanjiItem[] {
+  return N2_SOUMATOME_KANJI.filter((k) => k.lesson === lesson);
+}
+
+export function getVocabByLesson(lesson: number): VocabItem[] {
+  return N2_SOUMATOME_VOCAB.filter((v) => v.lesson === lesson);
+}
+
+export function getVocabByCategory(category: string): VocabItem[] {
+  return N2_SOUMATOME_VOCAB.filter((v) => v.category === category);
 }
