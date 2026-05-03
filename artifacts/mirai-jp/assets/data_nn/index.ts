@@ -1,4 +1,5 @@
 import n1 from "./n1.json";
+import n2Mimikara from "./n2_mimikara.json";
 import n2Soumatome from "./n2_soumatome.json";
 import n3Mimikara from "./n3_mimikara.json";
 import n3Soumatome from "./n3_soumatome.json";
@@ -22,6 +23,7 @@ const JLPT_GRAMMAR: Record<string, GrammarItem[]> = {
   "n4": n4 as GrammarItem[],
   "mimikara-n3": n3Mimikara as GrammarItem[],
   "soumatome-n3": n3Soumatome as GrammarItem[],
+  "mimikara-n2": n2Mimikara as GrammarItem[],
   "soumatome-n2": n2Soumatome as GrammarItem[],
   "n1": n1 as GrammarItem[],
 };
@@ -37,7 +39,10 @@ export const GRAMMAR_BY_LEVEL: Record<string, GrammarItem[]> = {
     ...(n3Soumatome as GrammarItem[]),
     ...(n3Mimikara as GrammarItem[]),
   ],
-  N2: n2Soumatome as GrammarItem[],
+  N2: [
+    ...(n2Soumatome as GrammarItem[]),
+    ...(n2Mimikara as GrammarItem[]),
+  ],
   N1: n1 as GrammarItem[],
 };
 
@@ -47,6 +52,7 @@ export const ALL_GRAMMAR: GrammarItem[] = [
   ...(n3Soumatome as GrammarItem[]),
   ...(n3Mimikara as GrammarItem[]),
   ...(n2Soumatome as GrammarItem[]),
+  ...(n2Mimikara as GrammarItem[]),
   ...(n1 as GrammarItem[]),
 ];
 
