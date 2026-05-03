@@ -306,7 +306,6 @@ export default function LevelBookScreen() {
           </View>
           <View style={s.headerTitleRow}>
             <Text style={s.headerTitle}>{config.headerTitle}</Text>
-            <Text style={s.headerSub}>{config.headerSub}</Text>
           </View>
 
           <View style={s.summaryRow}>

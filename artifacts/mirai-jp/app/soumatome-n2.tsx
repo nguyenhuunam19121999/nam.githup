@@ -240,7 +240,6 @@ export default function SoumatomeN2Screen() {
           </View>
           <View style={s.headerTitleRow}>
             <Text style={s.headerTitle}>総まとめ N2</Text>
-            <Text style={s.headerSub}>Soumatome · N2</Text>
           </View>
 
           {/* Summary chips */}
