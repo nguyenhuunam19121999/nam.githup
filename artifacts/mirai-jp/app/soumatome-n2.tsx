@@ -232,17 +232,15 @@ export default function SoumatomeN2Screen() {
             <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
               <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
-          </View>
-          <View style={s.headerTitleRow}>
-            <View style={s.titleWrap}>
-              <Text style={s.headerTitle}>総まとめ N2</Text>
-              <Text style={s.headerSub}>Soumatome · N2</Text>
-            </View>
             <View style={s.logoBadge}>
               <Text style={s.logoMirai}>Mirai</Text>
               <Text style={s.logoDot}>.</Text>
               <Text style={s.logoJP}>JP</Text>
             </View>
+          </View>
+          <View style={s.headerTitleRow}>
+            <Text style={s.headerTitle}>総まとめ N2</Text>
+            <Text style={s.headerSub}>Soumatome · N2</Text>
           </View>
 
           {/* Summary chips */}
@@ -322,16 +320,15 @@ const s = StyleSheet.create({
   headerTopRow: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent: "space-between",
     paddingHorizontal: 12,
     paddingTop: 6,
     paddingBottom: 0,
   },
   headerTitleRow: {
-    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "space-between",
     paddingHorizontal: 16,
-    paddingTop: 4,
+    paddingTop: 2,
     paddingBottom: 8,
   },
   titleWrap: { flex: 1 },
@@ -343,9 +340,9 @@ const s = StyleSheet.create({
   headerTitle: { color: "#fff", fontSize: 20, fontWeight: "900", letterSpacing: 0.5 },
   headerSub:   { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600", marginTop: 2 },
   logoBadge: { flexDirection: "row", alignItems: "center" },
-  logoMirai: { color: "#fff", fontSize: 18, fontWeight: "800" },
-  logoDot:   { color: "#fff", fontSize: 18, fontWeight: "900" },
-  logoJP:    { color: "#fff", fontSize: 16, fontWeight: "900" },
+  logoMirai: { color: "#fff", fontSize: 22, fontWeight: "800" },
+  logoDot:   { color: "#fff", fontSize: 22, fontWeight: "900" },
+  logoJP:    { color: "#fff", fontSize: 20, fontWeight: "900" },
 
   /* Summary chips */
   summaryRow: {
