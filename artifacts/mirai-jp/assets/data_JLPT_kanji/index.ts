@@ -48,6 +48,10 @@ export interface KanjiItem {
   book?: string;
   /** Ví dụ từ ghép minh hoạ (không bắt buộc) */
   examples?: KanjiExample[];
+  /** Số bài học trong sách (Soumatome) */
+  lesson?: number;
+  /** Số tuần trong sách (Soumatome) */
+  week?: number;
 }
 
 const JLPT_KANJI: Record<string, KanjiItem[]> = {

@@ -19,6 +19,8 @@ export interface RawVocab {
   example?: string;
   exampleMeaning?: string;
   category?: string;
+  lesson?: number;
+  week?: number;
 }
 
 // Bộ dữ liệu theo cấp JLPT và theo sách (Mimikara / Soumatome)

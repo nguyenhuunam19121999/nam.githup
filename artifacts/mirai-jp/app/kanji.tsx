@@ -148,19 +148,21 @@ function StatsModal({
 export default function KanjiListScreen() {
   const router = useRouter();
   const { scopedKey } = useAuth();
-  const params = useLocalSearchParams<{ level?: string; bookId?: string; title?: string }>();
+  const params = useLocalSearchParams<{ level?: string; bookId?: string; title?: string; lesson?: string }>();
   const level = (typeof params.level === "string" ? params.level : "N5").toUpperCase();
   const bookId = typeof params.bookId === "string" ? params.bookId : "";
+  const lessonParam = typeof params.lesson === "string" ? parseInt(params.lesson, 10) : null;
   const title =
     typeof params.title === "string" && params.title
       ? params.title
       : `Học Kanji ${level}`;
 
-  // Dữ liệu gốc (chưa xáo trộn) — ưu tiên bookId nếu có
-  const BASE: KanjiItem[] = useMemo(
-    () => (bookId ? (getKanjiByBook(bookId) ?? getKanji(level)) : getKanji(level)),
-    [bookId, level],
-  );
+  // Dữ liệu gốc (chưa xáo trộn) — ưu tiên bookId → lọc theo bài nếu có
+  const BASE: KanjiItem[] = useMemo(() => {
+    const all = bookId ? (getKanjiByBook(bookId) ?? getKanji(level)) : getKanji(level);
+    if (lessonParam !== null) return all.filter((k) => (k as KanjiItem & { lesson?: number }).lesson === lessonParam);
+    return all;
+  }, [bookId, level, lessonParam]);
   // Dữ liệu hiển thị (có thể đã xáo trộn)
   const [items, setItems] = useState<KanjiItem[]>([]);
   useEffect(() => { setItems([...BASE]); }, [BASE]);

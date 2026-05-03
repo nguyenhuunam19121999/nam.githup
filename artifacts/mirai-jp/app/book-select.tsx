@@ -80,7 +80,12 @@ export default function BookSelectScreen() {
   const books = BOOKS.filter((b) => b.level === level);
 
   // Khi bấm 1 cuốn sách → mở trang menu học, kèm tên sách trong tiêu đề
+  // Riêng Soumatome N2 có màn hình riêng chia theo tuần/bài
   const handleSelect = (book: Book) => {
+    if (book.id === "soumatome-n2") {
+      router.push({ pathname: "/soumatome-n2" });
+      return;
+    }
     router.push({
       pathname: "/learning-menu",
       params: {

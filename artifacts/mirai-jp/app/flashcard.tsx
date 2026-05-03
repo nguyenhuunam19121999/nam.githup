@@ -526,17 +526,22 @@ export default function FlashcardScreen() {
     level?: string;
     bookId?: string;
     title?: string;
+    lesson?: string;
   }>();
   const initialQuery = typeof params.q === "string" ? params.q : "";
   const level = typeof params.level === "string" ? params.level : undefined;
   const bookId = typeof params.bookId === "string" ? params.bookId : undefined;
+  const lessonParam = typeof params.lesson === "string" ? parseInt(params.lesson, 10) : null;
 
   // Tải đúng bộ từ vựng dựa theo cấp độ (N5 → N1) và sách (Mimikara / Soumatome)
   // được truyền từ trang trước. Nếu không truyền, hiển thị toàn bộ kho từ.
-  const ALL = useMemo<Vocab[]>(
-    () => normalizeVocab(getVocab(level, bookId)),
-    [level, bookId],
-  );
+  const ALL = useMemo<Vocab[]>(() => {
+    const raw = getVocab(level, bookId);
+    const filtered = lessonParam !== null
+      ? raw.filter((v) => (v as { lesson?: number }).lesson === lessonParam)
+      : raw;
+    return normalizeVocab(filtered);
+  }, [level, bookId, lessonParam]);
 
   // Thông tin tiêu đề (emoji + tên Nhật + tên Việt) lấy từ bookId / level
   // — đồng bộ đúng với danh sách hiển thị ở trang chủ.

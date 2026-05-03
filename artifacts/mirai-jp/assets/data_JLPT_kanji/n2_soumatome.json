@@ -39,7 +39,9 @@
         "vi": "đảng cầm quyền"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2-002",
@@ -85,7 +87,9 @@
         "vi": "vẫn còn"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2-003",
@@ -130,7 +134,9 @@
         "vi": "vĩ nhân"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2-004",
@@ -173,7 +179,9 @@
         "vi": "duy tân"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2-005",
@@ -219,7 +227,9 @@
         "vi": "di chuyển"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2-006",
@@ -264,7 +274,9 @@
         "vi": "sự khác biệt"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 1,
+    "week": 1
   },
   {
     "id": "n2-007",
@@ -307,7 +319,9 @@
         "vi": "lĩnh vực"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2-008",
@@ -345,7 +359,9 @@
         "vi": "người ngoài hành tinh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2-009",
@@ -391,7 +407,9 @@
         "vi": "cõi đời"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2-010",
@@ -436,7 +454,9 @@
         "vi": "chuyển nhà"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2-011",
@@ -481,7 +501,9 @@
         "vi": "dọc tuyến đường"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2-012",
@@ -526,7 +548,9 @@
         "vi": "cổ vũ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 2,
+    "week": 1
   },
   {
     "id": "n2-013",
@@ -569,7 +593,9 @@
         "vi": "từ trước"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2-014",
@@ -615,7 +641,9 @@
         "vi": "tủ âm tường"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2-015",
@@ -661,7 +689,9 @@
         "vi": "giả tưởng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2-016",
@@ -709,7 +739,9 @@
         "vi": "quá khứ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2-017",
@@ -754,7 +786,9 @@
         "vi": "giá cả hàng hóa"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2-018",
@@ -795,7 +829,9 @@
         "vi": "cách tân"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 3,
+    "week": 1
   },
   {
     "id": "n2-019",
@@ -841,7 +877,9 @@
         "vi": "lan rộng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2-020",
@@ -884,7 +922,9 @@
         "vi": "lao (bệnh)"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2-021",
@@ -930,7 +970,9 @@
         "vi": "không sao"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2-022",
@@ -973,7 +1015,9 @@
         "vi": "thư từ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2-023",
@@ -1016,7 +1060,9 @@
         "vi": "động cơ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2-024",
@@ -1065,7 +1111,9 @@
         "vi": "nguy hiểm"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 4,
+    "week": 1
   },
   {
     "id": "n2-025",
@@ -1111,7 +1159,9 @@
         "vi": "nền tảng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2-026",
@@ -1155,7 +1205,9 @@
         "vi": "học kỳ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2-027",
@@ -1197,7 +1249,9 @@
         "vi": "quy định"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2-028",
@@ -1242,7 +1296,9 @@
         "vi": "cân bằng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2-029",
@@ -1285,7 +1341,9 @@
         "vi": "chính nghĩa"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2-030",
@@ -1331,7 +1389,9 @@
         "vi": "biên giới"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 5,
+    "week": 1
   },
   {
     "id": "n2-031",
@@ -1373,7 +1433,9 @@
         "vi": "cấm kỵ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2-032",
@@ -1416,7 +1478,9 @@
         "vi": "thơ haiku"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2-033",
@@ -1463,7 +1527,9 @@
         "vi": "quần đảo"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2-034",
@@ -1508,7 +1574,9 @@
         "vi": "kiểu mới"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2-035",
@@ -1550,7 +1618,9 @@
         "vi": "khuyết điểm"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2-036",
@@ -1593,7 +1663,9 @@
         "vi": "quyền lực"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 6,
+    "week": 1
   },
   {
     "id": "n2-037",
@@ -1631,7 +1703,9 @@
         "vi": "lập hiến"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2-038",
@@ -1671,7 +1745,9 @@
         "vi": "hiền giả"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2-039",
@@ -1716,7 +1792,9 @@
         "vi": "nguồn gốc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2-040",
@@ -1762,7 +1840,9 @@
         "vi": "lỗi sai"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2-041",
@@ -1805,7 +1885,9 @@
         "vi": "khoá học"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2-042",
@@ -1849,7 +1931,9 @@
         "vi": "có tác dụng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 7,
+    "week": 2
   },
   {
     "id": "n2-043",
@@ -1894,7 +1978,9 @@
         "vi": "chấm điểm"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2-044",
@@ -1939,7 +2025,9 @@
         "vi": "thực tế"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2-045",
@@ -1982,7 +2070,9 @@
         "vi": "xét duyệt"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2-046",
@@ -2025,7 +2115,9 @@
         "vi": "kích thích"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2-047",
@@ -2068,7 +2160,9 @@
         "vi": "lịch sử Nhật"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2-048",
@@ -2114,7 +2208,9 @@
         "vi": "công việc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 8,
+    "week": 2
   },
   {
     "id": "n2-049",
@@ -2161,7 +2257,9 @@
         "vi": "thực tại"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2-050",
@@ -2207,7 +2305,9 @@
         "vi": "một số ít"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2-051",
@@ -2252,7 +2352,9 @@
         "vi": "nhận lấy"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2-052",
@@ -2298,7 +2400,9 @@
         "vi": "thu hồi"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2-053",
@@ -2341,7 +2445,9 @@
         "vi": "nghệ thuật"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2-054",
@@ -2386,7 +2492,9 @@
         "vi": "bảo đảm"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 9,
+    "week": 2
   },
   {
     "id": "n2-055",
@@ -2429,7 +2537,9 @@
         "vi": "huân chương"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2-056",
@@ -2474,7 +2584,9 @@
         "vi": "bị thương"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2-057",
@@ -2514,7 +2626,9 @@
         "vi": "con voi"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2-058",
@@ -2559,7 +2673,9 @@
         "vi": "chấp thuận"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2-059",
@@ -2607,7 +2723,9 @@
         "vi": "đàm phán thương mại"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2-060",
@@ -2650,7 +2768,9 @@
         "vi": "nhận giải"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 10,
+    "week": 2
   },
   {
     "id": "n2-061",
@@ -2695,7 +2815,9 @@
         "vi": "kim đồng hồ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2-062",
@@ -2740,7 +2862,9 @@
         "vi": "hình dáng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2-063",
@@ -2784,7 +2908,9 @@
         "vi": "yếu tố"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2-064",
@@ -2822,7 +2948,9 @@
         "vi": "xử lý"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2-065",
@@ -2867,7 +2995,9 @@
         "vi": "hiến tặng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2-066",
@@ -2912,7 +3042,9 @@
         "vi": "tức thì"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 11,
+    "week": 2
   },
   {
     "id": "n2-067",
@@ -2957,7 +3089,9 @@
         "vi": "thúc giục"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2-068",
@@ -3003,7 +3137,9 @@
         "vi": "làm hỏng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2-069",
@@ -3049,7 +3185,9 @@
         "vi": "xuất viện"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2-070",
@@ -3092,7 +3230,9 @@
         "vi": "nhà ở"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2-071",
@@ -3140,7 +3280,9 @@
         "vi": "xây dựng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2-072",
@@ -3186,7 +3328,9 @@
         "vi": "siêu cao tầng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 12,
+    "week": 2
   },
   {
     "id": "n2-073",
@@ -3231,7 +3375,9 @@
         "vi": "căng thẳng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2-074",
@@ -3269,7 +3415,9 @@
         "vi": "thường thường"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2-075",
@@ -3314,7 +3462,9 @@
         "vi": "nộp"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2-076",
@@ -3359,7 +3509,9 @@
         "vi": "quá trình"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2-077",
@@ -3404,7 +3556,9 @@
         "vi": "thiên địch"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2-078",
@@ -3442,7 +3596,9 @@
         "vi": "triết nhân"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 13,
+    "week": 3
   },
   {
     "id": "n2-079",
@@ -3490,7 +3646,9 @@
         "vi": "giao thông"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2-080",
@@ -3535,7 +3693,9 @@
         "vi": "thống nhất"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2-081",
@@ -3573,7 +3733,9 @@
         "vi": "đức hạnh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2-082",
@@ -3620,7 +3782,9 @@
         "vi": "dân tị nạn"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2-083",
@@ -3666,7 +3830,9 @@
         "vi": "tăng giá"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2-084",
@@ -3711,7 +3877,9 @@
         "vi": "phê duyệt"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 14,
+    "week": 3
   },
   {
     "id": "n2-085",
@@ -3758,7 +3926,9 @@
         "vi": "trí não"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2-086",
@@ -3801,7 +3971,9 @@
         "vi": "xuất sắc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2-087",
@@ -3846,7 +4018,9 @@
         "vi": "bài tiết"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2-088",
@@ -3887,7 +4061,9 @@
         "vi": "tỷ lệ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2-089",
@@ -3930,7 +4106,9 @@
         "vi": "phê chuẩn"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2-090",
@@ -3973,7 +4151,9 @@
         "vi": "được đánh giá tốt"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 15,
+    "week": 3
   },
   {
     "id": "n2-091",
@@ -4016,7 +4196,9 @@
         "vi": "thường ngày"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2-092",
@@ -4059,7 +4241,9 @@
         "vi": "nhập khẩu"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2-093",
@@ -4105,7 +4289,9 @@
         "vi": "kiểu cách"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2-094",
@@ -4151,7 +4337,9 @@
         "vi": "vô địch"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2-095",
@@ -4197,7 +4385,9 @@
         "vi": "tham lam"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2-096",
@@ -4240,7 +4430,9 @@
         "vi": "diện mạo"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 16,
+    "week": 3
   },
   {
     "id": "n2-097",
@@ -4286,7 +4478,9 @@
         "vi": "đi cùng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2-098",
@@ -4329,7 +4523,9 @@
         "vi": "mệt mỏi"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2-099",
@@ -4370,7 +4566,9 @@
         "vi": "giếng dầu"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2-100",
@@ -4412,7 +4610,9 @@
         "vi": "món cơm tô"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2-101",
@@ -4454,7 +4654,9 @@
         "vi": "bao vây"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2-102",
@@ -4495,7 +4697,9 @@
         "vi": "miễn dịch"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 17,
+    "week": 3
   },
   {
     "id": "n2-103",
@@ -4536,7 +4740,9 @@
         "vi": "tuổi già"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2-104",
@@ -4578,7 +4784,9 @@
         "vi": "câu chuyện thú vị"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2-105",
@@ -4617,7 +4825,9 @@
         "vi": "Reiwa (niên hiệu)"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2-106",
@@ -4656,7 +4866,9 @@
         "vi": "biên lai"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2-107",
@@ -4698,7 +4910,9 @@
         "vi": "đông lạnh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2-108",
@@ -4739,7 +4953,9 @@
         "vi": "điềm báo"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 18,
+    "week": 3
   },
   {
     "id": "n2-109",
@@ -4781,7 +4997,9 @@
         "vi": "trốn tránh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2-110",
@@ -4822,7 +5040,9 @@
         "vi": "màu hồng đào"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2-111",
@@ -4863,7 +5083,9 @@
         "vi": "tư nhân"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2-112",
@@ -4905,7 +5127,9 @@
         "vi": "mất ngủ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2-113",
@@ -4944,7 +5168,9 @@
         "vi": "phiếu thu"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2-114",
@@ -4982,7 +5208,9 @@
         "vi": "kính ngữ khiêm nhường"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 19,
+    "week": 4
   },
   {
     "id": "n2-115",
@@ -5024,7 +5252,9 @@
         "vi": "thức đêm"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2-116",
@@ -5066,7 +5296,9 @@
         "vi": "chia, vỡ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2-117",
@@ -5107,7 +5339,9 @@
         "vi": "đồng xu"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2-118",
@@ -5148,7 +5382,9 @@
         "vi": "tự mâu thuẫn"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2-119",
@@ -5189,7 +5425,9 @@
         "vi": "đầy đủ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2-120",
@@ -5232,7 +5470,9 @@
         "vi": "mềm dẻo, linh hoạt"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 20,
+    "week": 4
   },
   {
     "id": "n2-121",
@@ -5270,7 +5510,9 @@
         "vi": "bắn súng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2-122",
@@ -5311,7 +5553,9 @@
         "vi": "vững chắc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2-123",
@@ -5350,7 +5594,9 @@
         "vi": "căng thẳng, gấp gáp"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2-124",
@@ -5392,7 +5638,9 @@
         "vi": "quay trở lại"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2-125",
@@ -5431,7 +5679,9 @@
         "vi": "khoa sản"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 21,
+    "week": 4
   },
   {
     "id": "n2-126",
@@ -5472,7 +5722,9 @@
         "vi": "dọn vệ sinh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2-127",
@@ -5511,7 +5763,9 @@
         "vi": "súng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2-128",
@@ -5550,7 +5804,9 @@
         "vi": "trong phạm vi"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2-129",
@@ -5591,7 +5847,9 @@
         "vi": "say rượu hôm sau"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2-130",
@@ -5632,7 +5890,9 @@
         "vi": "thanh lịch, sành điệu"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 22,
+    "week": 4
   },
   {
     "id": "n2-131",
@@ -5673,7 +5933,9 @@
         "vi": "nồi cơm điện"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2-132",
@@ -5712,7 +5974,9 @@
         "vi": "máy bán hàng tự động"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2-133",
@@ -5754,7 +6018,9 @@
         "vi": "sát hại"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2-134",
@@ -5796,7 +6062,9 @@
         "vi": "điều chỉnh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2-135",
@@ -5835,7 +6103,9 @@
         "vi": "di chứng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 23,
+    "week": 4
   },
   {
     "id": "n2-136",
@@ -5874,7 +6144,9 @@
         "vi": "tòa nhà cơ quan"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2-137",
@@ -5915,7 +6187,9 @@
         "vi": "cất giữ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2-138",
@@ -5954,7 +6228,9 @@
         "vi": "đỗ xe"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2-139",
@@ -5995,7 +6271,9 @@
         "vi": "phòng chống thảm họa"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2-140",
@@ -6037,7 +6315,9 @@
         "vi": "một đêm"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 24,
+    "week": 4
   },
   {
     "id": "n2-141",
@@ -6079,7 +6359,9 @@
         "vi": "rút ngắn"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2-142",
@@ -6121,7 +6403,9 @@
         "vi": "tiếp giáp"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2-143",
@@ -6163,7 +6447,9 @@
         "vi": "chúc mừng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2-144",
@@ -6204,7 +6490,9 @@
         "vi": "bát đĩa"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2-145",
@@ -6243,7 +6531,9 @@
         "vi": "huống chi"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 25,
+    "week": 5
   },
   {
     "id": "n2-146",
@@ -6285,7 +6575,9 @@
         "vi": "thể dục"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2-147",
@@ -6319,7 +6611,9 @@
         "vi": "khô"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2-148",
@@ -6361,7 +6655,9 @@
         "vi": "góc phố"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2-149",
@@ -6400,7 +6696,9 @@
         "vi": "vệ sinh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2-150",
@@ -6441,7 +6739,9 @@
         "vi": "thức ăn"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 26,
+    "week": 5
   },
   {
     "id": "n2-151",
@@ -6482,7 +6782,9 @@
         "vi": "đa dạng, phong phú"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2-152",
@@ -6524,7 +6826,9 @@
         "vi": "mềm dẻo"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2-153",
@@ -6565,7 +6869,9 @@
         "vi": "một căn nhà"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2-154",
@@ -6604,7 +6910,9 @@
         "vi": "phù hợp"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2-155",
@@ -6646,7 +6954,9 @@
         "vi": "giọt"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 27,
+    "week": 5
   },
   {
     "id": "n2-156",
@@ -6687,7 +6997,9 @@
         "vi": "nguồn gốc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2-157",
@@ -6730,7 +7042,9 @@
         "vi": "chất rắn"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2-158",
@@ -6772,7 +7086,9 @@
         "vi": "cây khô"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2-159",
@@ -6813,7 +7129,9 @@
         "vi": "tổ ong"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2-160",
@@ -6852,7 +7170,9 @@
         "vi": "bánh kẹo phương Tây"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 28,
+    "week": 5
   },
   {
     "id": "n2-161",
@@ -6891,7 +7211,9 @@
         "vi": "ký tên"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2-162",
@@ -6933,7 +7255,9 @@
         "vi": "đáng kể, rõ rệt"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2-163",
@@ -6969,7 +7293,9 @@
         "vi": "bão cát"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2-164",
@@ -7008,7 +7334,9 @@
         "vi": "khu nhà ở nhân viên"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2-165",
@@ -7047,7 +7375,9 @@
         "vi": "y tế"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 29,
+    "week": 5
   },
   {
     "id": "n2-166",
@@ -7086,7 +7416,9 @@
         "vi": "thành viên nội các"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2-167",
@@ -7128,7 +7460,9 @@
         "vi": "điều chỉnh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2-168",
@@ -7167,7 +7501,9 @@
         "vi": "thần tượng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2-169",
@@ -7208,7 +7544,9 @@
         "vi": "bốn góc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2-170",
@@ -7251,7 +7589,9 @@
         "vi": "phơi bày"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 30,
+    "week": 5
   },
   {
     "id": "n2-171",
@@ -7290,7 +7630,9 @@
         "vi": "ngủ say"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2-172",
@@ -7324,7 +7666,9 @@
         "vi": "hành lang vòng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2-173",
@@ -7365,7 +7709,9 @@
         "vi": "tin vui"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2-174",
@@ -7406,7 +7752,9 @@
         "vi": "lãng phí"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2-175",
@@ -7445,7 +7793,9 @@
         "vi": "bồi thường"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 31,
+    "week": 6
   },
   {
     "id": "n2-176",
@@ -7486,7 +7836,9 @@
         "vi": "khuyến cáo"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2-177",
@@ -7525,7 +7877,9 @@
         "vi": "tiếng歓呼"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2-178",
@@ -7568,7 +7922,9 @@
         "vi": "pin khô"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2-179",
@@ -7607,7 +7963,9 @@
         "vi": "trực giác"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2-180",
@@ -7646,7 +8004,9 @@
         "vi": "viêm ruột"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 32,
+    "week": 6
   },
   {
     "id": "n2-181",
@@ -7689,7 +8049,9 @@
         "vi": "khai mạc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2-182",
@@ -7728,7 +8090,9 @@
         "vi": "bao nhiêu tờ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2-183",
@@ -7769,7 +8133,9 @@
         "vi": "thức ăn gia súc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2-184",
@@ -7811,7 +8177,9 @@
         "vi": "mang theo"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2-185",
@@ -7853,7 +8221,9 @@
         "vi": "nhiệt đới"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 33,
+    "week": 6
   },
   {
     "id": "n2-186",
@@ -7893,7 +8263,9 @@
         "vi": "đúng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2-187",
@@ -7934,7 +8306,9 @@
         "vi": "hai lưỡi"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2-188",
@@ -7975,7 +8349,9 @@
         "vi": "triệu tập"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2-189",
@@ -8017,7 +8393,9 @@
         "vi": "thông lệ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2-190",
@@ -8058,7 +8436,9 @@
         "vi": "cản trở"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 34,
+    "week": 6
   },
   {
     "id": "n2-191",
@@ -8092,7 +8472,9 @@
         "vi": "cơ sở giải trí"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2-192",
@@ -8133,7 +8515,9 @@
         "vi": "dao khắc"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2-193",
@@ -8175,7 +8559,9 @@
         "vi": "thẳng đứng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2-194",
@@ -8217,7 +8603,9 @@
         "vi": "lễ hội"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2-195",
@@ -8258,7 +8646,9 @@
         "vi": "khám bệnh"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 35,
+    "week": 6
   },
   {
     "id": "n2-196",
@@ -8297,7 +8687,9 @@
         "vi": "gửi qua bưu điện"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2-197",
@@ -8336,7 +8728,9 @@
         "vi": "thiếu ngủ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2-198",
@@ -8379,7 +8773,9 @@
         "vi": "tâm trạng"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2-199",
@@ -8420,7 +8816,9 @@
         "vi": "nghề phụ"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 36,
+    "week": 6
   },
   {
     "id": "n2-200",
@@ -8462,6 +8860,8 @@
         "vi": "điều tra"
       }
     ],
-    "book": "soumatome"
+    "book": "soumatome",
+    "lesson": 36,
+    "week": 6
   }
 ]

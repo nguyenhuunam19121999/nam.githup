@@ -15,6 +15,7 @@ export interface GrammarItem {
   structure: string;
   explanation: string;
   book?: string;
+  week?: number;
   examples?: { jp: string; vi: string }[];
 }
 

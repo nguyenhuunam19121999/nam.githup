@@ -150,7 +150,9 @@ function BottomSheetPicker<T extends string>({
 
 export default function GrammarScreen() {
   const router = useRouter();
-  const params = useLocalSearchParams<{ level?: string; title?: string }>();
+  const params = useLocalSearchParams<{ level?: string; title?: string; bookId?: string; week?: string }>();
+  const bookIdParam = typeof params.bookId === "string" ? params.bookId : "";
+  const weekParam = typeof params.week === "string" ? parseInt(params.week, 10) : null;
   const initialLevel: Level = LEVELS.includes(
     (params.level ?? "").toUpperCase() as Level,
   )
@@ -175,10 +177,18 @@ export default function GrammarScreen() {
   const [shuffleSeed, setShuffleSeed] = useState(0);
 
   const items = useMemo<GrammarItem[]>(() => {
-    const list = getGrammar(level);
+    let list: GrammarItem[];
+    if (bookIdParam) {
+      list = getGrammar(undefined, bookIdParam);
+    } else {
+      list = getGrammar(level);
+    }
+    if (weekParam !== null) {
+      list = list.filter((g) => g.week === weekParam);
+    }
     if (shuffleSeed === 0) return list;
     return [...list].sort(() => Math.random() - 0.5);
-  }, [level, shuffleSeed]);
+  }, [level, bookIdParam, weekParam, shuffleSeed]);
 
   // Chuyển sang chế độ Từ vựng / Hán tự
   const handleTypeChange = (next: TypeId) => {
