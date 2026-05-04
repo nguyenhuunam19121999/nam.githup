@@ -26,13 +26,13 @@ import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
 // Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
-const BLUE = "#4ECDC4";
+const BLUE = "#7C3AED" /* old: #4ECDC4 */;
 // Phiên bản sáng hơn của teal — dùng cho text phụ trên nền tối
 const BLUE_LIGHT = "#7EDDD9";
 // Màu cam — dùng cho nhãn JLPT level
 const ORANGE = "#F59E0B";
-// Gradient header: từ trên #4ECDC4 xuống dưới #5e9a95
-const GRAD = ["#4ECDC4", "#5e9a95"] as const;
+// Gradient header: từ trên #7C3AED xuống dưới #5B21B6 /* old: #4ECDC4 → #5e9a95 */
+const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
 
 export default function GrammarDetailScreen() {
   const router = useRouter();

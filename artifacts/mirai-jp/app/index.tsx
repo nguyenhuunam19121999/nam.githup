@@ -22,12 +22,12 @@ import { AuthMenu } from "../components/AuthMenu";
 import { useAuth } from "../hooks/useAuth";
 
 // ─── Màu chủ đạo ──────────────────────────────────────────────────────────────
-// TEAL      : #4ECDC4  rgb(78, 205, 196) — xanh ngọc, dùng cho header, nút, badge
+// TEAL      : #7C3AED — tím violet, dùng cho header, nút, badge /* old: #4ECDC4 */
 // TEAL_DARK : #5e9a95                    — phiên bản tối hơn (cuối gradient)
 // GRAD      : mảng màu cho LinearGradient — từ trên #4ECDC4 xuống dưới #5e9a95
-const TEAL = "#4ECDC4";
-const TEAL_DARK = "#5e9a95";
-const GRAD = ["#4ECDC4", "#5e9a95"] as const;
+const TEAL = "#7C3AED" /* old: #4ECDC4 */;
+const TEAL_DARK = "#5B21B6" /* old: #5e9a95 */;
+const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
 
 interface Item {
   id: string;

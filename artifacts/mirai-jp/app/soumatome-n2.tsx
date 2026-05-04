@@ -24,8 +24,8 @@ import { getKanjiByBook, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { getGrammarByBook, type GrammarItem } from "../assets/data_nn";
 import { getVocab, type RawVocab } from "../assets/vocab";
 
-const TEAL = "#4ECDC4";
-const GRAD = ["#4ECDC4", "#5e9a95"] as const;
+const TEAL = "#7C3AED" /* old: #4ECDC4 */;
+const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
 
 type Part = "kanji" | "vocab" | "grammar";
 

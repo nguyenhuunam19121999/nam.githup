@@ -20,8 +20,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-const TEAL = "#4ECDC4";
-const GRAD = ["#4ECDC4", "#5e9a95"] as const;
+const TEAL = "#7C3AED" /* old: #4ECDC4 */;
+const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
 
 interface MenuItem {
   id: string;

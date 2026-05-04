@@ -77,11 +77,11 @@ function GrammarStatsModal({
 }
 
 // Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
-const BLUE = "#4ECDC4";
+const BLUE = "#7C3AED" /* old: #4ECDC4 */;
 // Phiên bản tối hơn của teal — dùng cho viền, hover
 const BLUE_DARK = "#3BB3AC";
-// Gradient header: từ trên #4ECDC4 xuống dưới #5e9a95
-const GRAD = ["#4ECDC4", "#5e9a95"] as const;
+// Gradient header: từ trên #7C3AED xuống dưới #5B21B6 /* old: #4ECDC4 → #5e9a95 */
+const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
 
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;
 type Level = (typeof LEVELS)[number];

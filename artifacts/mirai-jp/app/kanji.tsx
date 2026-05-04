@@ -37,11 +37,11 @@ import { useAuth } from "@/hooks/useAuth";
 const SCREEN_W = Dimensions.get("window").width;
 
 // Màu chủ đạo — xanh ngọc teal, đồng bộ toàn app
-const BLUE = "#4ECDC4";
+const BLUE = "#7C3AED" /* old: #4ECDC4 */;
 // Màu đỏ dùng riêng cho chữ Kanji
 const RED = "#E03131";
 // Gradient header
-const GRAD = ["#4ECDC4", "#5e9a95"] as const;
+const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
 
 type Mode = "list" | "quiz" | "writing";
 
@@ -678,7 +678,7 @@ const s = StyleSheet.create({
   headerTitle: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
   headerSubtitle: { fontSize: 13, color: "#718096" },
   headerBtns: { flexDirection: "row", gap: 8, alignItems: "center" },
-  logoBadgeWhite: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "#f0fdfc", borderRadius: 8, paddingHorizontal: 8, height: 34, borderWidth: 1.5, borderColor: BLUE },
+  logoBadgeWhite: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "#f5f3ff", borderRadius: 8, paddingHorizontal: 8, height: 34, borderWidth: 1.5, borderColor: BLUE },
   logoBadgeWhiteText: { color: "#0f172a", fontSize: 12, fontWeight: "800" as const },
   logoBadgeWhiteDot:  { color: BLUE,      fontSize: 14, fontWeight: "900" as const },
   logoBadgeWhiteJP:   { color: "#0f172a", fontSize: 12, fontWeight: "900" as const },

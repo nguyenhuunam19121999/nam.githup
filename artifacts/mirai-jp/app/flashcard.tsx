@@ -15,7 +15,7 @@
 //   • Phát âm tiếng Nhật (expo-speech)
 //   • Thống kê học tập
 //
-// Màu chủ đạo: #4ECDC4  rgb(78, 205, 196) — đồng bộ toàn app
+// Màu chủ đạo: #7C3AED — tím violet, đồng bộ toàn app /* old: #4ECDC4 */
 // ─────────────────────────────────────────────────────────────────────────────
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -130,7 +130,7 @@ function ToggleRow({
       <Switch
         value={value}
         onValueChange={onToggle}
-        trackColor={{ false: "#cbd5e0", true: "#4ECDC4" }}
+        trackColor={{ false: "#cbd5e0", true: "#7C3AED" }}
         thumbColor="#fff"
         ios_backgroundColor="#cbd5e0"
       />
@@ -1312,14 +1312,14 @@ const s = StyleSheet.create({
     justifyContent: "center",
     marginRight: 10,
   },
-  backBtnText: { fontSize: 28, color: "#4ECDC4", lineHeight: 30 },
+  backBtnText: { fontSize: 28, color: "#7C3AED", lineHeight: 30 },
   titleBlock: { flex: 1, marginRight: 10 },
   title: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
   subtitle: { fontSize: 13, color: "#718096" },
   headerButtons: { flexDirection: "row", gap: 8, alignItems: "center" },
-  logoBadgeWhite: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "#f0fdfc", borderRadius: 8, paddingHorizontal: 8, height: 34, borderWidth: 1.5, borderColor: "#4ECDC4" },
+  logoBadgeWhite: { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: "#f5f3ff", borderRadius: 8, paddingHorizontal: 8, height: 34, borderWidth: 1.5, borderColor: "#7C3AED" },
   logoBadgeWhiteText: { color: "#0f172a", fontSize: 12, fontWeight: "800" as const },
-  logoBadgeWhiteDot:  { color: "#4ECDC4", fontSize: 14, fontWeight: "900" as const },
+  logoBadgeWhiteDot:  { color: "#7C3AED", fontSize: 14, fontWeight: "900" as const },
   logoBadgeWhiteJP:   { color: "#0f172a", fontSize: 12, fontWeight: "900" as const },
   statsBtn: {
     width: 42,
@@ -1385,7 +1385,7 @@ const s = StyleSheet.create({
     marginBottom: 12,
   },
   menuSheetTitle: { fontSize: 16, fontWeight: "800", color: "#0f172a" },
-  menuSheetClose: { fontSize: 14, fontWeight: "600", color: "#4ECDC4" },
+  menuSheetClose: { fontSize: 14, fontWeight: "600", color: "#7C3AED" },
   autoScrollHint: {
     fontSize: 12,
     color: "#64748b",
@@ -1407,8 +1407,8 @@ const s = StyleSheet.create({
     backgroundColor: "#f8fafc",
   },
   autoScrollChipActive: {
-    backgroundColor: "#4ECDC4",
-    borderColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
+    borderColor: "#7C3AED",
   },
   autoScrollChipDisabled: { opacity: 0.45 },
   autoScrollChipText: {
@@ -1459,12 +1459,12 @@ const s = StyleSheet.create({
   sheet: { backgroundColor: "#fff", borderTopLeftRadius: 18, borderTopRightRadius: 18, paddingBottom: 32 },
   sheetHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: 20, paddingVertical: 16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: "#e2e8f0" },
   sheetTitle: { fontSize: 16, fontWeight: "700", color: "#0f172a" },
-  sheetClose: { fontSize: 15, color: "#4ECDC4", fontWeight: "600" },
+  sheetClose: { fontSize: 15, color: "#7C3AED", fontWeight: "600" },
   sheetBody: { paddingHorizontal: 16, paddingTop: 8 },
   sheetOption: { paddingVertical: 14, paddingHorizontal: 12, borderRadius: 10, marginBottom: 4 },
   sheetOptionActive: { backgroundColor: "#e6faf9" },
   sheetOptionText: { fontSize: 16, color: "#334155" },
-  sheetOptionTextActive: { color: "#4ECDC4", fontWeight: "700" },
+  sheetOptionTextActive: { color: "#7C3AED", fontWeight: "700" },
 
   /* Mode Switch */
   modeSwitch: {
@@ -1480,7 +1480,7 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   modeActive: {
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
   },
   modeBtnText: {
     fontSize: 13,
@@ -1506,7 +1506,7 @@ const s = StyleSheet.create({
     marginRight: 10,
   },
   topicChipActive: {
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
   },
   topicText: {
     fontSize: 13,
@@ -1522,7 +1522,7 @@ const s = StyleSheet.create({
   bookmarkBanner: {
     backgroundColor: "#e6faf9",
     borderWidth: 1,
-    borderColor: "#4ECDC4",
+    borderColor: "#7C3AED",
     borderRadius: 10,
     paddingHorizontal: 14,
     paddingVertical: 9,
@@ -1578,7 +1578,7 @@ const s = StyleSheet.create({
   },
   progressFill: {
     height: "100%",
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     borderRadius: 99,
   },
 
@@ -1652,14 +1652,14 @@ const s = StyleSheet.create({
   },
   btnNext: {
     flex: 1,
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     paddingVertical: 11,
     borderRadius: 10,
     alignItems: "center",
   },
   btnShuffle: {
     flex: 1,
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     paddingVertical: 11,
     borderRadius: 10,
     alignItems: "center",
@@ -1673,7 +1673,7 @@ const s = StyleSheet.create({
   },
   btnList: {
     width: "100%",
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     paddingVertical: 13,
     borderRadius: 12,
     alignItems: "center",
@@ -1723,7 +1723,7 @@ const s = StyleSheet.create({
     marginBottom: 24,
   },
   quizCounter: { fontSize: 16, fontWeight: "600", color: "#4a5568" },
-  quizScore: { fontSize: 16, fontWeight: "700", color: "#4ECDC4" },
+  quizScore: { fontSize: 16, fontWeight: "700", color: "#7C3AED" },
   questionCard: {
     backgroundColor: "#fff",
     borderRadius: 20,
@@ -1748,7 +1748,7 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   correctOption: {
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     borderColor: "#3BB3AC",
     padding: 16,
     borderRadius: 12,
@@ -1765,7 +1765,7 @@ const s = StyleSheet.create({
   },
   optionText: { fontSize: 16, fontWeight: "500", color: "#2d3748" },
   explainBtn: { alignItems: "center", padding: 12 },
-  explainText: { fontSize: 14, color: "#4ECDC4" },
+  explainText: { fontSize: 14, color: "#7C3AED" },
   explanationBox: {
     backgroundColor: "#ebf8ff",
     padding: 16,
@@ -1788,13 +1788,13 @@ const s = StyleSheet.create({
   resultScore: {
     fontSize: 48,
     fontWeight: "800",
-    color: "#4ECDC4",
+    color: "#7C3AED",
     marginBottom: 8,
   },
   resultPercentage: { fontSize: 20, color: "#4a5568", marginBottom: 16 },
   resultMessage: { fontSize: 18, marginBottom: 24 },
   quizExitBtn: {
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     paddingVertical: 14,
     paddingHorizontal: 32,
     borderRadius: 12,
@@ -1820,7 +1820,7 @@ const s = StyleSheet.create({
     marginBottom: 16,
   },
   practiceCounter: { fontSize: 16, fontWeight: "600", color: "#4a5568" },
-  practiceScore: { fontSize: 16, fontWeight: "700", color: "#4ECDC4" },
+  practiceScore: { fontSize: 16, fontWeight: "700", color: "#7C3AED" },
   practiceInput: {
     backgroundColor: "#fff",
     borderWidth: 2,
@@ -1831,7 +1831,7 @@ const s = StyleSheet.create({
     marginBottom: 20,
   },
   checkBtn: {
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     paddingVertical: 14,
     borderRadius: 12,
     alignItems: "center",
@@ -1886,10 +1886,10 @@ const s = StyleSheet.create({
   // Ô ghim có viền nhẹ để phân biệt có thể nhấn
   statCardTappable: {
     borderWidth: 1.5,
-    borderColor: "#4ECDC4",
+    borderColor: "#7C3AED",
   },
   // Chú thích nhỏ "Nhấn để xem"
-  statLabelHint: { color: "#4ECDC4", fontStyle: "italic" },
+  statLabelHint: { color: "#7C3AED", fontStyle: "italic" },
   statsDivider: {
     height: 1,
     backgroundColor: "#e2e8f0",
@@ -1911,7 +1911,7 @@ const s = StyleSheet.create({
   statRowLabel: { fontSize: 14, color: "#4a5568" },
   statRowValue: { fontSize: 14, fontWeight: "700", color: "#3BB3AC" },
   closeStatsBtn: {
-    backgroundColor: "#4ECDC4",
+    backgroundColor: "#7C3AED",
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 10,
