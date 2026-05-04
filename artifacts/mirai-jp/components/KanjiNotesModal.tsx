@@ -27,7 +27,7 @@ import {
 import { type KanjiItem } from "../assets/data_JLPT_kanji";
 import { useAuth } from "@/hooks/useAuth";
 
-const BLUE = "#4ECDC4";
+const BLUE = "#7C3AED"; /* old: #4ECDC4 */;
 
 // ─────────────────────────────────────────────────────────────────────────────
 export function KanjiNotesModal({

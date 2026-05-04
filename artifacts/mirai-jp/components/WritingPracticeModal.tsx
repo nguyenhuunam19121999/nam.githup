@@ -23,7 +23,7 @@ import Svg, { Path } from "react-native-svg";
 import { type KanjiItem } from "../assets/data_JLPT_kanji";
 import { KanjiStrokeOrder } from "./KanjiStrokeOrder";
 
-const BLUE = "#4ECDC4";
+const BLUE = "#7C3AED"; /* old: #4ECDC4 */;
 const RED  = "#E03131";
 
 const SCREEN_W   = Dimensions.get("window").width;
