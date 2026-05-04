@@ -1,338 +1,3050 @@
 [
-  { "kanji": "飲食料品製造業", "hira": "いんしょくりょうひんせいぞうぎょう", "han": "Ẩm thực liệu phẩm chế tạo nghiệp", "nghia": "Ngành sản xuất thực phẩm và đồ uống", "week": 1, "lesson": 1 },
-  { "kanji": "惣菜製造業", "hira": "そうざいせいぞうぎょう", "han": "Tổng thái chế tạo nghiệp", "nghia": "Ngành chế biến thức ăn nấu sẵn", "week": 1, "lesson": 1 },
-  { "kanji": "惣菜", "hira": "そうざい", "han": "Tổng thái", "nghia": "Thức ăn nấu sẵn", "week": 1, "lesson": 1 },
-  { "kanji": "弁当", "hira": "べんとう", "han": "Biện đương", "nghia": "Cơm hộp", "week": 1, "lesson": 1 },
-  { "kanji": "食品衛生", "hira": "しょくひんえいせい", "han": "Thực phẩm vệ sinh", "nghia": "Vệ sinh thực phẩm", "week": 1, "lesson": 1 },
-
-  { "kanji": "５Ｓ", "hira": "ごえす", "han": "", "nghia": "5S (chỉnh lý, chỉnh đốn, sạch sẽ, săn sóc, sẵn sàng)", "week": 1, "lesson": 2 },
-  { "kanji": "整理", "hira": "せいり", "han": "Chỉnh lý", "nghia": "Sàng lọc (S1 trong 5S)", "week": 1, "lesson": 2 },
-  { "kanji": "整頓", "hira": "せいとん", "han": "Chỉnh đốn", "nghia": "Sắp xếp (S2 trong 5S)", "week": 1, "lesson": 2 },
-  { "kanji": "清掃", "hira": "せいそう", "han": "Thanh tảo", "nghia": "Dọn dẹp (S3 trong 5S)", "week": 1, "lesson": 2 },
-  { "kanji": "清潔", "hira": "せいけつ", "han": "Thanh khiết", "nghia": "Sạch sẽ, săn sóc (S4 trong 5S)", "week": 1, "lesson": 2 },
-
-  { "kanji": "しつけ", "hira": "しつけ", "han": "", "nghia": "Tạo thói quen, sẵn sàng (S5 trong 5S)", "week": 1, "lesson": 3 },
-  { "kanji": "習慣付け", "hira": "しゅうかんづけ", "han": "Tập quán", "nghia": "Tạo thói quen", "week": 1, "lesson": 3 },
-  { "kanji": "衛生管理", "hira": "えいせいかんり", "han": "Vệ sinh quản lý", "nghia": "Quản lý vệ sinh", "week": 1, "lesson": 3 },
-  { "kanji": "区分衛生管理", "hira": "くぶんえいせいかんり", "han": "Khu phân vệ sinh quản lý", "nghia": "Quản lý vệ sinh riêng biệt", "week": 1, "lesson": 3 },
-  { "kanji": "健康チェック", "hira": "けんこうちぇっく", "han": "Kiện khang", "nghia": "Kiểm tra sức khỏe", "week": 1, "lesson": 3 },
-
-  { "kanji": "清潔作業区域", "hira": "せいけつさぎょうくいき", "han": "Thanh khiết tác nghiệp khu vực", "nghia": "Khu vực làm việc sạch", "week": 1, "lesson": 4 },
-  { "kanji": "準清潔作業区域", "hira": "じゅんせいけつさぎょうくいき", "han": "Chuẩn thanh khiết tác nghiệp khu vực", "nghia": "Khu vực làm việc bán sạch", "week": 1, "lesson": 4 },
-  { "kanji": "汚染作業区域", "hira": "おせんさぎょうくいき", "han": "Ô nhiễm tác nghiệp khu vực", "nghia": "Khu vực làm việc bẩn", "week": 1, "lesson": 4 },
-  { "kanji": "ゾーニング", "hira": "ぞーにんぐ", "han": "", "nghia": "Zoning (phân vùng vệ sinh)", "week": 1, "lesson": 4 },
-  { "kanji": "交差汚染", "hira": "こうさおせん", "han": "Giao soa ô nhiễm", "nghia": "Ô nhiễm chéo", "week": 1, "lesson": 4 },
-
-  { "kanji": "細菌", "hira": "さいきん", "han": "Tế khuẩn", "nghia": "Vi khuẩn", "week": 2, "lesson": 1 },
-  { "kanji": "微生物", "hira": "びせいぶつ", "han": "Vi sinh vật", "nghia": "Vi sinh vật", "week": 2, "lesson": 1 },
-  { "kanji": "病原性微生物", "hira": "びょうげんせいびせいぶつ", "han": "Bệnh nguyên tính vi sinh vật", "nghia": "Vi sinh vật gây bệnh", "week": 2, "lesson": 1 },
-  { "kanji": "微生物検査", "hira": "びせいぶつけんさ", "han": "Vi sinh vật kiểm tra", "nghia": "Kiểm tra vi sinh vật", "week": 2, "lesson": 1 },
-  { "kanji": "食中毒菌", "hira": "しょくちゅうどくきん", "han": "Thực trúng độc khuẩn", "nghia": "Vi khuẩn gây ngộ độc thực phẩm", "week": 2, "lesson": 1 },
-
-  { "kanji": "黄色ブドウ球菌", "hira": "おうしょくぶどうきゅうきん", "han": "Hoàng sắc cầu khuẩn", "nghia": "Tụ cầu vàng (Staphylococcus aureus)", "week": 2, "lesson": 2 },
-  { "kanji": "サルモネラ属菌", "hira": "さるもねらぞくきん", "han": "Thuộc khuẩn", "nghia": "Khuẩn thuộc chi Salmonella", "week": 2, "lesson": 2 },
-  { "kanji": "カンピロバクター属菌", "hira": "かんぴろばくたーぞくきん", "han": "Thuộc khuẩn", "nghia": "Khuẩn thuộc chi Campylobacter", "week": 2, "lesson": 2 },
-  { "kanji": "腸炎ビブリオ", "hira": "ちょうえんびぶりお", "han": "Trường viêm", "nghia": "Vi khuẩn Vibrio parahaemolyticus", "week": 2, "lesson": 2 },
-  { "kanji": "腸管出血性大腸菌", "hira": "ちょうかんしゅっけつせいだいちょうきん", "han": "Trường quản xuất huyết tính đại trường khuẩn", "nghia": "Vi khuẩn E. coli gây xuất huyết đường ruột", "week": 2, "lesson": 2 },
-
-  { "kanji": "ウェルシュ菌", "hira": "うぇるしゅきん", "han": "Khuẩn", "nghia": "Vi khuẩn Clostridium perfringens", "week": 2, "lesson": 3 },
-  { "kanji": "セレウス菌", "hira": "せれうすきん", "han": "Khuẩn", "nghia": "Vi khuẩn Bacillus cereus", "week": 2, "lesson": 3 },
-  { "kanji": "ボツリヌス菌", "hira": "ぼつりぬすきん", "han": "Khuẩn", "nghia": "Vi khuẩn Clostridium botulinum", "week": 2, "lesson": 3 },
-  { "kanji": "芽胞", "hira": "がほう", "han": "Nha bào", "nghia": "Nha bào (bào tử vi khuẩn)", "week": 2, "lesson": 3 },
-  { "kanji": "芽胞菌", "hira": "がほうきん", "han": "Nha bào khuẩn", "nghia": "Vi khuẩn sinh nha bào", "week": 2, "lesson": 3 },
-
-  { "kanji": "寄生虫", "hira": "きせいちゅう", "han": "Ký sinh trùng", "nghia": "Ký sinh trùng", "week": 2, "lesson": 4 },
-  { "kanji": "アニサキス", "hira": "あにさきす", "han": "", "nghia": "Anisakis (ký sinh trùng trong cá)", "week": 2, "lesson": 4 },
-  { "kanji": "アニサキス食中毒", "hira": "あにさきすしょくちゅうどく", "han": "Thực trúng độc", "nghia": "Ngộ độc thực phẩm do Anisakis", "week": 2, "lesson": 4 },
-  { "kanji": "ノロウイルス", "hira": "のろういるす", "han": "", "nghia": "Vi-rút Noro", "week": 2, "lesson": 4 },
-  { "kanji": "毒素", "hira": "どくそ", "han": "Độc tố", "nghia": "Độc tố", "week": 2, "lesson": 4 },
-  { "kanji": "ノロウイルスが原因の食中毒を予防するための４原則", "hira": "のろううるすがげんいんのしょくちゅうどくをよぼうするためのよんげんそく", "han": "Thực trúng độc dự phòng tứ nguyên tắc", "nghia": "4 nguyên tắc phòng ngừa ngộ độc do vi-rút Noro", "week": 2, "lesson": 4 },
-
-  { "kanji": "アレルギー反応", "hira": "あれるぎーはんのう", "han": "Phản ứng", "nghia": "Phản ứng dị ứng", "week": 3, "lesson": 1 },
-  { "kanji": "アレルギー物質", "hira": "あれるぎーぶっしつ", "han": "Vật chất", "nghia": "Chất gây dị ứng", "week": 3, "lesson": 1 },
-  { "kanji": "アレルゲン", "hira": "あれるげん", "han": "", "nghia": "Dị nguyên", "week": 3, "lesson": 1 },
-  { "kanji": "特定原材料", "hira": "とくていげんざいりょう", "han": "Đặc định nguyên tài liệu", "nghia": "Nguyên vật liệu đặc biệt (bắt buộc ghi nhãn dị ứng)", "week": 3, "lesson": 1 },
-  { "kanji": "特定原材料に準ずるもの", "hira": "とくていげんざいりょうにじゅんずるもの", "han": "Đặc định nguyên tài liệu chuẩn", "nghia": "Nguyên vật liệu tương đương nguyên vật liệu đặc biệt", "week": 3, "lesson": 1 },
-
-  { "kanji": "危害要因", "hira": "きがいよういん", "han": "Nguy hại yếu nhân", "nghia": "Mối nguy", "week": 3, "lesson": 2 },
-  { "kanji": "危害要因分析", "hira": "きがいよういんぶんせき", "han": "Nguy hại yếu nhân phân tích", "nghia": "Phân tích mối nguy", "week": 3, "lesson": 2 },
-  { "kanji": "化学的危害要因", "hira": "かがくてききがいよういん", "han": "Hóa học đích nguy hại yếu nhân", "nghia": "Mối nguy hóa học", "week": 3, "lesson": 2 },
-  { "kanji": "生物的危害要因", "hira": "せいぶつてききがいよういん", "han": "Sinh vật đích nguy hại yếu nhân", "nghia": "Mối nguy sinh học", "week": 3, "lesson": 2 },
-  { "kanji": "物理的危害要因", "hira": "ぶつりてききがいよういん", "han": "Vật lý đích nguy hại yếu nhân", "nghia": "Mối nguy vật lý", "week": 3, "lesson": 2 },
-
-  { "kanji": "ソラニン", "hira": "そらにん", "han": "", "nghia": "Solanin (chất độc trong khoai tây xanh)", "week": 3, "lesson": 3 },
-  { "kanji": "ヒスタミン", "hira": "ひすたみん", "han": "", "nghia": "Histamin", "week": 3, "lesson": 3 },
-  { "kanji": "ヒスタミン食中毒", "hira": "ひすたみんしょくちゅうどく", "han": "Thực trúng độc", "nghia": "Ngộ độc thực phẩm do Histamin", "week": 3, "lesson": 3 },
-  { "kanji": "異物", "hira": "いぶつ", "han": "Dị vật", "nghia": "Dị vật (tạp chất lẫn vào thực phẩm)", "week": 3, "lesson": 3 },
-  { "kanji": "硬質異物", "hira": "こうしついぶつ", "han": "Cứng chất dị vật", "nghia": "Dị vật cứng", "week": 3, "lesson": 3 },
-
-  { "kanji": "食中毒予防の３原則", "hira": "しょくちゅうどくよぼうのさんげんそく", "han": "Thực trúng độc dự phòng tam nguyên tắc", "nghia": "3 nguyên tắc phòng tránh ngộ độc thực phẩm", "week": 3, "lesson": 4 },
-  { "kanji": "感染症", "hira": "かんせんしょう", "han": "Cảm nhiễm chứng", "nghia": "Bệnh truyền nhiễm", "week": 3, "lesson": 4 },
-  { "kanji": "洗浄", "hira": "せんじょう", "han": "Tẩy tịnh", "nghia": "Rửa, làm sạch", "week": 3, "lesson": 4 },
-  { "kanji": "殺菌", "hira": "さっきん", "han": "Sát khuẩn", "nghia": "Diệt khuẩn, khử trùng", "week": 3, "lesson": 4 },
-  { "kanji": "次亜塩素酸ナトリウム", "hira": "じあえんそさんなとりうむ", "han": "Thứ á diêm tố toan", "nghia": "Natri hypoclorit (nước Javen)", "week": 3, "lesson": 4 },
-
-  { "kanji": "下処理", "hira": "したしょり", "han": "Hạ xử lý", "nghia": "Sơ chế", "week": 4, "lesson": 1 },
-  { "kanji": "解凍", "hira": "かいとう", "han": "Giải đông", "nghia": "Rã đông", "week": 4, "lesson": 1 },
-  { "kanji": "自然解凍", "hira": "しぜんかいとう", "han": "Tự nhiên giải đông", "nghia": "Rã đông tự nhiên", "week": 4, "lesson": 1 },
-  { "kanji": "流水解凍", "hira": "りゅうすいかいとう", "han": "Lưu thủy giải đông", "nghia": "Rã đông bằng nước chảy", "week": 4, "lesson": 1 },
-  { "kanji": "開封", "hira": "かいふう", "han": "Khai phong", "nghia": "Mở bao bì", "week": 4, "lesson": 1 },
-
-  { "kanji": "加温", "hira": "かおん", "han": "Gia ôn", "nghia": "Gia nhiệt", "week": 4, "lesson": 2 },
-  { "kanji": "加熱調理", "hira": "かねつちょうり", "han": "Gia nhiệt điều lý", "nghia": "Chế biến bằng phương pháp gia nhiệt", "week": 4, "lesson": 2 },
-  { "kanji": "非加熱調理", "hira": "ひかねつちょうり", "han": "Phi gia nhiệt điều lý", "nghia": "Chế biến không sử dụng nhiệt", "week": 4, "lesson": 2 },
-  { "kanji": "加熱殺菌", "hira": "かねつさっきん", "han": "Gia nhiệt sát khuẩn", "nghia": "Khử trùng bằng nhiệt", "week": 4, "lesson": 2 },
-  { "kanji": "中心温度", "hira": "ちゅうしんおんど", "han": "Trung tâm ôn độ", "nghia": "Nhiệt độ trung tâm (của thực phẩm)", "week": 4, "lesson": 2 },
-
-  { "kanji": "水冷", "hira": "すいれい", "han": "Thủy lãnh", "nghia": "Làm nguội bằng nước", "week": 4, "lesson": 3 },
-  { "kanji": "風冷", "hira": "ふうれい", "han": "Phong lãnh", "nghia": "Làm nguội bằng gió", "week": 4, "lesson": 3 },
-  { "kanji": "冷却", "hira": "れいきゃく", "han": "Lãnh khước", "nghia": "Làm nguội", "week": 4, "lesson": 3 },
-  { "kanji": "冷凍", "hira": "れいとう", "han": "Lãnh đông", "nghia": "Làm đông, cấp đông", "week": 4, "lesson": 3 },
-  { "kanji": "冷凍庫", "hira": "れいとうこ", "han": "Lãnh đông khố", "nghia": "Kho đông, tủ đông", "week": 4, "lesson": 3 },
-
-  { "kanji": "成型", "hira": "せいけい", "han": "Thành hình", "nghia": "Tạo hình", "week": 4, "lesson": 4 },
-  { "kanji": "充填", "hira": "じゅうてん", "han": "Sung điền", "nghia": "Chiết rót, đóng gói sản phẩm vào bao", "week": 4, "lesson": 4 },
-  { "kanji": "盛り付け", "hira": "もりつけ", "han": "Thịnh phó", "nghia": "Bày biện thức ăn", "week": 4, "lesson": 4 },
-  { "kanji": "トッピング", "hira": "とっぴんぐ", "han": "", "nghia": "Trang trí, thêm topping (món ăn)", "week": 4, "lesson": 4 },
-  { "kanji": "混ぜる", "hira": "まぜる", "han": "Hỗn", "nghia": "Trộn lẫn", "week": 4, "lesson": 4 },
-
-  { "kanji": "先入れ先出し", "hira": "さきいれさきだし", "han": "Tiên nhập tiên xuất", "nghia": "Nhập trước, xuất trước (FIFO)", "week": 5, "lesson": 1 },
-  { "kanji": "使用期限", "hira": "しようきげん", "han": "Sử dụng kỳ hạn", "nghia": "Thời hạn sử dụng", "week": 5, "lesson": 1 },
-  { "kanji": "消費期限", "hira": "しょうひきげん", "han": "Tiêu phí kỳ hạn", "nghia": "Thời hạn tiêu dùng (hết hạn ăn)", "week": 5, "lesson": 1 },
-  { "kanji": "賞味期限", "hira": "しょうみきげん", "han": "Thưởng vị kỳ hạn", "nghia": "Hạn sử dụng tốt nhất (best before)", "week": 5, "lesson": 1 },
-  { "kanji": "保管温度", "hira": "ほかんおんど", "han": "Bảo quản ôn độ", "nghia": "Nhiệt độ bảo quản", "week": 5, "lesson": 1 },
-
-  { "kanji": "原材料の保管", "hira": "げんざいりょうのほかん", "han": "Nguyên tài liệu bảo quản", "nghia": "Bảo quản nguyên vật liệu", "week": 5, "lesson": 2 },
-  { "kanji": "包装", "hira": "ほうそう", "han": "Bao trang", "nghia": "Đóng gói, bao bì", "week": 5, "lesson": 2 },
-  { "kanji": "ドリップ", "hira": "どりっぷ", "han": "", "nghia": "Nước rỉ từ thịt cá (drip)", "week": 5, "lesson": 2 },
-  { "kanji": "薬剤", "hira": "やくざい", "han": "Dược tễ", "nghia": "Hóa chất, thuốc (dùng trong sản xuất)", "week": 5, "lesson": 2 },
-  { "kanji": "薬剤の管理", "hira": "やくざいのかんり", "han": "Dược tễ quản lý", "nghia": "Quản lý hóa chất, thuốc", "week": 5, "lesson": 2 },
-
-  { "kanji": "薬剤による殺菌", "hira": "やくざいによるさっきん", "han": "Dược tễ sát khuẩn", "nghia": "Khử trùng bằng hóa chất", "week": 5, "lesson": 3 },
-  { "kanji": "Ｘ線異物検出機", "hira": "えっくすせんいぶつけんしゅつき", "han": "X tuyến dị vật kiểm xuất cơ", "nghia": "Máy dò dị vật bằng tia X", "week": 5, "lesson": 3 },
-  { "kanji": "金属探知機", "hira": "きんぞくたんちき", "han": "Kim thuộc thám tri cơ", "nghia": "Máy dò kim loại", "week": 5, "lesson": 3 },
-  { "kanji": "テストピース", "hira": "てすとぴーす", "han": "", "nghia": "Mẫu thử (để kiểm tra máy dò)", "week": 5, "lesson": 3 },
-  { "kanji": "改善措置", "hira": "かいぜんそち", "han": "Cải thiện biện pháp", "nghia": "Biện pháp khắc phục", "week": 5, "lesson": 3 },
-
-  { "kanji": "記録", "hira": "きろく", "han": "Ký lục", "nghia": "Ghi chép, hồ sơ", "week": 5, "lesson": 4 },
-  { "kanji": "作業服", "hira": "さぎょうふく", "han": "Tác nghiệp phục", "nghia": "Trang phục làm việc", "week": 5, "lesson": 4 },
-  { "kanji": "作業手順書", "hira": "さぎょうてじゅんしょ", "han": "Tác nghiệp thủ thuận thư", "nghia": "Hướng dẫn trình tự thao tác", "week": 5, "lesson": 4 },
-  { "kanji": "流水", "hira": "りゅうすい", "han": "Lưu thủy", "nghia": "Nước chảy", "week": 5, "lesson": 4 },
-  { "kanji": "手洗い", "hira": "てあらい", "han": "Thủ tẩy", "nghia": "Rửa tay", "week": 5, "lesson": 4 },
-
-  { "kanji": "ハザード", "hira": "はざーど", "han": "", "nghia": "Mối nguy hại (hazard)", "week": 6, "lesson": 1 },
-  { "kanji": "ハザード分析", "hira": "はざーどぶんせき", "han": "Phân tích", "nghia": "Phân tích mối nguy hại", "week": 6, "lesson": 1 },
-  { "kanji": "HACCPによる衛生管理", "hira": "はさっぷによるえいせいかんり", "han": "Vệ sinh quản lý", "nghia": "Quản lý vệ sinh theo HACCP", "week": 6, "lesson": 1 },
-  { "kanji": "HACCPプラン", "hira": "はさっぷぷらん", "han": "", "nghia": "Kế hoạch HACCP", "week": 6, "lesson": 1 },
-  { "kanji": "HACCPの７原則", "hira": "はさっぷのななげんそく", "han": "Thất nguyên tắc", "nghia": "7 nguyên tắc HACCP", "week": 6, "lesson": 1 },
-
-  { "kanji": "重要管理点", "hira": "じゅうようかんりてん", "han": "Trọng yếu quản lý điểm", "nghia": "Điểm kiểm soát tới hạn (CCP)", "week": 6, "lesson": 2 },
-  { "kanji": "管理基準", "hira": "かんりきじゅん", "han": "Quản lý cơ chuẩn", "nghia": "Ngưỡng tới hạn (giới hạn cho phép)", "week": 6, "lesson": 2 },
-  { "kanji": "管理基準からの逸脱", "hira": "かんりきじゅんからのいつだつ", "han": "Quản lý cơ chuẩn dật thoát", "nghia": "Sai lệch so với ngưỡng tới hạn", "week": 6, "lesson": 2 },
-  { "kanji": "始業前点検", "hira": "しぎょうまえてんけん", "han": "Thủy nghiệp tiền điểm kiểm", "nghia": "Kiểm tra trước khi vận hành", "week": 6, "lesson": 2 },
-  { "kanji": "指差呼称", "hira": "しさこしょう", "han": "Chỉ sai hô xưng", "nghia": "Tay chỉ miệng hô (xác nhận an toàn)", "week": 6, "lesson": 2 },
-
-  { "kanji": "フールプルーフ", "hira": "ふーるぷるーふ", "han": "", "nghia": "Fool-proof (biện pháp chống nhầm lẫn)", "week": 6, "lesson": 3 },
-  { "kanji": "フェールセーフ", "hira": "ふぇーるせーふ", "han": "", "nghia": "Fail-safe (an toàn dự phòng khi hư hỏng)", "week": 6, "lesson": 3 },
-  { "kanji": "緊急停止ボタン", "hira": "きんきゅうていしぼたん", "han": "Khẩn cấp đình chỉ", "nghia": "Nút dừng khẩn cấp", "week": 6, "lesson": 3 },
-  { "kanji": "非常停止ボタン", "hira": "ひじょうていしぼたん", "han": "Phi thường đình chỉ", "nghia": "Nút dừng khẩn cấp (nút đỏ)", "week": 6, "lesson": 3 },
-  { "kanji": "電源", "hira": "でんげん", "han": "Điện nguyên", "nghia": "Nguồn điện", "week": 6, "lesson": 3 },
-
-  { "kanji": "安全装置", "hira": "あんぜんそうち", "han": "An toàn trang trí", "nghia": "Thiết bị an toàn", "week": 6, "lesson": 4 },
-  { "kanji": "安全カバー", "hira": "あんぜんかばー", "han": "An toàn", "nghia": "Tấm che an toàn", "week": 6, "lesson": 4 },
-  { "kanji": "安全標識", "hira": "あんぜんひょうしき", "han": "An toàn tiêu thức", "nghia": "Biển báo an toàn", "week": 6, "lesson": 4 },
-  { "kanji": "安全保護具", "hira": "あんぜんほごぐ", "han": "An toàn bảo hộ cụ", "nghia": "Dụng cụ bảo hộ lao động", "week": 6, "lesson": 4 },
-  { "kanji": "危険予知訓練", "hira": "きけんよちくんれん", "han": "Nguy hiểm dự tri huấn luyện", "nghia": "Huấn luyện dự đoán nguy hiểm (KYT)", "week": 6, "lesson": 4 },
-
-  { "kanji": "労働安全", "hira": "ろうどうあんぜん", "han": "Lao động an toàn", "nghia": "An toàn lao động", "week": 7, "lesson": 1 },
-  { "kanji": "労働災害", "hira": "ろうどうさいがい", "han": "Lao động tai hại", "nghia": "Tai nạn lao động", "week": 7, "lesson": 1 },
-  { "kanji": "二次災害", "hira": "にじさいがい", "han": "Nhị thứ tai hại", "nghia": "Tai nạn thứ cấp", "week": 7, "lesson": 1 },
-  { "kanji": "熱中症", "hira": "ねっちゅうしょう", "han": "Nhiệt trúng chứng", "nghia": "Sốc nhiệt, say nắng", "week": 7, "lesson": 1 },
-  { "kanji": "ハインリッヒの法則", "hira": "はいんりっひのほうそく", "han": "Pháp tắc", "nghia": "Nguyên lý Heinrich (1-29-300)", "week": 7, "lesson": 1 },
-
-  { "kanji": "ヒヤリ・ハット", "hira": "ひやり・はっと", "han": "", "nghia": "Tình huống suýt xảy ra tai nạn", "week": 7, "lesson": 2 },
-  { "kanji": "ヒヤリ・ハット活動", "hira": "ひやり・はっとかつどう", "han": "Hoạt động", "nghia": "Hoạt động báo cáo tình huống cận nguy", "week": 7, "lesson": 2 },
-  { "kanji": "安全靴", "hira": "あんぜんぐつ", "han": "An toàn hài", "nghia": "Giày bảo hộ", "week": 7, "lesson": 2 },
-  { "kanji": "カバー付き長靴", "hira": "かばーつきながぐつ", "han": "Trường hài", "nghia": "Ủng cao cổ có dây rút", "week": 7, "lesson": 2 },
-  { "kanji": "ヘルメット", "hira": "へるめっと", "han": "", "nghia": "Mũ bảo hộ", "week": 7, "lesson": 2 },
-
-  { "kanji": "エプロン", "hira": "えぷろん", "han": "", "nghia": "Tạp dề", "week": 7, "lesson": 3 },
-  { "kanji": "耐熱エプロン", "hira": "たいねつえぷろん", "han": "Nại nhiệt", "nghia": "Tạp dề chịu nhiệt", "week": 7, "lesson": 3 },
-  { "kanji": "手袋", "hira": "てぶくろ", "han": "Thủ đại", "nghia": "Găng tay", "week": 7, "lesson": 3 },
-  { "kanji": "ゴム手袋", "hira": "ごむてぶくろ", "han": "Thủ đại", "nghia": "Găng tay cao su", "week": 7, "lesson": 3 },
-  { "kanji": "耐切創手袋", "hira": "たいせっそうてぶくろ", "han": "Nại thiết sang thủ đại", "nghia": "Găng tay chống cắt", "week": 7, "lesson": 3 },
-
-  { "kanji": "くさり手袋", "hira": "くさりてぶくろ", "han": "Thủ đại", "nghia": "Găng tay sợi thép (chống cắt)", "week": 7, "lesson": 4 },
-  { "kanji": "ミトン手袋", "hira": "みとんてぶくろ", "han": "Thủ đại", "nghia": "Găng tay miton (chịu nhiệt)", "week": 7, "lesson": 4 },
-  { "kanji": "メクセル手袋", "hira": "めくせるてぶくろ", "han": "Thủ đại", "nghia": "Găng tay Mexel (chống cắt)", "week": 7, "lesson": 4 },
-  { "kanji": "保護メガネ", "hira": "ほごめがね", "han": "Bảo hộ", "nghia": "Kính bảo hộ", "week": 7, "lesson": 4 },
-  { "kanji": "耳栓", "hira": "みみせん", "han": "Nhĩ tiêu", "nghia": "Nút bịt tai (bảo hộ)", "week": 7, "lesson": 4 },
-
-  { "kanji": "米", "hira": "こめ", "han": "Mễ", "nghia": "Gạo (hạt chưa nấu)", "week": 8, "lesson": 1 },
-  { "kanji": "もち米", "hira": "もちごめ", "han": "Nhu mễ", "nghia": "Gạo nếp", "week": 8, "lesson": 1 },
-  { "kanji": "ご飯", "hira": "ごはん", "han": "Phạn", "nghia": "Cơm (gạo đã nấu chín)", "week": 8, "lesson": 1 },
-  { "kanji": "おかゆ", "hira": "おかゆ", "han": "", "nghia": "Cháo gạo", "week": 8, "lesson": 1 },
-  { "kanji": "おこわ", "hira": "おこわ", "han": "", "nghia": "Xôi (nếp hấp)", "week": 8, "lesson": 1 },
-
-  { "kanji": "パン", "hira": "ぱん", "han": "", "nghia": "Bánh mì", "week": 8, "lesson": 2 },
-  { "kanji": "食パン", "hira": "しょくぱん", "han": "Thực", "nghia": "Bánh mì gối (bánh mì sandwich)", "week": 8, "lesson": 2 },
-  { "kanji": "小麦粉", "hira": "こむぎこ", "han": "Tiểu mạch phấn", "nghia": "Bột mì", "week": 8, "lesson": 2 },
-  { "kanji": "片栗粉", "hira": "かたくりこ", "han": "Phiến lật phấn", "nghia": "Bột năng (tinh bột khoai)", "week": 8, "lesson": 2 },
-  { "kanji": "上新粉", "hira": "じょうしんこ", "han": "Thượng tân phấn", "nghia": "Bột gạo tẻ", "week": 8, "lesson": 2 },
-
-  { "kanji": "麺", "hira": "めん", "han": "Miến", "nghia": "Mì, bún, sợi (tổng quát)", "week": 8, "lesson": 3 },
-  { "kanji": "うどん", "hira": "うどん", "han": "", "nghia": "Mì udon (sợi to, trắng)", "week": 8, "lesson": 3 },
-  { "kanji": "そば", "hira": "そば", "han": "", "nghia": "Mì soba (mì kiều mạch)", "week": 8, "lesson": 3 },
-  { "kanji": "ラーメン", "hira": "らーめん", "han": "", "nghia": "Mì ramen", "week": 8, "lesson": 3 },
-  { "kanji": "パスタ", "hira": "ぱすた", "han": "", "nghia": "Mì pasta (Ý)", "week": 8, "lesson": 3 },
-
-  { "kanji": "豆腐", "hira": "とうふ", "han": "Đậu phụ", "nghia": "Đậu phụ", "week": 8, "lesson": 4 },
-  { "kanji": "納豆", "hira": "なっとう", "han": "Nạp đậu", "nghia": "Đậu nành lên men (natto)", "week": 8, "lesson": 4 },
-  { "kanji": "味噌", "hira": "みそ", "han": "Vị tương", "nghia": "Tương miso", "week": 8, "lesson": 4 },
-  { "kanji": "醤油", "hira": "しょうゆ", "han": "Tương du", "nghia": "Nước tương (xì dầu)", "week": 8, "lesson": 4 },
-  { "kanji": "赤飯", "hira": "せきはん", "han": "Xích phạn", "nghia": "Cơm đỏ / xôi đậu đỏ (món lễ Nhật)", "week": 8, "lesson": 4 },
-
-  { "kanji": "野菜", "hira": "やさい", "han": "Dã thái", "nghia": "Rau, rau củ quả", "week": 9, "lesson": 1 },
-  { "kanji": "キャベツ", "hira": "きゃべつ", "han": "", "nghia": "Bắp cải", "week": 9, "lesson": 1 },
-  { "kanji": "ほうれん草", "hira": "ほうれんそう", "han": "Thảo", "nghia": "Rau bina (cải bó xôi)", "week": 9, "lesson": 1 },
-  { "kanji": "レタス", "hira": "れたす", "han": "", "nghia": "Rau xà lách", "week": 9, "lesson": 1 },
-  { "kanji": "ネギ", "hira": "ねぎ", "han": "", "nghia": "Hành lá", "week": 9, "lesson": 1 },
-
-  { "kanji": "玉ねぎ", "hira": "たまねぎ", "han": "Ngọc thông", "nghia": "Hành tây", "week": 9, "lesson": 2 },
-  { "kanji": "にんにく", "hira": "にんにく", "han": "", "nghia": "Tỏi", "week": 9, "lesson": 2 },
-  { "kanji": "生姜", "hira": "しょうが", "han": "Sinh khương", "nghia": "Gừng", "week": 9, "lesson": 2 },
-  { "kanji": "にんじん", "hira": "にんじん", "han": "", "nghia": "Cà rốt", "week": 9, "lesson": 2 },
-  { "kanji": "大根", "hira": "だいこん", "han": "Đại căn", "nghia": "Củ cải trắng", "week": 9, "lesson": 2 },
-
-  { "kanji": "じゃがいも", "hira": "じゃがいも", "han": "", "nghia": "Khoai tây", "week": 9, "lesson": 3 },
-  { "kanji": "さつまいも", "hira": "さつまいも", "han": "", "nghia": "Khoai lang", "week": 9, "lesson": 3 },
-  { "kanji": "かぼちゃ", "hira": "かぼちゃ", "han": "", "nghia": "Bí đỏ", "week": 9, "lesson": 3 },
-  { "kanji": "なす", "hira": "なす", "han": "", "nghia": "Cà tím", "week": 9, "lesson": 3 },
-  { "kanji": "ピーマン", "hira": "ぴーまん", "han": "", "nghia": "Ớt chuông xanh", "week": 9, "lesson": 3 },
-
-  { "kanji": "きゅうり", "hira": "きゅうり", "han": "", "nghia": "Dưa chuột", "week": 9, "lesson": 4 },
-  { "kanji": "トマト", "hira": "とまと", "han": "", "nghia": "Cà chua", "week": 9, "lesson": 4 },
-  { "kanji": "ブロッコリー", "hira": "ぶろっこりー", "han": "", "nghia": "Súp lơ xanh (bông cải xanh)", "week": 9, "lesson": 4 },
-  { "kanji": "もやし", "hira": "もやし", "han": "", "nghia": "Giá đỗ", "week": 9, "lesson": 4 },
-  { "kanji": "ごぼう", "hira": "ごぼう", "han": "", "nghia": "Ngưu bàng (củ cải đen Nhật)", "week": 9, "lesson": 4 },
-
-  { "kanji": "果物", "hira": "くだもの", "han": "Quả vật", "nghia": "Trái cây", "week": 10, "lesson": 1 },
-  { "kanji": "りんご", "hira": "りんご", "han": "", "nghia": "Táo", "week": 10, "lesson": 1 },
-  { "kanji": "みかん", "hira": "みかん", "han": "", "nghia": "Quýt (cam mikan)", "week": 10, "lesson": 1 },
-  { "kanji": "バナナ", "hira": "ばなな", "han": "", "nghia": "Chuối", "week": 10, "lesson": 1 },
-  { "kanji": "ぶどう", "hira": "ぶどう", "han": "", "nghia": "Nho", "week": 10, "lesson": 1 },
-
-  { "kanji": "いちご", "hira": "いちご", "han": "", "nghia": "Dâu tây", "week": 10, "lesson": 2 },
-  { "kanji": "もも", "hira": "もも", "han": "Đào", "nghia": "Đào", "week": 10, "lesson": 2 },
-  { "kanji": "スイカ", "hira": "すいか", "han": "", "nghia": "Dưa hấu", "week": 10, "lesson": 2 },
-  { "kanji": "メロン", "hira": "めろん", "han": "", "nghia": "Dưa lưới", "week": 10, "lesson": 2 },
-  { "kanji": "梨", "hira": "なし", "han": "Lê", "nghia": "Lê (lê Nhật)", "week": 10, "lesson": 2 },
-
-  { "kanji": "レモン", "hira": "れもん", "han": "", "nghia": "Chanh vàng", "week": 10, "lesson": 3 },
-  { "kanji": "オレンジ", "hira": "おれんじ", "han": "", "nghia": "Cam", "week": 10, "lesson": 3 },
-  { "kanji": "キウイ", "hira": "きうい", "han": "", "nghia": "Kiwi", "week": 10, "lesson": 3 },
-  { "kanji": "パイナップル", "hira": "ぱいなっぷる", "han": "", "nghia": "Dứa / Thơm", "week": 10, "lesson": 3 },
-  { "kanji": "マンゴー", "hira": "まんごー", "han": "", "nghia": "Xoài", "week": 10, "lesson": 3 },
-
-  { "kanji": "さくらんぼ", "hira": "さくらんぼ", "han": "", "nghia": "Anh đào", "week": 10, "lesson": 4 },
-  { "kanji": "柿", "hira": "かき", "han": "Thị", "nghia": "Hồng (quả hồng)", "week": 10, "lesson": 4 },
-  { "kanji": "梅", "hira": "うめ", "han": "Mai", "nghia": "Mận xanh Nhật (umeboshi)", "week": 10, "lesson": 4 },
-  { "kanji": "栗", "hira": "くり", "han": "Lật", "nghia": "Hạt dẻ", "week": 10, "lesson": 4 },
-  { "kanji": "パパイヤ", "hira": "ぱぱいや", "han": "", "nghia": "Đu đủ", "week": 10, "lesson": 4 },
-
-  { "kanji": "肉", "hira": "にく", "han": "Nhục", "nghia": "Thịt (tổng quát)", "week": 11, "lesson": 1 },
-  { "kanji": "牛肉", "hira": "ぎゅうにく", "han": "Ngưu nhục", "nghia": "Thịt bò", "week": 11, "lesson": 1 },
-  { "kanji": "豚肉", "hira": "ぶたにく", "han": "Đồn nhục", "nghia": "Thịt lợn / thịt heo", "week": 11, "lesson": 1 },
-  { "kanji": "鶏肉", "hira": "とりにく", "han": "Kê nhục", "nghia": "Thịt gà", "week": 11, "lesson": 1 },
-  { "kanji": "ひき肉", "hira": "ひきにく", "han": "Nhục", "nghia": "Thịt xay", "week": 11, "lesson": 1 },
-
-  { "kanji": "魚", "hira": "さかな", "han": "Ngư", "nghia": "Cá (tổng quát)", "week": 11, "lesson": 2 },
-  { "kanji": "鮭", "hira": "さけ", "han": "Khuê", "nghia": "Cá hồi", "week": 11, "lesson": 2 },
-  { "kanji": "マグロ", "hira": "まぐろ", "han": "", "nghia": "Cá ngừ", "week": 11, "lesson": 2 },
-  { "kanji": "サバ", "hira": "さば", "han": "", "nghia": "Cá thu", "week": 11, "lesson": 2 },
-  { "kanji": "タイ", "hira": "たい", "han": "Điêu", "nghia": "Cá tráp đỏ (cá tai Nhật)", "week": 11, "lesson": 2 },
-
-  { "kanji": "えび", "hira": "えび", "han": "Hà", "nghia": "Tôm", "week": 11, "lesson": 3 },
-  { "kanji": "いか", "hira": "いか", "han": "", "nghia": "Mực ống", "week": 11, "lesson": 3 },
-  { "kanji": "かに", "hira": "かに", "han": "Giải", "nghia": "Cua", "week": 11, "lesson": 3 },
-  { "kanji": "タコ", "hira": "たこ", "han": "", "nghia": "Bạch tuộc", "week": 11, "lesson": 3 },
-  { "kanji": "ホタテ", "hira": "ほたて", "han": "", "nghia": "Sò điệp", "week": 11, "lesson": 3 },
-
-  { "kanji": "卵", "hira": "たまご", "han": "Noãn", "nghia": "Trứng", "week": 11, "lesson": 4 },
-  { "kanji": "ウインナー", "hira": "ういんなー", "han": "", "nghia": "Xúc xích", "week": 11, "lesson": 4 },
-  { "kanji": "ハム", "hira": "はむ", "han": "", "nghia": "Giăm bông", "week": 11, "lesson": 4 },
-  { "kanji": "ベーコン", "hira": "べーこん", "han": "", "nghia": "Thịt xông khói (bacon)", "week": 11, "lesson": 4 },
-  { "kanji": "缶詰", "hira": "かんづめ", "han": "Quan trẩm", "nghia": "Đồ hộp", "week": 11, "lesson": 4 },
-
-  { "kanji": "牛乳", "hira": "ぎゅうにゅう", "han": "Ngưu nhũ", "nghia": "Sữa bò", "week": 12, "lesson": 1 },
-  { "kanji": "ヨーグルト", "hira": "よーぐると", "han": "", "nghia": "Sữa chua", "week": 12, "lesson": 1 },
-  { "kanji": "チーズ", "hira": "ちーず", "han": "", "nghia": "Phô mai", "week": 12, "lesson": 1 },
-  { "kanji": "バター", "hira": "ばたー", "han": "", "nghia": "Bơ", "week": 12, "lesson": 1 },
-  { "kanji": "豆乳", "hira": "とうにゅう", "han": "Đậu nhũ", "nghia": "Sữa đậu nành", "week": 12, "lesson": 1 },
-
-  { "kanji": "お茶", "hira": "おちゃ", "han": "Trà", "nghia": "Trà (tổng quát)", "week": 12, "lesson": 2 },
-  { "kanji": "緑茶", "hira": "りょくちゃ", "han": "Lục trà", "nghia": "Trà xanh", "week": 12, "lesson": 2 },
-  { "kanji": "麦茶", "hira": "むぎちゃ", "han": "Mạch trà", "nghia": "Trà lúa mạch", "week": 12, "lesson": 2 },
-  { "kanji": "コーヒー", "hira": "こーひー", "han": "", "nghia": "Cà phê", "week": 12, "lesson": 2 },
-  { "kanji": "ジュース", "hira": "じゅーす", "han": "", "nghia": "Nước ép, nước trái cây", "week": 12, "lesson": 2 },
-
-  { "kanji": "炭酸水", "hira": "たんさんすい", "han": "Thán toan thủy", "nghia": "Nước có ga", "week": 12, "lesson": 3 },
-  { "kanji": "スポーツドリンク", "hira": "すぽーつどりんく", "han": "", "nghia": "Nước uống thể thao", "week": 12, "lesson": 3 },
-  { "kanji": "ビール", "hira": "びーる", "han": "", "nghia": "Bia", "week": 12, "lesson": 3 },
-  { "kanji": "ワイン", "hira": "わいん", "han": "", "nghia": "Rượu vang", "week": 12, "lesson": 3 },
-  { "kanji": "日本酒", "hira": "にほんしゅ", "han": "Nhật bản tửu", "nghia": "Rượu sake (rượu gạo Nhật)", "week": 12, "lesson": 3 },
-
-  { "kanji": "アイスクリーム", "hira": "あいすくりーむ", "han": "", "nghia": "Kem", "week": 12, "lesson": 4 },
-  { "kanji": "ケーキ", "hira": "けーき", "han": "", "nghia": "Bánh ngọt", "week": 12, "lesson": 4 },
-  { "kanji": "クッキー", "hira": "くっきー", "han": "", "nghia": "Bánh quy", "week": 12, "lesson": 4 },
-  { "kanji": "チョコレート", "hira": "ちょこれーと", "han": "", "nghia": "Sô-cô-la", "week": 12, "lesson": 4 },
-  { "kanji": "プリン", "hira": "ぷりん", "han": "", "nghia": "Bánh flan (pudding)", "week": 12, "lesson": 4 },
-
-  { "kanji": "塩", "hira": "しお", "han": "Diêm", "nghia": "Muối", "week": 13, "lesson": 1 },
-  { "kanji": "砂糖", "hira": "さとう", "han": "Sa đường", "nghia": "Đường", "week": 13, "lesson": 1 },
-  { "kanji": "酢", "hira": "す", "han": "Thố", "nghia": "Giấm", "week": 13, "lesson": 1 },
-  { "kanji": "油", "hira": "あぶら", "han": "Du", "nghia": "Dầu ăn (tổng quát)", "week": 13, "lesson": 1 },
-  { "kanji": "ごま油", "hira": "ごまあぶら", "han": "Hồ ma du", "nghia": "Dầu mè (dầu vừng)", "week": 13, "lesson": 1 },
-
-  { "kanji": "みりん", "hira": "みりん", "han": "", "nghia": "Mirin (rượu nấu ăn ngọt)", "week": 13, "lesson": 2 },
-  { "kanji": "出汁", "hira": "だし", "han": "Xuất trấp", "nghia": "Nước dùng (dashi)", "week": 13, "lesson": 2 },
-  { "kanji": "コショウ", "hira": "こしょう", "han": "Hồ tiêu", "nghia": "Tiêu", "week": 13, "lesson": 2 },
-  { "kanji": "唐辛子", "hira": "とうがらし", "han": "Đường tân tử", "nghia": "Ớt", "week": 13, "lesson": 2 },
-  { "kanji": "七味唐辛子", "hira": "しちみとうがらし", "han": "Thất vị đường tân tử", "nghia": "Ớt 7 vị (shichimi)", "week": 13, "lesson": 2 },
-
-  { "kanji": "ケチャップ", "hira": "けちゃっぷ", "han": "", "nghia": "Tương cà chua", "week": 13, "lesson": 3 },
-  { "kanji": "マヨネーズ", "hira": "まよねーず", "han": "", "nghia": "Sốt mayonnaise", "week": 13, "lesson": 3 },
-  { "kanji": "ソース", "hira": "そーす", "han": "", "nghia": "Nước sốt (sauce)", "week": 13, "lesson": 3 },
-  { "kanji": "ラー油", "hira": "らーゆ", "han": "Du", "nghia": "Dầu ớt", "week": 13, "lesson": 3 },
-  { "kanji": "わさび", "hira": "わさび", "han": "", "nghia": "Mù tạt xanh Nhật (wasabi)", "week": 13, "lesson": 3 },
-
-  { "kanji": "ゴマ", "hira": "ごま", "han": "Hồ ma", "nghia": "Mè, vừng", "week": 13, "lesson": 4 },
-  { "kanji": "海苔", "hira": "のり", "han": "Hải đài", "nghia": "Rong biển khô (lá nori)", "week": 13, "lesson": 4 },
-  { "kanji": "カレー粉", "hira": "かれーこ", "han": "Phấn", "nghia": "Bột cà ri", "week": 13, "lesson": 4 },
-  { "kanji": "だしの素", "hira": "だしのもと", "han": "Tố", "nghia": "Bột nước dùng (dashi dạng bột)", "week": 13, "lesson": 4 },
-  { "kanji": "山椒", "hira": "さんしょう", "han": "Sơn tiêu", "nghia": "Tiêu Nhật (sansho)", "week": 13, "lesson": 4 },
-
-  { "kanji": "スーパー", "hira": "すーぱー", "han": "", "nghia": "Siêu thị", "week": 14, "lesson": 1 },
-  { "kanji": "レジ", "hira": "れじ", "han": "", "nghia": "Quầy tính tiền", "week": 14, "lesson": 1 },
-  { "kanji": "割引", "hira": "わりびき", "han": "Cát dẫn", "nghia": "Giảm giá", "week": 14, "lesson": 1 },
-  { "kanji": "特売", "hira": "とくばい", "han": "Đặc mại", "nghia": "Hàng bán đặc biệt, khuyến mãi", "week": 14, "lesson": 1 },
-  { "kanji": "品切れ", "hira": "しなぎれ", "han": "Phẩm thiết", "nghia": "Hết hàng", "week": 14, "lesson": 1 },
-
-  { "kanji": "国産", "hira": "こくさん", "han": "Quốc sản", "nghia": "Hàng nội địa (sản xuất trong nước)", "week": 14, "lesson": 2 },
-  { "kanji": "輸入品", "hira": "ゆにゅうひん", "han": "Du nhập phẩm", "nghia": "Hàng nhập khẩu", "week": 14, "lesson": 2 },
-  { "kanji": "有機", "hira": "ゆうき", "han": "Hữu cơ", "nghia": "Hữu cơ (organic)", "week": 14, "lesson": 2 },
-  { "kanji": "無添加", "hira": "むてんか", "han": "Vô thiêm gia", "nghia": "Không chất phụ gia", "week": 14, "lesson": 2 },
-  { "kanji": "産地", "hira": "さんち", "han": "Sản địa", "nghia": "Vùng sản xuất, nơi xuất xứ", "week": 14, "lesson": 2 },
-
-  { "kanji": "野菜売り場", "hira": "やさいうりば", "han": "Dã thái mại trường", "nghia": "Khu bán rau củ quả", "week": 14, "lesson": 3 },
-  { "kanji": "精肉売り場", "hira": "せいにくうりば", "han": "Tinh nhục mại trường", "nghia": "Khu bán thịt", "week": 14, "lesson": 3 },
-  { "kanji": "鮮魚売り場", "hira": "せんぎょうりば", "han": "Tiên ngư mại trường", "nghia": "Khu bán cá tươi, hải sản", "week": 14, "lesson": 3 },
-  { "kanji": "惣菜売り場", "hira": "そうざいうりば", "han": "Tổng thái mại trường", "nghia": "Khu thức ăn nấu sẵn", "week": 14, "lesson": 3 },
-  { "kanji": "冷凍食品", "hira": "れいとうしょくひん", "han": "Lãnh đông thực phẩm", "nghia": "Thực phẩm đông lạnh", "week": 14, "lesson": 3 },
-
-  { "kanji": "内容量", "hira": "ないようりょう", "han": "Nội dung lượng", "nghia": "Dung tích / khối lượng tịnh", "week": 14, "lesson": 4 },
-  { "kanji": "原材料名", "hira": "げんざいりょうめい", "han": "Nguyên tài liệu danh", "nghia": "Tên nguyên liệu (trên nhãn sản phẩm)", "week": 14, "lesson": 4 },
-  { "kanji": "栄養成分", "hira": "えいようせいぶん", "han": "Dinh dưỡng thành phần", "nghia": "Thành phần dinh dưỡng", "week": 14, "lesson": 4 },
-  { "kanji": "カロリー", "hira": "かろりー", "han": "", "nghia": "Calo (năng lượng)", "week": 14, "lesson": 4 },
-  { "kanji": "アレルギー表示", "hira": "あれるぎーひょうじ", "han": "Biểu thị", "nghia": "Ghi nhãn cảnh báo dị ứng", "week": 14, "lesson": 4 }
+  {
+    "kanji": "飲食料品製造業",
+    "hira": "いんしょくりょうひんせいぞうぎょう",
+    "han": "Ẩm thực liệu phẩm chế tạo nghiệp",
+    "nghia": "Ngành sản xuất thực phẩm và đồ uống",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "惣菜製造業",
+    "hira": "そうざいせいぞうぎょう",
+    "han": "Tổng thái chế tạo nghiệp",
+    "nghia": "Ngành chế biến thức ăn nấu sẵn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "惣菜",
+    "hira": "そうざい",
+    "han": "Tổng thái",
+    "nghia": "Thức ăn nấu sẵn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "弁当",
+    "hira": "べんとう",
+    "han": "Biện đương",
+    "nghia": "Cơm hộp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "食品衛生",
+    "hira": "しょくひんえいせい",
+    "han": "Thực phẩm vệ sinh",
+    "nghia": "Vệ sinh thực phẩm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "５Ｓ",
+    "hira": "ごえす",
+    "han": "",
+    "nghia": "5S (chỉnh lý, chỉnh đốn, sạch sẽ, săn sóc, sẵn sàng)",
+    "week": 1,
+    "lesson": 2
+  },
+  {
+    "kanji": "整理",
+    "hira": "せいり",
+    "han": "Chỉnh lý",
+    "nghia": "Sàng lọc (S1 trong 5S)",
+    "week": 1,
+    "lesson": 2
+  },
+  {
+    "kanji": "整頓",
+    "hira": "せいとん",
+    "han": "Chỉnh đốn",
+    "nghia": "Sắp xếp (S2 trong 5S)",
+    "week": 1,
+    "lesson": 2
+  },
+  {
+    "kanji": "清掃",
+    "hira": "せいそう",
+    "han": "Thanh tảo",
+    "nghia": "Dọn dẹp (S3 trong 5S)",
+    "week": 1,
+    "lesson": 2
+  },
+  {
+    "kanji": "清潔",
+    "hira": "せいけつ",
+    "han": "Thanh khiết",
+    "nghia": "Sạch sẽ, săn sóc (S4 trong 5S)",
+    "week": 1,
+    "lesson": 2
+  },
+  {
+    "kanji": "しつけ",
+    "hira": "しつけ",
+    "han": "",
+    "nghia": "Tạo thói quen, sẵn sàng (S5 trong 5S)",
+    "week": 1,
+    "lesson": 3
+  },
+  {
+    "kanji": "習慣付け",
+    "hira": "しゅうかんづけ",
+    "han": "Tập quán",
+    "nghia": "Tạo thói quen",
+    "week": 1,
+    "lesson": 3
+  },
+  {
+    "kanji": "衛生管理",
+    "hira": "えいせいかんり",
+    "han": "Vệ sinh quản lý",
+    "nghia": "Quản lý vệ sinh",
+    "week": 1,
+    "lesson": 3
+  },
+  {
+    "kanji": "区分衛生管理",
+    "hira": "くぶんえいせいかんり",
+    "han": "Khu phân vệ sinh quản lý",
+    "nghia": "Quản lý vệ sinh riêng biệt",
+    "week": 1,
+    "lesson": 3
+  },
+  {
+    "kanji": "健康チェック",
+    "hira": "けんこうちぇっく",
+    "han": "Kiện khang",
+    "nghia": "Kiểm tra sức khỏe",
+    "week": 1,
+    "lesson": 3
+  },
+  {
+    "kanji": "清潔作業区域",
+    "hira": "せいけつさぎょうくいき",
+    "han": "Thanh khiết tác nghiệp khu vực",
+    "nghia": "Khu vực làm việc sạch",
+    "week": 1,
+    "lesson": 4
+  },
+  {
+    "kanji": "準清潔作業区域",
+    "hira": "じゅんせいけつさぎょうくいき",
+    "han": "Chuẩn thanh khiết tác nghiệp khu vực",
+    "nghia": "Khu vực làm việc bán sạch",
+    "week": 1,
+    "lesson": 4
+  },
+  {
+    "kanji": "汚染作業区域",
+    "hira": "おせんさぎょうくいき",
+    "han": "Ô nhiễm tác nghiệp khu vực",
+    "nghia": "Khu vực làm việc bẩn",
+    "week": 1,
+    "lesson": 4
+  },
+  {
+    "kanji": "ゾーニング",
+    "hira": "ぞーにんぐ",
+    "han": "",
+    "nghia": "Zoning (phân vùng vệ sinh)",
+    "week": 1,
+    "lesson": 4
+  },
+  {
+    "kanji": "交差汚染",
+    "hira": "こうさおせん",
+    "han": "Giao soa ô nhiễm",
+    "nghia": "Ô nhiễm chéo",
+    "week": 1,
+    "lesson": 4
+  },
+  {
+    "kanji": "細菌",
+    "hira": "さいきん",
+    "han": "Tế khuẩn",
+    "nghia": "Vi khuẩn",
+    "week": 2,
+    "lesson": 1
+  },
+  {
+    "kanji": "微生物",
+    "hira": "びせいぶつ",
+    "han": "Vi sinh vật",
+    "nghia": "Vi sinh vật",
+    "week": 2,
+    "lesson": 1
+  },
+  {
+    "kanji": "病原性微生物",
+    "hira": "びょうげんせいびせいぶつ",
+    "han": "Bệnh nguyên tính vi sinh vật",
+    "nghia": "Vi sinh vật gây bệnh",
+    "week": 2,
+    "lesson": 1
+  },
+  {
+    "kanji": "微生物検査",
+    "hira": "びせいぶつけんさ",
+    "han": "Vi sinh vật kiểm tra",
+    "nghia": "Kiểm tra vi sinh vật",
+    "week": 2,
+    "lesson": 1
+  },
+  {
+    "kanji": "食中毒菌",
+    "hira": "しょくちゅうどくきん",
+    "han": "Thực trúng độc khuẩn",
+    "nghia": "Vi khuẩn gây ngộ độc thực phẩm",
+    "week": 2,
+    "lesson": 1
+  },
+  {
+    "kanji": "黄色ブドウ球菌",
+    "hira": "おうしょくぶどうきゅうきん",
+    "han": "Hoàng sắc cầu khuẩn",
+    "nghia": "Tụ cầu vàng (Staphylococcus aureus)",
+    "week": 2,
+    "lesson": 2
+  },
+  {
+    "kanji": "サルモネラ属菌",
+    "hira": "さるもねらぞくきん",
+    "han": "Thuộc khuẩn",
+    "nghia": "Khuẩn thuộc chi Salmonella",
+    "week": 2,
+    "lesson": 2
+  },
+  {
+    "kanji": "カンピロバクター属菌",
+    "hira": "かんぴろばくたーぞくきん",
+    "han": "Thuộc khuẩn",
+    "nghia": "Khuẩn thuộc chi Campylobacter",
+    "week": 2,
+    "lesson": 2
+  },
+  {
+    "kanji": "腸炎ビブリオ",
+    "hira": "ちょうえんびぶりお",
+    "han": "Trường viêm",
+    "nghia": "Vi khuẩn Vibrio parahaemolyticus",
+    "week": 2,
+    "lesson": 2
+  },
+  {
+    "kanji": "腸管出血性大腸菌",
+    "hira": "ちょうかんしゅっけつせいだいちょうきん",
+    "han": "Trường quản xuất huyết tính đại trường khuẩn",
+    "nghia": "Vi khuẩn E. coli gây xuất huyết đường ruột",
+    "week": 2,
+    "lesson": 2
+  },
+  {
+    "kanji": "ウェルシュ菌",
+    "hira": "うぇるしゅきん",
+    "han": "Khuẩn",
+    "nghia": "Vi khuẩn Clostridium perfringens",
+    "week": 2,
+    "lesson": 3
+  },
+  {
+    "kanji": "セレウス菌",
+    "hira": "せれうすきん",
+    "han": "Khuẩn",
+    "nghia": "Vi khuẩn Bacillus cereus",
+    "week": 2,
+    "lesson": 3
+  },
+  {
+    "kanji": "ボツリヌス菌",
+    "hira": "ぼつりぬすきん",
+    "han": "Khuẩn",
+    "nghia": "Vi khuẩn Clostridium botulinum",
+    "week": 2,
+    "lesson": 3
+  },
+  {
+    "kanji": "芽胞",
+    "hira": "がほう",
+    "han": "Nha bào",
+    "nghia": "Nha bào (bào tử vi khuẩn)",
+    "week": 2,
+    "lesson": 3
+  },
+  {
+    "kanji": "芽胞菌",
+    "hira": "がほうきん",
+    "han": "Nha bào khuẩn",
+    "nghia": "Vi khuẩn sinh nha bào",
+    "week": 2,
+    "lesson": 3
+  },
+  {
+    "kanji": "寄生虫",
+    "hira": "きせいちゅう",
+    "han": "Ký sinh trùng",
+    "nghia": "Ký sinh trùng",
+    "week": 2,
+    "lesson": 4
+  },
+  {
+    "kanji": "アニサキス",
+    "hira": "あにさきす",
+    "han": "",
+    "nghia": "Anisakis (ký sinh trùng trong cá)",
+    "week": 2,
+    "lesson": 4
+  },
+  {
+    "kanji": "アニサキス食中毒",
+    "hira": "あにさきすしょくちゅうどく",
+    "han": "Thực trúng độc",
+    "nghia": "Ngộ độc thực phẩm do Anisakis",
+    "week": 2,
+    "lesson": 4
+  },
+  {
+    "kanji": "ノロウイルス",
+    "hira": "のろういるす",
+    "han": "",
+    "nghia": "Vi-rút Noro",
+    "week": 2,
+    "lesson": 4
+  },
+  {
+    "kanji": "毒素",
+    "hira": "どくそ",
+    "han": "Độc tố",
+    "nghia": "Độc tố",
+    "week": 2,
+    "lesson": 4
+  },
+  {
+    "kanji": "ノロウイルスが原因の食中毒を予防するための４原則",
+    "hira": "のろううるすがげんいんのしょくちゅうどくをよぼうするためのよんげんそく",
+    "han": "Thực trúng độc dự phòng tứ nguyên tắc",
+    "nghia": "4 nguyên tắc phòng ngừa ngộ độc do vi-rút Noro",
+    "week": 2,
+    "lesson": 4
+  },
+  {
+    "kanji": "アレルギー反応",
+    "hira": "あれるぎーはんのう",
+    "han": "Phản ứng",
+    "nghia": "Phản ứng dị ứng",
+    "week": 3,
+    "lesson": 1
+  },
+  {
+    "kanji": "アレルギー物質",
+    "hira": "あれるぎーぶっしつ",
+    "han": "Vật chất",
+    "nghia": "Chất gây dị ứng",
+    "week": 3,
+    "lesson": 1
+  },
+  {
+    "kanji": "アレルゲン",
+    "hira": "あれるげん",
+    "han": "",
+    "nghia": "Dị nguyên",
+    "week": 3,
+    "lesson": 1
+  },
+  {
+    "kanji": "特定原材料",
+    "hira": "とくていげんざいりょう",
+    "han": "Đặc định nguyên tài liệu",
+    "nghia": "Nguyên vật liệu đặc biệt (bắt buộc ghi nhãn dị ứng)",
+    "week": 3,
+    "lesson": 1
+  },
+  {
+    "kanji": "特定原材料に準ずるもの",
+    "hira": "とくていげんざいりょうにじゅんずるもの",
+    "han": "Đặc định nguyên tài liệu chuẩn",
+    "nghia": "Nguyên vật liệu tương đương nguyên vật liệu đặc biệt",
+    "week": 3,
+    "lesson": 1
+  },
+  {
+    "kanji": "危害要因",
+    "hira": "きがいよういん",
+    "han": "Nguy hại yếu nhân",
+    "nghia": "Mối nguy",
+    "week": 3,
+    "lesson": 2
+  },
+  {
+    "kanji": "危害要因分析",
+    "hira": "きがいよういんぶんせき",
+    "han": "Nguy hại yếu nhân phân tích",
+    "nghia": "Phân tích mối nguy",
+    "week": 3,
+    "lesson": 2
+  },
+  {
+    "kanji": "化学的危害要因",
+    "hira": "かがくてききがいよういん",
+    "han": "Hóa học đích nguy hại yếu nhân",
+    "nghia": "Mối nguy hóa học",
+    "week": 3,
+    "lesson": 2
+  },
+  {
+    "kanji": "生物的危害要因",
+    "hira": "せいぶつてききがいよういん",
+    "han": "Sinh vật đích nguy hại yếu nhân",
+    "nghia": "Mối nguy sinh học",
+    "week": 3,
+    "lesson": 2
+  },
+  {
+    "kanji": "物理的危害要因",
+    "hira": "ぶつりてききがいよういん",
+    "han": "Vật lý đích nguy hại yếu nhân",
+    "nghia": "Mối nguy vật lý",
+    "week": 3,
+    "lesson": 2
+  },
+  {
+    "kanji": "ソラニン",
+    "hira": "そらにん",
+    "han": "",
+    "nghia": "Solanin (chất độc trong khoai tây xanh)",
+    "week": 3,
+    "lesson": 3
+  },
+  {
+    "kanji": "ヒスタミン",
+    "hira": "ひすたみん",
+    "han": "",
+    "nghia": "Histamin",
+    "week": 3,
+    "lesson": 3
+  },
+  {
+    "kanji": "ヒスタミン食中毒",
+    "hira": "ひすたみんしょくちゅうどく",
+    "han": "Thực trúng độc",
+    "nghia": "Ngộ độc thực phẩm do Histamin",
+    "week": 3,
+    "lesson": 3
+  },
+  {
+    "kanji": "異物",
+    "hira": "いぶつ",
+    "han": "Dị vật",
+    "nghia": "Dị vật (tạp chất lẫn vào thực phẩm)",
+    "week": 3,
+    "lesson": 3
+  },
+  {
+    "kanji": "硬質異物",
+    "hira": "こうしついぶつ",
+    "han": "Cứng chất dị vật",
+    "nghia": "Dị vật cứng",
+    "week": 3,
+    "lesson": 3
+  },
+  {
+    "kanji": "食中毒予防の３原則",
+    "hira": "しょくちゅうどくよぼうのさんげんそく",
+    "han": "Thực trúng độc dự phòng tam nguyên tắc",
+    "nghia": "3 nguyên tắc phòng tránh ngộ độc thực phẩm",
+    "week": 3,
+    "lesson": 4
+  },
+  {
+    "kanji": "感染症",
+    "hira": "かんせんしょう",
+    "han": "Cảm nhiễm chứng",
+    "nghia": "Bệnh truyền nhiễm",
+    "week": 3,
+    "lesson": 4
+  },
+  {
+    "kanji": "洗浄",
+    "hira": "せんじょう",
+    "han": "Tẩy tịnh",
+    "nghia": "Rửa, làm sạch",
+    "week": 3,
+    "lesson": 4
+  },
+  {
+    "kanji": "殺菌",
+    "hira": "さっきん",
+    "han": "Sát khuẩn",
+    "nghia": "Diệt khuẩn, khử trùng",
+    "week": 3,
+    "lesson": 4
+  },
+  {
+    "kanji": "次亜塩素酸ナトリウム",
+    "hira": "じあえんそさんなとりうむ",
+    "han": "Thứ á diêm tố toan",
+    "nghia": "Natri hypoclorit (nước Javen)",
+    "week": 3,
+    "lesson": 4
+  },
+  {
+    "kanji": "下処理",
+    "hira": "したしょり",
+    "han": "Hạ xử lý",
+    "nghia": "Sơ chế",
+    "week": 4,
+    "lesson": 1
+  },
+  {
+    "kanji": "解凍",
+    "hira": "かいとう",
+    "han": "Giải đông",
+    "nghia": "Rã đông",
+    "week": 4,
+    "lesson": 1
+  },
+  {
+    "kanji": "自然解凍",
+    "hira": "しぜんかいとう",
+    "han": "Tự nhiên giải đông",
+    "nghia": "Rã đông tự nhiên",
+    "week": 4,
+    "lesson": 1
+  },
+  {
+    "kanji": "流水解凍",
+    "hira": "りゅうすいかいとう",
+    "han": "Lưu thủy giải đông",
+    "nghia": "Rã đông bằng nước chảy",
+    "week": 4,
+    "lesson": 1
+  },
+  {
+    "kanji": "開封",
+    "hira": "かいふう",
+    "han": "Khai phong",
+    "nghia": "Mở bao bì",
+    "week": 4,
+    "lesson": 1
+  },
+  {
+    "kanji": "加温",
+    "hira": "かおん",
+    "han": "Gia ôn",
+    "nghia": "Gia nhiệt",
+    "week": 4,
+    "lesson": 2
+  },
+  {
+    "kanji": "加熱調理",
+    "hira": "かねつちょうり",
+    "han": "Gia nhiệt điều lý",
+    "nghia": "Chế biến bằng phương pháp gia nhiệt",
+    "week": 4,
+    "lesson": 2
+  },
+  {
+    "kanji": "非加熱調理",
+    "hira": "ひかねつちょうり",
+    "han": "Phi gia nhiệt điều lý",
+    "nghia": "Chế biến không sử dụng nhiệt",
+    "week": 4,
+    "lesson": 2
+  },
+  {
+    "kanji": "加熱殺菌",
+    "hira": "かねつさっきん",
+    "han": "Gia nhiệt sát khuẩn",
+    "nghia": "Khử trùng bằng nhiệt",
+    "week": 4,
+    "lesson": 2
+  },
+  {
+    "kanji": "中心温度",
+    "hira": "ちゅうしんおんど",
+    "han": "Trung tâm ôn độ",
+    "nghia": "Nhiệt độ trung tâm (của thực phẩm)",
+    "week": 4,
+    "lesson": 2
+  },
+  {
+    "kanji": "水冷",
+    "hira": "すいれい",
+    "han": "Thủy lãnh",
+    "nghia": "Làm nguội bằng nước",
+    "week": 4,
+    "lesson": 3
+  },
+  {
+    "kanji": "風冷",
+    "hira": "ふうれい",
+    "han": "Phong lãnh",
+    "nghia": "Làm nguội bằng gió",
+    "week": 4,
+    "lesson": 3
+  },
+  {
+    "kanji": "冷却",
+    "hira": "れいきゃく",
+    "han": "Lãnh khước",
+    "nghia": "Làm nguội",
+    "week": 4,
+    "lesson": 3
+  },
+  {
+    "kanji": "冷凍",
+    "hira": "れいとう",
+    "han": "Lãnh đông",
+    "nghia": "Làm đông, cấp đông",
+    "week": 4,
+    "lesson": 3
+  },
+  {
+    "kanji": "冷凍庫",
+    "hira": "れいとうこ",
+    "han": "Lãnh đông khố",
+    "nghia": "Kho đông, tủ đông",
+    "week": 4,
+    "lesson": 3
+  },
+  {
+    "kanji": "成型",
+    "hira": "せいけい",
+    "han": "Thành hình",
+    "nghia": "Tạo hình",
+    "week": 4,
+    "lesson": 4
+  },
+  {
+    "kanji": "充填",
+    "hira": "じゅうてん",
+    "han": "Sung điền",
+    "nghia": "Chiết rót, đóng gói sản phẩm vào bao",
+    "week": 4,
+    "lesson": 4
+  },
+  {
+    "kanji": "盛り付け",
+    "hira": "もりつけ",
+    "han": "Thịnh phó",
+    "nghia": "Bày biện thức ăn",
+    "week": 4,
+    "lesson": 4
+  },
+  {
+    "kanji": "トッピング",
+    "hira": "とっぴんぐ",
+    "han": "",
+    "nghia": "Trang trí, thêm topping (món ăn)",
+    "week": 4,
+    "lesson": 4
+  },
+  {
+    "kanji": "混ぜる",
+    "hira": "まぜる",
+    "han": "Hỗn",
+    "nghia": "Trộn lẫn",
+    "week": 4,
+    "lesson": 4
+  },
+  {
+    "kanji": "先入れ先出し",
+    "hira": "さきいれさきだし",
+    "han": "Tiên nhập tiên xuất",
+    "nghia": "Nhập trước, xuất trước (FIFO)",
+    "week": 5,
+    "lesson": 1
+  },
+  {
+    "kanji": "使用期限",
+    "hira": "しようきげん",
+    "han": "Sử dụng kỳ hạn",
+    "nghia": "Thời hạn sử dụng",
+    "week": 5,
+    "lesson": 1
+  },
+  {
+    "kanji": "消費期限",
+    "hira": "しょうひきげん",
+    "han": "Tiêu phí kỳ hạn",
+    "nghia": "Thời hạn tiêu dùng (hết hạn ăn)",
+    "week": 5,
+    "lesson": 1
+  },
+  {
+    "kanji": "賞味期限",
+    "hira": "しょうみきげん",
+    "han": "Thưởng vị kỳ hạn",
+    "nghia": "Hạn sử dụng tốt nhất (best before)",
+    "week": 5,
+    "lesson": 1
+  },
+  {
+    "kanji": "保管温度",
+    "hira": "ほかんおんど",
+    "han": "Bảo quản ôn độ",
+    "nghia": "Nhiệt độ bảo quản",
+    "week": 5,
+    "lesson": 1
+  },
+  {
+    "kanji": "原材料の保管",
+    "hira": "げんざいりょうのほかん",
+    "han": "Nguyên tài liệu bảo quản",
+    "nghia": "Bảo quản nguyên vật liệu",
+    "week": 5,
+    "lesson": 2
+  },
+  {
+    "kanji": "包装",
+    "hira": "ほうそう",
+    "han": "Bao trang",
+    "nghia": "Đóng gói, bao bì",
+    "week": 5,
+    "lesson": 2
+  },
+  {
+    "kanji": "ドリップ",
+    "hira": "どりっぷ",
+    "han": "",
+    "nghia": "Nước rỉ từ thịt cá (drip)",
+    "week": 5,
+    "lesson": 2
+  },
+  {
+    "kanji": "薬剤",
+    "hira": "やくざい",
+    "han": "Dược tễ",
+    "nghia": "Hóa chất, thuốc (dùng trong sản xuất)",
+    "week": 5,
+    "lesson": 2
+  },
+  {
+    "kanji": "薬剤の管理",
+    "hira": "やくざいのかんり",
+    "han": "Dược tễ quản lý",
+    "nghia": "Quản lý hóa chất, thuốc",
+    "week": 5,
+    "lesson": 2
+  },
+  {
+    "kanji": "薬剤による殺菌",
+    "hira": "やくざいによるさっきん",
+    "han": "Dược tễ sát khuẩn",
+    "nghia": "Khử trùng bằng hóa chất",
+    "week": 5,
+    "lesson": 3
+  },
+  {
+    "kanji": "Ｘ線異物検出機",
+    "hira": "えっくすせんいぶつけんしゅつき",
+    "han": "X tuyến dị vật kiểm xuất cơ",
+    "nghia": "Máy dò dị vật bằng tia X",
+    "week": 5,
+    "lesson": 3
+  },
+  {
+    "kanji": "金属探知機",
+    "hira": "きんぞくたんちき",
+    "han": "Kim thuộc thám tri cơ",
+    "nghia": "Máy dò kim loại",
+    "week": 5,
+    "lesson": 3
+  },
+  {
+    "kanji": "テストピース",
+    "hira": "てすとぴーす",
+    "han": "",
+    "nghia": "Mẫu thử (để kiểm tra máy dò)",
+    "week": 5,
+    "lesson": 3
+  },
+  {
+    "kanji": "改善措置",
+    "hira": "かいぜんそち",
+    "han": "Cải thiện biện pháp",
+    "nghia": "Biện pháp khắc phục",
+    "week": 5,
+    "lesson": 3
+  },
+  {
+    "kanji": "記録",
+    "hira": "きろく",
+    "han": "Ký lục",
+    "nghia": "Ghi chép, hồ sơ",
+    "week": 5,
+    "lesson": 4
+  },
+  {
+    "kanji": "作業服",
+    "hira": "さぎょうふく",
+    "han": "Tác nghiệp phục",
+    "nghia": "Trang phục làm việc",
+    "week": 5,
+    "lesson": 4
+  },
+  {
+    "kanji": "作業手順書",
+    "hira": "さぎょうてじゅんしょ",
+    "han": "Tác nghiệp thủ thuận thư",
+    "nghia": "Hướng dẫn trình tự thao tác",
+    "week": 5,
+    "lesson": 4
+  },
+  {
+    "kanji": "流水",
+    "hira": "りゅうすい",
+    "han": "Lưu thủy",
+    "nghia": "Nước chảy",
+    "week": 5,
+    "lesson": 4
+  },
+  {
+    "kanji": "手洗い",
+    "hira": "てあらい",
+    "han": "Thủ tẩy",
+    "nghia": "Rửa tay",
+    "week": 5,
+    "lesson": 4
+  },
+  {
+    "kanji": "ハザード",
+    "hira": "はざーど",
+    "han": "",
+    "nghia": "Mối nguy hại (hazard)",
+    "week": 6,
+    "lesson": 1
+  },
+  {
+    "kanji": "ハザード分析",
+    "hira": "はざーどぶんせき",
+    "han": "Phân tích",
+    "nghia": "Phân tích mối nguy hại",
+    "week": 6,
+    "lesson": 1
+  },
+  {
+    "kanji": "HACCPによる衛生管理",
+    "hira": "はさっぷによるえいせいかんり",
+    "han": "Vệ sinh quản lý",
+    "nghia": "Quản lý vệ sinh theo HACCP",
+    "week": 6,
+    "lesson": 1
+  },
+  {
+    "kanji": "HACCPプラン",
+    "hira": "はさっぷぷらん",
+    "han": "",
+    "nghia": "Kế hoạch HACCP",
+    "week": 6,
+    "lesson": 1
+  },
+  {
+    "kanji": "HACCPの７原則",
+    "hira": "はさっぷのななげんそく",
+    "han": "Thất nguyên tắc",
+    "nghia": "7 nguyên tắc HACCP",
+    "week": 6,
+    "lesson": 1
+  },
+  {
+    "kanji": "重要管理点",
+    "hira": "じゅうようかんりてん",
+    "han": "Trọng yếu quản lý điểm",
+    "nghia": "Điểm kiểm soát tới hạn (CCP)",
+    "week": 6,
+    "lesson": 2
+  },
+  {
+    "kanji": "管理基準",
+    "hira": "かんりきじゅん",
+    "han": "Quản lý cơ chuẩn",
+    "nghia": "Ngưỡng tới hạn (giới hạn cho phép)",
+    "week": 6,
+    "lesson": 2
+  },
+  {
+    "kanji": "管理基準からの逸脱",
+    "hira": "かんりきじゅんからのいつだつ",
+    "han": "Quản lý cơ chuẩn dật thoát",
+    "nghia": "Sai lệch so với ngưỡng tới hạn",
+    "week": 6,
+    "lesson": 2
+  },
+  {
+    "kanji": "始業前点検",
+    "hira": "しぎょうまえてんけん",
+    "han": "Thủy nghiệp tiền điểm kiểm",
+    "nghia": "Kiểm tra trước khi vận hành",
+    "week": 6,
+    "lesson": 2
+  },
+  {
+    "kanji": "指差呼称",
+    "hira": "しさこしょう",
+    "han": "Chỉ sai hô xưng",
+    "nghia": "Tay chỉ miệng hô (xác nhận an toàn)",
+    "week": 6,
+    "lesson": 2
+  },
+  {
+    "kanji": "フールプルーフ",
+    "hira": "ふーるぷるーふ",
+    "han": "",
+    "nghia": "Fool-proof (biện pháp chống nhầm lẫn)",
+    "week": 6,
+    "lesson": 3
+  },
+  {
+    "kanji": "フェールセーフ",
+    "hira": "ふぇーるせーふ",
+    "han": "",
+    "nghia": "Fail-safe (an toàn dự phòng khi hư hỏng)",
+    "week": 6,
+    "lesson": 3
+  },
+  {
+    "kanji": "緊急停止ボタン",
+    "hira": "きんきゅうていしぼたん",
+    "han": "Khẩn cấp đình chỉ",
+    "nghia": "Nút dừng khẩn cấp",
+    "week": 6,
+    "lesson": 3
+  },
+  {
+    "kanji": "非常停止ボタン",
+    "hira": "ひじょうていしぼたん",
+    "han": "Phi thường đình chỉ",
+    "nghia": "Nút dừng khẩn cấp (nút đỏ)",
+    "week": 6,
+    "lesson": 3
+  },
+  {
+    "kanji": "電源",
+    "hira": "でんげん",
+    "han": "Điện nguyên",
+    "nghia": "Nguồn điện",
+    "week": 6,
+    "lesson": 3
+  },
+  {
+    "kanji": "安全装置",
+    "hira": "あんぜんそうち",
+    "han": "An toàn trang trí",
+    "nghia": "Thiết bị an toàn",
+    "week": 6,
+    "lesson": 4
+  },
+  {
+    "kanji": "安全カバー",
+    "hira": "あんぜんかばー",
+    "han": "An toàn",
+    "nghia": "Tấm che an toàn",
+    "week": 6,
+    "lesson": 4
+  },
+  {
+    "kanji": "安全標識",
+    "hira": "あんぜんひょうしき",
+    "han": "An toàn tiêu thức",
+    "nghia": "Biển báo an toàn",
+    "week": 6,
+    "lesson": 4
+  },
+  {
+    "kanji": "安全保護具",
+    "hira": "あんぜんほごぐ",
+    "han": "An toàn bảo hộ cụ",
+    "nghia": "Dụng cụ bảo hộ lao động",
+    "week": 6,
+    "lesson": 4
+  },
+  {
+    "kanji": "危険予知訓練",
+    "hira": "きけんよちくんれん",
+    "han": "Nguy hiểm dự tri huấn luyện",
+    "nghia": "Huấn luyện dự đoán nguy hiểm (KYT)",
+    "week": 6,
+    "lesson": 4
+  },
+  {
+    "kanji": "労働安全",
+    "hira": "ろうどうあんぜん",
+    "han": "Lao động an toàn",
+    "nghia": "An toàn lao động",
+    "week": 7,
+    "lesson": 1
+  },
+  {
+    "kanji": "労働災害",
+    "hira": "ろうどうさいがい",
+    "han": "Lao động tai hại",
+    "nghia": "Tai nạn lao động",
+    "week": 7,
+    "lesson": 1
+  },
+  {
+    "kanji": "二次災害",
+    "hira": "にじさいがい",
+    "han": "Nhị thứ tai hại",
+    "nghia": "Tai nạn thứ cấp",
+    "week": 7,
+    "lesson": 1
+  },
+  {
+    "kanji": "熱中症",
+    "hira": "ねっちゅうしょう",
+    "han": "Nhiệt trúng chứng",
+    "nghia": "Sốc nhiệt, say nắng",
+    "week": 7,
+    "lesson": 1
+  },
+  {
+    "kanji": "ハインリッヒの法則",
+    "hira": "はいんりっひのほうそく",
+    "han": "Pháp tắc",
+    "nghia": "Nguyên lý Heinrich (1-29-300)",
+    "week": 7,
+    "lesson": 1
+  },
+  {
+    "kanji": "ヒヤリ・ハット",
+    "hira": "ひやり・はっと",
+    "han": "",
+    "nghia": "Tình huống suýt xảy ra tai nạn",
+    "week": 7,
+    "lesson": 2
+  },
+  {
+    "kanji": "ヒヤリ・ハット活動",
+    "hira": "ひやり・はっとかつどう",
+    "han": "Hoạt động",
+    "nghia": "Hoạt động báo cáo tình huống cận nguy",
+    "week": 7,
+    "lesson": 2
+  },
+  {
+    "kanji": "安全靴",
+    "hira": "あんぜんぐつ",
+    "han": "An toàn hài",
+    "nghia": "Giày bảo hộ",
+    "week": 7,
+    "lesson": 2
+  },
+  {
+    "kanji": "カバー付き長靴",
+    "hira": "かばーつきながぐつ",
+    "han": "Trường hài",
+    "nghia": "Ủng cao cổ có dây rút",
+    "week": 7,
+    "lesson": 2
+  },
+  {
+    "kanji": "ヘルメット",
+    "hira": "へるめっと",
+    "han": "",
+    "nghia": "Mũ bảo hộ",
+    "week": 7,
+    "lesson": 2
+  },
+  {
+    "kanji": "エプロン",
+    "hira": "えぷろん",
+    "han": "",
+    "nghia": "Tạp dề",
+    "week": 7,
+    "lesson": 3
+  },
+  {
+    "kanji": "耐熱エプロン",
+    "hira": "たいねつえぷろん",
+    "han": "Nại nhiệt",
+    "nghia": "Tạp dề chịu nhiệt",
+    "week": 7,
+    "lesson": 3
+  },
+  {
+    "kanji": "手袋",
+    "hira": "てぶくろ",
+    "han": "Thủ đại",
+    "nghia": "Găng tay",
+    "week": 7,
+    "lesson": 3
+  },
+  {
+    "kanji": "ゴム手袋",
+    "hira": "ごむてぶくろ",
+    "han": "Thủ đại",
+    "nghia": "Găng tay cao su",
+    "week": 7,
+    "lesson": 3
+  },
+  {
+    "kanji": "耐切創手袋",
+    "hira": "たいせっそうてぶくろ",
+    "han": "Nại thiết sang thủ đại",
+    "nghia": "Găng tay chống cắt",
+    "week": 7,
+    "lesson": 3
+  },
+  {
+    "kanji": "くさり手袋",
+    "hira": "くさりてぶくろ",
+    "han": "Thủ đại",
+    "nghia": "Găng tay sợi thép (chống cắt)",
+    "week": 7,
+    "lesson": 4
+  },
+  {
+    "kanji": "ミトン手袋",
+    "hira": "みとんてぶくろ",
+    "han": "Thủ đại",
+    "nghia": "Găng tay miton (chịu nhiệt)",
+    "week": 7,
+    "lesson": 4
+  },
+  {
+    "kanji": "メクセル手袋",
+    "hira": "めくせるてぶくろ",
+    "han": "Thủ đại",
+    "nghia": "Găng tay Mexel (chống cắt)",
+    "week": 7,
+    "lesson": 4
+  },
+  {
+    "kanji": "保護メガネ",
+    "hira": "ほごめがね",
+    "han": "Bảo hộ",
+    "nghia": "Kính bảo hộ",
+    "week": 7,
+    "lesson": 4
+  },
+  {
+    "kanji": "耳栓",
+    "hira": "みみせん",
+    "han": "Nhĩ tiêu",
+    "nghia": "Nút bịt tai (bảo hộ)",
+    "week": 7,
+    "lesson": 4
+  },
+  {
+    "kanji": "米",
+    "hira": "こめ",
+    "han": "Mễ",
+    "nghia": "Gạo (hạt chưa nấu)",
+    "week": 8,
+    "lesson": 1
+  },
+  {
+    "kanji": "もち米",
+    "hira": "もちごめ",
+    "han": "Nhu mễ",
+    "nghia": "Gạo nếp",
+    "week": 8,
+    "lesson": 1
+  },
+  {
+    "kanji": "ご飯",
+    "hira": "ごはん",
+    "han": "Phạn",
+    "nghia": "Cơm (gạo đã nấu chín)",
+    "week": 8,
+    "lesson": 1
+  },
+  {
+    "kanji": "おかゆ",
+    "hira": "おかゆ",
+    "han": "",
+    "nghia": "Cháo gạo",
+    "week": 8,
+    "lesson": 1
+  },
+  {
+    "kanji": "おこわ",
+    "hira": "おこわ",
+    "han": "",
+    "nghia": "Xôi (nếp hấp)",
+    "week": 8,
+    "lesson": 1
+  },
+  {
+    "kanji": "パン",
+    "hira": "ぱん",
+    "han": "",
+    "nghia": "Bánh mì",
+    "week": 8,
+    "lesson": 2
+  },
+  {
+    "kanji": "食パン",
+    "hira": "しょくぱん",
+    "han": "Thực",
+    "nghia": "Bánh mì gối (bánh mì sandwich)",
+    "week": 8,
+    "lesson": 2
+  },
+  {
+    "kanji": "小麦粉",
+    "hira": "こむぎこ",
+    "han": "Tiểu mạch phấn",
+    "nghia": "Bột mì",
+    "week": 8,
+    "lesson": 2
+  },
+  {
+    "kanji": "片栗粉",
+    "hira": "かたくりこ",
+    "han": "Phiến lật phấn",
+    "nghia": "Bột năng (tinh bột khoai)",
+    "week": 8,
+    "lesson": 2
+  },
+  {
+    "kanji": "上新粉",
+    "hira": "じょうしんこ",
+    "han": "Thượng tân phấn",
+    "nghia": "Bột gạo tẻ",
+    "week": 8,
+    "lesson": 2
+  },
+  {
+    "kanji": "麺",
+    "hira": "めん",
+    "han": "Miến",
+    "nghia": "Mì, bún, sợi (tổng quát)",
+    "week": 8,
+    "lesson": 3
+  },
+  {
+    "kanji": "うどん",
+    "hira": "うどん",
+    "han": "",
+    "nghia": "Mì udon (sợi to, trắng)",
+    "week": 8,
+    "lesson": 3
+  },
+  {
+    "kanji": "そば",
+    "hira": "そば",
+    "han": "",
+    "nghia": "Mì soba (mì kiều mạch)",
+    "week": 8,
+    "lesson": 3
+  },
+  {
+    "kanji": "ラーメン",
+    "hira": "らーめん",
+    "han": "",
+    "nghia": "Mì ramen",
+    "week": 8,
+    "lesson": 3
+  },
+  {
+    "kanji": "パスタ",
+    "hira": "ぱすた",
+    "han": "",
+    "nghia": "Mì pasta (Ý)",
+    "week": 8,
+    "lesson": 3
+  },
+  {
+    "kanji": "豆腐",
+    "hira": "とうふ",
+    "han": "Đậu phụ",
+    "nghia": "Đậu phụ",
+    "week": 8,
+    "lesson": 4
+  },
+  {
+    "kanji": "納豆",
+    "hira": "なっとう",
+    "han": "Nạp đậu",
+    "nghia": "Đậu nành lên men (natto)",
+    "week": 8,
+    "lesson": 4
+  },
+  {
+    "kanji": "味噌",
+    "hira": "みそ",
+    "han": "Vị tương",
+    "nghia": "Tương miso",
+    "week": 8,
+    "lesson": 4
+  },
+  {
+    "kanji": "醤油",
+    "hira": "しょうゆ",
+    "han": "Tương du",
+    "nghia": "Nước tương (xì dầu)",
+    "week": 8,
+    "lesson": 4
+  },
+  {
+    "kanji": "赤飯",
+    "hira": "せきはん",
+    "han": "Xích phạn",
+    "nghia": "Cơm đỏ / xôi đậu đỏ (món lễ Nhật)",
+    "week": 8,
+    "lesson": 4
+  },
+  {
+    "kanji": "野菜",
+    "hira": "やさい",
+    "han": "Dã thái",
+    "nghia": "Rau, rau củ quả",
+    "week": 9,
+    "lesson": 1
+  },
+  {
+    "kanji": "キャベツ",
+    "hira": "きゃべつ",
+    "han": "",
+    "nghia": "Bắp cải",
+    "week": 9,
+    "lesson": 1
+  },
+  {
+    "kanji": "ほうれん草",
+    "hira": "ほうれんそう",
+    "han": "Thảo",
+    "nghia": "Rau bina (cải bó xôi)",
+    "week": 9,
+    "lesson": 1
+  },
+  {
+    "kanji": "レタス",
+    "hira": "れたす",
+    "han": "",
+    "nghia": "Rau xà lách",
+    "week": 9,
+    "lesson": 1
+  },
+  {
+    "kanji": "ネギ",
+    "hira": "ねぎ",
+    "han": "",
+    "nghia": "Hành lá",
+    "week": 9,
+    "lesson": 1
+  },
+  {
+    "kanji": "玉ねぎ",
+    "hira": "たまねぎ",
+    "han": "Ngọc thông",
+    "nghia": "Hành tây",
+    "week": 9,
+    "lesson": 2
+  },
+  {
+    "kanji": "にんにく",
+    "hira": "にんにく",
+    "han": "",
+    "nghia": "Tỏi",
+    "week": 9,
+    "lesson": 2
+  },
+  {
+    "kanji": "生姜",
+    "hira": "しょうが",
+    "han": "Sinh khương",
+    "nghia": "Gừng",
+    "week": 9,
+    "lesson": 2
+  },
+  {
+    "kanji": "にんじん",
+    "hira": "にんじん",
+    "han": "",
+    "nghia": "Cà rốt",
+    "week": 9,
+    "lesson": 2
+  },
+  {
+    "kanji": "大根",
+    "hira": "だいこん",
+    "han": "Đại căn",
+    "nghia": "Củ cải trắng",
+    "week": 9,
+    "lesson": 2
+  },
+  {
+    "kanji": "じゃがいも",
+    "hira": "じゃがいも",
+    "han": "",
+    "nghia": "Khoai tây",
+    "week": 9,
+    "lesson": 3
+  },
+  {
+    "kanji": "さつまいも",
+    "hira": "さつまいも",
+    "han": "",
+    "nghia": "Khoai lang",
+    "week": 9,
+    "lesson": 3
+  },
+  {
+    "kanji": "かぼちゃ",
+    "hira": "かぼちゃ",
+    "han": "",
+    "nghia": "Bí đỏ",
+    "week": 9,
+    "lesson": 3
+  },
+  {
+    "kanji": "なす",
+    "hira": "なす",
+    "han": "",
+    "nghia": "Cà tím",
+    "week": 9,
+    "lesson": 3
+  },
+  {
+    "kanji": "ピーマン",
+    "hira": "ぴーまん",
+    "han": "",
+    "nghia": "Ớt chuông xanh",
+    "week": 9,
+    "lesson": 3
+  },
+  {
+    "kanji": "きゅうり",
+    "hira": "きゅうり",
+    "han": "",
+    "nghia": "Dưa chuột",
+    "week": 9,
+    "lesson": 4
+  },
+  {
+    "kanji": "トマト",
+    "hira": "とまと",
+    "han": "",
+    "nghia": "Cà chua",
+    "week": 9,
+    "lesson": 4
+  },
+  {
+    "kanji": "ブロッコリー",
+    "hira": "ぶろっこりー",
+    "han": "",
+    "nghia": "Súp lơ xanh (bông cải xanh)",
+    "week": 9,
+    "lesson": 4
+  },
+  {
+    "kanji": "もやし",
+    "hira": "もやし",
+    "han": "",
+    "nghia": "Giá đỗ",
+    "week": 9,
+    "lesson": 4
+  },
+  {
+    "kanji": "ごぼう",
+    "hira": "ごぼう",
+    "han": "",
+    "nghia": "Ngưu bàng (củ cải đen Nhật)",
+    "week": 9,
+    "lesson": 4
+  },
+  {
+    "kanji": "果物",
+    "hira": "くだもの",
+    "han": "Quả vật",
+    "nghia": "Trái cây",
+    "week": 10,
+    "lesson": 1
+  },
+  {
+    "kanji": "りんご",
+    "hira": "りんご",
+    "han": "",
+    "nghia": "Táo",
+    "week": 10,
+    "lesson": 1
+  },
+  {
+    "kanji": "みかん",
+    "hira": "みかん",
+    "han": "",
+    "nghia": "Quýt (cam mikan)",
+    "week": 10,
+    "lesson": 1
+  },
+  {
+    "kanji": "バナナ",
+    "hira": "ばなな",
+    "han": "",
+    "nghia": "Chuối",
+    "week": 10,
+    "lesson": 1
+  },
+  {
+    "kanji": "ぶどう",
+    "hira": "ぶどう",
+    "han": "",
+    "nghia": "Nho",
+    "week": 10,
+    "lesson": 1
+  },
+  {
+    "kanji": "いちご",
+    "hira": "いちご",
+    "han": "",
+    "nghia": "Dâu tây",
+    "week": 10,
+    "lesson": 2
+  },
+  {
+    "kanji": "もも",
+    "hira": "もも",
+    "han": "Đào",
+    "nghia": "Đào",
+    "week": 10,
+    "lesson": 2
+  },
+  {
+    "kanji": "スイカ",
+    "hira": "すいか",
+    "han": "",
+    "nghia": "Dưa hấu",
+    "week": 10,
+    "lesson": 2
+  },
+  {
+    "kanji": "メロン",
+    "hira": "めろん",
+    "han": "",
+    "nghia": "Dưa lưới",
+    "week": 10,
+    "lesson": 2
+  },
+  {
+    "kanji": "梨",
+    "hira": "なし",
+    "han": "Lê",
+    "nghia": "Lê (lê Nhật)",
+    "week": 10,
+    "lesson": 2
+  },
+  {
+    "kanji": "レモン",
+    "hira": "れもん",
+    "han": "",
+    "nghia": "Chanh vàng",
+    "week": 10,
+    "lesson": 3
+  },
+  {
+    "kanji": "オレンジ",
+    "hira": "おれんじ",
+    "han": "",
+    "nghia": "Cam",
+    "week": 10,
+    "lesson": 3
+  },
+  {
+    "kanji": "キウイ",
+    "hira": "きうい",
+    "han": "",
+    "nghia": "Kiwi",
+    "week": 10,
+    "lesson": 3
+  },
+  {
+    "kanji": "パイナップル",
+    "hira": "ぱいなっぷる",
+    "han": "",
+    "nghia": "Dứa / Thơm",
+    "week": 10,
+    "lesson": 3
+  },
+  {
+    "kanji": "マンゴー",
+    "hira": "まんごー",
+    "han": "",
+    "nghia": "Xoài",
+    "week": 10,
+    "lesson": 3
+  },
+  {
+    "kanji": "さくらんぼ",
+    "hira": "さくらんぼ",
+    "han": "",
+    "nghia": "Anh đào",
+    "week": 10,
+    "lesson": 4
+  },
+  {
+    "kanji": "柿",
+    "hira": "かき",
+    "han": "Thị",
+    "nghia": "Hồng (quả hồng)",
+    "week": 10,
+    "lesson": 4
+  },
+  {
+    "kanji": "梅",
+    "hira": "うめ",
+    "han": "Mai",
+    "nghia": "Mận xanh Nhật (umeboshi)",
+    "week": 10,
+    "lesson": 4
+  },
+  {
+    "kanji": "栗",
+    "hira": "くり",
+    "han": "Lật",
+    "nghia": "Hạt dẻ",
+    "week": 10,
+    "lesson": 4
+  },
+  {
+    "kanji": "パパイヤ",
+    "hira": "ぱぱいや",
+    "han": "",
+    "nghia": "Đu đủ",
+    "week": 10,
+    "lesson": 4
+  },
+  {
+    "kanji": "肉",
+    "hira": "にく",
+    "han": "Nhục",
+    "nghia": "Thịt (tổng quát)",
+    "week": 11,
+    "lesson": 1
+  },
+  {
+    "kanji": "牛肉",
+    "hira": "ぎゅうにく",
+    "han": "Ngưu nhục",
+    "nghia": "Thịt bò",
+    "week": 11,
+    "lesson": 1
+  },
+  {
+    "kanji": "豚肉",
+    "hira": "ぶたにく",
+    "han": "Đồn nhục",
+    "nghia": "Thịt lợn / thịt heo",
+    "week": 11,
+    "lesson": 1
+  },
+  {
+    "kanji": "鶏肉",
+    "hira": "とりにく",
+    "han": "Kê nhục",
+    "nghia": "Thịt gà",
+    "week": 11,
+    "lesson": 1
+  },
+  {
+    "kanji": "ひき肉",
+    "hira": "ひきにく",
+    "han": "Nhục",
+    "nghia": "Thịt xay",
+    "week": 11,
+    "lesson": 1
+  },
+  {
+    "kanji": "魚",
+    "hira": "さかな",
+    "han": "Ngư",
+    "nghia": "Cá (tổng quát)",
+    "week": 11,
+    "lesson": 2
+  },
+  {
+    "kanji": "鮭",
+    "hira": "さけ",
+    "han": "Khuê",
+    "nghia": "Cá hồi",
+    "week": 11,
+    "lesson": 2
+  },
+  {
+    "kanji": "マグロ",
+    "hira": "まぐろ",
+    "han": "",
+    "nghia": "Cá ngừ",
+    "week": 11,
+    "lesson": 2
+  },
+  {
+    "kanji": "サバ",
+    "hira": "さば",
+    "han": "",
+    "nghia": "Cá thu",
+    "week": 11,
+    "lesson": 2
+  },
+  {
+    "kanji": "タイ",
+    "hira": "たい",
+    "han": "Điêu",
+    "nghia": "Cá tráp đỏ (cá tai Nhật)",
+    "week": 11,
+    "lesson": 2
+  },
+  {
+    "kanji": "えび",
+    "hira": "えび",
+    "han": "Hà",
+    "nghia": "Tôm",
+    "week": 11,
+    "lesson": 3
+  },
+  {
+    "kanji": "いか",
+    "hira": "いか",
+    "han": "",
+    "nghia": "Mực ống",
+    "week": 11,
+    "lesson": 3
+  },
+  {
+    "kanji": "かに",
+    "hira": "かに",
+    "han": "Giải",
+    "nghia": "Cua",
+    "week": 11,
+    "lesson": 3
+  },
+  {
+    "kanji": "タコ",
+    "hira": "たこ",
+    "han": "",
+    "nghia": "Bạch tuộc",
+    "week": 11,
+    "lesson": 3
+  },
+  {
+    "kanji": "ホタテ",
+    "hira": "ほたて",
+    "han": "",
+    "nghia": "Sò điệp",
+    "week": 11,
+    "lesson": 3
+  },
+  {
+    "kanji": "卵",
+    "hira": "たまご",
+    "han": "Noãn",
+    "nghia": "Trứng",
+    "week": 11,
+    "lesson": 4
+  },
+  {
+    "kanji": "ウインナー",
+    "hira": "ういんなー",
+    "han": "",
+    "nghia": "Xúc xích",
+    "week": 11,
+    "lesson": 4
+  },
+  {
+    "kanji": "ハム",
+    "hira": "はむ",
+    "han": "",
+    "nghia": "Giăm bông",
+    "week": 11,
+    "lesson": 4
+  },
+  {
+    "kanji": "ベーコン",
+    "hira": "べーこん",
+    "han": "",
+    "nghia": "Thịt xông khói (bacon)",
+    "week": 11,
+    "lesson": 4
+  },
+  {
+    "kanji": "缶詰",
+    "hira": "かんづめ",
+    "han": "Quan trẩm",
+    "nghia": "Đồ hộp",
+    "week": 11,
+    "lesson": 4
+  },
+  {
+    "kanji": "牛乳",
+    "hira": "ぎゅうにゅう",
+    "han": "Ngưu nhũ",
+    "nghia": "Sữa bò",
+    "week": 12,
+    "lesson": 1
+  },
+  {
+    "kanji": "ヨーグルト",
+    "hira": "よーぐると",
+    "han": "",
+    "nghia": "Sữa chua",
+    "week": 12,
+    "lesson": 1
+  },
+  {
+    "kanji": "チーズ",
+    "hira": "ちーず",
+    "han": "",
+    "nghia": "Phô mai",
+    "week": 12,
+    "lesson": 1
+  },
+  {
+    "kanji": "バター",
+    "hira": "ばたー",
+    "han": "",
+    "nghia": "Bơ",
+    "week": 12,
+    "lesson": 1
+  },
+  {
+    "kanji": "豆乳",
+    "hira": "とうにゅう",
+    "han": "Đậu nhũ",
+    "nghia": "Sữa đậu nành",
+    "week": 12,
+    "lesson": 1
+  },
+  {
+    "kanji": "お茶",
+    "hira": "おちゃ",
+    "han": "Trà",
+    "nghia": "Trà (tổng quát)",
+    "week": 12,
+    "lesson": 2
+  },
+  {
+    "kanji": "緑茶",
+    "hira": "りょくちゃ",
+    "han": "Lục trà",
+    "nghia": "Trà xanh",
+    "week": 12,
+    "lesson": 2
+  },
+  {
+    "kanji": "麦茶",
+    "hira": "むぎちゃ",
+    "han": "Mạch trà",
+    "nghia": "Trà lúa mạch",
+    "week": 12,
+    "lesson": 2
+  },
+  {
+    "kanji": "コーヒー",
+    "hira": "こーひー",
+    "han": "",
+    "nghia": "Cà phê",
+    "week": 12,
+    "lesson": 2
+  },
+  {
+    "kanji": "ジュース",
+    "hira": "じゅーす",
+    "han": "",
+    "nghia": "Nước ép, nước trái cây",
+    "week": 12,
+    "lesson": 2
+  },
+  {
+    "kanji": "炭酸水",
+    "hira": "たんさんすい",
+    "han": "Thán toan thủy",
+    "nghia": "Nước có ga",
+    "week": 12,
+    "lesson": 3
+  },
+  {
+    "kanji": "スポーツドリンク",
+    "hira": "すぽーつどりんく",
+    "han": "",
+    "nghia": "Nước uống thể thao",
+    "week": 12,
+    "lesson": 3
+  },
+  {
+    "kanji": "ビール",
+    "hira": "びーる",
+    "han": "",
+    "nghia": "Bia",
+    "week": 12,
+    "lesson": 3
+  },
+  {
+    "kanji": "ワイン",
+    "hira": "わいん",
+    "han": "",
+    "nghia": "Rượu vang",
+    "week": 12,
+    "lesson": 3
+  },
+  {
+    "kanji": "日本酒",
+    "hira": "にほんしゅ",
+    "han": "Nhật bản tửu",
+    "nghia": "Rượu sake (rượu gạo Nhật)",
+    "week": 12,
+    "lesson": 3
+  },
+  {
+    "kanji": "アイスクリーム",
+    "hira": "あいすくりーむ",
+    "han": "",
+    "nghia": "Kem",
+    "week": 12,
+    "lesson": 4
+  },
+  {
+    "kanji": "ケーキ",
+    "hira": "けーき",
+    "han": "",
+    "nghia": "Bánh ngọt",
+    "week": 12,
+    "lesson": 4
+  },
+  {
+    "kanji": "クッキー",
+    "hira": "くっきー",
+    "han": "",
+    "nghia": "Bánh quy",
+    "week": 12,
+    "lesson": 4
+  },
+  {
+    "kanji": "チョコレート",
+    "hira": "ちょこれーと",
+    "han": "",
+    "nghia": "Sô-cô-la",
+    "week": 12,
+    "lesson": 4
+  },
+  {
+    "kanji": "プリン",
+    "hira": "ぷりん",
+    "han": "",
+    "nghia": "Bánh flan (pudding)",
+    "week": 12,
+    "lesson": 4
+  },
+  {
+    "kanji": "塩",
+    "hira": "しお",
+    "han": "Diêm",
+    "nghia": "Muối",
+    "week": 13,
+    "lesson": 1
+  },
+  {
+    "kanji": "砂糖",
+    "hira": "さとう",
+    "han": "Sa đường",
+    "nghia": "Đường",
+    "week": 13,
+    "lesson": 1
+  },
+  {
+    "kanji": "酢",
+    "hira": "す",
+    "han": "Thố",
+    "nghia": "Giấm",
+    "week": 13,
+    "lesson": 1
+  },
+  {
+    "kanji": "油",
+    "hira": "あぶら",
+    "han": "Du",
+    "nghia": "Dầu ăn (tổng quát)",
+    "week": 13,
+    "lesson": 1
+  },
+  {
+    "kanji": "ごま油",
+    "hira": "ごまあぶら",
+    "han": "Hồ ma du",
+    "nghia": "Dầu mè (dầu vừng)",
+    "week": 13,
+    "lesson": 1
+  },
+  {
+    "kanji": "みりん",
+    "hira": "みりん",
+    "han": "",
+    "nghia": "Mirin (rượu nấu ăn ngọt)",
+    "week": 13,
+    "lesson": 2
+  },
+  {
+    "kanji": "出汁",
+    "hira": "だし",
+    "han": "Xuất trấp",
+    "nghia": "Nước dùng (dashi)",
+    "week": 13,
+    "lesson": 2
+  },
+  {
+    "kanji": "コショウ",
+    "hira": "こしょう",
+    "han": "Hồ tiêu",
+    "nghia": "Tiêu",
+    "week": 13,
+    "lesson": 2
+  },
+  {
+    "kanji": "唐辛子",
+    "hira": "とうがらし",
+    "han": "Đường tân tử",
+    "nghia": "Ớt",
+    "week": 13,
+    "lesson": 2
+  },
+  {
+    "kanji": "七味唐辛子",
+    "hira": "しちみとうがらし",
+    "han": "Thất vị đường tân tử",
+    "nghia": "Ớt 7 vị (shichimi)",
+    "week": 13,
+    "lesson": 2
+  },
+  {
+    "kanji": "ケチャップ",
+    "hira": "けちゃっぷ",
+    "han": "",
+    "nghia": "Tương cà chua",
+    "week": 13,
+    "lesson": 3
+  },
+  {
+    "kanji": "マヨネーズ",
+    "hira": "まよねーず",
+    "han": "",
+    "nghia": "Sốt mayonnaise",
+    "week": 13,
+    "lesson": 3
+  },
+  {
+    "kanji": "ソース",
+    "hira": "そーす",
+    "han": "",
+    "nghia": "Nước sốt (sauce)",
+    "week": 13,
+    "lesson": 3
+  },
+  {
+    "kanji": "ラー油",
+    "hira": "らーゆ",
+    "han": "Du",
+    "nghia": "Dầu ớt",
+    "week": 13,
+    "lesson": 3
+  },
+  {
+    "kanji": "わさび",
+    "hira": "わさび",
+    "han": "",
+    "nghia": "Mù tạt xanh Nhật (wasabi)",
+    "week": 13,
+    "lesson": 3
+  },
+  {
+    "kanji": "ゴマ",
+    "hira": "ごま",
+    "han": "Hồ ma",
+    "nghia": "Mè, vừng",
+    "week": 13,
+    "lesson": 4
+  },
+  {
+    "kanji": "海苔",
+    "hira": "のり",
+    "han": "Hải đài",
+    "nghia": "Rong biển khô (lá nori)",
+    "week": 13,
+    "lesson": 4
+  },
+  {
+    "kanji": "カレー粉",
+    "hira": "かれーこ",
+    "han": "Phấn",
+    "nghia": "Bột cà ri",
+    "week": 13,
+    "lesson": 4
+  },
+  {
+    "kanji": "だしの素",
+    "hira": "だしのもと",
+    "han": "Tố",
+    "nghia": "Bột nước dùng (dashi dạng bột)",
+    "week": 13,
+    "lesson": 4
+  },
+  {
+    "kanji": "山椒",
+    "hira": "さんしょう",
+    "han": "Sơn tiêu",
+    "nghia": "Tiêu Nhật (sansho)",
+    "week": 13,
+    "lesson": 4
+  },
+  {
+    "kanji": "スーパー",
+    "hira": "すーぱー",
+    "han": "",
+    "nghia": "Siêu thị",
+    "week": 14,
+    "lesson": 1
+  },
+  {
+    "kanji": "レジ",
+    "hira": "れじ",
+    "han": "",
+    "nghia": "Quầy tính tiền",
+    "week": 14,
+    "lesson": 1
+  },
+  {
+    "kanji": "割引",
+    "hira": "わりびき",
+    "han": "Cát dẫn",
+    "nghia": "Giảm giá",
+    "week": 14,
+    "lesson": 1
+  },
+  {
+    "kanji": "特売",
+    "hira": "とくばい",
+    "han": "Đặc mại",
+    "nghia": "Hàng bán đặc biệt, khuyến mãi",
+    "week": 14,
+    "lesson": 1
+  },
+  {
+    "kanji": "品切れ",
+    "hira": "しなぎれ",
+    "han": "Phẩm thiết",
+    "nghia": "Hết hàng",
+    "week": 14,
+    "lesson": 1
+  },
+  {
+    "kanji": "国産",
+    "hira": "こくさん",
+    "han": "Quốc sản",
+    "nghia": "Hàng nội địa (sản xuất trong nước)",
+    "week": 14,
+    "lesson": 2
+  },
+  {
+    "kanji": "輸入品",
+    "hira": "ゆにゅうひん",
+    "han": "Du nhập phẩm",
+    "nghia": "Hàng nhập khẩu",
+    "week": 14,
+    "lesson": 2
+  },
+  {
+    "kanji": "有機",
+    "hira": "ゆうき",
+    "han": "Hữu cơ",
+    "nghia": "Hữu cơ (organic)",
+    "week": 14,
+    "lesson": 2
+  },
+  {
+    "kanji": "無添加",
+    "hira": "むてんか",
+    "han": "Vô thiêm gia",
+    "nghia": "Không chất phụ gia",
+    "week": 14,
+    "lesson": 2
+  },
+  {
+    "kanji": "産地",
+    "hira": "さんち",
+    "han": "Sản địa",
+    "nghia": "Vùng sản xuất, nơi xuất xứ",
+    "week": 14,
+    "lesson": 2
+  },
+  {
+    "kanji": "野菜売り場",
+    "hira": "やさいうりば",
+    "han": "Dã thái mại trường",
+    "nghia": "Khu bán rau củ quả",
+    "week": 14,
+    "lesson": 3
+  },
+  {
+    "kanji": "精肉売り場",
+    "hira": "せいにくうりば",
+    "han": "Tinh nhục mại trường",
+    "nghia": "Khu bán thịt",
+    "week": 14,
+    "lesson": 3
+  },
+  {
+    "kanji": "鮮魚売り場",
+    "hira": "せんぎょうりば",
+    "han": "Tiên ngư mại trường",
+    "nghia": "Khu bán cá tươi, hải sản",
+    "week": 14,
+    "lesson": 3
+  },
+  {
+    "kanji": "惣菜売り場",
+    "hira": "そうざいうりば",
+    "han": "Tổng thái mại trường",
+    "nghia": "Khu thức ăn nấu sẵn",
+    "week": 14,
+    "lesson": 3
+  },
+  {
+    "kanji": "冷凍食品",
+    "hira": "れいとうしょくひん",
+    "han": "Lãnh đông thực phẩm",
+    "nghia": "Thực phẩm đông lạnh",
+    "week": 14,
+    "lesson": 3
+  },
+  {
+    "kanji": "内容量",
+    "hira": "ないようりょう",
+    "han": "Nội dung lượng",
+    "nghia": "Dung tích / khối lượng tịnh",
+    "week": 14,
+    "lesson": 4
+  },
+  {
+    "kanji": "原材料名",
+    "hira": "げんざいりょうめい",
+    "han": "Nguyên tài liệu danh",
+    "nghia": "Tên nguyên liệu (trên nhãn sản phẩm)",
+    "week": 14,
+    "lesson": 4
+  },
+  {
+    "kanji": "栄養成分",
+    "hira": "えいようせいぶん",
+    "han": "Dinh dưỡng thành phần",
+    "nghia": "Thành phần dinh dưỡng",
+    "week": 14,
+    "lesson": 4
+  },
+  {
+    "kanji": "カロリー",
+    "hira": "かろりー",
+    "han": "",
+    "nghia": "Calo (năng lượng)",
+    "week": 14,
+    "lesson": 4
+  },
+  {
+    "kanji": "アレルギー表示",
+    "hira": "あれるぎーひょうじ",
+    "han": "Biểu thị",
+    "nghia": "Ghi nhãn cảnh báo dị ứng",
+    "week": 14,
+    "lesson": 4
+  },
+  {
+    "kanji": "切る",
+    "hira": "きる",
+    "han": "Thiết",
+    "nghia": "Cắt (thái, chặt nguyên liệu)",
+    "week": 15,
+    "lesson": 1
+  },
+  {
+    "kanji": "剥く",
+    "hira": "むく",
+    "han": "Bác",
+    "nghia": "Gọt/bóc vỏ nguyên liệu",
+    "week": 15,
+    "lesson": 1
+  },
+  {
+    "kanji": "かき混ぜる",
+    "hira": "かきまぜる",
+    "han": "Hỗn",
+    "nghia": "Khuấy trộn đều",
+    "week": 15,
+    "lesson": 1
+  },
+  {
+    "kanji": "重ねる",
+    "hira": "かさねる",
+    "han": "Trọng",
+    "nghia": "Xếp chồng lên nhau",
+    "week": 15,
+    "lesson": 1
+  },
+  {
+    "kanji": "傾ける",
+    "hira": "かたむける",
+    "han": "Khuynh",
+    "nghia": "Nghiêng, đổ nghiêng",
+    "week": 15,
+    "lesson": 1
+  },
+  {
+    "kanji": "覆う",
+    "hira": "おおう",
+    "han": "Phú",
+    "nghia": "Phủ kín, bao phủ",
+    "week": 15,
+    "lesson": 2
+  },
+  {
+    "kanji": "乾かす",
+    "hira": "かわかす",
+    "han": "Can",
+    "nghia": "Làm khô (hong gió, sấy)",
+    "week": 15,
+    "lesson": 2
+  },
+  {
+    "kanji": "すすぐ",
+    "hira": "すすぐ",
+    "han": "",
+    "nghia": "Tráng nước, rửa sạch lại",
+    "week": 15,
+    "lesson": 2
+  },
+  {
+    "kanji": "止める",
+    "hira": "とめる",
+    "han": "Chỉ",
+    "nghia": "Dừng, tắt máy",
+    "week": 15,
+    "lesson": 2
+  },
+  {
+    "kanji": "捲る",
+    "hira": "まくる",
+    "han": "Quyển",
+    "nghia": "Vén lên, xắn lên (tay áo)",
+    "week": 15,
+    "lesson": 2
+  },
+  {
+    "kanji": "取り扱う",
+    "hira": "とりあつかう",
+    "han": "Thủ",
+    "nghia": "Thao tác, xử lý, sử dụng",
+    "week": 15,
+    "lesson": 3
+  },
+  {
+    "kanji": "汚す",
+    "hira": "よごす",
+    "han": "Ô",
+    "nghia": "Làm bẩn, làm dơ",
+    "week": 15,
+    "lesson": 3
+  },
+  {
+    "kanji": "持ち込む",
+    "hira": "もちこむ",
+    "han": "Trì",
+    "nghia": "Mang vào (khu vực làm việc)",
+    "week": 15,
+    "lesson": 3
+  },
+  {
+    "kanji": "作り直す",
+    "hira": "つくりなおす",
+    "han": "Chế",
+    "nghia": "Làm lại (khi không đạt tiêu chuẩn)",
+    "week": 15,
+    "lesson": 3
+  },
+  {
+    "kanji": "確かめる",
+    "hira": "たしかめる",
+    "han": "Xác",
+    "nghia": "Kiểm tra, xác nhận chắc chắn",
+    "week": 15,
+    "lesson": 3
+  },
+  {
+    "kanji": "確認",
+    "hira": "かくにん",
+    "han": "Xác nhận",
+    "nghia": "Xác nhận, kiểm tra lại",
+    "week": 15,
+    "lesson": 4
+  },
+  {
+    "kanji": "指導",
+    "hira": "しどう",
+    "han": "Chỉ đạo",
+    "nghia": "Hướng dẫn, chỉ bảo",
+    "week": 15,
+    "lesson": 4
+  },
+  {
+    "kanji": "注意",
+    "hira": "ちゅうい",
+    "han": "Chú ý",
+    "nghia": "Chú ý, cẩn thận, tránh nguy hiểm",
+    "week": 15,
+    "lesson": 4
+  },
+  {
+    "kanji": "我慢",
+    "hira": "がまん",
+    "han": "Ngã mạn",
+    "nghia": "Chịu đựng, nhịn (KHÔNG nên làm khi bệnh)",
+    "week": 15,
+    "lesson": 4
+  },
+  {
+    "kanji": "脱水",
+    "hira": "だっすい",
+    "han": "Thoát thủy",
+    "nghia": "Vắt/ráo nước (bằng máy vắt)",
+    "week": 15,
+    "lesson": 4
+  },
+  {
+    "kanji": "包丁",
+    "hira": "ほうちょう",
+    "han": "Bao đinh",
+    "nghia": "Dao bếp",
+    "week": 16,
+    "lesson": 1
+  },
+  {
+    "kanji": "まな板",
+    "hira": "まないた",
+    "han": "",
+    "nghia": "Thớt",
+    "week": 16,
+    "lesson": 1
+  },
+  {
+    "kanji": "器具",
+    "hira": "きぐ",
+    "han": "Khí cụ",
+    "nghia": "Dụng cụ (cấu trúc đơn giản)",
+    "week": 16,
+    "lesson": 1
+  },
+  {
+    "kanji": "トレー",
+    "hira": "とれー",
+    "han": "",
+    "nghia": "Khay đựng thực phẩm",
+    "week": 16,
+    "lesson": 1
+  },
+  {
+    "kanji": "番重",
+    "hira": "ばんじゅう",
+    "han": "",
+    "nghia": "Khay nhựa chữ nhật có thể xếp chồng",
+    "week": 16,
+    "lesson": 1
+  },
+  {
+    "kanji": "布巾",
+    "hira": "ふきん",
+    "han": "Bố cân",
+    "nghia": "Khăn lau chén, khăn bếp",
+    "week": 16,
+    "lesson": 2
+  },
+  {
+    "kanji": "腕カバー",
+    "hira": "うでかばー",
+    "han": "",
+    "nghia": "Bao bảo hộ cẳng tay (từ cổ tay đến khuỷu)",
+    "week": 16,
+    "lesson": 2
+  },
+  {
+    "kanji": "袖",
+    "hira": "そで",
+    "han": "Tụ",
+    "nghia": "Tay áo (phần áo che cánh tay)",
+    "week": 16,
+    "lesson": 2
+  },
+  {
+    "kanji": "容器",
+    "hira": "ようき",
+    "han": "Dung khí",
+    "nghia": "Bình/hộp/thùng đựng",
+    "week": 16,
+    "lesson": 2
+  },
+  {
+    "kanji": "コンテナ",
+    "hira": "こんてな",
+    "han": "",
+    "nghia": "Thùng container (vận chuyển nguyên liệu)",
+    "week": 16,
+    "lesson": 2
+  },
+  {
+    "kanji": "消火器",
+    "hira": "しょうかき",
+    "han": "Tiêu hỏa khí",
+    "nghia": "Bình chữa cháy",
+    "week": 16,
+    "lesson": 3
+  },
+  {
+    "kanji": "設備",
+    "hira": "せつび",
+    "han": "Thiết bị",
+    "nghia": "Thiết bị, hệ thống máy móc, đường ống",
+    "week": 16,
+    "lesson": 3
+  },
+  {
+    "kanji": "施設",
+    "hira": "しせつ",
+    "han": "Thi thiết",
+    "nghia": "Cơ sở (tòa nhà + thiết bị cần thiết)",
+    "week": 16,
+    "lesson": 3
+  },
+  {
+    "kanji": "洗剤",
+    "hira": "せんざい",
+    "han": "Tẩy tễ",
+    "nghia": "Chất tẩy rửa, xà phòng rửa bếp",
+    "week": 16,
+    "lesson": 3
+  },
+  {
+    "kanji": "マニュアル",
+    "hira": "まにゅある",
+    "han": "",
+    "nghia": "Sách hướng dẫn, quy trình thao tác",
+    "week": 16,
+    "lesson": 3
+  },
+  {
+    "kanji": "排水溝",
+    "hira": "はいすいこう",
+    "han": "Bài thủy câu",
+    "nghia": "Rãnh thoát nước (trong khu sản xuất)",
+    "week": 16,
+    "lesson": 4
+  },
+  {
+    "kanji": "隙間",
+    "hira": "すきま",
+    "han": "Khích gian",
+    "nghia": "Khe hở (có thể cho côn trùng xâm nhập)",
+    "week": 16,
+    "lesson": 4
+  },
+  {
+    "kanji": "周り",
+    "hira": "まわり",
+    "han": "Chu",
+    "nghia": "Xung quanh, khu vực lân cận",
+    "week": 16,
+    "lesson": 4
+  },
+  {
+    "kanji": "表面",
+    "hira": "ひょうめん",
+    "han": "Biểu diện",
+    "nghia": "Bề mặt (phía ngoài của vật)",
+    "week": 16,
+    "lesson": 4
+  },
+  {
+    "kanji": "作業",
+    "hira": "さぎょう",
+    "han": "Tác nghiệp",
+    "nghia": "Thao tác, công đoạn làm việc",
+    "week": 16,
+    "lesson": 4
+  },
+  {
+    "kanji": "皮",
+    "hira": "かわ",
+    "han": "Bì",
+    "nghia": "Vỏ (bên ngoài của nguyên liệu/thực phẩm)",
+    "week": 17,
+    "lesson": 1
+  },
+  {
+    "kanji": "灰汁",
+    "hira": "あく",
+    "han": "Hôi ốc",
+    "nghia": "Bọt/cặn nổi lên khi nấu (vị chát, đắng)",
+    "week": 17,
+    "lesson": 1
+  },
+  {
+    "kanji": "乾燥",
+    "hira": "かんそう",
+    "han": "Càn táo",
+    "nghia": "Sấy khô, làm khô (loại bỏ độ ẩm)",
+    "week": 17,
+    "lesson": 1
+  },
+  {
+    "kanji": "切干しだいこん",
+    "hira": "きりぼしだいこん",
+    "han": "",
+    "nghia": "Củ cải trắng thái sợi phơi khô",
+    "week": 17,
+    "lesson": 1
+  },
+  {
+    "kanji": "おにぎり",
+    "hira": "おにぎり",
+    "han": "",
+    "nghia": "Cơm nắm (nắm tay hoặc đúc khuôn)",
+    "week": 17,
+    "lesson": 1
+  },
+  {
+    "kanji": "湯",
+    "hira": "ゆ",
+    "han": "Thang",
+    "nghia": "Nước nóng (đun bằng nhiệt)",
+    "week": 17,
+    "lesson": 2
+  },
+  {
+    "kanji": "水切り",
+    "hira": "みずきり",
+    "han": "Thủy thiết",
+    "nghia": "Ráo nước (loại bỏ nước thừa)",
+    "week": 17,
+    "lesson": 2
+  },
+  {
+    "kanji": "湯切り",
+    "hira": "ゆきり",
+    "han": "",
+    "nghia": "Ráo nước nóng (sau khi luộc)",
+    "week": 17,
+    "lesson": 2
+  },
+  {
+    "kanji": "沸騰",
+    "hira": "ふっとう",
+    "han": "Phí đằng",
+    "nghia": "Sôi sùng sục (nước/nước hầm)",
+    "week": 17,
+    "lesson": 2
+  },
+  {
+    "kanji": "余熱",
+    "hira": "よねつ",
+    "han": "Dư nhiệt",
+    "nghia": "Nhiệt dư (còn lại sau khi tắt lửa)",
+    "week": 17,
+    "lesson": 2
+  },
+  {
+    "kanji": "殺菌液",
+    "hira": "さっきんえき",
+    "han": "Sát khuẩn dịch",
+    "nghia": "Dung dịch khử trùng (pha sẵn)",
+    "week": 17,
+    "lesson": 3
+  },
+  {
+    "kanji": "殺菌剤",
+    "hira": "さっきんざい",
+    "han": "Sát khuẩn tễ",
+    "nghia": "Chất khử trùng (dạng nguyên chất)",
+    "week": 17,
+    "lesson": 3
+  },
+  {
+    "kanji": "消毒",
+    "hira": "しょうどく",
+    "han": "Tiêu độc",
+    "nghia": "Tiệt trùng bề mặt/dụng cụ/tay",
+    "week": 17,
+    "lesson": 3
+  },
+  {
+    "kanji": "原液",
+    "hira": "げんえき",
+    "han": "Nguyên dịch",
+    "nghia": "Dung dịch gốc (chưa pha loãng)",
+    "week": 17,
+    "lesson": 3
+  },
+  {
+    "kanji": "塩素濃度",
+    "hira": "えんそのうど",
+    "han": "Diêm tố nồng độ",
+    "nghia": "Nồng độ clo trong dung dịch khử trùng",
+    "week": 17,
+    "lesson": 3
+  },
+  {
+    "kanji": "濃度",
+    "hira": "のうど",
+    "han": "Nồng độ",
+    "nghia": "Nồng độ (mức độ đặc hay loãng)",
+    "week": 17,
+    "lesson": 4
+  },
+  {
+    "kanji": "基準",
+    "hira": "きじゅん",
+    "han": "Cơ chuẩn",
+    "nghia": "Tiêu chuẩn, quy chuẩn tối thiểu",
+    "week": 17,
+    "lesson": 4
+  },
+  {
+    "kanji": "基準値",
+    "hira": "きじゅんち",
+    "han": "Cơ chuẩn trị",
+    "nghia": "Giá trị tiêu chuẩn (con số cụ thể)",
+    "week": 17,
+    "lesson": 4
+  },
+  {
+    "kanji": "糖度",
+    "hira": "とうど",
+    "han": "Đường độ",
+    "nghia": "Độ đường (Brix) trong thực phẩm",
+    "week": 17,
+    "lesson": 4
+  },
+  {
+    "kanji": "酸価",
+    "hira": "さんか",
+    "han": "Toan giá",
+    "nghia": "Chỉ số axit (đo mức độ hỏng của dầu)",
+    "week": 17,
+    "lesson": 4
+  },
+  {
+    "kanji": "原材料",
+    "hira": "げんざいりょう",
+    "han": "Nguyên tài liệu",
+    "nghia": "Nguyên vật liệu (nguyên liệu + phụ liệu)",
+    "week": 18,
+    "lesson": 1
+  },
+  {
+    "kanji": "食材",
+    "hira": "しょくざい",
+    "han": "Thực tài",
+    "nghia": "Nguyên liệu thực phẩm (= 原材料)",
+    "week": 18,
+    "lesson": 1
+  },
+  {
+    "kanji": "調味料",
+    "hira": "ちょうみりょう",
+    "han": "Điều vị liệu",
+    "nghia": "Gia vị (muối, đường, nước tương, dầu...)",
+    "week": 18,
+    "lesson": 1
+  },
+  {
+    "kanji": "調理",
+    "hira": "ちょうり",
+    "han": "Điều lý",
+    "nghia": "Chế biến, nấu ăn (theo quy trình)",
+    "week": 18,
+    "lesson": 1
+  },
+  {
+    "kanji": "料理",
+    "hira": "りょうり",
+    "han": "Liệu lý",
+    "nghia": "Nấu ăn / món ăn (kết quả chế biến)",
+    "week": 18,
+    "lesson": 1
+  },
+  {
+    "kanji": "火力",
+    "hira": "かりょく",
+    "han": "Hỏa lực",
+    "nghia": "Nhiệt lượng lửa (mạnh/vừa/nhỏ)",
+    "week": 18,
+    "lesson": 2
+  },
+  {
+    "kanji": "蒸気",
+    "hira": "じょうき",
+    "han": "Chưng khí",
+    "nghia": "Hơi nước (sinh ra khi đun nóng)",
+    "week": 18,
+    "lesson": 2
+  },
+  {
+    "kanji": "煮汁",
+    "hira": "にじる",
+    "han": "Chử trấp",
+    "nghia": "Nước hầm/nước ninh (khi nấu nguyên liệu)",
+    "week": 18,
+    "lesson": 2
+  },
+  {
+    "kanji": "上白糖",
+    "hira": "じょうはくとう",
+    "han": "Thượng bạch đường",
+    "nghia": "Đường kính trắng (loại đường phổ biến nhất ở Nhật)",
+    "week": 18,
+    "lesson": 2
+  },
+  {
+    "kanji": "サラダ油",
+    "hira": "さらだあぶら",
+    "han": "",
+    "nghia": "Dầu ăn tinh chế (dùng nấu và làm salad)",
+    "week": 18,
+    "lesson": 2
+  },
+  {
+    "kanji": "果菜類",
+    "hira": "かさいるい",
+    "han": "Quả thái loại",
+    "nghia": "Rau ăn quả (cà tím, cà chua, dưa chuột...)",
+    "week": 18,
+    "lesson": 3
+  },
+  {
+    "kanji": "根菜類",
+    "hira": "こんさいるい",
+    "han": "Căn thái loại",
+    "nghia": "Rau ăn củ/rễ (cà rốt, củ cải, ngưu bàng...)",
+    "week": 18,
+    "lesson": 3
+  },
+  {
+    "kanji": "葉茎菜類",
+    "hira": "ようけいさいるい",
+    "han": "Diệp kinh thái loại",
+    "nghia": "Rau ăn lá/thân (bắp cải, rau bina, hành...)",
+    "week": 18,
+    "lesson": 3
+  },
+  {
+    "kanji": "魚介類",
+    "hira": "ぎょかいるい",
+    "han": "Ngư giới loại",
+    "nghia": "Hải sản (cá, tôm, cua, mực, bạch tuộc...)",
+    "week": 18,
+    "lesson": 3
+  },
+  {
+    "kanji": "コロッケ",
+    "hira": "ころっけ",
+    "han": "",
+    "nghia": "Croquette (khoai nghiền trộn thịt, bọc panko chiên)",
+    "week": 18,
+    "lesson": 3
+  },
+  {
+    "kanji": "均一",
+    "hira": "きんいつ",
+    "han": "Quân nhất",
+    "nghia": "Đồng đều, không có sự chênh lệch",
+    "week": 18,
+    "lesson": 4
+  },
+  {
+    "kanji": "切れ端",
+    "hira": "きれはし",
+    "han": "Thiết đoan",
+    "nghia": "Mảnh thừa (sau khi cắt, cần loại bỏ cẩn thận)",
+    "week": 18,
+    "lesson": 4
+  },
+  {
+    "kanji": "欠ける",
+    "hira": "かける",
+    "han": "Khuyết",
+    "nghia": "Sứt mẻ (dao/lưỡi cắt bị mẻ)",
+    "week": 18,
+    "lesson": 4
+  },
+  {
+    "kanji": "干し",
+    "hira": "ほし",
+    "han": "Can",
+    "nghia": "Phơi khô, sấy khô (干ししいたけ, 干しだいこん...)",
+    "week": 18,
+    "lesson": 4
+  },
+  {
+    "kanji": "汚れ",
+    "hira": "よごれ",
+    "han": "Ô",
+    "nghia": "Vết bẩn, chất bẩn bám trên bề mặt",
+    "week": 18,
+    "lesson": 4
+  },
+  {
+    "kanji": "症状",
+    "hira": "しょうじょう",
+    "han": "Chứng trạng",
+    "nghia": "Triệu chứng bệnh",
+    "week": 19,
+    "lesson": 1
+  },
+  {
+    "kanji": "嘔吐",
+    "hira": "おうと",
+    "han": "Ẩu thổ",
+    "nghia": "Nôn mửa",
+    "week": 19,
+    "lesson": 1
+  },
+  {
+    "kanji": "吐き気",
+    "hira": "はきけ",
+    "han": "Thổ khí",
+    "nghia": "Buồn nôn, cảm giác muốn nôn",
+    "week": 19,
+    "lesson": 1
+  },
+  {
+    "kanji": "吐く",
+    "hira": "はく",
+    "han": "Thổ",
+    "nghia": "Nôn (triệu chứng điển hình của ngộ độc thực phẩm)",
+    "week": 19,
+    "lesson": 1
+  },
+  {
+    "kanji": "下痢",
+    "hira": "げり",
+    "han": "Hạ lỵ",
+    "nghia": "Tiêu chảy",
+    "week": 19,
+    "lesson": 1
+  },
+  {
+    "kanji": "体調",
+    "hira": "たいちょう",
+    "han": "Thể điều",
+    "nghia": "Thể trạng, tình trạng sức khỏe hiện tại",
+    "week": 19,
+    "lesson": 2
+  },
+  {
+    "kanji": "ケガ",
+    "hira": "けが",
+    "han": "",
+    "nghia": "Chấn thương, bị thương (trong lao động)",
+    "week": 19,
+    "lesson": 2
+  },
+  {
+    "kanji": "健康",
+    "hira": "けんこう",
+    "han": "Kiện khang",
+    "nghia": "Sức khỏe (thể chất và tinh thần tốt)",
+    "week": 19,
+    "lesson": 2
+  },
+  {
+    "kanji": "上司",
+    "hira": "じょうし",
+    "han": "Thượng ty",
+    "nghia": "Cấp trên, người quản lý trực tiếp",
+    "week": 19,
+    "lesson": 2
+  },
+  {
+    "kanji": "責任者",
+    "hira": "せきにんしゃ",
+    "han": "Trách nhiệm giả",
+    "nghia": "Người phụ trách, người có trách nhiệm",
+    "week": 19,
+    "lesson": 2
+  },
+  {
+    "kanji": "条件",
+    "hira": "じょうけん",
+    "han": "Điều kiện",
+    "nghia": "Điều kiện (yếu tố cần thiết để thực hiện)",
+    "week": 19,
+    "lesson": 3
+  },
+  {
+    "kanji": "方法",
+    "hira": "ほうほう",
+    "han": "Phương pháp",
+    "nghia": "Phương pháp, cách thức",
+    "week": 19,
+    "lesson": 3
+  },
+  {
+    "kanji": "保管",
+    "hira": "ほかん",
+    "han": "Bảo quản",
+    "nghia": "Bảo quản, lưu trữ (để dùng sau)",
+    "week": 19,
+    "lesson": 3
+  },
+  {
+    "kanji": "食中毒",
+    "hira": "しょくちゅうどく",
+    "han": "Thực trúng độc",
+    "nghia": "Ngộ độc thực phẩm",
+    "week": 19,
+    "lesson": 3
+  },
+  {
+    "kanji": "是正措置",
+    "hira": "ぜせいそち",
+    "han": "Thị chính biện pháp",
+    "nghia": "Biện pháp khắc phục tận gốc (loại bỏ nguyên nhân)",
+    "week": 19,
+    "lesson": 3
+  },
+  {
+    "kanji": "不適合",
+    "hira": "ふてきごう",
+    "han": "Bất thích hợp",
+    "nghia": "Không đạt tiêu chuẩn",
+    "week": 19,
+    "lesson": 4
+  },
+  {
+    "kanji": "適合",
+    "hira": "てきごう",
+    "han": "Thích hợp",
+    "nghia": "Đạt tiêu chuẩn, phù hợp quy định",
+    "week": 19,
+    "lesson": 4
+  },
+  {
+    "kanji": "劣化",
+    "hira": "れっか",
+    "han": "Liệt hóa",
+    "nghia": "Xuống cấp, hư hỏng theo thời gian",
+    "week": 19,
+    "lesson": 4
+  },
+  {
+    "kanji": "防止",
+    "hira": "ぼうし",
+    "han": "Phòng chỉ",
+    "nghia": "Phòng ngừa, ngăn chặn trước",
+    "week": 19,
+    "lesson": 4
+  },
+  {
+    "kanji": "ppm",
+    "hira": "ぴーぴーえむ",
+    "han": "",
+    "nghia": "ppm (phần triệu) — đơn vị đo nồng độ dung dịch",
+    "week": 19,
+    "lesson": 4
+  }
 ]
