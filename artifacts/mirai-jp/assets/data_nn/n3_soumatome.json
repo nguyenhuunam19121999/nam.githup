@@ -567,6 +567,153 @@
     "week": 1
   },
   {
+    "id": "n3s-82",
+    "pattern": "させられる",
+    "phienAm": "させられる",
+    "meaning": "Bị bắt phải làm... / Bị ép...",
+    "level": "N3",
+    "structure": "Vさせ+られる（使役受身）",
+    "explanation": "Thể bị động sai khiến: diễn tả việc bị người khác ép buộc phải làm gì đó ngoài ý muốn.",
+    "examples": [
+      {
+        "jp": "毎日残業させられて、本当に疲れた。",
+        "vi": "Bị ép làm thêm giờ mỗi ngày, thật sự rất mệt."
+      },
+      {
+        "jp": "子どものころ、嫌いな野菜を食べさせられた。",
+        "vi": "Hồi còn nhỏ, tôi bị ép ăn những rau mà mình không thích."
+      }
+    ],
+    "book": "soumatome",
+    "week": 1
+  },
+  {
+    "id": "n3s-83",
+    "pattern": "しかない",
+    "phienAm": "しかない",
+    "meaning": "Chỉ có thể... / Đành phải...",
+    "level": "N3",
+    "structure": "V辞書形+しかない",
+    "explanation": "Không có lựa chọn nào khác, buộc phải làm điều đó. Diễn tả sự không thể tránh khỏi.",
+    "examples": [
+      {
+        "jp": "終電に乗り遅れたから、タクシーで帰るしかない。",
+        "vi": "Lỡ chuyến tàu cuối nên đành về bằng taxi thôi."
+      },
+      {
+        "jp": "もう申し込んだんだから、やるしかない。",
+        "vi": "Đã đăng ký rồi thì chỉ còn cách làm thôi."
+      }
+    ],
+    "book": "soumatome",
+    "week": 1
+  },
+  {
+    "id": "n3s-84",
+    "pattern": "ため(に)",
+    "phienAm": "ため(に)",
+    "meaning": "Vì... / Để...",
+    "level": "N3",
+    "structure": "V辞書形/N+のため(に)",
+    "explanation": "Diễn tả mục đích (để làm gì) hoặc nguyên nhân (vì lý do gì). Mục đích đi với động từ chủ ý.",
+    "examples": [
+      {
+        "jp": "健康のために、毎日運動している。",
+        "vi": "Để có sức khỏe, tôi vận động mỗi ngày."
+      },
+      {
+        "jp": "病気のために学校を休んだ。",
+        "vi": "Vì bệnh nên đã nghỉ học."
+      }
+    ],
+    "book": "soumatome",
+    "week": 1
+  },
+  {
+    "id": "n3s-85",
+    "pattern": "なんか/なんて",
+    "phienAm": "なんか/なんて",
+    "meaning": "Chẳng ra gì / Thật là...",
+    "level": "N3",
+    "structure": "N+なんか / N/S+なんて",
+    "explanation": "Thể hiện sự coi thường, hạ thấp đối tượng (なんか), hoặc ngạc nhiên, không tin (なんて).",
+    "examples": [
+      {
+        "jp": "私なんかには、そんな仕事は無理だよ。",
+        "vi": "Người như tôi thì không thể làm công việc như vậy đâu."
+      },
+      {
+        "jp": "彼が合格するなんて、信じられない！",
+        "vi": "Thật không thể tin được khi anh ấy đậu!"
+      }
+    ],
+    "book": "soumatome",
+    "week": 1
+  },
+  {
+    "id": "n3s-86",
+    "pattern": "ところだった",
+    "phienAm": "ところだった",
+    "meaning": "Suýt nữa thì...",
+    "level": "N3",
+    "structure": "Vる/Vない+ところだった",
+    "explanation": "Diễn tả tình huống suýt xảy ra nhưng đã được tránh khỏi. Hàm ý may mắn hoặc nguy hiểm.",
+    "examples": [
+      {
+        "jp": "危なかった！もう少しで車にひかれるところだった。",
+        "vi": "Nguy hiểm quá! Suýt nữa thì bị xe đâm rồi."
+      },
+      {
+        "jp": "寝坊して、電車に乗り遅れるところだった。",
+        "vi": "Ngủ quên, suýt nữa thì lỡ tàu."
+      }
+    ],
+    "book": "soumatome",
+    "week": 1
+  },
+  {
+    "id": "n3s-87",
+    "pattern": "おきに",
+    "phienAm": "おきに",
+    "meaning": "Cách mỗi... / Cứ mỗi khoảng...",
+    "level": "N3",
+    "structure": "数量（時間・距離）+おきに",
+    "explanation": "Diễn tả khoảng cách đều nhau về thời gian hoặc không gian giữa các lần xảy ra.",
+    "examples": [
+      {
+        "jp": "この薬は4時間おきに飲んでください。",
+        "vi": "Hãy uống thuốc này cứ cách 4 tiếng một lần."
+      },
+      {
+        "jp": "電柱が50メートルおきに立っている。",
+        "vi": "Cột điện được dựng cách nhau 50 mét."
+      }
+    ],
+    "book": "soumatome",
+    "week": 1
+  },
+  {
+    "id": "n3s-88",
+    "pattern": "ごとに",
+    "phienAm": "ごとに",
+    "meaning": "Mỗi... / Cứ mỗi...",
+    "level": "N3",
+    "structure": "N/V辞書形+ごとに",
+    "explanation": "Diễn tả mỗi đơn vị/lần đều như nhau. Khác おきに ở chỗ nhấn mạnh tính lặp đi lặp lại hơn khoảng cách.",
+    "examples": [
+      {
+        "jp": "部屋ごとに色が違う。",
+        "vi": "Mỗi phòng có màu sắc khác nhau."
+      },
+      {
+        "jp": "季節が変わるごとに気分も変わる。",
+        "vi": "Mỗi khi mùa thay đổi, tâm trạng cũng thay đổi."
+      }
+    ],
+    "book": "soumatome",
+    "week": 2
+  },
+  {
     "id": "n3s-28",
     "pattern": "〜おかげで",
     "phienAm": "おかげで",
@@ -1134,6 +1281,258 @@
     "week": 2
   },
   {
+    "id": "n3s-89",
+    "pattern": "ぬき(で)",
+    "phienAm": "ぬき(で)",
+    "meaning": "Không có / Bỏ qua...",
+    "level": "N3",
+    "structure": "N+ぬき(で/に/の)",
+    "explanation": "Diễn tả việc bỏ qua, không có cái gì đó mà vẫn tiến hành. Mang sắc thái cố ý bỏ qua.",
+    "examples": [
+      {
+        "jp": "冗談ぬきで話しましょう。",
+        "vi": "Hãy nói chuyện nghiêm túc nào, không đùa nữa."
+      },
+      {
+        "jp": "昼食ぬきで働き続けた。",
+        "vi": "Làm việc liên tục mà không ăn trưa."
+      }
+    ],
+    "book": "soumatome",
+    "week": 2
+  },
+  {
+    "id": "n3s-90",
+    "pattern": "だらけ",
+    "phienAm": "だらけ",
+    "meaning": "Đầy / Toàn là... (tiêu cực)",
+    "level": "N3",
+    "structure": "N+だらけ",
+    "explanation": "Diễn tả tình trạng tràn ngập, có nhiều thứ gì đó không mong muốn. Thường mang nghĩa tiêu cực.",
+    "examples": [
+      {
+        "jp": "試験の答案は間違いだらけだった。",
+        "vi": "Bài thi toàn là lỗi sai."
+      },
+      {
+        "jp": "転んで泥だらけになってしまった。",
+        "vi": "Bị ngã và trở nên lấm lem đầy bùn."
+      }
+    ],
+    "book": "soumatome",
+    "week": 2
+  },
+  {
+    "id": "n3s-91",
+    "pattern": "ばかりだ/ばかりいる",
+    "phienAm": "ばかりだ/ばかりいる",
+    "meaning": "Cứ ngày càng / Chỉ toàn làm...",
+    "level": "N3",
+    "structure": "Vる+ばかりだ / Vて+ばかりいる",
+    "explanation": "ばかりだ: tình trạng chỉ biến chuyển một chiều (xấu đi). ばかりいる: chỉ mải làm mỗi một việc.",
+    "examples": [
+      {
+        "jp": "最近、物価が上がるばかりだ。",
+        "vi": "Dạo này giá cả cứ ngày một tăng lên."
+      },
+      {
+        "jp": "彼はゲームをしてばかりいる。",
+        "vi": "Anh ta chỉ suốt ngày chơi game."
+      }
+    ],
+    "book": "soumatome",
+    "week": 2
+  },
+  {
+    "id": "n3s-92",
+    "pattern": "向き",
+    "phienAm": "むき",
+    "meaning": "Phù hợp với / Hướng...",
+    "level": "N3",
+    "structure": "N+向き",
+    "explanation": "Diễn tả thứ gì đó phù hợp với đối tượng nhất định, hoặc hướng về phía nào đó.",
+    "examples": [
+      {
+        "jp": "このゲームは子ども向きだ。",
+        "vi": "Trò chơi này phù hợp với trẻ em."
+      },
+      {
+        "jp": "南向きの部屋は日当たりがいい。",
+        "vi": "Phòng hướng nam có ánh nắng tốt."
+      }
+    ],
+    "book": "soumatome",
+    "week": 2
+  },
+  {
+    "id": "n3s-93",
+    "pattern": "向けの/向けに",
+    "phienAm": "むけの/むけに",
+    "meaning": "Dành cho / Nhắm đến...",
+    "level": "N3",
+    "structure": "N+向けの+N / N+向けに+V",
+    "explanation": "Diễn tả thứ được tạo ra hoặc nhắm tới đối tượng cụ thể (có chủ ý rõ ràng hơn 向き).",
+    "examples": [
+      {
+        "jp": "外国人向けの日本語教材を作った。",
+        "vi": "Đã tạo ra tài liệu học tiếng Nhật dành cho người nước ngoài."
+      },
+      {
+        "jp": "若者向けに新しい商品を開発した。",
+        "vi": "Đã phát triển sản phẩm mới hướng đến người trẻ."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
+    "id": "n3s-94",
+    "pattern": "かわりに",
+    "phienAm": "かわりに",
+    "meaning": "Thay vì / Bù lại...",
+    "level": "N3",
+    "structure": "N+のかわりに / V辞書形+かわりに",
+    "explanation": "Diễn tả sự thay thế hoặc đánh đổi: làm B thay vì A, hoặc bù đắp cho nhau.",
+    "examples": [
+      {
+        "jp": "バスのかわりに自転車で行った。",
+        "vi": "Đi xe đạp thay vì đi xe buýt."
+      },
+      {
+        "jp": "値段は高いかわりに、品質がいい。",
+        "vi": "Bù lại giá đắt thì chất lượng tốt."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
+    "id": "n3s-95",
+    "pattern": "ということだ",
+    "phienAm": "ということだ",
+    "meaning": "Có nghĩa là / Nghe nói rằng...",
+    "level": "N3",
+    "structure": "普通形+ということだ",
+    "explanation": "Hai nghĩa: (1) giải thích, tóm lại ý nghĩa; (2) truyền đạt thông tin nghe được từ nguồn khác.",
+    "examples": [
+      {
+        "jp": "彼が来ないということは、中止ということだ。",
+        "vi": "Việc anh ấy không đến có nghĩa là bị hủy rồi."
+      },
+      {
+        "jp": "ニュースによると、台風が来るということだ。",
+        "vi": "Theo tin tức, nghe nói bão sẽ đến."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
+    "id": "n3s-96",
+    "pattern": "ばかりでなく",
+    "phienAm": "ばかりでなく",
+    "meaning": "Không chỉ... mà còn...",
+    "level": "N3",
+    "structure": "N/V/Adj+ばかりでなく",
+    "explanation": "Diễn tả không chỉ điều này mà còn điều khác nữa. Tương đương だけでなく nhưng văn phong hơn.",
+    "examples": [
+      {
+        "jp": "彼は英語ばかりでなく、フランス語も話せる。",
+        "vi": "Anh ấy không chỉ nói được tiếng Anh mà còn cả tiếng Pháp."
+      },
+      {
+        "jp": "この薬は痛みばかりでなく、熱も下げてくれる。",
+        "vi": "Thuốc này không chỉ giảm đau mà còn hạ sốt nữa."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
+    "id": "n3s-97",
+    "pattern": "反面",
+    "phienAm": "はんめん",
+    "meaning": "Mặt khác / Ngược lại...",
+    "level": "N3",
+    "structure": "V/Adj普通形+反面 / N+である反面",
+    "explanation": "Diễn tả hai mặt trái ngược nhau của cùng một sự vật. Vế đầu và vế sau mâu thuẫn nhau.",
+    "examples": [
+      {
+        "jp": "この仕事は給料がいい反面、残業が多い。",
+        "vi": "Công việc này lương cao nhưng mặt khác làm thêm giờ nhiều."
+      },
+      {
+        "jp": "彼は明るい反面、寂しがりやでもある。",
+        "vi": "Anh ấy vui vẻ nhưng mặt khác cũng là người hay cô đơn."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
+    "id": "n3s-98",
+    "pattern": "からでないと",
+    "phienAm": "からでないと",
+    "meaning": "Nếu không phải từ... thì không...",
+    "level": "N3",
+    "structure": "N+からでないと/からでなければ+～ない",
+    "explanation": "Diễn tả điều kiện tiên quyết: phải xuất phát từ điều kiện đó mới có thể thực hiện được.",
+    "examples": [
+      {
+        "jp": "本人からでないと、個人情報は教えられません。",
+        "vi": "Nếu không phải từ bản thân người đó thì không thể cung cấp thông tin cá nhân."
+      },
+      {
+        "jp": "経験者からでないと、この仕事の大変さはわからない。",
+        "vi": "Nếu không phải người có kinh nghiệm thì không hiểu được sự vất vả của công việc này."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
+    "id": "n3s-99",
+    "pattern": "かのように",
+    "phienAm": "かのように",
+    "meaning": "Như thể / Dường như...",
+    "level": "N3",
+    "structure": "普通形+かのように / +かのような+N",
+    "explanation": "So sánh với trường hợp không có thật, ví von, giả định. Mang sắc thái văn học, trang trọng.",
+    "examples": [
+      {
+        "jp": "彼は何もなかったかのように振る舞った。",
+        "vi": "Anh ấy cư xử như thể chẳng có chuyện gì xảy ra."
+      },
+      {
+        "jp": "まるで夢を見ているかのような景色だった。",
+        "vi": "Đó là khung cảnh như thể đang ở trong giấc mơ."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
+    "id": "n3s-100",
+    "pattern": "にする",
+    "phienAm": "にする",
+    "meaning": "Quyết định / Làm cho trở thành...",
+    "level": "N3",
+    "structure": "NにするまたはV辞書形+ことにする",
+    "explanation": "Diễn tả quyết định của người nói (ことにする), hoặc làm cho cái gì đó trở thành trạng thái nào đó (Nにする).",
+    "examples": [
+      {
+        "jp": "飲み物はコーヒーにします。",
+        "vi": "Tôi sẽ chọn cà phê cho đồ uống."
+      },
+      {
+        "jp": "毎朝30分歩くことにした。",
+        "vi": "Tôi đã quyết định đi bộ 30 phút mỗi buổi sáng."
+      }
+    ],
+    "book": "soumatome",
+    "week": 3
+  },
+  {
     "id": "n3s-55",
     "pattern": "普通形 + といっても",
     "phienAm": "といっても",
@@ -1664,7 +2063,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-80",
@@ -1685,7 +2084,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-81",
@@ -1706,406 +2105,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
-  },
-  {
-    "id": "n3s-82",
-    "pattern": "させられる",
-    "phienAm": "させられる",
-    "meaning": "Bị bắt phải làm... / Bị ép...",
-    "level": "N3",
-    "structure": "Vさせ+られる（使役受身）",
-    "explanation": "Thể bị động sai khiến: diễn tả việc bị người khác ép buộc phải làm gì đó ngoài ý muốn.",
-    "examples": [
-      {
-        "jp": "毎日残業させられて、本当に疲れた。",
-        "vi": "Bị ép làm thêm giờ mỗi ngày, thật sự rất mệt."
-      },
-      {
-        "jp": "子どものころ、嫌いな野菜を食べさせられた。",
-        "vi": "Hồi còn nhỏ, tôi bị ép ăn những rau mà mình không thích."
-      }
-    ],
-    "book": "soumatome",
-    "week": 1
-  },
-  {
-    "id": "n3s-83",
-    "pattern": "しかない",
-    "phienAm": "しかない",
-    "meaning": "Chỉ có thể... / Đành phải...",
-    "level": "N3",
-    "structure": "V辞書形+しかない",
-    "explanation": "Không có lựa chọn nào khác, buộc phải làm điều đó. Diễn tả sự không thể tránh khỏi.",
-    "examples": [
-      {
-        "jp": "終電に乗り遅れたから、タクシーで帰るしかない。",
-        "vi": "Lỡ chuyến tàu cuối nên đành về bằng taxi thôi."
-      },
-      {
-        "jp": "もう申し込んだんだから、やるしかない。",
-        "vi": "Đã đăng ký rồi thì chỉ còn cách làm thôi."
-      }
-    ],
-    "book": "soumatome",
-    "week": 1
-  },
-  {
-    "id": "n3s-84",
-    "pattern": "ため(に)",
-    "phienAm": "ため(に)",
-    "meaning": "Vì... / Để...",
-    "level": "N3",
-    "structure": "V辞書形/N+のため(に)",
-    "explanation": "Diễn tả mục đích (để làm gì) hoặc nguyên nhân (vì lý do gì). Mục đích đi với động từ chủ ý.",
-    "examples": [
-      {
-        "jp": "健康のために、毎日運動している。",
-        "vi": "Để có sức khỏe, tôi vận động mỗi ngày."
-      },
-      {
-        "jp": "病気のために学校を休んだ。",
-        "vi": "Vì bệnh nên đã nghỉ học."
-      }
-    ],
-    "book": "soumatome",
-    "week": 1
-  },
-  {
-    "id": "n3s-85",
-    "pattern": "なんか/なんて",
-    "phienAm": "なんか/なんて",
-    "meaning": "Chẳng ra gì / Thật là...",
-    "level": "N3",
-    "structure": "N+なんか / N/S+なんて",
-    "explanation": "Thể hiện sự coi thường, hạ thấp đối tượng (なんか), hoặc ngạc nhiên, không tin (なんて).",
-    "examples": [
-      {
-        "jp": "私なんかには、そんな仕事は無理だよ。",
-        "vi": "Người như tôi thì không thể làm công việc như vậy đâu."
-      },
-      {
-        "jp": "彼が合格するなんて、信じられない！",
-        "vi": "Thật không thể tin được khi anh ấy đậu!"
-      }
-    ],
-    "book": "soumatome",
-    "week": 1
-  },
-  {
-    "id": "n3s-86",
-    "pattern": "ところだった",
-    "phienAm": "ところだった",
-    "meaning": "Suýt nữa thì...",
-    "level": "N3",
-    "structure": "Vる/Vない+ところだった",
-    "explanation": "Diễn tả tình huống suýt xảy ra nhưng đã được tránh khỏi. Hàm ý may mắn hoặc nguy hiểm.",
-    "examples": [
-      {
-        "jp": "危なかった！もう少しで車にひかれるところだった。",
-        "vi": "Nguy hiểm quá! Suýt nữa thì bị xe đâm rồi."
-      },
-      {
-        "jp": "寝坊して、電車に乗り遅れるところだった。",
-        "vi": "Ngủ quên, suýt nữa thì lỡ tàu."
-      }
-    ],
-    "book": "soumatome",
-    "week": 1
-  },
-  {
-    "id": "n3s-87",
-    "pattern": "おきに",
-    "phienAm": "おきに",
-    "meaning": "Cách mỗi... / Cứ mỗi khoảng...",
-    "level": "N3",
-    "structure": "数量（時間・距離）+おきに",
-    "explanation": "Diễn tả khoảng cách đều nhau về thời gian hoặc không gian giữa các lần xảy ra.",
-    "examples": [
-      {
-        "jp": "この薬は4時間おきに飲んでください。",
-        "vi": "Hãy uống thuốc này cứ cách 4 tiếng một lần."
-      },
-      {
-        "jp": "電柱が50メートルおきに立っている。",
-        "vi": "Cột điện được dựng cách nhau 50 mét."
-      }
-    ],
-    "book": "soumatome",
-    "week": 1
-  },
-  {
-    "id": "n3s-88",
-    "pattern": "ごとに",
-    "phienAm": "ごとに",
-    "meaning": "Mỗi... / Cứ mỗi...",
-    "level": "N3",
-    "structure": "N/V辞書形+ごとに",
-    "explanation": "Diễn tả mỗi đơn vị/lần đều như nhau. Khác おきに ở chỗ nhấn mạnh tính lặp đi lặp lại hơn khoảng cách.",
-    "examples": [
-      {
-        "jp": "部屋ごとに色が違う。",
-        "vi": "Mỗi phòng có màu sắc khác nhau."
-      },
-      {
-        "jp": "季節が変わるごとに気分も変わる。",
-        "vi": "Mỗi khi mùa thay đổi, tâm trạng cũng thay đổi."
-      }
-    ],
-    "book": "soumatome",
-    "week": 1
-  },
-  {
-    "id": "n3s-89",
-    "pattern": "ぬき(で)",
-    "phienAm": "ぬき(で)",
-    "meaning": "Không có / Bỏ qua...",
-    "level": "N3",
-    "structure": "N+ぬき(で/に/の)",
-    "explanation": "Diễn tả việc bỏ qua, không có cái gì đó mà vẫn tiến hành. Mang sắc thái cố ý bỏ qua.",
-    "examples": [
-      {
-        "jp": "冗談ぬきで話しましょう。",
-        "vi": "Hãy nói chuyện nghiêm túc nào, không đùa nữa."
-      },
-      {
-        "jp": "昼食ぬきで働き続けた。",
-        "vi": "Làm việc liên tục mà không ăn trưa."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-90",
-    "pattern": "だらけ",
-    "phienAm": "だらけ",
-    "meaning": "Đầy / Toàn là... (tiêu cực)",
-    "level": "N3",
-    "structure": "N+だらけ",
-    "explanation": "Diễn tả tình trạng tràn ngập, có nhiều thứ gì đó không mong muốn. Thường mang nghĩa tiêu cực.",
-    "examples": [
-      {
-        "jp": "試験の答案は間違いだらけだった。",
-        "vi": "Bài thi toàn là lỗi sai."
-      },
-      {
-        "jp": "転んで泥だらけになってしまった。",
-        "vi": "Bị ngã và trở nên lấm lem đầy bùn."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-91",
-    "pattern": "ばかりだ/ばかりいる",
-    "phienAm": "ばかりだ/ばかりいる",
-    "meaning": "Cứ ngày càng / Chỉ toàn làm...",
-    "level": "N3",
-    "structure": "Vる+ばかりだ / Vて+ばかりいる",
-    "explanation": "ばかりだ: tình trạng chỉ biến chuyển một chiều (xấu đi). ばかりいる: chỉ mải làm mỗi một việc.",
-    "examples": [
-      {
-        "jp": "最近、物価が上がるばかりだ。",
-        "vi": "Dạo này giá cả cứ ngày một tăng lên."
-      },
-      {
-        "jp": "彼はゲームをしてばかりいる。",
-        "vi": "Anh ta chỉ suốt ngày chơi game."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-92",
-    "pattern": "向き",
-    "phienAm": "むき",
-    "meaning": "Phù hợp với / Hướng...",
-    "level": "N3",
-    "structure": "N+向き",
-    "explanation": "Diễn tả thứ gì đó phù hợp với đối tượng nhất định, hoặc hướng về phía nào đó.",
-    "examples": [
-      {
-        "jp": "このゲームは子ども向きだ。",
-        "vi": "Trò chơi này phù hợp với trẻ em."
-      },
-      {
-        "jp": "南向きの部屋は日当たりがいい。",
-        "vi": "Phòng hướng nam có ánh nắng tốt."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-93",
-    "pattern": "向けの/向けに",
-    "phienAm": "むけの/むけに",
-    "meaning": "Dành cho / Nhắm đến...",
-    "level": "N3",
-    "structure": "N+向けの+N / N+向けに+V",
-    "explanation": "Diễn tả thứ được tạo ra hoặc nhắm tới đối tượng cụ thể (có chủ ý rõ ràng hơn 向き).",
-    "examples": [
-      {
-        "jp": "外国人向けの日本語教材を作った。",
-        "vi": "Đã tạo ra tài liệu học tiếng Nhật dành cho người nước ngoài."
-      },
-      {
-        "jp": "若者向けに新しい商品を開発した。",
-        "vi": "Đã phát triển sản phẩm mới hướng đến người trẻ."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-94",
-    "pattern": "かわりに",
-    "phienAm": "かわりに",
-    "meaning": "Thay vì / Bù lại...",
-    "level": "N3",
-    "structure": "N+のかわりに / V辞書形+かわりに",
-    "explanation": "Diễn tả sự thay thế hoặc đánh đổi: làm B thay vì A, hoặc bù đắp cho nhau.",
-    "examples": [
-      {
-        "jp": "バスのかわりに自転車で行った。",
-        "vi": "Đi xe đạp thay vì đi xe buýt."
-      },
-      {
-        "jp": "値段は高いかわりに、品質がいい。",
-        "vi": "Bù lại giá đắt thì chất lượng tốt."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-95",
-    "pattern": "ということだ",
-    "phienAm": "ということだ",
-    "meaning": "Có nghĩa là / Nghe nói rằng...",
-    "level": "N3",
-    "structure": "普通形+ということだ",
-    "explanation": "Hai nghĩa: (1) giải thích, tóm lại ý nghĩa; (2) truyền đạt thông tin nghe được từ nguồn khác.",
-    "examples": [
-      {
-        "jp": "彼が来ないということは、中止ということだ。",
-        "vi": "Việc anh ấy không đến có nghĩa là bị hủy rồi."
-      },
-      {
-        "jp": "ニュースによると、台風が来るということだ。",
-        "vi": "Theo tin tức, nghe nói bão sẽ đến."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-96",
-    "pattern": "ばかりでなく",
-    "phienAm": "ばかりでなく",
-    "meaning": "Không chỉ... mà còn...",
-    "level": "N3",
-    "structure": "N/V/Adj+ばかりでなく",
-    "explanation": "Diễn tả không chỉ điều này mà còn điều khác nữa. Tương đương だけでなく nhưng văn phong hơn.",
-    "examples": [
-      {
-        "jp": "彼は英語ばかりでなく、フランス語も話せる。",
-        "vi": "Anh ấy không chỉ nói được tiếng Anh mà còn cả tiếng Pháp."
-      },
-      {
-        "jp": "この薬は痛みばかりでなく、熱も下げてくれる。",
-        "vi": "Thuốc này không chỉ giảm đau mà còn hạ sốt nữa."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-97",
-    "pattern": "反面",
-    "phienAm": "はんめん",
-    "meaning": "Mặt khác / Ngược lại...",
-    "level": "N3",
-    "structure": "V/Adj普通形+反面 / N+である反面",
-    "explanation": "Diễn tả hai mặt trái ngược nhau của cùng một sự vật. Vế đầu và vế sau mâu thuẫn nhau.",
-    "examples": [
-      {
-        "jp": "この仕事は給料がいい反面、残業が多い。",
-        "vi": "Công việc này lương cao nhưng mặt khác làm thêm giờ nhiều."
-      },
-      {
-        "jp": "彼は明るい反面、寂しがりやでもある。",
-        "vi": "Anh ấy vui vẻ nhưng mặt khác cũng là người hay cô đơn."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-98",
-    "pattern": "からでないと",
-    "phienAm": "からでないと",
-    "meaning": "Nếu không phải từ... thì không...",
-    "level": "N3",
-    "structure": "N+からでないと/からでなければ+～ない",
-    "explanation": "Diễn tả điều kiện tiên quyết: phải xuất phát từ điều kiện đó mới có thể thực hiện được.",
-    "examples": [
-      {
-        "jp": "本人からでないと、個人情報は教えられません。",
-        "vi": "Nếu không phải từ bản thân người đó thì không thể cung cấp thông tin cá nhân."
-      },
-      {
-        "jp": "経験者からでないと、この仕事の大変さはわからない。",
-        "vi": "Nếu không phải người có kinh nghiệm thì không hiểu được sự vất vả của công việc này."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-99",
-    "pattern": "かのように",
-    "phienAm": "かのように",
-    "meaning": "Như thể / Dường như...",
-    "level": "N3",
-    "structure": "普通形+かのように / +かのような+N",
-    "explanation": "So sánh với trường hợp không có thật, ví von, giả định. Mang sắc thái văn học, trang trọng.",
-    "examples": [
-      {
-        "jp": "彼は何もなかったかのように振る舞った。",
-        "vi": "Anh ấy cư xử như thể chẳng có chuyện gì xảy ra."
-      },
-      {
-        "jp": "まるで夢を見ているかのような景色だった。",
-        "vi": "Đó là khung cảnh như thể đang ở trong giấc mơ."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
-  },
-  {
-    "id": "n3s-100",
-    "pattern": "にする",
-    "phienAm": "にする",
-    "meaning": "Quyết định / Làm cho trở thành...",
-    "level": "N3",
-    "structure": "NにするまたはV辞書形+ことにする",
-    "explanation": "Diễn tả quyết định của người nói (ことにする), hoặc làm cho cái gì đó trở thành trạng thái nào đó (Nにする).",
-    "examples": [
-      {
-        "jp": "飲み物はコーヒーにします。",
-        "vi": "Tôi sẽ chọn cà phê cho đồ uống."
-      },
-      {
-        "jp": "毎朝30分歩くことにした。",
-        "vi": "Tôi đã quyết định đi bộ 30 phút mỗi buổi sáng."
-      }
-    ],
-    "book": "soumatome",
-    "week": 2
+    "week": 4
   },
   {
     "id": "n3s-101",
@@ -2126,7 +2126,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-102",
@@ -2147,7 +2147,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-103",
@@ -2168,7 +2168,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-104",
@@ -2189,7 +2189,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-105",
@@ -2210,7 +2210,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-106",
@@ -2231,7 +2231,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-107",
@@ -2252,7 +2252,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-108",
@@ -2273,7 +2273,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-109",
@@ -2294,7 +2294,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-110",
@@ -2315,7 +2315,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-111",
@@ -2336,7 +2336,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-112",
@@ -2357,7 +2357,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-113",
@@ -2378,7 +2378,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-114",
@@ -2399,7 +2399,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-115",
@@ -2420,7 +2420,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-116",
@@ -2441,7 +2441,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-117",
@@ -2462,7 +2462,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-118",
@@ -2483,7 +2483,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-119",
@@ -2504,7 +2504,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-120",
@@ -2525,7 +2525,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-121",
@@ -2546,7 +2546,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-122",
@@ -2567,7 +2567,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-123",
@@ -2588,7 +2588,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-124",
@@ -2609,7 +2609,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-125",
@@ -2630,7 +2630,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-126",
@@ -2651,7 +2651,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-127",
@@ -2672,7 +2672,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-128",
@@ -2693,7 +2693,7 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   },
   {
     "id": "n3s-129",
@@ -2714,6 +2714,6 @@
       }
     ],
     "book": "soumatome",
-    "week": 3
+    "week": 4
   }
 ]

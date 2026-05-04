@@ -40,9 +40,9 @@ interface BookConfig {
 
 const BOOK_CONFIGS: Record<string, BookConfig> = {
   "n5":          { headerTitle: "日本語能力試験 N5", headerSub: "JLPT · N5",      useWeeks: false, kanjiWeeks: 5, kanjiLPW: 6, vocabWeeks: 5, vocabLPW: 5, grammarWeeks: 4 },
-  "n4":          { headerTitle: "日本語能力試験 N4", headerSub: "JLPT · N4",      useWeeks: false, kanjiWeeks: 5, kanjiLPW: 4, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 4 },
+  "n4":          { headerTitle: "日本語能力試験 N4", headerSub: "JLPT · N4",      useWeeks: false, kanjiWeeks: 5, kanjiLPW: 4, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 5 },
   "n1":          { headerTitle: "日本語能力試験 N1", headerSub: "JLPT · N1",      useWeeks: false, kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 8 },
-  "soumatome-n3":{ headerTitle: "総まとめ N3",      headerSub: "Soumatome · N3", useWeeks: true,  kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 3 },
+  "soumatome-n3":{ headerTitle: "総まとめ N3",      headerSub: "Soumatome · N3", useWeeks: true,  kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 4, vocabLPW: 6, grammarWeeks: 4 },
   "mimikara-n3": { headerTitle: "耳から覚える N3",  headerSub: "Mimikara · N3",  useWeeks: false, kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 4 },
   "mimikara-n2": { headerTitle: "耳から覚える N2",  headerSub: "Mimikara · N2",  useWeeks: false, kanjiWeeks: 6, kanjiLPW: 6, vocabWeeks: 6, vocabLPW: 6, grammarWeeks: 4 },
 };
