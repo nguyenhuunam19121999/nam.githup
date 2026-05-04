@@ -398,33 +398,34 @@ export default function HomeScreen() {
               {/* ── Khoá học theo ngành ── */}
               <View style={s.section}>
                 <Text style={s.sectionH1}>Khoá học theo ngành</Text>
-                <View style={s.cardPanel}>
-                  <View style={s.grid}>
-                    {INDUSTRIES.map((it) => (
-                      <TouchableOpacity
-                        key={it.id}
-                        style={s.gridItem}
-                        // Bấm vào ngành nghề cũng mở trang menu trung gian
-                        onPress={() =>
-                          goLearningMenu({
-                            bookId: it.bookId,
-                            title: `Ngành: ${it.vi}`,
-                          })
-                        }
-                        activeOpacity={0.7}
-                      >
-                        <View style={s.industryBadgeOuter}>
-                          <View style={s.industryBadge}>
-                            <Text style={s.industryEmoji}>{it.emoji}</Text>
-                          </View>
+                <ScrollView
+                  horizontal
+                  showsHorizontalScrollIndicator={false}
+                  contentContainerStyle={s.industryRow}
+                >
+                  {INDUSTRIES.map((it) => (
+                    <TouchableOpacity
+                      key={it.id}
+                      style={s.industryItem}
+                      onPress={() =>
+                        goLearningMenu({
+                          bookId: it.bookId,
+                          title: `Ngành: ${it.vi}`,
+                        })
+                      }
+                      activeOpacity={0.7}
+                    >
+                      <View style={s.industryBadgeOuter}>
+                        <View style={s.industryBadge}>
+                          <Text style={s.industryEmoji}>{it.emoji}</Text>
                         </View>
-                        <Text style={s.gridLabel} numberOfLines={1}>
-                          {it.vi}
-                        </Text>
-                      </TouchableOpacity>
-                    ))}
-                  </View>
-                </View>
+                      </View>
+                      <Text style={s.gridLabel} numberOfLines={1}>
+                        {it.vi}
+                      </Text>
+                    </TouchableOpacity>
+                  ))}
+                </ScrollView>
               </View>
             </>
           )}
@@ -722,6 +723,19 @@ const s = StyleSheet.create({
     justifyContent: "center",
   },
   industryEmoji: { fontSize: 26 },
+
+  industryRow: {
+    flexDirection: "row",
+    paddingHorizontal: 2,
+    paddingVertical: 4,
+    gap: 4,
+  },
+  industryItem: {
+    width: 80,
+    alignItems: "center",
+    paddingVertical: 10,
+    paddingHorizontal: 4,
+  },
 
   gridLabel: {
     fontSize: 12,
