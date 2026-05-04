@@ -121,13 +121,15 @@ export default function LearningMenuScreen() {
           {title ? (
             <Text style={s.headerTitle} numberOfLines={1}>{title}</Text>
           ) : (
-            <View style={{ flex: 1 }} />
+            <>
+              <View style={{ flex: 1 }} />
+              <View style={s.logoBadge}>
+                <Text style={s.logoText}>Mirai</Text>
+                <Text style={s.logoDot}>.</Text>
+                <Text style={s.logoJP}>JP</Text>
+              </View>
+            </>
           )}
-          <View style={s.logoBadge}>
-            <Text style={s.logoText}>Mirai</Text>
-            <Text style={s.logoDot}>.</Text>
-            <Text style={s.logoJP}>JP</Text>
-          </View>
         </View>
       </SafeAreaView>
       </LinearGradient>
