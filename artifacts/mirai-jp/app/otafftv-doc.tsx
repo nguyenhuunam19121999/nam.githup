@@ -1,4 +1,4 @@
-import { useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { useEffect, useRef, useState } from "react";
 import {
   Animated,
@@ -124,6 +124,7 @@ export default function OTAFFtvDocScreen() {
 
   return (
     <View style={s.container}>
+      <Stack.Screen options={{ headerShown: false }} />
       {/* Header */}
       <View style={s.header}>
         <TouchableOpacity style={s.backBtn} onPress={() => router.back()}>
