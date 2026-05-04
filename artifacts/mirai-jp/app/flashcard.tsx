@@ -550,7 +550,7 @@ export default function FlashcardScreen() {
   const [, setData] = useState<Vocab[]>([...ALL]);
   const [idx, setIdx] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [viewMode, setViewMode] = useState<"card" | "list">("card");
+  const [viewMode, setViewMode] = useState<"card" | "list">("list");
   const [gameMode, setGameMode] = useState<"flashcard" | "quiz" | "practice">(
     "flashcard",
   );
@@ -987,13 +987,13 @@ export default function FlashcardScreen() {
           {/* ── Mode Switch ── */}
           <View style={s.modeSwitch}>
             <TouchableOpacity
-              style={[s.modeBtn, (gameMode as string) === "flashcard" && s.modeActive]}
-              onPress={() => setGameMode("flashcard")}
+              style={[s.modeBtn, (gameMode as string) === "flashcard" && viewMode === "card" && s.modeActive]}
+              onPress={() => { setGameMode("flashcard"); setViewMode("card"); }}
             >
               <Text
                 style={[
                   s.modeBtnText,
-                  (gameMode as string) === "flashcard" && s.modeBtnTextActive,
+                  (gameMode as string) === "flashcard" && viewMode === "card" && s.modeBtnTextActive,
                 ]}
               >
                 📇 Flashcard
@@ -1168,13 +1168,6 @@ export default function FlashcardScreen() {
           {/* ══════════ CHẾ ĐỘ DANH SÁCH ══════════ */}
           {viewMode === "list" && (
             <View>
-              <TouchableOpacity
-                style={[s.btnList, { marginBottom: 14 }]}
-                onPress={() => setViewMode("card")}
-              >
-                <Text style={s.btnTextWhite}>← Quay lại thẻ</Text>
-              </TouchableOpacity>
-
               {/* Bảng header */}
               <View style={s.tableHeader}>
                 <Text style={[s.th, { flex: 0.3 }]}>#</Text>
