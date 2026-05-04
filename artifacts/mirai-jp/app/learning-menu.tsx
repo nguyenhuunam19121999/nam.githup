@@ -11,7 +11,6 @@ import React from "react";
 import { BottomTabBar } from "@/components/BottomTabBar";
 import {
   Alert,
-  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -190,31 +189,24 @@ export default function LearningMenuScreen() {
       </SafeAreaView>
       </LinearGradient>
 
-      {/* ── Lưới 2 cột chứa 4 mục menu ── */}
-      <ScrollView
-        style={s.scroll}
-        contentContainerStyle={s.scrollContent}
-        showsVerticalScrollIndicator={false}
-      >
-        <View style={s.grid}>
-          {ITEMS.map((item) => (
-            <View key={item.id} style={s.cellWrap}>
-              <TouchableOpacity
-                style={s.menuCard}
-                onPress={() => handlePress(item)}
-                activeOpacity={0.7}
-              >
-                {/* Khung icon vuông bo góc bên trái */}
-                <View style={s.iconBox}>{item.renderIcon()}</View>
-                {/* Nhãn tiếng Việt bên phải, cho phép xuống tối đa 2 dòng */}
-                <Text style={s.menuLabel} numberOfLines={2}>
-                  {item.label}
-                </Text>
-              </TouchableOpacity>
-            </View>
-          ))}
-        </View>
-      </ScrollView>
+      {/* ── Hàng ngang 4 nút ── */}
+      <View style={s.row}>
+        {ITEMS.map((item) => (
+          <TouchableOpacity
+            key={item.id}
+            style={s.menuCard}
+            onPress={() => handlePress(item)}
+            activeOpacity={0.7}
+          >
+            {/* Khung icon vuông bo góc ở trên */}
+            <View style={s.iconBox}>{item.renderIcon()}</View>
+            {/* Nhãn tiếng Việt bên dưới */}
+            <Text style={s.menuLabel} numberOfLines={2}>
+              {item.label}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
       <BottomTabBar />
     </View>
   );
@@ -259,51 +251,45 @@ const s = StyleSheet.create({
     textAlign: "center",
   },
 
-  // Vùng cuộn
-  scroll: { flex: 1 },
-  scrollContent: { padding: 16, paddingBottom: 40 },
-
-  // Lưới 2 cột bằng flex-wrap
-  grid: {
+  // Hàng ngang chứa 4 nút
+  row: {
     flexDirection: "row",
-    flexWrap: "wrap",
-    marginHorizontal: -6,
-  },
-  // Mỗi ô con chiếm nửa chiều rộng
-  cellWrap: {
-    width: "50%",
-    paddingHorizontal: 6,
-    marginBottom: 14,
+    justifyContent: "space-between",
+    paddingHorizontal: 12,
+    paddingTop: 28,
+    paddingBottom: 20,
   },
 
-  // Thẻ menu (viên thuốc bo tròn dài, viền xanh nhạt)
+  // Mỗi nút: icon trên, nhãn dưới
   menuCard: {
-    flexDirection: "row",
+    flex: 1,
     alignItems: "center",
+    marginHorizontal: 5,
     backgroundColor: "#ffffff",
-    borderRadius: 32,
-    paddingVertical: 12,
-    paddingHorizontal: 14,
+    borderRadius: 16,
+    paddingVertical: 14,
+    paddingHorizontal: 6,
     borderWidth: 1.5,
     borderColor: "#bfdbfe",
-    minHeight: 84,
+    minHeight: 100,
+    justifyContent: "center",
   },
-  // Khung trắng bo góc chứa icon
+  // Khung icon vuông bo góc ở trên
   iconBox: {
-    width: 56,
-    height: 56,
+    width: 52,
+    height: 52,
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#fff",
+    backgroundColor: "#f8fafc",
+    marginBottom: 8,
   },
-  // Nhãn tiếng Việt bên phải icon
+  // Nhãn tiếng Việt bên dưới icon
   menuLabel: {
-    flex: 1,
-    fontSize: 16,
+    fontSize: 13,
     fontWeight: "700",
     color: "#0f172a",
-    marginLeft: 12,
+    textAlign: "center",
   },
 });
 
