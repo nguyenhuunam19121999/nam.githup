@@ -1,9 +1,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // learning-menu.tsx
 // Trang menu trung gian hiển thị 4 lựa chọn học tập:
-//   Hướng Dẫn Học · Từ Vựng · Ngữ Pháp · Kanji
-// Người dùng đến trang này sau khi chọn 1 cấp độ JLPT (N5 → N1) hoặc
-// 1 ngành nghề ở trang chính. Bấm "Từ Vựng" sẽ vào màn flashcard như cũ.
+//   Đố vui · Từ Vựng · Ngữ Pháp · Kanji
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useLocalSearchParams, useRouter } from "expo-router";
@@ -22,22 +20,16 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-// Màu chủ đạo (đồng bộ với toàn app)
 const TEAL = "#4ECDC4";
-// Gradient header: từ trên #4ECDC4 xuống dưới #5e9a95
 const GRAD = ["#4ECDC4", "#5e9a95"] as const;
 
-// Định nghĩa 1 mục trong menu
 interface MenuItem {
   id: string;
   label: string;
-  // Hàm vẽ phần biểu tượng bên trong khung icon (vẽ bằng View, không dùng emoji)
   renderIcon: () => React.ReactNode;
-  // Đường dẫn điều hướng khi bấm vào, bỏ trống nếu chưa làm
   route?: string;
 }
 
-// ── Vẽ icon hình lục giác xanh lá có ngũ giác xanh dương (Hướng Dẫn Học) ──
 function HexIcon() {
   return (
     <View style={iconStyles.hexOuter}>
@@ -46,7 +38,6 @@ function HexIcon() {
   );
 }
 
-// ── Vẽ icon quyển sách xanh có ngôi sao (Từ Vựng) ─────────────────────────
 function BookIcon() {
   return (
     <View style={iconStyles.bookWrap}>
@@ -56,7 +47,6 @@ function BookIcon() {
   );
 }
 
-// ── Vẽ icon chữ "A✓" tím (Ngữ Pháp) ───────────────────────────────────────
 function GrammarIcon() {
   return (
     <View style={iconStyles.grammarWrap}>
@@ -66,11 +56,9 @@ function GrammarIcon() {
   );
 }
 
-// ── Vẽ icon mặt trời vàng (Kanji) ─────────────────────────────────────────
 function SunIcon() {
   return (
     <View style={iconStyles.sunWrap}>
-      {/* 8 tia nắng xếp xung quanh */}
       {Array.from({ length: 8 }).map((_, i) => (
         <View
           key={i}
@@ -85,53 +73,7 @@ function SunIcon() {
   );
 }
 
-// ── Icon tài liệu OTAFFtn — cờ Nhật (nền trắng + vòng tròn đỏ) ─────────────
-function DocJPIcon() {
-  return (
-    <View style={iconStyles.docWrap}>
-      {/* Thân tài liệu */}
-      <View style={iconStyles.docBody}>
-        {/* Góc gấp trên phải */}
-        <View style={iconStyles.docFold} />
-        {/* Vòng tròn đỏ — biểu tượng cờ Nhật */}
-        <View style={iconStyles.jpCircle} />
-        {/* Dòng kẻ nội dung */}
-        <View style={[iconStyles.docLine, { width: "55%", marginTop: 4 }]} />
-        <View style={[iconStyles.docLine, { width: "70%" }]} />
-      </View>
-      {/* Nhãn "TN" nhỏ dưới góc */}
-      <Text style={iconStyles.docBadgeJP}>TN</Text>
-    </View>
-  );
-}
-
-// ── Icon tài liệu OTAFFtv — cờ Việt (nền đỏ + ngôi sao vàng) ───────────────
-function DocVNIcon() {
-  return (
-    <View style={iconStyles.docWrap}>
-      <View style={[iconStyles.docBody, iconStyles.docBodyVN]}>
-        <View style={[iconStyles.docFold, iconStyles.docFoldVN]} />
-        {/* Ngôi sao vàng 5 cánh đơn giản */}
-        <Text style={iconStyles.vnStar}>★</Text>
-        <View style={[iconStyles.docLine, { width: "55%", marginTop: 4, backgroundColor: "rgba(255,255,255,0.5)" }]} />
-        <View style={[iconStyles.docLine, { width: "70%", backgroundColor: "rgba(255,255,255,0.5)" }]} />
-      </View>
-      <Text style={iconStyles.docBadgeVN}>TV</Text>
-    </View>
-  );
-}
-
-// Nhãn tuỳ biến theo bookId
-const LABEL_OVERRIDES: Record<string, Partial<Record<string, string>>> = {
-  "industry-food": {
-    grammar: "Tài liệu từ OTAFFtn",
-    kanji:   "Tài liệu từ OTAFFtv",
-  },
-};
-
-function buildItems(bookId: string): MenuItem[] {
-  const overrides = LABEL_OVERRIDES[bookId] ?? {};
-  const isFoodIndustry = bookId === "industry-food";
+function buildItems(): MenuItem[] {
   return [
     {
       id: "guide",
@@ -146,22 +88,21 @@ function buildItems(bookId: string): MenuItem[] {
     },
     {
       id: "grammar",
-      label: overrides["grammar"] ?? "Ngữ Pháp",
-      renderIcon: () => isFoodIndustry ? <DocJPIcon /> : <GrammarIcon />,
-      route: isFoodIndustry ? "/otafftn-doc" : "/grammar",
+      label: "Ngữ Pháp",
+      renderIcon: () => <GrammarIcon />,
+      route: "/grammar",
     },
     {
       id: "kanji",
-      label: overrides["kanji"] ?? "Kanji",
-      renderIcon: () => isFoodIndustry ? <DocVNIcon /> : <SunIcon />,
-      route: isFoodIndustry ? "/otafftv-doc" : "/kanji",
+      label: "Kanji",
+      renderIcon: () => <SunIcon />,
+      route: "/kanji",
     },
   ];
 }
 
 export default function LearningMenuScreen() {
   const router = useRouter();
-  // Nhận thêm tham số `level` (ví dụ "N3") hoặc `title` để hiển thị tiêu đề
   const params = useLocalSearchParams<{
     level?: string;
     bookId?: string;
@@ -176,7 +117,6 @@ export default function LearningMenuScreen() {
         ? `Khoá học ${level}`
         : "Chọn nội dung học";
 
-  // Xử lý khi bấm 1 mục menu
   const handlePress = (item: MenuItem) => {
     if (item.route === "/flashcard") {
       router.push({
@@ -204,12 +144,7 @@ export default function LearningMenuScreen() {
           ...(title ? { title: `Học Kanji ${title || level || ""}`.trim() } : {}),
         },
       });
-    } else if (item.route === "/otafftn-doc") {
-      router.push({ pathname: "/otafftn-doc" });
-    } else if (item.route === "/otafftv-doc") {
-      router.push({ pathname: "/otafftv-doc" });
     } else {
-      // Các mục chưa có nội dung — hiển thị thông báo tạm
       Alert.alert(item.label, "Nội dung sẽ được cập nhật sớm.");
     }
   };
@@ -218,7 +153,6 @@ export default function LearningMenuScreen() {
     <View style={s.root}>
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
 
-      {/* ── Thanh trên cùng: nút quay lại + tiêu đề ── */}
       <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
@@ -231,7 +165,6 @@ export default function LearningMenuScreen() {
             <Text style={s.backIcon}>‹</Text>
           </TouchableOpacity>
           <View style={{ flex: 1 }} />
-          {/* Logo thương hiệu góc phải */}
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>
             <Text style={s.logoDot}>.</Text>
@@ -241,13 +174,12 @@ export default function LearningMenuScreen() {
       </SafeAreaView>
       </LinearGradient>
 
-      {/* ── 4 hàng dọc · 1 cột ── */}
       <ScrollView
         style={s.scroll}
         contentContainerStyle={s.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {buildItems(bookId).map((item) => (
+        {buildItems().map((item) => (
           <TouchableOpacity
             key={item.id}
             style={s.menuCard}
@@ -266,11 +198,9 @@ export default function LearningMenuScreen() {
   );
 }
 
-// ─── Style chung của trang ────────────────────────────────────────────────────
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
-  // Thanh xanh trên cùng
   topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",
@@ -285,7 +215,6 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  // Logo badge góc phải header
   logoBadge: {
     flexDirection: "row",
     alignItems: "center",
@@ -305,11 +234,9 @@ const s = StyleSheet.create({
     textAlign: "center",
   },
 
-  // Vùng cuộn dọc
   scroll: { flex: 1 },
   scrollContent: { padding: 16, paddingBottom: 40, gap: 12 },
 
-  // Mỗi thẻ: full-width, icon trái · nhãn phải
   menuCard: {
     flexDirection: "row",
     alignItems: "center",
@@ -320,7 +247,6 @@ const s = StyleSheet.create({
     borderWidth: 1.5,
     borderColor: "#bfdbfe",
   },
-  // Khung icon vuông bo góc bên trái
   iconBox: {
     width: 56,
     height: 56,
@@ -330,7 +256,6 @@ const s = StyleSheet.create({
     backgroundColor: "#f8fafc",
     marginRight: 16,
   },
-  // Nhãn bên phải icon
   menuLabel: {
     fontSize: 17,
     fontWeight: "700",
@@ -338,9 +263,7 @@ const s = StyleSheet.create({
   },
 });
 
-// ─── Style chi tiết cho từng icon ──────────────────────────────────────────────
 const iconStyles = StyleSheet.create({
-  // Icon Hexagon (Hướng Dẫn Học) — nền xanh lá, ngũ giác xanh dương ở giữa
   hexOuter: {
     width: 40,
     height: 40,
@@ -358,7 +281,6 @@ const iconStyles = StyleSheet.create({
     transform: [{ rotate: "-30deg" }],
   },
 
-  // Icon sách xanh có ngôi sao (Từ Vựng)
   bookWrap: {
     width: 36,
     height: 44,
@@ -382,7 +304,6 @@ const iconStyles = StyleSheet.create({
     fontWeight: "900",
   },
 
-  // Icon sách tím với "A✓" (Ngữ Pháp)
   grammarWrap: {
     width: 36,
     height: 44,
@@ -406,7 +327,6 @@ const iconStyles = StyleSheet.create({
     fontWeight: "900",
   },
 
-  // Icon mặt trời vàng (Kanji)
   sunWrap: {
     width: 44,
     height: 44,
@@ -425,83 +345,5 @@ const iconStyles = StyleSheet.create({
     height: 7,
     borderRadius: 2,
     backgroundColor: "#FBBF24",
-  },
-
-  // Icon tài liệu — dùng chung cho DocJPIcon & DocVNIcon
-  docWrap: {
-    width: 44,
-    height: 48,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  docBody: {
-    width: 36,
-    height: 44,
-    backgroundColor: "#fff",
-    borderRadius: 4,
-    borderWidth: 1.5,
-    borderColor: "#DC2626",
-    alignItems: "center",
-    justifyContent: "center",
-    overflow: "hidden",
-  },
-  docFold: {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    width: 10,
-    height: 10,
-    backgroundColor: "#FECACA",
-    borderBottomLeftRadius: 4,
-  },
-  jpCircle: {
-    width: 16,
-    height: 16,
-    borderRadius: 8,
-    backgroundColor: "#DC2626",
-    marginBottom: 2,
-  },
-  docLine: {
-    height: 2,
-    backgroundColor: "#FCA5A5",
-    borderRadius: 1,
-    marginTop: 3,
-  },
-  docBadgeJP: {
-    position: "absolute",
-    bottom: 0,
-    right: 0,
-    fontSize: 9,
-    fontWeight: "800",
-    color: "#DC2626",
-    backgroundColor: "#FEF2F2",
-    paddingHorizontal: 3,
-    borderRadius: 3,
-  },
-
-  // DocVNIcon — nền đỏ cờ Việt
-  docBodyVN: {
-    backgroundColor: "#DC2626",
-    borderColor: "#991B1B",
-  },
-  docFoldVN: {
-    backgroundColor: "#991B1B",
-  },
-  vnStar: {
-    fontSize: 20,
-    color: "#FBBF24",
-    lineHeight: 22,
-    marginBottom: 2,
-  },
-  docBadgeVN: {
-    position: "absolute",
-    bottom: 0,
-    right: 0,
-    fontSize: 9,
-    fontWeight: "800",
-    color: "#DC2626",
-    backgroundColor: "#FEF2F2",
-    paddingHorizontal: 3,
-    borderRadius: 3,
   },
 });
