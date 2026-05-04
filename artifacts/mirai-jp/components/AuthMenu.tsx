@@ -16,8 +16,8 @@ import {
 
 import { useAuth } from "../hooks/useAuth";
 
-const TEAL = "#4ECDC4";
-const TEAL_DARK = "#3BB3AC";
+const TEAL = "#7C3AED"; /* old: #4ECDC4 */
+const TEAL_DARK = "#5B21B6"; /* old: #3BB3AC */
 const SCREEN_WIDTH = Dimensions.get("window").width;
 const PANEL_WIDTH = Math.min(360, SCREEN_WIDTH * 0.88);
 
