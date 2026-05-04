@@ -85,6 +85,42 @@ function SunIcon() {
   );
 }
 
+// ── Icon tài liệu OTAFFtn — cờ Nhật (nền trắng + vòng tròn đỏ) ─────────────
+function DocJPIcon() {
+  return (
+    <View style={iconStyles.docWrap}>
+      {/* Thân tài liệu */}
+      <View style={iconStyles.docBody}>
+        {/* Góc gấp trên phải */}
+        <View style={iconStyles.docFold} />
+        {/* Vòng tròn đỏ — biểu tượng cờ Nhật */}
+        <View style={iconStyles.jpCircle} />
+        {/* Dòng kẻ nội dung */}
+        <View style={[iconStyles.docLine, { width: "55%", marginTop: 4 }]} />
+        <View style={[iconStyles.docLine, { width: "70%" }]} />
+      </View>
+      {/* Nhãn "TN" nhỏ dưới góc */}
+      <Text style={iconStyles.docBadgeJP}>TN</Text>
+    </View>
+  );
+}
+
+// ── Icon tài liệu OTAFFtv — cờ Việt (nền đỏ + ngôi sao vàng) ───────────────
+function DocVNIcon() {
+  return (
+    <View style={iconStyles.docWrap}>
+      <View style={[iconStyles.docBody, iconStyles.docBodyVN]}>
+        <View style={[iconStyles.docFold, iconStyles.docFoldVN]} />
+        {/* Ngôi sao vàng 5 cánh đơn giản */}
+        <Text style={iconStyles.vnStar}>★</Text>
+        <View style={[iconStyles.docLine, { width: "55%", marginTop: 4, backgroundColor: "rgba(255,255,255,0.5)" }]} />
+        <View style={[iconStyles.docLine, { width: "70%", backgroundColor: "rgba(255,255,255,0.5)" }]} />
+      </View>
+      <Text style={iconStyles.docBadgeVN}>TV</Text>
+    </View>
+  );
+}
+
 // Nhãn tuỳ biến theo bookId
 const LABEL_OVERRIDES: Record<string, Partial<Record<string, string>>> = {
   "industry-food": {
@@ -95,6 +131,7 @@ const LABEL_OVERRIDES: Record<string, Partial<Record<string, string>>> = {
 
 function buildItems(bookId: string): MenuItem[] {
   const overrides = LABEL_OVERRIDES[bookId] ?? {};
+  const isFoodIndustry = bookId === "industry-food";
   return [
     {
       id: "guide",
@@ -110,13 +147,13 @@ function buildItems(bookId: string): MenuItem[] {
     {
       id: "grammar",
       label: overrides["grammar"] ?? "Ngữ Pháp",
-      renderIcon: () => <GrammarIcon />,
+      renderIcon: () => isFoodIndustry ? <DocJPIcon /> : <GrammarIcon />,
       route: "/grammar",
     },
     {
       id: "kanji",
       label: overrides["kanji"] ?? "Kanji",
-      renderIcon: () => <SunIcon />,
+      renderIcon: () => isFoodIndustry ? <DocVNIcon /> : <SunIcon />,
       route: "/kanji",
     },
   ];
@@ -384,5 +421,83 @@ const iconStyles = StyleSheet.create({
     height: 7,
     borderRadius: 2,
     backgroundColor: "#FBBF24",
+  },
+
+  // Icon tài liệu — dùng chung cho DocJPIcon & DocVNIcon
+  docWrap: {
+    width: 44,
+    height: 48,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  docBody: {
+    width: 36,
+    height: 44,
+    backgroundColor: "#fff",
+    borderRadius: 4,
+    borderWidth: 1.5,
+    borderColor: "#DC2626",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+  },
+  docFold: {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    width: 10,
+    height: 10,
+    backgroundColor: "#FECACA",
+    borderBottomLeftRadius: 4,
+  },
+  jpCircle: {
+    width: 16,
+    height: 16,
+    borderRadius: 8,
+    backgroundColor: "#DC2626",
+    marginBottom: 2,
+  },
+  docLine: {
+    height: 2,
+    backgroundColor: "#FCA5A5",
+    borderRadius: 1,
+    marginTop: 3,
+  },
+  docBadgeJP: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    fontSize: 9,
+    fontWeight: "800",
+    color: "#DC2626",
+    backgroundColor: "#FEF2F2",
+    paddingHorizontal: 3,
+    borderRadius: 3,
+  },
+
+  // DocVNIcon — nền đỏ cờ Việt
+  docBodyVN: {
+    backgroundColor: "#DC2626",
+    borderColor: "#991B1B",
+  },
+  docFoldVN: {
+    backgroundColor: "#991B1B",
+  },
+  vnStar: {
+    fontSize: 20,
+    color: "#FBBF24",
+    lineHeight: 22,
+    marginBottom: 2,
+  },
+  docBadgeVN: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    fontSize: 9,
+    fontWeight: "800",
+    color: "#DC2626",
+    backgroundColor: "#FEF2F2",
+    paddingHorizontal: 3,
+    borderRadius: 3,
   },
 });
