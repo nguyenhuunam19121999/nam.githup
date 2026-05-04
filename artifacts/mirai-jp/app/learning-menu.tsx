@@ -85,32 +85,42 @@ function SunIcon() {
   );
 }
 
-// Danh sách 4 mục menu — đúng thứ tự như ảnh mẫu
-const ITEMS: MenuItem[] = [
-  {
-    id: "guide",
-    label: "Đố vui",
-    renderIcon: () => <HexIcon />,
+// Nhãn tuỳ biến theo bookId
+const LABEL_OVERRIDES: Record<string, Partial<Record<string, string>>> = {
+  "industry-food": {
+    grammar: "Tài liệu từ OTAFFtn",
+    kanji:   "Tài liệu từ OTAFFtv",
   },
-  {
-    id: "vocab",
-    label: "Từ Vựng",
-    renderIcon: () => <BookIcon />,
-    route: "/flashcard",
-  },
-  {
-    id: "grammar",
-    label: "Ngữ Pháp",
-    renderIcon: () => <GrammarIcon />,
-    route: "/grammar",
-  },
-  {
-    id: "kanji",
-    label: "Kanji",
-    renderIcon: () => <SunIcon />,
-    route: "/kanji",
-  },
-];
+};
+
+function buildItems(bookId: string): MenuItem[] {
+  const overrides = LABEL_OVERRIDES[bookId] ?? {};
+  return [
+    {
+      id: "guide",
+      label: "Đố vui",
+      renderIcon: () => <HexIcon />,
+    },
+    {
+      id: "vocab",
+      label: "Từ Vựng",
+      renderIcon: () => <BookIcon />,
+      route: "/flashcard",
+    },
+    {
+      id: "grammar",
+      label: overrides["grammar"] ?? "Ngữ Pháp",
+      renderIcon: () => <GrammarIcon />,
+      route: "/grammar",
+    },
+    {
+      id: "kanji",
+      label: overrides["kanji"] ?? "Kanji",
+      renderIcon: () => <SunIcon />,
+      route: "/kanji",
+    },
+  ];
+}
 
 export default function LearningMenuScreen() {
   const router = useRouter();
@@ -196,7 +206,7 @@ export default function LearningMenuScreen() {
         contentContainerStyle={s.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        {ITEMS.map((item) => (
+        {buildItems(bookId).map((item) => (
           <TouchableOpacity
             key={item.id}
             style={s.menuCard}
