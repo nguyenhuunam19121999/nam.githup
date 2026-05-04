@@ -148,7 +148,7 @@ function buildItems(bookId: string): MenuItem[] {
       id: "grammar",
       label: overrides["grammar"] ?? "Ngữ Pháp",
       renderIcon: () => isFoodIndustry ? <DocJPIcon /> : <GrammarIcon />,
-      route: "/grammar",
+      route: isFoodIndustry ? "/otafftn-doc" : "/grammar",
     },
     {
       id: "kanji",
@@ -204,6 +204,8 @@ export default function LearningMenuScreen() {
           ...(title ? { title: `Học Kanji ${title || level || ""}`.trim() } : {}),
         },
       });
+    } else if (item.route === "/otafftn-doc") {
+      router.push({ pathname: "/otafftn-doc" });
     } else if (item.route === "/otafftv-doc") {
       router.push({ pathname: "/otafftv-doc" });
     } else {
