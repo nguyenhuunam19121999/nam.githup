@@ -154,7 +154,7 @@ function buildItems(bookId: string): MenuItem[] {
       id: "kanji",
       label: overrides["kanji"] ?? "Kanji",
       renderIcon: () => isFoodIndustry ? <DocVNIcon /> : <SunIcon />,
-      route: "/kanji",
+      route: isFoodIndustry ? "/otafftv-doc" : "/kanji",
     },
   ];
 }

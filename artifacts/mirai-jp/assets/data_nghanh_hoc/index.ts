@@ -3,7 +3,7 @@ import khachSan from "./khach_san.json";
 import nhaHang from "./nha_hang.json";
 import nongNghiep from "./nong_nghiep.json";
 import oto from "./oto.json";
-import thucPham from "./thuc_pham.json";
+import thucPham from "./thuc_pham/thuc_pham.json";
 import veSinh from "./ve_sinh.json";
 import xayDung from "./xay_dung.json";
 
