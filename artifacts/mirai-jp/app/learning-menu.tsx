@@ -205,6 +205,7 @@ export default function LearningMenuScreen() {
           </TouchableOpacity>
         ))}
       </View>
+      <View style={{ flex: 1 }} />
       <BottomTabBar />
     </View>
   );
