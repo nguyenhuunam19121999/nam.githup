@@ -47,31 +47,6 @@ function BookIcon() {
   );
 }
 
-function GrammarIcon() {
-  return (
-    <View style={iconStyles.grammarWrap}>
-      <Text style={iconStyles.grammarA}>A</Text>
-      <Text style={iconStyles.grammarCheck}>✓</Text>
-    </View>
-  );
-}
-
-function SunIcon() {
-  return (
-    <View style={iconStyles.sunWrap}>
-      {Array.from({ length: 8 }).map((_, i) => (
-        <View
-          key={i}
-          style={[
-            iconStyles.sunRay,
-            { transform: [{ rotate: `${i * 45}deg` }, { translateY: -18 }] },
-          ]}
-        />
-      ))}
-      <View style={iconStyles.sunCircle} />
-    </View>
-  );
-}
 
 function buildItems(): MenuItem[] {
   return [
@@ -85,18 +60,6 @@ function buildItems(): MenuItem[] {
       label: "Từ Vựng",
       renderIcon: () => <BookIcon />,
       route: "/flashcard",
-    },
-    {
-      id: "grammar",
-      label: "Ngữ Pháp",
-      renderIcon: () => <GrammarIcon />,
-      route: "/grammar",
-    },
-    {
-      id: "kanji",
-      label: "Kanji",
-      renderIcon: () => <SunIcon />,
-      route: "/kanji",
     },
   ];
 }
@@ -133,15 +96,6 @@ export default function LearningMenuScreen() {
         params: {
           ...(level ? { level } : {}),
           ...(title ? { title } : {}),
-        },
-      });
-    } else if (item.route === "/kanji") {
-      router.push({
-        pathname: "/kanji",
-        params: {
-          ...(level ? { level } : {}),
-          ...(bookId ? { bookId } : {}),
-          ...(title ? { title: `Học Kanji ${title || level || ""}`.trim() } : {}),
         },
       });
     } else {
@@ -226,14 +180,6 @@ const s = StyleSheet.create({
   logoDot:  { color: TEAL,  fontSize: 24, fontWeight: "900" },
   logoJP:   { color: "#fff", fontSize: 22, fontWeight: "900", letterSpacing: 0.5 },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-  topTitle: {
-    flex: 1,
-    color: "#fff",
-    fontSize: 18,
-    fontWeight: "800",
-    textAlign: "center",
-  },
-
   scroll: { flex: 1 },
   scrollContent: { padding: 16, paddingBottom: 40, gap: 12 },
 
@@ -304,46 +250,4 @@ const iconStyles = StyleSheet.create({
     fontWeight: "900",
   },
 
-  grammarWrap: {
-    width: 36,
-    height: 44,
-    backgroundColor: "#A78BFA",
-    borderRadius: 4,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  grammarA: {
-    color: "#fff",
-    fontSize: 22,
-    fontWeight: "900",
-    lineHeight: 24,
-  },
-  grammarCheck: {
-    position: "absolute",
-    right: 4,
-    bottom: 4,
-    color: "#34D399",
-    fontSize: 12,
-    fontWeight: "900",
-  },
-
-  sunWrap: {
-    width: 44,
-    height: 44,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  sunCircle: {
-    width: 22,
-    height: 22,
-    borderRadius: 11,
-    backgroundColor: "#FBBF24",
-  },
-  sunRay: {
-    position: "absolute",
-    width: 4,
-    height: 7,
-    borderRadius: 2,
-    backgroundColor: "#FBBF24",
-  },
 });
