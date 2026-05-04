@@ -1222,5 +1222,77 @@
       }
     ],
     "week": 4
+  },
+  {
+    "id": "n5-62",
+    "pattern": "〜ましょうか",
+    "meaning": "Để tôi làm... nhé? (đề nghị giúp đỡ)",
+    "explanation": "Dùng khi người nói đề nghị làm điều gì đó cho người khác, khác với ましょう chỉ rủ cùng làm.",
+    "examples": [
+      {
+        "japanese": "窓を開けましょうか。",
+        "vietnamese": "Để tôi mở cửa sổ nhé?"
+      },
+      {
+        "japanese": "荷物を持ちましょうか。",
+        "vietnamese": "Để tôi xách hành lý cho bạn nhé?"
+      }
+    ],
+    "lesson": 61,
+    "week": 4
+  },
+  {
+    "id": "n5-63",
+    "pattern": "N の中で A が一番〜",
+    "meaning": "A là ... nhất trong số N (so sánh nhất)",
+    "explanation": "Dùng để chỉ sự vật/người đứng đầu trong một nhóm. Có thể dùng câu hỏi: N の中で何が一番〜ですか。",
+    "examples": [
+      {
+        "japanese": "クラスの中で田中さんが一番背が高いです。",
+        "vietnamese": "Trong lớp, bạn Tanaka cao nhất."
+      },
+      {
+        "japanese": "果物の中でりんごが一番好きです。",
+        "vietnamese": "Trong các loại hoa quả, tôi thích táo nhất."
+      }
+    ],
+    "lesson": 61,
+    "week": 4
+  },
+  {
+    "id": "n5-64",
+    "pattern": "もう〜ました / まだ〜ません",
+    "meaning": "Đã làm rồi / Vẫn chưa làm",
+    "explanation": "もう (đã rồi) + thể た lịch sự. まだ (vẫn chưa) + V ません / ていません. Dùng để xác nhận hành động đã hoàn thành hay chưa.",
+    "examples": [
+      {
+        "japanese": "もう宿題をしましたか。— はい、もうしました。",
+        "vietnamese": "Bạn đã làm bài tập rồi chưa? — Rồi, đã làm rồi."
+      },
+      {
+        "japanese": "まだです。/ まだ食べていません。",
+        "vietnamese": "Vẫn chưa. / Tôi vẫn chưa ăn."
+      }
+    ],
+    "lesson": 62,
+    "week": 4
+  },
+  {
+    "id": "n5-65",
+    "pattern": "N₁ へ（に）Vます＋に 行きます / 来ます / 帰ります",
+    "meaning": "Đi / Đến / Về N₁ để làm V (mục đích di chuyển)",
+    "explanation": "Diễn đạt việc đi đến nơi nào đó với mục đích cụ thể. Động từ mục đích dùng thể ます bỏ ます rồi thêm に (hoặc danh từ hành động + に).",
+    "examples": [
+      {
+        "japanese": "図書館へ本を借りに行きます。",
+        "vietnamese": "Tôi đi thư viện để mượn sách."
+      },
+      {
+        "japanese": "日本へ日本語を勉強しに来ました。",
+        "vietnamese": "Tôi đến Nhật để học tiếng Nhật."
+      }
+    ],
+    "lesson": 62,
+    "week": 4
   }
 ]
