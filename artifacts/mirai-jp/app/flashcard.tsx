@@ -1685,7 +1685,7 @@ const s = StyleSheet.create({
   /* Table */
   tableHeader: {
     flexDirection: "row",
-    backgroundColor: "#3BB3AC",
+    backgroundColor: "#7C3AED", /* old: #3BB3AC */
     paddingVertical: 12,
     paddingHorizontal: 8,
     borderTopLeftRadius: 12,

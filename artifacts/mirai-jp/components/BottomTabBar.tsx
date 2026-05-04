@@ -4,7 +4,7 @@ import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const TEAL = "#4ECDC4";
+const TEAL = "#7C3AED"; /* old: #4ECDC4 */
 
 export function BottomTabBar() {
   const router = useRouter();
