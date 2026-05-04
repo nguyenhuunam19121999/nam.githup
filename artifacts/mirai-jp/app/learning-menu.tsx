@@ -204,6 +204,8 @@ export default function LearningMenuScreen() {
           ...(title ? { title: `Học Kanji ${title || level || ""}`.trim() } : {}),
         },
       });
+    } else if (item.route === "/otafftv-doc") {
+      router.push({ pathname: "/otafftv-doc" });
     } else {
       // Các mục chưa có nội dung — hiển thị thông báo tạm
       Alert.alert(item.label, "Nội dung sẽ được cập nhật sớm.");
