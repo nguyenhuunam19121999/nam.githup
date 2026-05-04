@@ -988,7 +988,14 @@ export default function FlashcardScreen() {
           <View style={s.modeSwitch}>
             <TouchableOpacity
               style={[s.modeBtn, (gameMode as string) === "flashcard" && viewMode === "card" && s.modeActive]}
-              onPress={() => { setGameMode("flashcard"); setViewMode("card"); }}
+              onPress={() => {
+                if (gameMode === "flashcard" && viewMode === "card") {
+                  setViewMode("list");
+                } else {
+                  setGameMode("flashcard");
+                  setViewMode("card");
+                }
+              }}
             >
               <Text
                 style={[
