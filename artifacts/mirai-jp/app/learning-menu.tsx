@@ -11,6 +11,7 @@ import React from "react";
 import { BottomTabBar } from "@/components/BottomTabBar";
 import {
   Alert,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -189,8 +190,12 @@ export default function LearningMenuScreen() {
       </SafeAreaView>
       </LinearGradient>
 
-      {/* ── 1 hàng ngang · 4 cột dọc ── */}
-      <View style={s.row}>
+      {/* ── 4 hàng dọc · 1 cột ── */}
+      <ScrollView
+        style={s.scroll}
+        contentContainerStyle={s.scrollContent}
+        showsVerticalScrollIndicator={false}
+      >
         {ITEMS.map((item) => (
           <TouchableOpacity
             key={item.id}
@@ -204,8 +209,7 @@ export default function LearningMenuScreen() {
             </Text>
           </TouchableOpacity>
         ))}
-      </View>
-      <View style={{ flex: 1 }} />
+      </ScrollView>
       <BottomTabBar />
     </View>
   );
@@ -250,44 +254,36 @@ const s = StyleSheet.create({
     textAlign: "center",
   },
 
-  // 1 hàng ngang chứa 4 cột
-  row: {
-    flexDirection: "row",
-    paddingHorizontal: 12,
-    paddingTop: 28,
-    paddingBottom: 20,
-    gap: 8,
-  },
+  // Vùng cuộn dọc
+  scroll: { flex: 1 },
+  scrollContent: { padding: 16, paddingBottom: 40, gap: 12 },
 
-  // Mỗi cột: icon trên, nhãn dưới
+  // Mỗi thẻ: full-width, icon trái · nhãn phải
   menuCard: {
-    flex: 1,
+    flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center",
     backgroundColor: "#ffffff",
-    borderRadius: 16,
-    paddingVertical: 16,
-    paddingHorizontal: 4,
+    borderRadius: 20,
+    paddingVertical: 14,
+    paddingHorizontal: 18,
     borderWidth: 1.5,
     borderColor: "#bfdbfe",
-    minHeight: 100,
   },
-  // Khung icon vuông bo góc ở trên
+  // Khung icon vuông bo góc bên trái
   iconBox: {
-    width: 52,
-    height: 52,
-    borderRadius: 12,
+    width: 56,
+    height: 56,
+    borderRadius: 14,
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "#f8fafc",
-    marginBottom: 8,
+    marginRight: 16,
   },
-  // Nhãn bên dưới icon
+  // Nhãn bên phải icon
   menuLabel: {
-    fontSize: 13,
+    fontSize: 17,
     fontWeight: "700",
     color: "#0f172a",
-    textAlign: "center",
   },
 });
 
