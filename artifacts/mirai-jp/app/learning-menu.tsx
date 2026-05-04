@@ -118,11 +118,7 @@ export default function LearningMenuScreen() {
           >
             <Text style={s.backIcon}>‹</Text>
           </TouchableOpacity>
-          {title ? (
-            <Text style={s.headerTitle} numberOfLines={1}>{title}</Text>
-          ) : (
-            <View style={{ flex: 1 }} />
-          )}
+          <View style={{ flex: 1 }} />
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>
             <Text style={s.logoDot}>.</Text>
