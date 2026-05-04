@@ -1231,7 +1231,7 @@ export default function FlashcardScreen() {
                         s.td,
                         {
                           flex: 1.3,
-                          color: "#3BB3AC",
+                          color: "#7C3AED" /* old: #3BB3AC */,
                           fontWeight: "600",
                           fontSize: 12,
                         },
@@ -1530,7 +1530,7 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   bookmarkBannerText: {
-    color: "#3BB3AC",
+    color: "#7C3AED" /* old: #3BB3AC */,
     fontSize: 13,
     fontWeight: "600",
   },
@@ -1600,7 +1600,7 @@ const s = StyleSheet.create({
     borderWidth: 2,
     borderColor: "#e2e8f0",
   },
-  cardBack: { backgroundColor: "#3BB3AC" },
+  cardBack: { backgroundColor: "#7C3AED" /* old: #3BB3AC */ },
 
   fieldBlock: { width: "100%", alignItems: "center", marginBottom: 6 },
   fieldLbl: {
@@ -1749,7 +1749,7 @@ const s = StyleSheet.create({
   },
   correctOption: {
     backgroundColor: "#7C3AED",
-    borderColor: "#3BB3AC",
+    borderColor: "#7C3AED" /* old: #3BB3AC */,
     padding: 16,
     borderRadius: 12,
     borderWidth: 2,
@@ -1772,7 +1772,7 @@ const s = StyleSheet.create({
     borderRadius: 12,
     marginTop: 12,
   },
-  explanationTitle: { fontWeight: "700", color: "#3BB3AC", marginBottom: 8 },
+  explanationTitle: { fontWeight: "700", color: "#7C3AED" /* old: #3BB3AC */, marginBottom: 8 },
   explanationContent: { fontSize: 14, color: "#2d3748" },
   resultCard: {
     backgroundColor: "#fff",
@@ -1881,7 +1881,7 @@ const s = StyleSheet.create({
     borderRadius: 16,
     width: "100%",
   },
-  statValue: { fontSize: 40, fontWeight: "800", color: "#3BB3AC" },
+  statValue: { fontSize: 40, fontWeight: "800", color: "#7C3AED" /* old: #3BB3AC */ },
   statLabel: { fontSize: 14, color: "#4a5568", marginTop: 4 },
   // Ô ghim có viền nhẹ để phân biệt có thể nhấn
   statCardTappable: {
@@ -1909,7 +1909,7 @@ const s = StyleSheet.create({
     marginBottom: 10,
   },
   statRowLabel: { fontSize: 14, color: "#4a5568" },
-  statRowValue: { fontSize: 14, fontWeight: "700", color: "#3BB3AC" },
+  statRowValue: { fontSize: 14, fontWeight: "700", color: "#7C3AED" /* old: #3BB3AC */ },
   closeStatsBtn: {
     backgroundColor: "#7C3AED",
     paddingVertical: 12,
