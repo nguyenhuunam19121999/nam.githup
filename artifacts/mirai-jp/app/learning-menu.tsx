@@ -118,7 +118,11 @@ export default function LearningMenuScreen() {
           >
             <Text style={s.backIcon}>‹</Text>
           </TouchableOpacity>
-          <View style={{ flex: 1 }} />
+          {title ? (
+            <Text style={s.headerTitle} numberOfLines={1}>{title}</Text>
+          ) : (
+            <View style={{ flex: 1 }} />
+          )}
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>
             <Text style={s.logoDot}>.</Text>
@@ -180,6 +184,14 @@ const s = StyleSheet.create({
   logoDot:  { color: TEAL,  fontSize: 24, fontWeight: "900" },
   logoJP:   { color: "#fff", fontSize: 22, fontWeight: "900", letterSpacing: 0.5 },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  headerTitle: {
+    flex: 1,
+    color: "#fff",
+    fontSize: 17,
+    fontWeight: "700",
+    marginLeft: 6,
+    letterSpacing: 0.2,
+  },
   scroll: { flex: 1 },
   scrollContent: { padding: 16, paddingBottom: 40, gap: 12 },
 
