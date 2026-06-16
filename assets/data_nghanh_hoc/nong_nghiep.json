@@ -1,0 +1,1040 @@
+[
+  {
+    "kanji": "農業",
+    "hira": "のうぎょう",
+    "han": "",
+    "nghia": "Nông nghiệp"
+  },
+  {
+    "kanji": "農民",
+    "hira": "のうか",
+    "han": "",
+    "nghia": "Nông dân"
+  },
+  {
+    "kanji": "藁",
+    "hira": "わら",
+    "han": "",
+    "nghia": "Rơm rạ"
+  },
+  {
+    "kanji": "棚",
+    "hira": "なや",
+    "han": "",
+    "nghia": "Lán, sạp"
+  },
+  {
+    "kanji": "",
+    "hira": "かま",
+    "han": "",
+    "nghia": "Cái liềm"
+  },
+  {
+    "kanji": "",
+    "hira": "くわ",
+    "han": "",
+    "nghia": "Cái cuốc"
+  },
+  {
+    "kanji": "",
+    "hira": "すき",
+    "han": "",
+    "nghia": "Cái mai, cái thuổng"
+  },
+  {
+    "kanji": "",
+    "hira": "たんぼ",
+    "han": "",
+    "nghia": "Ruộng lúa nước"
+  },
+  {
+    "kanji": "",
+    "hira": "コンバイン",
+    "han": "",
+    "nghia": "Máy gặt lúa"
+  },
+  {
+    "kanji": "",
+    "hira": "さんぷき",
+    "han": "",
+    "nghia": "Bình xịt thuốc trừ sâu"
+  },
+  {
+    "kanji": "",
+    "hira": "かかし",
+    "han": "",
+    "nghia": "Bù nhìn rơm"
+  },
+  {
+    "kanji": "",
+    "hira": "たうえ",
+    "han": "",
+    "nghia": "Việc trồng cấy lúa"
+  },
+  {
+    "kanji": "",
+    "hira": "あぜみち",
+    "han": "",
+    "nghia": "Bờ ruộng, đường bờ ruộng"
+  },
+  {
+    "kanji": "",
+    "hira": "ビ二―ルハウス",
+    "han": "",
+    "nghia": "Nhà kính để trồng rau"
+  },
+  {
+    "kanji": "",
+    "hira": "こううんき",
+    "han": "",
+    "nghia": "Máy cày, máy xới"
+  },
+  {
+    "kanji": "",
+    "hira": "いねかり",
+    "han": "",
+    "nghia": "Mùa gặt, mùa thu hoạch"
+  },
+  {
+    "kanji": "",
+    "hira": "だんだんばたけ",
+    "han": "",
+    "nghia": "Ruộng bậc thang"
+  },
+  {
+    "kanji": "",
+    "hira": "ようすいろ",
+    "han": "",
+    "nghia": "Kênh, mương dẫn nước"
+  },
+  {
+    "kanji": "",
+    "hira": "はたけ",
+    "han": "",
+    "nghia": "Ruộng rau, ruộng hoa, cánh đồng rau"
+  },
+  {
+    "kanji": "",
+    "hira": "植物",
+    "han": "",
+    "nghia": "Thực vật"
+  },
+  {
+    "kanji": "熱帯植物",
+    "hira": "ねったいしょくぶつ",
+    "han": "NHIỆT ĐỚI THỰC VẬT",
+    "nghia": "Thực vật miền nhiệt đới"
+  },
+  {
+    "kanji": "植物園",
+    "hira": "しょくぶつえん",
+    "han": "THỰC VẬT VIÊN",
+    "nghia": "Vườn thực vật"
+  },
+  {
+    "kanji": "植物学",
+    "hira": "しょくぶつかく",
+    "han": "THỰC VẬT HỌC",
+    "nghia": "Thực vật học"
+  },
+  {
+    "kanji": "植物採集",
+    "hira": "しょくぶつさいしゅう",
+    "han": "THỰC VẬT THU TẬP",
+    "nghia": "Sưu tầm mẫu thực vật"
+  },
+  {
+    "kanji": "植物性油",
+    "hira": "しょくぶつせいゆ",
+    "han": "THỰC VẬT TÍNH DU",
+    "nghia": "Dược phẩm có nguồn gốc thực vật"
+  },
+  {
+    "kanji": "植物標本",
+    "hira": "しょくぶつひょうほん",
+    "han": "THỰC VẬT BIỂU BẢN",
+    "nghia": "Tiêu bản thực vật"
+  },
+  {
+    "kanji": "草",
+    "hira": "くさ",
+    "han": "THẢO",
+    "nghia": "Cỏ"
+  },
+  {
+    "kanji": "草の葉",
+    "hira": "くさのは",
+    "han": "THẢO  LÁ",
+    "nghia": "Lá cỏ"
+  },
+  {
+    "kanji": "草の生えた丘",
+    "hira": "くさのうえたおか",
+    "han": "THẢO  SINH   QIU",
+    "nghia": "Đồi cỏ"
+  },
+  {
+    "kanji": "草を刈る",
+    "hira": "くさをかる",
+    "han": "THẢO  KAI",
+    "nghia": "Cắt cỏ"
+  },
+  {
+    "kanji": "庭の草を取る",
+    "hira": "ていのくさをとる",
+    "han": "ĐÌNH  THẢO  THỦ",
+    "nghia": "Làm cỏ trong vườn"
+  },
+  {
+    "kanji": "種",
+    "hira": "たね",
+    "han": "CHỦNG",
+    "nghia": "Hạt"
+  },
+  {
+    "kanji": "みかんの種",
+    "hira": "みかんのたね",
+    "han": "CHỦNG",
+    "nghia": "Hạt cam"
+  },
+  {
+    "kanji": "庭に種をまいた",
+    "hira": "にわにたねをまいた",
+    "han": "ĐÌNH  CHỦNG",
+    "nghia": "Rải hạt trong vườn 2 giống"
+  },
+  {
+    "kanji": "芽",
+    "hira": "め",
+    "han": "GIA",
+    "nghia": "Búp(hoa), mầm, chồi, mạ (lúa)"
+  },
+  {
+    "kanji": "芽が出る",
+    "hira": "めがでる",
+    "han": "GIA  XUẤT",
+    "nghia": "Nảy mầm"
+  },
+  {
+    "kanji": "芽を出す",
+    "hira": "めをだす",
+    "han": "GIA  XUẤT",
+    "nghia": "Trổ mầm"
+  },
+  {
+    "kanji": "木の芽",
+    "hira": "きのめ",
+    "han": "MỘC  GIA",
+    "nghia": "Chồi (của cây cối)"
+  },
+  {
+    "kanji": "若芽",
+    "hira": "わかめ",
+    "han": "NƯỚC GIA",
+    "nghia": "Chồi non"
+  },
+  {
+    "kanji": "ばらの若芽が伸びてきた",
+    "hira": "ばらのわかめがのびてきた",
+    "han": "NƯỚC GIA  THÂN",
+    "nghia": "Chồi non của cây hoa hồng đã lớn lên."
+  },
+  {
+    "kanji": "新芽",
+    "hira": "しんめ",
+    "han": "TÂN GIA",
+    "nghia": "Chồi mới"
+  },
+  {
+    "kanji": "根",
+    "hira": "ね",
+    "han": "CÂN",
+    "nghia": "Rễ"
+  },
+  {
+    "kanji": "挿し木の根がついた",
+    "hira": "さしきのねがついた",
+    "han": "SẢ  MỘC  CÂN",
+    "nghia": "Cái cây ghép đã mọc rễ"
+  },
+  {
+    "kanji": "雑草を根から抜く",
+    "hira": "ざっそうをねからぬく",
+    "han": "TẠP THẢO  CÂN   BẠC",
+    "nghia": "Nhổ cỏ phải nhỏ tận gốc"
+  },
+  {
+    "kanji": "株",
+    "hira": "かぶ",
+    "han": "CHỦ",
+    "nghia": "Gốc cây, gốc rạ(sau khi đốn, cắt)"
+  },
+  {
+    "kanji": "茎",
+    "hira": "くき",
+    "han": "KINH",
+    "nghia": "Cuống, cọng (như cọng hoa, cọng sen…)"
+  },
+  {
+    "kanji": "枝",
+    "hira": "えだ",
+    "han": "CHI",
+    "nghia": "Cành"
+  },
+  {
+    "kanji": "枯れ枝をおろす",
+    "hira": "",
+    "han": "KHU  CHI",
+    "nghia": "Tỉa cành khô"
+  },
+  {
+    "kanji": "蔓",
+    "hira": "つる",
+    "han": "MẠN",
+    "nghia": "Dây leo (như dây bầu, dây bí…)"
+  },
+  {
+    "kanji": "葉",
+    "hira": "は",
+    "han": "LÁ",
+    "nghia": "Lá"
+  },
+  {
+    "kanji": "若葉",
+    "hira": "わかば",
+    "han": "NƯỚC LÁ",
+    "nghia": "Lá non"
+  },
+  {
+    "kanji": "若葉の季節",
+    "hira": "",
+    "han": "NƯỚC LÁ  QUÝ TIẾT",
+    "nghia": "Mùa lá non"
+  },
+  {
+    "kanji": "青葉",
+    "hira": "あおば",
+    "han": "XANH LÁ",
+    "nghia": "Lá xanh"
+  },
+  {
+    "kanji": "紅葉",
+    "hira": "もみじ",
+    "han": "HỒNG LÁ",
+    "nghia": "Lá đỏ"
+  },
+  {
+    "kanji": "落ち葉",
+    "hira": "おちば",
+    "han": "LẠC  LÁ",
+    "nghia": "Lá rụng"
+  },
+  {
+    "kanji": "朽葉",
+    "hira": "くちば",
+    "han": "HIỂU LÁ",
+    "nghia": "Lá mục"
+  },
+  {
+    "kanji": "枯れ葉",
+    "hira": "かれは",
+    "han": "KHU  LÁ",
+    "nghia": "Lá khô"
+  },
+  {
+    "kanji": "枯れ葉剤",
+    "hira": "かれはざい",
+    "han": "KHU  LÁ TỄ",
+    "nghia": "Chất làm trụi lá, chất diệt cỏ"
+  },
+  {
+    "kanji": "蕾",
+    "hira": "つぼみ",
+    "han": "LÊ",
+    "nghia": "Nụ hoa"
+  },
+  {
+    "kanji": "つぼみが出る",
+    "hira": "つぼみがでる",
+    "han": "XUẤT",
+    "nghia": "Trổ nụ"
+  },
+  {
+    "kanji": "刺・棘",
+    "hira": "とげ",
+    "han": "THI  CẤC",
+    "nghia": "Gai (thực vật)"
+  },
+  {
+    "kanji": "実",
+    "hira": "み",
+    "han": "THỰC",
+    "nghia": "Quả, trái"
+  },
+  {
+    "kanji": "実がなる",
+    "hira": "みがなる",
+    "han": "THỰC",
+    "nghia": "Ra trái"
+  },
+  {
+    "kanji": "実のならない木",
+    "hira": "みのならないき",
+    "han": "THỰC      MỘC",
+    "nghia": "Cây thuộc loại không ra trái"
+  },
+  {
+    "kanji": "苗",
+    "hira": "なえ",
+    "han": "MIÊU",
+    "nghia": "Mạ, cây con để làm cây giống, cây ươm (Dùng cho tất cả các cây con của các loài thực vật)"
+  },
+  {
+    "kanji": "トマトの苗",
+    "hira": "",
+    "han": "MIÊU",
+    "nghia": "Cây cà chua con."
+  },
+  {
+    "kanji": "苗木",
+    "hira": "なえぎ",
+    "han": "MIÊU MỘC",
+    "nghia": "Cây giống, vườn ươm"
+  },
+  {
+    "kanji": "木",
+    "hira": "き",
+    "han": "MỘC",
+    "nghia": "Cây"
+  },
+  {
+    "kanji": "木を切る",
+    "hira": "きをきる",
+    "han": "MỘC  THIẾT",
+    "nghia": "Đốn cây"
+  },
+  {
+    "kanji": "木に登る",
+    "hira": "きにのぼる",
+    "han": "MỘC  ĐĂNG",
+    "nghia": "Trèo cây"
+  },
+  {
+    "kanji": "木を植える",
+    "hira": "きをうえる",
+    "han": "MỘC  THỰC",
+    "nghia": "trồng cây"
+  },
+  {
+    "kanji": "木の机",
+    "hira": "きのつくえ",
+    "han": "MỘC  KĨ",
+    "nghia": "Cái bàn bằng gỗ"
+  },
+  {
+    "kanji": "幹",
+    "hira": "みき",
+    "han": "GÂM",
+    "nghia": "Thân cây"
+  },
+  {
+    "kanji": "樹皮",
+    "hira": "じゅひ",
+    "han": "THỤ BÌ",
+    "nghia": "Vỏ cây"
+  },
+  {
+    "kanji": "樹皮をはぐ",
+    "hira": "ていぼく",
+    "han": "THỤ BÌ",
+    "nghia": "Lột vỏ cây"
+  },
+  {
+    "kanji": "低木",
+    "hira": "ていきゅう",
+    "han": "THẤP MỘC",
+    "nghia": "Cây thấp, cây bụi"
+  },
+  {
+    "kanji": "高木",
+    "hira": "こうぼく",
+    "han": "CAO MỘC",
+    "nghia": "Cây cao"
+  },
+  {
+    "kanji": "大木",
+    "hira": "たいぼく",
+    "han": "ĐẠI MỘC",
+    "nghia": "Cây lớn"
+  },
+  {
+    "kanji": "常緑樹",
+    "hira": "じょうりょくじゅ",
+    "han": "THƯỜNG LỤC THỤ",
+    "nghia": "Cây xanh quanh năm không rụng lá"
+  },
+  {
+    "kanji": "老木",
+    "hira": "ろうぼく",
+    "han": "LÃO MỘC",
+    "nghia": "Cây già"
+  },
+  {
+    "kanji": "稲穂",
+    "hira": "いなほ",
+    "han": "ĐIỆU SƯỢ",
+    "nghia": "Đòng"
+  },
+  {
+    "kanji": "稲穂が出ている",
+    "hira": "",
+    "han": "ĐIỆU SƯỢ  XUẤT",
+    "nghia": "Lúa đang trổ đòng"
+  },
+  {
+    "kanji": "牧草",
+    "hira": "ぼくそう",
+    "han": "MỤC THẢO",
+    "nghia": "Cỏ cho gia súc, cỏ dùng cho chăn nuôi"
+  },
+  {
+    "kanji": "牧草地",
+    "hira": "ぼくそうち",
+    "han": "MỤC THẢO ĐỊA",
+    "nghia": "Đồng cỏ dành cho gia súc"
+  },
+  {
+    "kanji": "野菜",
+    "hira": "やさい",
+    "han": "Dã THÁI",
+    "nghia": "Rau"
+  },
+  {
+    "kanji": "生野菜",
+    "hira": "せいやさい",
+    "han": "SINH Dã THÁI",
+    "nghia": "Rau sống"
+  },
+  {
+    "kanji": "野菜いため",
+    "hira": "やさいいため",
+    "han": "Dã THÁI",
+    "nghia": "Món rau xào"
+  },
+  {
+    "kanji": "野菜サラダ",
+    "hira": "やさいサラダ",
+    "han": "Dã THÁI",
+    "nghia": "Sà lát rau"
+  },
+  {
+    "kanji": "野菜畑",
+    "hira": "やさいはたけ",
+    "han": "Dã THÁI GIANG",
+    "nghia": "Vườn rau"
+  },
+  {
+    "kanji": "芝生",
+    "hira": "しばふ",
+    "han": "CHI SINH",
+    "nghia": "Bãi cỏ"
+  },
+  {
+    "kanji": "芝生を刈る",
+    "hira": "しばふをかる",
+    "han": "CHI SINH  KAI",
+    "nghia": "Cắt cỏ"
+  },
+  {
+    "kanji": "植える",
+    "hira": "うえる",
+    "han": "THỰC",
+    "nghia": "trồng"
+  },
+  {
+    "kanji": "栽培",
+    "hira": "さいばい",
+    "han": "TẢI BỒI",
+    "nghia": "Trồng"
+  },
+  {
+    "kanji": "コーヒー栽培",
+    "hira": "コーヒーさいばい",
+    "han": "TẢI BỒI",
+    "nghia": "Trồng cà phê"
+  },
+  {
+    "kanji": "温室栽培する",
+    "hira": "おんしつさいばいする",
+    "han": "ÔN THẤT TẢI BỒI",
+    "nghia": "Trồng cây trong nhà"
+  },
+  {
+    "kanji": "水耕栽培",
+    "hira": "すいこうさいばい",
+    "han": "THỦY CANH TẢI BỒI",
+    "nghia": "Trồng thủy canh"
+  },
+  {
+    "kanji": "芽生え",
+    "hira": "めばえ",
+    "han": "GIA SINH",
+    "nghia": "Sự mọc mầm, sự nảy mầm"
+  },
+  {
+    "kanji": "芽吹く",
+    "hira": "めぶく",
+    "han": "GIA THỔI",
+    "nghia": "Nảy mầm"
+  },
+  {
+    "kanji": "根付く",
+    "hira": "ねづく",
+    "han": "CÂN PHÓ",
+    "nghia": "Mọc rễ"
+  },
+  {
+    "kanji": "咲く",
+    "hira": "さく",
+    "han": "TỬ",
+    "nghia": "Nở"
+  },
+  {
+    "kanji": "実る",
+    "hira": "みのる",
+    "han": "THỰC",
+    "nghia": "Ra trái, kết trái, có quả"
+  },
+  {
+    "kanji": "完熟",
+    "hira": "かんじゅく",
+    "han": "HOÀN THỤC",
+    "nghia": "Chín"
+  },
+  {
+    "kanji": "半熟",
+    "hira": "はんじゅく",
+    "han": "BÁN THỤC",
+    "nghia": "Nửa sống nửa chín"
+  },
+  {
+    "kanji": "生える",
+    "hira": "はえる",
+    "han": "SINH",
+    "nghia": "Mọc"
+  },
+  {
+    "kanji": "根が生える",
+    "hira": "たねがうえる",
+    "han": "CÂN  SINH",
+    "nghia": "Mọc rễ"
+  },
+  {
+    "kanji": "野生植物",
+    "hira": "やせいしょくぶつ",
+    "han": "Dã SINH THỰC VẬT",
+    "nghia": "Thực vật hoang dã"
+  },
+  {
+    "kanji": "草深い",
+    "hira": "くさぶかい",
+    "han": "THẢO THÂM",
+    "nghia": "Đầy cỏ"
+  },
+  {
+    "kanji": "草深い野原",
+    "hira": "くさふかいのはら",
+    "han": "THẢO THÂM  Dã NGUYÊN",
+    "nghia": "Vùng đất hoang đầy cỏ mọc"
+  },
+  {
+    "kanji": "茂る・繁る",
+    "hira": "しげる",
+    "han": "MAO   PHIÊN",
+    "nghia": "Mọc rậm rạp, mọc um tùm"
+  },
+  {
+    "kanji": "木の茂る山腹",
+    "hira": "きのしげるさんぷく",
+    "han": "MỘC  MAO  SƠN PHÚC",
+    "nghia": "Sườn núi cây cối um tùm"
+  },
+  {
+    "kanji": "よく茂る森",
+    "hira": "よくしげもり",
+    "han": "MAO  TẦM",
+    "nghia": "Rừng cây mọc"
+  },
+  {
+    "kanji": "林",
+    "hira": "はやし",
+    "han": "LÂM",
+    "nghia": "Đám rừng, đám cây"
+  },
+  {
+    "kanji": "森",
+    "hira": "もり",
+    "han": "TẦM",
+    "nghia": "Rừng"
+  },
+  {
+    "kanji": "雑木林",
+    "hira": "ぞうきばや",
+    "han": "TẠP MỘC LÂM",
+    "nghia": "Rừng tạp"
+  },
+  {
+    "kanji": "密林",
+    "hira": "みつりん",
+    "han": "MẬT LÂM",
+    "nghia": "Rừng rậm"
+  },
+  {
+    "kanji": "茂み・繁み",
+    "hira": "しげみ",
+    "han": "MAO   PHIÊN",
+    "nghia": "Bụi rậm"
+  },
+  {
+    "kanji": "枯れる",
+    "hira": "かれる",
+    "han": "KHU",
+    "nghia": "Héo"
+  },
+  {
+    "kanji": "枯れた葉",
+    "hira": "かれたは",
+    "han": "KHU   LÁ",
+    "nghia": "Lá bị héo"
+  },
+  {
+    "kanji": "",
+    "hira": "飼う",
+    "han": "",
+    "nghia": "Chăn nuôi"
+  },
+  {
+    "kanji": "家禽",
+    "hira": "かきん",
+    "han": "GIA KINH",
+    "nghia": "Gia cầm"
+  },
+  {
+    "kanji": "畜産",
+    "hira": "ちくさん",
+    "han": "XÚC SẢN",
+    "nghia": "Gia súc"
+  },
+  {
+    "kanji": "飼育する",
+    "hira": "しいくする",
+    "han": "TỰ DỤC",
+    "nghia": "Chăn nuôi"
+  },
+  {
+    "kanji": "畜産業",
+    "hira": "ちくさんぎょう",
+    "han": "XÚC SẢN NGHIỆP",
+    "nghia": "Công nghiệp chăn nuôi Gia súc"
+  },
+  {
+    "kanji": "農林規格",
+    "hira": "にほんのうりんきかく",
+    "han": "NÔNG LÂM QUY CÁCH",
+    "nghia": "Tiêu chuẩn nông nghiệp Nhật Bản"
+  },
+  {
+    "kanji": "農業",
+    "hira": "のうぎょう",
+    "han": "NÔNG NGHIỆP",
+    "nghia": "làm nông nghiệp"
+  },
+  {
+    "kanji": "農産",
+    "hira": "のうさん",
+    "han": "NÔNG SẢN",
+    "nghia": "nông sản"
+  },
+  {
+    "kanji": "培養",
+    "hira": "ばいよう",
+    "han": "BỒI DƯỠNG",
+    "nghia": "nuôi cấy"
+  },
+  {
+    "kanji": "養鶏",
+    "hira": "ようけい",
+    "han": "DƯỠNG KÊ",
+    "nghia": "nuôi gà"
+  },
+  {
+    "kanji": "育てる",
+    "hira": "そだてる",
+    "han": "DỤC",
+    "nghia": "nuôi lớn"
+  },
+  {
+    "kanji": "養蚕",
+    "hira": "ようさん",
+    "han": "DƯỠNG TAN",
+    "nghia": "nuôi tằm"
+  },
+  {
+    "kanji": "飼育",
+    "hira": "しいく",
+    "han": "TỰ DỤC",
+    "nghia": "nuôi trồng"
+  },
+  {
+    "kanji": "肥やす",
+    "hira": "こやす",
+    "han": "PHÌ",
+    "nghia": "nuôi béo"
+  },
+  {
+    "kanji": "生産施設",
+    "hira": "せいさんしせつ",
+    "han": "SINH SẢN THI THIẾT",
+    "nghia": "nông trang"
+  },
+  {
+    "kanji": "",
+    "hira": "コルホーズ",
+    "han": "",
+    "nghia": "nông trang tập thể"
+  },
+  {
+    "kanji": "農場",
+    "hira": "のうじょう",
+    "han": "NÔNG TRÀNG",
+    "nghia": "nông trường"
+  },
+  {
+    "kanji": "国営農場",
+    "hira": "こくえいのうじょう",
+    "han": "QUỐC YÊN NÔNG TRÀNG",
+    "nghia": "nông trường quốc doanh"
+  },
+  {
+    "kanji": "集団農場",
+    "hira": "しゅうだんのうじょう",
+    "han": "TẬP ĐOÀN NÔNG TRÀNG",
+    "nghia": "nông trường tập thể"
+  },
+  {
+    "kanji": "農園",
+    "hira": "のうえん",
+    "han": "NÔNG VIÊN",
+    "nghia": "trang trại"
+  },
+  {
+    "kanji": "小屋",
+    "hira": "こや",
+    "han": "TIỂU ỐC",
+    "nghia": "chuồng"
+  },
+  {
+    "kanji": "豚小屋",
+    "hira": "ぶたこや",
+    "han": "TON TIỂU ỐC",
+    "nghia": "chuồng lợn"
+  },
+  {
+    "kanji": "牛小屋",
+    "hira": "うしごや",
+    "han": "NGÂU TIỂU ỐC",
+    "nghia": "chuồng bò"
+  },
+  {
+    "kanji": "鳩小屋",
+    "hira": "はとごや",
+    "han": "KIU TIỂU ỐC",
+    "nghia": "chuồng bồ câu"
+  },
+  {
+    "kanji": "鳥小屋",
+    "hira": "とりごや",
+    "han": "ĐỊA TIỂU ỐC",
+    "nghia": "chuồng chim"
+  },
+  {
+    "kanji": "羊小屋",
+    "hira": "ひつじごや",
+    "han": "DƯƠNG TIỂU ỐC",
+    "nghia": "chuồng cừu"
+  },
+  {
+    "kanji": "鶏舎",
+    "hira": "けいしゃ",
+    "han": "KÊ SẢ",
+    "nghia": "chuồng gà"
+  },
+  {
+    "kanji": "ブロイラー鶏舎",
+    "hira": "ブロイラーけいしゃ",
+    "han": "KÊ SẢ",
+    "nghia": "chuồng gà công nghiệp"
+  },
+  {
+    "kanji": "馬小屋",
+    "hira": "うまごや",
+    "han": "MA TIỂU ỐC",
+    "nghia": "chuồng ngựa"
+  },
+  {
+    "kanji": "水牛舎",
+    "hira": "すいぎゅうしゃ",
+    "han": "THỦY NGÂU SẢ",
+    "nghia": "chuồng trâu"
+  },
+  {
+    "kanji": "販路",
+    "hira": "はんろ",
+    "han": "PHẢN LỘ",
+    "nghia": "thị trường tiêu thụ"
+  },
+  {
+    "kanji": "判断基準",
+    "hira": "はんだんきじゅん",
+    "han": "PHẢN ĐOẠN CỠ CHUẨN",
+    "nghia": "tiêu chuẩn đánh giá"
+  },
+  {
+    "kanji": "食品",
+    "hira": "しょくひん",
+    "han": "THỰC PHẨM",
+    "nghia": "thực phẩm"
+  },
+  {
+    "kanji": "",
+    "hira": "おけ",
+    "han": "",
+    "nghia": "máng (ăn)"
+  },
+  {
+    "kanji": "養鶏飼料",
+    "hira": "ようけいしりょう",
+    "han": "DƯỠNG KÊ TỰ LIÊU",
+    "nghia": "thức ăn cho gà"
+  },
+  {
+    "kanji": "飼料",
+    "hira": "しりょう",
+    "han": "TỰ LIÊU",
+    "nghia": "thức ăn cho gia súc"
+  },
+  {
+    "kanji": "アルカリ性食品",
+    "hira": "アルカリせいしょくひ",
+    "han": "TÍNH THỰC PHẨM",
+    "nghia": "thức ăn có kiềm"
+  },
+  {
+    "kanji": "川魚",
+    "hira": "たんすいぎょ",
+    "han": "THỦY NGƯ",
+    "nghia": "cá nước ngọt"
+  },
+  {
+    "kanji": "塩水魚",
+    "hira": "しおみずさかな",
+    "han": "IỀN THỦY NGƯ",
+    "nghia": "cá nước mặn"
+  },
+  {
+    "kanji": "漁場",
+    "hira": "ぎょじょう",
+    "han": "NGƯ TRÀNG",
+    "nghia": "ngư trường"
+  },
+  {
+    "kanji": "水産業",
+    "hira": "すいさんぎょう",
+    "han": "THỦY SẢN NGHIỆP",
+    "nghia": "nuôi trồng thủy sản"
+  },
+  {
+    "kanji": "未開発水域における養殖漁業",
+    "hira": "みかいはつすいいきにおけるようしょくぎょぎょう",
+    "han": "WEI KHAI PHÁT THỦY VỰC     DƯỠNG TRIỂN NGƯ NGHIỆP",
+    "nghia": "nuôi trồng thủy sản ở vùng chưa được khai thác"
+  },
+  {
+    "kanji": "漁獲",
+    "hira": "ぎょかく",
+    "han": "NGƯ HOẶC",
+    "nghia": "đánh bắt cá"
+  },
+  {
+    "kanji": "注射する",
+    "hira": "ちゅうしゃ",
+    "han": "CHỦ SẠT",
+    "nghia": "tiêm"
+  },
+  {
+    "kanji": "農芸化学",
+    "hira": "のうげいかがく",
+    "han": "NÔNG NGHỆ HÓA HỌC",
+    "nghia": "hóa học nông nghiệp"
+  },
+  {
+    "kanji": "",
+    "hira": "インフルエンザ",
+    "han": "",
+    "nghia": "cúm"
+  },
+  {
+    "kanji": "鳥インフルエンザ",
+    "hira": "とりいんふるえんざ",
+    "han": "ĐỊA",
+    "nghia": "cúm gà"
+  },
+  {
+    "kanji": "家禽インフルエンザ",
+    "hira": "かきんインフルエンザ",
+    "han": "GIA KINH",
+    "nghia": "Cúm gia cầm"
+  },
+  {
+    "kanji": "予防接種",
+    "hira": "よぼうせっしゅ",
+    "han": "DỰ PHÒNG TIẾP CHỦNG",
+    "nghia": "tiêm phòng dịch"
+  },
+  {
+    "kanji": "背丈",
+    "hira": "せたけ",
+    "han": "BẠC TRƯỢNG",
+    "nghia": "chiều cao cơ thể"
+  },
+  {
+    "kanji": "中背",
+    "hira": "ちゅうぜい",
+    "han": "TRUNG BẠC",
+    "nghia": "chiều cao trung bình"
+  },
+  {
+    "kanji": "丈",
+    "hira": "たけ",
+    "han": "TRƯỢNG",
+    "nghia": "chiều dài"
+  },
+  {
+    "kanji": "体長",
+    "hira": "たいちょう",
+    "han": "THỂ TRƯỜNG",
+    "nghia": "chiều dài của cơ thể"
+  },
+  {
+    "kanji": "毛脚",
+    "hira": "けあし",
+    "han": "MAO CƯỚC",
+    "nghia": "chiều dài của lông"
+  },
+  {
+    "kanji": "重量",
+    "hira": "じゅうりょう",
+    "han": "TRỌNG LƯỢNG",
+    "nghia": "trọng lượng"
+  }
+]

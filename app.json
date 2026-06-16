@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "assetBundlePatterns": ["assets/**/*"],
+    "name": "Mirai.JP",
+    "slug": "mirai-jp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    //"icon": "./assets/images_icon/App_Icon.png", //Biểu tượng ứng dụng (App Icon) hiển thị app
+    "icon": "./assets/images_icon/Icon_loading.png", //Màn hình Splash (Chào) khi khởi động ứng dụng 
+    "scheme": "mirai-jp",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "com.miraijp.app",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "com.miraijp.app",
+      "permissions": ["android.permission.INTERNET"]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          // "image": "./assets/images_icon/Icon_loading.png", //Màn hình Splash (Chào) khi khởi động ứng dụng 
+          "image": "./assets/images_icon/App_Icon.png", //Biểu tượng ứng dụng (App Icon) hiển thị app
+
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2eb4397f-6ee2-4773-af83-7e37f1c0cb71"
+      }
+    }
+  }
+}

@@ -1,0 +1,1514 @@
+[
+  {
+    "stt": 1,
+    "kanji": "足場",
+    "han": "TÚC",
+    "hira": "あしば",
+    "nghia": "Giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 2,
+    "kanji": "ジョイント金具",
+    "han": "",
+    "hira": "じょいんとかなぐ",
+    "nghia": "Khớp kim loại kết nối ống thép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 3,
+    "kanji": "",
+    "han": "",
+    "hira": "ジャッキベース",
+    "nghia": "thanh cố định ở chân giàn dáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 4,
+    "kanji": "手摺",
+    "han": "THỦ",
+    "hira": "てすり",
+    "nghia": "lan can, chấn song",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 5,
+    "kanji": "梃子棒",
+    "han": "",
+    "hira": "てこぼう",
+    "nghia": "Đòn bẩy",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 6,
+    "kanji": "",
+    "han": "",
+    "hira": "たてかた",
+    "nghia": "Lắp dựng khung sườn kết cấu giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 7,
+    "kanji": "足場板",
+    "han": "TÚC",
+    "hira": "あしばいた",
+    "nghia": "Tấm ván giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 8,
+    "kanji": "鉄鋼増",
+    "han": "",
+    "hira": "てっこうぞう",
+    "nghia": "Kết cấu thép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 9,
+    "kanji": "支柱",
+    "han": "",
+    "hira": "しちゅう",
+    "nghia": "Trụ đỡ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 10,
+    "kanji": "A型足場",
+    "han": "TÚC",
+    "hira": "きたあしば",
+    "nghia": "Giàn giáo chữ A",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 11,
+    "kanji": "",
+    "han": "",
+    "hira": "ブレース",
+    "nghia": "Vật liệu gắn giữa cột giúp tăng độ chắc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 12,
+    "kanji": "柱",
+    "han": "",
+    "hira": "はしら",
+    "nghia": "Cột trụ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 13,
+    "kanji": "踏板",
+    "han": "",
+    "hira": "ふみいた",
+    "nghia": "Tấm giẫm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 14,
+    "kanji": "筋交",
+    "han": "",
+    "hira": "すじかい",
+    "nghia": "thanh để chằng chéo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 15,
+    "kanji": "",
+    "han": "",
+    "hira": "クレーン",
+    "nghia": "Cần cẩu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 16,
+    "kanji": "水平器",
+    "han": "THỦY",
+    "hira": "すいへいき",
+    "nghia": "Thước thăng bằng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 17,
+    "kanji": "",
+    "han": "",
+    "hira": "くさび足場",
+    "nghia": "chốt gym dàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 18,
+    "kanji": "",
+    "han": "",
+    "hira": "しもやようアンダベース",
+    "nghia": "tấm đỡ dưới chân dàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 19,
+    "kanji": "張り出しブラケット",
+    "han": "",
+    "hira": "はりだしブラケット",
+    "nghia": "khung giá đỡ treo, nối",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 20,
+    "kanji": "鋼鉄の木",
+    "han": "",
+    "hira": "こてつのき",
+    "nghia": "Cây chống thép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 21,
+    "kanji": "足場を増やす",
+    "han": "TÚC",
+    "hira": "あしばをふやす",
+    "nghia": "Kích tăng giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 22,
+    "kanji": "",
+    "han": "",
+    "hira": "トラス",
+    "nghia": "Xà ngang",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 23,
+    "kanji": "足場板",
+    "han": "TÚC",
+    "hira": "あしばいた",
+    "nghia": "tấm dàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 24,
+    "kanji": "",
+    "han": "",
+    "hira": "",
+    "nghia": "Thanh rào chắn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 25,
+    "kanji": "番線(ばんせん)カッター",
+    "han": "TUYẾN",
+    "hira": "ばんせんカッター",
+    "nghia": "Kìm cắt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 26,
+    "kanji": "安全帯(あんぜんたい)",
+    "han": "",
+    "hira": "あんぜんたい",
+    "nghia": "Dây an toàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 27,
+    "kanji": "小幅ネット",
+    "han": "",
+    "hira": "こはばねっと",
+    "nghia": "Lưới an toàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 28,
+    "kanji": "",
+    "han": "",
+    "hira": "コッパ建設",
+    "nghia": "Coppha xây dựng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 29,
+    "kanji": "",
+    "han": "",
+    "hira": "モンキーレンチ",
+    "nghia": "cơ lê, mỏ lết",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 30,
+    "kanji": "床支持柱",
+    "han": "",
+    "hira": "",
+    "nghia": "Cột chống sàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 31,
+    "kanji": "",
+    "han": "",
+    "hira": "スケール",
+    "nghia": "Thước dây",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 32,
+    "kanji": "昇降設備",
+    "han": "",
+    "hira": "しょうこうせつび",
+    "nghia": "Thiết bị nâng hạ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 33,
+    "kanji": "",
+    "han": "",
+    "hira": "ハンマー",
+    "nghia": "Búa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 34,
+    "kanji": "",
+    "han": "",
+    "hira": "ヘルメット",
+    "nghia": "Mũ bảo hộ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 35,
+    "kanji": "",
+    "han": "",
+    "hira": "ペンチ",
+    "nghia": "Kìm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 36,
+    "kanji": "",
+    "han": "",
+    "hira": "コーン",
+    "nghia": "Trụ bảo vệ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 37,
+    "kanji": "手袋",
+    "han": "THỦ",
+    "hira": "てぶくろ",
+    "nghia": "Gang tay",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 38,
+    "kanji": "",
+    "han": "",
+    "hira": "ジョイント",
+    "nghia": "khớp lối",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 39,
+    "kanji": "",
+    "han": "",
+    "hira": "つりパレット",
+    "nghia": "Giỏ đựng dụng cụ nâng lên cao",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 40,
+    "kanji": "遣らず控え",
+    "han": "",
+    "hira": "やらずひかえ",
+    "nghia": "Sự chống đỡ để giàn giáo không bị đổ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 41,
+    "kanji": "作業服",
+    "han": "NGHIỆP",
+    "hira": "さぎょうふく",
+    "nghia": "Áo bảo hộ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 42,
+    "kanji": "鉄骨クランプ",
+    "han": "",
+    "hira": "てっこつクランプ",
+    "nghia": "Kẹp ống",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 43,
+    "kanji": "登り桟橋",
+    "han": "",
+    "hira": "のぼりさんばし",
+    "nghia": "Lối đi lên xuống của giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 44,
+    "kanji": "安全足袋",
+    "han": "TÚC",
+    "hira": "あんぜんたび",
+    "nghia": "Giày bảo hộ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 45,
+    "kanji": "",
+    "han": "",
+    "hira": "ウインチ",
+    "nghia": "Tời, trục cuộn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 46,
+    "kanji": "結束",
+    "han": "",
+    "hira": "けっそく",
+    "nghia": "Gắn lại, liên kết",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 47,
+    "kanji": "麻ロープ",
+    "han": "",
+    "hira": "あさろーぷ",
+    "nghia": "Dây thừng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 48,
+    "kanji": "",
+    "han": "",
+    "hira": "あうとりが",
+    "nghia": "Giá chìa giúp cần trục không lật ngang",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 49,
+    "kanji": "",
+    "han": "",
+    "hira": "インパクト",
+    "nghia": "Máy bắn vít (khoan tay)",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 50,
+    "kanji": "隙間",
+    "han": "",
+    "hira": "すきま",
+    "nghia": "Khe hở",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 51,
+    "kanji": "脚立",
+    "han": "",
+    "hira": "きゃたつ",
+    "nghia": "Thang gấp có bậc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 52,
+    "kanji": "固定ベース",
+    "han": "",
+    "hira": "こていべーす",
+    "nghia": "Bộ phận cố định",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 53,
+    "kanji": "",
+    "han": "",
+    "hira": "ぼうあんシート",
+    "nghia": "Tấm bạt chống ồn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 54,
+    "kanji": "交換足場",
+    "han": "HOÁN TÚC",
+    "hira": "こうかんあしば",
+    "nghia": "Giàn giáo bằng ống thép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 55,
+    "kanji": "",
+    "han": "",
+    "hira": "コーンバー",
+    "nghia": "thanh chắn đường",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 56,
+    "kanji": "丸太足場",
+    "han": "TÚC",
+    "hira": "まるたあしば",
+    "nghia": "Giàn giáo dựng bằng gỗ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 57,
+    "kanji": "壁つなぎ",
+    "han": "",
+    "hira": "かべつなぎ",
+    "nghia": "Thanh câu ở tường",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 58,
+    "kanji": "",
+    "han": "",
+    "hira": "ひうちざいパイプ",
+    "nghia": "Tuýp đơn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 59,
+    "kanji": "",
+    "han": "",
+    "hira": "カードフェンス",
+    "nghia": "Tấm chắn xung quanh công trường",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 60,
+    "kanji": "交差す次回",
+    "han": "",
+    "hira": "こうさすじかい",
+    "nghia": "Thanh chống chéo, giằng chéo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 61,
+    "kanji": "",
+    "han": "",
+    "hira": "カラーコーン",
+    "nghia": "vật dùng để chắn khi làm việc hình chóp nón",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 62,
+    "kanji": "移動式足場",
+    "han": "TÚC",
+    "hira": "いどうしきあしば",
+    "nghia": "Giàn giáo di động, di chuyển",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 63,
+    "kanji": "短観足場",
+    "han": "TÚC",
+    "hira": "まるたあしば",
+    "nghia": "Giàn giáo ống",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 64,
+    "kanji": "",
+    "han": "",
+    "hira": "ざいジャッキベース",
+    "nghia": "trụ ống Đế có thể chỉnh cao thấp và độ nghiêng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 65,
+    "kanji": "敷板",
+    "han": "",
+    "hira": "しきいた",
+    "nghia": "Bản đệm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 66,
+    "kanji": "",
+    "han": "",
+    "hira": "タイガーベース",
+    "nghia": "Đế lót chân giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 67,
+    "kanji": "",
+    "han": "",
+    "hira": "",
+    "nghia": "Khóa 3 ngạnh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 68,
+    "kanji": "",
+    "han": "",
+    "hira": "アームロック",
+    "nghia": "Cái khóa để gắn chặt khuôn của 2 giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 69,
+    "kanji": "",
+    "han": "",
+    "hira": "キャプチャロック",
+    "nghia": "Khóa chụp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 70,
+    "kanji": "",
+    "han": "",
+    "hira": "ラチエット",
+    "nghia": "Tròng vặn ốc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 71,
+    "kanji": "",
+    "han": "",
+    "hira": "きそいし",
+    "nghia": "Miếng đá dưới chân giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 72,
+    "kanji": "",
+    "han": "",
+    "hira": "しの",
+    "nghia": "Cái móc xoắn buộc sắt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 73,
+    "kanji": "",
+    "han": "",
+    "hira": "ガラぶくろ",
+    "nghia": "Bao đựng các loại kẹp gỗ, phế liệu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 74,
+    "kanji": "",
+    "han": "",
+    "hira": "シートひも",
+    "nghia": "Dây buộc bạt, lưới",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 75,
+    "kanji": "",
+    "han": "",
+    "hira": "パイプジョイント",
+    "nghia": "Chốt nối ống giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 76,
+    "kanji": "",
+    "han": "",
+    "hira": "バケツ",
+    "nghia": "Xô",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 77,
+    "kanji": "",
+    "han": "",
+    "hira": "そうかんネット",
+    "nghia": "Lưới che để tránh đồ rơi xuống",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 78,
+    "kanji": "",
+    "han": "",
+    "hira": "ホース",
+    "nghia": "Vòi nước",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 79,
+    "kanji": "",
+    "han": "",
+    "hira": "メッシュシート",
+    "nghia": "Lưới che công trường",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 80,
+    "kanji": "",
+    "han": "",
+    "hira": "さんうぬクランプ",
+    "nghia": "Khóa 3 ngạnh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 81,
+    "kanji": "足場車輪",
+    "han": "TÚC  XA LUÂN",
+    "hira": "",
+    "nghia": "Banh xe giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 82,
+    "kanji": "",
+    "han": "",
+    "hira": "ワイヤー",
+    "nghia": "Dây kim loại",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 83,
+    "kanji": "補助スタンド",
+    "han": "TRỢ",
+    "hira": "",
+    "nghia": "Chân chống phụ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 84,
+    "kanji": "足場ロック",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "Khóa giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 85,
+    "kanji": "",
+    "han": "",
+    "hira": "アルミ足場",
+    "nghia": "Giàn giáo nhôm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 86,
+    "kanji": "足場の手すり",
+    "han": "TÚC   THỦ",
+    "hira": "",
+    "nghia": "Lan can giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 87,
+    "kanji": "足場ブレースチューブ",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "ống giằng giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 88,
+    "kanji": "",
+    "han": "",
+    "hira": "スケール=メジャー",
+    "nghia": "Thước đo (dây)",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 89,
+    "kanji": "",
+    "han": "",
+    "hira": "いちりんしゃ",
+    "nghia": "Xe rùa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 90,
+    "kanji": "",
+    "han": "",
+    "hira": "ハンドリフト",
+    "nghia": "Xe nâng đồ bằng tay",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 91,
+    "kanji": "吊り足場",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "Giàn giáo treo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 92,
+    "kanji": "",
+    "han": "",
+    "hira": "カゴ",
+    "nghia": "giỏ, khay đực đồ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 93,
+    "kanji": "車輪",
+    "han": "XA LUÂN",
+    "hira": "",
+    "nghia": "Bánh xe",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 94,
+    "kanji": "",
+    "han": "",
+    "hira": "ウインチ",
+    "nghia": "cái tời",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 95,
+    "kanji": "",
+    "han": "",
+    "hira": "フィルムコート板",
+    "nghia": "Ván phủ phim",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 96,
+    "kanji": "",
+    "han": "",
+    "hira": "ドリルきり=ドリルのは",
+    "nghia": "Mũi khoan",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 97,
+    "kanji": "",
+    "han": "",
+    "hira": "スクリューマシン",
+    "nghia": "Máy bắn vít",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 98,
+    "kanji": "",
+    "han": "",
+    "hira": "クロスブレーシング",
+    "nghia": "Giằng chéo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 99,
+    "kanji": "",
+    "han": "",
+    "hira": "ドリル",
+    "nghia": "mũi khoan bê tông",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 100,
+    "kanji": "",
+    "han": "",
+    "hira": "ワイヤーモッコ",
+    "nghia": "Móc lưới nâng đồ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 101,
+    "kanji": "足場台",
+    "han": "TÚC",
+    "hira": "あしばだい",
+    "nghia": "Đài giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 102,
+    "kanji": "建築鋼材",
+    "han": "",
+    "hira": "けんちくこうざい",
+    "nghia": "Thép giàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 103,
+    "kanji": "足場用アンカー",
+    "han": "TÚC",
+    "hira": "あしばようアンカー",
+    "nghia": "Neo cho giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 104,
+    "kanji": "足場吊りチェーン",
+    "han": "TÚC",
+    "hira": "あしばつりチェーン",
+    "nghia": "Dây xích treo giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 105,
+    "kanji": "",
+    "han": "",
+    "hira": "トーククランプ",
+    "nghia": "Kẹp giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 106,
+    "kanji": "",
+    "han": "",
+    "hira": "ナット",
+    "nghia": "Cái đai ốc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 107,
+    "kanji": "",
+    "han": "",
+    "hira": "ひび",
+    "nghia": "Vết nứt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 108,
+    "kanji": "鉄筋",
+    "han": "",
+    "hira": "てっきん",
+    "nghia": "Cọc sắt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 109,
+    "kanji": "錆",
+    "han": "",
+    "hira": "さび",
+    "nghia": "Rỉ sét",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 110,
+    "kanji": "耐震構造",
+    "han": "",
+    "hira": "たいしんこうぞう",
+    "nghia": "Kết cấu chống động mạnh rung đổ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 111,
+    "kanji": "耐食性",
+    "han": "THỰC",
+    "hira": "たいしょくせい",
+    "nghia": "Tính chống ăn mòn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 112,
+    "kanji": "",
+    "han": "",
+    "hira": "ワックス",
+    "nghia": "Chất sáp đánh bóng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 113,
+    "kanji": "柱",
+    "han": "",
+    "hira": "はしら",
+    "nghia": "Cái cột",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 114,
+    "kanji": "硬度",
+    "han": "",
+    "hira": "こうど",
+    "nghia": "Độ cứng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 115,
+    "kanji": "木ぐい",
+    "han": "",
+    "hira": "きぐい",
+    "nghia": "Cọc gỗ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 116,
+    "kanji": "土台",
+    "han": "THỔ",
+    "hira": "どだい",
+    "nghia": "Nền móng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 117,
+    "kanji": "",
+    "han": "",
+    "hira": "しわ",
+    "nghia": "",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 118,
+    "kanji": "木材",
+    "han": "",
+    "hira": "もくざい",
+    "nghia": "Vật liệu gỗ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 119,
+    "kanji": "釘",
+    "han": "",
+    "hira": "くぎ",
+    "nghia": "Cái đinh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 120,
+    "kanji": "密着",
+    "han": "",
+    "hira": "みっちゃく",
+    "nghia": "Độ gắn chắn, kín khít",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 121,
+    "kanji": "",
+    "han": "",
+    "hira": "ステンレス鋼",
+    "nghia": "Thép không gỉ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 122,
+    "kanji": "木の梁",
+    "han": "",
+    "hira": "",
+    "nghia": "Dầm gỗ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 123,
+    "kanji": "",
+    "han": "",
+    "hira": "ウィンドビーム",
+    "nghia": "Xà chống gió",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 124,
+    "kanji": "複合ビーム",
+    "han": "",
+    "hira": "",
+    "nghia": "Dầm ghép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 125,
+    "kanji": "弾性ビーム",
+    "han": "",
+    "hira": "",
+    "nghia": "Dầm đàn hồi",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 126,
+    "kanji": "勾配",
+    "han": "",
+    "hira": "こうばい",
+    "nghia": "Độ dốc, độ nghiêng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 127,
+    "kanji": "構造材",
+    "han": "",
+    "hira": "こうぞうざい",
+    "nghia": "vật liệu kết cấu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 128,
+    "kanji": "",
+    "han": "",
+    "hira": "ブリキ",
+    "nghia": "thép tấm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 129,
+    "kanji": "",
+    "han": "",
+    "hira": "プラスドライバー",
+    "nghia": "tô vít 4 cạnh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 130,
+    "kanji": "羽柄材",
+    "han": "",
+    "hira": "はがらざい",
+    "nghia": "Vật liệu trợ lực kết cấu nhà ở",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 131,
+    "kanji": "測る",
+    "han": "",
+    "hira": "",
+    "nghia": "Đo đạc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 132,
+    "kanji": "桁",
+    "han": "",
+    "hira": "けた",
+    "nghia": "Xà gỗ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 133,
+    "kanji": "",
+    "han": "",
+    "hira": "えんちょうコード",
+    "nghia": "Dây kéo dài",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 134,
+    "kanji": "足場ベース",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "Chân đế giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 135,
+    "kanji": "足場パイプ",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "Ống giàn giáo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 136,
+    "kanji": "",
+    "han": "",
+    "hira": "スイベルシャックル",
+    "nghia": "Cùm xoay",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 137,
+    "kanji": "固定シャックル",
+    "han": "",
+    "hira": "",
+    "nghia": "Cùm cố định",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 138,
+    "kanji": "",
+    "han": "",
+    "hira": "ハルバードポール",
+    "nghia": "Thanh trụ kích",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 139,
+    "kanji": "",
+    "han": "",
+    "hira": "スタビライザー",
+    "nghia": "Thanh chống đà",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 140,
+    "kanji": "",
+    "han": "",
+    "hira": "ディスク足場",
+    "nghia": "Giàn giáo đĩa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 141,
+    "kanji": "油圧足場",
+    "han": "DU ÁP TÚC",
+    "hira": "",
+    "nghia": "Giàn giáo thủy lực",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 142,
+    "kanji": "足場の仲間",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "Giàn giáo Pal",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 143,
+    "kanji": "",
+    "han": "",
+    "hira": "アンチコンソール",
+    "nghia": "Chống consol",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 144,
+    "kanji": "",
+    "han": "",
+    "hira": "アンチオブリーク",
+    "nghia": "Chống xiên",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 145,
+    "kanji": "亜鉛メッキ足場",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "Giàn giáo mạ kẽm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 146,
+    "kanji": "塗装足場",
+    "han": "TÚC",
+    "hira": "",
+    "nghia": "Giàn giáo sơn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 147,
+    "kanji": "",
+    "han": "",
+    "hira": "リングロック足場",
+    "nghia": "Giàn giáo khóa vòng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 148,
+    "kanji": "",
+    "han": "",
+    "hira": "はしご",
+    "nghia": "Thang leo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 149,
+    "kanji": "",
+    "han": "",
+    "hira": "サイズが大きくなりました",
+    "nghia": "Kích thước tăng lên",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 150,
+    "kanji": "",
+    "han": "",
+    "hira": "プラットホーム",
+    "nghia": "Nền đất",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 151,
+    "kanji": "現場",
+    "han": "",
+    "hira": "",
+    "nghia": "Công trường",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 152,
+    "kanji": "",
+    "han": "",
+    "hira": "モニタリング",
+    "nghia": "Giám sát",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 153,
+    "kanji": "介錯口ープ",
+    "han": "GIỚI  KHẨU",
+    "hira": "かいしゃくロープ",
+    "nghia": "Dây cáp phụ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 154,
+    "kanji": "",
+    "han": "",
+    "hira": "めち= 目地",
+    "nghia": "Chỗ tiếp nối",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 155,
+    "kanji": "危険",
+    "han": "",
+    "hira": "",
+    "nghia": "Sự nguy hiểm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 156,
+    "kanji": "曲がり",
+    "han": "",
+    "hira": "",
+    "nghia": "Cong, vẹo, chỗ vòng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 157,
+    "kanji": "鋼製型枠",
+    "han": "",
+    "hira": "",
+    "nghia": "Cốp pha thép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 158,
+    "kanji": "壁型枠",
+    "han": "",
+    "hira": "",
+    "nghia": "Cốp pha vách",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 159,
+    "kanji": "",
+    "han": "",
+    "hira": "クランプボウル",
+    "nghia": "Cái kẹp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 160,
+    "kanji": "",
+    "han": "",
+    "hira": "フェルールチューブ",
+    "nghia": "Ống sắt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 161,
+    "kanji": "耳留めリング",
+    "han": "NHĨ",
+    "hira": "",
+    "nghia": "Tai giằng ring",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 162,
+    "kanji": "",
+    "han": "",
+    "hira": "4 穴スピアディスク",
+    "nghia": "Đĩa giáo 4 lỗ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 163,
+    "kanji": "",
+    "han": "",
+    "hira": "ブレースエンドピン",
+    "nghia": "Chốt đầu giằng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 164,
+    "kanji": "",
+    "han": "",
+    "hira": "クロスブレースヘッド",
+    "nghia": "Đầu giằng chéo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 165,
+    "kanji": "水平ブレースヘッド",
+    "han": "THỦY",
+    "hira": "",
+    "nghia": "Đầu giằng ngang",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 166,
+    "kanji": "",
+    "han": "",
+    "hira": "8 穴スピアディスク",
+    "nghia": "Đĩa giáo 8 lỗ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 167,
+    "kanji": "接続パイプ",
+    "han": "TIẾP",
+    "hira": "",
+    "nghia": "Ống nối",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 168,
+    "kanji": "作業プラットフォーム",
+    "han": "NGHIỆP",
+    "hira": "",
+    "nghia": "Sàn, nền nơi làm việc",
+    "week": 1,
+    "lesson": 1
+  }
+]

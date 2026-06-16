@@ -1,0 +1,566 @@
+[
+  {
+    "kanji": "薬の種類",
+    "han": "ƯỚC  CHỦNG LOẠI",
+    "hira": "くすりのしゅるい",
+    "nghia": "Loại/dạng thuốc"
+  },
+  {
+    "kanji": "抗生剤（こうせいざい）／抗生物質（こうせいぶっしつ）",
+    "han": "KHÁNG SINH TỄ          KHÁNG SINH VẬT CHẤT",
+    "hira": "",
+    "nghia": "Thuốc kháng sinh"
+  },
+  {
+    "kanji": "粉薬",
+    "han": "PHẤN ƯỚC",
+    "hira": "こなぐすり",
+    "nghia": "Dạng bột"
+  },
+  {
+    "kanji": "錠剤",
+    "han": "ĐĨNH TỄ",
+    "hira": "じょうざい",
+    "nghia": "Dạng viên nén"
+  },
+  {
+    "kanji": "カブセル",
+    "han": "",
+    "hira": "",
+    "nghia": "Dạng con nhộng"
+  },
+  {
+    "kanji": "液体",
+    "han": "DỊCH THỂ",
+    "hira": "えきたい",
+    "nghia": "Thuốc dạng nước"
+  },
+  {
+    "kanji": "シロップ",
+    "han": "",
+    "hira": "",
+    "nghia": "Dạng Si rô"
+  },
+  {
+    "kanji": "塗り薬",
+    "han": "ĐỒ  ƯỚC",
+    "hira": "ぬりくすり",
+    "nghia": "Dạng thuốc bôi"
+  },
+  {
+    "kanji": "一日。。。何回",
+    "han": "NHẤT NHẬT    HÀ HỒI",
+    "hira": "",
+    "nghia": "Một ngày … uống…. mấy lần"
+  },
+  {
+    "kanji": "副作用",
+    "han": "PHÓ TÁC DỤNG",
+    "hira": "ふくさよう",
+    "nghia": "Tác dụng phụ"
+  },
+  {
+    "kanji": "ワクシン",
+    "han": "",
+    "hira": "",
+    "nghia": "Vacxin"
+  },
+  {
+    "kanji": "薬の飲み方",
+    "han": "ƯỚC  ẨM  PHƯƠNG",
+    "hira": "くすりののみかた",
+    "nghia": "Cách uống thuốc"
+  },
+  {
+    "kanji": "食間",
+    "han": "THỰC GIAN",
+    "hira": "しょっかん",
+    "nghia": "Giữa bữa ăn này với bữa ăn kia"
+  },
+  {
+    "kanji": "食前",
+    "han": "THỰC TIỀN",
+    "hira": "しょくぜん",
+    "nghia": "Trước khi ăn"
+  },
+  {
+    "kanji": "食後",
+    "han": "THỰC HẬU",
+    "hira": "しょくご",
+    "nghia": "Sau khi ăn"
+  },
+  {
+    "kanji": "就寝前",
+    "han": "TỰU TẨM TIỀN",
+    "hira": "しゅうしんまえ",
+    "nghia": "Trước khi ngủ"
+  },
+  {
+    "kanji": "問診書",
+    "han": "VẤN CHẨN THƯ",
+    "hira": "もんしんしょ",
+    "nghia": "Giấy khám bệnh"
+  },
+  {
+    "kanji": "病名",
+    "han": "BỆNH DANH",
+    "hira": "びょうめい",
+    "nghia": "Tên bệnh"
+  },
+  {
+    "kanji": "診察",
+    "han": "CHẨN SÁT",
+    "hira": "しんさつ",
+    "nghia": "Khám bệnh"
+  },
+  {
+    "kanji": "検査",
+    "han": "KIỂM TRA",
+    "hira": "けんさ",
+    "nghia": "Kiểm tra"
+  },
+  {
+    "kanji": "治療",
+    "han": "TRỊ LIỆU",
+    "hira": "ちりょう",
+    "nghia": "Trị liệu"
+  },
+  {
+    "kanji": "手術",
+    "han": "THỦ THUẬT",
+    "hira": "しゅじゅつ",
+    "nghia": "Phẫu thuật"
+  },
+  {
+    "kanji": "入院",
+    "han": "NHẬP VIỆN",
+    "hira": "にゅういん",
+    "nghia": "Nhập viện"
+  },
+  {
+    "kanji": "退院",
+    "han": "THOÁI VIỆN",
+    "hira": "たいいん",
+    "nghia": "Xuất viện"
+  },
+  {
+    "kanji": "救急",
+    "han": "CỨU CẤP",
+    "hira": "きゅうきゅう",
+    "nghia": "Cấp cứu"
+  },
+  {
+    "kanji": "健康診断",
+    "han": "KIỆN KHANG CHẨN ĐOẠN",
+    "hira": "けんこうしんだん",
+    "nghia": "Khám sức khỏe tổng thể"
+  },
+  {
+    "kanji": "不眠症",
+    "han": "BẤT MIÊN CHỨNG",
+    "hira": "ふみんしょう",
+    "nghia": "Bệnh mất ngủ"
+  },
+  {
+    "kanji": "めまい",
+    "han": "",
+    "hira": "",
+    "nghia": "Hoa mắt chóng mặt"
+  },
+  {
+    "kanji": "痺れる",
+    "han": "TÝ",
+    "hira": "しびれる",
+    "nghia": "Tê (chân tay)"
+  },
+  {
+    "kanji": "頭痛",
+    "han": "ĐẦU THỐNG",
+    "hira": "ずつう",
+    "nghia": "Đau đầu"
+  },
+  {
+    "kanji": "腰痛",
+    "han": "YÊU THỐNG",
+    "hira": "ようつう",
+    "nghia": "Đau lưng"
+  },
+  {
+    "kanji": "腹痛",
+    "han": "PHÚC THỐNG",
+    "hira": "ふくつう",
+    "nghia": "Đau bụng"
+  },
+  {
+    "kanji": "吐き気",
+    "han": "THỔ  KHÍ",
+    "hira": "はきけ",
+    "nghia": "Buồn nôn"
+  },
+  {
+    "kanji": "微熱",
+    "han": "VI NHIỆT",
+    "hira": "びねつ",
+    "nghia": "Hơi sôt"
+  },
+  {
+    "kanji": "高血圧",
+    "han": "CAO HUYẾT ÁP",
+    "hira": "こうけつあつ",
+    "nghia": "Huyết áp cao"
+  },
+  {
+    "kanji": "糖尿病",
+    "han": "ĐƯỜNG NIỆU BỆNH",
+    "hira": "とうにょうびょう",
+    "nghia": "Bệnh tiểu đường"
+  },
+  {
+    "kanji": "手足（てあし）、顔（かお）がむくむ",
+    "han": "THỦ TÚC       NHAN",
+    "hira": "",
+    "nghia": "Tay chân mặt phù, nề"
+  },
+  {
+    "kanji": "食中毒",
+    "han": "THỰC TRUNG ĐỘC",
+    "hira": "",
+    "nghia": "Ngộ độc thực phẩm"
+  },
+  {
+    "kanji": "風邪",
+    "han": "PHONG TÀ",
+    "hira": "かぜ",
+    "nghia": "Cảm cúm"
+  },
+  {
+    "kanji": "骨折",
+    "han": "CỐT CHIẾT",
+    "hira": "こっせつ",
+    "nghia": "Gãy xương"
+  },
+  {
+    "kanji": "ねんざ",
+    "han": "",
+    "hira": "",
+    "nghia": "Bong gân"
+  },
+  {
+    "kanji": "伝染病",
+    "han": "TRUYỀN NHIỄM BỆNH",
+    "hira": "でんせんびょう",
+    "nghia": "Bệnh truyền nhiễm"
+  },
+  {
+    "kanji": "ヘルニア",
+    "han": "",
+    "hira": "",
+    "nghia": "Thoát vị đĩa đệm"
+  },
+  {
+    "kanji": "喘息",
+    "han": "SUYỄN TỨC",
+    "hira": "ぜんそく",
+    "nghia": "Hen suyễn"
+  },
+  {
+    "kanji": "咳",
+    "han": "KHÁI",
+    "hira": "せき",
+    "nghia": "Ho"
+  },
+  {
+    "kanji": "アレルギー",
+    "han": "",
+    "hira": "",
+    "nghia": "Dị ứng"
+  },
+  {
+    "kanji": "気管支炎",
+    "han": "KHÍ QUẢN CHI VIÊM",
+    "hira": "きかんしえん",
+    "nghia": "Viêm phế quản"
+  },
+  {
+    "kanji": "肺炎",
+    "han": "PHẾ VIÊM",
+    "hira": "はいえん",
+    "nghia": "Viêm phổi"
+  },
+  {
+    "kanji": "へんとうせん炎",
+    "han": "VIÊM",
+    "hira": "えん",
+    "nghia": "Viêm Amidan"
+  },
+  {
+    "kanji": "がん",
+    "han": "",
+    "hira": "",
+    "nghia": "Ung thư"
+  },
+  {
+    "kanji": "大腸炎",
+    "han": "ĐẠI TRÀNG VIÊM",
+    "hira": "だいちょうえん",
+    "nghia": "Viêm đại tràng"
+  },
+  {
+    "kanji": "盲腸炎",
+    "han": "MANH TRÀNG VIÊM",
+    "hira": "もうちょうえん",
+    "nghia": "Viêm ruột thừa"
+  },
+  {
+    "kanji": "肺臓",
+    "han": "PHẾ TẠNG",
+    "hira": "はいぞう",
+    "nghia": "Phổi"
+  },
+  {
+    "kanji": "結核",
+    "han": "KẾT HẠCH",
+    "hira": "けっかく",
+    "nghia": "Ho lao"
+  },
+  {
+    "kanji": "心臓",
+    "han": "TÂM TẠNG",
+    "hira": "しんぞう",
+    "nghia": "Tim"
+  },
+  {
+    "kanji": "肝臓",
+    "han": "CAN TẠNG",
+    "hira": "かんぞう",
+    "nghia": "Gan"
+  },
+  {
+    "kanji": "Ｂ型肝炎",
+    "han": "HÌNH CAN VIÊM",
+    "hira": "かんえん",
+    "nghia": "Viêm gan B"
+  },
+  {
+    "kanji": "脳出血",
+    "han": "NÃO XUẤT HUYẾT",
+    "hira": "のうしゅっけつ",
+    "nghia": "Chảy máu não"
+  },
+  {
+    "kanji": "脳卒中",
+    "han": "NÃO TỐT TRUNG",
+    "hira": "のうそっちゅう",
+    "nghia": "Tai biến mạch máu não"
+  },
+  {
+    "kanji": "心臓病",
+    "han": "TÂM TẠNG BỆNH",
+    "hira": "しんぞうびょう",
+    "nghia": "Bệnh tim"
+  },
+  {
+    "kanji": "関節",
+    "han": "QUAN TIẾT",
+    "hira": "かんせつ",
+    "nghia": "Khớp"
+  },
+  {
+    "kanji": "脊椎骨",
+    "han": "TÍCH CHUY CỐT",
+    "hira": "棘 (せきついこつきょく",
+    "nghia": "Gai đốt sống"
+  },
+  {
+    "kanji": "結石症",
+    "han": "KẾT THẠCH CHỨNG",
+    "hira": "けせきしょう",
+    "nghia": "Bệnh sỏi thận"
+  },
+  {
+    "kanji": "胆石症",
+    "han": "ĐẢM THẠCH CHỨNG",
+    "hira": "たんせきしょう",
+    "nghia": "Bệnh sỏi mật"
+  },
+  {
+    "kanji": "盲腸炎",
+    "han": "MANH TRÀNG VIÊM",
+    "hira": "もうちょうえん",
+    "nghia": "Viêm ruột thừa"
+  },
+  {
+    "kanji": "肩凝り",
+    "han": "KIÊN NGƯNG",
+    "hira": "かたこり",
+    "nghia": "Đau vai, cứng vai"
+  },
+  {
+    "kanji": "目もらい",
+    "han": "MỤC",
+    "hira": "めもらい",
+    "nghia": "Đau mắt hột"
+  },
+  {
+    "kanji": "過敏性皮膚",
+    "han": "QUÁ MẪN TÍNH BÌ PHU",
+    "hira": "かびんせいひふ",
+    "nghia": "Da dễ bị kích ứng"
+  },
+  {
+    "kanji": "水疱瘡",
+    "han": "THỦY BÀO SANG",
+    "hira": "みずぼうそう",
+    "nghia": "Bệnh thủy đâụ"
+  },
+  {
+    "kanji": "総合病院",
+    "han": "TỔNG HỢP BỆNH VIỆN",
+    "hira": "そうごうびょういん",
+    "nghia": "Bệnh viện đa khoa"
+  },
+  {
+    "kanji": "病棟",
+    "han": "BỆNH ĐỐNG",
+    "hira": "びょうとう",
+    "nghia": "Tòa nhà Bệnh viện"
+  },
+  {
+    "kanji": "内科",
+    "han": "NỘI KHOA",
+    "hira": "ないか",
+    "nghia": "Nội khoa"
+  },
+  {
+    "kanji": "外科",
+    "han": "NGOẠI KHOA",
+    "hira": "げか",
+    "nghia": "Ngoại khoa"
+  },
+  {
+    "kanji": "小児科",
+    "han": "TIỂU NHI KHOA",
+    "hira": "しょうにか",
+    "nghia": "Khoa nhi"
+  },
+  {
+    "kanji": "耳鼻科",
+    "han": "NHĨ TỊ KHOA",
+    "hira": "じびか",
+    "nghia": "Khoa tai mũi họng"
+  },
+  {
+    "kanji": "産婦人科",
+    "han": "SẢN PHỤ NHÂN KHOA",
+    "hira": "さんふじんか",
+    "nghia": "Khoa sản"
+  },
+  {
+    "kanji": "眼科",
+    "han": "NHÃN KHOA",
+    "hira": "がんか",
+    "nghia": "Khoa mắt"
+  },
+  {
+    "kanji": "歯科",
+    "han": "XỈ KHOA",
+    "hira": "しか",
+    "nghia": "Khoa răng"
+  },
+  {
+    "kanji": "消化器科",
+    "han": "TIÊU HÓA KHÍ KHOA",
+    "hira": "しょうかきか",
+    "nghia": "Khoa tiêu hóa"
+  },
+  {
+    "kanji": "呼吸器科",
+    "han": "HÔ HẤP KHÍ KHOA",
+    "hira": "こきゅうきか",
+    "nghia": "Khoa hô hấp"
+  },
+  {
+    "kanji": "お薬",
+    "han": "ƯỚC",
+    "hira": "おくすり",
+    "nghia": "Quầy thuốc (trong bệnh viện)"
+  },
+  {
+    "kanji": "薬局",
+    "han": "ƯỚC CỤC",
+    "hira": "やっきょく",
+    "nghia": "Hiệu thuốc"
+  },
+  {
+    "kanji": "先生（せんせい）、医者（いしゃ）",
+    "han": "TIÊN SINH        Y GIẢ",
+    "hira": "",
+    "nghia": "Bác sĩ"
+  },
+  {
+    "kanji": "歯医者さん",
+    "han": "XỈ Y GIẢ",
+    "hira": "はいしゃさん",
+    "nghia": "Nha sĩ"
+  },
+  {
+    "kanji": "患者",
+    "han": "HOẠN GIẢ",
+    "hira": "かんじゃ",
+    "nghia": "Bệnh nhân"
+  },
+  {
+    "kanji": "介護",
+    "han": "GIỚI HỘ",
+    "hira": "かいご",
+    "nghia": "Điều dưỡng"
+  },
+  {
+    "kanji": "看護者",
+    "han": "KHÁN HỘ GIẢ",
+    "hira": "かんごしゃ",
+    "nghia": "Y tá"
+  },
+  {
+    "kanji": "受付",
+    "han": "THỤ PHÓ",
+    "hira": "うけつけ",
+    "nghia": "Lễ tân"
+  },
+  {
+    "kanji": "健康保険証",
+    "han": "KIỆN KHANG BẢO HIỂM CHỨNG",
+    "hira": "けんこうほけんしょう",
+    "nghia": "Thẻ Bảo hiểm y tế"
+  },
+  {
+    "kanji": "手術",
+    "han": "THỦ THUẬT",
+    "hira": "しゅじゅつ",
+    "nghia": "Phẫu thuật"
+  },
+  {
+    "kanji": "入院",
+    "han": "NHẬP VIỆN",
+    "hira": "にゅういん",
+    "nghia": "Nhập viện"
+  },
+  {
+    "kanji": "退院",
+    "han": "THOÁI VIỆN",
+    "hira": "たいいん",
+    "nghia": "Xuất viện"
+  },
+  {
+    "kanji": "院内",
+    "han": "VIỆN NỘI",
+    "hira": "いんない",
+    "nghia": "Trong viện"
+  },
+  {
+    "kanji": "外来",
+    "han": "NGOẠI LAI",
+    "hira": "がいらい",
+    "nghia": "Từ viện nơi khác vào khám tại viện"
+  }
+]

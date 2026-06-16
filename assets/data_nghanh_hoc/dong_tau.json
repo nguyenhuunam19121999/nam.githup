@@ -1,0 +1,26 @@
+[
+  {
+    "kanji": "造船・舶用工業",
+    "hira": "ぞうせん・はくようこうぎょう",
+    "han": "Tạo thuyền bè dụng công nghiệp",
+    "nghia": "Ngành đóng tàu và công nghiệp hàng hải",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "造船",
+    "hira": "ぞうせん",
+    "han": "Tạo thuyền",
+    "nghia": "Đóng tàu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "舶",
+    "hira": "はく",
+    "han": "Bè",
+    "nghia": "Tàu, thuyền",
+    "week": 1,
+    "lesson": 2
+  }
+]

@@ -1,0 +1,1775 @@
+[
+  {
+    "stt": 1,
+    "kanji": "",
+    "han": "",
+    "hira": "エアコン",
+    "nghia": "Máy điều hòa nhiệt độ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 2,
+    "kanji": "切断機",
+    "han": "THIẾT ĐOẠN CƠ",
+    "hira": "せつだんき／カッター",
+    "nghia": "Máy cắt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 3,
+    "kanji": "旋盤機",
+    "han": "TOÀN BÀN CƠ",
+    "hira": "せんばんき",
+    "nghia": "Máy tiện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 4,
+    "kanji": "CNC工作機械",
+    "han": "CƠ",
+    "hira": "しえぬし　こうさくきかい",
+    "nghia": "Máy gia công CNC",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 5,
+    "kanji": "圧搾機",
+    "han": "ÁP  CƠ",
+    "hira": "あっさくき",
+    "nghia": "Máy ép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 6,
+    "kanji": "変圧器",
+    "han": "BIẾN ÁP",
+    "hira": "へんあつき",
+    "nghia": "Máy biến áp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 7,
+    "kanji": "圧延機",
+    "han": "ÁP  CƠ",
+    "hira": "あつえんき",
+    "nghia": "Máy cán kim loại",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 8,
+    "kanji": "",
+    "han": "",
+    "hira": "ベンダー",
+    "nghia": "Máy uốn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 9,
+    "kanji": "空気圧縮機",
+    "han": "KHÔNG KHÍ ÁP  CƠ",
+    "hira": "くうきあっしゅくき",
+    "nghia": "Máy nén khí",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 10,
+    "kanji": "水準器",
+    "han": "THỦY",
+    "hira": "すいじゅんき",
+    "nghia": "Máy đo mặt phẳng nước",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 11,
+    "kanji": "研磨機",
+    "han": "NGHIÊN MA CƠ",
+    "hira": "けんまき",
+    "nghia": "Máy mài",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 12,
+    "kanji": "",
+    "han": "",
+    "hira": "ドリルプレス",
+    "nghia": "Máy khoan",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 13,
+    "kanji": "",
+    "han": "",
+    "hira": "ポンプ",
+    "nghia": "Máy bơm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 14,
+    "kanji": "",
+    "han": "",
+    "hira": "ジェットタガネ",
+    "nghia": "Máy đánh gỉ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 15,
+    "kanji": "アナログ計算機",
+    "han": "CƠ",
+    "hira": "あなろぐけいさんき",
+    "nghia": "Thiết bị đo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 16,
+    "kanji": "砥石",
+    "han": "CHỈ THẠCH",
+    "hira": "といし",
+    "nghia": "Đá mài",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 17,
+    "kanji": "切れ刃",
+    "han": "THIẾT  NHẬN",
+    "hira": "きれじん",
+    "nghia": "Dao tiện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 18,
+    "kanji": "",
+    "han": "",
+    "hira": "コンパス",
+    "nghia": "Compa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 19,
+    "kanji": "",
+    "han": "",
+    "hira": "しの",
+    "nghia": "Thanh nhọn để buộc thép",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 20,
+    "kanji": "金槌",
+    "han": "",
+    "hira": "かなづち",
+    "nghia": "Búa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 21,
+    "kanji": "研磨紙",
+    "han": "NGHIÊN MA",
+    "hira": "けんまし",
+    "nghia": "Giấy ráp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 22,
+    "kanji": "",
+    "han": "",
+    "hira": "ナット",
+    "nghia": "Đai ốc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 23,
+    "kanji": "釘抜き",
+    "han": "",
+    "hira": "くぎぬき",
+    "nghia": "Kìm nhổ đinh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 24,
+    "kanji": "",
+    "han": "",
+    "hira": "ボルト",
+    "nghia": "Bulong",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 25,
+    "kanji": "捻子",
+    "han": "",
+    "hira": "キーパー",
+    "nghia": "Ốc vít",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 26,
+    "kanji": "教練",
+    "han": "",
+    "hira": "きょうれん",
+    "nghia": "Mũi khoan",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 27,
+    "kanji": "",
+    "han": "",
+    "hira": "ハックソーブレード",
+    "nghia": "Lưỡi cưa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 28,
+    "kanji": "鋏",
+    "han": "",
+    "hira": "はさみ",
+    "nghia": "Kéo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 29,
+    "kanji": "",
+    "han": "",
+    "hira": "モンキーレンチ",
+    "nghia": "Mỏ lết",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 30,
+    "kanji": "遊び歯車",
+    "han": "XA",
+    "hira": "あそびはぐるま",
+    "nghia": "Bánh răng trung gian",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 31,
+    "kanji": "蝶番",
+    "han": "",
+    "hira": "ちょうつがい",
+    "nghia": "Bản lề",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 32,
+    "kanji": "",
+    "han": "",
+    "hira": "ボックスレンチ",
+    "nghia": "Dụng cụ tháo mũi khoan",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 33,
+    "kanji": "",
+    "han": "",
+    "hira": "スパナ",
+    "nghia": "Cờ lê",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 34,
+    "kanji": "ひずみ計",
+    "han": "",
+    "hira": "ひずみけい",
+    "nghia": "Đồng hồ đo biến dạng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 35,
+    "kanji": "石炭ブラシ",
+    "han": "THẠCH",
+    "hira": "せきたんブラシ",
+    "nghia": "Chổi phủi đồ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 36,
+    "kanji": "",
+    "han": "",
+    "hira": "グリスポンプ",
+    "nghia": "Bơm dầu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 37,
+    "kanji": "電池",
+    "han": "ĐIỆN",
+    "hira": "セル／でんち",
+    "nghia": "Pin, Ắc – quy",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 38,
+    "kanji": "",
+    "han": "",
+    "hira": "マイクロ",
+    "nghia": "Thước đo đơn vị",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 39,
+    "kanji": "",
+    "han": "",
+    "hira": "ブローチ",
+    "nghia": "Mũi doa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 40,
+    "kanji": "",
+    "han": "",
+    "hira": "チェーン",
+    "nghia": "Dây xích",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 41,
+    "kanji": "切断用研削砥石",
+    "han": "THIẾT ĐOẠN  NGHIÊN  CHỈ THẠCH",
+    "hira": "せつだんようけんさくといし",
+    "nghia": "Đá cắt sắt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 42,
+    "kanji": "アンローディング弁",
+    "han": "",
+    "hira": "アンローディングべん",
+    "nghia": "Van không chịu tải trọng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 43,
+    "kanji": "",
+    "han": "",
+    "hira": "ぶんどき",
+    "nghia": "Thước đo góc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 44,
+    "kanji": "蛍光灯",
+    "han": "QUANG",
+    "hira": "けいこうとう",
+    "nghia": "Đèn huỳnh quang",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 45,
+    "kanji": "",
+    "han": "",
+    "hira": "スライドキャリパス",
+    "nghia": "Thước kẹp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 46,
+    "kanji": "",
+    "han": "",
+    "hira": "エレクトロマグネット",
+    "nghia": "Nam châm điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 47,
+    "kanji": "",
+    "han": "",
+    "hira": "プラスドライバー",
+    "nghia": "tô vít cạnh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 48,
+    "kanji": "",
+    "han": "",
+    "hira": "スライジングﾞルール",
+    "nghia": "thước trượt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 49,
+    "kanji": "",
+    "han": "",
+    "hira": "さげふり",
+    "nghia": "Quả dọi",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 50,
+    "kanji": "",
+    "han": "",
+    "hira": "イヤーがん",
+    "nghia": "Súng bắn khí",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 51,
+    "kanji": "安全器",
+    "han": "",
+    "hira": "あんぜんき",
+    "nghia": "Cầu chì",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 52,
+    "kanji": "",
+    "han": "",
+    "hira": "かなきりのこ",
+    "nghia": "Cưa cắt kim loại",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 53,
+    "kanji": "アルミニウム合金",
+    "han": "",
+    "hira": "アルミニウムごうきん",
+    "nghia": "Hợp kim nhôm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 54,
+    "kanji": "",
+    "han": "",
+    "hira": "トーチランプ",
+    "nghia": "Đèn khò",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 55,
+    "kanji": "",
+    "han": "",
+    "hira": "ピッチゲージ",
+    "nghia": "Thước hình bánh răng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 56,
+    "kanji": "",
+    "han": "",
+    "hira": "スプレーガン",
+    "nghia": "Bình phun",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 57,
+    "kanji": "",
+    "han": "",
+    "hira": "まんりき",
+    "nghia": "Mỏ cặp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 58,
+    "kanji": "",
+    "han": "",
+    "hira": "ピット",
+    "nghia": "Pít-tông",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 59,
+    "kanji": "電線ランプ",
+    "han": "ĐIỆN TUYẾN",
+    "hira": "でんせん",
+    "nghia": "Dây dẫn điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 60,
+    "kanji": "",
+    "han": "",
+    "hira": "はけ",
+    "nghia": "Chổi sơn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 61,
+    "kanji": "",
+    "han": "",
+    "hira": "かんな",
+    "nghia": "Dụng cụ bào",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 62,
+    "kanji": "あり溝",
+    "han": "",
+    "hira": "ありみぞ",
+    "nghia": "Rãnh nhỏ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 63,
+    "kanji": "",
+    "han": "",
+    "hira": "パイプカッター",
+    "nghia": "máy cắt ống",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 64,
+    "kanji": "逆タップ",
+    "han": "",
+    "hira": "ぎゃくタップ",
+    "nghia": "Mũi khoan xoắn tròn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 65,
+    "kanji": "",
+    "han": "",
+    "hira": "リベック",
+    "nghia": "Súng bắn đinh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 66,
+    "kanji": "",
+    "han": "",
+    "hira": "ストリッパ",
+    "nghia": "Kìm rút dây",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 67,
+    "kanji": "",
+    "han": "",
+    "hira": "メーター",
+    "nghia": "Công tơ mét, đồng hồ đo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 68,
+    "kanji": "",
+    "han": "",
+    "hira": "ダクト",
+    "nghia": "Ống dẫn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 69,
+    "kanji": "",
+    "han": "",
+    "hira": "ローレット",
+    "nghia": "Chốt khóa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 70,
+    "kanji": "軸",
+    "han": "TRỤC",
+    "hira": "じく",
+    "nghia": "Trục",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 71,
+    "kanji": "切削加工",
+    "han": "THIẾT",
+    "hira": "せっさくかこう",
+    "nghia": "Gia công cắt gọt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 72,
+    "kanji": "座標系",
+    "han": "",
+    "hira": "ざひょうけい",
+    "nghia": "Hệ tọa độ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 73,
+    "kanji": "CNC垂直フライス盤",
+    "han": "BÀN",
+    "hira": "",
+    "nghia": "Máy tiện đứng CNC",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 74,
+    "kanji": "一時停止",
+    "han": "",
+    "hira": "いちじていし",
+    "nghia": "Tạm dừng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 75,
+    "kanji": "送り",
+    "han": "",
+    "hira": "おくり",
+    "nghia": "Chuyển động",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 76,
+    "kanji": "機能",
+    "han": "CƠ",
+    "hira": "きのう",
+    "nghia": "Cơ năng, tính năng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 77,
+    "kanji": "円全周",
+    "han": "",
+    "hira": "えんぜんしゅう",
+    "nghia": "chu vi đường tròn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 78,
+    "kanji": "移動",
+    "han": "",
+    "hira": "いどう",
+    "nghia": "Sự di chuyển",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 79,
+    "kanji": "速度",
+    "han": "",
+    "hira": "そくど",
+    "nghia": "Tốc độ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 80,
+    "kanji": "第三角方",
+    "han": "",
+    "hira": "だいさんかくかた",
+    "nghia": "Hình chiếu góc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 81,
+    "kanji": "始点",
+    "han": "",
+    "hira": "してん",
+    "nghia": "Điểm đầu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 82,
+    "kanji": "終点",
+    "han": "",
+    "hira": "しゅうてん",
+    "nghia": "Điểm cuối",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 83,
+    "kanji": "荒削り",
+    "han": "",
+    "hira": "あらけずり",
+    "nghia": "Gia công thô",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 84,
+    "kanji": "精密",
+    "han": "",
+    "hira": "せいみつ",
+    "nghia": "Chính xác",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 85,
+    "kanji": "側面加工",
+    "han": "DIỆN",
+    "hira": "そくめんかこう",
+    "nghia": "Gia công mặt bên",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 86,
+    "kanji": "原点",
+    "han": "",
+    "hira": "げんてん",
+    "nghia": "Điểm gốc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 87,
+    "kanji": "回転方向",
+    "han": "",
+    "hira": "かいてんほうこう",
+    "nghia": "Chiều quay",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 88,
+    "kanji": "ボ－ル盤",
+    "han": "BÀN",
+    "hira": "しゅじく",
+    "nghia": "Máy khoan",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 89,
+    "kanji": "表面粗さ",
+    "han": "DIỆN",
+    "hira": "ひょうめんあらさ",
+    "nghia": "Độ nhám bề mặt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 90,
+    "kanji": "横形マシニングセンター",
+    "han": "",
+    "hira": "よこけい",
+    "nghia": "Trung tâm gia công",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 91,
+    "kanji": "",
+    "han": "",
+    "hira": "NCデータ",
+    "nghia": "Dữ liệu NC",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 92,
+    "kanji": "溶接機",
+    "han": "DUNG TIẾP CƠ",
+    "hira": "ようせつき",
+    "nghia": "Máy hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 93,
+    "kanji": "電源",
+    "han": "ĐIỆN",
+    "hira": "でんげん",
+    "nghia": "Nguồn điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 94,
+    "kanji": "",
+    "han": "",
+    "hira": "アース",
+    "nghia": "Dây mát",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 95,
+    "kanji": "被服アーク",
+    "han": "",
+    "hira": "ひふく",
+    "nghia": "Hàn hồ quang bằng que bọc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 96,
+    "kanji": "溶接棒",
+    "han": "DUNG TIẾP",
+    "hira": "ようせつぼう",
+    "nghia": "Que hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 97,
+    "kanji": "半自動アーク",
+    "han": "",
+    "hira": "はんじどうアーク",
+    "nghia": "Hàn hồ quang bán tự động",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 98,
+    "kanji": "",
+    "han": "",
+    "hira": "アルゴン",
+    "nghia": "Khí nén",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 99,
+    "kanji": "溶接線",
+    "han": "DUNG TIẾP TUYẾN",
+    "hira": "ようせつせん",
+    "nghia": "Đường hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 100,
+    "kanji": "規定",
+    "han": "",
+    "hira": "きてい",
+    "nghia": "Quy định",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 101,
+    "kanji": "余盛",
+    "han": "",
+    "hira": "よもり",
+    "nghia": "Phần lồi mối hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 102,
+    "kanji": "",
+    "han": "",
+    "hira": "トーチ",
+    "nghia": "khò hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 103,
+    "kanji": "図面",
+    "han": "ĐỒ DIỆN",
+    "hira": "ずめん",
+    "nghia": "Bản vẽ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 104,
+    "kanji": "開先深さ",
+    "han": "",
+    "hira": "かいさきふかさ",
+    "nghia": "Chiều sâu rãnh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 105,
+    "kanji": "溶接ビューム",
+    "han": "DUNG TIẾP",
+    "hira": "ようせつ",
+    "nghia": "Khói hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 106,
+    "kanji": "",
+    "han": "",
+    "hira": "パネル",
+    "nghia": "Bảng điều khiển",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 107,
+    "kanji": "実際のど厚",
+    "han": "",
+    "hira": "じっさいのどあつ",
+    "nghia": "Chiều dày thực tế",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 108,
+    "kanji": "後熱",
+    "han": "",
+    "hira": "ごねつ",
+    "nghia": "Nhiệt độ sau hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 109,
+    "kanji": "止端",
+    "han": "",
+    "hira": "とめたん",
+    "nghia": "Chân mối hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 110,
+    "kanji": "回し溶接",
+    "han": "DUNG TIẾP",
+    "hira": "まわしようせつ",
+    "nghia": "Hàn xung quanh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 111,
+    "kanji": "開先深さ",
+    "han": "",
+    "hira": "かいさきふかさ",
+    "nghia": "Bề mặt rãnh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 112,
+    "kanji": "角度",
+    "han": "",
+    "hira": "かくど",
+    "nghia": "Góc độ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 113,
+    "kanji": "",
+    "han": "",
+    "hira": "アンダカット",
+    "nghia": "Chiều dài mối chân hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 114,
+    "kanji": "溶接材料",
+    "han": "DUNG TIẾP  LIÊU",
+    "hira": "ようせつざいりょう",
+    "nghia": "Nguyên liệu hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 115,
+    "kanji": "マグ溶接",
+    "han": "DUNG TIẾP",
+    "hira": "マグようせつ",
+    "nghia": "Hàn MAG",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 116,
+    "kanji": "断面",
+    "han": "ĐOẠN DIỆN",
+    "hira": "だんめん",
+    "nghia": "Mặt cắt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 117,
+    "kanji": "記号表示",
+    "han": "",
+    "hira": "きごうひょうじ",
+    "nghia": "Ký hiệu hiển thị",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 118,
+    "kanji": "材質",
+    "han": "",
+    "hira": "ざいしつ",
+    "nghia": "Vật liệu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 119,
+    "kanji": "圧接",
+    "han": "ÁP TIẾP",
+    "hira": "あっせつ",
+    "nghia": "Hàn áp lực",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 120,
+    "kanji": "両側",
+    "han": "",
+    "hira": "りょうがわ",
+    "nghia": "2 mặt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 121,
+    "kanji": "溶け込み",
+    "han": "DUNG",
+    "hira": "とけこみ",
+    "nghia": "Độ ngẫu mối hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 122,
+    "kanji": "成分",
+    "han": "",
+    "hira": "せいぶん",
+    "nghia": "Thành phần",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 123,
+    "kanji": "",
+    "han": "",
+    "hira": "チグ",
+    "nghia": "Hàn tích",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 124,
+    "kanji": "母材料",
+    "han": "LIÊU",
+    "hira": "ははざいりょう",
+    "nghia": "Vật cơ bản",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 125,
+    "kanji": "",
+    "han": "",
+    "hira": "ミグ",
+    "nghia": "Hàn MIG",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 126,
+    "kanji": "部分溶け込み",
+    "han": "DUNG",
+    "hira": "ぶぶんとけこみ",
+    "nghia": "Liên kết mối hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 127,
+    "kanji": "外側",
+    "han": "",
+    "hira": "そとがわ",
+    "nghia": "Mặt ngoài",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 128,
+    "kanji": "内側",
+    "han": "",
+    "hira": "ないがわ",
+    "nghia": "Mặt trong",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 129,
+    "kanji": "開先深さ",
+    "han": "",
+    "hira": "かいさきふかさ",
+    "nghia": "Độ sâu rãnh",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 130,
+    "kanji": "直径",
+    "han": "",
+    "hira": "ちょっけい",
+    "nghia": "Đường kính",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 131,
+    "kanji": "間隔",
+    "han": "",
+    "hira": "かんかく",
+    "nghia": "Khoảng cách",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 132,
+    "kanji": "半径",
+    "han": "",
+    "hira": "はんけい",
+    "nghia": "Bán kính",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 133,
+    "kanji": "角継手",
+    "han": "THỦ",
+    "hira": "かどつぎて",
+    "nghia": "Hàn liên kết góc",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 134,
+    "kanji": "突合せ溶接",
+    "han": "DUNG TIẾP",
+    "hira": "つきあわせようせつ",
+    "nghia": "Liên kết đối đầu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 135,
+    "kanji": "寸法",
+    "han": "",
+    "hira": "すんぽう",
+    "nghia": "Kích thước",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 136,
+    "kanji": "止端割れ",
+    "han": "",
+    "hira": "とめはしわれ",
+    "nghia": "Vết nứt chân hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 137,
+    "kanji": "完全溶け込み",
+    "han": "DUNG",
+    "hira": "かんぜんとけこみ",
+    "nghia": "Liên kết mối hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 138,
+    "kanji": "重ね継手",
+    "han": "THỦ",
+    "hira": "かさねつぎて",
+    "nghia": "Liên khớp nối mối hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 139,
+    "kanji": "プローボール",
+    "han": "",
+    "hira": "プローボール",
+    "nghia": "Rỗ khí",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 140,
+    "kanji": "Ｔ継手",
+    "han": "THỦ",
+    "hira": "Ｔつぎて",
+    "nghia": "Liên kết chữ T",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 141,
+    "kanji": "クレーター割れ",
+    "han": "",
+    "hira": "クレーターわれ",
+    "nghia": "Nứt miệng mối hàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 142,
+    "kanji": "",
+    "han": "",
+    "hira": "プラグ",
+    "nghia": "Phích điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 143,
+    "kanji": "電圧",
+    "han": "ĐIỆN ÁP",
+    "hira": "でんあつ",
+    "nghia": "Điện áp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 144,
+    "kanji": "",
+    "han": "",
+    "hira": "モーター",
+    "nghia": "Mô tơ",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 145,
+    "kanji": "周波数",
+    "han": "",
+    "hira": "しゅうはすう",
+    "nghia": "Tần số",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 146,
+    "kanji": "電高圧",
+    "han": "ĐIỆN  ÁP",
+    "hira": "でんこうあつ",
+    "nghia": "Điện cao áp",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 147,
+    "kanji": "",
+    "han": "",
+    "hira": "ターン",
+    "nghia": "Vòng quay",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 148,
+    "kanji": "電流",
+    "han": "ĐIỆN LƯU",
+    "hira": "でんりゅう",
+    "nghia": "Dòng điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 149,
+    "kanji": "圧縮力",
+    "han": "ÁP  LỰC",
+    "hira": "あっしゅくりょく",
+    "nghia": "Lực nén",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 150,
+    "kanji": "",
+    "han": "",
+    "hira": "ワイヤ",
+    "nghia": "Dây điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 151,
+    "kanji": "安全装置",
+    "han": "",
+    "hira": "あんぜんそうち",
+    "nghia": "Thiết bị an toàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 152,
+    "kanji": "",
+    "han": "",
+    "hira": "アウトプット",
+    "nghia": "Công suất",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 153,
+    "kanji": "",
+    "han": "",
+    "hira": "ハウジング",
+    "nghia": "Vỏ bọc ngoài",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 154,
+    "kanji": "電子",
+    "han": "ĐIỆN",
+    "hira": "でんし",
+    "nghia": "Điện tử",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 155,
+    "kanji": "電源",
+    "han": "ĐIỆN",
+    "hira": "でんげん",
+    "nghia": "Nguồn điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 156,
+    "kanji": "適正化",
+    "han": "",
+    "hira": "てきせいか",
+    "nghia": "Định mức",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 157,
+    "kanji": "",
+    "han": "",
+    "hira": "ロールレート",
+    "nghia": "Tốc độ quay",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 158,
+    "kanji": "",
+    "han": "",
+    "hira": "オーム",
+    "nghia": "Đơn vị đo điện trở",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 159,
+    "kanji": "",
+    "han": "",
+    "hira": "コンデンサ",
+    "nghia": "tụ điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 160,
+    "kanji": "法則",
+    "han": "",
+    "hira": "ほうそく",
+    "nghia": "Định luật và quy luật",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 161,
+    "kanji": "電位",
+    "han": "ĐIỆN",
+    "hira": "でんい",
+    "nghia": "Điện thế",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 162,
+    "kanji": "物質",
+    "han": "VẬT",
+    "hira": "ぶっしつ",
+    "nghia": "Vật liệu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 163,
+    "kanji": "負極",
+    "han": "",
+    "hira": "ふきょく",
+    "nghia": "Điện cực âm",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 164,
+    "kanji": "正極",
+    "han": "",
+    "hira": "せいきょく",
+    "nghia": "Điện cực dương",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 165,
+    "kanji": "",
+    "han": "",
+    "hira": "オートレンジ",
+    "nghia": "Máy  đo điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 166,
+    "kanji": "",
+    "han": "",
+    "hira": "テスタ",
+    "nghia": "Dụng cụ thử điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 167,
+    "kanji": "電解液",
+    "han": "ĐIỆN",
+    "hira": "でんかいえき",
+    "nghia": "Dung dịch điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 168,
+    "kanji": "電力",
+    "han": "ĐIỆN LỰC",
+    "hira": "でんりょく",
+    "nghia": "Điện năng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 169,
+    "kanji": "電荷",
+    "han": "ĐIỆN HÀ",
+    "hira": "でんか",
+    "nghia": "Sự nạp điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 170,
+    "kanji": "",
+    "han": "",
+    "hira": "AC アダプター",
+    "nghia": "Cục đổi nguồn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 171,
+    "kanji": "半導体",
+    "han": "THỂ",
+    "hira": "はんどうたい",
+    "nghia": "Chất bán dẫn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 172,
+    "kanji": "圧延鋼材",
+    "han": "ÁP",
+    "hira": "あつえんこうざい",
+    "nghia": "Thép cán",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 173,
+    "kanji": "圧縮荷重",
+    "han": "ÁP  HÀ",
+    "hira": "あっしゅくかじゅう",
+    "nghia": "Tải trọng nén",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 174,
+    "kanji": "加工",
+    "han": "",
+    "hira": "かこう",
+    "nghia": "Gia công",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 175,
+    "kanji": "安全管理",
+    "han": "LÝ",
+    "hira": "あんぜんかんり",
+    "nghia": "Quản lý an toàn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 176,
+    "kanji": "切削工具",
+    "han": "THIẾT",
+    "hira": "せっさくこうぐ",
+    "nghia": "Dụng cụ cắt gọt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 177,
+    "kanji": "粗さ",
+    "han": "",
+    "hira": "あらさ",
+    "nghia": "Độ nhám",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 178,
+    "kanji": "精度",
+    "han": "",
+    "hira": "せいど",
+    "nghia": "Độ chính xác",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 179,
+    "kanji": "安定化補償器",
+    "han": "",
+    "hira": "あんていかほしょうき",
+    "nghia": "Bộ ổn áp, bộ ổn định",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 180,
+    "kanji": "給油",
+    "han": "DU",
+    "hira": "きゅうゆ",
+    "nghia": "Tra dầu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 181,
+    "kanji": "潤滑油",
+    "han": "DU",
+    "hira": "じゅんかつゆ",
+    "nghia": "Dầu nhớt",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 182,
+    "kanji": "",
+    "han": "",
+    "hira": "ドリル",
+    "nghia": "Máy khoan",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 183,
+    "kanji": "外形線",
+    "han": "TUYẾN",
+    "hira": "がいけいせん",
+    "nghia": "Đường viền",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 184,
+    "kanji": "圧接",
+    "han": "ÁP TIẾP",
+    "hira": "あっせつ",
+    "nghia": "Hàn ép, hàn có áp lực",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 185,
+    "kanji": "硬さ",
+    "han": "",
+    "hira": "かたさ",
+    "nghia": "Độ cứng",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 186,
+    "kanji": "圧縮着火機関",
+    "han": "ÁP    CƠ",
+    "hira": "あっしゅくちゃっかきかん",
+    "nghia": "Động cơ cháy nhờ nén",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 187,
+    "kanji": "安定化",
+    "han": "",
+    "hira": "あんていか",
+    "nghia": "Ổn định hóa",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 188,
+    "kanji": "スケール",
+    "han": "",
+    "hira": "すけーる",
+    "nghia": "Thước đo",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 189,
+    "kanji": "起動ボタン",
+    "han": "",
+    "hira": "きどうぼたん",
+    "nghia": "Nút khởi động",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 190,
+    "kanji": "電気絶縁",
+    "han": "ĐIỆN KHÍ",
+    "hira": "でんきぜつえん/インシュレーション",
+    "nghia": "Sự cách điện",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 191,
+    "kanji": "",
+    "han": "",
+    "hira": "タップハンドル",
+    "nghia": "Tay quay taro",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 192,
+    "kanji": "案内翼",
+    "han": "",
+    "hira": "あないよく",
+    "nghia": "Tấm hướng dẫn, bộ khuếch tán",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 193,
+    "kanji": "切り込み",
+    "han": "THIẾT",
+    "hira": "きりこみ",
+    "nghia": "Cắt sâu",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 194,
+    "kanji": "慣例",
+    "han": "",
+    "hira": "かんれい",
+    "nghia": "Quy ước",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 195,
+    "kanji": "",
+    "han": "",
+    "hira": "アンダーカット",
+    "nghia": "Cắt  dạng hàm ếch",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 196,
+    "kanji": "穴基準はめあい",
+    "han": "",
+    "hira": "あなけじゅんはめあい",
+    "nghia": "Mối lắp theo hệ lỗ tiêu chuẩn",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "stt": 197,
+    "kanji": "切粉",
+    "han": "THIẾT",
+    "hira": "きりこ",
+    "nghia": "Phôi",
+    "week": 1,
+    "lesson": 1
+  }
+]

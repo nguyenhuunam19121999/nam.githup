@@ -1,0 +1,812 @@
+[
+  {
+    "kanji": "自動車",
+    "hira": "じどうしゃ",
+    "han": "TỰ ĐỘNG XA",
+    "nghia": "Ô tô"
+  },
+  {
+    "kanji": "車",
+    "hira": "くるま",
+    "han": "XA",
+    "nghia": "Ô tô"
+  },
+  {
+    "kanji": "",
+    "hira": "トラック",
+    "han": "",
+    "nghia": "Xe tải"
+  },
+  {
+    "kanji": "変速",
+    "hira": "へんそく",
+    "han": "BIẾN TỐC",
+    "nghia": "Chuyển số"
+  },
+  {
+    "kanji": "",
+    "hira": "ボンネット",
+    "han": "",
+    "nghia": "Nắp capo"
+  },
+  {
+    "kanji": "",
+    "hira": "ヘッドライト",
+    "han": "",
+    "nghia": "Đèn pha"
+  },
+  {
+    "kanji": "",
+    "hira": "インジケーター",
+    "han": "",
+    "nghia": "Đèn chỉ số"
+  },
+  {
+    "kanji": "",
+    "hira": "ロゴ",
+    "han": "",
+    "nghia": "Logo"
+  },
+  {
+    "kanji": "",
+    "hira": "ガソリンキャップ",
+    "han": "",
+    "nghia": "Nắp xăng"
+  },
+  {
+    "kanji": "屋根",
+    "hira": "くるまのやね",
+    "han": "ỐC CÂN",
+    "nghia": "Nóc xe"
+  },
+  {
+    "kanji": "",
+    "hira": "タイヤ",
+    "han": "",
+    "nghia": "Lốp"
+  },
+  {
+    "kanji": "",
+    "hira": "ブレーキ",
+    "han": "",
+    "nghia": "Phanh"
+  },
+  {
+    "kanji": "",
+    "hira": "サンルーフ",
+    "han": "",
+    "nghia": "Mái chống nắng  (phần cửa mở trên nóc xe)"
+  },
+  {
+    "kanji": "",
+    "hira": "ワイパー:",
+    "han": "",
+    "nghia": "Gạt nước"
+  },
+  {
+    "kanji": "",
+    "hira": "フロントガラス",
+    "han": "",
+    "nghia": "Kính chắn gió"
+  },
+  {
+    "kanji": "",
+    "hira": "ホイールアーチ",
+    "han": "",
+    "nghia": "Vòm bánh xe"
+  },
+  {
+    "kanji": "敷居",
+    "hira": "しきい",
+    "han": "PHỤ CƯ",
+    "nghia": "Ngưỡng cửa"
+  },
+  {
+    "kanji": "",
+    "hira": "エンジン",
+    "han": "",
+    "nghia": "Động cơ"
+  },
+  {
+    "kanji": "",
+    "hira": "ギアボックス",
+    "han": "",
+    "nghia": "Hộp số"
+  },
+  {
+    "kanji": "排気",
+    "hira": "はいき,システム",
+    "han": "BÀI KHÍ",
+    "nghia": "Hệ thống xả"
+  },
+  {
+    "kanji": "空気",
+    "hira": "(くうき)ポンプ:",
+    "han": "KHÔNG KHÍ",
+    "nghia": "Bơm khí"
+  },
+  {
+    "kanji": "共振器",
+    "hira": "きょうしんうつわ",
+    "han": "CỘNG CHẤN KHÍ",
+    "nghia": "Bộ cộng hưởng"
+  },
+  {
+    "kanji": "燃料",
+    "hira": "(ねんりょう)ライン",
+    "han": "NHIÊN LIÊU",
+    "nghia": "Đường ống dẫn nhiên liệu"
+  },
+  {
+    "kanji": "燃料",
+    "hira": "(ねんりょう)タンク",
+    "han": "NHIÊN LIÊU",
+    "nghia": "Bình nhiên liệu"
+  },
+  {
+    "kanji": "排気管",
+    "hira": "はいきかん",
+    "han": "BÀI KHÍ QUẢN",
+    "nghia": "Ống xả"
+  },
+  {
+    "kanji": "",
+    "hira": "",
+    "han": "",
+    "nghia": "Van"
+  },
+  {
+    "kanji": "",
+    "hira": "ディーゼルエンジン",
+    "han": "",
+    "nghia": "động cơ diesel"
+  },
+  {
+    "kanji": "",
+    "hira": "センサ",
+    "han": "",
+    "nghia": "Cảm biến"
+  },
+  {
+    "kanji": "空気注入管",
+    "hira": "くうきちゅうにゅうかん",
+    "han": "KHÔNG KHÍ CHỦ NHẬP QUẢN",
+    "nghia": "Ống phun khí"
+  },
+  {
+    "kanji": "燃料噴射",
+    "hira": "ねんりょうふんしゃ",
+    "han": "NHIÊN LIÊU PHÚN SẠT",
+    "nghia": "Phun nhiên liệu"
+  },
+  {
+    "kanji": "燃料噴射",
+    "hira": "(ねんりょうふんしゃ)システム",
+    "han": "NHIÊN LIÊU PHÚN SẠT",
+    "nghia": "Hệ thống phun nhiên liệu"
+  },
+  {
+    "kanji": "",
+    "hira": "ステアリングシステム",
+    "han": "",
+    "nghia": "Hệ thống lái"
+  },
+  {
+    "kanji": "安全",
+    "hira": "(あんぜん)システム",
+    "han": "AN TOÀN",
+    "nghia": "Hệ thống an toàn"
+  },
+  {
+    "kanji": "",
+    "hira": "シートコントロールユニット",
+    "han": "",
+    "nghia": "Hệ thống khí thải"
+  },
+  {
+    "kanji": "換気扇",
+    "hira": "かんきせん",
+    "han": "HOÁN KHÍ SONG",
+    "nghia": "Quạt thông gió"
+  },
+  {
+    "kanji": "",
+    "hira": "シートベルト",
+    "han": "",
+    "nghia": "Dây an toàn"
+  },
+  {
+    "kanji": "金具",
+    "hira": "かなぐ",
+    "han": "KIM CỤ",
+    "nghia": "Linh kiện bằng kim loại"
+  },
+  {
+    "kanji": "部品",
+    "hira": "(ぶひん)・コンポーネント",
+    "han": "BỘ PHẨM",
+    "nghia": "Linh kiện"
+  },
+  {
+    "kanji": "速度",
+    "hira": "そくど",
+    "han": "TỐC ĐỘ",
+    "nghia": "Tốc độ"
+  },
+  {
+    "kanji": "",
+    "hira": "エンジンコンポーネント",
+    "han": "",
+    "nghia": "Linh kiện trong động cơ"
+  },
+  {
+    "kanji": "発電機",
+    "hira": "はつでんき",
+    "han": "PHÁT ĐIỆN CƠ",
+    "nghia": "Máy phát điện"
+  },
+  {
+    "kanji": "",
+    "hira": "タービン",
+    "han": "",
+    "nghia": "Tuabin"
+  },
+  {
+    "kanji": "適用",
+    "hira": "てきよう",
+    "han": "THÍCH DỤNG",
+    "nghia": "Áp dụng, ứng dụng"
+  },
+  {
+    "kanji": "隠す",
+    "hira": "かくす",
+    "han": "ẨN",
+    "nghia": "Ẩn, giấu kín"
+  },
+  {
+    "kanji": "悪影響",
+    "hira": "あくえいきょう",
+    "han": "ÁC ẢNH HƯỞNG",
+    "nghia": "Ảnh hưởng xấu"
+  },
+  {
+    "kanji": "安全",
+    "hira": "あんぜん",
+    "han": "AN TOÀN",
+    "nghia": "An toàn"
+  },
+  {
+    "kanji": "略図",
+    "hira": "りゃくず",
+    "han": "LƯỢT ĐỒ",
+    "nghia": "Lược đồ, bản vẽ sơ lược"
+  },
+  {
+    "kanji": "図面",
+    "hira": "ずめん",
+    "han": "ĐỒ DIỆN",
+    "nghia": "Bản vẽ thiết kế"
+  },
+  {
+    "kanji": "説明書",
+    "hira": "せつめいしょ",
+    "han": "THUYẾT MINH THƯ",
+    "nghia": "Bản hướng dẫn"
+  },
+  {
+    "kanji": "計画書",
+    "hira": "けいかくしょ",
+    "han": "KẾ HỌA THƯ",
+    "nghia": "Bản kế hoạch"
+  },
+  {
+    "kanji": "半径",
+    "hira": "はんけい",
+    "han": "BÁN KÍNH",
+    "nghia": "Bán kính"
+  },
+  {
+    "kanji": "球の半径",
+    "hira": "きゅう の はんけい",
+    "han": "CẦU  BÁN KÍNH",
+    "nghia": "Bán kính mặt cầu"
+  },
+  {
+    "kanji": "抑える、押さえる",
+    "hira": "おさえる",
+    "han": "ỨC    ÁP",
+    "nghia": "Ấn xuống, khống chế, áp chế"
+  },
+  {
+    "kanji": "音",
+    "hira": "おと",
+    "han": "ÂM",
+    "nghia": "Âm thanh"
+  },
+  {
+    "kanji": "光",
+    "hira": "ひかり",
+    "han": "QUANG",
+    "nghia": "Ánh sáng"
+  },
+  {
+    "kanji": "",
+    "hira": "スケッチ",
+    "han": "",
+    "nghia": "Bản phác thảo"
+  },
+  {
+    "kanji": "原稿",
+    "hira": "げんこう",
+    "han": "NGUYÊN CAO",
+    "nghia": "Bản thảo"
+  },
+  {
+    "kanji": "本体",
+    "hira": "ほんたい",
+    "han": "BẢN THỂ",
+    "nghia": "Bản thể, thực thể"
+  },
+  {
+    "kanji": "汚す",
+    "hira": "よごす",
+    "han": "Ô",
+    "nghia": "Bẩn thỉu"
+  },
+  {
+    "kanji": "詳細図",
+    "hira": "しょうさいず",
+    "han": "TƯA TẾ ĐỒ",
+    "nghia": "Bản vẽ chi tiết"
+  },
+  {
+    "kanji": "平面図",
+    "hira": "へいめんず",
+    "han": "BÌNH DIỆN ĐỒ",
+    "nghia": "Bản vẽ chiếu bằng"
+  },
+  {
+    "kanji": "側面図",
+    "hira": "そくめんず",
+    "han": "TRẮC DIỆN ĐỒ",
+    "nghia": "Bản vẽ chiếu cạnh"
+  },
+  {
+    "kanji": "主投影図",
+    "hira": "しゅとうえいず",
+    "han": "CHỦ ĐẦU ẢNH ĐỒ",
+    "nghia": "Bản vẽ hình chiếu chính"
+  },
+  {
+    "kanji": "正面図",
+    "hira": "しょうめんず",
+    "han": "CHÁNH DIỆN ĐỒ",
+    "nghia": "Bản vẽ mặt trước"
+  },
+  {
+    "kanji": "全体図",
+    "hira": "ぜんたいず",
+    "han": "TOÀN THỂ ĐỒ",
+    "nghia": "Bản vẽ tổng quan"
+  },
+  {
+    "kanji": "一覧",
+    "hira": "",
+    "han": "NHẤT LÃM",
+    "nghia": "Bảng biểu"
+  },
+  {
+    "kanji": "",
+    "hira": "チェックリスト",
+    "han": "",
+    "nghia": "Bảng kiểm tra"
+  },
+  {
+    "kanji": "均一",
+    "hira": "きんいつ",
+    "han": "QUÂN NHẤT",
+    "nghia": "Bằng nhau, cân bằng"
+  },
+  {
+    "kanji": "扁平",
+    "hira": "へんぺい",
+    "han": "BIÊN BÌNH",
+    "nghia": "Bằng phẳng, nhẵn nhụi"
+  },
+  {
+    "kanji": "名札",
+    "hira": "なふだ",
+    "han": "DANH TRÁ",
+    "nghia": "Bảng tên"
+  },
+  {
+    "kanji": "",
+    "hira": "",
+    "han": "",
+    "nghia": "Bánh răng"
+  },
+  {
+    "kanji": "歯車",
+    "hira": "はぐるま、モシュール",
+    "han": "XỈ XA",
+    "nghia": "Bánh răng ô tô"
+  },
+  {
+    "kanji": "後輪",
+    "hira": "こうりん",
+    "han": "HẬU LUÂN",
+    "nghia": "Bánh xe sau"
+  },
+  {
+    "kanji": "前輪",
+    "hira": "ぜんりん",
+    "han": "TIỀN LUÂN",
+    "nghia": "Bánh xe trước"
+  },
+  {
+    "kanji": "車輪",
+    "hira": "しゃりん、",
+    "han": "XA LUÂN",
+    "nghia": "Bánh xe"
+  },
+  {
+    "kanji": "台風",
+    "hira": "たいふう",
+    "han": "THẢI PHONG",
+    "nghia": "Bão, gió lớn"
+  },
+  {
+    "kanji": "報告",
+    "hira": "ほうこく",
+    "han": "BÁO CÁO",
+    "nghia": "Báo cáo"
+  },
+  {
+    "kanji": "日報",
+    "hira": "にっぽう",
+    "han": "NHẬT BÁO",
+    "nghia": "Báo cáo ngày"
+  },
+  {
+    "kanji": "週報",
+    "hira": "しゅうほう",
+    "han": "CHÂU BÁO",
+    "nghia": "Báo cáo tuần"
+  },
+  {
+    "kanji": "月報",
+    "hira": "げっぽう",
+    "han": "THÁNG BÁO",
+    "nghia": "Báo cáo tháng"
+  },
+  {
+    "kanji": "保証",
+    "hira": "ほしょう",
+    "han": "BẢO CHỨNG",
+    "nghia": "Bảo đảm, bảo hành"
+  },
+  {
+    "kanji": "含む",
+    "hira": "ふくむ",
+    "han": "HÀM",
+    "nghia": "Bao hàm, chứa đựng"
+  },
+  {
+    "kanji": "保険",
+    "hira": "ほけん",
+    "han": "BẢO HIỂM",
+    "nghia": "Bảo hiểm"
+  },
+  {
+    "kanji": "整備",
+    "hira": "せいび",
+    "han": "CHỈNH BỊ",
+    "nghia": "Bảo quản, duy trì"
+  },
+  {
+    "kanji": "開始",
+    "hira": "かいし",
+    "han": "KHAI CHỦ",
+    "nghia": "Bắt đầu"
+  },
+  {
+    "kanji": "折れる",
+    "hira": "おれる",
+    "han": "CHIẾT",
+    "nghia": "Bẻ gập, bẻ gẫy"
+  },
+  {
+    "kanji": "傍ら",
+    "hira": "かたわら",
+    "han": "BƯỚC",
+    "nghia": "Bên cạnh, xung quanh"
+  },
+  {
+    "kanji": "近傍",
+    "hira": "きんぼう",
+    "han": "GẦN BƯỚC",
+    "nghia": "Bền dai, chịu được lâu"
+  },
+  {
+    "kanji": "右記",
+    "hira": "うき",
+    "han": "PHẢI KÝ",
+    "nghia": "Bên phải"
+  },
+  {
+    "kanji": "左記",
+    "hira": "さき",
+    "han": "TRÁI KÝ",
+    "nghia": "Bên trái"
+  },
+  {
+    "kanji": "奥",
+    "hira": "おく",
+    "han": "AO",
+    "nghia": "Bên trong, nội thất"
+  },
+  {
+    "kanji": "遭難",
+    "hira": "そうなん",
+    "han": "TÀO NAN",
+    "nghia": "Bị tai nạn, bị nguy hiểm"
+  },
+  {
+    "kanji": "変形",
+    "hira": "へんけい",
+    "han": "BIẾN HÌNH",
+    "nghia": "Biến dạng"
+  },
+  {
+    "kanji": "偏差",
+    "hira": "へんさ",
+    "han": "BIÊN SAI",
+    "nghia": "Độ lệch"
+  },
+  {
+    "kanji": "変更",
+    "hira": "へんこう",
+    "han": "BIẾN CANH",
+    "nghia": "Biến đổi"
+  },
+  {
+    "kanji": "消失",
+    "hira": "しょしつ",
+    "han": "TIÊU THẤT",
+    "nghia": "Biến mất, tiêu dùng"
+  },
+  {
+    "kanji": "編集",
+    "hira": "へんしゅう",
+    "han": "BIÊN TẬP",
+    "nghia": "Biên tập, biên soạn, chọn lọc"
+  },
+  {
+    "kanji": "変速",
+    "hira": "へんそく",
+    "han": "BIẾN TỐC",
+    "nghia": "Sang số, đổi số"
+  },
+  {
+    "kanji": "評価",
+    "hira": "ひょうか",
+    "han": "ĐÁNH GIÁ GIÁ",
+    "nghia": "Bình giá, đánh giá, định giá"
+  },
+  {
+    "kanji": "平均",
+    "hira": "へいきん",
+    "han": "BÌNH QUÂN",
+    "nghia": "Bình quân"
+  },
+  {
+    "kanji": "荷造り",
+    "hira": "にづくり",
+    "han": "HÀ TẠO",
+    "nghia": "Bó, gói, xếp đặt"
+  },
+  {
+    "kanji": "背景",
+    "hira": "はいけい",
+    "han": "BẠC CẢNH",
+    "nghia": "Bối cảnh"
+  },
+  {
+    "kanji": "量る、計る",
+    "hira": "はかる",
+    "han": "LƯỢNG   KẾ",
+    "nghia": "Cân, đo lường"
+  },
+  {
+    "kanji": "締める",
+    "hira": "しめる",
+    "han": "ĐỊNH",
+    "nghia": "Buộc chặt"
+  },
+  {
+    "kanji": "対称",
+    "hira": "たいしょう",
+    "han": "ĐỐI XƯNG",
+    "nghia": "Cân xứng, đối xứng"
+  },
+  {
+    "kanji": "",
+    "hira": "エッジ",
+    "han": "",
+    "nghia": "Cạnh, mép, rìa, gờ"
+  },
+  {
+    "kanji": "",
+    "hira": "アーム",
+    "han": "",
+    "nghia": "Cánh chịu lực"
+  },
+  {
+    "kanji": "以上",
+    "hira": "いじょう",
+    "han": "DĨ THƯỢNG",
+    "nghia": "Cao hơn"
+  },
+  {
+    "kanji": "",
+    "hira": "グレード",
+    "han": "",
+    "nghia": "Cấp bậc, mức độ"
+  },
+  {
+    "kanji": "上級",
+    "hira": "じょうきゅう",
+    "han": "THƯỢNG CẤP",
+    "nghia": "Cấp trên, thượng cấp"
+  },
+  {
+    "kanji": "切る",
+    "hira": "きる",
+    "han": "THIẾT",
+    "nghia": "Cắt"
+  },
+  {
+    "kanji": "構成",
+    "hira": "こうせい",
+    "han": "CẤU THÀNH",
+    "nghia": "Cấu thành"
+  },
+  {
+    "kanji": "構築",
+    "hira": "こうちく",
+    "han": "CẤU TRÚC",
+    "nghia": "cấu trúc, xây dựng"
+  },
+  {
+    "kanji": "",
+    "hira": "タッチ",
+    "han": "",
+    "nghia": "Chạm vào, đụng vào, kề sát"
+  },
+  {
+    "kanji": "抑える",
+    "hira": "おさえる",
+    "han": "ỨC",
+    "nghia": "Chặn, kẹp lại, không cho tiếp xúc"
+  },
+  {
+    "kanji": "認める",
+    "hira": "みとめる",
+    "han": "NHẬN",
+    "nghia": "Chấp nhận, thừa nhận"
+  },
+  {
+    "kanji": "厳密",
+    "hira": "げんみつ",
+    "han": "NGHIÊM MẬT",
+    "nghia": "Chặt chẽ, tỉ mỉ, nghiêm ngặt"
+  },
+  {
+    "kanji": "積み上げ",
+    "hira": "つみあげ",
+    "han": "TÍCH  THƯỢNG",
+    "nghia": "Chất đống, đống"
+  },
+  {
+    "kanji": "",
+    "hira": "フューエル",
+    "han": "",
+    "nghia": "Chất đốt, nguyên liệu"
+  },
+  {
+    "kanji": "品質",
+    "hira": "ひんしつ",
+    "han": "PHẨM CHẤT",
+    "nghia": "Chất lượng"
+  },
+  {
+    "kanji": "焼ける",
+    "hira": "やける",
+    "han": "THIÊU",
+    "nghia": "Cháy"
+  },
+  {
+    "kanji": "流す",
+    "hira": "ながす",
+    "han": "LƯU",
+    "nghia": "Chảy (nước chảy)"
+  },
+  {
+    "kanji": "飛び出す",
+    "hira": "とびだす",
+    "han": "PHI  XUẤT",
+    "nghia": "Chạy ra, nhảy ra"
+  },
+  {
+    "kanji": "漏れる",
+    "hira": "もれる",
+    "han": "LẬU",
+    "nghia": "Chảy ra, rò rỉ"
+  },
+  {
+    "kanji": "作る、造る",
+    "hira": "つくる",
+    "han": "TÁC   TẠO",
+    "nghia": "Chế tạo"
+  },
+  {
+    "kanji": "",
+    "hira": "チェック",
+    "han": "",
+    "nghia": "Kiểm tra"
+  },
+  {
+    "kanji": "差し込む",
+    "hira": "さしこむ",
+    "han": "SAI  VÀO",
+    "nghia": "Chèn vào, lồng vào"
+  },
+  {
+    "kanji": "指定",
+    "hira": "してい",
+    "han": "CHỈ ĐỊNH",
+    "nghia": "Chỉ định"
+  },
+  {
+    "kanji": "支配",
+    "hira": "しはい",
+    "han": "CHI PHỐI",
+    "nghia": "Chi phối, ảnh hưởng"
+  },
+  {
+    "kanji": "指摘",
+    "hira": "してき",
+    "han": "CHỈ TRÍCH",
+    "nghia": "Chỉ ra, chỉ trích"
+  },
+  {
+    "kanji": "指示",
+    "hira": "しじ",
+    "han": "CHỈ KÌN",
+    "nghia": "Chỉ thị"
+  },
+  {
+    "kanji": "要領",
+    "hira": "ようりょう",
+    "han": "YẾU LĨNH",
+    "nghia": "Chỉ dẫn"
+  },
+  {
+    "kanji": "他部品",
+    "hira": "たぶひん",
+    "han": "THA BỘ PHẨM",
+    "nghia": "Chi tiết khác"
+  },
+  {
+    "kanji": "部品",
+    "hira": "ぶひん",
+    "han": "BỘ PHẨM",
+    "nghia": "Chi tiết, bộ phận"
+  },
+  {
+    "kanji": "単品",
+    "hira": "たんぴん",
+    "han": "ĐƠN PHẨM",
+    "nghia": "Chi tiết đơn"
+  }
+]

@@ -1,0 +1,242 @@
+[
+  {
+    "kanji": "ホテル",
+    "han": "",
+    "hira": "",
+    "nghia": "Khách sạn"
+  },
+  {
+    "kanji": "スイート",
+    "han": "",
+    "hira": "",
+    "nghia": "Phòng khách sạn"
+  },
+  {
+    "kanji": "チェックイン",
+    "han": "",
+    "hira": "",
+    "nghia": "Nhận phòng"
+  },
+  {
+    "kanji": "チェックアウト",
+    "han": "",
+    "hira": "",
+    "nghia": "Trả phòng"
+  },
+  {
+    "kanji": "予約",
+    "han": "DỰ ƯỚC",
+    "hira": "よやく",
+    "nghia": "Đặt trước"
+  },
+  {
+    "kanji": "部屋番号",
+    "han": "BỘ ỐC PHIÊN HIỆU",
+    "hira": "へやばんごう",
+    "nghia": "Số phòng"
+  },
+  {
+    "kanji": "満室",
+    "han": "MÃN THẤT",
+    "hira": "まんしつ",
+    "nghia": "Kín phòng"
+  },
+  {
+    "kanji": "空室",
+    "han": "KHÔNG THẤT",
+    "hira": "くうしつ",
+    "nghia": "Còn phòng"
+  },
+  {
+    "kanji": "荷物",
+    "han": "HÀ VẬT",
+    "hira": "にもつ",
+    "nghia": "Hành lí"
+  },
+  {
+    "kanji": "駐車場",
+    "han": "TRÚ XA TRÀNG",
+    "hira": "ちゅうしゃじょう",
+    "nghia": "Bãi để xe"
+  },
+  {
+    "kanji": " ろうか",
+    "han": "",
+    "hira": "",
+    "nghia": "Hành lang"
+  },
+  {
+    "kanji": "  階段",
+    "han": "GIAI ĐOẠN",
+    "hira": "かいだん",
+    "nghia": "Cầu thang"
+  },
+  {
+    "kanji": "  エレベーター",
+    "han": "",
+    "hira": "",
+    "nghia": "Thang máy"
+  },
+  {
+    "kanji": " 受付",
+    "han": "THỤ PHÓ",
+    "hira": "うけつけ",
+    "nghia": "Lễ tân"
+  },
+  {
+    "kanji": " 非常口",
+    "han": "PHI THƯỜNG KHẨU",
+    "hira": "ひじょうぐち",
+    "nghia": "Lối thoát hiểm"
+  },
+  {
+    "kanji": " 警報",
+    "han": "CẢNH BÁO",
+    "hira": "けいほう",
+    "nghia": "Báo động"
+  },
+  {
+    "kanji": "  レストラン",
+    "han": "",
+    "hira": "",
+    "nghia": "Nhà hàng"
+  },
+  {
+    "kanji": "  ジムルーム",
+    "han": "",
+    "hira": "",
+    "nghia": "Phòng gym"
+  },
+  {
+    "kanji": "  クリーニングサービス",
+    "han": "",
+    "hira": "",
+    "nghia": "Dịch vụ giặt là"
+  },
+  {
+    "kanji": "  シングルルーム",
+    "han": "",
+    "hira": "",
+    "nghia": "Phòng đơn"
+  },
+  {
+    "kanji": "  ダブルルーム",
+    "han": "",
+    "hira": "",
+    "nghia": "Phòng đôi"
+  },
+  {
+    "kanji": "  ツインルーム",
+    "han": "",
+    "hira": "",
+    "nghia": "Phòng 2 giường"
+  },
+  {
+    "kanji": " スタンダードルーム",
+    "han": "",
+    "hira": "",
+    "nghia": "Phòng tiêu chuẩn"
+  },
+  {
+    "kanji": " 鍵",
+    "han": "KIỆN",
+    "hira": "かぎ",
+    "nghia": "Chìa khóa"
+  },
+  {
+    "kanji": " 両替",
+    "han": "LƯỠNG THẾ",
+    "hira": "りょうがえ",
+    "nghia": "Đổi tiền"
+  },
+  {
+    "kanji": "  トイレ",
+    "han": "",
+    "hira": "",
+    "nghia": "Nhà vệ sinh"
+  },
+  {
+    "kanji": " 税金",
+    "han": "THUẾ KIM",
+    "hira": "ぜいきん",
+    "nghia": "Thuế"
+  },
+  {
+    "kanji": " 支払い",
+    "han": "CHI PHẤT",
+    "hira": "しはらい",
+    "nghia": "Thanh toán"
+  },
+  {
+    "kanji": "  確認",
+    "han": "XÁC NHẬN",
+    "hira": "かくにん",
+    "nghia": "Xác nhận"
+  },
+  {
+    "kanji": "  テレビ",
+    "han": "",
+    "hira": "",
+    "nghia": "Tivi"
+  },
+  {
+    "kanji": " 電球",
+    "han": "ĐIỆN CẦU",
+    "hira": "でんきゅう",
+    "nghia": "Bóng đèn"
+  },
+  {
+    "kanji": " 割引",
+    "han": "CÁT DẪN",
+    "hira": "わりびき",
+    "nghia": "Giảm giá"
+  },
+  {
+    "kanji": " 毛布",
+    "han": "MAO BỐ",
+    "hira": "もうふ",
+    "nghia": "Chăn"
+  },
+  {
+    "kanji": " 枕",
+    "han": "CHẨM",
+    "hira": "まくら",
+    "nghia": "Gối"
+  },
+  {
+    "kanji": " 歯ブラシ",
+    "han": "XỈ",
+    "hira": "",
+    "nghia": "Bàn chải đánh răng"
+  },
+  {
+    "kanji": " タオル",
+    "han": "",
+    "hira": "",
+    "nghia": "Khăn"
+  },
+  {
+    "kanji": " 石鹸",
+    "han": "THẠCH KIỂM",
+    "hira": "せっけん",
+    "nghia": "Xà phòng"
+  },
+  {
+    "kanji": " 暖房",
+    "han": "NOÃN PHÒNG",
+    "hira": "だんぼう",
+    "nghia": "Máy sưởi"
+  },
+  {
+    "kanji": " 冷房",
+    "han": "LÃNH PHÒNG",
+    "hira": "れいぼう",
+    "nghia": "Máy lạnh"
+  },
+  {
+    "kanji": "  セキュリティボックス",
+    "han": "",
+    "hira": "",
+    "nghia": "Két sắt"
+  }
+]

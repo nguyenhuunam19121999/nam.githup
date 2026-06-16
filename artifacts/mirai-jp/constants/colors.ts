@@ -1,8 +1,8 @@
 /**
  * BẢNG MÀU CHỦ ĐẠO — Mirai.JP
  * ─────────────────────────────────────────────────────────────────
- * Màu chính:  #7C3AED  (rgb 124, 58, 237)  — tím violet
- * Màu tối hơn: #5B21B6                      — violet đậm (hover, viền)
+ * Màu chính:  #4ECDC4  (rgb 124, 58, 237)  — tím violet
+ * Màu tối hơn: #4ECDC4                      — violet đậm (hover, viền)
  * Nền ứng dụng: #f1f5f9                     — xám nhạt
  *
  * Cách dùng:
@@ -17,7 +17,7 @@ const colors = {
   light: {
     text: "#0a0a0a",
 
-    tint: "#7C3AED", /* old: #4ECDC4 */
+    tint: "#4ECDC4", /* old: #4ECDC4 */
 
     background: "#ffffff",
 
@@ -26,7 +26,7 @@ const colors = {
     card: "#f9f9f9",
     cardForeground: "#0a0a0a",
 
-    primary: "#7C3AED",       /* old: #4ECDC4 */
+    primary: "#4ECDC4",       /* old: #4ECDC4 */
     primaryForeground: "#ffffff",
 
     secondary: "#f0f0f0",
@@ -35,7 +35,7 @@ const colors = {
     muted: "#f0f0f0",
     mutedForeground: "#737373",
 
-    accent: "#7C3AED",        /* old: #4ECDC4 */
+    accent: "#4ECDC4",        /* old: #4ECDC4 */
     accentForeground: "#ffffff",
 
     destructive: "#ef4444",

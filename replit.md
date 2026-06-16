@@ -37,7 +37,7 @@ Japanese language learning mobile app built with Expo SDK 54 / React Native / ex
 - `app/index.tsx` — Home screen with JLPT levels, industry courses, vocab search, banner carousel, AuthMenu
 - `app/book-select.tsx` — Book series picker for N2/N3 (Mimikara/Soumatome)
 - `app/learning-menu.tsx` — Learning type selector (vocab, grammar, kanji, guide)
-- `app/flashcard.tsx` — Flashcard study screen with Quiz, Practice, and List modes
+- `app/vocab.tsx` — vocab study screen with Quiz, Practice, and List modes
 - `app/grammar.tsx` — Grammar list screen with level/type picker
 - `app/grammar-detail.tsx` — Grammar detail with structure, explanation, examples
 - `app/kanji.tsx` — Kanji grid browser with filtering

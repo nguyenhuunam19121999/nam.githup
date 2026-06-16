@@ -5,7 +5,11 @@
   "type": "module",
   "scripts": {
     "hello": "tsx ./src/hello.ts",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "generate-exams": "node ./src/generateExamFiles.js",
+    "generate-register": "node ./src/generateRegisterModules.js",
+    "prepare-exams": "npm run generate-exams && npm run generate-register",
+    "generate-all": "npm run generate-exams && npm run generate-register && npm run typecheck"
   },
   "devDependencies": {
     "@types/node": "catalog:",

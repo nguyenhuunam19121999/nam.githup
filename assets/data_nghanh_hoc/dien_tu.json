@@ -1,0 +1,26 @@
+[
+  {
+    "kanji": "電気・電子情報",
+    "hira": "でんき・でんしじょうほう",
+    "han": "Điện khí điện tử thông tin",
+    "nghia": "Ngành điện và điện tử, công nghệ thông tin",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "電子",
+    "hira": "でんし",
+    "han": "Điện tử",
+    "nghia": "Điện tử",
+    "week": 1,
+    "lesson": 1
+  },
+  {
+    "kanji": "情報",
+    "hira": "じょうほう",
+    "han": "Thông tin",
+    "nghia": "Thông tin, dữ liệu",
+    "week": 1,
+    "lesson": 2
+  }
+]
