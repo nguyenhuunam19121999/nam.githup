@@ -6,7 +6,7 @@
 
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
-import { BottomTabBar } from "@/components/BottomTabBar";
+import { BottomTabBar } from "../components/BottomTabBar";
 import {
   Alert,
   ScrollView,
@@ -55,7 +55,7 @@ function buildItems(): MenuItem[] {
   return [
     {
       id: "guide",
-      label: "Đố vui",
+      label: "Đang phát triển",
       renderIcon: () => <HexIcon />,
     },
     {

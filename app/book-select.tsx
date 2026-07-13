@@ -21,9 +21,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 
 // Màu chủ đạo (đồng bộ với toàn app)
-const TEAL = "#7C3AED" /* old: #4ECDC4 */;
-// Gradient header: từ trên #7C3AED xuống dưới #5B21B6 /* old: #4ECDC4 → #5e9a95 */
-const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
+const TEAL = "#004370" /* old: #4ECDC4 */;
+const GRAD = ["#004370", "#004370"]  as const;
 
 // Cấu trúc 1 cuốn sách hiển thị trong danh sách
 interface Book {
@@ -99,21 +98,11 @@ export default function BookSelectScreen() {
       <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
-          <TouchableOpacity
-            style={s.backBtn}
-            onPress={() => router.back()}
-            activeOpacity={0.7}
-            hitSlop={10}
-          >
+          <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7} hitSlop={10}>
             <Text style={s.backIcon}>‹</Text>
           </TouchableOpacity>
-          <View style={{ flex: 1 }} />
-          {/* Logo thương hiệu góc phải */}
-          <View style={s.logoBadge}>
-            <Text style={s.logoText}>Mirai</Text>
-            <Text style={s.logoDot}>.</Text>
-            <Text style={s.logoJP}>JP</Text>
-          </View>
+          <Text style={s.topTitle}>Chọn sách · JLPT {level}</Text>
+          <View style={{ width: 40 }} />
         </View>
       </SafeAreaView>
       </LinearGradient>
@@ -171,10 +160,6 @@ const s = StyleSheet.create({
     justifyContent: "center",
   },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-  logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 4, height: 50 },
-  logoText: { color: "#fff", fontSize: 22, fontWeight: "800" as const, letterSpacing: 0.3 },
-  logoDot:  { color: TEAL,   fontSize: 24, fontWeight: "900" as const },
-  logoJP:   { color: "#fff", fontSize: 22, fontWeight: "900" as const, letterSpacing: 0.5 },
   topTitle: {
     flex: 1,
     color: "#fff",

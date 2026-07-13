@@ -8,7 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useRouter } from "expo-router";
-import { BottomTabBar } from "@/components/BottomTabBar";
+import { BottomTabBar } from "../components/BottomTabBar";
 import { LinearGradient } from "expo-linear-gradient";
 import React, { useMemo, useState } from "react";
 import {
@@ -22,7 +22,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import { getKanjiByBook, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { getGrammarByBook, type GrammarItem } from "../assets/data_nn";
-import { getVocab, type RawVocab } from "../assets/vocab";
+import { getVocab, getVocabByBook, type RawVocab } from "../assets/vocab";
 
 const TEAL = "#7C3AED" /* old: #4ECDC4 */;
 const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
@@ -39,9 +39,9 @@ interface PartConfig {
 }
 
 const PARTS: PartConfig[] = [
-  { key: "kanji",   label: "Hán tự",  jpLabel: "漢字", color: "#E03131", weeks: 6, lessonsPerWeek: 6 },
-  { key: "vocab",   label: "Từ vựng", jpLabel: "語彙", color: "#2563EB", weeks: 4, lessonsPerWeek: 6 },
-  { key: "grammar", label: "Ngữ pháp",jpLabel: "文法", color: "#7C3AED", weeks: 7, lessonsPerWeek: 0 },
+  { key: "kanji",   label: "Hán tự",  jpLabel: "漢字", color: "#E03131", weeks: 8, lessonsPerWeek: 6 },
+  { key: "vocab",   label: "Từ vựng", jpLabel: "語彙", color: "#2563EB", weeks: 8, lessonsPerWeek: 6 },
+  { key: "grammar", label: "Ngữ pháp",jpLabel: "文法", color: "#7C3AED", weeks: 8, lessonsPerWeek: 0 },
 ];
 
 // ─── Group kanji/vocab by week → lesson ──────────────────────────────────────
@@ -50,12 +50,25 @@ function groupByWeekLesson<T extends { week?: number; lesson?: number }>(
   numWeeks: number,
   lessonsPerWeek: number,
 ): { week: number; total: number; lessons: { lesson: number; items: T[] }[] }[] {
-  return Array.from({ length: numWeeks }, (_, wi) => {
+  const actualWeeks = items.length > 0
+    ? Math.max(...items.map((i) => i.week ?? 0), numWeeks)
+    : numWeeks;
+
+  return Array.from({ length: actualWeeks }, (_, wi) => {
     const w = wi + 1;
+    const weekItems = items.filter((i) => i.week === w);
+
+    const lessonsInWeek = weekItems.map((i) => i.lesson ?? 0);
+    const isPerWeekLesson = lessonsInWeek.length > 0
+      && lessonsInWeek.every((l) => l >= 1 && l <= lessonsPerWeek);
+
     const lessons = Array.from({ length: lessonsPerWeek }, (_, li) => {
-      const l = wi * lessonsPerWeek + li + 1;
-      return { lesson: l, items: items.filter((i) => i.lesson === l) };
+      const globalL = wi * lessonsPerWeek + li + 1;
+      const localL = li + 1;
+      const targetLesson = isPerWeekLesson ? localL : globalL;
+      return { lesson: globalL, items: weekItems.filter((i) => i.lesson === targetLesson) };
     });
+
     const total = lessons.reduce((s, l) => s + l.items.length, 0);
     return { week: w, total, lessons };
   });
@@ -79,12 +92,18 @@ export default function SoumatomeN2Screen() {
   const [expandedWeeks, setExpandedWeeks] = useState<Set<number>>(new Set([1]));
 
   const kanjiData = useMemo(() => getKanjiByBook("soumatome-n2") as (KanjiItem & { lesson?: number; week?: number })[], []);
-  const vocabData  = useMemo(() => getVocab(undefined, "soumatome-n2") as (RawVocab & { lesson?: number; week?: number })[], []);
+  const vocabData  = useMemo(() => getVocabByBook("soumatome-n2") as (RawVocab & { lesson?: number; week?: number })[], []);
   const grammarData = useMemo(() => getGrammarByBook("soumatome-n2"), []);
 
-  const kanjiWeeks   = useMemo(() => groupByWeekLesson(kanjiData, 6, 6), [kanjiData]);
-  const vocabWeeks   = useMemo(() => groupByWeekLesson(vocabData, 4, 6), [vocabData]);
-  const grammarWeeks = useMemo(() => groupGrammarByWeek(grammarData, 7), [grammarData]);
+  const kanjiWeeks   = useMemo(() => groupByWeekLesson(kanjiData, 8, 6), [kanjiData]);
+  const vocabWeeks   = useMemo(() => groupByWeekLesson(vocabData, 8, 6), [vocabData]);
+  const grammarWeeks = useMemo(() => {
+    const actualWeeks = grammarData.length > 0
+      ? Math.max(...grammarData.map((g) => (g as any).week ?? 0))
+      : 8;
+    return groupGrammarByWeek(grammarData, actualWeeks);
+  }, [grammarData]);
+  // const grammarWeeks = useMemo(() => groupGrammarByWeek(grammarData, 7), [grammarData]);
 
   const currentPart = PARTS.find((p) => p.key === activePart)!;
 
@@ -232,18 +251,12 @@ export default function SoumatomeN2Screen() {
             <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
               <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
-            <View style={s.logoBadge}>
-              <Text style={s.logoMirai}>Mirai</Text>
-              <Text style={s.logoDot}>.</Text>
-              <Text style={s.logoJP}>JP</Text>
-            </View>
-          </View>
-          <View style={s.headerTitleRow}>
             <Text style={s.headerTitle}>総まとめ N2</Text>
+            <View style={{ width: 40 }} />
           </View>
 
           {/* Summary chips */}
-          <View style={s.summaryRow}>
+          {/* <View style={s.summaryRow}>
             <View style={s.summaryChip}>
               <Text style={s.summaryNum}>{kanjiData.length}</Text>
               <Text style={s.summaryLbl}>Kanji</Text>
@@ -258,7 +271,7 @@ export default function SoumatomeN2Screen() {
               <Text style={s.summaryNum}>{grammarData.length}</Text>
               <Text style={s.summaryLbl}>Ngữ pháp</Text>
             </View>
-          </View>
+          </View> */}
 
           {/* Part tabs */}
           <View style={s.partTabsRow}>
@@ -272,7 +285,7 @@ export default function SoumatomeN2Screen() {
                   activeOpacity={0.8}
                 >
                   <Text style={[s.partTabJP, active && s.partTabJPActive]}>{p.jpLabel}</Text>
-                  <Text style={[s.partTabVI, active && s.partTabVIActive]}>{p.label}</Text>
+                  {/* <Text style={[s.partTabVI, active && s.partTabVIActive]}>{p.label}</Text> */}
                 </TouchableOpacity>
               );
             })}
@@ -325,12 +338,6 @@ const s = StyleSheet.create({
     paddingTop: 6,
     paddingBottom: 0,
   },
-  headerTitleRow: {
-    alignItems: "center",
-    paddingHorizontal: 16,
-    paddingTop: 2,
-    paddingBottom: 8,
-  },
   titleWrap: { flex: 1 },
   backBtn: {
     width: 40, height: 40, borderRadius: 20,
@@ -339,30 +346,27 @@ const s = StyleSheet.create({
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
   headerTitle: { color: "#fff", fontSize: 20, fontWeight: "900", letterSpacing: 0.5 },
   headerSub:   { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600", marginTop: 2 },
-  logoBadge: { flexDirection: "row", alignItems: "center" },
-  logoMirai: { color: "#fff", fontSize: 22, fontWeight: "800" },
-  logoDot:   { color: "#fff", fontSize: 22, fontWeight: "900" },
-  logoJP:    { color: "#fff", fontSize: 20, fontWeight: "900" },
 
   /* Summary chips */
-  summaryRow: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    paddingVertical: 8,
-    paddingHorizontal: 20,
-    gap: 0,
-  },
-  summaryChip: { flex: 1, alignItems: "center" },
-  summaryNum:  { color: "#fff", fontSize: 22, fontWeight: "900" },
-  summaryLbl:  { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600", marginTop: 1 },
-  summaryDivider: { width: 1, height: 32, backgroundColor: "rgba(255,255,255,0.3)" },
+  // summaryRow: {
+  //   flexDirection: "row",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   paddingVertical: 8,
+  //   paddingHorizontal: 20,
+  //   gap: 0,
+  // },
+  // summaryChip: { flex: 1, alignItems: "center" },
+  // summaryNum:  { color: "#fff", fontSize: 22, fontWeight: "900" },
+  // summaryLbl:  { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600", marginTop: 1 },
+  // summaryDivider: { width: 1, height: 32, backgroundColor: "rgba(255,255,255,0.3)" },
 
   /* Part tabs */
   partTabsRow: {
     flexDirection: "row",
     paddingHorizontal: 12,
     paddingBottom: 10,
+    paddingTop: 10,
     gap: 8,
   },
   partTab: {
@@ -374,8 +378,8 @@ const s = StyleSheet.create({
   },
   partTabJP:       { color: "rgba(255,255,255,0.85)", fontSize: 16, fontWeight: "900" },
   partTabJPActive: { color: "#fff" },
-  partTabVI:       { color: "rgba(255,255,255,0.65)", fontSize: 9,  fontWeight: "600", marginTop: 1 },
-  partTabVIActive: { color: "rgba(255,255,255,0.9)" },
+  // partTabVI:       { color: "rgba(255,255,255,0.65)", fontSize: 9,  fontWeight: "600", marginTop: 1 },
+  // partTabVIActive: { color: "rgba(255,255,255,0.9)" },
 
   /* Scroll */
   scroll: { flex: 1 },

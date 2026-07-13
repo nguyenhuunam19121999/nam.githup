@@ -16,8 +16,8 @@ export function BottomTabBar() {
   const handleNewsPress = () => {
     Alert.alert(
       "📢 Thông báo",
-      "Tính năng Tin Tức đang được phát triển, sớm cập nhật!",
-      [{ text: "Đã hiểu", style: "default" }]
+      "Đang phát triển",
+      [{ text: "OK", style: "default" }]
     );
   };
 
@@ -32,7 +32,7 @@ export function BottomTabBar() {
         >
           <Text style={[s.icon, pathname === "/exam" && s.iconActive]}>🎓</Text>
           <Text style={[s.label, pathname === "/exam" && s.labelActive]}>
-            Luyện Thi
+            Đang phát triển
           </Text>
         </TouchableOpacity>
 
@@ -48,7 +48,7 @@ export function BottomTabBar() {
           {/* ✅ Đã cập nhật pathname thành /news để đồng bộ với tính năng Tin Tức */}
           <Text style={[s.icon, pathname === "/news" && s.iconActive]}>📝</Text>
           <Text style={[s.label, pathname === "/news" && s.labelActive]}>
-            Tin Tức 
+            Đang phát triển 
           </Text>
         </TouchableOpacity>
 
@@ -77,8 +77,7 @@ const s = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingTop: 6,
-    paddingBottom: 4,
-    height: 64,
+    height: 32,
     position: "relative",
   },
   tab: { 
@@ -88,7 +87,7 @@ const s = StyleSheet.create({
     paddingHorizontal: 8,
   },
   icon: { 
-    fontSize: 28, 
+    fontSize: 22, 
     opacity: 0.45,
   },
   iconActive: { 
@@ -96,10 +95,10 @@ const s = StyleSheet.create({
     color: TEAL,
   },
   label: { 
-    fontSize: 14, 
+    fontSize: 12, 
     color: "#475569", 
     marginTop: 2, 
-    fontWeight: "600" 
+    fontWeight: "600", 
   },
   labelActive: { 
     color: TEAL,
@@ -119,11 +118,12 @@ const s = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 30,
-    backgroundColor: TEAL,
+    // backgroundColor: TEAL,
+    backgroundColor: "transparent",
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 4,
-    borderColor: "#fff",
+    borderColor: "#d9ccd5",
     shadowColor: TEAL,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.35,

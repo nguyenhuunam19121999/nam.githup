@@ -1,928 +1,542 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// kanji-detail.tsx
+// Trang chi tiết Kanji — hỗ trợ nhiều chữ (tab chuyển đổi)
+// Tìm dữ liệu từ kanjifull.json (ưu tiên) → fallback n5→n1
+// ─────────────────────────────────────────────────────────────────────────────
 
-// // ─────────────────────────────────────────────────────────────────────────────
-// kanji-detail.tsx───
-
-import { useLocalSearchParams, useRouter } from "expo-router";
-import { BottomTabBar } from "@/components/BottomTabBar";
+import { useLocalSearchParams, useRouter, Stack } from "expo-router";
+// import { BottomTabBar } from "@/components/BottomTabBar";
+import { BottomTabBar } from "../components/BottomTabBar";
 import {
   ScrollView,
-  StatusBar,
+  // StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-
-import { LinearGradient } from "expo-linear-gradient";
-// import {
-//   getKanjiById,
-//   getKanjiByCharFull,
-//   getExamplesByKanjiChar,
-//   type KanjiItem,
-//   type KanjiExample,
-// } from "../assets/data_JLPT_kanji";
+import { StatusBar } from 'expo-status-bar';
+// import { SafeAreaView } from "react-native-safe-area-context";
+// import { LinearGradient } from "expo-linear-gradient";
 import {
+  getKanjiByCharFull,
+  getExamplesByKanjiChar,
   type KanjiItem,
   type KanjiExample,
 } from "../assets/data_JLPT_kanji";
-import {
-  getKanjiByChar,
-  getExamplesByKanjiChar,
-} from "../services/kanjiRepository";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 import { WritingPracticeModal } from "../components/WritingPracticeModal";
 import { KanjiNotesModal } from "../components/KanjiNotesModal";
-import React, { useMemo, useState, useEffect, useRef } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 
-// ✅ MÀU CHỦ ĐẠO
-const TEAL = "#1F6F7A";
+// const TEAL = "#1F6F7A";
+// const TEAL_DARK = "#1c5765";
+const TEAL = "#1f7a1f";
 const TEAL_DARK = "#1c5765";
-const GRAD = [TEAL, TEAL_DARK] as const;
+const BG_GRAY = "#f0f4f8";
 const TEXT_COLOR = "#e47b0b";
+// const bgrColor = "#f1f5f9";
 
-// ─── TabItem: hiển thị từng chữ Kanji trên thanh tab ───────
-const TabItem = React.memo(
-  ({
-    char,
-    index,
-    isActive,
-    onPress,
-  }: {
-    char: string;
-    index: number;
-    isActive: boolean;
-    onPress: (idx: number) => void;
-  }) => (
-    <TouchableOpacity
-      style={[styles.tabItem, isActive && styles.tabItemActive]}
-      onPress={() => onPress(index)}
-    >
-      <Text style={[styles.tabText, isActive && styles.tabTextActive]}>{char}</Text>
-    </TouchableOpacity>
-  )
-);
+const MAX_EXAMPLES = 15
+
+// Thêm gần đầu file, cùng chỗ các hằng số TEAL...
+function extractKanjiChars(text: string): string[] {
+  const chars: string[] = [];
+  const seen = new Set<string>();
+  for (const c of text) {
+    if (/[\u3400-\u9fff\uf900-\ufaff]/.test(c) && !seen.has(c)) {
+      seen.add(c);
+      chars.push(c);
+    }
+  }
+  return chars;
+}
+
+// ─── TabItem ─────────────────────────────────────────────────────────────────
+const TabItem = React.memo(({
+  char, index, isActive, onPress,
+}: {
+  char: string; index: number; isActive: boolean; onPress: (idx: number) => void;
+}) => (
+  <TouchableOpacity
+    style={[styles.tabItem, isActive && styles.tabItemActive]}
+    onPress={() => onPress(index)}
+  >
+    <Text style={[styles.tabText, isActive && styles.tabTextActive]}>{char}</Text>
+  </TouchableOpacity>
+));
 
 export default function KanjiDetailScreen() {
   const router = useRouter();
-  const params = useLocalSearchParams<{ 
+  const params = useLocalSearchParams<{
     id?: string;
-    kanjiChars?: string;  // ← THÊM: nhận danh sách chữ từ params
+    kanji?: string;
+    kanjiChars?: string;
     fromSearch?: string;
     currentIndex?: string;
-    totalResults?: string;
     kanjiList?: string;
   }>();
-  
+
   const id = typeof params.id === "string" ? params.id : "";
-  
-  // 🔥 LẤY DANH SÁCH CHỮ KANJI
-  // Ưu tiên: nếu có kanjiChars (mảng) thì dùng, nếu không thì dùng id
+  const directKanji = typeof params.kanji === "string" ? params.kanji : "";
   const kanjiChars = useMemo(() => {
-    // Ưu tiên kanjiChars (JSON array)
-    if (params.kanjiChars) {
+    const candidates = [params.kanjiChars, id || directKanji].filter(Boolean) as string[];
+
+    for (const candidate of candidates) {
+      if (!candidate) continue;
+
+      let raw: string[] = [];
       try {
-        return JSON.parse(params.kanjiChars) as string[];
+        raw = JSON.parse(candidate) as string[];
       } catch {
-        return params.kanjiChars.split(',').filter(Boolean);
+        raw = candidate.split(',').filter(Boolean);
+      }
+
+      const seen = new Set<string>();
+      const result: string[] = [];
+      for (const entry of raw) {
+        for (const c of extractKanjiChars(entry)) {
+          if (!seen.has(c)) { seen.add(c); result.push(c); }
+        }
+      }
+
+      if (result.length > 0) {
+        return result;
+      }
+
+      if (raw.length > 0) {
+        return raw;
       }
     }
-    // Fallback: id có thể là "握 金" (nhiều chữ cách nhau bởi khoảng trắng)
+
     if (id) {
-      const chars = id.split(/\s+/).filter(Boolean);
+      const chars = extractKanjiChars(id.replace(/\s+/g, ''));
       return chars.length > 0 ? chars : [id];
     }
+
+    if (directKanji) {
+      const chars = extractKanjiChars(directKanji.replace(/\s+/g, ''));
+      return chars.length > 0 ? chars : [directKanji];
+    }
+
     return [];
-  }, [params.kanjiChars, id]);
+  }, [params.kanjiChars, id, directKanji]);
+  // const kanjiChars = useMemo(() => {
+  //   if (params.kanjiChars) {
+  //     try { return JSON.parse(params.kanjiChars) as string[]; }
+  //     catch { return params.kanjiChars.split(',').filter(Boolean); }
+  //   }
+  //   if (id) {
+  //     const chars = [...id.replace(/\s+/g, '')].filter(Boolean);
+  //     return chars.length > 0 ? chars : [id];
+  //   }
+  //   return [];
+  // }, [params.kanjiChars, id]);
 
   const totalKanji = kanjiChars.length;
 
-  // Tab đang chọn
+  // ── Tab state ─────────────────────────────────────────────────────────────
   const [tabIndex, setTabIndex] = useState(0);
-  useEffect(() => {
-    setTabIndex(0);
-  }, [kanjiChars.join(',')]);
-
-  const handleTabChange = (index: number) => {
-    setTabIndex(index);
-  };
+  useEffect(() => { setTabIndex(0); }, [kanjiChars.join(',')]);
 
   const activeChar = kanjiChars[tabIndex] ?? kanjiChars[0] ?? "";
 
-  // 🔥 TRA CỨU CHỮ KANJI TỪ kanjifull.json (giống KanjiDetailInline)
+  // ── Load dữ liệu ──────────────────────────────────────────────────────────
   const [kanjiData, setKanjiData] = useState<KanjiItem | null>(null);
   const [examples, setExamples] = useState<KanjiExample[]>([]);
   const [loading, setLoading] = useState(true);
 
-  // Load dữ liệu khi activeChar thay đổi
   useEffect(() => {
-    if (!activeChar) {
-      setKanjiData(null);
-      setExamples([]);
-      setLoading(false);
-      return;
-    }
+    if (!activeChar) { setKanjiData(null); setExamples([]); setLoading(false); return; }
 
     setLoading(true);
     setKanjiData(null);
     setExamples([]);
 
-    const rafId = requestAnimationFrame(async () => {
-      const data = await getKanjiByChar(activeChar);
+    // requestAnimationFrame: ~16ms, không block UI
+    const rafId = requestAnimationFrame(() => {
+      // getKanjiByCharFull → getKanjiById → tìm kanjifull trước, fallback n5→n1
+      const data = getKanjiByCharFull(activeChar) || null;
       setKanjiData(data);
-      setExamples(await getExamplesByKanjiChar(activeChar));
+
+      // LẤY TỪ JSON + BỔ SUNG TỪ TỪ VỰNG:
+      const inlineExamples = (data as any)?.examples || [];
+      const vocabExamples = getExamplesByKanjiChar(activeChar, MAX_EXAMPLES);
+      const combined = [...inlineExamples];
+      for (const ex of vocabExamples) {
+        if (combined.length >= MAX_EXAMPLES) break;
+        if (!combined.some(c => c.jp === ex.jp)) {
+          combined.push(ex);
+        }
+      }
+      setExamples(combined);
       setLoading(false);
     });
 
-    return () => cancelAnimationFrame(rafId );
+    return () => cancelAnimationFrame(rafId);
   }, [activeChar]);
-
-  // State mở modal
+  // ── Modal state ───────────────────────────────────────────────────────────
   const [writingItem, setWritingItem] = useState<KanjiItem | null>(null);
   const [notesItem, setNotesItem] = useState<KanjiItem | null>(null);
-  const [kanjiList, setKanjiList] = useState<KanjiItem[]>([]);
-  const [currentKanjIdx, setCurrentKanjIdx] = useState(0);
-  const [isFromSearch, setIsFromSearch] = useState(false);
 
-  // Nếu đến từ trang tìm kiếm
-  // useEffect(() => {
-  //   if (params.fromSearch === 'true' && params.kanjiList) {
-  //     setIsFromSearch(true);
-  //     try {
-  //       const ids = JSON.parse(params.kanjiList);
-  //       // const kanjis = ids.map((id: string) => getKanjiById(id)).filter(Boolean);
-  //       const kanjis = (await Promise.all(
-  //         ids.map((id: string) => getKanjiByChar(id))
-  //       )).filter(Boolean);
-  //       setKanjiList(kanjis as KanjiItem[]);
-  //       setCurrentKanjIdx(parseInt(params.currentIndex || '0', 10));
-  //     } catch (e) {
-  //       // ignore
-  //     }
-  //   }
-  // }, [params.fromSearch, params.kanjiList, params.currentIndex]);
+  // ── Header chung (dùng lại ở nhiều trạng thái) ───────────────────────────
+  const renderHeader = () => (
+    <View style={styles.header}>
+      <TouchableOpacity onPress={() => router.back()} style={styles.backBtnHeader} hitSlop={8}>
+        <Text style={styles.backIcon}>‹</Text>
+      </TouchableOpacity>
+      <Text style={styles.headerTitle}>Chi tiết Kanji</Text>
+      <View style={{ width: 42 }} />
+    </View>
+  );
 
-  useEffect(() => {
-  if (params.fromSearch === 'true' && params.kanjiList) {
-      setIsFromSearch(true);
-      (async () => {
-        try {
-          const ids = JSON.parse(params.kanjiList!);
-          const kanjis = (await Promise.all(
-            ids.map((id: string) => getKanjiByChar(id))
-          )).filter(Boolean);
-          setKanjiList(kanjis as KanjiItem[]);
-          setCurrentKanjIdx(parseInt(params.currentIndex || '0', 10));
-        } catch (e) {}
-      })();
-    }
-  }, [params.fromSearch, params.kanjiList, params.currentIndex]);
-
-  const goToNextKanji = () => {
-    if (kanjiList.length > 0 && currentKanjIdx + 1 < kanjiList.length) {
-      const nextKanji = kanjiList[currentKanjIdx + 1];
-      router.setParams({ id: nextKanji.id });
-      setCurrentKanjIdx(currentKanjIdx + 1);
-    }
+  // ── Tab bar (luôn hiện khi có nhiều chữ, kể cả đang loading) ─────────────
+  const renderTabs = () => {
+    if (totalKanji <= 1) return null;
+    return (
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        style={styles.tabBar}
+        contentContainerStyle={{ paddingVertical: 0 }}
+        removeClippedSubviews={true}
+      >
+        <View style={styles.tabContainer}>
+          {kanjiChars.map((char, idx) => (
+            <TabItem
+              key={`${char}_${idx}`}
+              char={char}
+              index={idx}
+              isActive={tabIndex === idx}
+              onPress={setTabIndex}
+            />
+          ))}
+        </View>
+      </ScrollView>
+    );
   };
 
-  const goToPrevKanji = () => {
-    if (kanjiList.length > 0 && currentKanjIdx > 0) {
-      const prevKanji = kanjiList[currentKanjIdx - 1];
-      router.setParams({ id: prevKanji.id });
-      setCurrentKanjIdx(currentKanjIdx - 1);
-    }
-  };
-
-  return (
-    <View style={styles.root}>
-      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
-        <SafeAreaView style={styles.topBar} edges={["top", "left", "right"]}>
-          <View style={styles.topBarInner}>
-            <TouchableOpacity style={styles.iconBtn} onPress={() => router.back()} hitSlop={8}>
-              <Text style={styles.backIcon}>‹</Text>
-            </TouchableOpacity>
-            <View style={{ flex: 1 }} />
-            <View style={styles.logoBadge}>
-              <Text style={styles.logoText}>Mirai</Text>
-              <Text style={styles.logoDot}>.</Text>
-              <Text style={styles.logoJP}>JP</Text>
-            </View>
-          </View>
-        </SafeAreaView>
-      </LinearGradient>
-
-      {/* ─── TAB: luôn render nếu có nhiều chữ, kể cả đang loading ─── */}
-      {totalKanji > 1 && (
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          style={styles.tabBar}
-          contentContainerStyle={{ paddingVertical: 0 }}
-          removeClippedSubviews={true}
-        >
-          <View style={styles.tabContainer}>
-            {kanjiChars.map((char, idx) => (
-              <TabItem
-                key={`${char}_${idx}`}
-                char={char}
-                index={idx}
-                isActive={tabIndex === idx}
-                onPress={handleTabChange}
-              />
-            ))}
-          </View>
-        </ScrollView>
-      )}
-
-      {/* ─── NỘI DUNG: 3 trạng thái loading / not found / data ─── */}
-      {loading ? (
+  // ── Loading ───────────────────────────────────────────────────────────────
+  if (loading) {
+    return (
+      <>
+      <Stack.Screen options={{ headerShown: false }} />
+      <View style={styles.root}>
+        {/* <Stack.Screen options={{ headerShown: false }} /> */}
+        <StatusBar style="dark" />
+        {renderHeader()}
+        {renderTabs()}
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <Text style={{ color: TEAL, fontSize: 15 }}>Đang tải...</Text>
         </View>
-      ) : !kanjiData ? (
-        <View style={{ flex: 1, justifyContent: 'center', padding: 24 }}>
-          <Text>Không tìm thấy chữ "{activeChar}".</Text>
+        <BottomTabBar />
+      </View>
+      </>
+    );
+  }
+
+  // ── Không tìm thấy ────────────────────────────────────────────────────────
+  if (!kanjiData) {
+    return (
+      <>
+        <Stack.Screen options={{ headerShown: false }} />
+        <View style={styles.root}>
+          <StatusBar style="dark" />
+          {renderHeader()}
+          {renderTabs()}
+          <View style={{ flex: 1, justifyContent: 'center', padding: 24 }}>
+            <Text style={{ fontSize: 16, color: '#475569' }}>
+              Không tìm thấy chữ{activeChar ? ` "${activeChar}"` : ""} trong cơ sở dữ liệu.
+            </Text>
+          </View>
+          <BottomTabBar />
         </View>
-      ) : (
+      </>
+    );
+  }
+  // if (!kanjiData) {
+  //   return (
+  //     <View style={styles.root}>
+  //       <Stack.Screen options={{ headerShown: false }} />
+  //       <StatusBar style="dark" />
+  //       {renderHeader()}
+  //       {renderTabs()}
+  //       <View style={{ flex: 1, justifyContent: 'center', padding: 24 }}>
+  //         <Text style={{ fontSize: 16, color: '#475569' }}>
+  //           Không tìm thấy chữ{activeChar ? ` "${activeChar}"` : ""} trong cơ sở dữ liệu.
+  //         </Text>
+  //       </View>
+  //       <BottomTabBar />
+  //     </View>
+  //   );
+  // }
+
+  // ── Main render ───────────────────────────────────────────────────────────
+  return (
+    <>
+      <Stack.Screen options={{ headerShown: false }} />
+      <View style={styles.root}>
+        {/* <Stack.Screen options={{ headerShown: false }} /> */}
+        <StatusBar style="dark" />
+        {renderHeader()}
+        {renderTabs()}
+
         <ScrollView
           style={styles.scroll}
           contentContainerStyle={styles.scrollContent}
           showsVerticalScrollIndicator={false}
         >
-          {/* giữ nguyên toàn bộ phần card + FeedbackSection như cũ */}
           <View style={styles.card}>
-            {/* ... không đổi gì ... */}
+            {/* ── Header: Chữ kanji + Hán Việt + Actions ── */}
+            <View style={styles.headerRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.bigKanji}>{kanjiData.kanji}</Text>
+                <Text style={styles.bigHanViet}>{kanjiData.hanviet?.join(' • ') || ''}</Text>
+              </View>
+              <View style={styles.headerActions}>
+                <TouchableOpacity
+                  style={[styles.actionBtn, styles.actionBtnActive]}
+                  onPress={() => setWritingItem(kanjiData)} hitSlop={6}>
+                  <Text style={[styles.actionIcon, styles.actionIconActive]}>✎</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[styles.actionBtn, styles.actionBtnActive]}
+                  onPress={() => setNotesItem(kanjiData)} hitSlop={6}>
+                  <Text style={[styles.actionIcon, styles.actionIconActive]}>📋</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+
+            <View style={styles.divider} />
+
+            {/* ── Phát âm ── */}
+            <Text style={styles.sectionTitle}>Phát âm</Text>
+            {kanjiData.readings?.kunyomi?.length > 0 && (
+              <View style={styles.pronRow}>
+                <Text style={styles.diamond}>◆</Text>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.pronLabel}>Kunyomi</Text>
+                  <Text style={styles.pronValue}>{kanjiData.readings.kunyomi.join("、")}</Text>
+                </View>
+              </View>
+            )}
+            {kanjiData.readings?.onyomi?.length > 0 && (
+              <View style={styles.pronRow}>
+                <Text style={styles.diamond}>◆</Text>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.pronLabel}>Onyomi</Text>
+                  <Text style={styles.pronValue}>{kanjiData.readings.onyomi.join("、")}</Text>
+                </View>
+              </View>
+            )}
+
+            {/* ── Thứ tự nét ── */}
+            <View style={styles.strokeWrap}>
+              <KanjiStrokeOrder kanji={kanjiData.kanji} size={180} />
+            </View>
+
+            {/* ── Thống kê ── */}
+            <View style={styles.statsRow}>
+              <View style={styles.statCol}>
+                <View style={styles.statChip}><Text style={styles.statChipText}>JLPT</Text></View>
+                <Text style={styles.statValue}>{kanjiData.jlpt || "—"}</Text>
+              </View>
+              <View style={styles.statCol}>
+                <View style={styles.statChip}><Text style={styles.statChipText}>Tần suất</Text></View>
+                <Text style={styles.statValue}>{kanjiData.freq ? `#${kanjiData.freq}/2500` : "—"}</Text>
+              </View>
+              <View style={styles.statCol}>
+                <View style={styles.statChip}><Text style={styles.statChipText}>Số nét</Text></View>
+                <Text style={styles.statValue}>{kanjiData.strokes || "—"}</Text>
+              </View>
+            </View>
+
+            <View style={styles.divider} />
+
+            {/* ── Bộ thủ ── */}
+            {(kanjiData.components ?? []).length > 0 && (
+              <>
+                <View style={styles.bushuHeader}>
+                  <Text style={styles.sectionTitle}>Bộ & Phân tích</Text>
+                </View>
+                {(kanjiData.components ?? []).map((c, i) => (
+                  <View key={i} style={styles.bushuRow}>
+                    <View style={styles.bushuBar} />
+                    <Text style={styles.bushuKanji}>{c.kanji}</Text>
+                    {c.hanViet ? <Text style={styles.bushuHanViet}>{c.hanViet}</Text> : null}
+                  </View>
+                ))}
+                <View style={styles.divider} />
+              </>
+            )}
+
+            {/* ── Nghĩa ── */}
+            <Text style={styles.sectionTitle}>Nghĩa</Text>
+            {kanjiData.meanings_vi?.map((m, i) => (
+              <View key={i} style={styles.meaningRow}>
+                <Text style={styles.meaningDot}>•</Text>
+                <Text style={styles.meaningText}>{m}</Text>
+              </View>
+            ))}
+
+            {/* ── Ví dụ ── */}
+            {examples.length > 0 && (
+              <>
+                <View style={styles.divider} />
+                <Text style={styles.sectionTitle}>Ví dụ {examples.length}</Text>
+                {examples.map((ex, i) => (
+                  <View key={i} style={styles.exampleRow}>
+                    <Text style={styles.exampleJp}>{ex.jp}</Text>
+                    <Text style={styles.exampleReading}>{ex.reading}</Text>
+                    <Text style={styles.exampleVi}>→ {ex.vi}</Text>
+                  </View>
+                ))}
+              </>
+            )}
           </View>
+
           <View style={{ paddingHorizontal: 12 }}>
             <FeedbackSection pageKey={`kanji-detail::${kanjiData.id}`} />
           </View>
           <View style={{ height: 40 }} />
         </ScrollView>
-      )}
 
-      <WritingPracticeModal item={writingItem} onClose={() => setWritingItem(null)} />
-      <KanjiNotesModal item={notesItem} onClose={() => setNotesItem(null)} />
-      <BottomTabBar />
-    </View>
+        <WritingPracticeModal item={writingItem} onClose={() => setWritingItem(null)} />
+        <KanjiNotesModal item={notesItem} onClose={() => setNotesItem(null)} />
+        <BottomTabBar />
+      </View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f1f5f9" },
-  topBar: { backgroundColor: "transparent" },
-  topBarInner: {
-    flexDirection: "row",
-    alignItems: "center",
-    paddingHorizontal: 12,
-    paddingVertical: 10,
+  root: { flex: 1, backgroundColor: "#f0f4f8" },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 16,
+    paddingTop: 56,
+    paddingBottom: 16,
+    backgroundColor: '#f1f5f9',
   },
-  iconBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
-  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-  logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 4, height: 50 },
-  logoText: { color: "#fff", fontSize: 22, fontWeight: "800", letterSpacing: 0.3 },
-  logoDot: { color: "#fff", fontSize: 24, fontWeight: "900" },
-  logoJP: { color: "#fff", fontSize: 22, fontWeight: "900", letterSpacing: 0.5 },
-  scroll: { flex: 1 },
-  scrollContent: { padding: 12, paddingBottom: 12 },
-
-  // ─── TAB STYLES ───
-  tabBar: { maxHeight: 50, marginBottom: 10 },
-  tabContainer: { flexDirection: "row", paddingHorizontal: 4, gap: 8 },
+  backBtnHeader: {
+    width: 42,
+    height: 42,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1.5,
+    borderColor: '#e2e8f0',
+  },
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: TEAL_DARK,
+  },
+  iconBtn: {
+    width: 42,
+    height: 42,
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderWidth: 1.5,
+    borderColor: '#e2e8f0',
+  },
+  backIcon: {
+    fontSize: 28,
+    color: TEAL_DARK,
+    fontWeight: '300',
+    marginTop: -4,
+  },
+  // Tab
+  tabBar: { 
+    maxHeight: 60, 
+    borderBottomWidth: 1, 
+    borderBottomColor: "#eee", 
+    backgroundColor: "#fff",
+  },
+  tabContainer: { 
+    flexDirection: "row", 
+    paddingHorizontal: 10, 
+    alignItems: "center", 
+  },
   tabItem: {
-    paddingHorizontal: 18,
-    paddingVertical: 8,
-    borderRadius: 10,
-    borderWidth: 1,
-    borderColor: "#cbd5e1",
-    backgroundColor: "#fff",
+    paddingHorizontal: 14,
+    paddingVertical: 10,
+    borderBottomWidth: 2,
+    borderBottomColor: "transparent",
+    minHeight: 40,              
+    justifyContent: "center", 
   },
-  tabItemActive: { backgroundColor: TEAL, borderColor: TEAL_DARK },
-  tabText: { fontSize: 22, fontWeight: "700", color: TEAL_DARK },
-  tabTextActive: { color: "#fff" },
+  tabItemActive: { 
+    borderBottomColor: TEAL 
+  },
+  tabText: { 
+    fontSize: 22, 
+    fontWeight: "700", 
+    color: "#666" 
+  },
+  tabTextActive: { 
+    color: TEAL, 
+    fontWeight: "bold" 
+  },
 
-  // ─── CARD STYLES (GIỮ NGUYÊN) ───
-  card: {
-    backgroundColor: "#fff",
-    borderRadius: 14,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: "#e2e8f0",
+  scroll: { 
+    flex: 1 
   },
+  scrollContent: { 
+    padding: 12, 
+    paddingBottom: 12 
+  },
+
+  // Card
+  card: { backgroundColor: "#fff", borderRadius: 14, padding: 16, borderWidth: 1, borderColor: "#e2e8f0" },
   headerRow: { flexDirection: "row", alignItems: "flex-start" },
-  bigKanji: { fontSize: 42, fontWeight: "800", color: TEAL_DARK, lineHeight: 64 },
+  bigKanji: { fontSize: 32, fontWeight: "800", color: TEAL_DARK, lineHeight: 40 },
   bigHanViet: { fontSize: 18, color: "#475569", fontWeight: "700", letterSpacing: 1, marginTop: 2 },
   headerActions: { flexDirection: "row", alignItems: "center" },
-  actionBtn: {
-    width: 32,
-    height: 32,
-    borderRadius: 6,
-    borderWidth: 1,
-    borderColor: "#cbd5e1",
-    alignItems: "center",
-    justifyContent: "center",
-    marginLeft: 6,
-    backgroundColor: "#fff",
-  },
-  actionIcon: { fontSize: 14, color: "#94a3b8" },
-  actionBtnActive: { backgroundColor: "#fff", borderColor: TEAL_DARK },
+  actionBtn: { width: 42, height: 42, borderRadius: 12, borderWidth: 1.5, borderColor: "#e2e8f0", alignItems: "center", justifyContent: "center", marginLeft: 6, backgroundColor: "#fff" },
+  actionIcon: { fontSize: 20 },
+  actionBtnActive: { backgroundColor: "#fff", borderColor: "#e2e8f0" },
   actionIconActive: { color: TEAL_DARK },
   divider: { height: StyleSheet.hairlineWidth, backgroundColor: "#e2e8f0", marginVertical: 14 },
   sectionTitle: { fontSize: 16, fontWeight: "800", color: "#0f172a", marginBottom: 10 },
+
+  // Phát âm
   pronRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 10, flexWrap: "wrap" },
   diamond: { color: TEXT_COLOR, fontSize: 16, marginRight: 8, marginTop: 4 },
   pronLabel: { fontSize: 14, fontWeight: "700", color: TEAL },
   pronValue: { fontSize: 20, color: TEAL_DARK, marginTop: 2, flex: 1, flexWrap: "wrap", paddingRight: 8 },
+
+  // Thứ tự nét
   strokeWrap: { alignItems: "center", marginVertical: 6 },
+
+  // Stats
   statsRow: { flexDirection: "row", marginTop: 14, paddingHorizontal: 4 },
   statCol: { flex: 1, alignItems: "center" },
-  statChip: {
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 14,
-    borderWidth: 1,
-    borderColor: "#cbd5e1",
-    backgroundColor: "#f8fafc",
-  },
+  statChip: { paddingHorizontal: 12, paddingVertical: 4, borderRadius: 14, borderWidth: 1, borderColor: "#cbd5e1", backgroundColor: "#f8fafc" },
   statChipText: { fontSize: 12, color: TEXT_COLOR, fontWeight: "600" },
   statValue: { fontSize: 18, fontWeight: "800", color: TEAL, marginTop: 6 },
-  statLink: { color: TEAL, textDecorationLine: "underline" },
+
+  // Bộ thủ
   bushuHeader: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 6 },
-  linkText: { fontSize: 13, color: TEXT_COLOR, fontWeight: "600" },
   bushuRow: { flexDirection: "row", alignItems: "center", marginTop: 8 },
   bushuBar: { width: 3, height: 18, backgroundColor: TEXT_COLOR, marginRight: 8, borderRadius: 2 },
   bushuKanji: { fontSize: 28, fontWeight: "700", color: TEAL_DARK, marginRight: 6 },
+  bushuHanViet: { fontSize: 14, color: "#64748b" },
+
+  // Nghĩa
   meaningRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 6 },
   meaningDot: { fontSize: 18, color: TEXT_COLOR, marginRight: 8 },
   meaningText: { flex: 1, fontSize: 18, color: TEAL, lineHeight: 22 },
-  exampleRow: { marginBottom: 10 },
+
+  // Ví dụ
+  exampleRow: { marginBottom: 12, paddingLeft: 4 },
   exampleJp: { fontSize: 20, fontWeight: "700", color: "#0f172a" },
-  exampleReading: { fontSize: 18, color: TEAL, marginTop: 2 },
-  exampleVi: { fontSize: 18, color: TEAL_DARK, marginTop: 2 },
+  exampleReading: { fontSize: 16, color: TEAL, marginTop: 2 },
+  exampleVi: { fontSize: 16, color: TEAL_DARK, marginTop: 2 },
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // // ─────────────────────────────────────────────────────────────────────────────
-// // kanji-detail.tsx
-// // Trang chi tiết một chữ Kanji (xem ảnh mẫu 1 & 2).
-// // Hiển thị: chữ Kanji to, âm Hán Việt, các âm Kunyomi / Onyomi, ô minh hoạ
-// // chữ ở giữa (placeholder cho nét bút), 3 cột thông tin (Số nét / JLPT / Tần
-// // suất), các bộ thủ cấu thành, danh sách nghĩa, và ví dụ từ ghép. Cuối trang
-// // là khối "Đóng góp ý kiến" dùng chung.
-// // ─────────────────────────────────────────────────────────────────────────────
-// import { useLocalSearchParams, useRouter } from "expo-router";
-// import { BottomTabBar } from "@/components/BottomTabBar";
-// import {
-//   ScrollView,
-//   StatusBar,
-//   StyleSheet,
-//   Text,
-//   TouchableOpacity,
-//   View,
-// } from "react-native";
-// import { SafeAreaView } from "react-native-safe-area-context";
-
-// import { LinearGradient } from "expo-linear-gradient";
-// import {
-//   getKanjiById,
-//   getExamplesByKanjiChar,
-//   type KanjiItem,
-//   type KanjiExample,
-// } from "../assets/data_JLPT_kanji";
-// import { FeedbackSection } from "../components/FeedbackSection";
-// import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
-// import { WritingPracticeModal } from "../components/WritingPracticeModal";
-// import { KanjiNotesModal } from "../components/KanjiNotesModal";
-// import React, { useMemo, useState, useEffect } from "react";  
-
-// // ✅ MÀU CHỦ ĐẠO MỚI
-// const TEAL = "#1F6F7A";
-// const TEAL_DARK = "#1c5765";
-// const GRAD = [TEAL, TEAL_DARK] as const;
-// const TEXT_COLOR = "#e47b0b";
-
-// export default function KanjiDetailScreen() {
-//   const router = useRouter();
-//   const params = useLocalSearchParams<{ 
-//     id?: string
-//     fromSearch?: string;
-//     currentIndex?: string;
-//     totalResults?: string;
-//     kanjiList?: string;
-//   }>();
-//   const id = typeof params.id === "string" ? params.id : "";
-//   const kanji = useMemo(() => getKanjiById(id), [id]);
-
-//   // State mở modal luyện viết khi nhấn nút bút ✎
-//   const [writingItem, setWritingItem] = useState<KanjiItem | null>(null);
-//   // State mở modal ghi chú khi nhấn icon 📋
-//   const [notesItem, setNotesItem] = useState<KanjiItem | null>(null);
-//   const [kanjiList, setKanjiList] = useState<KanjiItem[]>([]);
-//   const [currentKanjIdx, setCurrentKanjIdx] = useState(0);
-//   const [isFromSearch, setIsFromSearch] = useState(false);
-
-//   // Ví dụ tra từ toàn bộ từ vựng (JLPT + ngành nghề)
-//   const [examples, setExamples] = useState<KanjiExample[]>([]);
-
-//   // Load ví dụ mỗi khi kanji thay đổi
-//   useEffect(() => {
-//     if (kanji?.kanji) {
-//       setExamples(getExamplesByKanjiChar(kanji.kanji));
-//     } else {
-//       setExamples([]);
-//     }
-//   }, [kanji]);
-
-//   // Nếu đến từ trang tìm kiếm, lấy danh sách Kanji
-//   useEffect(() => {
-//     if (params.fromSearch === 'true' && params.kanjiList) {
-//       setIsFromSearch(true);
-//       try {
-//         const ids = JSON.parse(params.kanjiList);
-//         const kanjis = ids.map((id: string) => getKanjiById(id)).filter(Boolean);
-//         setKanjiList(kanjis as KanjiItem[]);
-//         setCurrentKanjIdx(parseInt(params.currentIndex || '0', 10));
-//       } catch (e) {
-//       }
-//     }
-//   }, [params.fromSearch, params.kanjiList, params.currentIndex]);
-
-//   // Hàm chuyển tiếp
-//   const goToNextKanji = () => {
-//     if (kanjiList.length > 0 && currentKanjIdx + 1 < kanjiList.length) {
-//       const nextKanji = kanjiList[currentKanjIdx + 1];
-//       router.setParams({ id: nextKanji.id });
-//       setCurrentKanjIdx(currentKanjIdx + 1);
-//     }
-//   };
-
-//   // Hàm quay lại
-//   const goToPrevKanji = () => {
-//     if (kanjiList.length > 0 && currentKanjIdx > 0) {
-//       const prevKanji = kanjiList[currentKanjIdx - 1];
-//       router.setParams({ id: prevKanji.id });
-//       setCurrentKanjIdx(currentKanjIdx - 1);
-//     }
-//   };
-
-//   if (!kanji) {
-//     return (
-//       <View style={s.root}>
-//         <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
-//         <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
-//           <View style={s.topBarInner}>
-//             <TouchableOpacity
-//               style={s.iconBtn}
-//               onPress={() => router.back()}
-//               hitSlop={8}
-//             >
-//               <Text style={s.backIcon}>‹</Text>
-//             </TouchableOpacity>
-//             <View style={{ flex: 1 }} />
-//             <View style={s.logoBadge}>
-//               <Text style={s.logoText}>Mirai</Text>
-//               <Text style={s.logoDot}>.</Text>
-//               <Text style={s.logoJP}>JP</Text>
-//             </View>
-//           </View>
-//         </SafeAreaView>
-//         </LinearGradient>
-//         <View style={{ padding: 24 }}>
-//           <Text>Không tìm thấy chữ Kanji này.</Text>
-//         </View>
-//       </View>
-//     );
-//   }
-
-//   return (
-//     <View style={s.root}>
-//       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-
-//       {/* ── Thanh trên cùng ── */}
-//       <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
-//       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
-//         <View style={s.topBarInner}>
-//           <TouchableOpacity
-//             style={s.iconBtn}
-//             onPress={() => router.back()}
-//             hitSlop={8}
-//           >
-//             <Text style={s.backIcon}>‹</Text>
-//           </TouchableOpacity>
-//           <View style={{ flex: 1 }} />
-//           <View style={s.logoBadge}>
-//             <Text style={s.logoText}>Mirai</Text>
-//             <Text style={s.logoDot}>.</Text>
-//             <Text style={s.logoJP}>JP</Text>
-//           </View>
-//         </View>
-//       </SafeAreaView>
-//       </LinearGradient>
-
-//       <ScrollView
-//         style={s.scroll}
-//         contentContainerStyle={s.scrollContent}
-//         showsVerticalScrollIndicator={false}
-//       >
-//         {/* ── Card thông tin chính ── */}
-//         <View style={s.card}>
-//           {/* Chữ kanji to + Hán Việt */}
-//           <View style={s.headerRow}>
-//             <View style={{ flex: 1 }}>
-//               <Text style={s.bigKanji}>{kanji.kanji}</Text>
-//               <Text style={s.bigHanViet}>{kanji.hanviet.join(' • ')}</Text>
-//             </View>
-//             <View style={s.headerActions}>
-//               {/* Nút mở modal luyện viết */}
-//               <TouchableOpacity
-//                 style={[s.actionBtn, s.actionBtnActive]}
-//                 onPress={() => setWritingItem(kanji)}
-//                 hitSlop={6}
-//               >
-//                 <Text style={[s.actionIcon, s.actionIconActive]}>✎</Text>
-//               </TouchableOpacity>
-//               {/* Nút mở modal ghi chú */}
-//               <TouchableOpacity
-//                 style={[s.actionBtn, s.actionBtnActive]}
-//                 onPress={() => setNotesItem(kanji)}
-//                 hitSlop={6}
-//               >
-//                 <Text style={[s.actionIcon, s.actionIconActive]}>📋</Text>
-//               </TouchableOpacity>
-//               <View style={s.actionBtn}>
-//                 <Text style={s.actionIcon}>＋</Text>
-//               </View>
-//             </View>
-//           </View>
-
-//           <View style={s.divider} />
-
-//           {/* Phát âm */}
-//           <Text style={s.sectionTitle}>Phát âm</Text>
-
-//           {kanji.readings.kunyomi.length > 0 && (
-//             <View style={s.pronRow}>
-//               <Text style={s.diamond}>◆</Text>
-//               <View style={{ flex: 1 }}>
-//                 <Text style={s.pronLabel}>Kunyomi</Text>
-//                 <Text style={s.pronValue}>{kanji.readings.kunyomi.join("、")}</Text>
-//               </View>
-//             </View>
-//           )}
-
-//           {kanji.readings.onyomi.length > 0 && (
-//             <View style={s.pronRow}>
-//               <Text style={s.diamond}>◆</Text>
-//               <View style={{ flex: 1 }}>
-//                 <Text style={s.pronLabel}>Onyomi</Text>
-//                 <Text style={s.pronValue}>{kanji.readings.onyomi.join("、")}</Text>
-//               </View>
-//             </View>
-//           )}
-
-//           {/* Cách viết — từng nét được tô màu khác nhau, có đánh số thứ tự */}
-//           <View style={s.strokeWrap}>
-//             <KanjiStrokeOrder kanji={kanji.kanji} size={180} />
-//             {/* <Text style={s.strokeHint}>
-//               Mỗi màu là một nét, số bên cạnh là thứ tự viết (1 → {kanji.strokes}).
-//             </Text> */}
-//           </View>
-
-//           {/* 3 cột: Số nét | JLPT | Tần suất */}
-//           <View style={s.statsRow}>
-//             {/* <View style={s.statCol}>
-//               <View style={s.statChip}>
-//                 <Text style={s.statChipText}>Số nét</Text>
-//               </View>
-//               <Text style={s.statValue}>{kanji.strokes}</Text>
-//             </View> */}
-//             <View style={s.statCol}>
-//               <View style={s.statChip}>
-//                 <Text style={s.statChipText}>JLPT</Text>
-//               </View>
-//               <Text style={s.statValue}>{kanji.jlpt}</Text>
-//             </View>
-//             <View style={s.statCol}>
-//               <View style={s.statChip}>
-//                 <Text style={s.statChipText}>Tần suất</Text>
-//               </View>
-//               <Text style={[s.statValue, s.statLink]}>
-//                 {kanji.freq ? `#${kanji.freq}/2500` : "—"}
-//               </Text>
-//             </View>
-//           </View>
-
-//           <View style={s.divider} />
-
-//           {/* Bộ thủ */}
-//           <View style={s.bushuHeader}>
-//             <Text style={s.sectionTitle}>Bộ</Text>
-//             <Text style={s.linkText}>↗ Phân tích Kanji</Text>
-//           </View>
-//           {(kanji.components ?? []).map((c, i) => (
-//             <View key={i} style={s.bushuRow}>
-//               <View style={s.bushuBar} />
-//               <Text style={s.bushuKanji}>{c.kanji}</Text>
-//               {/* hanViet đã bỏ khỏi components theo cấu trúc JSON mới */}
-//             </View>
-//           ))}
-
-//           <View style={s.divider} />
-
-//           {/* Nghĩa */}
-//           <Text style={s.sectionTitle}>Nghĩa</Text>
-//           {kanji.meanings_vi.map((m, i) => (
-//             <View key={i} style={s.meaningRow}>
-//               <Text style={s.meaningDot}>•</Text>
-//               <Text style={s.meaningText}>{m}</Text>
-//             </View>
-//           ))}
-
-//           {/* Ví dụ — tra từ toàn bộ từ vựng (JLPT + ngành nghề) */}
-//           {examples.length > 0 && (
-//             <>
-//               <View style={s.divider} />
-//               <Text style={s.sectionTitle}>Ví dụ</Text>
-//               {examples.map((ex, i) => (
-//                 <View key={i} style={s.exampleRow}>
-//                   <Text style={s.exampleJp}>{ex.jp}</Text>
-//                   <Text style={s.exampleReading}>{ex.reading}</Text>
-//                   <Text style={s.exampleVi}>→ {ex.vi}</Text>
-//                 </View>
-//               ))}
-//             </>
-//           )}
-//         </View>
-
-//         {/* Khối đóng góp ý kiến */}
-//         <View style={{ paddingHorizontal: 12 }}>
-//           <FeedbackSection pageKey={`kanji-detail::${kanji.id}`} />
-//         </View>
-
-//         <View style={{ height: 40 }} />
-//       </ScrollView>
-
-//       {/* ── Modal luyện viết ── */}
-//       <WritingPracticeModal
-//         item={writingItem}
-//         onClose={() => setWritingItem(null)}
-//       />
-
-//       {/* ── Modal ghi chú ── */}
-//       <KanjiNotesModal
-//         item={notesItem}
-//         onClose={() => setNotesItem(null)}
-//       />
-
-//       <BottomTabBar />
-//     </View>
-//   );
-// }
-
-// const s = StyleSheet.create({
-//   root: { flex: 1, backgroundColor: "#f1f5f9" },
-
-//   // Thanh xanh trên cùng
-//   topBar: { backgroundColor: "transparent" },
-//   topBarInner: {
-//     flexDirection: "row",
-//     alignItems: "center",
-//     paddingHorizontal: 12,
-//     paddingVertical: 10,
-//   },
-//   iconBtn: {
-//     width: 40,
-//     height: 40,
-//     borderRadius: 20,
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-//   logoBadge: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: 4, height: 50 },
-//   logoText: { color: "#fff", fontSize: 22, fontWeight: "800" as const, letterSpacing: 0.3 },
-//   logoDot:  { color: "#fff",   fontSize: 24, fontWeight: "900" as const },
-//   logoJP:   { color: "#fff", fontSize: 22, fontWeight: "900" as const, letterSpacing: 0.5 },
-//   topTitle: {
-//     flex: 1,
-//     color: "#fff",
-//     fontSize: 18,
-//     fontWeight: "800",
-//     textAlign: "center",
-//   },
-
-//   scroll: { flex: 1 },
-//   scrollContent: { padding: 12, paddingBottom: 12 },
-
-//   // Card chứa toàn bộ thông tin Kanji
-//   card: {
-//     backgroundColor: "#fff",
-//     borderRadius: 14,
-//     padding: 16,
-//     borderWidth: 1,
-//     borderColor: "#e2e8f0",
-//   },
-//   headerRow: { flexDirection: "row", alignItems: "flex-start" },
-//   bigKanji: {
-//     fontSize: 42,
-//     fontWeight: "800",
-//     color: TEAL_DARK,
-//     lineHeight: 64,
-//   },
-//   bigHanViet: {
-//     fontSize: 18,
-//     color: "#475569",
-//     fontWeight: "700",
-//     letterSpacing: 1,
-//     marginTop: 2,
-//   },
-//   headerActions: { flexDirection: "row", alignItems: "center" },
-//   actionBtn: {
-//     width: 32,
-//     height: 32,
-//     borderRadius: 6,
-//     borderWidth: 1,
-//     borderColor: "#cbd5e1",
-//     alignItems: "center",
-//     justifyContent: "center",
-//     marginLeft: 6,
-//     backgroundColor: "#fff",
-//   },
-//   actionIcon: { fontSize: 14, color: "#e5eaf1" },
-//   // Trạng thái active cho nút bút ✎
-//   actionBtnActive: { backgroundColor: "#fff", borderColor: TEAL_DARK },
-//   actionIconActive: { color: TEAL_DARK },
-
-//   divider: {
-//     height: StyleSheet.hairlineWidth,
-//     backgroundColor: "#e2e8f0",
-//     marginVertical: 14,
-//   },
-
-//   sectionTitle: {
-//     fontSize: 16,
-//     fontWeight: "800",
-//     color: "#0f172a",
-//     marginBottom: 10,
-//   },
-
-//   // Phát âm
-//   pronRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 10 },
-//   diamond: { color: TEXT_COLOR, fontSize: 16, marginRight: 8, marginTop: 4 },
-//   pronLabel: { fontSize: 14, fontWeight: "700", color: TEAL },
-//   pronValue: { fontSize: 20, color: TEAL_DARK, marginTop: 2 },
-
-//   // Vùng vẽ thứ tự nét
-//   strokeWrap: {
-//     alignItems: "center",
-//     marginVertical: 6,
-//   },
-//   // strokeHint: {
-//   //   fontSize: 11,
-//   //   color: "#94a3b8",
-//   //   marginTop: 8,
-//   //   textAlign: "center",
-//   //   paddingHorizontal: 16,
-//   // },
-//   // 3 cột thông tin
-//   statsRow: {
-//     flexDirection: "row",
-//     marginTop: 14,
-//     paddingHorizontal: 4,
-//   },
-//   statCol: { flex: 1, alignItems: "center" },
-//   statChip: {
-//     paddingHorizontal: 12,
-//     paddingVertical: 4,
-//     borderRadius: 14,
-//     borderWidth: 1,
-//     borderColor: "#cbd5e1",
-//     backgroundColor: "#f8fafc",
-//   },
-//   statChipText: { fontSize: 12, color: TEXT_COLOR, fontWeight: "600" },
-//   statValue: { fontSize: 18, fontWeight: "800", color: TEAL, marginTop: 6 },
-//   statLink: { color: TEAL, textDecorationLine: "underline" },
-
-//   // Bộ thủ
-//   bushuHeader: {
-//     flexDirection: "row",
-//     alignItems: "center",
-//     justifyContent: "space-between",
-//     marginBottom: 6,
-//   },
-//   linkText: { fontSize: 13, color: TEXT_COLOR, fontWeight: "600" },
-//   bushuRow: { flexDirection: "row", alignItems: "center", marginTop: 8 },
-//   bushuBar: {
-//     width: 3,
-//     height: 18,
-//     backgroundColor: TEXT_COLOR,
-//     marginRight: 8,
-//     borderRadius: 2,
-//   },
-//   bushuKanji: { fontSize: 28, fontWeight: "700", color: TEAL_DARK, marginRight: 6 },
-//   bushuLabel: { fontSize: 16, color: TEAL, fontWeight: "500" },
-
-//   // Nghĩa
-//   meaningRow: { flexDirection: "row", alignItems: "flex-start", marginBottom: 6 },
-//   meaningDot: { fontSize: 18, color: TEXT_COLOR, marginRight: 8 },
-//   meaningText: { flex: 1, fontSize: 18, color: TEAL, lineHeight: 22 },
-
-//   // Ví dụ
-//   exampleRow: { marginBottom: 10 },
-//   exampleJp: { fontSize: 20, fontWeight: "700", color: "#0f172a" },
-//   exampleReading: { fontSize: 18, color: TEAL, marginTop: 2 },
-//   exampleVi: { fontSize: 18, color: TEAL_DARK, marginTop: 2 },
-
-//   // Thanh dưới
-//   bottomBar: {
-//     backgroundColor: "#ffffff",
-//     borderTopWidth: 1,
-//     borderTopColor: "#e2e8f0",
-//   },
-//   bottomInner: {
-//     flexDirection: "row",
-//     alignItems: "center",
-//     paddingHorizontal: 16,
-//     paddingVertical: 10,
-//   },
-//   navArrow: {
-//     width: 44,
-//     height: 44,
-//     borderRadius: 22,
-//     borderWidth: 1,
-//     borderColor: "#e2e8f0",
-//     alignItems: "center",
-//     justifyContent: "center",
-//     backgroundColor: "#fff",
-//   },
-//   navArrowText: { fontSize: 26, color: "#0f172a", marginTop: -4 },
-//   closeBtn: {
-//     flex: 1,
-//     marginHorizontal: 12,
-//     height: 44,
-//     borderRadius: 22,
-//     backgroundColor: TEAL_DARK,
-//     alignItems: "center",
-//     justifyContent: "center",
-//   },
-//   closeBtnText: { color: "#fff", fontSize: 16, fontWeight: "700" },
-//   navButtons: {
-//     flexDirection: 'row',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     marginTop: 16,
-//     marginBottom: 8,
-//     gap: 16,
-//   },
-//   navArrowBtn: {
-//     width: 44,
-//     height: 44,
-//     borderRadius: 22,
-//     backgroundColor: TEAL,
-//     alignItems: 'center',
-//     justifyContent: 'center',
-//   },
-//   navCounter: {
-//     fontSize: 14,
-//     fontWeight: '600',
-//     color: '#475569',
-//   },
-//   navBtnDisabled: {
-//     opacity: 0.4,
-//   },
-// });

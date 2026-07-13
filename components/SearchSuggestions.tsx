@@ -11,13 +11,13 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getVocab } from '../assets/vocab';
-// import { getKanji } from '../assets/data_JLPT_kanji';
-import { searchKanji } from '../services/kanjiRepository';
+import { getKanji } from '../assets/data_JLPT_kanji';
+// import { searchKanji } from '../services/kanjiRepository';
 import { getGrammar } from '../assets/data_nn';
 import { EXAMPLE_SENTENCES } from '../assets/sentences';
 import { ALL_INDUSTRY_VOCAB, INDUSTRY_INFO } from '../assets/data_nghanh_hoc'; // Thêm để lọc ngành chính xác
 import { useAuth } from '../artifacts/mirai-jp/hooks/useAuth';
-import { getKanjiByChar, getKanjiByLevel } from '../services/kanjiRepository';
+// import { getKanjiByChar, getKanjiByLevel } from '../services/kanjiRepository';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
@@ -97,15 +97,15 @@ export default function SearchSuggestions({
           const found = allVocab.find((v: any) => v.kanji === keyword || v.hiragana === keyword || v.hira === keyword);
           if (found) level = found.level || found.Level || '';
         } else if (activeTab === 'kanji') {
-          const found = await getKanjiByChar(keyword);
-          const level_found = found ? found.jlpt : '';
-          if (level_found && stats[level_found] !== undefined) {
-            stats[level_found]++;
-            validCount++;
-          }
-          // const allKanji = (getKanji() || []) as any[];
-          // const found = allKanji.find(k => k.jlpt && k.kanji === keyword);
-          // if (found) level = found.jlpt;
+          // const found = await getKanjiByChar(keyword);
+          // const level_found = found ? found.jlpt : '';
+          // if (level_found && stats[level_found] !== undefined) {
+          //   stats[level_found]++;
+          //   validCount++;
+          // }
+          const allKanji = (getKanji() || []) as any[];
+          const found = allKanji.find(k => k.jlpt && k.kanji === keyword);
+          if (found) level = found.jlpt;
         } else if (activeTab === 'grammar') {
           const allGrammar = (getGrammar() || []) as any[];
           const found = allGrammar.find(g => g.pattern === keyword);
@@ -150,11 +150,13 @@ export default function SearchSuggestions({
       })));
     }
     else if (activeTab === 'kanji') {
-      const allKanji = await getKanjiByLevel(level);
-      const filtered = allKanji.length > 0 ? allKanji : await getKanjiByLevel('N5');
+      // const allKanji = await getKanjiByLevel(level);
+      // const filtered = allKanji.length > 0 ? allKanji : await getKanjiByLevel('N5');
+      const filtered = getKanji(level) || [];
+      const finalFiltered = filtered.length > 0 ? filtered : (getKanji('N5') || []);
       // const allKanji = getKanji() || [];
       // const filtered = allKanji.filter(k => k.jlpt === level);
-      const finalFiltered = filtered.length > 0 ? filtered : allKanji;
+      // const finalFiltered = filtered.length > 0 ? filtered : allKanji;
       const shuffled = [...finalFiltered].sort(() => Math.random() - 0.5).slice(0, 10);
       
       items.push(...shuffled.map((k, idx) => ({

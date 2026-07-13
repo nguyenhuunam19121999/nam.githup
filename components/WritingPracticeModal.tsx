@@ -22,37 +22,31 @@ import {
 } from "react-native";
 import Svg, { Line, Path, Rect } from "react-native-svg";
 
-import { type KanjiItem } from "../assets/data_JLPT_kanji";
+// import { type KanjiItem } from "../assets/data_JLPT_kanji";
+import { type KanjiItem, getKunyomiFromFull } from "../assets/data_JLPT_kanji";
 import { KanjiStrokeOrder } from "./KanjiStrokeOrder";
 
-const BLUE = "#7C3AED";
-const RED  = "#E03131";
+const textcolor = "#1d4ed8";
 
-const SCREEN_W    = Dimensions.get("window").width;
-const CANVAS_SIZE = Math.min(SCREEN_W - 48, 300);
+const SCREEN_W      = Dimensions.get("window").width;
+const CANVAS_SIZE    = Math.min(SCREEN_W - 24, 340);
+const CANVAS_WIDTH   = CANVAS_SIZE;
+const CANVAS_HEIGHT  = CANVAS_SIZE * 0.8;
 
 // ─── Lưới 田字格 chuẩn luyện viết Kanji ──────────────────────────────────────
-function KanjiGrid({ size }: { size: number }) {
-  const half = size / 2;
-  const dash = `${size * 0.04},${size * 0.03}`;
+function KanjiGrid({ width, height }: { width: number; height: number }) {
+  const halfX = width / 2;
+  const halfY = height / 2;
+  const dash = `${Math.min(width, height) * 0.04},${Math.min(width, height) * 0.03}`;
   return (
     <>
-      <Rect x={0} y={0} width={size} height={size} fill="#fafaf9" />
-      <Rect
-        x={size * 0.15} y={size * 0.15}
-        width={size * 0.7} height={size * 0.7}
-        fill="#f5f3ff"
-      />
-      <Line x1={0} y1={0} x2={size} y2={size}
-        stroke="#e0e7ff" strokeWidth={1} strokeDasharray={dash} />
-      <Line x1={size} y1={0} x2={0} y2={size}
-        stroke="#e0e7ff" strokeWidth={1} strokeDasharray={dash} />
-      <Line x1={half} y1={0} x2={half} y2={size}
-        stroke="#a5b4fc" strokeWidth={1.5} strokeDasharray={dash} />
-      <Line x1={0} y1={half} x2={size} y2={half}
-        stroke="#a5b4fc" strokeWidth={1.5} strokeDasharray={dash} />
-      <Rect x={1} y={1} width={size - 2} height={size - 2}
-        fill="none" stroke="#c7d2fe" strokeWidth={2} rx={12} />
+      <Rect x={0} y={0} width={width} height={height} fill="#fcfcfc" />
+      <Line x1={halfX} y1={0} x2={halfX} y2={height}
+        stroke="#cbd5e1" strokeWidth={1} strokeDasharray={dash} />
+      <Line x1={0} y1={halfY} x2={width} y2={halfY}
+        stroke="#cbd5e1" strokeWidth={1} strokeDasharray={dash} />
+      <Rect x={1} y={1} width={width - 2} height={height - 2}
+        fill="none" stroke="#e2e8f0" strokeWidth={2} rx={12} />
     </>
   );
 }
@@ -61,6 +55,7 @@ function KanjiGrid({ size }: { size: number }) {
 // Tách ra để re-render nội bộ (khi vẽ realtime) KHÔNG lan sang parent,
 // tránh ScrollView reset vị trí cuộn.
 interface DrawingCanvasProps {
+  kanjiChar: string;
   strokes: string[];
   livePathRef: React.MutableRefObject<string>;
   panHandlers: object;
@@ -68,7 +63,9 @@ interface DrawingCanvasProps {
   onRegisterTick: (fn: () => void) => void;
 }
 
+// function DrawingCanvas({
 function DrawingCanvas({
+  kanjiChar,
   strokes,
   livePathRef,
   panHandlers,
@@ -82,13 +79,16 @@ function DrawingCanvas({
   }, [onRegisterTick]);
 
   return (
-    <View style={dc.wrap} {...panHandlers}>
+     <View style={dc.wrap} {...panHandlers}>
+       <View style={dc.ghostKanjiWrap} pointerEvents="none">
+        <Text style={dc.ghostKanji}>{kanjiChar}</Text>
+      </View>
       <Svg
-        width={CANVAS_SIZE}
-        height={CANVAS_SIZE}
+        width={CANVAS_WIDTH}
+        height={CANVAS_HEIGHT}
         style={StyleSheet.absoluteFillObject}
       >
-        <KanjiGrid size={CANVAS_SIZE} />
+        <KanjiGrid width={CANVAS_WIDTH} height={CANVAS_HEIGHT} />
 
         {strokes.map((d, i) => (
           <Path
@@ -102,7 +102,7 @@ function DrawingCanvas({
         {livePathRef.current ? (
           <Path
             d={livePathRef.current}
-            stroke="#1e293b" strokeWidth={5}
+            stroke="#1e293b" strokeOpacity={0.75} strokeWidth={5}
             strokeLinecap="round" strokeLinejoin="round"
             fill="none"
           />
@@ -114,9 +114,10 @@ function DrawingCanvas({
 
 const dc = StyleSheet.create({
   wrap: {
-    width: CANVAS_SIZE,
-    height: CANVAS_SIZE,
+    width: CANVAS_WIDTH,
+    height: CANVAS_HEIGHT,
     alignSelf: "center",
+    marginHorizontal: -8,
     borderRadius: 14,
     overflow: "hidden",
     shadowColor: "#6366f1",
@@ -124,6 +125,23 @@ const dc = StyleSheet.create({
     shadowOpacity: 0.12,
     shadowRadius: 8,
     elevation: 4,
+  },
+  ghostKanjiWrap: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    alignItems: "center",
+    justifyContent: "center",
+    zIndex: 1,
+    elevation: 1,
+  },
+  ghostKanji: {
+    fontSize: CANVAS_HEIGHT * 0.85,
+    color: "#1e293b",
+    opacity: 0.15,
+    fontWeight: "100",
   },
 });
 
@@ -231,27 +249,36 @@ export function WritingPracticeModal({
           >
             <View style={ws.infoRow}>
               <Text style={ws.kanjiLarge}>{item.kanji}</Text>
+              <View style={ws.infoText}>
                 <Text style={ws.hanViet}>{item.hanviet?.[0] ?? ""}</Text>
-                {(item.readings?.kunyomi?.length ?? 0) > 0 && (
+                {(() => {
+                  const kun = getKunyomiFromFull(item.kanji);
+                  return kun.length > 0
+                    ? <Text style={ws.reading}>訓 {kun.join("、")}</Text>
+                    : null;
+                })()}
+                {/* {(item.readings?.kunyomi?.length ?? 0) > 0 && (
                   <Text style={ws.reading}>訓 {item.readings.kunyomi.join("、")}</Text>
-                )}
+                )} */}
                 {(item.readings?.onyomi?.length ?? 0) > 0 && (
                   <Text style={ws.reading}>音 {item.readings.onyomi.join("、")}</Text>
                 )}
                 <Text style={ws.meaning} numberOfLines={2}>
                   {item.meanings_vi?.[0] ?? ""}
                 </Text>
+              </View>
             </View>
 
             <Text style={ws.sectionLabel}>📖 Thứ tự nét tham khảo</Text>
             <View style={ws.strokeRef}>
-              <KanjiStrokeOrder kanji={item.kanji} size={130}/>
+              <KanjiStrokeOrder kanji={item.kanji} size={180}/>
             </View>
           </ScrollView>
 
           {/* ── CỐ ĐỊNH: Canvas ── */}
           <Text style={[ws.sectionLabel, ws.canvasLabel]}>✏️ Vùng luyện viết</Text>
           <DrawingCanvas
+            kanjiChar={item.kanji}
             strokes={strokes}
             livePathRef={livePathRef}
             panHandlers={panResponder.panHandlers}
@@ -318,7 +345,7 @@ const ws = StyleSheet.create({
     marginBottom: 14,
   },
   sheetTitle: { fontSize: 17, fontWeight: "800", color: "#0f172a" },
-  closeText:  { fontSize: 15, color: BLUE, fontWeight: "600" },
+  closeText:  { fontSize: 15, color: textcolor, fontWeight: "600" },
 
   // ScrollView co lại vừa đủ nội dung của nó, nhường chỗ cho canvas bên dưới
   scrollArea:    { flexShrink: 1, flexGrow: 0 },
@@ -333,8 +360,8 @@ const ws = StyleSheet.create({
     marginBottom: 14,
     gap: 14,
   },
-  kanjiLarge: { fontSize: 52, fontWeight: "700", color: RED, lineHeight: 60 },
-  infoText:   { flex: 1 },
+  kanjiLarge: { fontSize: 40, fontWeight: "500", color: textcolor, lineHeight: 46, flexShrink: 0 },
+  infoText:   { flex: 1, minWidth: 0 },
   hanViet: {
     fontSize: 12, color: "#94a3b8",
     fontWeight: "700", letterSpacing: 0.5, marginBottom: 3,
@@ -345,7 +372,7 @@ const ws = StyleSheet.create({
   sectionLabel: {
     fontSize: 13, fontWeight: "700", color: "#64748b", marginBottom: 8,
   },
-  canvasLabel: { marginTop: 12 },
+  canvasLabel: { marginTop: 4 },
 
   strokeRef: { alignItems: "center", marginBottom: 14 },
 
@@ -355,7 +382,7 @@ const ws = StyleSheet.create({
     flex: 1, backgroundColor: "#eff6ff", borderRadius: 14,
     paddingVertical: 13, alignItems: "center",
   },
-  undoBtnText: { color: "#1d4ed8", fontWeight: "700", fontSize: 15 },
+  undoBtnText: { color: textcolor, fontWeight: "700", fontSize: 15 },
 
   clearBtn: {
     flex: 1, backgroundColor: "#fee2e2", borderRadius: 14,

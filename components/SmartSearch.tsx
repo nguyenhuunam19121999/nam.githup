@@ -97,6 +97,7 @@ const SmartSearch = forwardRef<SmartSearchRef, SmartSearchProps>(({
     </TouchableWithoutFeedback>
   );
 });
+SmartSearch.displayName = 'SmartSearch';
 
 const styles = StyleSheet.create({
   container: { width: "100%" },

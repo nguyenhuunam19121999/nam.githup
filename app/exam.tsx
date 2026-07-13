@@ -44,8 +44,10 @@ const examLevels: ExamLevel[] = [
     title: "Trung cấp", 
     description: "Tổng hợp bộ đề thi JLPT N3", 
     icon: "🌸", 
-    color: "#F59E0B", 
-    isUpdated: true,
+    // color: "#F59E0B",
+     color: "#94A3B8", 
+    isUpdated: false,
+    // isUpdated: true,
     // ✅ Khai báo trực tiếp danh sách file đề của bạn tại đây
     exams: [
       { name: "Đề luyện thi số 1", file: "n3_01", description: "Đầy đủ Từ vựng, Ngữ pháp, Đọc hiểu & Nghe hiểu" },
@@ -67,7 +69,7 @@ export default function ExamScreen() {
     } else {
       Alert.alert(
         "📢 Thông báo",
-        `Tính năng đề thi ${exam.level} đang được phát triển, sớm cập nhật!`,
+        `Tính năng ${exam.level} đang phát triển`,
         [{ text: "Đã hiểu", style: "default" }]
       );
     }

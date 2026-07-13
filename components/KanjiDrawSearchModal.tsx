@@ -21,7 +21,8 @@ import {
 import Svg, { Line, Path } from "react-native-svg";
 
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
-import strokesMap from "../assets/data_JLPT_kanji/kanji_strokes.json";
+
+const strokesMap: Record<string, string[]> = {};
 
 // ═══════════════════════════════════════════════════════════════════
 // 🎨 HẰNG SỐ
@@ -29,7 +30,7 @@ import strokesMap from "../assets/data_JLPT_kanji/kanji_strokes.json";
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const CANVAS_SIZE = Math.min(SCREEN_WIDTH - 40, 500);
 const STROKE_WIDTH = 6;
-const ORANGE = "#ed8b3a";
+const textcolor = "#1d4ed8";
 const SEARCH_DEBOUNCE_MS = 320;
 const TOP_K_CANDIDATES = 15;
 
@@ -289,12 +290,14 @@ function buildKanjiFeatureFromSVG(kanji: KanjiItem): FeatureVector | null {
   const allPoints: StrokePoint[] = [];
   for (const p of svgPaths) allPoints.push(...parseSvgPathToPoints(p));
   if (allPoints.length === 0) return null;
-  return buildFeatureVector(allPoints, kanji.strokes);
+  return buildFeatureVector(allPoints, kanji.strokes ?? 0); 
+  // return buildFeatureVector(allPoints, kanji.strokes);
 }
 
 function buildKanjiFeatureHeuristic(kanji: KanjiItem): FeatureVector {
   const code = kanji.kanji.charCodeAt(0);
-  const n = kanji.strokes;
+  const n = kanji.strokes ?? 0;
+  // const n = kanji.strokes;
   const aspectRatio = Math.sin(code * 0.017) * 0.3;
   const gravityX = 0.5 + Math.sin(code * 0.023) * 0.12;
   const gravityY = 0.5 + Math.cos(code * 0.019) * 0.12;
@@ -477,16 +480,16 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           slideAnim.setValue(0);
           fadeAnim.setValue(0);
           Animated.parallel([
-            Animated.spring(slideAnim, { toValue: 1, friction: 7, tension: 60, useNativeDriver: true }),
-            Animated.timing(fadeAnim,  { toValue: 1, duration: 200, useNativeDriver: true }),
+            Animated.spring(slideAnim, { toValue: 1, friction: 22, tension: 80, useNativeDriver: true }),
+            Animated.timing(fadeAnim,  { toValue: 1, duration: 450, useNativeDriver: true }),
           ]).start();
         }
       } else {
         if (searchTimerRef.current) clearTimeout(searchTimerRef.current);
         if (!isInline) {
           Animated.parallel([
-            Animated.spring(slideAnim, { toValue: 0, friction: 8, tension: 40, useNativeDriver: true }),
-            Animated.timing(fadeAnim,  { toValue: 0, duration: 180, useNativeDriver: true }),
+            Animated.spring(slideAnim, { toValue: 0, friction: 9, tension: 40, useNativeDriver: true }),
+            Animated.timing(fadeAnim,  { toValue: 0, duration: 450, useNativeDriver: true }),
           ]).start(({ finished }) => {
             if (finished) setIsMounted(false);
           });
@@ -518,7 +521,10 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           const refVec = kanjiFeatureDB.get(item.kanji);
           if (!refVec) continue;
           const lb = LEVEL_BONUS[item.jlpt] ?? 0;
-          const { total, strokeSim, shapeSim } = computeLocalScore(userVec, refVec, drawnCount, item.strokes, lb);
+          const { total, strokeSim, shapeSim } = computeLocalScore(
+            userVec, refVec, drawnCount, item.strokes ?? 0, lb   
+          );
+          // const { total, strokeSim, shapeSim } = computeLocalScore(userVec, refVec, drawnCount, item.strokes, lb);
           if (total < 0.25) continue; // 👈 bỏ kết quả quá thấp
           results.push({ item, score: total, strokeSimilarity: strokeSim, shapeSimilarity: shapeSim });
         }
@@ -707,7 +713,7 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
 
           {searching && (
             <View style={styles.loaderContainer}>
-              <ActivityIndicator size="small" color={ORANGE} />
+              <ActivityIndicator size="small" color={textcolor} />
             </View>
           )}
 
@@ -740,11 +746,9 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           <View style={styles.canvasSection}>
             <View style={styles.canvas} {...panResponder.panHandlers}>
               <Svg width={CANVAS_SIZE} height={CANVAS_SIZE} style={StyleSheet.absoluteFillObject}>
-                {/* Lưới hướng dẫn */}
-                <Line x1={CANVAS_SIZE/2} y1={0}           x2={CANVAS_SIZE/2} y2={CANVAS_SIZE} stroke="#f0f4f8" strokeWidth={1} strokeDasharray="6,4" />
-                <Line x1={0}            y1={CANVAS_SIZE/2} x2={CANVAS_SIZE}   y2={CANVAS_SIZE/2} stroke="#f0f4f8" strokeWidth={1} strokeDasharray="6,4" />
-                <Line x1={0}            y1={0}             x2={CANVAS_SIZE}   y2={CANVAS_SIZE} stroke="#f0f4f8" strokeWidth={1} />
-                <Line x1={CANVAS_SIZE} y1={0}             x2={0}             y2={CANVAS_SIZE} stroke="#f0f4f8" strokeWidth={1} />
+                {/* Lưới hướng dẫn — chỉ ngang/dọc giữa */}
+                <Line x1={CANVAS_SIZE/2} y1={0}           x2={CANVAS_SIZE/2} y2={CANVAS_SIZE} stroke="#eff0f3" strokeWidth={2} strokeDasharray="8,4" />
+                <Line x1={0}            y1={CANVAS_SIZE/2} x2={CANVAS_SIZE}   y2={CANVAS_SIZE/2} stroke="#eff0f3" strokeWidth={2} strokeDasharray="8,4" />
 
                 {/* Các nét đã hoàn tất — màu gradient theo thứ tự */}
                 {strokes.map((s, i) => (
@@ -763,7 +767,7 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
                 {currentPath !== "" && (
                   <Path
                     d={currentPath}
-                    stroke={ORANGE}
+                    stroke={textcolor}
                     strokeWidth={STROKE_WIDTH}
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -921,17 +925,18 @@ const styles = StyleSheet.create({
     backgroundColor: "#fafafa",
     borderRadius: 20,
     borderWidth: 2,
-    borderColor: "#e2e8f0",
+    borderColor: "transparent",
+    // borderColor: "#e2e8f0",
     overflow: "hidden",
   },
   placeholder: {
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
+    opacity: 0.25,
   },
   placeholderIcon: {
     fontSize: 32,
-    opacity: 0.25,
   },
   placeholderText: {
     fontSize: 13,
@@ -961,7 +966,7 @@ const styles = StyleSheet.create({
   },
   strokeCountText: {
     fontWeight: "800",
-    color: ORANGE,
+    color: textcolor,
     fontSize: 18,
   },
   strokeInfoText: {
@@ -984,7 +989,7 @@ const styles = StyleSheet.create({
     opacity: 0.4,
   },
   searchBtn: {
-    backgroundColor: "#adaa4b",
+    backgroundColor: "#f1f5f9",
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 22,
@@ -993,8 +998,8 @@ const styles = StyleSheet.create({
   },
   searchBtnText: {
     fontSize: 14,
-    fontWeight: "700",
-    color: "#fff",
+    fontWeight: "500",
+    color: "#818080",
   },
 });
 export default KanjiDrawSearchModal;

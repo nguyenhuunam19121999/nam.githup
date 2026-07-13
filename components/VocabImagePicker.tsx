@@ -141,9 +141,9 @@ export default function VocabImagePicker({ vocabId, vocabWord, vocabMeaning, onI
     <View style={styles.container}>
       {/* Tiêu đề */}
       <View style={styles.header}>
-        <Text style={styles.title}>📸 Cùng Mazii hoàn thiện từ điển hình ảnh</Text>
+        <Text style={styles.title}>📸 Cùng Mirai hoàn thiện từ điển hình ảnh</Text>
         <Text style={styles.subtitle}>
-          Vui lòng chọn tối đa 4 ảnh phù hợp với từ "{vocabWord}"
+          Vui lòng chọn tối đa 4 ảnh phù hợp với từ &quot;{vocabWord}&quot;
         </Text>
       </View>
 

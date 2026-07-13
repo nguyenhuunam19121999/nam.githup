@@ -1,3 +1,4 @@
+///////KanjiDetailInline.tsx
 import React, {
   useState,
   useEffect,
@@ -15,25 +16,27 @@ import {
   Animated,
 } from 'react-native';
 import { KanjiStrokeOrder } from './KanjiStrokeOrder';
-// import {
-//   getKanjiByCharFull,
-//   getExamplesByKanjiChar,
-//   type KanjiItem,
-//   type KanjiExample,
-// } from '../assets/data_JLPT_kanji';
 import {
+  getKanjiByCharFull,
+  getExamplesByKanjiChar,
   type KanjiItem,
   type KanjiExample,
 } from '../assets/data_JLPT_kanji';
-import {
-  getKanjiByChar,
-  getExamplesByKanjiChar,
-} from '../services/kanjiRepository';
+// import {
+//   type KanjiItem,
+//   type KanjiExample,
+// } from '../assets/data_JLPT_kanji';
+// import {
+//   getKanjiByChar,
+//   getExamplesByKanjiChar,
+// } from '../services/kanjiRepository';
 import { preloader } from '../services/KanjiPreloader';
+import VocabDetailInline from './VocabDetailInline';
 
 const TEAL = '#1F6F7A';
 // const TEAL_DARK = '#1c5765';
 const TEXT_COLOR = '#e47b0b';
+const textColor = "#1d4ed8";
 
 interface KanjiDetailInlineProps {
   kanjiChars: string[];
@@ -64,6 +67,7 @@ const TabItem = React.memo(
     </TouchableOpacity>
   )
 );
+TabItem.displayName = 'TabItem';
 
 // ─── MemoizedStrokeOrder: dùng requestAnimationFrame thay InteractionManager ──
 // requestAnimationFrame chỉ trễ 1 frame (~16ms) thay vì 100-300ms
@@ -84,7 +88,7 @@ const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
   if (!renderStroke) {
     return (
       <View style={[styles.strokeWrap, { height: 180, justifyContent: 'center' }]}>
-        <ActivityIndicator color={TEAL} />
+        <ActivityIndicator color={textColor} />
       </View>
     );
   }
@@ -95,6 +99,7 @@ const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
     </View>
   );
 });
+MemoizedStrokeOrder.displayName = 'MemoizedStrokeOrder';
 
 // ─── Skeleton cho sections đang chờ render ───────────────────────────────────
 const SectionSkeleton = React.memo(() => (
@@ -104,6 +109,7 @@ const SectionSkeleton = React.memo(() => (
     ))}
   </View>
 ));
+SectionSkeleton.displayName = 'SectionSkeleton';
 
 // ─── Banner "Sớm cập nhật" — hiện khi chữ không có trong CSDL ───────────────
 const NoDataBanner = React.memo(({ char }: { char: string }) => {
@@ -123,13 +129,14 @@ const NoDataBanner = React.memo(({ char }: { char: string }) => {
       <View style={styles.noDataTextWrap}>
         <Text style={styles.noDataTitle}>Sớm cập nhật</Text>
         <Text style={styles.noDataSub}>
-          Chữ <Text style={styles.noDataChar}>"{char}"</Text> chưa có trong cơ sở dữ liệu.{'\n'}
+          Chữ <Text style={styles.noDataChar}>&quot;{char}&quot;</Text> chưa có trong cơ sở dữ liệu.{'\n'}
           Chúng tôi sẽ bổ sung trong thời gian tới.
         </Text>
       </View>
     </Animated.View>
   );
 });
+NoDataBanner.displayName = 'NoDataBanner';
 
 // ════════════════════════════════════════════════════════════════════════════
 // COMPONENT CHÍNH
@@ -140,6 +147,7 @@ export default function KanjiDetailInline({
   initialIndex = 0,
 }: KanjiDetailInlineProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
+  const [selectedExample, setSelectedExample] = useState<KanjiExample | null>(null);
 
   // ── PHASED RENDERING ──────────────────────────────────────────────────────
   // sectionsReady = false → chỉ render Header + Stats (nhẹ, < 1 frame)
@@ -159,14 +167,14 @@ export default function KanjiDetailInline({
   useEffect(() => {
     setKanjiData(null);
     setExamples([]);
-    // const id = requestAnimationFrame(() => {
-    //   setKanjiData(getKanjiByCharFull(currentKanji) || null);
-    //   setExamples(getExamplesByKanjiChar(currentKanji));
-    // });
-    const id = requestAnimationFrame(async () => {
-      setKanjiData(await getKanjiByChar(currentKanji) || null);
-      setExamples(await getExamplesByKanjiChar(currentKanji));
+    const id = requestAnimationFrame(() => {
+      setKanjiData(getKanjiByCharFull(currentKanji) || null);
+      setExamples(getExamplesByKanjiChar(currentKanji));
     });
+    // const id = requestAnimationFrame(async () => {
+    //   setKanjiData(await getKanjiByChar(currentKanji) || null);
+    //   setExamples(await getExamplesByKanjiChar(currentKanji));
+    // });
     return () => cancelAnimationFrame(id);
   }, [currentKanji]);
 
@@ -324,24 +332,61 @@ export default function KanjiDetailInline({
               </View>
 
               {/* Ví dụ — tra từ toàn bộ từ vựng (JLPT + ngành nghề) */}
+              {/* Ví dụ — nhấn vào để xem chi tiết từ vựng */}
               {examples.length > 0 && (
                 <View style={styles.section}>
-                  <Text style={styles.sectionTitle}>Ví dụ {examples.length}</Text>
+                  <Text style={styles.sectionTitle}>
+                    Ví dụ {examples.length}
+                  </Text>
                   {examples.map((ex, idx) => (
-                    <View key={idx} style={styles.exampleBox}>
+                    <TouchableOpacity
+                      key={idx}
+                      style={[styles.exampleBox, { borderLeftColor: '#10b981' }]}
+                      onPress={() => setSelectedExample(ex)}
+                      activeOpacity={0.7}
+                    >
                       <Text style={styles.exampleJp}>{ex.jp}</Text>
                       <Text style={styles.exampleReading}>{ex.reading}</Text>
                       <Text style={styles.exampleVi}>→ {ex.vi}</Text>
-                    </View>
+                      <Text style={{ fontSize: 48, marginTop: 8, right: 8, opacity: 0.05, position: 'absolute', zIndex: -1 }}>
+                        🔍 
+                      </Text>
+                    </TouchableOpacity>
                   ))}
                 </View>
               )}
+              {/* {examples.map((ex, idx) => (
+                <TouchableOpacity
+                  key={idx}
+                  style={styles.exampleBox}
+                  onPress={() => setSelectedExample(ex)}
+                  activeOpacity={0.7}
+                >
+                  <Text style={styles.exampleJp}>{ex.jp}</Text>
+                  <Text style={styles.exampleReading}>{ex.reading}</Text>
+                  <Text style={styles.exampleVi}>→ {ex.vi}</Text>
+                </TouchableOpacity>
+              ))} */}
             </>
           )}
-
           <View style={{ height: 30 }} />
         </ScrollView>
       )}
+      {selectedExample && (
+      <View style={StyleSheet.absoluteFill}>
+        <VocabDetailInline
+          kanji={selectedExample.jp}
+          hiragana={selectedExample.reading}
+          nghia={selectedExample.vi}
+          han=""
+          level={kanjiData?.jlpt || 'N3'}
+          example=""
+          exampleMeaning=""
+          id={selectedExample.jp}
+          onClose={() => setSelectedExample(null)}
+        />
+      </View>
+    )}
     </View>
   );
 }
@@ -363,9 +408,9 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: 'transparent',
   },
-  tabItemActive: { borderBottomColor: TEAL },
+  tabItemActive: { borderBottomColor: textColor },
   tabText: { fontSize: 16, color: '#666' },
-  tabTextActive: { color: TEAL, fontWeight: 'bold' },
+  tabTextActive: { color: textColor, fontWeight: 'bold' },
   content: { flex: 1, padding: 15 },
   kanjiHeader: { alignItems: 'center', marginBottom: 20 },
   furiganaContainer: { height: 20, justifyContent: 'center' },
@@ -378,7 +423,7 @@ const styles = StyleSheet.create({
   },
   bigHanViet: {
     fontSize: 18,
-    color: TEXT_COLOR,
+    color: textColor,
     fontWeight: 'bold',
     textTransform: 'uppercase',
   },
@@ -392,7 +437,7 @@ const styles = StyleSheet.create({
   },
   statCol: { alignItems: 'center' },
   statChip: {
-    backgroundColor: TEAL,
+    backgroundColor: textColor,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
@@ -425,7 +470,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: TEAL,
+    color: textColor,
     marginBottom: 10,
     paddingBottom: 5,
   },
@@ -436,7 +481,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',  
   },
   diamond: { 
-    color: TEAL, 
+    color: textColor, 
     marginRight: 8, 
     fontSize: 12, 
     marginTop: 2 
@@ -470,14 +515,14 @@ const styles = StyleSheet.create({
   componentBar: {
     width: 3,
     height: 20,
-    backgroundColor: TEAL,
+    backgroundColor: textColor,
     borderRadius: 2,
     marginRight: 10,
   },
   componentKanji: { fontSize: 20, fontWeight: 'bold', color: '#333', marginRight: 8 },
   componentHanViet: { fontSize: 14, color: '#666' },
   meaningRow: { flexDirection: 'row', marginBottom: 6, alignItems: 'flex-start' },
-  meaningDot: { color: TEAL, marginRight: 8, fontSize: 16, lineHeight: 22 },
+  meaningDot: { color: textColor, marginRight: 8, fontSize: 16, lineHeight: 22 },
   meaningText: { fontSize: 15, color: '#444', flex: 1, lineHeight: 22 },
   exampleBox: {
     backgroundColor: '#f8fafc',
@@ -485,7 +530,7 @@ const styles = StyleSheet.create({
     padding: 12,
     marginBottom: 10,
     borderLeftWidth: 3,
-    borderLeftColor: TEAL,
+    borderLeftColor: textColor,
   },
   exampleJp: { fontSize: 16, color: '#1e293b', fontWeight: '600', marginBottom: 4 },
   exampleReading: { fontSize: 13, color: '#64748b', marginBottom: 4 },
@@ -530,6 +575,6 @@ const styles = StyleSheet.create({
   },
   noDataChar: {
     fontWeight: '800',
-    color: TEAL,
+    color: textColor,
   },
 });

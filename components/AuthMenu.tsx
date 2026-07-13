@@ -17,8 +17,9 @@ import {
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 
 // ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#0B3540";
+const TEAL = "#004370";
+// const TEAL = "#1F6F7A";
+const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
 const SCREEN_WIDTH = Dimensions.get("window").width;
 const PANEL_WIDTH = Math.min(360, SCREEN_WIDTH * 0.88);

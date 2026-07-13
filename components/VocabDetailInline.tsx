@@ -21,6 +21,8 @@ const BG_GRAY = "#f0f4f8";
 // ============================================
 // INTERFACE PROPS
 // ============================================
+
+// Props interface — thêm field mới
 interface VocabDetailInlineProps {
   kanji: string;
   hiragana?: string;
@@ -31,13 +33,37 @@ interface VocabDetailInlineProps {
   exampleMeaning?: string;
   level?: string;
   id?: string;
+  wordType?: string;
+  typeLabel?: string;
+  isNaAdjective?: boolean;
+  isExtractedVerb?: boolean;
+  extractedVerb?: string | null;
+  isConjugatedForm?: boolean;
+  conjugatedForm?: string | null;
   onClose: () => void;
 }
+// interface VocabDetailInlineProps {
+//   kanji: string;
+//   hiragana?: string;
+//   hira?: string;
+//   han?: string;
+//   nghia?: string;
+//   example?: string;
+//   exampleMeaning?: string;
+//   level?: string;
+//   id?: string;
+//   onClose: () => void;
+// }
 
 // ============================================
 // LOẠI TỪ
 // ============================================
 type WordType = 'godan' | 'ichidan' | 'sahen' | 'kahen' | 'irregular' | 'i-adjective' | 'na-adjective' | 'noun-only' | 'noun-suru';
+
+const VALID_WORD_TYPES: WordType[] = [
+  'godan', 'ichidan', 'sahen', 'kahen', 'irregular',
+  'i-adjective', 'na-adjective', 'noun-only', 'noun-suru',
+];
 
 function detectWordType(kanji: string, nghia: string = ''): WordType {
   const word = kanji;
@@ -64,6 +90,21 @@ function detectWordType(kanji: string, nghia: string = ''): WordType {
   return canAddSuru ? 'noun-suru' : 'noun-only';
 }
 
+function resolveWordType(
+  entry: { wordType?: string; isNaAdjective?: boolean },
+  kanji: string,
+  nghia: string = ''
+): WordType {
+  // Ưu tiên tuyệt đối: field isNaAdjective từ JSON (đáng tin hơn wordType text)
+  if (entry.isNaAdjective) return 'na-adjective';
+  // Ưu tiên 2: đọc thẳng wordType đã tính sẵn trong JSON
+  if (entry.wordType && VALID_WORD_TYPES.includes(entry.wordType as WordType)) {
+    return entry.wordType as WordType;
+  }
+  // Fallback: chỉ đoán khi entry cũ chưa có field này
+  return detectWordType(kanji, nghia);
+}
+
 // ============================================
 // BẢNG CHIA TỪ (tất cả nhóm)
 // ============================================
@@ -87,7 +128,8 @@ function conjugateGodan(verb: string) {
     { name: 'Từ điển (辞書形)', japanese: verb },
     { name: 'Phủ định (ない形)', japanese: stem + map.negative },
     { name: 'Quá khứ (た形)', japanese: stem + map.past },
-    { name: 'Phủ định quá khứ', japanese: stem + map.negative.slice(0, -2) + 'かった' },
+    // { name: 'Phủ định quá khứ', japanese: stem + map.negative.slice(0, -2) + 'かった' },
+    { name: 'Phủ định quá khứ', japanese: stem + map.negative.slice(0, -1) + 'かった' },
     { name: 'て形', japanese: stem + map.te },
     { name: 'Lịch sự (ます形)', japanese: stem + 'います' },
     { name: 'Khả năng (可能形)', japanese: stem + map.potential },
@@ -229,6 +271,23 @@ function ConjugationTable({ word, wordType, originalWord }: { word: string; word
 // ============================================
 // COMPONENT CHÍNH
 // ============================================
+
+
+  function resolveConjugationTarget(entry: {
+    isExtractedVerb?: boolean;
+    extractedVerb?: string | null;
+    isConjugatedForm?: boolean;
+    conjugatedForm?: string | null;
+  }, kanji: string): { word: string; skip: boolean; baseNote?: string } {
+    if (entry.isConjugatedForm) {  
+      return { word: kanji, skip: true, baseNote: entry.conjugatedForm ?? undefined };
+    }
+    if (entry.isExtractedVerb && entry.extractedVerb) {
+      return { word: entry.extractedVerb, skip: false };
+    }
+    return { word: kanji, skip: false };
+  } 
+
 export default function VocabDetailInline({
   kanji,
   hiragana = '',
@@ -239,6 +298,7 @@ export default function VocabDetailInline({
   exampleMeaning = '',
   level = 'N3',
   id = '',
+  wordType, typeLabel, isNaAdjective, isExtractedVerb, extractedVerb, isConjugatedForm, conjugatedForm,
   onClose,
 }: VocabDetailInlineProps) {
     
@@ -251,10 +311,16 @@ export default function VocabDetailInline({
   const [showAllExamples, setShowAllExamples] = useState(false); 
 
   useEffect(() => {
-    if (kanji) {
-      const examples = findExamplesByVocab(kanji);
-      setRelatedExamples(examples);
-    }
+    let cancelled = false;
+    const loadExamples = async () => {
+      if (!kanji) return;
+      const examples = await findExamplesByVocab(kanji);
+      if (!cancelled) setRelatedExamples(examples);
+    };
+    loadExamples();
+    return () => {
+      cancelled = true;
+    };
   }, [kanji]);
 
   useEffect(() => {
@@ -301,11 +367,16 @@ export default function VocabDetailInline({
     }
   };
 
-  const wordType = detectWordType(kanji, nghia);
-  const conjugationWord = kanji;
+  // const wordType = detectWordType(kanji, nghia);
+  // const conjugationWord = kanji;
+  const resolvedWordType = resolveWordType({ wordType, isNaAdjective }, kanji, nghia);
+  const { word: conjugationWord, skip: skipConjugation, baseNote } = resolveConjugationTarget(
+    { isExtractedVerb, extractedVerb, isConjugatedForm, conjugatedForm }, kanji
+  );
 
   const getWordTypeText = () => {
-    switch (wordType) {
+    if (typeLabel) return typeLabel;
+    switch (resolvedWordType) {
       case 'godan': return 'Động từ nhóm 1 (Godan - 五段動詞)';
       case 'ichidan': return 'Động từ nhóm 2 (Ichidan - 一段動詞)';
       case 'sahen': return 'Động từ nhóm 3 (Sahen - サ変動詞)';
@@ -320,6 +391,22 @@ export default function VocabDetailInline({
   };
 
   return (
+    <View style={{ flex: 1, backgroundColor: '#fff' }}>
+      {/* Header với nút đóng */}
+      <View style={{
+        flexDirection: 'row', alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingHorizontal: 16, paddingVertical: 12,
+        borderBottomWidth: 1, borderBottomColor: '#e2e8f0',
+        backgroundColor: '#fff',
+      }}>
+        <Text style={{ fontSize: 16, fontWeight: '700', color: '#1e293b' }}>
+          📖 {kanji} — Chi tiết từ vựng
+        </Text>
+        <TouchableOpacity onPress={onClose} hitSlop={10}>
+          <Text style={{ fontSize: 22, color: '#64748b', fontWeight: '300' }}>✕</Text>
+        </TouchableOpacity>
+      </View>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.card}>
           {/* Từ vựng chính */}
@@ -379,7 +466,7 @@ export default function VocabDetailInline({
               <Text style={styles.fullMeaningTitle}>📖 Đầy đủ nghĩa và cách dùng:</Text>
               <Text style={styles.fullMeaningText}>• {kanji} ({displayHiragana}): {nghia}</Text>
               <Text style={styles.fullMeaningText}>• Loại từ: {getWordTypeText()}</Text>
-              {wordType === 'noun-suru' && (
+              {resolvedWordType === 'noun-suru' && (
                 <Text style={styles.fullMeaningText}>• Có thể thêm する để tạo động từ: {kanji}する</Text>
               )}
             </View>
@@ -430,10 +517,18 @@ export default function VocabDetailInline({
           )}
 
           {/* Bảng chia từ */}
-          <ConjugationTable word={conjugationWord} wordType={wordType} originalWord={kanji} />
+            {skipConjugation ? (
+              <View style={styles.wordTypeRow}>
+                <Text style={styles.wordTypeText}>
+                  📌 Đây là dạng chia sẵn của: {baseNote || '—'}
+                </Text>
+              </View>
+            ) : (
+              <ConjugationTable word={conjugationWord} wordType={resolvedWordType} originalWord={kanji} />
+            )}
         </View>
       </ScrollView>
-    // </View>
+    </View>
   );
 }
 

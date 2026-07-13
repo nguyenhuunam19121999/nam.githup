@@ -8,7 +8,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { BottomTabBar } from "@/components/BottomTabBar";
+import { BottomTabBar } from "../components/BottomTabBar";
 import React, { useMemo, useState } from "react";
 import {
   Alert,
@@ -42,44 +42,45 @@ function GrammarStatsModal({
   totalCount: number;
   level: string;
 }) {
-  return (
-    <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
-      <View style={ms.overlay}>
-        <View style={ms.sheet}>
-          {/* Tay cầm */}
-          <View style={ms.handle} />
-          <Text style={ms.title}>📊 Thống kê học Ngữ pháp</Text>
+  // return (
+  
+  //   // <Modal visible={visible} animationType="slide" transparent onRequestClose={onClose}>
+  //   //   <View style={ms.overlay}>
+  //   //     <View style={ms.sheet}>
+  //   //       {/* Tay cầm */}
+  //   //       <View style={ms.handle} />
+  //   //       <Text style={ms.title}>📊 Thống kê học Ngữ pháp</Text>
 
-          {/* Cấp độ */}
-          <View style={ms.card}>
-            <Text style={ms.cardValue}>{level}</Text>
-            <Text style={ms.cardLabel}>Cấp độ JLPT đang học</Text>
-          </View>
+  //   //       {/* Cấp độ */}
+  //   //       <View style={ms.card}>
+  //   //         <Text style={ms.cardValue}>{level}</Text>
+  //   //         <Text style={ms.cardLabel}>Cấp độ JLPT đang học</Text>
+  //   //       </View>
 
-          {/* Tổng số mẫu */}
-          <View style={ms.card}>
-            <Text style={ms.cardValue}>{totalCount}</Text>
-            <Text style={ms.cardLabel}>Tổng số mẫu ngữ pháp</Text>
-          </View>
+  //   //       {/* Tổng số mẫu */}
+  //   //       <View style={ms.card}>
+  //   //         <Text style={ms.cardValue}>{totalCount}</Text>
+  //   //         <Text style={ms.cardLabel}>Tổng số mẫu ngữ pháp</Text>
+  //   //       </View>
 
-          <View style={ms.divider} />
-          <Text style={ms.sectionTitle}>🎯 Kết quả luyện tập</Text>
-          <View style={ms.row}>
-            <Text style={ms.rowLabel}>Quiz ngữ pháp:</Text>
-            <Text style={ms.rowVal}>Sắp ra mắt</Text>
-          </View>
-          <View style={ms.row}>
-            <Text style={ms.rowLabel}>Ghi chú đã lưu:</Text>
-            <Text style={ms.rowVal}>Sắp ra mắt</Text>
-          </View>
+  //   //       <View style={ms.divider} />
+  //   //       <Text style={ms.sectionTitle}>🎯 Kết quả luyện tập</Text>
+  //   //       <View style={ms.row}>
+  //   //         <Text style={ms.rowLabel}>Quiz ngữ pháp:</Text>
+  //   //         <Text style={ms.rowVal}>Sắp ra mắt</Text>
+  //   //       </View>
+  //   //       <View style={ms.row}>
+  //   //         <Text style={ms.rowLabel}>Ghi chú đã lưu:</Text>
+  //   //         <Text style={ms.rowVal}>Sắp ra mắt</Text>
+  //   //       </View>
 
-          <TouchableOpacity style={ms.closeBtn} onPress={onClose} activeOpacity={0.85}>
-            <Text style={ms.closeBtnText}>Đóng</Text>
-          </TouchableOpacity>
-        </View>
-      </View>
-    </Modal>
-  );
+  //   //       <TouchableOpacity style={ms.closeBtn} onPress={onClose} activeOpacity={0.85}>
+  //   //         <Text style={ms.closeBtnText}>Đóng</Text>
+  //   //       </TouchableOpacity>
+  //   //     </View>
+  //   //   </View>
+  //   // </Modal>
+  // );
 }
 
 const LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;
@@ -111,7 +112,8 @@ function BottomSheetPicker<T extends string>({
   renderLabel: (v: T) => string;
 }) {
   return (
-    <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
+    // <Modal visible={visible} transparent animationType="slide" onRequestClose={onClose}>
+    <Modal visible={visible} transparent animationType="fade" onRequestClose={onClose}>
       <View style={sheet.overlay}>
         <Pressable style={sheet.backdrop} onPress={onClose} />
         <View style={sheet.sheet}>
@@ -148,6 +150,7 @@ function BottomSheetPicker<T extends string>({
 }
 
 export default function GrammarScreen() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const router = useRouter();
   const params = useLocalSearchParams<{ level?: string; title?: string; bookId?: string; week?: string }>();
   const bookIdParam = typeof params.bookId === "string" ? params.bookId : "";
@@ -218,26 +221,39 @@ export default function GrammarScreen() {
         </TouchableOpacity>
 
         {/* Tiêu đề + số mục */}
-        <View style={s.titleBlock}>
-          <Text style={s.headerTitle} numberOfLines={1}>Ngữ pháp {level}</Text>
-          <Text style={s.headerSubtitle}>{items.length} mẫu ngữ pháp</Text>
-        </View>
+        <Text style={s.headerTitle} numberOfLines={1}>
+          {typeof params.title === "string" && params.title 
+            ? params.title 
+            : `Ngữ pháp ${level}`}
+        </Text>
+        {/* <Text style={s.headerSubtitle}>{items.length} mẫu ngữ pháp</Text> */}
 
         {/* Nút Thống kê + Menu */}
         <View style={s.headerBtns}>
-          <TouchableOpacity style={s.headerActionBtn} onPress={() => setShowStats(true)} activeOpacity={0.8}>
+
+          <TouchableOpacity 
+            style={s.headerActionBtn}
+            onPress={() => setMenuOpen(true)}
+            activeOpacity={0.8}
+          >
+            <View style={s.menuLine} />
+            <View style={s.menuLine} />
+            <View style={s.menuLine} />
+          </TouchableOpacity>
+
+          {/* <TouchableOpacity style={s.headerActionBtn} onPress={() => setShowStats(true)} activeOpacity={0.8}>
             <Text style={s.statsBtnText}>📊</Text>
           </TouchableOpacity>
           <TouchableOpacity style={s.headerActionBtn} onPress={() => Alert.alert("Tuỳ chọn", "Tính năng sắp ra mắt.")} activeOpacity={0.8}>
             <View style={s.menuLine} />
             <View style={s.menuLine} />
             <View style={s.menuLine} />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
       </View>
 
       {/* ── Khu dropdown + filter ───────────────────────────────────────── */}
-      <View style={s.controls}>
+      {/* <View style={s.controls}>
         <View style={s.dropdownRow}>
           <TouchableOpacity
             style={s.dropdown}
@@ -277,7 +293,7 @@ export default function GrammarScreen() {
             onChange={setShowMeaning}
           />
         </View>
-      </View>
+      </View> */}
 
       {/* ── Danh sách ngữ pháp ─────────────────────────────────────────── */}
       <ScrollView
@@ -302,19 +318,19 @@ export default function GrammarScreen() {
               }
               activeOpacity={0.6}
             >
-              <Text style={s.rowTitle}>
-                <Text style={s.rowIndex}>{i + 1}. </Text>
-                {showVocab && <Text style={s.rowPattern}>{g.pattern}</Text>}
+              <View style={s.rowMain}>
+                <View style={s.rowTopLine}>
+                  <Text style={s.rowIndex}>{i + 1}.</Text>
+                  {showVocab && <Text style={s.rowPattern}>{g.pattern}</Text>}
+                  {!showVocab && showPhonetic && <Text style={s.rowPattern}>{g.phienAm}</Text>}
+                </View>
                 {showPhonetic && showVocab && g.phienAm !== g.pattern && (
-                  <Text style={s.rowPhonetic}> {g.phienAm}</Text>
+                  <Text style={s.rowPhonetic}>{g.phienAm}</Text>
                 )}
-                {!showVocab && showPhonetic && (
-                  <Text style={s.rowPattern}>{g.phienAm}</Text>
+                {showMeaning && (
+                  <Text style={s.rowMeaning}>{g.meaning}</Text>
                 )}
-              </Text>
-              {showMeaning && (
-                <Text style={s.rowMeaning}>{g.meaning}</Text>
-              )}
+              </View>
             </TouchableOpacity>
           ))
         )}
@@ -349,13 +365,60 @@ export default function GrammarScreen() {
         onClose={() => setLevelSheet(false)}
         renderLabel={(v) => v}
       />
-      {/* ── Modal thống kê ── */}
-      <GrammarStatsModal
-        visible={showStats}
-        onClose={() => setShowStats(false)}
-        totalCount={items.length}
-        level={level}
-      />
+      {/* ── Modal thống kê ── */}  
+      <Modal visible={menuOpen} transparent animationType="slide" onRequestClose={() => setMenuOpen(false)}>
+        <View style={ms.overlay}>
+          <Pressable style={StyleSheet.absoluteFill} onPress={() => setMenuOpen(false)} />
+          <View style={ms.sheet}>
+            <View style={ms.handle} />
+            <View style={ms.sheetHeader}>
+              <Text style={ms.sheetTitle}>Tuỳ chọn</Text>
+              <TouchableOpacity onPress={() => setMenuOpen(false)} hitSlop={10}>
+                <Text style={ms.sheetClose}>Đóng</Text>
+              </TouchableOpacity>
+            </View>
+            <Text style={ms.groupLabel}>Loại học</Text>
+            <View style={ms.dropdownRow}>
+              {TYPES.map((t) => (
+                <TouchableOpacity key={t.id} style={[ms.chip, type === t.id && ms.chipActive]}
+                  onPress={() => { setType(t.id); handleTypeChange(t.id); setMenuOpen(false); }}>
+                  <Text style={[ms.chipText, type === t.id && ms.chipTextActive]}>{t.label}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+            <Text style={ms.groupLabel}>Trình độ</Text>
+            <View style={ms.dropdownRow}>
+              {LEVELS.map((lv) => (
+                <TouchableOpacity key={lv} style={[ms.chip, level === lv && ms.chipActive]}
+                  onPress={() => setLevel(lv)}>
+                  <Text style={[ms.chipText, level === lv && ms.chipTextActive]}>{lv}</Text>
+                </TouchableOpacity>
+              ))}
+            </View>
+            <Text style={ms.groupLabel}>Hiển thị</Text>
+            <View style={ms.checkRow}>
+              <TouchableOpacity style={ms.checkItem} onPress={() => setShowVocab(!showVocab)}>
+                <View style={[ms.checkBox, showVocab && ms.checkBoxOn]}>
+                  {showVocab && <Text style={ms.checkMark}>✓</Text>}
+                </View>
+                <Text style={ms.checkLabel}>Từ vựng</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={ms.checkItem} onPress={() => setShowPhonetic(!showPhonetic)}>
+                <View style={[ms.checkBox, showPhonetic && ms.checkBoxOn]}>
+                  {showPhonetic && <Text style={ms.checkMark}>✓</Text>}
+                </View>
+                <Text style={ms.checkLabel}>Phiên âm</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={ms.checkItem} onPress={() => setShowMeaning(!showMeaning)}>
+                <View style={[ms.checkBox, showMeaning && ms.checkBoxOn]}>
+                  {showMeaning && <Text style={ms.checkMark}>✓</Text>}
+                </View>
+                <Text style={ms.checkLabel}>Nghĩa</Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
       <BottomTabBar />
     </View>
   );
@@ -385,6 +448,27 @@ function CheckBox({
     </TouchableOpacity>
   );
 }
+
+const ms = StyleSheet.create({
+  overlay: { flex: 1, backgroundColor: "rgba(0,0,0,0.45)", justifyContent: "flex-end" },
+  sheet: { backgroundColor: "#fff", borderTopLeftRadius: 24, borderTopRightRadius: 24, paddingHorizontal: 20, paddingBottom: 36, paddingTop: 12 },
+  handle: { alignSelf: "center", width: 40, height: 4, borderRadius: 2, backgroundColor: "#e2e8f0", marginBottom: 16 },
+  sheetHeader: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", marginBottom: 18 },
+  sheetTitle: { fontSize: 17, fontWeight: "800", color: "#0f172a" },
+  sheetClose: { fontSize: 15, color: TEAL, fontWeight: "600" },
+  groupLabel: { fontSize: 11, fontWeight: "700", color: "#94a3b8", textTransform: "uppercase", marginBottom: 8, marginTop: 16 },
+  dropdownRow: { flexDirection: "row", flexWrap: "wrap", gap: 8 },
+  chip: { paddingHorizontal: 16, paddingVertical: 8, borderRadius: 20, backgroundColor: "#f1f5f9", borderWidth: 1.5, borderColor: "#e2e8f0" },
+  chipActive: { backgroundColor: TEAL_DARK, borderColor: TEAL_DARK },
+  chipText: { fontSize: 14, fontWeight: "600", color: "#475569" },
+  chipTextActive: { color: "#fff" },
+  checkRow: { flexDirection: "row", gap: 16, marginTop: 4 },
+  checkItem: { flexDirection: "row", alignItems: "center" },
+  checkBox: { width: 20, height: 20, borderRadius: 4, borderWidth: 1.5, borderColor: "#94a3b8", backgroundColor: "#fff", alignItems: "center", justifyContent: "center", marginRight: 6 },
+  checkBoxOn: { backgroundColor: TEAL, borderColor: TEAL },
+  checkMark: { color: "#fff", fontSize: 12, fontWeight: "900" },
+  checkLabel: { fontSize: 14, fontWeight: "600", color: TEAL_DARK },
+});
 
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f0f4f8" },
@@ -463,18 +547,26 @@ const s = StyleSheet.create({
 
   // List
   scroll: { flex: 1 },
-  scrollContent: { paddingTop: 6 },
-  row: {
-    paddingHorizontal: 16,
-    paddingVertical: 14,
-    borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#e2e8f0",
+  scrollContent: { 
+    paddingHorizontal: 16, 
+    paddingTop: 6, 
+    paddingBottom: 40 
   },
-  rowTitle: { fontSize: 18, lineHeight: 24, color: "#0f172a" },
-  rowIndex: { color: TEXT_COLOR, fontSize: 18, fontWeight: "700" },
-  rowPattern: { color: TEAL_DARK, fontSize: 18, fontWeight: "600" },
-  rowPhonetic: { color: "#475569", fontSize: 16, fontWeight: "500" },
-  rowMeaning: { marginTop: 6, fontSize: 15, color: "#0f172a" },
+  row: {
+    flexDirection: "row",
+    backgroundColor: "#fff",
+    borderRadius: 12,
+    paddingVertical: 12,
+    paddingHorizontal: 14,
+    marginBottom: 8,
+    alignItems: "flex-start",
+  },
+  rowMain: { flex: 1 },
+  rowTopLine: { flexDirection: "row", alignItems: "baseline", marginBottom: 4 },
+  rowIndex: { fontSize: 14, color: TEXT_COLOR, marginRight: 8, fontWeight: "700" },
+  rowPattern: { fontSize: 18, fontWeight: "700", color: TEAL_DARK, flex: 1 },
+  rowPhonetic: { fontSize: 14, color: "#475569", marginBottom: 2 },
+  rowMeaning: { fontSize: 14, color: TEAL },
 
   empty: { paddingVertical: 60, alignItems: "center" },
   emptyText: { color: TEXT_COLOR, fontSize: 14 },
@@ -514,67 +606,65 @@ const sheet = StyleSheet.create({
   optionActive: { backgroundColor: "#f1f5f9" },
   optionText: { color: "#cbd5e1", fontSize: 18, fontWeight: "500" },
   optionTextActive: { color: "#0f172a", fontWeight: "700", fontSize: 20 },
-});
 
 // ── Styles modal thống kê ────────────────────────────────────────────────────
-const ms = StyleSheet.create({
-  overlay: {
-    flex: 1,
-    backgroundColor: "rgba(0,0,0,0.45)",
-    justifyContent: "flex-end",
-  },
-  sheet: {
-    backgroundColor: "#fff",
-    borderTopLeftRadius: 24,
-    borderTopRightRadius: 24,
-    paddingHorizontal: 20,
-    paddingBottom: 36,
-    paddingTop: 12,
-  },
-  handle: {
-    alignSelf: "center",
-    width: 40,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: "#e2e8f0",
-    marginBottom: 16,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: "800",
-    color: "#0f172a",
-    marginBottom: 16,
-    textAlign: "center",
-  },
-  card: {
-    backgroundColor: "#f1f5f9",
-    borderRadius: 14,
-    padding: 16,
-    alignItems: "center",
-    marginBottom: 10,
-  },
-  cardValue: { fontSize: 28, fontWeight: "900", color: "#0f172a" },
-  cardLabel: { fontSize: 13, color: "#64748b", marginTop: 4 },
-  divider: { height: 1, backgroundColor: "#e2e8f0", marginVertical: 14 },
-  sectionTitle: {
-    fontSize: 15,
-    fontWeight: "700",
-    color: "#0f172a",
-    marginBottom: 10,
-  },
-  row: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    paddingVertical: 6,
-  },
-  rowLabel: { fontSize: 14, color: "#475569" },
-  rowVal: { fontSize: 14, fontWeight: "700", color: "#0f172a" },
-  closeBtn: {
-    marginTop: 20,
-    backgroundColor: TEXT_COLOR,
-    borderRadius: 14,
-    paddingVertical: 14,
-    alignItems: "center",
-  },
-  closeBtnText: { color: "#fff", fontWeight: "700", fontSize: 16 },
+  // overlay: {
+  //   flex: 1,
+  //   backgroundColor: "rgba(0,0,0,0.45)",
+  //   justifyContent: "flex-end",
+  // },
+  // sheet: {
+  //   backgroundColor: "#fff",
+  //   borderTopLeftRadius: 24,
+  //   borderTopRightRadius: 24,
+  //   paddingHorizontal: 20,
+  //   paddingBottom: 36,
+  //   paddingTop: 12,
+  // },
+  // handle: {
+  //   alignSelf: "center",
+  //   width: 40,
+  //   height: 4,
+  //   borderRadius: 2,
+  //   backgroundColor: "#e2e8f0",
+  //   marginBottom: 16,
+  // },
+  // title: {
+  //   fontSize: 18,
+  //   fontWeight: "800",
+  //   color: "#0f172a",
+  //   marginBottom: 16,
+  //   textAlign: "center",
+  // },
+  // card: {
+  //   backgroundColor: "#f1f5f9",
+  //   borderRadius: 14,
+  //   padding: 16,
+  //   alignItems: "center",
+  //   marginBottom: 10,
+  // },
+  // cardValue: { fontSize: 28, fontWeight: "900", color: "#0f172a" },
+  // cardLabel: { fontSize: 13, color: "#64748b", marginTop: 4 },
+  // divider: { height: 1, backgroundColor: "#e2e8f0", marginVertical: 14 },
+  // sectionTitle: {
+  //   fontSize: 15,
+  //   fontWeight: "700",
+  //   color: "#0f172a",
+  //   marginBottom: 10,
+  // },
+  // row: {
+  //   flexDirection: "row",
+  //   justifyContent: "space-between",
+  //   paddingVertical: 6,
+  // },
+  // rowLabel: { fontSize: 14, color: "#475569" },
+  // rowVal: { fontSize: 14, fontWeight: "700", color: "#0f172a" },
+  // closeBtn: {
+  //   marginTop: 20,
+  //   backgroundColor: TEXT_COLOR,
+  //   borderRadius: 14,
+  //   paddingVertical: 14,
+  //   alignItems: "center",
+  // },
+  // closeBtnText: { color: "#fff", fontWeight: "700", fontSize: 16 },
 });

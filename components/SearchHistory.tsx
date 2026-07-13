@@ -261,3 +261,4 @@ const styles = StyleSheet.create({
     color: "#94a3b8",
   },
 });
+SearchHistory.displayName = 'SearchHistory';

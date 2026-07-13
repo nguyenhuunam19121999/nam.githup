@@ -64,13 +64,9 @@ export interface ExamData {
 }
 
 // ============================================
-// 🌟 KHU VỰC IMPORT CÁC FILE JSON
+// 🌟 KHU VỰC DỮ LIỆU ĐỀ THI
 // ============================================
-import n3_01 from "./n3/n3_01.json";
-
-const EXAM_DATABASE: Record<string, any> = {
-  "n3_01": n3_01,
-};
+const EXAM_DATABASE: Record<string, any> = {};
 
 export const getExamById = (id: string): ExamData | null => {
   return EXAM_DATABASE[id] || null;

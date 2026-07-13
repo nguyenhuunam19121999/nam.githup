@@ -6,7 +6,8 @@
  */
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import strokesMap from '../assets/data_JLPT_kanji/kanji_strokes.json';
+
+const strokesMap: Record<string, string[]> = {};
 
 // Bộ nhớ đệm Memory cache để đồng bộ chia sẻ trạng thái tức thì với component KanjiStrokeOrder
 export const memoryCache = new Map<string, string[]>();

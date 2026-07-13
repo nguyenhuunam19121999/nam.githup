@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": [
+    "app/**/*",
+    "components/**/*",
+    "services/**/*",
+    "assets/**/*",
+    "types/**/*",
+    "lib/api-client-react/**/*"
+  ]
+}

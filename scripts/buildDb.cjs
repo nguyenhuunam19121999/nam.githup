@@ -1,114 +1,193 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// scripts/buildDb.js
-// Chạy 1 lần trên máy tính để tạo file kanji.db từ toàn bộ JSON
-// Cách chạy: node scripts/buildDb.js
-// Yêu cầu:   npm install better-sqlite3   (chỉ cần trên máy dev, không ship)
+// scripts/buildDb.cjs
+// Build multiple SQLite asset files from the JSON source data.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const Database = require('better-sqlite3');
-const fs       = require('fs');
-const path     = require('path');
+const fs = require('fs');
+const path = require('path');
 
-// ── Đường dẫn gốc (thư mục chứa script này là /scripts, assets là /assets) ──
-const ROOT       = path.resolve(__dirname, '..');
-const ASSETS     = path.join(ROOT, 'assets');
-const OUTPUT_DB  = path.join(ASSETS, 'kanji.db');
+const ROOT = path.resolve(__dirname, '..');
+const ASSETS = path.join(ROOT, 'assets');
 
-// ── Xóa DB cũ nếu có để build lại sạch ──────────────────────────────────────
-if (fs.existsSync(OUTPUT_DB)) {
-  fs.unlinkSync(OUTPUT_DB);
-  console.log('🗑  Đã xóa kanji.db cũ');
+const TARGETS = [
+  {
+    name: 'kanji',
+    output: path.join(ASSETS, 'kanji.db'),
+    schema: `
+      CREATE TABLE IF NOT EXISTS kanji (
+        id TEXT PRIMARY KEY,
+        kanji TEXT NOT NULL,
+        strokes INTEGER,
+        freq TEXT,
+        jlpt TEXT DEFAULT 'N/A',
+        grade TEXT,
+        readings TEXT DEFAULT '{"kunyomi":[],"onyomi":[]}',
+        hanviet TEXT DEFAULT '[]',
+        meanings_vi TEXT DEFAULT '[]',
+        meanings_en TEXT DEFAULT '[]',
+        metadata TEXT DEFAULT '{}'
+      );
+      CREATE INDEX IF NOT EXISTS idx_kanji_char ON kanji(kanji);
+      CREATE INDEX IF NOT EXISTS idx_kanji_jlpt ON kanji(jlpt);
+
+      CREATE TABLE IF NOT EXISTS kanji_book_vocab (
+        id TEXT PRIMARY KEY,
+        kanji TEXT NOT NULL,
+        hira TEXT,
+        hanviet TEXT DEFAULT '[]',
+        strokes INTEGER,
+        freq INTEGER,
+        jlpt TEXT,
+        book TEXT,
+        week INTEGER,
+        lesson INTEGER,
+        readings TEXT DEFAULT '{"kunyomi":[],"onyomi":[]}',
+        meanings_vi TEXT DEFAULT '[]',
+        jisho_meaning_en TEXT,
+        jisho_is_common INTEGER,
+        wordType TEXT,
+        typeLabel TEXT,
+        isExpression INTEGER,
+        isSuffix INTEGER,
+        isConjugatedForm INTEGER,
+        conjugatedForm TEXT,
+        isExtractedVerb INTEGER,
+        extractedVerb TEXT,
+        isNaAdjective INTEGER,
+        naBaseWord TEXT,
+        displayForm TEXT
+      );
+      CREATE INDEX IF NOT EXISTS idx_kbv_kanji ON kanji_book_vocab(kanji);
+      CREATE INDEX IF NOT EXISTS idx_kbv_book ON kanji_book_vocab(book);
+      CREATE INDEX IF NOT EXISTS idx_kbv_jlpt ON kanji_book_vocab(jlpt);
+
+      CREATE TABLE IF NOT EXISTS vocab (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        kanji TEXT NOT NULL,
+        hira TEXT,
+        han TEXT,
+        nghia TEXT,
+        jlpt TEXT,
+        book TEXT,
+        lesson INTEGER,
+        week INTEGER,
+        jisho_meaning_en TEXT,
+        jisho_is_common INTEGER,
+        wordType TEXT,
+        typeLabel TEXT,
+        isExpression INTEGER,
+        isSuffix INTEGER,
+        isConjugatedForm INTEGER,
+        conjugatedForm TEXT,
+        isExtractedVerb INTEGER,
+        extractedVerb TEXT,
+        isNaAdjective INTEGER,
+        naBaseWord TEXT,
+        displayForm TEXT,
+        source TEXT
+      );
+      CREATE INDEX IF NOT EXISTS idx_vocab_kanji ON vocab(kanji);
+      CREATE INDEX IF NOT EXISTS idx_vocab_hira ON vocab(hira);
+      CREATE INDEX IF NOT EXISTS idx_vocab_jlpt ON vocab(jlpt);
+      CREATE INDEX IF NOT EXISTS idx_vocab_book ON vocab(book);
+      CREATE INDEX IF NOT EXISTS idx_vocab_source ON vocab(source);
+    `,
+  },
+  {
+    name: 'vocab',
+    output: path.join(ASSETS, 'vocab.db'),
+    schema: `
+      CREATE TABLE IF NOT EXISTS vocab (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        kanji TEXT NOT NULL,
+        hira TEXT,
+        han TEXT,
+        nghia TEXT,
+        jlpt TEXT,
+        book TEXT,
+        lesson INTEGER,
+        week INTEGER,
+        jisho_meaning_en TEXT,
+        jisho_is_common INTEGER,
+        wordType TEXT,
+        typeLabel TEXT,
+        isExpression INTEGER,
+        isSuffix INTEGER,
+        isConjugatedForm INTEGER,
+        conjugatedForm TEXT,
+        isExtractedVerb INTEGER,
+        extractedVerb TEXT,
+        isNaAdjective INTEGER,
+        naBaseWord TEXT,
+        displayForm TEXT,
+        source TEXT
+      );
+    `,
+  },
+  {
+    name: 'grammar',
+    output: path.join(ASSETS, 'grammar.db'),
+    schema: `
+      CREATE TABLE IF NOT EXISTS grammar (
+        id TEXT PRIMARY KEY,
+        pattern TEXT,
+        phienAm TEXT,
+        meaning TEXT,
+        level TEXT,
+        structure TEXT,
+        explanation TEXT,
+        notes TEXT,
+        caution TEXT,
+        related_forms TEXT DEFAULT '[]',
+        examples TEXT DEFAULT '[]',
+        book TEXT,
+        week INTEGER,
+        week_theme TEXT,
+        day INTEGER,
+        day_title TEXT
+      );
+    `,
+  },
+  {
+    name: 'sentences',
+    output: path.join(ASSETS, 'sentences.db'),
+    schema: `
+      CREATE TABLE IF NOT EXISTS sentences (
+        id TEXT PRIMARY KEY,
+        jp TEXT,
+        vi TEXT
+      );
+    `,
+  },
+];
+
+function removeIfExists(filePath) {
+  if (fs.existsSync(filePath)) {
+    fs.unlinkSync(filePath);
+    console.log(`🗑  Đã xóa ${path.basename(filePath)} cũ`);
+  }
 }
-
-const db = new Database(OUTPUT_DB);
-
-// ── Bật WAL mode để ghi nhanh hơn ────────────────────────────────────────────
-db.pragma('journal_mode = WAL');
-db.pragma('synchronous = NORMAL');
-
-// ─────────────────────────────────────────────────────────────────────────────
-// TẠO CÁC BẢNG
-// ─────────────────────────────────────────────────────────────────────────────
-db.exec(`
-  -- Bảng Kanji
-  CREATE TABLE IF NOT EXISTS kanji (
-    id           TEXT PRIMARY KEY,
-    kanji        TEXT NOT NULL,
-    hanviet      TEXT DEFAULT '[]',
-    readings     TEXT DEFAULT '{"kunyomi":[],"onyomi":[]}',
-    meanings_vi  TEXT DEFAULT '[]',
-    meanings_en  TEXT DEFAULT '[]',
-    components   TEXT DEFAULT '[]',
-    examples     TEXT DEFAULT '[]',
-    jlpt         TEXT DEFAULT '—',
-    freq         INTEGER,
-    strokes      INTEGER DEFAULT 0,
-    grade        INTEGER,
-    book         TEXT,
-    lesson       INTEGER,
-    week         INTEGER,
-    unicode      TEXT,
-    source       TEXT
-  );
-  CREATE INDEX IF NOT EXISTS idx_kanji_char    ON kanji(kanji);
-  CREATE INDEX IF NOT EXISTS idx_kanji_jlpt    ON kanji(jlpt);
-  CREATE INDEX IF NOT EXISTS idx_kanji_hanviet ON kanji(hanviet);
-  CREATE INDEX IF NOT EXISTS idx_kanji_unicode ON kanji(unicode);
-
-  -- Bảng Từ vựng (JLPT N5→N1 + ngành học)
-  CREATE TABLE IF NOT EXISTS vocab (
-    id      INTEGER PRIMARY KEY AUTOINCREMENT,
-    jp      TEXT,
-    hira    TEXT,
-    nghia   TEXT,
-    level   TEXT,
-    book    TEXT
-  );
-  CREATE INDEX IF NOT EXISTS idx_vocab_jp    ON vocab(jp);
-  CREATE INDEX IF NOT EXISTS idx_vocab_hira  ON vocab(hira);
-  CREATE INDEX IF NOT EXISTS idx_vocab_level ON vocab(level);
-
-  -- Bảng Ngữ pháp
-  CREATE TABLE IF NOT EXISTS grammar (
-    id      INTEGER PRIMARY KEY AUTOINCREMENT,
-    pattern TEXT,
-    meaning TEXT,
-    example TEXT,
-    level   TEXT,
-    book    TEXT
-  );
-  CREATE INDEX IF NOT EXISTS idx_grammar_level ON grammar(level);
-
-  -- Bảng Mẫu câu
-  CREATE TABLE IF NOT EXISTS sentences (
-    id       INTEGER PRIMARY KEY AUTOINCREMENT,
-    jp       TEXT,
-    reading  TEXT,
-    vi       TEXT,
-    level    TEXT
-  );
-`);
-
-console.log('✅ Đã tạo schema xong\n');
-
-// ─────────────────────────────────────────────────────────────────────────────
-// HELPERS
-// ─────────────────────────────────────────────────────────────────────────────
 
 function readJson(filePath) {
   try {
     const raw = fs.readFileSync(filePath, 'utf8');
     return JSON.parse(raw);
-  } catch (e) {
-    console.warn(`  ⚠️  Không đọc được: ${filePath} — ${e.message}`);
+  } catch (error) {
+    console.warn(`  ⚠️  Không đọc được: ${filePath} — ${error.message}`);
     return null;
   }
 }
 
-function safeJson(val, fallback = '[]') {
-  if (val === undefined || val === null) return fallback;
-  if (typeof val === 'string') return val;
-  return JSON.stringify(val);
+function toJson(value, fallback = '[]') {
+  if (value === undefined || value === null) return fallback;
+  return JSON.stringify(value);
+}
+
+function toBool01(value) {
+  if (value === true) return 1;
+  if (value === false) return 0;
+  return null;
 }
 
 function charToUnicode(char) {
@@ -117,156 +196,168 @@ function charToUnicode(char) {
   return cp ? `U+${cp.toString(16).toUpperCase().padStart(4, '0')}` : '';
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// INSERT KANJI
-// ─────────────────────────────────────────────────────────────────────────────
-
-const stmtKanji = db.prepare(`
-  INSERT OR REPLACE INTO kanji
-    (id, kanji, hanviet, readings, meanings_vi, meanings_en,
-     components, examples, jlpt, freq, strokes, grade,
-     book, lesson, week, unicode, source)
-  VALUES
-    (@id, @kanji, @hanviet, @readings, @meanings_vi, @meanings_en,
-     @components, @examples, @jlpt, @freq, @strokes, @grade,
-     @book, @lesson, @week, @unicode, @source)
-`);
-
-function normalizeKanji(item, defaultJlpt, bookId) {
-  const kanjiChar = (item.kanji || '').trim();
-  if (!kanjiChar) return null;
-
-  // Xử lý unicode
-  const unicode = item.metadata?.Unicode || charToUnicode(kanjiChar);
-
-  // Xử lý hanviet
-  let hanviet = [];
-  if (Array.isArray(item.hanviet))      hanviet = item.hanviet;
-  else if (typeof item.hanviet === 'string') hanviet = item.hanviet.split(',').map(s => s.trim());
-  else if (Array.isArray(item.hanViet)) hanviet = item.hanViet;
-  else if (typeof item.hanViet === 'string') hanviet = item.hanViet.split(',').map(s => s.trim());
-
-  // Xử lý readings
-  const kunyomi = Array.isArray(item.readings?.kunyomi) ? item.readings.kunyomi
-                : Array.isArray(item.kunyomi)            ? item.kunyomi : [];
-  const onyomi  = Array.isArray(item.readings?.onyomi)  ? item.readings.onyomi
-                : Array.isArray(item.onyomi)             ? item.onyomi  : [];
-
-  // Xử lý meanings_vi
-  let meanings_vi = [];
-  if (Array.isArray(item.meanings_vi))      meanings_vi = item.meanings_vi;
-  else if (Array.isArray(item.meanings))    meanings_vi = item.meanings;
-  else if (Array.isArray(item.nghia))       meanings_vi = item.nghia;
-  else if (typeof item.nghia === 'string')  meanings_vi = [item.nghia];
-
-  // Xử lý components
-  let components = [];
-  if (Array.isArray(item.components)) {
-    components = item.components.map(c =>
-      typeof c === 'string' ? { kanji: c } : { kanji: c.kanji || '', hanViet: c.hanViet || c.hanviet || '' }
-    );
-  }
-
-  // Xử lý examples (từ field examples trong JSON mới)
-  let examples = [];
-  if (Array.isArray(item.examples)) {
-    examples = item.examples;
-  }
-
-  return {
-    id:          unicode || kanjiChar,
-    kanji:       kanjiChar,
-    hanviet:     JSON.stringify(hanviet),
-    readings:    JSON.stringify({ kunyomi, onyomi }),
-    meanings_vi: JSON.stringify(meanings_vi),
-    meanings_en: safeJson(item.meanings_en),
-    components:  JSON.stringify(components),
-    examples:    JSON.stringify(examples),
-    jlpt:        item.jlpt || item.level || defaultJlpt,
-    freq:        item.freq  ?? null,
-    strokes:     item.strokes ?? item.so_net ?? 0,
-    grade:       item.grade ?? null,
-    book:        bookId || item.book || null,
-    lesson:      item.lesson ?? null,
-    week:        item.week   ?? null,
-    unicode:     unicode,
-    source:      bookId || 'kanjifull',
-  };
+function createDatabase(outputPath) {
+  const db = new Database(outputPath);
+  db.pragma('journal_mode = WAL');
+  db.pragma('synchronous = NORMAL');
+  return db;
 }
 
-function insertKanjiFile(filePath, defaultJlpt, bookId) {
+function buildTarget(target) {
+  removeIfExists(target.output);
+  const db = createDatabase(target.output);
+  db.exec(target.schema);
+  console.log(`✅ Schema ready for ${target.name}`);
+  return db;
+}
+
+const dbs = Object.fromEntries(TARGETS.map((target) => [target.name, buildTarget(target)]));
+
+function insertKanjiFull(db, filePath) {
+  const data = readJson(filePath);
+  let entries = [];
+  if (Array.isArray(data)) {
+    data.forEach((item) => {
+      if (!item || typeof item !== 'object' || Array.isArray(item)) return;
+      Object.entries(item).forEach(([kanjiChar, detail]) => {
+        if (!kanjiChar || !detail) return;
+        entries.push([kanjiChar, detail]);
+      });
+    });
+  } else if (data && typeof data === 'object') {
+    entries = Object.entries(data);
+  } else {
+    console.warn('  ⚠️  kanjifull.json không đúng định dạng, bỏ qua.');
+    return 0;
+  }
+
+  const stmt = db.prepare(`
+    INSERT OR REPLACE INTO kanji
+      (id, kanji, strokes, freq, jlpt, grade, readings, hanviet, meanings_vi, meanings_en, metadata)
+    VALUES (@id, @kanji, @strokes, @freq, @jlpt, @grade, @readings, @hanviet, @meanings_vi, @meanings_en, @metadata)
+  `);
+
+  const insertBatch = db.transaction((list) => {
+    let count = 0;
+    for (const [kanjiChar, item] of list) {
+      if (!kanjiChar || !item) continue;
+      const unicode = item.metadata?.Unicode || charToUnicode(kanjiChar);
+      const kunyomi = Array.isArray(item.readings?.kunyomi) ? item.readings.kunyomi : [];
+      const onyomi = Array.isArray(item.readings?.onyomi) ? item.readings.onyomi : [];
+      stmt.run({
+        id: unicode || kanjiChar,
+        kanji: kanjiChar,
+        strokes: typeof item.strokes === 'number' ? item.strokes : null,
+        freq: item.freq !== undefined ? String(item.freq) : null,
+        jlpt: item.jlpt || 'N/A',
+        grade: item.grade !== undefined ? String(item.grade) : null,
+        readings: JSON.stringify({ kunyomi, onyomi }),
+        hanviet: toJson(item.hanviet),
+        meanings_vi: toJson(item.meanings_vi),
+        meanings_en: toJson(item.meanings_en),
+        metadata: toJson(item.metadata, '{}'),
+      });
+      count++;
+    }
+    return count;
+  });
+
+  const count = insertBatch(entries);
+  console.log(`  ✓ kanjifull.json: ${count} kanji đơn`);
+  return count;
+}
+
+function insertKanjiBookFile(db, filePath, defaultLevel, bookId) {
   const data = readJson(filePath);
   if (!data) return 0;
   const items = Array.isArray(data) ? data : [];
+  const stmt = db.prepare(`
+    INSERT OR REPLACE INTO kanji_book_vocab
+      (id, kanji, hira, hanviet, strokes, freq, jlpt, book, week, lesson, readings, meanings_vi, jisho_meaning_en, jisho_is_common, wordType, typeLabel, isExpression, isSuffix, isConjugatedForm, conjugatedForm, isExtractedVerb, extractedVerb, isNaAdjective, naBaseWord, displayForm)
+    VALUES (@id, @kanji, @hira, @hanviet, @strokes, @freq, @jlpt, @book, @week, @lesson, @readings, @meanings_vi, @jisho_meaning_en, @jisho_is_common, @wordType, @typeLabel, @isExpression, @isSuffix, @isConjugatedForm, @conjugatedForm, @isExtractedVerb, @extractedVerb, @isNaAdjective, @naBaseWord, @displayForm)
+  `);
 
   const insertBatch = db.transaction((list) => {
     let count = 0;
     list.forEach((item, idx) => {
-      // Gán lesson/week tự động nếu chưa có
-      if (item.lesson == null) {
-        item = { ...item, lesson: Math.floor(idx / 6) + 1, week: Math.floor(idx / 36) + 1 };
-      }
-      const row = normalizeKanji(item, defaultJlpt, bookId);
-      if (row) { stmtKanji.run(row); count++; }
+      if (!item || !item.kanji) return;
+      const book = item.book || bookId;
+      const id = item.id || `${bookId}-${idx}`;
+      const kunyomi = Array.isArray(item.readings?.kunyomi) ? item.readings.kunyomi : [];
+      const onyomi = Array.isArray(item.readings?.onyomi) ? item.readings.onyomi : [];
+      stmt.run({
+        id,
+        kanji: item.kanji,
+        hira: item.hira || '',
+        hanviet: toJson(item.hanviet),
+        strokes: typeof item.strokes === 'number' ? item.strokes : null,
+        freq: typeof item.freq === 'number' ? item.freq : null,
+        jlpt: item.jlpt || defaultLevel,
+        book,
+        week: typeof item.week === 'number' ? item.week : null,
+        lesson: typeof item.lesson === 'number' ? item.lesson : null,
+        readings: JSON.stringify({ kunyomi, onyomi }),
+        meanings_vi: toJson(item.meanings_vi),
+        jisho_meaning_en: item.jisho_meaning_en || null,
+        jisho_is_common: toBool01(item.jisho_is_common),
+        wordType: item.wordType || null,
+        typeLabel: item.typeLabel || null,
+        isExpression: toBool01(item.isExpression),
+        isSuffix: toBool01(item.isSuffix),
+        isConjugatedForm: toBool01(item.isConjugatedForm),
+        conjugatedForm: item.conjugatedForm || null,
+        isExtractedVerb: toBool01(item.isExtractedVerb),
+        extractedVerb: item.extractedVerb || null,
+        isNaAdjective: toBool01(item.isNaAdjective),
+        naBaseWord: item.naBaseWord || null,
+        displayForm: item.displayForm || null,
+      });
+      count++;
     });
     return count;
   });
 
   const count = insertBatch(items);
-  console.log(`  ✓ ${path.basename(filePath)}: ${count} kanji`);
+  console.log(`  ✓ ${path.basename(filePath)}: ${count} mục`);
   return count;
 }
 
-// ── Insert kanjifull.json TRƯỚC (ưu tiên cao nhất, INSERT OR REPLACE) ────────
-console.log('📦 Đang insert kanjifull.json (ưu tiên đầu)...');
-insertKanjiFile(path.join(ASSETS, 'data_JLPT_kanji', 'kanjifull.json'), '—', 'kanjifull');
-
-// ── Insert n5→n1 (bổ sung những chữ chưa có trong kanjifull) ────────────────
-console.log('\n📦 Đang insert kanji JLPT N5→N1...');
-const kanjiFiles = [
-  { file: 'n5.json',           level: 'N5', book: 'n5'           },
-  { file: 'n4.json',           level: 'N4', book: 'n4'           },
-  { file: 'n3_mimikara.json',  level: 'N3', book: 'mimikara-n3'  },
-  { file: 'n3_soumatome.json', level: 'N3', book: 'soumatome-n3' },
-  { file: 'n2_mimikara.json',  level: 'N2', book: 'mimikara-n2'  },
-  { file: 'n2_soumatome.json', level: 'N2', book: 'soumatome-n2' },
-  { file: 'n1.json',           level: 'N1', book: 'n1'           },
-];
-kanjiFiles.forEach(({ file, level, book }) => {
-  insertKanjiFile(path.join(ASSETS, 'data_JLPT_kanji', file), level, book);
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// INSERT VOCAB
-// ─────────────────────────────────────────────────────────────────────────────
-
-const stmtVocab = db.prepare(`
-  INSERT INTO vocab (jp, hira, nghia, level, book)
-  VALUES (@jp, @hira, @nghia, @level, @book)
-`);
-
-function insertVocabFile(filePath, level, book) {
+function insertVocabFile(db, filePath, { level, book, source }) {
   const data = readJson(filePath);
   if (!data) return 0;
   const items = Array.isArray(data) ? data : [];
+  const stmt = db.prepare(`
+    INSERT INTO vocab (kanji, hira, han, nghia, jlpt, book, lesson, week, jisho_meaning_en, jisho_is_common, wordType, typeLabel, isExpression, isSuffix, isConjugatedForm, conjugatedForm, isExtractedVerb, extractedVerb, isNaAdjective, naBaseWord, displayForm, source)
+    VALUES (@kanji, @hira, @han, @nghia, @jlpt, @book, @lesson, @week, @jisho_meaning_en, @jisho_is_common, @wordType, @typeLabel, @isExpression, @isSuffix, @isConjugatedForm, @conjugatedForm, @isExtractedVerb, @extractedVerb, @isNaAdjective, @naBaseWord, @displayForm, @source)
+  `);
 
-  // Dedup trong file
-  const seen = new Set();
   const insertBatch = db.transaction((list) => {
     let count = 0;
-    list.forEach(item => {
-      if (!item) return;
-      const jp   = item.kanji ?? item.jp ?? '';
-      const hira = item.hira  ?? item.reading ?? '';
-      const key  = `${jp}|${hira}`;
-      if (seen.has(key) || !jp) return;
-      seen.add(key);
-      stmtVocab.run({
-        jp,
-        hira,
-        nghia: item.nghia ?? item.vi ?? item.meaning ?? '',
-        level,
-        book,
+    list.forEach((item) => {
+      if (!item || !item.kanji) return;
+      stmt.run({
+        kanji: item.kanji,
+        hira: item.hira || '',
+        han: item.han || null,
+        nghia: item.nghia || '',
+        jlpt: item.jlpt || level || null,
+        book: book || null,
+        lesson: typeof item.lesson === 'number' ? item.lesson : null,
+        week: typeof item.week === 'number' ? item.week : null,
+        jisho_meaning_en: item.jisho_meaning_en || null,
+        jisho_is_common: toBool01(item.jisho_is_common),
+        wordType: item.wordType || null,
+        typeLabel: item.typeLabel || null,
+        isExpression: toBool01(item.isExpression),
+        isSuffix: toBool01(item.isSuffix),
+        isConjugatedForm: toBool01(item.isConjugatedForm),
+        conjugatedForm: item.conjugatedForm || null,
+        isExtractedVerb: toBool01(item.isExtractedVerb),
+        extractedVerb: item.extractedVerb || null,
+        isNaAdjective: toBool01(item.isNaAdjective),
+        naBaseWord: item.naBaseWord || null,
+        displayForm: item.displayForm || null,
+        source,
       });
       count++;
     });
@@ -278,59 +369,36 @@ function insertVocabFile(filePath, level, book) {
   return count;
 }
 
-console.log('\n📦 Đang insert từ vựng JLPT N5→N1...');
-const vocabFiles = [
-  { file: 'n5.json',           level: 'N5', book: 'n5'           },
-  { file: 'n4.json',           level: 'N4', book: 'n4'           },
-  { file: 'n3_mimikara.json',  level: 'N3', book: 'mimikara-n3'  },
-  { file: 'n3_soumatome.json', level: 'N3', book: 'soumatome-n3' },
-  { file: 'n2_mimikara.json',  level: 'N2', book: 'mimikara-n2'  },
-  { file: 'n2_soumatome.json', level: 'N2', book: 'soumatome-n2' },
-  { file: 'n1.json',           level: 'N1', book: 'n1'           },
-];
-vocabFiles.forEach(({ file, level, book }) => {
-  insertVocabFile(path.join(ASSETS, 'vocab', file), level, book);
-});
-
-// ── Ngành học ────────────────────────────────────────────────────────────────
-console.log('\n📦 Đang insert từ vựng ngành học...');
-const nganhFiles = [
-  'thuc_pham.json', 'xay_dung.json', 'dieu_duong.json', 'nong_nghiep.json',
-  'khach_san.json', 'nha_hang.json', 'oto.json', 've_sinh.json',
-];
-nganhFiles.forEach(file => {
-  const filePath = path.join(ASSETS, 'data_nghanh_hoc', file);
-  if (fs.existsSync(filePath)) {
-    insertVocabFile(filePath, 'tokutei', file.replace('.json', ''));
-  }
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// INSERT NGỮ PHÁP
-// ─────────────────────────────────────────────────────────────────────────────
-
-const stmtGrammar = db.prepare(`
-  INSERT INTO grammar (pattern, meaning, example, level, book)
-  VALUES (@pattern, @meaning, @example, @level, @book)
-`);
-
-function insertGrammarFile(filePath, level, book) {
+function insertGrammarFile(db, filePath, book) {
   const data = readJson(filePath);
   if (!data) return 0;
   const items = Array.isArray(data) ? data : [];
+  const stmt = db.prepare(`
+    INSERT OR REPLACE INTO grammar (id, pattern, phienAm, meaning, level, structure, explanation, notes, caution, related_forms, examples, book, week, week_theme, day, day_title)
+    VALUES (@id, @pattern, @phienAm, @meaning, @level, @structure, @explanation, @notes, @caution, @related_forms, @examples, @book, @week, @week_theme, @day, @day_title)
+  `);
 
   const insertBatch = db.transaction((list) => {
     let count = 0;
-    list.forEach(item => {
+    list.forEach((item, idx) => {
       if (!item) return;
-      stmtGrammar.run({
-        pattern: item.pattern ?? item.grammar ?? item.form ?? '',
-        meaning: item.meaning ?? item.nghia   ?? item.vi  ?? '',
-        example: typeof item.example === 'object'
-          ? JSON.stringify(item.example)
-          : (item.example ?? ''),
-        level,
-        book,
+      stmt.run({
+        id: item.id || `${book}-${idx}`,
+        pattern: item.pattern || '',
+        phienAm: item.phienAm || '',
+        meaning: item.meaning || '',
+        level: item.level || null,
+        structure: item.structure || '',
+        explanation: item.explanation || '',
+        notes: item.notes || '',
+        caution: item.caution || '',
+        related_forms: toJson(item.related_forms),
+        examples: toJson(item.examples),
+        book: item.book || book,
+        week: typeof item.week === 'number' ? item.week : null,
+        week_theme: item.week_theme || null,
+        day: typeof item.day === 'number' ? item.day : null,
+        day_title: item.day_title || null,
       });
       count++;
     });
@@ -342,62 +410,112 @@ function insertGrammarFile(filePath, level, book) {
   return count;
 }
 
-console.log('\n📦 Đang insert ngữ pháp N5→N1...');
-const grammarFiles = [
-  { file: 'n5.json',           level: 'N5', book: 'n5'           },
-  { file: 'n4.json',           level: 'N4', book: 'n4'           },
-  { file: 'n3_mimikara.json',  level: 'N3', book: 'mimikara-n3'  },
-  { file: 'n3_soumatome.json', level: 'N3', book: 'soumatome-n3' },
-  { file: 'n2_mimikara.json',  level: 'N2', book: 'mimikara-n2'  },
-  { file: 'n2_soumatome.json', level: 'N2', book: 'soumatome-n2' },
-  { file: 'n1.json',           level: 'N1', book: 'n1'           },
-];
-grammarFiles.forEach(({ file, level, book }) => {
-  const filePath = path.join(ASSETS, 'data_nn', file);
-  if (fs.existsSync(filePath)) {
-    insertGrammarFile(filePath, level, book);
-  }
-});
-
-// ─────────────────────────────────────────────────────────────────────────────
-// INSERT MẪU CÂU
-// ─────────────────────────────────────────────────────────────────────────────
-
-console.log('\n📦 Đang insert mẫu câu...');
-const sentencePath = path.join(ASSETS, 'sentences', 'sentences.json');
-if (fs.existsSync(sentencePath)) {
-  const data = readJson(sentencePath);
-  const items = Array.isArray(data) ? data : [];
-  const stmtSentence = db.prepare(`
-    INSERT INTO sentences (jp, reading, vi, level)
-    VALUES (@jp, @reading, @vi, @level)
+function insertSentencesFile(db, filePath) {
+  const raw = readJson(filePath);
+  const items = Array.isArray(raw?.sentences) ? raw.sentences : Array.isArray(raw) ? raw : [];
+  const stmt = db.prepare(`
+    INSERT OR REPLACE INTO sentences (id, jp, vi)
+    VALUES (@id, @jp, @vi)
   `);
+
   const insertBatch = db.transaction((list) => {
-    list.forEach(item => {
-      if (!item) return;
-      stmtSentence.run({
-        jp:      item.jp ?? item.kanji ?? '',
-        reading: item.reading ?? item.hira ?? '',
-        vi:      item.vi ?? item.nghia ?? '',
-        level:   item.level ?? '—',
+    let count = 0;
+    list.forEach((item, idx) => {
+      if (!item || !item.jp) return;
+      stmt.run({
+        id: item.id || `sentence_${idx}`,
+        jp: item.jp,
+        vi: item.vi || '',
       });
+      count++;
     });
-    return list.length;
+    return count;
   });
+
   const count = insertBatch(items);
   console.log(`  ✓ sentences.json: ${count} mẫu câu`);
+  return count;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// THỐNG KÊ CUỐI
-// ─────────────────────────────────────────────────────────────────────────────
+console.log('📦 Đang insert kanjifull.json...');
+insertKanjiFull(dbs.kanji, path.join(ASSETS, 'data_JLPT_kanji', 'kanjifull.json'));
 
-db.close();
+console.log('\n📦 Đang insert từ vựng theo sách kanji (data_JLPT_kanji)...');
+for (const { file, level, book } of [
+  { file: 'n5.json', level: 'N5', book: 'n5' },
+  { file: 'n4.json', level: 'N4', book: 'n4' },
+  { file: 'n3_mimikara.json', level: 'N3', book: 'mimikara-n3' },
+  { file: 'n3_soumatome.json', level: 'N3', book: 'soumatome-n3' },
+  { file: 'n2_mimikara.json', level: 'N2', book: 'mimikara-n2' },
+  { file: 'n2_soumatome.json', level: 'N2', book: 'soumatome-n2' },
+  { file: 'n1.json', level: 'N1', book: 'n1' },
+]) {
+  const filePath = path.join(ASSETS, 'data_JLPT_kanji', file);
+  if (fs.existsSync(filePath)) insertKanjiBookFile(dbs.kanji, filePath, level, book);
+}
 
-const stats = fs.statSync(OUTPUT_DB);
-const sizeMB = (stats.size / 1024 / 1024).toFixed(2);
+console.log('\n📦 Đang insert từ vựng JLPT (vocab/)...');
+for (const { file, level, book } of [
+  { file: 'n5.json', level: 'N5', book: 'n5' },
+  { file: 'n4.json', level: 'N4', book: 'n4' },
+  { file: 'n3_mimikara.json', level: 'N3', book: 'mimikara-n3' },
+  { file: 'n3_soumatome.json', level: 'N3', book: 'soumatome-n3' },
+  { file: 'n2_mimikara.json', level: 'N2', book: 'mimikara-n2' },
+  { file: 'n2_soumatome.json', level: 'N2', book: 'soumatome-n2' },
+  { file: 'n1.json', level: 'N1', book: 'n1' },
+]) {
+  const filePath = path.join(ASSETS, 'vocab', file);
+  if (fs.existsSync(filePath)) insertVocabFile(dbs.kanji, filePath, { level, book, source: 'jlpt' });
+  if (fs.existsSync(filePath)) insertVocabFile(dbs.vocab, filePath, { level, book, source: 'jlpt' });
+}
 
-console.log('\n══════════════════════════════════════════');
-console.log(`✅ Hoàn thành! File: assets/kanji.db`);
-console.log(`📦 Kích thước: ${sizeMB} MB`);
-console.log('══════════════════════════════════════════');
+console.log('\n📦 Đang insert từ vựng ngành nghề (data_nghanh_hoc/)...');
+for (const { file, book } of [
+  { file: 'thuc_pham.json', book: 'industry-food' },
+  { file: 'xay_dung.json', book: 'industry-construction' },
+  { file: 'dieu_duong.json', book: 'industry-nursing' },
+  { file: 'nong_nghiep.json', book: 'industry-agriculture' },
+  { file: 'khach_san.json', book: 'industry-hotel' },
+  { file: 'nha_hang.json', book: 'industry-restaurant' },
+  { file: 'oto.json', book: 'industry-auto' },
+  { file: 've_sinh.json', book: 'industry-cleaning' },
+  { file: 'co_khi.json', book: 'industry-machinery' },
+  { file: 'dien_tu.json', book: 'industry-electronics' },
+  { file: 'dong_tau.json', book: 'industry-shipbuilding' },
+  { file: 'det_may.json', book: 'industry-textile' },
+  { file: 'ngu_nghiep.json', book: 'industry-fishing' },
+  { file: 'san_xuat_cn.json', book: 'industry-manufacturing' },
+  { file: 'dan_giao.json', book: 'industry-transport' },
+]) {
+  const filePath = path.join(ASSETS, 'data_nghanh_hoc', file);
+  if (fs.existsSync(filePath)) {
+    insertVocabFile(dbs.kanji, filePath, { level: null, book, source: 'industry' });
+    insertVocabFile(dbs.vocab, filePath, { level: null, book, source: 'industry' });
+  }
+}
+
+console.log('\n📦 Đang insert ngữ pháp (data_nn/)...');
+for (const { file, book } of [
+  { file: 'n5.json', book: 'n5' },
+  { file: 'n4.json', book: 'n4' },
+  { file: 'n3_mimikara.json', book: 'mimikara-n3' },
+  { file: 'n3_soumatome.json', book: 'soumatome-n3' },
+  { file: 'n2_mimikara.json', book: 'mimikara-n2' },
+  { file: 'n2_soumatome.json', book: 'soumatome-n2' },
+  { file: 'n1.json', book: 'n1' },
+]) {
+  const filePath = path.join(ASSETS, 'data_nn', file);
+  if (fs.existsSync(filePath)) insertGrammarFile(dbs.grammar, filePath, book);
+}
+
+console.log('\n📦 Đang insert mẫu câu (sentences.json)...');
+const sentencePath = path.join(ASSETS, 'sentences', 'sentences.json');
+if (fs.existsSync(sentencePath)) insertSentencesFile(dbs.sentences, sentencePath);
+
+for (const db of Object.values(dbs)) db.close();
+
+for (const target of TARGETS) {
+  const stats = fs.statSync(target.output);
+  const sizeMB = (stats.size / 1024 / 1024).toFixed(2);
+  console.log(`✅ ${path.basename(target.output)} (${sizeMB} MB)`);
+}

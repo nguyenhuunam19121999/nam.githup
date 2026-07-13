@@ -7,7 +7,7 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Speech from "expo-speech";
 import React, { useEffect, useMemo, useState } from "react";
 import { getBookInfo } from "../assets/data_nghanh_hoc";
-import { getVocab, type RawVocab } from "../assets/vocab";
+import { getVocab, getVocabByBook, type RawVocab } from "../assets/vocab";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 import FlashcardDetail, { VocabItem, Field, ALL_FIELDS, FIELD_LABELS } from "../components/FlashcardDetail";
@@ -44,6 +44,13 @@ interface Vocab {
   category?: string;
   lesson?: number;
   level?: string;
+  wordType?: string;
+  typeLabel?: string;
+  isNaAdjective?: boolean;
+  isExtractedVerb?: boolean;
+  extractedVerb?: string | null;
+  isConjugatedForm?: boolean;
+  conjugatedForm?: string | null;
 }
 
 function normalizeVocab(raw: RawVocab[], lessonNumber?: number, sourceLevel?: string): Vocab[] {
@@ -52,7 +59,8 @@ function normalizeVocab(raw: RawVocab[], lessonNumber?: number, sourceLevel?: st
     filtered = raw.filter((item: any) => (item.lesson || 1) === lessonNumber);
   }
   return filtered.map((item, idx) => ({
-    id: `${lessonNumber || 1}_${item.kanji || idx}`,
+    // id: `${lessonNumber || 1}_${item.kanji || idx}`,
+    id: `${lessonNumber || 1}_${idx}_${item.kanji || "noKanji"}`,
     kanji: item.kanji ?? "",
     hiragana: item.hiragana ?? item.hira ?? "",
     han: item.han ?? "",
@@ -61,7 +69,14 @@ function normalizeVocab(raw: RawVocab[], lessonNumber?: number, sourceLevel?: st
     exampleMeaning: item.exampleMeaning,
     category: item.category,
     lesson: item.lesson || 1,
-    level: sourceLevel || "N3",  // ✅ Bây giờ sourceLevel đã được định nghĩa
+    level: sourceLevel || "N3",  
+    wordType: item.wordType,
+    typeLabel: item.typeLabel,
+    isNaAdjective: item.isNaAdjective,
+    isExtractedVerb: item.isExtractedVerb,
+    extractedVerb: item.extractedVerb,
+    isConjugatedForm: item.isConjugatedForm,
+    conjugatedForm: item.conjugatedForm,
   }));
 }
 
@@ -273,7 +288,7 @@ const QuizMode = ({ data, onExit }: { data: Vocab[]; onExit: () => void }) => {
           <View style={s.explanationBox}>
             <Text style={s.explanationTitle}>💡 Giải thích:</Text>
             <Text style={s.explanationContent}>
-              {current.question} có nghĩa là "{current.correct}"
+              {current.question} có nghĩa là &quot;{current.correct}&quot;
             </Text>
           </View>
         )}
@@ -543,9 +558,9 @@ export default function VocabScreen() {
   useEffect(() => {
     setIsLoading(true);
     try {
-      let rawVocab: RawVocab[] = [];
-      rawVocab = getVocab(level, bookId);
-      const formatted = normalizeVocab(rawVocab, lessonParam, level);
+      const hasBookId = typeof params.bookId === "string" && params.bookId.length > 0;
+      const rawVocab: RawVocab[] = hasBookId ? getVocabByBook(bookId) : getVocab(level, bookId);
+      const formatted = normalizeVocab(rawVocab, hasBookId ? lessonParam : undefined, level);
       setVocabList(formatted);
     } catch (error) {
       Alert.alert("Lỗi", "Không thể tải dữ liệu từ vựng");
@@ -759,7 +774,8 @@ export default function VocabScreen() {
             </TouchableOpacity>
             <View style={s.titleBlock}>
               <Text style={s.title} numberOfLines={1}>
-                {headerInfo.emoji} {headerInfo.vi} · Bài {lessonParam}
+                {headerInfo.emoji} {headerInfo.vi}
+                {/* {headerInfo.emoji} {headerInfo.vi} · Bài {lessonParam} */}
               </Text>
               <Text style={s.subtitle}>
                 {filteredVocabList.length} từ vựng
@@ -847,7 +863,6 @@ export default function VocabScreen() {
                     style={s.vocabRow}
                     activeOpacity={0.7}
                     onPress={() => {
-                      // Chuyển sang trang chi tiết từ vựng
                       router.push({ 
                         pathname: '/vocab-detail',
                         params: {
@@ -859,34 +874,59 @@ export default function VocabScreen() {
                           example: vocab.example || '',
                           exampleMeaning: vocab.exampleMeaning || '',
                           level: vocab.level || 'N3',
+                          wordType: vocab.wordType || '',
+                          typeLabel: vocab.typeLabel || '',
+                          isNaAdjective: String(!!vocab.isNaAdjective),
+                          isExtractedVerb: String(!!vocab.isExtractedVerb),
+                          extractedVerb: vocab.extractedVerb || '',
+                          isConjugatedForm: String(!!vocab.isConjugatedForm),
+                          conjugatedForm: vocab.conjugatedForm || '',
                         }
                       });
                     }}
                   >
+                    <View style={s.rowMain}>
+                      <View style={s.rowTopLine}>
+                        <Text style={s.indexNum}>{index + 1}.</Text>
+                        <Text style={s.vocabKanji}>{vocab.kanji}</Text>
+                      </View>
+                      <Text style={s.vocabHan}>{vocab.han}</Text>
+                      <Text style={s.vocabReading}>{vocab.hiragana}</Text>
+                      <Text style={s.vocabMeaning} numberOfLines={2}>{vocab.nghia}</Text>
+                    </View>
+                    <View style={s.rowActions}>
+                      <TouchableOpacity style={s.speakBtn} onPress={() => speak(vocab.kanji)} hitSlop={8}>
+                        <Text style={s.speakIcon}>🔊</Text>
+                      </TouchableOpacity>
+                      <TouchableOpacity style={s.starBtn} onPress={() => toggleBookmark(vocab.id)} hitSlop={8}>
+                        <Text style={s.starIcon}>{bookmarks.has(vocab.id) ? "⭐" : "☆"}</Text>
+                      </TouchableOpacity>
+                    </View>
+
                   {/* Cột số thứ tự + Kanji */}
-                  <View style={s.vocabCol}>
+                  {/* <View style={s.vocabCol}>
                     <Text style={s.indexNum}>{index + 1}.</Text>
                     <Text style={s.vocabKanji}>{vocab.kanji}</Text>
-                  </View>
+                  </View> */}
                   
                   {/* Cột thông tin */}
-                  <View style={s.vocabInfoCol}>
+                  {/* <View style={s.vocabInfoCol}>
                     <Text style={s.vocabReading} numberOfLines={1}>{vocab.hiragana}</Text>
                     <Text style={s.vocabHan} numberOfLines={1}>{vocab.han}</Text>
                     <Text style={s.vocabMeaning} numberOfLines={2}>{vocab.nghia}</Text>
-                  </View>
+                  </View> */}
                   
                   {/* Nút phát âm */}
-                  <TouchableOpacity
+                  {/* <TouchableOpacity
                     style={s.speakBtn}
                     onPress={() => speak(vocab.kanji)}
                     hitSlop={8}
                   >
                     <Text style={s.speakIcon}>🔊</Text>
-                  </TouchableOpacity>
+                  </TouchableOpacity> */}
                   
                   {/* Nút ghim */}
-                  <TouchableOpacity
+                  {/* <TouchableOpacity
                     style={s.starBtn}
                     onPress={() => toggleBookmark(vocab.id)}
                     hitSlop={8}
@@ -894,7 +934,7 @@ export default function VocabScreen() {
                     <Text style={s.starIcon}>
                       {bookmarks.has(vocab.id) ? "⭐" : "☆"}
                     </Text>
-                  </TouchableOpacity>
+                  </TouchableOpacity> */}
                 </TouchableOpacity>
               ))
             )}
@@ -1097,7 +1137,7 @@ const s = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 14,
     marginBottom: 8,
-    alignItems: "center",
+    alignItems: "flex-start",
   },
   vocabCol: {
     width: 60,
@@ -1108,12 +1148,7 @@ const s = StyleSheet.create({
     fontSize: 14,
     color: TEXT_COLOR,
     marginBottom: 2,
-  },
-  vocabKanji: {
-    fontSize: 28,
-    fontWeight: "700",
-    color: TEAL_DARK,
-    lineHeight: 40,
+    marginRight: 8,
   },
   vocabInfoCol: {
     flex: 1,
@@ -1220,4 +1255,8 @@ const s = StyleSheet.create({
   loadingText: { textAlign: "center", fontSize: 18, color: "#4a5568", marginTop: 40 },
   empty: { padding: 30, alignItems: "center" },
   emptyText: { color: TEAL_DARK, fontSize: 16, fontWeight: "600" },
+  rowMain: { flex: 1 },
+  rowTopLine: { flexDirection: "row", alignItems: "baseline", marginBottom: 4 },
+  rowActions: { flexDirection: "row", alignItems: "center", marginLeft: 8 },
+  vocabKanji: { fontSize: 20, fontWeight: "700", color: TEAL_DARK },
 });

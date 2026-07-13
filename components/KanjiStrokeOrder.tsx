@@ -19,8 +19,10 @@ import {
 } from 'react-native';
 import Svg, { Path, Line, Text as SvgText, G } from 'react-native-svg';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import strokesMap from '../assets/data_JLPT_kanji/kanji_strokes.json';
-import { memoryCache } from '../services/KanjiPreloader'; 
+import { memoryCache, loadStrokePaths } from '../services/KanjiPreloader';
+
+const strokesMap: Record<string, string[]> = {};
+// import { memoryCache } from '../services/KanjiPreloader'; 
 
 // ── Types ──────────────────────────────────────────────────────────────────
 
@@ -141,10 +143,16 @@ function AnimatedStroke({ d, color, onDone }: AnimatedStrokeProps) {
   }, [offsetAnim, speed, onDone]); // Đã điền đầy đủ dependency chống cảnh báo từ React ESLint
 
   // Animated.Value → string cần interpolate
+
   const dashOffsetStr = offsetAnim.interpolate({
     inputRange:  [0, dashTotal],
-    outputRange: ['0', `${dashTotal}`],
+    outputRange: [0, dashTotal],  // ← number thay vì string
   });
+
+  // const dashOffsetStr = offsetAnim.interpolate({
+  //   inputRange:  [0, dashTotal],
+  //   outputRange: ['0', `${dashTotal}`],
+  // });
 
   // react-native-svg hỗ trợ AnimatedPath qua createAnimatedComponent
   const AnimatedPath = Animated.createAnimatedComponent(Path);
@@ -157,8 +165,10 @@ function AnimatedStroke({ d, color, onDone }: AnimatedStrokeProps) {
       fill="none"
       strokeLinecap="round"
       strokeLinejoin="round"
-      strokeDasharray={`${dashTotal}`}
-      strokeDashoffset={dashOffsetStr as any}
+      strokeDasharray={dashTotal}
+      strokeDashoffset={dashOffsetStr}
+      // strokeDasharray={`${dashTotal}`}
+      // strokeDashoffset={dashOffsetStr as any}
     />
   );
 }
@@ -206,62 +216,92 @@ export function KanjiStrokeOrder({
     animatingRef.current = false;
 
     async function load() {
-      // 1. Kiểm tra Bộ nhớ đệm Session (RAM) trước để có tốc độ hiển thị tức thì (0ms)
-      if (memoryCache.has(kanji)) {
-        const cached = memoryCache.get(kanji)!;
-        if (!cancelled) { setPaths(cached); setSource('cache'); setIsLoading(false); }
-        return;
-      }
-
-      // 2. Kiểm tra bộ nhớ máy (AsyncStorage) - Nơi lưu bản sửa lỗi CDN (Lưu đè Local)
-      try {
-        const stored = await AsyncStorage.getItem(ASYNC_STORAGE_PREFIX + kanji);
-        if (stored) {
-          const parsed: string[] = JSON.parse(stored);
-          if (parsed.length > 0) {
-            memoryCache.set(kanji, parsed);
-            if (!cancelled) { setPaths(parsed); setSource('cache'); setIsLoading(false); }
-            return;
-          }
-        }
-      } catch (_) {}
-
-      // 3. Nếu bộ nhớ máy chưa có bản lưu đè, lúc này mới dùng đến file Local mặc định
-      const local = (strokesMap as Record<string, string[]>)[kanji];
-      if (local && local.length > 0) {
-        if (!cancelled) { setPaths(local); setSource('local'); setIsLoading(false); }
-        return;
-      }
-
-      // 4. Fetch CDN (Trường hợp cả Local lẫn bộ nhớ đều chưa có dữ liệu của chữ này)
-      const hexId = toHexId(kanji);
-      try {
-        const res     = await fetch(`${CDN_BASE}${hexId}.svg`);
-        const text    = await res.text();
-        const fetched = parseSvgPaths(text);
-        if (fetched && !cancelled) {
-          AsyncStorage.setItem(ASYNC_STORAGE_PREFIX + kanji, JSON.stringify(fetched)).catch(() => {});
-          memoryCache.set(kanji, fetched);
-          setPaths(fetched);
-          setSource('cdn');
-          setIsLoading(false);
-        } else if (!cancelled) {
-          setPaths([]);
-          setSource('none');
-          setIsLoading(false);
-        }
-      } catch (_) {
-        if (!cancelled) { setPaths([]); setSource('none'); setIsLoading(false); }
+      // Gọi thẳng hàm chuẩn của KanjiPreloader — đúng thứ tự ưu tiên,
+      // tự phát hiện & tự sửa chữ có dữ liệu local bị lỗi/thiếu nét.
+      const { paths: result, source: src } = await loadStrokePaths(kanji);
+      if (!cancelled) {
+        setPaths(result.length > 0 ? result : []);
+        setSource(result.length > 0 ? src : 'none');
+        setIsLoading(false);
       }
     }
 
     InteractionManager.runAfterInteractions(() => { load(); });
-    return () => { 
-      cancelled = true; 
+    return () => {
+      cancelled = true;
       if (playTimeoutRef.current) clearTimeout(playTimeoutRef.current);
       if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
     };
   }, [kanji]);
+
+  // useEffect(() => {
+  //   let cancelled = false;
+  //   setIsLoading(true);
+  //   setDrawnCount(0);
+  //   setCurrentIdx(-1);
+  //   setStaticMask([]);
+  //   setIsPlaying(false);
+  //   setProgressText('');
+  //   cancelRef.current    = true;   // hủy animation cũ nếu đang chạy
+  //   animatingRef.current = false;
+
+  //   async function load() {
+  //     // 1. Kiểm tra Bộ nhớ đệm Session (RAM) trước để có tốc độ hiển thị tức thì (0ms)
+  //     if (memoryCache.has(kanji)) {
+  //       const cached = memoryCache.get(kanji)!;
+  //       if (!cancelled) { setPaths(cached); setSource('cache'); setIsLoading(false); }
+  //       return;
+  //     }
+
+  //     // 2. Kiểm tra bộ nhớ máy (AsyncStorage) - Nơi lưu bản sửa lỗi CDN (Lưu đè Local)
+  //     try {
+  //       const stored = await AsyncStorage.getItem(ASYNC_STORAGE_PREFIX + kanji);
+  //       if (stored) {
+  //         const parsed: string[] = JSON.parse(stored);
+  //         if (parsed.length > 0) {
+  //           memoryCache.set(kanji, parsed);
+  //           if (!cancelled) { setPaths(parsed); setSource('cache'); setIsLoading(false); }
+  //           return;
+  //         }
+  //       }
+  //     } catch (_) {}
+
+  //     // 3. Nếu bộ nhớ máy chưa có bản lưu đè, lúc này mới dùng đến file Local mặc định
+  //     const local = (strokesMap as Record<string, string[]>)[kanji];
+  //     if (local && local.length > 0) {
+  //       if (!cancelled) { setPaths(local); setSource('local'); setIsLoading(false); }
+  //       return;
+  //     }
+
+  //     // 4. Fetch CDN (Trường hợp cả Local lẫn bộ nhớ đều chưa có dữ liệu của chữ này)
+  //     const hexId = toHexId(kanji);
+  //     try {
+  //       const res     = await fetch(`${CDN_BASE}${hexId}.svg`);
+  //       const text    = await res.text();
+  //       const fetched = parseSvgPaths(text);
+  //       if (fetched && !cancelled) {
+  //         AsyncStorage.setItem(ASYNC_STORAGE_PREFIX + kanji, JSON.stringify(fetched)).catch(() => {});
+  //         memoryCache.set(kanji, fetched);
+  //         setPaths(fetched);
+  //         setSource('cdn');
+  //         setIsLoading(false);
+  //       } else if (!cancelled) {
+  //         setPaths([]);
+  //         setSource('none');
+  //         setIsLoading(false);
+  //       }
+  //     } catch (_) {
+  //       if (!cancelled) { setPaths([]); setSource('none'); setIsLoading(false); }
+  //     }
+  //   }
+  //   InteractionManager.runAfterInteractions(() => { load(); });
+  //   // load();
+  //   return () => { 
+  //     cancelled = true; 
+  //     if (playTimeoutRef.current) clearTimeout(playTimeoutRef.current);
+  //     if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
+  //   };
+  // }, [kanji]);
 
   // ── Animation logic ────────────────────────────────────────────────────
 
@@ -393,23 +433,23 @@ export function KanjiStrokeOrder({
               viewBox="0 0 109 109"
               style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
             >
-              <Line x1="0" y1="54.5" 
-              x2="109" y2="54.5" 
+              <Line x1={0} y1={54.5}
+              x2={109} y2={54.5}
               stroke="#ccc" 
-              strokeWidth="0.5" 
-              strokeDasharray="3,3" 
+              strokeWidth={0.5}
+              strokeDasharray="3,3"
               />
-              <Line x1="54.5" y1="0" 
-              x2="54.5" y2="109" 
+              <Line x1={54.5} y1={0}
+              x2={54.5} y2={109}
+              strokeWidth={0.5}
+              strokeDasharray="3,3"
               stroke="#ccc" 
-              strokeWidth="0.5" 
-              strokeDasharray="3,3" 
               />
 
               {/* Layer mờ — toàn bộ chữ */}
-              <G opacity="0.08">
+              <G opacity={0.08}>
                 {paths.map((d, i) => (
-                  <Path key={`bg-${i}`} d={d} stroke="#333" strokeWidth="3.5" fill="none"
+                  <Path key={`bg-${i}`} d={d} stroke="#333" strokeWidth={3.5} fill="none"
                     strokeLinecap="round" strokeLinejoin="round" />
                 ))}
               </G>
@@ -451,7 +491,7 @@ export function KanjiStrokeOrder({
                     key={`num-${i}`}
                     x={nx}
                     y={ny - 3}
-                    fontSize="6"
+                    fontSize={6}
                     fill={STROKE_COLORS[i % STROKE_COLORS.length]}
                     fontWeight="bold"
                     textAnchor="middle"

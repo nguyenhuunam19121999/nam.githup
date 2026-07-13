@@ -1,7 +1,6 @@
 // app/index.tsx
-// app/index.tsx
 import { useRouter } from "expo-router";
-import { BottomTabBar } from "@/components/BottomTabBar";
+import { BottomTabBar } from "../components/BottomTabBar";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   Dimensions,
@@ -21,11 +20,14 @@ import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 import SearchInline from "../components/SearchInline";
 import HomeSuggestions from "../components/HomeSuggestions";
 import { Animated, Easing } from "react-native";
+import { BannerAd, BannerAdSize, TestIds, MobileAds } from "react-native-google-mobile-ads";
 
-const TEAL = "#1d7d80";
-const TEAL_DARK = "#2ba7ac";
+
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
 const BG_GRAY = "#f0f4f8";
+const bgrColor = "#f1f5f9";
 
 interface Item {
   id: string;
@@ -37,19 +39,19 @@ interface Item {
 }
 
 const INDUSTRIES: Item[] = [
-  { id: "food",         emoji: "🍱",   jp: "飲食料品製造業",      vi: "Thực phẩm",  route: "/vocab", bookId: "industry-food" },
-  { id: "construction", emoji: "🏗️",  jp: "建設業",             vi: "Xây dựng",   route: "/vocab", bookId: "industry-construction" },
-  { id: "nursing",      emoji: "🧑‍⚕️", jp: "介護",              vi: "Điều dưỡng", route: "/vocab", bookId: "industry-nursing" },
-  { id: "agriculture",  emoji: "🌾",   jp: "農業",               vi: "Nông nghiệp", route: "/vocab", bookId: "industry-agriculture" },
-  { id: "hotel",        emoji: "🏨",   jp: "宿泊業",             vi: "Khách sạn",  route: "/vocab", bookId: "industry-hotel" },
-  { id: "restaurant",   emoji: "🍜",   jp: "外食業",             vi: "Nhà hàng",   route: "/vocab", bookId: "industry-restaurant" },
-  { id: "auto",         emoji: "🚗",   jp: "自動車整備",          vi: "Ô tô",       route: "/vocab", bookId: "industry-auto" },
-  { id: "cleaning",     emoji: "🧹",   jp: "ビルクリーニング",     vi: "Vệ sinh",    route: "/vocab", bookId: "industry-cleaning" },
-  { id: "machinery",    emoji: "⚙️",   jp: "素形材・産業機械",     vi: "Cơ khí",     route: "/vocab", bookId: "industry-machinery" },
-  { id: "electronics",  emoji: "⚡",   jp: "電気・電子情報",       vi: "Điện tử",    route: "/vocab", bookId: "industry-electronics" },
-  { id: "shipbuilding", emoji: "🚢",   jp: "造船・舶用工業",       vi: "Đóng tàu",   route: "/vocab", bookId: "industry-shipbuilding" },
-  { id: "textile",      emoji: "🧵",   jp: "繊維・衣服",          vi: "Dệt may",    route: "/vocab", bookId: "industry-textile" },
-  { id: "fishing",      emoji: "🪴",   jp: "漁業",               vi: "Ngư nghiệp",  route: "/vocab", bookId: "industry-fishing" },
+  { id: "food",         emoji: "🍱",   jp: "飲食料品製造業",      vi: "Thực phẩm",  route: "/vocab", bookId: "industry-food" }, // đã xong
+  { id: "construction", emoji: "🏗️",  jp: "建設業",             vi: "Xây dựng",   route: "/vocab", bookId: "industry-construction" }, //đã xong
+  { id: "nursing",      emoji: "🧑‍⚕️", jp: "介護",              vi: "Điều dưỡng", route: "/vocab", bookId: "industry-nursing" }, //đã xong
+  { id: "agriculture",  emoji: "🌾",   jp: "農業",               vi: "Nông nghiệp", route: "/vocab", bookId: "industry-agriculture" }, //đã xong
+  { id: "hotel",        emoji: "🏨",   jp: "宿泊業",             vi: "Khách sạn",  route: "/vocab", bookId: "industry-hotel" }, //đã xong
+  { id: "restaurant",   emoji: "🍜",   jp: "外食業",             vi: "Nhà hàng",   route: "/vocab", bookId: "industry-restaurant" }, //đã xong
+  { id: "auto",         emoji: "🚗",   jp: "自動車整備",          vi: "Ô tô",       route: "/vocab", bookId: "industry-auto" }, //đã xong
+  { id: "cleaning",     emoji: "🧹",   jp: "ビルクリーニング",     vi: "Vệ sinh",    route: "/vocab", bookId: "industry-cleaning" }, //đã xong
+  { id: "machinery",    emoji: "⚙️",   jp: "素形材・産業機械",     vi: "Cơ khí",     route: "/vocab", bookId: "industry-machinery" }, //đã xong
+  { id: "electronics",  emoji: "⚡",   jp: "電気・電子情報",       vi: "Điện tử",    route: "/vocab", bookId: "industry-electronics" }, //đã xong
+  { id: "shipbuilding", emoji: "🚢",   jp: "造船・舶用工業",       vi: "Đóng tàu",   route: "/vocab", bookId: "industry-shipbuilding" }, // đã xong
+  { id: "textile",      emoji: "👘",   jp: "繊維・衣服",          vi: "Dệt may",    route: "/vocab", bookId: "industry-textile" }, // đã xong
+  { id: "fishing",      emoji: "🦈",   jp: "漁業",               vi: "Ngư nghiệp",  route: "/vocab", bookId: "industry-fishing" }, // đã xong
   { id: "manufacturing", emoji: "🏭",  jp: "工業製品製造業",       vi: "Sản xuất CN", route: "/vocab", bookId: "industry-manufacturing" },
 ];
 
@@ -132,101 +134,75 @@ export default function HomeScreen() {
     return () => clearInterval(id);
   }, [scrollToNext]);
 
+  // ── Initialize AdMob ─────────────────────────────────────────────────────
+  useEffect(() => {
+    MobileAds().initialize();
+  }, []);
+
   const onBannerScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     const x = e.nativeEvent.contentOffset.x;
     setBannerIdx(Math.round(x / BANNER_WIDTH));
   };
 
   // ── Mở SearchInline ──────────────────────────────────────────────────────
+
   const openSearch = useCallback(() => {
-    setAutoOpenDrawer(false);
-    setSearchInitQuery('');
-    setSearchInitTab('vocab');
-    setSearchActive(true);
-    searchAnim.setValue(0);
-    Animated.timing(searchAnim, {
-      toValue: 1,
-      duration: 280,
-      easing: Easing.out(Easing.cubic),
-      useNativeDriver: true,
-    }).start();
-  }, []);
+  setAutoOpenDrawer(false);
+  setSearchInitQuery('');
+  setSearchInitTab('vocab');
+  setSearchActive(true);
+  searchAnim.setValue(0);
+  Animated.spring(searchAnim, {
+    toValue: 1,
+    useNativeDriver: true,
+    tension: 65,
+    friction: 11,
+  }).start();
+}, []);
 
-  const openSearchWithDrawer = useCallback(() => {
-    setAutoOpenDrawer(true);
-    setSearchInitQuery('');
-    setSearchInitTab('kanji');
-    setSearchActive(true);
-    searchAnim.setValue(0);
-    Animated.timing(searchAnim, {
-      toValue: 1,
-      duration: 280,
-      easing: Easing.out(Easing.cubic),
-      useNativeDriver: true,
-    }).start();
-  }, []);
+const openSearchWithDrawer = useCallback(() => {
+  setAutoOpenDrawer(true);
+  setSearchInitQuery('');
+  setSearchInitTab('kanji');
+  setSearchActive(true);
+  searchAnim.setValue(0);
+  Animated.spring(searchAnim, {
+    toValue: 1,
+    useNativeDriver: true,
+    tension: 65,
+    friction: 11,
+  }).start();
+}, []);
 
-  const openSearchFromSuggestion = useCallback(
+const openSearchFromSuggestion = useCallback(
   (query: string, tab: 'vocab' | 'sentence' | 'grammar') => {
     setAutoOpenDrawer(false);
     setSearchInitQuery(query);
     setSearchInitTab(tab);
     setSearchActive(true);
     searchAnim.setValue(0);
-    Animated.timing(searchAnim, {
+    Animated.spring(searchAnim, {
       toValue: 1,
-      duration: 280,
-      easing: Easing.out(Easing.cubic),
       useNativeDriver: true,
+      tension: 65,
+      friction: 11,
     }).start();
   },
   [],
 );
 
-  const closeSearch = useCallback(() => {
-    Animated.timing(searchAnim, {
-      toValue: 0,
-      duration: 220,
-      easing: Easing.in(Easing.cubic),
-      useNativeDriver: true,
-    }).start(() => {
-      setSearchActive(false);
-      setAutoOpenDrawer(false);
-      setSearchInitQuery('');
-    });
-  }, []);
-  // const openSearch = useCallback(() => {
-  //   setAutoOpenDrawer(false);
-  //   setSearchInitQuery('');
-  //   setSearchInitTab('vocab');
-  //   setSearchVisible(true);
-  // }, []);
-
-  // const openSearchWithDrawer = useCallback(() => {
-  //   setAutoOpenDrawer(true);
-  //   setSearchInitQuery('');
-  //   setSearchInitTab('kanji');
-  //   setSearchVisible(true);
-  // }, []);
-
-  // // Mở từ HomeSuggestions với query + tab cụ thể
-  // const openSearchFromSuggestion = useCallback(
-  //   (query: string, tab: 'vocab' | 'sentence' | 'grammar') => {
-  //     setAutoOpenDrawer(false);
-  //     setSearchInitQuery(query);
-  //     setSearchInitTab(tab);
-  //     setSearchVisible(true);
-  //   },
-  //   [],
-  // );
-
-  // const closeSearch = useCallback(() => {
-  //   setSearchVisible(false);
-  //   setAutoOpenDrawer(false);
-  //   setSearchInitQuery('');
-  // }, []);
-
-
+const closeSearch = useCallback(() => {
+  Animated.timing(searchAnim, {
+    toValue: 0,
+    duration: 200,
+    easing: Easing.in(Easing.quad),
+    useNativeDriver: true,
+  }).start(() => {
+    setSearchActive(false);
+    setAutoOpenDrawer(false);
+    setSearchInitQuery('');
+  });
+}, []);
   // ── Navigation helpers ───────────────────────────────────────────────────
   const goLearningMenu = (opts: { level?: string; bookId?: string; title?: string }) => {
     router.push({
@@ -433,8 +409,22 @@ export default function HomeScreen() {
 
         <View style={{ height: 100 }} />
       </ScrollView>
-
       <BottomTabBar />
+
+      {/* ── AdMob Banner Ad ──────────────────────────────────────────────── */}
+      <View style={s.adContainer}>
+        <BannerAd
+          // 🛑 SỬA: Thay TestIds.BANNER bằng Ad Unit ID thật cho iOS từ AdMob của bạn
+          unitId={__DEV__ ? TestIds.BANNER : "ca-app-pub-8412799227715643/8293690463"} 
+          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+          requestOptions={{
+            keywords: ["Japanese", "Language", "Learning"],
+          }}
+          onAdFailedToLoad={(error) => {
+            console.error("Ad failed to load: ", error);
+          }}
+        />
+      </View>
 
       {/* ── SearchInline overlay toàn màn hình ──────────────────────────── */}
       <Animated.View
@@ -448,7 +438,13 @@ export default function HomeScreen() {
               {
                 translateY: searchAnim.interpolate({
                   inputRange: [0, 1],
-                  outputRange: [40, 0],
+                  outputRange: [80, 0],
+                }),
+              },
+              {
+                scale: searchAnim.interpolate({
+                  inputRange: [0, 1],
+                  outputRange: [0.94, 1],
                 }),
               },
             ],
@@ -470,6 +466,19 @@ export default function HomeScreen() {
 
 // ─── STYLES ──────────────────────────────────────────────────────────────────
 const s = StyleSheet.create({
+
+  // ============================================================================
+  // ─── BƯỚC 4: ĐỊNH DẠNG STYLE NỀN CHO VÙNG QUẢNG CÁO ĐÁY ──────────────────────
+  // ============================================================================
+  adContainer: {
+    alignItems: "center",      // Căn giữa banner theo chiều ngang
+    justifyContent: "center", // Căn giữa banner theo chiều dọc
+    backgroundColor: "#fff",  // Màu nền trắng bao quanh quảng cáo để tăng độ tương phản
+    borderTopWidth: 1,        // Đường viền kẻ mỏng phía trên phân cách với khu vực nội dung App
+    borderTopColor: "#E5E7EB",// Màu viền xám nhạt tinh tế
+    paddingVertical: 4,       // Tạo khoảng cách lề trên và dưới 4px để banner không bị dính chặt vào viền app
+  },
+
   root: { flex: 1, backgroundColor: "#f3f9f1" },
 
   topBar: { backgroundColor: "transparent" },

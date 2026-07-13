@@ -33,6 +33,11 @@ const BG_GRAY = "#f0f4f8";
 
 type WordType = 'godan' | 'ichidan' | 'sahen' | 'kahen' | 'irregular' | 'i-adjective' | 'na-adjective' | 'noun-only' | 'noun-suru';
 
+const VALID_WORD_TYPES: WordType[] = [
+  'godan', 'ichidan', 'sahen', 'kahen', 'irregular',
+  'i-adjective', 'na-adjective', 'noun-only', 'noun-suru',
+];
+
 function detectWordType(kanji: string, nghia: string = ''): WordType {
   const word = kanji;
   const meaning = nghia.toLowerCase();
@@ -71,6 +76,21 @@ function detectWordType(kanji: string, nghia: string = ''): WordType {
   return canAddSuru ? 'noun-suru' : 'noun-only';
 }
 
+function resolveWordType(
+  entry: { wordType?: string; isNaAdjective?: boolean },
+  kanji: string,
+  nghia: string = ''
+): WordType {
+  // Ưu tiên tuyệt đối: field isNaAdjective từ JSON (đáng tin hơn wordType text)
+  if (entry.isNaAdjective) return 'na-adjective';
+  // Ưu tiên 2: đọc thẳng wordType đã tính sẵn trong JSON
+  if (entry.wordType && VALID_WORD_TYPES.includes(entry.wordType as WordType)) {
+    return entry.wordType as WordType;
+  }
+  // Fallback: chỉ đoán khi entry cũ chưa có field này
+  return detectWordType(kanji, nghia);
+}
+
 // ============================================
 // 📖 CHIA ĐỘNG TỪ NHÓM 1 (GODAN - 五段動詞)
 // ============================================
@@ -97,7 +117,8 @@ function conjugateGodan(verb: string): { name: string; japanese: string }[] {
     { name: 'Từ điển (辞書形)', japanese: verb },
     { name: 'Phủ định (ない形)', japanese: stem + map.negative },
     { name: 'Quá khứ (た形)', japanese: stem + map.past },
-    { name: 'Phủ định quá khứ', japanese: stem + map.negative.slice(0, -2) + 'かった' },
+    // { name: 'Phủ định quá khứ', japanese: stem + map.negative.slice(0, -2) + 'かった' },
+    { name: 'Phủ định quá khứ', japanese: stem + map.negative.slice(0, -1) + 'かった' },
     { name: 'て形', japanese: stem + map.te },
     { name: 'Lịch sự (ます形)', japanese: stem + 'います' },
     { name: 'Khả năng (可能形)', japanese: stem + map.potential },
@@ -307,6 +328,21 @@ function ConjugationTable({ word, wordType, originalWord }: { word: string; word
 // 📱 TRANG CHÍNH
 // ============================================
 
+  function resolveConjugationTarget(entry: {
+    isExtractedVerb?: boolean;
+    extractedVerb?: string | null;
+    isConjugatedForm?: boolean;
+    conjugatedForm?: string | null;
+  }, kanji: string): { word: string; skip: boolean; baseNote?: string } {
+    if (entry.isConjugatedForm) {  
+      return { word: kanji, skip: true, baseNote: entry.conjugatedForm ?? undefined };
+    }
+    if (entry.isExtractedVerb && entry.extractedVerb) {
+      return { word: entry.extractedVerb, skip: false };
+    }
+    return { word: kanji, skip: false };
+  } 
+
 export default function VocabDetailScreen() {
   const router = useRouter();
   const { scopedKey } = useAuth();
@@ -319,6 +355,13 @@ export default function VocabDetailScreen() {
     example?: string;
     exampleMeaning?: string;
     level?: string;
+    wordType?: string;
+    typeLabel?: string;
+    isNaAdjective?: string;       
+    isExtractedVerb?: string;
+    extractedVerb?: string;
+    isConjugatedForm?: string;
+    conjugatedForm?: string;
   }>();
 
   const [isBookmarked, setIsBookmarked] = useState(false);
@@ -335,15 +378,28 @@ export default function VocabDetailScreen() {
     example: params.example || '',
     exampleMeaning: params.exampleMeaning || '',
     level: params.level || 'N3',
+    wordType: params.wordType,
+    typeLabel: params.typeLabel,
+    isNaAdjective: params.isNaAdjective === 'true',
+    isExtractedVerb: params.isExtractedVerb === 'true',
+    extractedVerb: params.extractedVerb || null,
+    isConjugatedForm: params.isConjugatedForm === 'true',
+    conjugatedForm: params.conjugatedForm || null,
   };
 
   const [relatedExamples, setRelatedExamples] = useState<ExampleSentence[]>([]);
 
   useEffect(() => {
-    if (vocabData.kanji) {
-      const examples = findExamplesByVocab(vocabData.kanji);
-      setRelatedExamples(examples);
-    }
+    let cancelled = false;
+    const loadExamples = async () => {
+      if (!vocabData.kanji) return;
+      const examples = await findExamplesByVocab(vocabData.kanji);
+      if (!cancelled) setRelatedExamples(examples);
+    };
+    loadExamples();
+    return () => {
+      cancelled = true;
+    };
   }, [vocabData.kanji]);
 
   // Hàm lấy màu cho level badge
@@ -358,14 +414,17 @@ export default function VocabDetailScreen() {
     }
     };
 
+
+  const wordType = resolveWordType(vocabData, vocabData.kanji, vocabData.nghia);
+  const { word: conjugationWord, skip: skipConjugation, baseNote } = resolveConjugationTarget(vocabData, vocabData.kanji);
   // Xác định loại từ
-  const wordType = detectWordType(vocabData.kanji, vocabData.nghia);
+  // const wordType = detectWordType(vocabData.kanji, vocabData.nghia);
   
-  // Xác định từ dùng để chia
-  let conjugationWord = vocabData.kanji;
-  if (wordType === 'noun-suru') {
-    conjugationWord = vocabData.kanji;
-  }
+  // // Xác định từ dùng để chia
+  // let conjugationWord = vocabData.kanji;
+  // if (wordType === 'noun-suru') {
+  //   conjugationWord = vocabData.kanji;
+  // }
 
   useEffect(() => {
     const checkBookmark = async () => {
@@ -408,6 +467,7 @@ export default function VocabDetailScreen() {
 
   // Lấy text hiển thị loại từ
   const getWordTypeText = () => {
+    if (vocabData.typeLabel) return vocabData.typeLabel;
     switch (wordType) {
       case 'godan': return 'Động từ nhóm 1 (Godan - 五段動詞)';
       case 'ichidan': return 'Động từ nhóm 2 (Ichidan - 一段動詞)';
@@ -445,41 +505,36 @@ export default function VocabDetailScreen() {
             <Text style={styles.backIcon}>‹</Text>
           </TouchableOpacity>
           <Text style={styles.headerTitle}>Chi tiết từ vựng</Text>
-          <View style={styles.headerRight}>
-            <TouchableOpacity onPress={toggleBookmark} style={styles.iconBtn}>
-              <Text style={styles.iconText}>{isBookmarked ? '⭐' : '☆'}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={speakWord} style={styles.iconBtn}>
-              <Text style={styles.iconText}>🔊</Text>
-            </TouchableOpacity>
-          </View>
+          <View style={{ width: 42 }} />
         </View>
 
         <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
           <View style={styles.card}>
-            {/* Từ vựng chính */}
-            <View style={styles.kanjiSection}>
-              <Text style={styles.hiraganaText}>{vocabData.hiragana}</Text>
-              <Text style={styles.kanjiText}>{vocabData.kanji}</Text>
-              <Text style={styles.nghiaText}>{vocabData.nghia}</Text>
+            <View style={styles.headerRow}>
+              <View style={{ flex: 1 }}>
+                <Text style={styles.bigKanji}>{vocabData.kanji}</Text>
+                <Text style={styles.bigHanViet}>{vocabData.han}</Text>
+                <Text style={styles.bigHiragana}>{vocabData.hiragana}</Text>
+                <Text style={styles.bigNghia}>{vocabData.nghia}</Text>
+              </View>
+              <View style={styles.headerActions}>
+                <TouchableOpacity onPress={toggleBookmark} style={styles.iconBtn}>
+                  <Text style={styles.iconText}>{isBookmarked ? '⭐' : '☆'}</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={speakWord} style={styles.iconBtn}>
+                  <Text style={styles.iconText}>🔊</Text>
+                </TouchableOpacity>
+              </View>
             </View>
-            <Text style={styles.mainVocabHan}>{vocabData.han}</Text>
-
-
+            <View style={styles.divider} />
             {/* 3 nút chức năng */}
             <View style={styles.funcRow}>
-              {/* <TouchableOpacity style={styles.funcBtn}>
-                <Text style={styles.funcBtnText}>※ Kết hợp từ</Text>
-              </TouchableOpacity> */}
               <TouchableOpacity 
                 style={styles.funcBtn}
                 onPress={() => setShowImageModal(true)}
               >
                 <Text style={styles.funcBtnText}>🖼️ Ảnh minh họa</Text>
               </TouchableOpacity>
-              {/* <TouchableOpacity style={styles.funcBtn}>
-                <Text style={styles.funcBtnText}>⚙️ Luyện</Text>
-              </TouchableOpacity> */}
             </View>
 
             {/* Modal Ảnh minh họa */}
@@ -590,11 +645,18 @@ export default function VocabDetailScreen() {
             )}
             
             {/* Bảng chia từ - Luôn hiển thị cho mọi loại từ */}
-            <ConjugationTable 
+            {/* <ConjugationTable 
               word={conjugationWord}
               wordType={wordType}
               originalWord={vocabData.kanji}
-            />
+            /> */}
+            {skipConjugation ? (
+              <View style={styles.wordTypeRow}>
+                <Text style={styles.wordTypeText}>📌 Đây là dạng chia sẵn của: {baseNote || '—'}</Text>
+              </View>
+            ) : (
+              <ConjugationTable word={conjugationWord} wordType={wordType} originalWord={vocabData.kanji} />
+            )}
 
             {/* Xem thêm */}
             <TouchableOpacity style={styles.viewMoreBtn}>
@@ -688,25 +750,13 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 16,
   },
-   kanjiSection: {
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  kanjiText: {
-    fontSize: 40,
-    fontWeight: '800',
-    color: TEAL_DARK,
-  },
-  hiraganaText: {
-    fontSize: 16,
-    color: '#64748b',
-  },
-  nghiaText: {
-    fontSize: 16,
-    color: '#64748b',
-    marginTop: 4,
-
-  },
+  headerRow: { flexDirection: 'row', alignItems: 'flex-start' },
+  bigKanji: { fontSize: 32, fontWeight: '800', color: TEAL_DARK, lineHeight: 40 },
+  bigHanViet: { fontSize: 18, color: TEAL, fontWeight: '700', letterSpacing: 1, marginTop: 2 },
+  bigHiragana: { fontSize: 16, color: TEAL_DARK, marginTop: 2 },
+  bigNghia: { fontSize: 15, color: '#475569', marginTop: 2 },
+  divider: { height: StyleSheet.hairlineWidth, backgroundColor: '#e2e8f0', marginVertical: 14 },
+  headerActions: { flexDirection: 'row', alignItems: 'flex-start', gap: 6 },
   card: {
     backgroundColor: '#fff',
     borderRadius: 16,
