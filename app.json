@@ -57,7 +57,8 @@
             "ydx93a7ass.skadnetwork"
           ]
         }
-      ]
+      ],
+      "expo-tracking-transparency"
     ],
     "extra": {
       "eas": {
