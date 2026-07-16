@@ -21,7 +21,8 @@ import SearchInline from "../components/SearchInline";
 import HomeSuggestions from "../components/HomeSuggestions";
 import { Animated, Easing } from "react-native";
 import { BannerAd, BannerAdSize, TestIds, MobileAds } from "react-native-google-mobile-ads";
-
+import remoteConfig from "@react-native-firebase/remote-config";
+import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
 
 const TEAL = "#004370";
 const TEAL_DARK = "#004370";
@@ -118,6 +119,8 @@ export default function HomeScreen() {
   const scrollViewRef = useRef<ScrollView>(null);
   const isPaused = useRef(false);
   const searchAnim = useRef(new Animated.Value(0)).current;
+  // Đơn vị ID quảng cáo lưu động lấy tự động từ đám mây Firebase
+  const [adBannerUnitId, setAdBannerUnitId] = useState<string>(TestIds.BANNER);
 
   // ── Banner auto-scroll ───────────────────────────────────────────────────
   const scrollToNext = useCallback(() => {
@@ -136,8 +139,28 @@ export default function HomeScreen() {
 
   // ── Initialize AdMob ─────────────────────────────────────────────────────
   useEffect(() => {
-    MobileAds().initialize();
+    (async () => {
+      // Xin quyền App Tracking Transparency TRƯỚC khi khởi tạo quảng cáo — bắt buộc theo yêu cầu Apple
+      await requestTrackingPermissionsAsync();
+
+      MobileAds().initialize();
+
+      remoteConfig().setDefaults({
+        ad_banner_id: TestIds.BANNER,
+      });
+
+      remoteConfig()
+        .fetchAndActivate()
+        .then(() => {
+          const idTuXa = remoteConfig().getValue('ad_banner_id').asString();
+          if (idTuXa) {
+            setAdBannerUnitId(idTuXa);
+          }
+        })
+        .catch(error => console.log("Lỗi Firebase: ", error));
+    })();
   }, []);
+
 
   const onBannerScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     const x = e.nativeEvent.contentOffset.x;
@@ -155,8 +178,8 @@ export default function HomeScreen() {
   Animated.spring(searchAnim, {
     toValue: 1,
     useNativeDriver: true,
-    tension: 65,
-    friction: 11,
+    bounciness: 6,
+    speed: 11,
   }).start();
 }, []);
 
@@ -300,9 +323,21 @@ const closeSearch = useCallback(() => {
                 </View>
                 <View style={s.bannerRight}>
                   <Text style={s.bannerBadge}>{b.badge}</Text>
-                  <View style={s.bannerCta}>
+                  <TouchableOpacity
+                    style={s.bannerCta}
+                    activeOpacity={0.8}
+                    onPress={() => {  
+                      if (b.id === "jlpt") {
+                        goLevelBook("n5");
+                      } else if (b.id === "tokutei") {
+                        goLearningMenu({ bookId: INDUSTRIES[0].bookId, title: `Ngành: ${INDUSTRIES[0].vi}` });
+                      } else {
+                        openSearch();
+                      }
+                    }}
+                  >
                     <Text style={s.bannerCtaText}>{b.cta}</Text>
-                  </View>
+                  </TouchableOpacity>
                 </View>
               </View>
             ))}
@@ -414,16 +449,12 @@ const closeSearch = useCallback(() => {
       {/* ── AdMob Banner Ad ──────────────────────────────────────────────── */}
       <View style={s.adContainer}>
         <BannerAd
-          // 🛑 SỬA: Thay TestIds.BANNER bằng Ad Unit ID thật cho iOS từ AdMob của bạn
-          unitId={__DEV__ ? TestIds.BANNER : "ca-app-pub-8412799227715643/8293690463"} 
+          unitId={adBannerUnitId} 
           size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
           requestOptions={{
-            keywords: ["Japanese", "Language", "Learning"],
+            requestNonPersonalizedAdsOnly: true,
           }}
-          onAdFailedToLoad={(error) => {
-            console.error("Ad failed to load: ", error);
-          }}
-        />
+        />  
       </View>
 
       {/* ── SearchInline overlay toàn màn hình ──────────────────────────── */}
