@@ -1,12 +1,5 @@
 {
   "expo": {
-    "assetBundlePatterns": [
-      "assets/images_icon/**/*",
-      "assets/images/**/*",
-      "assets/data_EXAMS/audio/**/*",
-      "assets/data_EXAMS/images/**/*",
-      "assets/**/*.db"
-    ],
     "name": "Mirai.JP",
     "slug": "mirai-jp",
     "version": "1.0.1",
@@ -14,31 +7,17 @@
     "icon": "./assets/images_icon/Icon_loading.png",
     "scheme": "mirai-jp",
     "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ],
     "ios": {
       "bundleIdentifier": "com.miraijp.app",
       "supportsTablet": true,
       "buildNumber": "2",
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false,
-        "NSUserTrackingUsageDescription": "Ứng dụng cần quyền này để hiển thị quảng cáo phù hợp hơn với sở thích của bạn.",
-        "SKAdNetworkItems": [
-          {
-            "SKAdNetworkIdentifier": "cstr6suwn9.skadnetwork"
-          },
-          {
-            "SKAdNetworkIdentifier": "4fzdc2evr5.skadnetwork"
-          },
-          {
-            "SKAdNetworkIdentifier": "4pfyvq9l8r.skadnetwork"
-          },
-          {
-            "SKAdNetworkIdentifier": "2fnua5tdw4.skadnetwork"
-          },
-          {
-            "SKAdNetworkIdentifier": "ydx93a7ass.skadnetwork"
-          }
-        ]
-      }
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "package": "com.miraijp.app",
@@ -49,6 +28,15 @@
     "plugins": [
       "expo-router",
       [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
+      "./plugins/withFirebaseModularHeadersFix.js",
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images_icon/App_Icon.png",
@@ -57,10 +45,10 @@
         }
       ],
       [
-        "./plugins/withGoogleMobileAds",
+        "react-native-google-mobile-ads",
         {
-          "androidAppId": "ca-app-pub-8412799227715643~3262901236",
-          "iosAppId": "ca-app-pub-8412799227715643~3262901236",
+          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
           "userTrackingUsageDescription": "Ứng dụng cần quyền này để hiển thị quảng cáo phù hợp hơn với sở thích của bạn.",
           "skAdNetworkItems": [
             "cstr6suwn9.skadnetwork",
@@ -75,8 +63,7 @@
     "extra": {
       "eas": {
         "projectId": "9a67a07f-6ca6-43c4-b52d-9d7700a5cf7b"
-      },
-      "router": {}
+      }
     },
     "owner": "nguyenhuunam312"
   }
