@@ -174,7 +174,7 @@ export const getVoiceConfig = (): VoiceConfig => {
 // 🎭 TÁCH HỘI THOẠI THEO NGƯỜI NÓI
 // ============================================
 
-interface DialogueTurn {
+export interface DialogueTurn {
   gender: VoiceGender;
   text: string;
 }
@@ -407,8 +407,37 @@ export const getExamStats = (exam: ExamData) => {
 };
 
 // ============================================
-// 📤 EXPORT
+// 🔗 CÁC HÀM ALIAS ĐỂ TƯƠNG THÍCH VỚI FILE CHA (data_EXAMS/index.ts)
 // ============================================
+
+export const getGrammarReadingQuestions = (exam: ExamData): Question[] => {
+  return [...getGrammarQuestions(exam), ...getReadingQuestions(exam)];
+};
+
+export const parseTranscript = (
+  transcript: string,
+  fallbackGender: VoiceGender = 'female'
+): DialogueTurn[] => {
+  return parseDialogue(transcript, fallbackGender);
+};
+
+export const speakTranscriptWithVoices = async (
+  transcript: string,
+  options?: {
+    onStart?: () => void;
+    onDone?: () => void;
+    onError?: (error: Error) => void;
+  }
+): Promise<void> => {
+  return speakQuestionWithDialogue(
+    { id: 0, text: '', options: [], correct: 0, transcript } as Question,
+    options
+  );
+};
+
+export const setVoiceConfig = (config: Partial<VoiceConfig>): void => {
+  currentVoiceConfig = { ...currentVoiceConfig, ...config };
+};
 
 export default {
   getExamById,
@@ -418,15 +447,19 @@ export default {
   getGrammarQuestions,
   getReadingQuestions,
   getListeningQuestions,
+  getGrammarReadingQuestions,
   getAllQuestions,
   getExamStats,
   speakText,
   speakQuestion,
   speakTranscript,
+  speakTranscriptWithVoices,
   stopSpeaking,
   isSpeaking,
   setVoiceGender,
   getVoiceGender,
   getVoiceConfig,
+  setVoiceConfig,
   speakQuestionWithDialogue,
+  parseTranscript,
 };

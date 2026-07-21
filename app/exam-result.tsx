@@ -14,12 +14,13 @@ import {
   Alert,
 } from 'react-native';
 import { router, useLocalSearchParams, Stack } from 'expo-router';
-
-// Import các hàm và interface từ data_EXAMS
 import { 
   getExamById, 
   calculateTotalScore, 
-  getAllQuestions,
+  getVocabQuestions,
+  getGrammarQuestions,
+  getReadingQuestions,
+  getListeningQuestions,
   TotalScoreResult
 } from '../assets/data_EXAMS';
 
@@ -46,16 +47,19 @@ export default function ExamResultScreen() {
         const grammarAnswers = JSON.parse(grammarAnswersRaw);
         const listeningAnswers = JSON.parse(listeningAnswersRaw);
 
-        const exam = getExamById(examId);
+        // examId dạng "n3_01" → suy ra level "N3" từ tiền tố trước dấu gạch dưới
+        const level = examId.split('_')[0].toUpperCase();
+
+        const exam = getExamById(level, examId);
         if (!exam) {
           setLoading(false);
           return;
         }
 
-        const vocabQuestions = getAllQuestions(exam, 'vocab');
-        const grammarQuestions = getAllQuestions(exam, 'grammar');
-        const readingQuestions = getAllQuestions(exam, 'reading');
-        const listeningQuestions = getAllQuestions(exam, 'listening');
+        const vocabQuestions = getVocabQuestions(level, examId);
+        const grammarQuestions = getGrammarQuestions(level, examId);
+        const readingQuestions = getReadingQuestions(level, examId);
+        const listeningQuestions = getListeningQuestions(level, examId);
 
         const totalResult = calculateTotalScore(
           vocabQuestions,

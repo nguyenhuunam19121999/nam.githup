@@ -101,8 +101,7 @@ export interface ExamModule {
 // ============================================
 const EXAM_MODULES: Record<string, ExamModule> = {
   // ✅ ĐANG HOẠT ĐỘNG
-  N3: N3 as ExamModule,
-  
+  N3: N3 as unknown as ExamModule,
   // 🔒 TẠM THỜI COMMENT
   // N1,
   // N2,
@@ -241,6 +240,105 @@ export const getAllExamsAllLevels = (): { level: string; exams: ExamData[] }[] =
 };
 
 // ============================================
+// 🧮 HÀM TÍNH ĐIỂM TỔNG (CHUẨN JLPT: mỗi phần quy về thang 60, tổng 180)
+// ============================================
+export interface SectionScoreResult {
+  rawScore: number;
+  maxRawScore: number;
+  scaledScore: number;
+  details?: Record<string, { correct: number; total: number; points: number; maxPoints: number }>;
+}
+
+export interface TotalScoreResult {
+  vocab: SectionScoreResult;
+  grammar: { rawScore: number; maxRawScore: number };
+  reading: { rawScore: number; maxRawScore: number };
+  grammarReading: SectionScoreResult;
+  listening: SectionScoreResult;
+  total: { score: number; maxScore: number; percentage: number };
+  isPassed: boolean;
+}
+
+const countCorrect = (questions: Question[], answers: number[]): number => {
+  return questions.reduce((acc, q, idx) => acc + (answers[idx] === q.correct ? 1 : 0), 0);
+};
+
+const buildVocabDetails = (
+  questions: Question[],
+  answers: number[]
+): Record<string, { correct: number; total: number; points: number; maxPoints: number }> => {
+  const details: Record<string, { correct: number; total: number; points: number; maxPoints: number }> = {};
+  const pointsPerQuestion = questions.length > 0 ? 60 / questions.length : 0;
+
+  questions.forEach((q, idx) => {
+    const key = q.mondai || 'khac';
+    if (!details[key]) {
+      details[key] = { correct: 0, total: 0, points: 0, maxPoints: 0 };
+    }
+    details[key].total += 1;
+    details[key].maxPoints += pointsPerQuestion;
+    if (answers[idx] === q.correct) {
+      details[key].correct += 1;
+      details[key].points += pointsPerQuestion;
+    }
+  });
+
+  return details;
+};
+
+// LƯU Ý: ngưỡng đậu (95/180 tổng, tối thiểu 19/60 mỗi phần) là quy tắc chuẩn JLPT N3 phổ biến.
+// Nếu đề thi của bạn dùng ngưỡng khác (exam.passing_score), có thể thay 2 số 95 và 19 bên dưới.
+export const calculateTotalScore = (
+  vocabQuestions: Question[],
+  vocabAnswers: number[],
+  grammarQuestions: Question[],
+  readingQuestions: Question[],
+  grammarReadingAnswersCombined: number[],
+  listeningQuestions: Question[],
+  listeningAnswers: number[]
+): TotalScoreResult => {
+  const grammarAnswers = grammarReadingAnswersCombined.slice(0, grammarQuestions.length);
+  const readingAnswers = grammarReadingAnswersCombined.slice(grammarQuestions.length);
+
+  const vocabCorrect = countCorrect(vocabQuestions, vocabAnswers);
+  const grammarCorrect = countCorrect(grammarQuestions, grammarAnswers);
+  const readingCorrect = countCorrect(readingQuestions, readingAnswers);
+  const listeningCorrect = countCorrect(listeningQuestions, listeningAnswers);
+
+  const vocabScaled = vocabQuestions.length > 0 ? (vocabCorrect / vocabQuestions.length) * 60 : 0;
+  const grammarReadingTotal = grammarQuestions.length + readingQuestions.length;
+  const grammarReadingCorrect = grammarCorrect + readingCorrect;
+  const grammarReadingScaled = grammarReadingTotal > 0 ? (grammarReadingCorrect / grammarReadingTotal) * 60 : 0;
+  const listeningScaled = listeningQuestions.length > 0 ? (listeningCorrect / listeningQuestions.length) * 60 : 0;
+
+  const totalScore = vocabScaled + grammarReadingScaled + listeningScaled;
+  const isPassed = totalScore >= 95 && vocabScaled >= 19 && grammarReadingScaled >= 19 && listeningScaled >= 19;
+
+  return {
+    vocab: {
+      rawScore: vocabCorrect,
+      maxRawScore: vocabQuestions.length,
+      scaledScore: vocabScaled,
+      details: buildVocabDetails(vocabQuestions, vocabAnswers),
+    },
+    grammar: { rawScore: grammarCorrect, maxRawScore: grammarQuestions.length },
+    reading: { rawScore: readingCorrect, maxRawScore: readingQuestions.length },
+    grammarReading: {
+      rawScore: grammarReadingCorrect,
+      maxRawScore: grammarReadingTotal,
+      scaledScore: grammarReadingScaled,
+    },
+    listening: {
+      rawScore: listeningCorrect,
+      maxRawScore: listeningQuestions.length,
+      scaledScore: listeningScaled,
+    },
+    total: { score: totalScore, maxScore: 180, percentage: (totalScore / 180) * 100 },
+    isPassed,
+  };
+};
+
+// ============================================
 // 📤 EXPORT MẶC ĐỊNH
 // ============================================
 export default {
@@ -255,6 +353,7 @@ export default {
   getAllQuestions,
   getExamStats,
   getAllExamsAllLevels,
+  calculateTotalScore,
   AVAILABLE_LEVELS,
   speakTranscriptWithVoices,
   stopSpeaking,
