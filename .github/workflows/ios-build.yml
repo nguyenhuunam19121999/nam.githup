@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest # Tự động lấy hệ điều hành macOS mới nhất hỗ trợ Node 24
+    runs-on: macos-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -12,13 +12,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24 # Nâng cấp lên Node 24 đồng bộ với máy ảo GitHub
+          node-version: 24
 
       - name: Setup pnpm
-        uses: pnpm/action-setup@v4 # Dùng bản v4 mới nhất để xử lý mượt workspace
+        uses: pnpm/action-setup@v4
         with:
-          version: 9 # Nâng cấp lên pnpm v9 để chạy mượt mà trên môi trường Node 24
-          run_install: false # Tắt tự động cài đặt ngầm để tự chạy lệnh ở bước sau
+          version: 9
+          run_install: false
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
@@ -26,8 +26,7 @@ jobs:
       - name: Setup EAS CLI
         run: pnpm add -g eas-cli
 
-      - name: Đăng nhập Expo
-        run: eas login --token "${{ secrets.EXPO_TOKEN }}"
-
       - name: Chạy lệnh Build Local iOS
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }} # Nhận diện đăng nhập tự động qua biến môi trường toàn cục
         run: eas build --profile production --platform ios --local --non-interactive
