@@ -92,6 +92,12 @@ const TARGETS = [
       CREATE INDEX IF NOT EXISTS idx_vocab_jlpt ON vocab(jlpt);
       CREATE INDEX IF NOT EXISTS idx_vocab_book ON vocab(book);
       CREATE INDEX IF NOT EXISTS idx_vocab_source ON vocab(source);
+
+      CREATE TABLE IF NOT EXISTS kanji_strokes (
+        kanji TEXT PRIMARY KEY,
+        paths TEXT NOT NULL DEFAULT '[]'
+      );
+      CREATE INDEX IF NOT EXISTS idx_kanji_strokes_kanji ON kanji_strokes(kanji);
     `,
   },
   {
@@ -267,6 +273,33 @@ function insertKanjiFull(db, filePath) {
   return count;
 }
 
+function insertKanjiStrokes(db, filePath) {
+  const data = readJson(filePath);
+  if (!data || typeof data !== 'object') {
+    console.warn('  ⚠️  kanji_strokes.json không đúng định dạng, bỏ qua.');
+    return 0;
+  }
+
+  const stmt = db.prepare(`
+    INSERT OR REPLACE INTO kanji_strokes (kanji, paths)
+    VALUES (@kanji, @paths)
+  `);
+
+  const insertBatch = db.transaction((entries) => {
+    let count = 0;
+    for (const [char, paths] of entries) {
+      if (!char || !Array.isArray(paths) || paths.length === 0) continue;
+      stmt.run({ kanji: char, paths: JSON.stringify(paths) });
+      count++;
+    }
+    return count;
+  });
+
+  const count = insertBatch(Object.entries(data));
+  console.log(`  ✓ kanji_strokes.json: ${count} chữ có nét vẽ`);
+  return count;
+}
+
 function insertKanjiBookFile(db, filePath, defaultLevel, bookId) {
   const data = readJson(filePath);
   if (!data) return 0;
@@ -439,6 +472,9 @@ function insertSentencesFile(db, filePath) {
 
 console.log('📦 Đang insert kanjifull.json...');
 insertKanjiFull(dbs.kanji, path.join(ASSETS, 'data_JLPT_kanji', 'kanjifull.json'));
+
+console.log('📦 Đang insert kanji_strokes.json...');
+insertKanjiStrokes(dbs.kanji, path.join(ASSETS, 'data_JLPT_kanji', 'kanji_strokes.json'));
 
 console.log('\n📦 Đang insert từ vựng theo sách kanji (data_JLPT_kanji)...');
 for (const { file, level, book } of [

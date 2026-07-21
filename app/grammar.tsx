@@ -21,7 +21,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-import { getGrammar, type GrammarItem } from "../assets/data_nn";
+import { getGrammar, getGrammarByBook, type GrammarItem } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
 // ✅ MÀU CHỦ ĐẠO MỚI
@@ -181,7 +181,7 @@ export default function GrammarScreen() {
   const items = useMemo<GrammarItem[]>(() => {
     let list: GrammarItem[];
     if (bookIdParam) {
-      list = getGrammar(undefined, bookIdParam);
+      list = getGrammarByBook(bookIdParam); 
     } else {
       list = getGrammar(level);
     }

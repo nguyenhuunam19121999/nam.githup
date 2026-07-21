@@ -1,21 +1,28 @@
 // ============================================
 // FILE: assets/data_EXAMS/index.ts
-// QUẢN LÝ DỮ LIỆU ĐỀ THI - ĐỒNG BỘ CONFIG PHẲNG MỚI & THANG ĐIỂM
+// QUẢN LÝ TỔNG HỢP ĐỀ THI - CHỈ TẬP TRUNG N3
 // ============================================
 
-// ============================================
-// FILE: assets/data_EXAMS/index.ts
-// QUẢN LÝ DỮ LIỆU ĐỀ THI - ĐỒNG BỘ VỚI EXAM-RESULT
-// ============================================
+// 📥 IMPORT MODULE N3 (đang hoạt động)
+import * as N3 from './n3/index';
 
+// 🔒 CÁC MODULE KHÁC (TẠM THỜI COMMENT, SẼ MỞ SAU)
+// import * as N1 from './n1/index';
+// import * as N2 from './n2/index';
+// import * as N4 from './n4/index';
+// import * as N5 from './n5/index';
+
+// ============================================
+// 📌 ĐỊNH NGHĨA INTERFACE
+// ============================================
 export interface Question {
   id: number;
+  mondai: string;
   text: string;
   options: string[];
   correct: number;
-  audio_file?: string;
   image?: string;
-  mondai?: string;
+  transcript?: string;
 }
 
 export interface Section {
@@ -26,13 +33,33 @@ export interface Section {
   questions: Question[];
 }
 
+export interface VocabSection {
+  name: string;
+  max_score: number;
+  sections: Section[];
+}
+
+export interface GrammarReadingSection {
+  name: string;
+  max_score: number;
+  time_limit?: number;
+  grammar_sections: Section[];
+  reading_sections: Section[];
+}
+
+export interface ListeningSection {
+  name: string;
+  max_score: number;
+  time_limit?: number;
+  sections: Section[];
+}
+
 export interface ExamData {
   ky_thi: string;
   level: string;
   year: number;
   month: number;
   nguon: string;
-  audio_file: string;
   images: string[];
   time_vocab: number;
   time_grammar: number;
@@ -44,306 +71,195 @@ export interface ExamData {
     grammar_reading: number;
     listening: number;
   };
-  vocab: {
-    name: string;
-    max_score: number;
-    sections: Section[];
-  };
-  grammar_reading: {
-    name: string;
-    max_score: number;
-    time_limit?: number;
-    grammar_sections: Section[];
-    reading_sections: Section[];
-  };
-  listening: {
-    name: string;
-    max_score: number;
-    sections: Section[];
-  };
+  vocab: VocabSection;
+  grammar_reading: GrammarReadingSection;
+  listening: ListeningSection;
+}
+
+export interface ExamModule {
+  getExamById: (id: string) => ExamData | null;
+  getAllExams: () => ExamData[];
+  getExamIds: () => string[];
+  getVocabQuestions: (exam: ExamData) => Question[];
+  getGrammarQuestions: (exam: ExamData) => Question[];
+  getReadingQuestions: (exam: ExamData) => Question[];
+  getListeningQuestions: (exam: ExamData) => Question[];
+  getAllQuestions: (exam: ExamData) => Question[];
+  getGrammarReadingQuestions: (exam: ExamData) => Question[];
+  getExamStats: (exam: ExamData) => any;
+  // ✅ Chỉ giữ các hàm phát âm cho phần nghe
+  speakTranscriptWithVoices: (transcript: string, options?: any) => void;
+  stopSpeaking: () => Promise<void>;
+  isSpeaking: () => Promise<boolean>;
+  setVoiceConfig: (config: any) => void;
+  getVoiceConfig: () => any;
+  parseTranscript: (transcript: string) => any[];
 }
 
 // ============================================
-// 🌟 KHU VỰC DỮ LIỆU ĐỀ THI
+// 📂 ĐĂNG KÝ CÁC MODULE (CHỈ N3 ĐANG HOẠT ĐỘNG)
 // ============================================
-const EXAM_DATABASE: Record<string, any> = {};
+const EXAM_MODULES: Record<string, ExamModule> = {
+  // ✅ ĐANG HOẠT ĐỘNG
+  N3: N3 as ExamModule,
+  
+  // 🔒 TẠM THỜI COMMENT
+  // N1,
+  // N2,
+  // N4,
+  // N5,
+};
 
-export const getExamById = (id: string): ExamData | null => {
-  return EXAM_DATABASE[id] || null;
+// Danh sách các level đang có
+export const AVAILABLE_LEVELS = Object.keys(EXAM_MODULES);
+
+// ============================================
+// 🔍 HÀM LẤY ĐỀ THI THEO CẤP ĐỘ
+// ============================================
+export const getExamById = (level: string, id: string): ExamData | null => {
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) {
+    console.warn(`⚠️ Module not found for level: ${level}. Available: ${AVAILABLE_LEVELS.join(', ')}`);
+    return null;
+  }
+  return module.getExamById(id);
+};
+
+export const getAllExams = (level: string): ExamData[] => {
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getAllExams();
+};
+
+export const getExamIds = (level: string): string[] => {
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getExamIds();
 };
 
 // ============================================
-// 📊 HÀM LẤY TẤT CẢ CÂU HỎI THEO TỪNG PHẦN
+// 📋 HÀM LẤY CÂU HỎI THEO PHẦN
 // ============================================
-export const getAllQuestions = (exam: ExamData, type: 'vocab' | 'grammar' | 'reading' | 'listening'): Question[] => {
+export const getVocabQuestions = (level: string, examId: string): Question[] => {
+  const exam = getExamById(level, examId);
   if (!exam) return [];
-  switch(type) {
-    case 'vocab': 
-      return exam.vocab?.sections?.flatMap(s => s.questions) || [];
-    case 'grammar': 
-      return exam.grammar_reading?.grammar_sections?.flatMap(s => s.questions) || [];
-    case 'reading': 
-      return exam.grammar_reading?.reading_sections?.flatMap(s => s.questions) || [];
-    case 'listening': 
-      return exam.listening?.sections?.flatMap(s => s.questions) || [];
-    default: 
-      return [];
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getVocabQuestions(exam);
+};
+
+export const getGrammarQuestions = (level: string, examId: string): Question[] => {
+  const exam = getExamById(level, examId);
+  if (!exam) return [];
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getGrammarQuestions(exam);
+};
+
+export const getReadingQuestions = (level: string, examId: string): Question[] => {
+  const exam = getExamById(level, examId);
+  if (!exam) return [];
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getReadingQuestions(exam);
+};
+
+export const getListeningQuestions = (level: string, examId: string): Question[] => {
+  const exam = getExamById(level, examId);
+  if (!exam) return [];
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getListeningQuestions(exam);
+};
+
+export const getGrammarReadingQuestions = (level: string, examId: string): Question[] => {
+  const exam = getExamById(level, examId);
+  if (!exam) return [];
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getGrammarReadingQuestions(exam);
+};
+
+export const getAllQuestions = (level: string, examId: string): Question[] => {
+  const exam = getExamById(level, examId);
+  if (!exam) return [];
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return [];
+  return module.getAllQuestions(exam);
+};
+
+export const getExamStats = (level: string, examId: string): any => {
+  const exam = getExamById(level, examId);
+  if (!exam) return null;
+  const module = EXAM_MODULES[level.toUpperCase()];
+  if (!module) return null;
+  return module.getExamStats(exam);
+};
+
+// ============================================
+// 🔊 HÀM PHÁT ÂM (CHỈ CHO PHẦN NGHE)
+// ============================================
+export const speakTranscriptWithVoices = (
+  transcript: string,
+  options?: {
+    onStart?: () => void;
+    onDone?: () => void;
+    onError?: (error: Error) => void;
   }
+): void => {
+  N3.speakTranscriptWithVoices(transcript, options);
+};
+
+export const stopSpeaking = async (): Promise<void> => {
+  await N3.stopSpeaking();
+};
+
+export const isSpeaking = async (): Promise<boolean> => {
+  return await N3.isSpeaking();
+};
+
+export const setVoiceConfig = (config: any): void => {
+  N3.setVoiceConfig(config);
+};
+
+export const getVoiceConfig = (): any => {
+  return N3.getVoiceConfig();
+};
+
+export const parseTranscript = (transcript: string): any[] => {
+  return N3.parseTranscript(transcript);
 };
 
 // ============================================
-// 💯 ĐỊNH NGHĨA TYPE KHỚP VỚI EXAM-RESULT.TSX
+// 📊 HÀM LẤY TẤT CẢ ĐỀ THI TẤT CẢ CẤP ĐỘ
 // ============================================
-export interface ScoreResult {
-  rawScore: number;
-  maxRawScore: number;
-  scaledScore: number;
-  details: any;
-}
-
-export interface TotalScoreResult {
-  vocab: ScoreResult;
-  grammar: ScoreResult;
-  reading: ScoreResult;
-  listening: ScoreResult;
-  grammarReading: {
-    scaledScore: number;
-    rawScore: number;
-    maxRawScore: number;
-  };
-  total: {
-    score: number;
-    maxScore: number;
-    percentage: number;
-  };
-  isPassed: boolean;
-}
-
-// Cấu hình JLPT
-const JLPT_CONFIG = {
-  MAX_SECTION_SCORE: 60,
-  MAX_TOTAL: 180,
-  SECTION_PASS_THRESHOLD: 19,
-  PASSING_SCORE: 90,
+export const getAllExamsAllLevels = (): { level: string; exams: ExamData[] }[] => {
+  return Object.entries(EXAM_MODULES).map(([level, module]) => ({
+    level,
+    exams: module.getAllExams(),
+  }));
 };
 
 // ============================================
-// 🧮 HÀM TÍNH ĐIỂM CHO TỪNG PHẦN (CÓ DETAILS THEO MONDAI)
+// 📤 EXPORT MẶC ĐỊNH
 // ============================================
-const calculateVocabScore = (questions: Question[], userAnswers: number[]): ScoreResult => {
-  let rawScore = 0;
-  const maxRawScore = questions.length;
-  const details: any = {
-    mondai1: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai2: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai3: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai4: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai5: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-  };
-
-  questions.forEach((q, idx) => {
-    const mondai = q.mondai || "mondai1";
-    details[mondai].total++;
-    details[mondai].maxPoints += 1;
-    if (userAnswers?.[idx] === q.correct) {
-      rawScore++;
-      details[mondai].correct++;
-      details[mondai].points += 1;
-    }
-  });
-
-  const scaledScore = maxRawScore > 0 ? Math.round((rawScore / maxRawScore) * JLPT_CONFIG.MAX_SECTION_SCORE) : 0;
-  
-  return { rawScore, maxRawScore, scaledScore, details };
-};
-
-const calculateGrammarScore = (questions: Question[], userAnswers: number[]): ScoreResult => {
-  let rawScore = 0;
-  const maxRawScore = questions.length;
-  const details: any = {
-    mondai1: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai2: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai3: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-  };
-
-  questions.forEach((q, idx) => {
-    const mondai = q.mondai || "mondai1";
-    details[mondai].total++;
-    details[mondai].maxPoints += 1;
-    if (userAnswers?.[idx] === q.correct) {
-      rawScore++;
-      details[mondai].correct++;
-      details[mondai].points += 1;
-    }
-  });
-
-  const scaledScore = maxRawScore > 0 ? Math.round((rawScore / maxRawScore) * JLPT_CONFIG.MAX_SECTION_SCORE) : 0;
-  
-  return { rawScore, maxRawScore, scaledScore, details };
-};
-
-const calculateReadingScore = (questions: Question[], userAnswers: number[]): ScoreResult => {
-  let rawScore = 0;
-  const maxRawScore = questions.length;
-  const details: any = {
-    mondai4: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai5: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai6: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-  };
-
-  questions.forEach((q, idx) => {
-    const mondai = q.mondai || "mondai4";
-    details[mondai].total++;
-    details[mondai].maxPoints += 1;
-    if (userAnswers?.[idx] === q.correct) {
-      rawScore++;
-      details[mondai].correct++;
-      details[mondai].points += 1;
-    }
-  });
-
-  const scaledScore = maxRawScore > 0 ? Math.round((rawScore / maxRawScore) * JLPT_CONFIG.MAX_SECTION_SCORE) : 0;
-  
-  return { rawScore, maxRawScore, scaledScore, details };
-};
-
-const calculateListeningScore = (questions: Question[], userAnswers: number[]): ScoreResult => {
-  let rawScore = 0;
-  const maxRawScore = questions.length;
-  const details: any = {
-    mondai1: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai2: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai3: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-    mondai4: { correct: 0, total: 0, points: 0, maxPoints: 0 },
-  };
-
-  questions.forEach((q, idx) => {
-    const mondai = q.mondai || "mondai1";
-    details[mondai].total++;
-    details[mondai].maxPoints += 1;
-    if (userAnswers?.[idx] === q.correct) {
-      rawScore++;
-      details[mondai].correct++;
-      details[mondai].points += 1;
-    }
-  });
-
-  const scaledScore = maxRawScore > 0 ? Math.round((rawScore / maxRawScore) * JLPT_CONFIG.MAX_SECTION_SCORE) : 0;
-  
-  return { rawScore, maxRawScore, scaledScore, details };
-};
-
-// ============================================
-// 🧮 HÀM TÍNH ĐIỂM TỔNG - NHẬN 7 THAM SỐ
-// ============================================
-export const calculateTotalScore = (
-  vocabQuestions: Question[],
-  vocabAnswers: number[],
-  grammarQuestions: Question[],
-  readingQuestions: Question[],
-  grammarReadingAnswers: number[],
-  listeningQuestions: Question[],
-  listeningAnswers: number[]
-): TotalScoreResult => {
-  
-  // Tính điểm từ vựng
-  const vocabResult = calculateVocabScore(vocabQuestions, vocabAnswers);
-  
-  // Tách grammar answers và reading answers từ grammarReadingAnswers
-  const grammarAnswers = grammarReadingAnswers?.slice(0, grammarQuestions.length) || [];
-  const readingAnswers = grammarReadingAnswers?.slice(grammarQuestions.length) || [];
-  
-  // Tính điểm ngữ pháp và đọc hiểu
-  const grammarResult = calculateGrammarScore(grammarQuestions, grammarAnswers);
-  const readingResult = calculateReadingScore(readingQuestions, readingAnswers);
-  
-  // Tính điểm nghe hiểu
-  const listeningResult = calculateListeningScore(listeningQuestions, listeningAnswers);
-  
-  // Tính điểm tổng Ngữ pháp & Đọc hiểu
-  const grammarReadingRawScore = grammarResult.rawScore + readingResult.rawScore;
-  const grammarReadingMaxRaw = grammarResult.maxRawScore + readingResult.maxRawScore;
-  const grammarReadingScaled = grammarReadingMaxRaw > 0 
-    ? Math.round((grammarReadingRawScore / grammarReadingMaxRaw) * JLPT_CONFIG.MAX_SECTION_SCORE) 
-    : 0;
-  
-  // Tính tổng điểm
-  const totalScaledScore = vocabResult.scaledScore + grammarReadingScaled + listeningResult.scaledScore;
-  const percentage = (totalScaledScore / JLPT_CONFIG.MAX_TOTAL) * 100;
-  
-  // Kiểm tra đỗ/trượt
-  const isPassed = 
-    totalScaledScore >= JLPT_CONFIG.PASSING_SCORE &&
-    vocabResult.scaledScore >= JLPT_CONFIG.SECTION_PASS_THRESHOLD &&
-    grammarReadingScaled >= JLPT_CONFIG.SECTION_PASS_THRESHOLD &&
-    listeningResult.scaledScore >= JLPT_CONFIG.SECTION_PASS_THRESHOLD;
-  
-  return {
-    vocab: vocabResult,
-    grammar: grammarResult,
-    reading: readingResult,
-    listening: listeningResult,
-    grammarReading: {
-      scaledScore: grammarReadingScaled,
-      rawScore: grammarReadingRawScore,
-      maxRawScore: grammarReadingMaxRaw
-    },
-    total: {
-      score: totalScaledScore,
-      maxScore: JLPT_CONFIG.MAX_TOTAL,
-      percentage
-    },
-    isPassed,
-  };
-};
-
-// ============================================
-// 📌 HÀM TÍNH ĐIỂM CŨ (GIỮ LẠI ĐỂ TƯƠNG THÍCH NGƯỢC)
-// ============================================
-export const calculateTotalScoreFromExam = (
-  exam: ExamData,
-  vocabAnswers: number[],
-  grammarAnswers: number[],
-  listeningAnswers: number[]
-): TotalScoreResult => {
-  const vocabQuestions = getAllQuestions(exam, 'vocab');
-  const grammarQuestions = getAllQuestions(exam, 'grammar');
-  const readingQuestions = getAllQuestions(exam, 'reading');
-  const listeningQuestions = getAllQuestions(exam, 'listening');
-  
-  return calculateTotalScore(
-    vocabQuestions,
-    vocabAnswers,
-    grammarQuestions,
-    readingQuestions,
-    grammarAnswers,
-    listeningQuestions,
-    listeningAnswers
-  );
-};
-
-// ============================================
-// 🔧 HÀM KIỂM TRA VÀ CHUẨN HÓA
-// ============================================
-export const validateExamData = (exam: ExamData): { isValid: boolean; errors: string[] } => {
-  const errors: string[] = [];
-  if (!exam?.ky_thi) errors.push('Missing ky_thi');
-  if (!exam?.level) errors.push('Missing level');
-  if (!exam?.vocab) errors.push('Missing vocab section');
-  if (!exam?.grammar_reading) errors.push('Missing grammar_reading section');
-  if (!exam?.listening) errors.push('Missing listening section');
-  return { isValid: errors.length === 0, errors };
-};
-
-export const normalizeAnswer = (answer: any): number => {
-  if (typeof answer === 'number') return answer;
-  if (typeof answer === 'string') {
-    const letterToNumber: Record<string, number> = { 
-      '1': 0, '2': 1, '3': 2, '4': 3, 
-      'A': 0, 'B': 1, 'C': 2, 'D': 3 
-    };
-    const normalized = letterToNumber[answer.toUpperCase()];
-    return normalized !== undefined ? normalized : -1;
-  }
-  return -1;
+export default {
+  getExamById,
+  getAllExams,
+  getExamIds,
+  getVocabQuestions,
+  getGrammarQuestions,
+  getReadingQuestions,
+  getListeningQuestions,
+  getGrammarReadingQuestions,
+  getAllQuestions,
+  getExamStats,
+  getAllExamsAllLevels,
+  AVAILABLE_LEVELS,
+  speakTranscriptWithVoices,
+  stopSpeaking,
+  isSpeaking,
+  setVoiceConfig,
+  getVoiceConfig,
+  parseTranscript,
 };

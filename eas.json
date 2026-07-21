@@ -15,11 +15,22 @@
       }
     },
     "preview-device": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "ios": {
+        "simulator": false
+      }
     },
     "production": {
       "distribution": "store",
-      "autoIncrement": true
+      "ios": {
+        "autoIncrement": true
+      },
+      "android": {
+        "autoIncrement": true
+      },
+      "env": {
+        "EXPO_NO_DOCTOR": "1"
+      }
     }
   },
   "submit": {

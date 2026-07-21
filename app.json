@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "Mirai.JP",
+    "name": "Mirai",
     "slug": "mirai-jp",
     "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/images_icon/Icon_loading.png",
+    "icon": "./assets/images_icon/Icon_loading-02.png",
     "scheme": "mirai-jp",
     "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [
@@ -14,18 +14,23 @@
       "bundleIdentifier": "com.miraijp.app",
       "supportsTablet": true,
       "infoPlist": {
-        "ITSAppUsesNonExemptEncryption": false
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSCameraUsageDescription": "Ứng dụng cần truy cập Camera để quét mã QR nhận điểm thưởng giới thiệu."
       },
       "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "package": "com.miraijp.app",
       "permissions": [
-        "android.permission.INTERNET"
-      ]
+        "android.permission.INTERNET",
+        "com.google.android.gms.permission.AD_ID",
+        "android.permission.CAMERA"
+      ],
+      "googleServicesFile": "./google-services.json"
     },
-    "plugins": [
+        "plugins": [
       "expo-router",
+      "@react-native-firebase/app/app.plugin.js",
       [
         "expo-build-properties",
         {
@@ -38,7 +43,7 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images_icon/App_Icon.png",
+          "image": "./assets/images_icon/Icon_loading.png",
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }

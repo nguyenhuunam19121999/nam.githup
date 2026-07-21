@@ -7,12 +7,14 @@ import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Speech from "expo-speech";
 import React, { useEffect, useMemo, useState } from "react";
 import { getBookInfo } from "../assets/data_nghanh_hoc";
-import { getVocab, getVocabByBook, type RawVocab } from "../assets/vocab";
+import { getVocab, getVocabByBook, getIndustryVocabByBook, type RawVocab } from "../assets/vocab";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 import FlashcardDetail, { VocabItem, Field, ALL_FIELDS, FIELD_LABELS } from "../components/FlashcardDetail";
 import {
+  ActivityIndicator,
   Alert,
+  FlatList,
   Keyboard,
   Modal,
   Pressable,
@@ -554,13 +556,22 @@ export default function VocabScreen() {
   
   const headerInfo = useMemo(() => getBookInfo(level, bookId), [level, bookId]);
   
-  // Tải từ vựng
+  // Tải từ vựng + nghành học
   useEffect(() => {
     setIsLoading(true);
     try {
       const hasBookId = typeof params.bookId === "string" && params.bookId.length > 0;
-      const rawVocab: RawVocab[] = hasBookId ? getVocabByBook(bookId) : getVocab(level, bookId);
-      const formatted = normalizeVocab(rawVocab, hasBookId ? lessonParam : undefined, level);
+      const isIndustry = hasBookId && bookId.startsWith("industry-");
+
+      const rawVocab: RawVocab[] = isIndustry
+        ? getIndustryVocabByBook(bookId)
+        : hasBookId
+          ? getVocabByBook(bookId)
+          : getVocab(level, bookId);
+
+      // isIndustry → truyền undefined cho lessonNumber → normalizeVocab
+      // không lọc theo bài, giữ nguyên toàn bộ danh sách phẳng.
+      const formatted = normalizeVocab(rawVocab, isIndustry ? undefined : (hasBookId ? lessonParam : undefined), level);
       setVocabList(formatted);
     } catch (error) {
       Alert.alert("Lỗi", "Không thể tải dữ liệu từ vựng");
@@ -568,6 +579,21 @@ export default function VocabScreen() {
       setIsLoading(false);
     }
   }, [level, bookId, lessonParam]);
+
+  // Tải từ vựng
+  // useEffect(() => {
+  //   setIsLoading(true);
+  //   try {
+  //     const hasBookId = typeof params.bookId === "string" && params.bookId.length > 0;
+  //     const rawVocab: RawVocab[] = hasBookId ? getVocabByBook(bookId) : getVocab(level, bookId);
+  //     const formatted = normalizeVocab(rawVocab, hasBookId ? lessonParam : undefined, level);
+  //     setVocabList(formatted);
+  //   } catch (error) {
+  //     Alert.alert("Lỗi", "Không thể tải dữ liệu từ vựng");
+  //   } finally {
+  //     setIsLoading(false);
+  //   }
+  // }, [level, bookId, lessonParam]);
   
   // Load bookmarks
   useEffect(() => {
@@ -841,14 +867,90 @@ export default function VocabScreen() {
           </View>
           
           {/* ScrollView - CHỈ CUỘN DANH SÁCH TỪ VỰNG */}
-          <ScrollView
+          {/* <ScrollView
             contentContainerStyle={s.scrollContent}
             showsVerticalScrollIndicator={true}
             nestedScrollEnabled={true}
             style={{ flex: 1 }}
-          >
+          > */}
             {/* Danh sách từ vựng */}
             {isLoading ? (
+              <View style={s.loadingContainer}>
+                <Text style={s.loadingText}>Đang tải từ vựng...</Text>
+              </View>
+            ) : (
+              <FlatList
+                data={filteredVocabList}
+                keyExtractor={(vocab) => vocab.id}
+                contentContainerStyle={s.scrollContent}
+                showsVerticalScrollIndicator={true}
+                ListEmptyComponent={
+                  <View style={s.empty}>
+                    <Text style={s.emptyText}>Không có từ vựng nào.</Text>
+                  </View>
+                }
+                renderItem={({ item: vocab, index }) => (
+                  <TouchableOpacity
+                    style={s.vocabRow}
+                    activeOpacity={0.7}
+                    onPress={() => {
+                      router.push({
+                        pathname: '/vocab-detail',
+                        params: {
+                          id: vocab.id,
+                          kanji: vocab.kanji,
+                          hiragana: vocab.hiragana,
+                          han: vocab.han,
+                          nghia: vocab.nghia,
+                          example: vocab.example || '',
+                          exampleMeaning: vocab.exampleMeaning || '',
+                          level: vocab.level || 'N3',
+                          wordType: vocab.wordType || '',
+                          typeLabel: vocab.typeLabel || '',
+                          isNaAdjective: String(!!vocab.isNaAdjective),
+                          isExtractedVerb: String(!!vocab.isExtractedVerb),
+                          extractedVerb: vocab.extractedVerb || '',
+                          isConjugatedForm: String(!!vocab.isConjugatedForm),
+                          conjugatedForm: vocab.conjugatedForm || '',
+                        }
+                      });
+                    }}
+                  >
+                    <View style={s.rowMain}>
+                      <View style={s.rowTopLine}>
+                        <Text style={s.indexNum}>{index + 1}.</Text>
+                        <Text style={s.vocabKanji}>{vocab.kanji}</Text>
+                      </View>
+                      <Text style={s.vocabHan}>{vocab.han}</Text>
+                      <Text style={s.vocabReading}>{vocab.hiragana}</Text>
+                      <Text style={s.vocabMeaning} numberOfLines={2}>{vocab.nghia}</Text>
+                    </View>
+                    <View style={s.rowActions}>
+                      <TouchableOpacity style={s.speakBtn} onPress={() => speak(vocab.kanji)} hitSlop={8}>
+                        <Text style={s.speakIcon}>🔊</Text>
+                      </TouchableOpacity>
+                      <TouchableOpacity style={s.starBtn} onPress={() => toggleBookmark(vocab.id)} hitSlop={8}>
+                        <Text style={s.starIcon}>{bookmarks.has(vocab.id) ? "⭐" : "☆"}</Text>
+                      </TouchableOpacity>
+                    </View>
+                  </TouchableOpacity>
+                )}
+                ListFooterComponent={
+                  <>
+                    <FeedbackSection pageKey={`vocab::${level}_${bookId}_${lessonParam}`} />
+                    <View style={{ height: 40 }} />
+                  </>
+                }
+                // Windowing — chỉ render ~20 dòng đầu, khi cuộn gần hết batch đang render
+                // (còn khoảng 1 màn hình nữa) FlatList tự động render thêm batch kế tiếp.
+                initialNumToRender={20}
+                maxToRenderPerBatch={20}
+                windowSize={7}
+                removeClippedSubviews={true}
+                updateCellsBatchingPeriod={50}
+              />
+            )}
+            {/* {isLoading ? (
               <View style={s.loadingContainer}>
                 <Text style={s.loadingText}>Đang tải từ vựng...</Text>
               </View>
@@ -902,46 +1004,13 @@ export default function VocabScreen() {
                         <Text style={s.starIcon}>{bookmarks.has(vocab.id) ? "⭐" : "☆"}</Text>
                       </TouchableOpacity>
                     </View>
-
-                  {/* Cột số thứ tự + Kanji */}
-                  {/* <View style={s.vocabCol}>
-                    <Text style={s.indexNum}>{index + 1}.</Text>
-                    <Text style={s.vocabKanji}>{vocab.kanji}</Text>
-                  </View> */}
-                  
-                  {/* Cột thông tin */}
-                  {/* <View style={s.vocabInfoCol}>
-                    <Text style={s.vocabReading} numberOfLines={1}>{vocab.hiragana}</Text>
-                    <Text style={s.vocabHan} numberOfLines={1}>{vocab.han}</Text>
-                    <Text style={s.vocabMeaning} numberOfLines={2}>{vocab.nghia}</Text>
-                  </View> */}
-                  
-                  {/* Nút phát âm */}
-                  {/* <TouchableOpacity
-                    style={s.speakBtn}
-                    onPress={() => speak(vocab.kanji)}
-                    hitSlop={8}
-                  >
-                    <Text style={s.speakIcon}>🔊</Text>
-                  </TouchableOpacity> */}
-                  
-                  {/* Nút ghim */}
-                  {/* <TouchableOpacity
-                    style={s.starBtn}
-                    onPress={() => toggleBookmark(vocab.id)}
-                    hitSlop={8}
-                  >
-                    <Text style={s.starIcon}>
-                      {bookmarks.has(vocab.id) ? "⭐" : "☆"}
-                    </Text>
-                  </TouchableOpacity> */}
                 </TouchableOpacity>
               ))
             )}
             
             <FeedbackSection pageKey={`vocab::${level}_${bookId}_${lessonParam}`} />
             <View style={{ height: 40 }} />
-          </ScrollView>
+          </ScrollView> */}
           
           {/* Menu Modal */}
           <Modal visible={menuOpen} transparent animationType="slide" onRequestClose={() => setMenuOpen(false)}>

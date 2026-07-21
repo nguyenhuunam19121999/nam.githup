@@ -48,6 +48,7 @@ function RootLayoutNav() {
       <Stack.Screen name="exam-result" options={{ headerShown: false }} />
       <Stack.Screen name="vocab-study" options={{ headerShown: false }} />
       <Stack.Screen name="vocab-detail" options={{ headerShown: false }} />
+      <Stack.Screen name="exam-detail/index" options={{ headerShown: false }} />
     </Stack>
   );
 }

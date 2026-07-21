@@ -4,8 +4,10 @@ import { BottomTabBar } from "../components/BottomTabBar";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import {
   Dimensions,
+  Modal,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Pressable,
   ScrollView,
   StatusBar,
   StyleSheet,
@@ -19,6 +21,8 @@ import { AuthMenu } from "../components/AuthMenu";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 import SearchInline from "../components/SearchInline";
 import HomeSuggestions from "../components/HomeSuggestions";
+import ReferralScreen from "../components/ReferralScreen";
+import ReferralQRScreen from "../components/ReferralQRScreen";
 import { Animated, Easing } from "react-native";
 import { BannerAd, BannerAdSize, TestIds, MobileAds } from "react-native-google-mobile-ads";
 import remoteConfig from "@react-native-firebase/remote-config";
@@ -28,7 +32,7 @@ const TEAL = "#004370";
 const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
 const BG_GRAY = "#f0f4f8";
-const bgrColor = "#f1f5f9";
+const headerColor = "#f1f5f9";
 
 interface Item {
   id: string;
@@ -104,10 +108,13 @@ const BANNER_WIDTH = SCREEN_WIDTH - 32;
 
 export default function HomeScreen() {
   const router = useRouter();
-  const { currentUser } = useAuth();
+  const { currentUser, scopedKey } = useAuth();
 
   const [bannerIdx, setBannerIdx] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
+  const [showChoiceMenu, setShowChoiceMenu] = useState(false);
+  const [showReferralModal, setShowReferralModal] = useState(false);
+  const [showQrModal, setShowQrModal] = useState(false);
 
   // ── SearchInline overlay state ───────────────────────────────────────────
   const [searchActive, setSearchActive] = useState(false);
@@ -272,6 +279,16 @@ const closeSearch = useCallback(() => {
               </View>
             ) : (
               <View style={{ flex: 1 }} />
+            )}
+
+            {currentUser && (
+              <TouchableOpacity
+                style={s.giftBtn}
+                activeOpacity={0.8}
+                onPress={() => setShowChoiceMenu(true)}
+              >
+                <Text style={s.giftBtnText}>🎁</Text>
+              </TouchableOpacity>
             )}
 
             <TouchableOpacity
@@ -441,9 +458,62 @@ const closeSearch = useCallback(() => {
             </View>
           </View>
         </View>
-
         <View style={{ height: 100 }} />
       </ScrollView>
+
+      <Modal
+        visible={showChoiceMenu}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setShowChoiceMenu(false)}
+      >
+        <Pressable
+          style={{
+            flex: 1,
+            backgroundColor: "rgba(15,23,42,0.45)",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onPress={() => setShowChoiceMenu(false)}
+        >
+          <View style={{ backgroundColor: "#fff", borderRadius: 16, padding: 20, width: 280 }}>
+            <Text style={{ fontSize: 16, fontWeight: "800", color: "#0f172a", marginBottom: 16, textAlign: "center" }}>
+              Chọn hành động
+            </Text>
+            <TouchableOpacity
+              style={{ backgroundColor: "#004370", borderRadius: 12, paddingVertical: 14, alignItems: "center", marginBottom: 10 }}
+              onPress={() => { setShowChoiceMenu(false); setShowReferralModal(true); }}
+            >
+              <Text style={{ color: "#fff", fontWeight: "800" }}>📷 Quét mã người khác</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={{ backgroundColor: "#e1b12c", borderRadius: 12, paddingVertical: 14, alignItems: "center" }}
+              onPress={() => { setShowChoiceMenu(false); setShowQrModal(true); }}
+            >
+              <Text style={{ color: "#fff", fontWeight: "800" }}>🎫 Xem mã của tôi</Text>
+            </TouchableOpacity>
+          </View>
+        </Pressable>
+      </Modal>
+
+      {/* Màn hình quét mã (User B) */}
+      <Modal visible={showReferralModal} animationType="slide" onRequestClose={() => setShowReferralModal(false)}>
+        <ReferralScreen
+          currentUser={currentUser!}
+          scopedKey={scopedKey}
+          onClose={() => setShowReferralModal(false)}
+        />
+        {/* <ReferralScreen
+          currentUser={currentUser!}
+          scopedKey={(key) => `${currentUser ?? "guest"}::${key}`}
+          onClose={() => setShowReferralModal(false)}
+        /> */}
+      </Modal>
+
+      {/* Màn hình xem QR của tôi (User A) */}
+      <Modal visible={showQrModal} animationType="slide" onRequestClose={() => setShowQrModal(false)}>
+        <ReferralQRScreen onClose={() => setShowQrModal(false)} />
+      </Modal>
       <BottomTabBar />
 
       {/* ── AdMob Banner Ad ──────────────────────────────────────────────── */}
@@ -510,7 +580,10 @@ const s = StyleSheet.create({
     paddingVertical: 4,       // Tạo khoảng cách lề trên và dưới 4px để banner không bị dính chặt vào viền app
   },
 
-  root: { flex: 1, backgroundColor: "#f3f9f1" },
+  root: { 
+    flex: 1, 
+    backgroundColor: BG_GRAY,
+  },
 
   topBar: { backgroundColor: "transparent" },
   topBarInner: {
@@ -545,6 +618,14 @@ const s = StyleSheet.create({
     alignItems: "center", justifyContent: "center",
     backgroundColor: "rgba(255,255,255,0.18)", marginLeft: 10,
   },
+
+  giftBtn: {
+    width: 42, height: 42, borderRadius: 10,
+    alignItems: "center", justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.18)", marginLeft: 10,
+  },
+  giftBtnText: { fontSize: 18 },
+
   hamburger: { width: 22, height: 16, justifyContent: "space-between" },
   hamburgerLine: { width: "100%", height: 2.5, backgroundColor: "#fff", borderRadius: 2 },
 
@@ -586,7 +667,7 @@ const s = StyleSheet.create({
   },
   searchCardAccent: {
     height: 4,
-    backgroundColor: "#1d7d80", 
+    backgroundColor: TEAL, 
     borderTopLeftRadius: 18,
     borderTopRightRadius: 18,
   },

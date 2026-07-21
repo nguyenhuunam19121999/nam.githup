@@ -5,7 +5,6 @@
 // ─────────────────────────────────────────────────────────────────────────────
 
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
-// import { BottomTabBar } from "@/components/BottomTabBar";
 import { BottomTabBar } from "../components/BottomTabBar";
 import {
   ScrollView,
@@ -16,8 +15,6 @@ import {
   View,
 } from "react-native";
 import { StatusBar } from 'expo-status-bar';
-// import { SafeAreaView } from "react-native-safe-area-context";
-// import { LinearGradient } from "expo-linear-gradient";
 import {
   getKanjiByCharFull,
   getExamplesByKanjiChar,
@@ -30,13 +27,10 @@ import { WritingPracticeModal } from "../components/WritingPracticeModal";
 import { KanjiNotesModal } from "../components/KanjiNotesModal";
 import React, { useMemo, useState, useEffect } from "react";
 
-// const TEAL = "#1F6F7A";
-// const TEAL_DARK = "#1c5765";
-const TEAL = "#1f7a1f";
-const TEAL_DARK = "#1c5765";
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 const BG_GRAY = "#f0f4f8";
 const TEXT_COLOR = "#e47b0b";
-// const bgrColor = "#f1f5f9";
 
 const MAX_EXAMPLES = 15
 
@@ -411,7 +405,7 @@ export default function KanjiDetailScreen() {
 }
 
 const styles = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f0f4f8" },
+  root: { flex: 1, backgroundColor: BG_GRAY },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -419,7 +413,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 56,
     paddingBottom: 16,
-    backgroundColor: '#f1f5f9',
+    backgroundColor: BG_GRAY,
   },
   backBtnHeader: {
     width: 42,

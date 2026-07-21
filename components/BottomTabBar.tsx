@@ -30,10 +30,12 @@ export function BottomTabBar() {
           activeOpacity={0.7}
           onPress={() => router.push("/exam")}
         >
-          <Text style={[s.icon, pathname === "/exam" && s.iconActive]}>🎓</Text>
-          <Text style={[s.label, pathname === "/exam" && s.labelActive]}>
-            Đang phát triển
-          </Text>
+          <View style={s.tabContent}>
+            <Text style={[s.icon, pathname === "/exam" && s.iconActive]}>🎓</Text>
+            <Text style={[s.label, pathname === "/exam" && s.labelActive]}>
+              Đang phát triển
+            </Text>
+          </View>
         </TouchableOpacity>
 
         {/* Spacer cho nút giữa nổi */}
@@ -76,7 +78,7 @@ const s = StyleSheet.create({
   bar: {
     flexDirection: "row",
     alignItems: "center",
-    paddingTop: 6,
+    paddingTop: 26,
     height: 32,
     position: "relative",
   },
@@ -85,9 +87,18 @@ const s = StyleSheet.create({
     alignItems: "center", 
     justifyContent: "center",
     paddingHorizontal: 8,
+    height: 32,
+    paddingVertical: 0,
+  },
+   tabContent: {
+    alignItems: "center",
+    justifyContent: "center",
+    height: 32, 
+    marginTop: 0,
+    paddingVertical: 0, 
   },
   icon: { 
-    fontSize: 22, 
+    fontSize: 20, 
     opacity: 0.45,
   },
   iconActive: { 
@@ -95,9 +106,9 @@ const s = StyleSheet.create({
     color: TEAL,
   },
   label: { 
-    fontSize: 12, 
+    fontSize: 10, 
     color: "#475569", 
-    marginTop: 2, 
+    marginTop: 0, 
     fontWeight: "600", 
   },
   labelActive: { 
@@ -113,10 +124,12 @@ const s = StyleSheet.create({
     right: 0,
     top: 0,
     alignItems: "center",
+    height: 70,
+    justifyContent: "center",
   },
   owl: {
-    width: 60,
-    height: 60,
+    width: 56,
+    height: 56,
     borderRadius: 30,
     // backgroundColor: TEAL,
     backgroundColor: "transparent",
@@ -129,8 +142,9 @@ const s = StyleSheet.create({
     shadowOpacity: 0.35,
     shadowRadius: 8,
     elevation: 8,
+    marginTop: -5,
   },
   owlEmoji: { 
-    fontSize: 28 
+    fontSize: 26 
   },
 });

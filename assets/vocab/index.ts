@@ -129,78 +129,6 @@ export const VOCAB_BOOK_CONFIG: Record<string, LessonConfig> = {
 
 const DEFAULT_VOCAB_CONFIG: LessonConfig = { weeks: 6, lessonsPerWeek: 6 };
 
-// export function getVocabByBook(bookId: string): RawVocab[] {
-//   const db = getVocabDbHandle();
-//   if (!db) return [];
-
-//   const rows = db.getAllSync(`SELECT * FROM vocab WHERE book = ? ORDER BY id ASC`, [bookId]);
-//   const data = rows.map(normalizeRow);
-//   if (data.length === 0) return [];
-
-//   const hasWeekInJson = data.some((item: RawVocab) => item.week != null);
-//   const allHaveLesson = data.every((item: RawVocab) => item.lesson != null);
-
-//   if (allHaveLesson) {
-//     // Mọi mục đã có sẵn lesson từ DB (JSON gốc có week/lesson đầy đủ) → dùng nguyên
-//     return data;
-//   }
-
-//   if (!hasWeekInJson) {
-//     // JSON gốc KHÔNG có week/lesson — chia đều CHÍNH XÁC vào đúng số tuần/số bài
-//     // đã cấu hình trong VOCAB_BOOK_CONFIG. Dùng phần dư (remainder distribution)
-//     // để đảm bảo dùng hết đủ totalSlots bài, không bị thiếu bài cuối.
-//     const config = VOCAB_BOOK_CONFIG[bookId] ?? DEFAULT_VOCAB_CONFIG;
-//     const totalSlots = config.weeks * config.lessonsPerWeek;
-//     const total = data.length;
-//     const base = Math.floor(total / totalSlots);
-//     const remainder = total % totalSlots;
-
-//     const result: RawVocab[] = [];
-//     let idx = 0;
-//     for (let slot = 0; slot < totalSlots; slot++) {
-//       const countForThisSlot = base + (slot < remainder ? 1 : 0);
-//       const week = Math.floor(slot / config.lessonsPerWeek) + 1;
-//       const lesson = slot + 1;
-//       for (let k = 0; k < countForThisSlot && idx < total; k++, idx++) {
-//         result.push({ ...data[idx], week, lesson });
-//       }
-//     }
-//     return result;
-//   }
-
-//   const byWeek: Record<number, RawVocab[]> = {};
-//   data.forEach((item: RawVocab) => {
-//     const w = typeof item.week === 'number' ? item.week : 1;
-//     if (!byWeek[w]) byWeek[w] = [];
-//     byWeek[w].push(item);
-//   });
-
-//   const result: RawVocab[] = [];
-//   Object.keys(byWeek).map(Number).sort((a, b) => a - b).forEach((w) => {
-//     const weekItems = byWeek[w];
-
-//     const withLesson = weekItems.filter((item) => item.lesson != null);
-//     const withoutLesson = weekItems.filter((item) => item.lesson == null);
-
-//     result.push(...withLesson.map((item) => ({ ...item, week: w })));
-
-//     if (withoutLesson.length > 0) {
-//       const config = VOCAB_BOOK_CONFIG[bookId] ?? DEFAULT_VOCAB_CONFIG;
-//       const itemsPerLesson = Math.ceil(withoutLesson.length / config.lessonsPerWeek);
-//       withoutLesson.forEach((item, posInWeek) => {
-//         const lessonInWeek = Math.min(
-//           Math.floor(posInWeek / Math.max(1, itemsPerLesson)),
-//           config.lessonsPerWeek - 1,
-//         );
-//         const globalLesson = (w - 1) * config.lessonsPerWeek + lessonInWeek + 1;
-//         result.push({ ...item, week: w, lesson: globalLesson });
-//       });
-//     }
-//   });
-
-//   return result;
-// }
-
 export function getVocabByBook(bookId: string): RawVocab[] {
   const LOG = (...args: any[]) => console.log('[vocab]', `[${bookId}]`, ...args);
 
@@ -297,9 +225,76 @@ export function getVocabByBook(bookId: string): RawVocab[] {
   return result;
 }
 
+// Dùng riêng cho danh sách dài (industry vocab) — KHÔNG load hết 1 lần,
+// chỉ lấy từng trang (page) theo offset/limit để tránh giật lag và tốn RAM.
+export function getVocabPageByBook(bookId: string, offset: number, limit: number): RawVocab[] {
+  const db = getVocabDbHandle();
+  if (!db) return [];
+  const rows = db.getAllSync(
+    `SELECT * FROM vocab WHERE book = ? ORDER BY id ASC LIMIT ? OFFSET ?`,
+    [bookId, limit, offset]
+  );
+  return rows.map(normalizeRow);
+}
+
+export function getVocabCountByBook(bookId: string): number {
+  const db = getVocabDbHandle();
+  if (!db) return 0;
+  const row: any = db.getFirstSync(`SELECT COUNT(*) as c FROM vocab WHERE book = ?`, [bookId]);
+  return row?.c ?? 0;
+}
+
 export async function ensureVocabDbReady(): Promise<boolean> {
   if (_vocabDb) return true;
   const db = await getDb('vocab');
   _vocabDb = db;
   return !!db;
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Riêng cho vocab ngành học (INDUSTRY_INFO trong data_nghanh_hoc.tsx).
+// JSON gốc của ngành học là 1 danh sách PHẲNG, KHÔNG có week/lesson — nên
+// hàm này CHỈ trả nguyên danh sách theo đúng thứ tự trong DB, không tự
+// chia bài như getVocabByBook() (dành cho JLPT/Mimikara/Soumatome).
+// Tách hàm riêng để không ảnh hưởng logic N5–N1 / Mimikara / Soumatome.
+// ─────────────────────────────────────────────────────────────────────────────
+export function getIndustryVocabByBook(bookId: string): RawVocab[] {
+  const LOG = (...args: any[]) => console.log('[vocab:industry]', `[${bookId}]`, ...args);
+
+  const db = getVocabDbHandle();
+  if (!db) {
+    LOG('❌ DB handle null — chưa init hoặc init lỗi');
+    return [];
+  }
+
+  const rows = db.getAllSync(`SELECT * FROM vocab WHERE book = ? ORDER BY id ASC`, [bookId]);
+  LOG('query WHERE book =', JSON.stringify(bookId), '→', rows.length, 'dòng');
+
+  if (rows.length === 0) {
+    const distinctBooks = db.getAllSync(`SELECT DISTINCT book FROM vocab WHERE book LIKE 'industry-%'`);
+    LOG('⚠️ 0 dòng khớp book. Các "book" ngành học đang có trong bảng:', JSON.stringify(distinctBooks));
+    return [];
+  }
+
+  // Không chia lesson/week — trả nguyên danh sách phẳng.
+  return rows.map((row: any) => ({ ...normalizeRow(row), lesson: undefined, week: undefined }));
+}
+
+// Bản phân trang (nếu 1 ngành có quá nhiều từ, dùng để load thêm bằng onEndReached
+// thay vì load hết 1 lần — hiện KHÔNG bắt buộc dùng, chỉ để sẵn khi cần).
+export function getIndustryVocabPage(bookId: string, offset: number, limit: number): RawVocab[] {
+  const db = getVocabDbHandle();
+  if (!db) return [];
+  const rows = db.getAllSync(
+    `SELECT * FROM vocab WHERE book = ? ORDER BY id ASC LIMIT ? OFFSET ?`,
+    [bookId, limit, offset]
+  );
+  return rows.map((row: any) => ({ ...normalizeRow(row), lesson: undefined, week: undefined }));
+}
+
+export function getIndustryVocabCount(bookId: string): number {
+  const db = getVocabDbHandle();
+  if (!db) return 0;
+  const row: any = db.getFirstSync(`SELECT COUNT(*) as c FROM vocab WHERE book = ?`, [bookId]);
+  return row?.c ?? 0;
 }

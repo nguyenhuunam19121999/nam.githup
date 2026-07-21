@@ -202,15 +202,16 @@ export function AuthMenu({ visible, onClose }: Props) {
                     autoCorrect={false}
                   />
 
-                  <Text style={s.fieldLabel}>Mật khẩu</Text>
-                  <TextInput
-                    style={s.input}
-                    value={password}
-                    onChangeText={setPassword}
-                    placeholder="Nhập mật khẩu"
-                    placeholderTextColor="#94a3b8"
-                    secureTextEntry
-                  />
+                  <Text style={s.fieldLabel}>Mật khẩu (tối đa 8 ký tự)</Text>
+                    <TextInput
+                      style={s.input}
+                      value={password}
+                      onChangeText={setPassword}
+                      placeholder="Nhập mật khẩu"
+                      placeholderTextColor="#94a3b8"
+                      secureTextEntry
+                      maxLength={8}
+                    />
 
                   {error && <Text style={s.errorText}>{error}</Text>}
 

@@ -1117,11 +1117,8 @@ const styles = StyleSheet.create({
     width: 42,
     height: 42,
     backgroundColor: 'transparent',
-    borderRadius: 12,
     alignItems: 'center',
-    justifyContent: 'center',
-    borderWidth: 1.5,
-    borderColor: '#e2e8f0', 
+    justifyContent: 'center', 
   },
   backIcon: { 
     color: '#fff', 

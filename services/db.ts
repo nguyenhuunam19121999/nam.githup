@@ -14,11 +14,6 @@ const DB_NAMES = {
   sentences: 'sentences.db',
 } as const;
 
-// Tăng số này mỗi khi bạn chạy lại `node scripts/buildDb.cjs` với dữ liệu mới,
-// để buộc app xóa DB cũ trên thiết bị và copy lại bản mới từ assets/.
-// Không tăng thì app sẽ mãi mãi dùng bản DB đã copy lần đầu tiên.
-const DB_VERSION = 4;
-
 export type DbScope = keyof typeof DB_NAMES;
 
 const DB_CACHE = new Map<DbScope, SQLite.SQLiteDatabase>();
@@ -53,21 +48,7 @@ async function ensureDbFileCopied(scope: DbScope): Promise<boolean> {
     }
 
     const destFile = new File(sqliteDir, dbName);
-    const versionFile = new File(sqliteDir, `${dbName}.version`);
-
-    const currentVersion = versionFile.exists ? await versionFile.text() : null;
-    // const currentVersion = versionFile.exists ? versionFile.text() : null;
-    const versionMatches = currentVersion === String(DB_VERSION);
-
-    if (destFile.exists && versionMatches) {
-      return true; // Đã copy đúng bản mới nhất, không cần làm gì thêm
-    }
-
-    // DB chưa tồn tại, HOẶC version không khớp (đã build lại DB mới) → xóa bản cũ, copy lại
-    if (destFile.exists) {
-      console.log(`[db] Phát hiện DB cũ (version khác) cho ${scope} — xóa và copy lại`);
-      destFile.delete();
-    }
+    const hashFile = new File(sqliteDir, `${dbName}.hash`);
 
     const assetModule = getAssetDbModule(scope);
     if (!assetModule) {
@@ -76,6 +57,23 @@ async function ensureDbFileCopied(scope: DbScope): Promise<boolean> {
     }
 
     const asset = Asset.fromModule(assetModule);
+
+    // Metro/Expo tự tính hash MD5 dựa trên NỘI DUNG file .db lúc build app.
+    // Chạy lại `node scripts/buildDb.cjs` → file .db đổi nội dung → hash tự đổi theo.
+    // Không cần bạn tăng số version thủ công nữa.
+    const newHash: string | null = (asset as any).hash ?? null;
+    const storedHash = hashFile.exists ? await hashFile.text() : null;
+    const hashMatches = newHash !== null && storedHash === newHash;
+
+    if (destFile.exists && hashMatches) {
+      return true; // Nội dung DB không đổi từ lần cài trước → giữ nguyên, không copy lại
+    }
+
+    if (destFile.exists) {
+      console.log(`[db] Phát hiện DB mới cho ${scope} (nội dung đổi) — xóa và copy lại`);
+      destFile.delete();
+    }
+
     await asset.downloadAsync();
     if (!asset.localUri) {
       console.warn(`[db] asset localUri missing for ${scope}`);
@@ -84,7 +82,15 @@ async function ensureDbFileCopied(scope: DbScope): Promise<boolean> {
 
     const srcFile = new File(asset.localUri);
     srcFile.copy(destFile);
-    versionFile.write(String(DB_VERSION));
+
+    if (newHash) {
+      hashFile.write(newHash);
+    } else if (hashFile.exists) {
+      // Không lấy được hash (hiếm khi xảy ra) → xóa file hash cũ để lần sau
+      // luôn coi như "chưa khớp" và tự copy lại cho an toàn, tránh kẹt DB cũ.
+      hashFile.delete();
+    }
+
     return true;
   } catch (error) {
     console.warn(`[db] copy asset failed for ${scope}`, error);

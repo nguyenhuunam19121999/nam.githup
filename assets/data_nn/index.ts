@@ -225,7 +225,7 @@ export function getGrammarByBook(bookId: string): GrammarItem[] {
   const hasWeekInJson = data.some((item: GrammarItem) => item.week != null);
   const allHaveDay = data.every((item: GrammarItem) => item.day != null);
   const weekNullCount = data.filter((item: GrammarItem) => item.week == null).length;
-const dayNullCount = data.filter((item: GrammarItem) => item.day == null).length;
+  const dayNullCount = data.filter((item: GrammarItem) => item.day == null).length;
 
   LOG(`total=${data.length}  week=null: ${weekNullCount}  day=null: ${dayNullCount}  hasWeekInJson=${hasWeekInJson}  allHaveDay=${allHaveDay}`);
 

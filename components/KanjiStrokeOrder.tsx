@@ -21,9 +21,6 @@ import Svg, { Path, Line, Text as SvgText, G } from 'react-native-svg';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { memoryCache, loadStrokePaths } from '../services/KanjiPreloader';
 
-const strokesMap: Record<string, string[]> = {};
-// import { memoryCache } from '../services/KanjiPreloader'; 
-
 // ── Types ──────────────────────────────────────────────────────────────────
 
 type StrokeSource = 'local' | 'cache' | 'cdn' | 'none';
@@ -36,6 +33,7 @@ interface Props {
   showNumbers?: boolean;
   /** Hiện badge nguồn dữ liệu ở góc trên phải — mặc định true */
   showSourceBadge?: boolean;
+  onReload?: () => void; // ← Thêm dòng này cho ô luyện vẽ
 }
 
 // ── Constants ──────────────────────────────────────────────────────────────
@@ -182,6 +180,7 @@ export function KanjiStrokeOrder({
   autoPlay = true,
   showNumbers = true,
   showSourceBadge = true,
+  onReload, // ← Thêm vào params cho ô luyện vẽ
 }: Props) {
   const boxSize = containerSize ?? size;
 
@@ -383,15 +382,14 @@ export function KanjiStrokeOrder({
       const fetched = parseSvgPaths(text);
 
       if (fetched && fetched.length > 0) {
-        // 1. Lưu đè vào AsyncStorage để lần sau ưu tiên dùng bản CDN này thay vì bản Local lỗi
         await AsyncStorage.setItem(ASYNC_STORAGE_PREFIX + kanji, JSON.stringify(fetched));
-        // 2. Cập nhật vào bộ nhớ đệm Session
         memoryCache.set(kanji, fetched);
-        
-        // 3. Cập nhật State để vẽ lại chữ mới
         setPaths(fetched);
         setSource('cdn'); 
         forcePlayRef.current = true;
+        if (onReload) {
+          onReload();
+        }
       } else {
         alert("Không tìm thấy dữ liệu nét vẽ trên CDN.");
       }
@@ -400,7 +398,7 @@ export function KanjiStrokeOrder({
     } finally {
       setIsLoading(false);
     }
-  }, [kanji]);
+  }, [kanji, onReload]);
 
   return (
     <View style={styles.canvasBox}>

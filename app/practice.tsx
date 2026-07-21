@@ -15,8 +15,8 @@ import { BottomTabBar } from "../components/BottomTabBar";
 // const TEAL = "#7C3AED";
 // const GRAD = ["#7C3AED", "#5B21B6"] as const;
 // ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#0B3540";
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
 
 interface PracticeItem {

@@ -29,8 +29,8 @@ import { WritingPracticeModal } from "../components/WritingPracticeModal";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 
 // const SCREEN_W = Dimensions.get("window").width;
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#1c5765";
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 const TEXT_COLOR = "#e47b0b";
 // const bgrColor = "#f1f5f9";
 // const textColor = "#1d4ed8";
@@ -330,50 +330,6 @@ export default function KanjiListScreen() {
                   </TouchableOpacity>
                 </View>
               </TouchableOpacity>
-
-              // <TouchableOpacity
-              //   key={it.id ?? it.kanji}
-              //   style={s.row}
-              //   activeOpacity={0.7}
-              //   onPress={() =>
-              //     router.push({
-              //       pathname: "/kanji-detail",
-              //       params: {
-              //         // ✅ QUAN TRỌNG: dùng it.kanji (ký tự thật) thay vì it.id (unicode)
-              //         // Nếu kanji có nhiều chữ "握 金" thì tab sẽ tự tách và hiện đúng
-              //         id: it.kanji,
-              //       }
-              //     })
-              //   }
-              // >
-              //   {/* <View style={s.kanjiCol}>
-              //     <Text style={s.indexNum}>{idx + 1}.</Text>
-              //     <Text style={s.kanjiChar}>{it.kanji}</Text>
-              //   </View> */}
-              //   <View style={s.kanjiCol}>
-              //     <Text style={s.indexNum}>{idx + 1}.</Text>
-              //     <Text
-              //       style={[s.kanjiChar, it.kanji.length >= 4 && s.kanjiCharSmall]}
-              //       numberOfLines={1}
-              //       adjustsFontSizeToFit
-              //     >
-              //       {it.kanji}
-              //     </Text>
-              //   </View>
-              //   <View style={s.infoCol}>
-              //     <Text style={s.readings} numberOfLines={1}>
-              //       {[...it.readings.kunyomi, ...it.readings.onyomi].join("／") || "—"}
-              //     </Text>
-              //     <Text style={s.hanViet}>{it.hanviet.join(' • ')}</Text>
-              //     <Text style={s.meaning} numberOfLines={2}>{it.meanings_vi[0] ?? ""}</Text>
-              //   </View>
-              //   <TouchableOpacity style={s.writeBtn} onPress={() => setWritingItem(it)} hitSlop={8}>
-              //     <Text style={s.writeBtnIcon}>✏️</Text>
-              //   </TouchableOpacity>
-              //   <TouchableOpacity style={s.starBtn} onPress={() => toggleBookmark(it.id ?? it.kanji)} hitSlop={8}>
-              //     <Text style={s.starIcon}>{bookmarks.has(it.id ?? it.kanji) ? "⭐" : "☆"}</Text>
-              //   </TouchableOpacity>
-              // </TouchableOpacity>
             ))
           )}
           <View style={{ paddingHorizontal: 14, paddingTop: 4 }}>

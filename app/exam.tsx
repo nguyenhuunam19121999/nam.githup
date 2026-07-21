@@ -13,8 +13,8 @@ import { LinearGradient } from "expo-linear-gradient";
 import { useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
 
-const TEAL = "#1F6F7A"; // Đã đồng bộ màu với BottomTabBar mới của bạn
-const GRAD = ["#1F6F7A", "#0B3540"] as const;
+const TEAL = "#004370"; 
+const GRAD = ["#1F6F7A", "#004370"] as const;
 
 // ✅ Cấu trúc danh sách đề thi phẳng đơn giản
 interface FlatExamOption {
@@ -45,14 +45,12 @@ const examLevels: ExamLevel[] = [
     description: "Tổng hợp bộ đề thi JLPT N3", 
     icon: "🌸", 
     // color: "#F59E0B",
-     color: "#94A3B8", 
-    isUpdated: false,
     // isUpdated: true,
+    color: "#94A3B8", // đóng
+    isUpdated: false, // đóng
     // ✅ Khai báo trực tiếp danh sách file đề của bạn tại đây
     exams: [
-      { name: "Đề luyện thi số 1", file: "n3_01", description: "Đầy đủ Từ vựng, Ngữ pháp, Đọc hiểu & Nghe hiểu" },
-      { name: "Đề luyện thi số 2", file: "n3_02", description: "Đầy đủ Từ vựng, Ngữ pháp, Đọc hiểu & Nghe hiểu" },
-      { name: "Đề luyện thi số 3", file: "n3_03", description: "Đầy đủ Từ vựng, Ngữ pháp, Đọc hiểu & Nghe hiểu" },
+      { name: "Đề luyện thi số 1", file: "n3_01", description: "Từ vựng, Ngữ pháp, Đọc hiểu & Nghe hiểu" }
     ]
   },
   { id: "n2", level: "N2", title: "Thượng trung cấp", description: "Đề thi JLPT N2 (Sắp ra mắt)", icon: "🗻", color: "#94A3B8", exams: [], isUpdated: false },
@@ -102,7 +100,6 @@ export default function ExamScreen() {
               </View>
             </View>
             <Text style={styles.headerTitle}>{selectedLevel ? `📝 ${selectedExam?.level} - Danh sách đề` : "📝 Luyện đề JLPT"}</Text>
-            <Text style={styles.headerSubtitle}>{selectedLevel ? "Chọn một đề thi bên dưới để bắt đầu tính giờ" : "Chọn cấp độ để bắt đầu"}</Text>
           </SafeAreaView>
         </LinearGradient>
 
@@ -170,7 +167,6 @@ const styles = StyleSheet.create({
   logoDot: { color: "#F59E0B", fontSize: 24, fontWeight: "900" },
   logoJP: { color: "#fff", fontSize: 22, fontWeight: "900" },
   headerTitle: { fontSize: 24, fontWeight: "800", color: "#fff", paddingHorizontal: 20, paddingTop: 4 },
-  headerSubtitle: { fontSize: 13, color: "rgba(255,255,255,0.8)", paddingHorizontal: 20, marginTop: 4 },
   content: { flex: 1, paddingHorizontal: 16, paddingTop: 16 },
   
   // Cấp độ Card
@@ -210,7 +206,7 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 10,
-    backgroundColor: "#1F6F7A",
+    backgroundColor: TEAL,
     alignItems: "center",
     justifyContent: "center",
     marginRight: 12
