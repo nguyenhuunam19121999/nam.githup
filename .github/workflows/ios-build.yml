@@ -1,0 +1,30 @@
+name: iOS Production Local Build
+on:
+  workflow_dispatch: # Lệnh này giúp bạn có thể bấm nút kích hoạt build thủ công bất kỳ lúc nào trên web
+
+jobs:
+  build:
+    runs-on: macos-latest # Kích hoạt máy ảo chạy hệ điều hành macOS miễn phí của GitHub
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node_version: 18
+
+      - name: Setup pnpm # Vì bạn đang dùng pnpm để quản lý gói
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+          run_install: true
+
+      - name: Setup EAS CLI
+        run: pnpm add -g eas-cli
+
+      - name: Đăng nhập Expo
+        run: eas login --token "${{ secrets.EXPO_TOKEN }}"
+
+      - name: Chạy lệnh Build Local iOS
+        run: eas build --profile production --platform ios --local --non-interactive
