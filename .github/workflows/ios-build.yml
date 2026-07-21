@@ -1,4 +1,4 @@
-name: iOS Production Local Build
+name: iOS Development Local Build
 on:
   workflow_dispatch:
 
@@ -26,7 +26,7 @@ jobs:
       - name: Setup EAS CLI
         run: pnpm add -g eas-cli
 
-      - name: Chạy lệnh Build Local iOS
+      - name: Chạy lệnh Build Local iOS Development
         env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }} # Nhận diện đăng nhập tự động qua biến môi trường toàn cục
-        run: eas build --profile production --platform ios --local --non-interactive
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }} # Truyền token trực tiếp vào bước chạy lệnh này
+        run: eas build --profile development --platform ios --local --non-interactive
