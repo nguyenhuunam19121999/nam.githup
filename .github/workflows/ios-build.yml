@@ -1,10 +1,10 @@
 name: iOS Production Local Build
 on:
-  workflow_dispatch: # Lệnh này giúp bạn có thể bấm nút kích hoạt build thủ công bất kỳ lúc nào trên web
+  workflow_dispatch:
 
 jobs:
   build:
-    runs-on: macos-latest # Kích hoạt máy ảo chạy hệ điều hành macOS miễn phí của GitHub
+    runs-on: macos-latest # Tự động lấy hệ điều hành macOS mới nhất hỗ trợ Node 24
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -12,13 +12,16 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node_version: 18
+          node-version: 24 # Nâng cấp lên Node 24 đồng bộ với máy ảo GitHub
 
-      - name: Setup pnpm # Vì bạn đang dùng pnpm để quản lý gói
-        uses: pnpm/action-setup@v3
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4 # Dùng bản v4 mới nhất để xử lý mượt workspace
         with:
-          version: 8
-          run_install: true
+          version: 9 # Nâng cấp lên pnpm v9 để chạy mượt mà trên môi trường Node 24
+          run_install: false # Tắt tự động cài đặt ngầm để tự chạy lệnh ở bước sau
+
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
 
       - name: Setup EAS CLI
         run: pnpm add -g eas-cli
