@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   View,
   StatusBar,
@@ -11,18 +11,12 @@ import {
   TextInput,
 } from "react-native";
 import DeviceInfo from "react-native-device-info";
-import { 
-  Camera, 
-  useCameraDevice, 
-  useCameraPermission
-} from "react-native-vision-camera";
-import { useBarcodeScannerOutput } from "react-native-vision-camera-barcode-scanner";
+import { useCameraPermission } from "react-native-vision-camera";
+import { CodeScanner } from "react-native-vision-camera-barcode-scanner";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Keychain from "react-native-keychain";
 import firestore from "@react-native-firebase/firestore";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
-
-const CameraAny = Camera as any;
 
 interface ReferralScreenProps {
   currentUser: string;
@@ -38,6 +32,8 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
 
   const { hasPermission, requestPermission } = useCameraPermission();
   const myDeviceId = DeviceInfo.getUniqueIdSync(); 
+
+  const hasScannedRef = useRef(false);
 
   useEffect(() => {
     (async () => {
@@ -133,25 +129,9 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
       Alert.alert("Lỗi kết nối", "Không thể kết nối đến Firestore. Vui lòng kiểm tra mạng Internet.");
     } finally {
       setLoading(false);
+      hasScannedRef.current = false;
     }
   };
-
-  const barcodeOutput = useBarcodeScannerOutput({
-    barcodeFormats: ["qr-code"],
-    onBarcodeScanned: (codes) => { 
-      if (codes.length > 0 && codes[0].rawValue) {
-        const raw = codes[0].rawValue;
-        if (raw.startsWith("PUBLICAPP-REF|")) {
-          processReferralCode(raw.split("|")[1]);
-        }
-      }
-    },
-    onError: (error) => {
-      console.error("Lỗi quét mã QR:", error);
-    },
-  });
-
-  const device = useCameraDevice("back");
 
   return (
     <SafeAreaView style={styles.container}>
@@ -172,15 +152,26 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
         <Text style={styles.hintText}>Quét mã QR của Người Giới Thiệu</Text>
         
         <View style={styles.cameraWrapper}>
-          {hasPermission && device ? (
-            <CameraAny
-                style={StyleSheet.absoluteFill}
-                device={device}
-                isActive={!loading}
-                outputs={[barcodeOutput]}
+          {hasPermission ? (
+            <CodeScanner
+              style={StyleSheet.absoluteFill}
+              isActive={!loading}
+              barcodeFormats={["qr-code"]}
+              onBarcodeScanned={(codes) => {
+                if (hasScannedRef.current) return;
+                const raw = codes[0]?.rawValue;
+                if (!raw) return;
+                if (raw.startsWith("PUBLICAPP-REF|")) {
+                  hasScannedRef.current = true;
+                  processReferralCode(raw.split("|")[1]);
+                }
+              }}
+              onError={(error) => {
+                console.error("Lỗi quét mã QR:", error);
+              }}
             />
-            ) : (
-            <Text style={styles.errorText}>Chưa cấp quyền Camera hoặc thiết bị không hỗ trợ</Text>
+          ) : (
+            <Text style={styles.errorText}>Chưa cấp quyền Camera</Text>
           )}
 
           {loading && (
