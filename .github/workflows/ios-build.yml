@@ -1,10 +1,27 @@
-name: iOS Production Build & Submit
+name: iOS Build - Version Bisect
 on:
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: "vc-5.1.1-scanner-5.1.1"   # bản hiện tại đang crash
+            vc: "5.1.1"
+            scanner: "5.1.1"
+          - name: "vc-5.1.0-scanner-5.1.1"   # test riêng core vision-camera
+            vc: "5.1.0"
+            scanner: "5.1.1"
+          - name: "vc-5.1.1-scanner-5.1.0"   # test riêng barcode-scanner
+            vc: "5.1.1"
+            scanner: "5.1.0"
+          - name: "vc-5.1.0-scanner-5.1.0"   # cả hai đều lùi
+            vc: "5.1.0"
+            scanner: "5.1.0"
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -20,25 +37,27 @@ jobs:
           version: 10
           run_install: false
 
+      - name: Pin version test cho lần build này
+        run: |
+          pnpm add react-native-vision-camera@${{ matrix.vc }} react-native-vision-camera-barcode-scanner@${{ matrix.scanner }} --save-exact
+
+      - name: In ra version thật sự đã resolve (để đối chiếu log)
+        run: pnpm list react-native-nitro-image react-native-nitro-modules react-native-vision-camera react-native-vision-camera-barcode-scanner --depth 0
+
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
       - name: Setup EAS CLI
         run: pnpm add -g eas-cli
 
-      - name: Chạy lệnh Build Production iOS
+      - name: Chạy lệnh Build Local iOS Development
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: eas build --profile production --platform ios --local --non-interactive
+        run: eas build --profile development --platform ios --local --non-interactive
 
       - name: Upload file .ipa thành phẩm
         uses: actions/upload-artifact@v4
         with:
-          name: ios-production-build
+          name: ios-build-${{ matrix.name }}
           path: "*.ipa"
           if-no-files-found: error
-
-      - name: Submit to App Store
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: eas submit --platform ios --path $(find . -maxdepth 1 -name "*.ipa" | head -n 1) --non-interactive
