@@ -1,27 +1,10 @@
-name: iOS Build - Version Bisect
+name: iOS Development Build
 on:
   workflow_dispatch:
 
 jobs:
   build:
     runs-on: macos-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        include:
-          - name: "vc-5.1.1-scanner-5.1.1"   # bản hiện tại đang crash
-            vc: "5.1.1"
-            scanner: "5.1.1"
-          - name: "vc-5.1.0-scanner-5.1.1"   # test riêng core vision-camera
-            vc: "5.1.0"
-            scanner: "5.1.1"
-          - name: "vc-5.1.1-scanner-5.1.0"   # test riêng barcode-scanner
-            vc: "5.1.1"
-            scanner: "5.1.0"
-          - name: "vc-5.1.0-scanner-5.1.0"   # cả hai đều lùi
-            vc: "5.1.0"
-            scanner: "5.1.0"
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -37,13 +20,6 @@ jobs:
           version: 10
           run_install: false
 
-      - name: Pin version test cho lần build này
-        run: |
-          pnpm add react-native-vision-camera@${{ matrix.vc }} react-native-vision-camera-barcode-scanner@${{ matrix.scanner }} --save-exact
-
-      - name: In ra version thật sự đã resolve (để đối chiếu log)
-        run: pnpm list react-native-nitro-image react-native-nitro-modules react-native-vision-camera react-native-vision-camera-barcode-scanner --depth 0
-
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
@@ -58,6 +34,6 @@ jobs:
       - name: Upload file .ipa thành phẩm
         uses: actions/upload-artifact@v4
         with:
-          name: ios-build-${{ matrix.name }}
+          name: ios-development-build
           path: "*.ipa"
           if-no-files-found: error
