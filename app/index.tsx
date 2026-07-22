@@ -26,13 +26,14 @@ import ReferralQRScreen from "../components/ReferralQRScreen";
 import { Animated, Easing } from "react-native";
 import { BannerAd, BannerAdSize, TestIds, MobileAds } from "react-native-google-mobile-ads";
 import remoteConfig from "@react-native-firebase/remote-config";
-import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
 
 const TEAL = "#004370";
 const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
 const BG_GRAY = "#f0f4f8";
-const headerColor = "#f1f5f9";
+// const headerColor = "#f1f5f9";
+
+const ADS_ENABLED = false; // 👈 Đặt false để ẩn hoàn toàn quảng cáo khi AdMob chưa duyệt
 
 interface Item {
   id: string;
@@ -146,28 +147,19 @@ export default function HomeScreen() {
 
   // ── Initialize AdMob ─────────────────────────────────────────────────────
   useEffect(() => {
+    if (!ADS_ENABLED) return;
     (async () => {
-      // Xin quyền App Tracking Transparency TRƯỚC khi khởi tạo quảng cáo — bắt buộc theo yêu cầu Apple
-      await requestTrackingPermissionsAsync();
-
       MobileAds().initialize();
-
-      remoteConfig().setDefaults({
-        ad_banner_id: TestIds.BANNER,
-      });
-
+      remoteConfig().setDefaults({ ad_banner_id: TestIds.BANNER });
       remoteConfig()
         .fetchAndActivate()
         .then(() => {
           const idTuXa = remoteConfig().getValue('ad_banner_id').asString();
-          if (idTuXa) {
-            setAdBannerUnitId(idTuXa);
-          }
+          if (idTuXa) setAdBannerUnitId(idTuXa);
         })
         .catch(error => console.log("Lỗi Firebase: ", error));
     })();
   }, []);
-
 
   const onBannerScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     const x = e.nativeEvent.contentOffset.x;
@@ -517,15 +509,15 @@ const closeSearch = useCallback(() => {
       <BottomTabBar />
 
       {/* ── AdMob Banner Ad ──────────────────────────────────────────────── */}
-      <View style={s.adContainer}>
-        <BannerAd
-          unitId={adBannerUnitId} 
-          size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-          requestOptions={{
-            requestNonPersonalizedAdsOnly: true,
-          }}
-        />  
-      </View>
+      {ADS_ENABLED && (
+        <View style={s.adContainer}>
+          <BannerAd
+            unitId={adBannerUnitId}
+            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
+            requestOptions={{ requestNonPersonalizedAdsOnly: true }}
+          />
+        </View>
+      )}
 
       {/* ── SearchInline overlay toàn màn hình ──────────────────────────── */}
       <Animated.View

@@ -54,7 +54,6 @@
         {
           "androidAppId": "ca-app-pub-3940256099942544~3347511713",
           "iosAppId": "ca-app-pub-3940256099942544~1458002511",
-          "userTrackingUsageDescription": "Ứng dụng cần quyền này để hiển thị quảng cáo phù hợp hơn với sở thích của bạn.",
           "skAdNetworkItems": [
             "cstr6suwn9.skadnetwork",
             "4fzdc2evr5.skadnetwork",
@@ -63,8 +62,7 @@
             "ydx93a7ass.skadnetwork"
           ]
         }
-      ],
-      "expo-tracking-transparency"
+      ]
     ],
     "extra": {
       "eas": {
