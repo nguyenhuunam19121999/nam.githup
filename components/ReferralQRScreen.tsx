@@ -14,7 +14,7 @@ import firestore from "@react-native-firebase/firestore";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 
 // 👇 Số điểm cần để đổi 1 lần thưởng — đổi số này nếu bạn muốn ngưỡng khác
-const REWARD_THRESHOLD = 5;
+const REWARD_THRESHOLD = 100;
 
 interface Props {
   onClose: () => void;
