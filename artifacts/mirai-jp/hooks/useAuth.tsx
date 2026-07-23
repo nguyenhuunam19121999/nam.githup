@@ -89,7 +89,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     (async () => {
       try {
-        await AsyncStorage.clear(); // 👈 THÊM DÒNG NÀY xóa dữ liệu người dùng 
+        // await AsyncStorage.clear(); // 👈 THÊM DÒNG NÀY xóa dữ liệu người dùng 
         const saved = await AsyncStorage.getItem(CURRENT_USER_KEY);
         if (saved) setCurrentUser(saved);
       } catch (e) {
