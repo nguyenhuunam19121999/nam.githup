@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import {
   Animated,
+  Alert,
   Dimensions,
   Easing,
   KeyboardAvoidingView,
@@ -32,7 +33,7 @@ interface Props {
 }
 
 export function AuthMenu({ visible, onClose }: Props) {
-  const { currentUser, login, register, logout } = useAuth();
+  const { currentUser, login, register, logout, deleteAccount } = useAuth();
   const [mode, setMode] = useState<Mode>("login");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -98,6 +99,29 @@ export function AuthMenu({ visible, onClose }: Props) {
     onClose();
   };
 
+  const handleDeleteAccount = () => {
+    Alert.alert(
+      "Xoá tài khoản",
+      "Toàn bộ dữ liệu tài khoản (điểm thưởng, mã giới thiệu) sẽ bị xoá vĩnh viễn và không thể khôi phục. Bạn có chắc chắn?",
+      [
+        { text: "Huỷ", style: "cancel" },
+        {
+          text: "Xoá tài khoản",
+          style: "destructive",
+          onPress: async () => {
+            const result = await deleteAccount();
+            if (!result.ok) {
+              Alert.alert("Lỗi", result.error ?? "Không thể xoá tài khoản");
+              return;
+            }
+            reset();
+            onClose();
+          },
+        },
+      ],
+    );
+  };
+
   return (
     <Modal
       visible={visible}
@@ -152,6 +176,12 @@ export function AuthMenu({ visible, onClose }: Props) {
                     onPress={handleLogout}
                   >
                     <Text style={s.primaryBtnText}>Đăng xuất</Text>
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    style={s.deleteBtn}
+                    onPress={handleDeleteAccount}
+                  >
+                    <Text style={s.deleteBtnText}>Xoá tài khoản</Text>
                   </TouchableOpacity>
                 </View>
               ) : (
@@ -324,6 +354,15 @@ const s = StyleSheet.create({
     marginTop: 14,
   },
   primaryBtnText: { color: "#fff", fontWeight: "800", fontSize: 15 },
+  deleteBtn: {
+    borderRadius: 12,
+    paddingVertical: 14,
+    alignItems: "center",
+    marginTop: 10,
+    borderWidth: 1,
+    borderColor: "#dc2626",
+  },
+  deleteBtnText: { color: "#dc2626", fontWeight: "800", fontSize: 15 },
   hint: {
     color: "#94a3b8",
     fontSize: 12,
