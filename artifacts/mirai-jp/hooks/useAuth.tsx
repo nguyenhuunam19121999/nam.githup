@@ -43,21 +43,36 @@ function generateReferralCode(length = 6): string {
   return code;
 }
 
-async function ensureUserDocument(uid: string): Promise<string> {
-  const ref = firestore().collection("users").doc(uid);
-  const doc = await ref.get();
+const pendingEnsure: Record<string, Promise<string> | undefined> = {};
 
-  if (doc.exists()) {
-    return doc.data()?.referralCode ?? "";
+async function ensureUserDocument(uid: string): Promise<string> {
+  if (pendingEnsure[uid]) {
+    return pendingEnsure[uid];
   }
 
-  const code = generateReferralCode();
-  await ref.set({
-    referralCode: code,
-    referralPoints: 0,
-    createdAt: firestore.FieldValue.serverTimestamp(),
-  });
-  return code;
+  const promise = (async () => {
+    try {
+      const ref = firestore().collection("users").doc(uid);
+      const doc = await ref.get();
+
+      if (doc.exists()) {
+        return doc.data()?.referralCode ?? "";
+      }
+
+      const code = generateReferralCode();
+      await ref.set({
+        referralCode: code,
+        referralPoints: 0,
+        createdAt: firestore.FieldValue.serverTimestamp(),
+      });
+      return code;
+    } finally {
+      delete pendingEnsure[uid];
+    }
+  })();
+
+  pendingEnsure[uid] = promise;
+  return promise;
 }
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
