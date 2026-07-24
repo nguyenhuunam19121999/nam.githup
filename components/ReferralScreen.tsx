@@ -23,7 +23,7 @@ interface ReferralScreenProps {
 }
 
 export default function ReferralScreen({ currentUser, scopedKey, onClose }: ReferralScreenProps) {
-  const { referralCode: myOwnCode } = useAuth();
+  const { referralCode: myOwnCode, firebaseUid: myFirebaseUid } = useAuth();
   const [loading, setLoading] = useState(false);
   const [localPoints, setLocalPoints] = useState(0);
   const [manualCode, setManualCode] = useState("");
@@ -90,6 +90,46 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
 
       const referrerUid = querySnapshot.docs[0].id;
 
+      if (!myFirebaseUid) {
+        Alert.alert("Lỗi", "Không xác định được tài khoản, vui lòng thử lại.");
+        setLoading(false);
+        return;
+      }
+
+      const pairId = [myFirebaseUid, referrerUid].sort().join("_");
+      const pairRef = firestore().collection("referral_pairs").doc(pairId);
+      const referrerRef = firestore().collection("users").doc(referrerUid);
+
+      try {
+        await firestore().runTransaction(async (transaction) => {
+          const pairDoc = await transaction.get(pairRef);
+          if (pairDoc.exists()) {
+            throw new Error("PAIR_EXISTS");
+          }
+
+          transaction.set(pairRef, {
+            uidA: myFirebaseUid,
+            uidB: referrerUid,
+            createdAt: firestore.FieldValue.serverTimestamp(),
+          });
+
+          transaction.update(referrerRef, {
+            referralPoints: firestore.FieldValue.increment(1),
+          });
+        });
+      } catch (err: any) {
+        if (err.message === "PAIR_EXISTS") {
+          Alert.alert(
+            "Từ chối",
+            "Bạn và người này đã từng giới thiệu nhau rồi, không thể quét chéo để cộng điểm nhiều lần."
+          );
+        } else {
+          Alert.alert("Lỗi kết nối", "Không thể kết nối đến Firestore. Vui lòng kiểm tra mạng Internet.");
+        }
+        setLoading(false);
+        return;
+      }
+
       await deviceRef.set({
         referrerUid,
         scannedBy: currentUser,
@@ -98,10 +138,6 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
 
       await Keychain.setGenericPassword("referral_used", "true", {
         service: "com.miraiapp.referral",
-      });
-
-      await firestore().collection("users").doc(referrerUid).update({
-        referralPoints: firestore.FieldValue.increment(1),
       });
 
       const newPoints = localPoints + 1;
