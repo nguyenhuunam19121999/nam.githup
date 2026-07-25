@@ -915,6 +915,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 12,
     paddingBottom: 16,
+    maxWidth: CANVAS_SIZE + 32,    
+    alignSelf: "center",           
+    width: "100%",
   },
   canvasSection: {
     alignItems: "center",

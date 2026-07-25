@@ -128,7 +128,7 @@ export default function HomeScreen() {
   const isPaused = useRef(false);
   const searchAnim = useRef(new Animated.Value(0)).current;
   // Đơn vị ID quảng cáo lưu động lấy tự động từ đám mây Firebase
-  const [adBannerUnitId, setAdBannerUnitId] = useState<string>(TestIds.BANNER);
+  const [adBannerUnitId, setAdBannerUnitId] = useState<string>(TestIds.BANNER); 
 
   // ── Banner auto-scroll ───────────────────────────────────────────────────
   const scrollToNext = useCallback(() => {
