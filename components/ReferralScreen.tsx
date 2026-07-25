@@ -23,7 +23,7 @@ interface ReferralScreenProps {
 }
 
 export default function ReferralScreen({ currentUser, scopedKey, onClose }: ReferralScreenProps) {
-  const { referralCode: myOwnCode, firebaseUid: myFirebaseUid } = useAuth();
+  const { referralCode: myOwnCode } = useAuth();
   const [loading, setLoading] = useState(false);
   const [localPoints, setLocalPoints] = useState(0);
   const [manualCode, setManualCode] = useState("");
@@ -89,39 +89,27 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
       }
 
       const referrerUid = querySnapshot.docs[0].id;
-
-      if (!myFirebaseUid) {
-        Alert.alert("Lỗi", "Không xác định được tài khoản, vui lòng thử lại.");
-        setLoading(false);
-        return;
-      }
-
-      const pairId = [myFirebaseUid, referrerUid].sort().join("_");
-      const pairRef = firestore().collection("referral_pairs").doc(pairId);
       const referrerRef = firestore().collection("users").doc(referrerUid);
 
       try {
         await firestore().runTransaction(async (transaction) => {
-          const pairDoc = await transaction.get(pairRef);
-          if (pairDoc.exists()) {
-            throw new Error("PAIR_EXISTS");
-          }
+          const referrerDoc = await transaction.get(referrerRef);
+          const alreadyClaimed = referrerDoc.data()?.codeClaimed === true;
 
-          transaction.set(pairRef, {
-            uidA: myFirebaseUid,
-            uidB: referrerUid,
-            createdAt: firestore.FieldValue.serverTimestamp(),
-          });
+          if (alreadyClaimed) {
+            throw new Error("CODE_ALREADY_CLAIMED");
+          }
 
           transaction.update(referrerRef, {
             referralPoints: firestore.FieldValue.increment(1),
+            codeClaimed: true,
           });
         });
       } catch (err: any) {
-        if (err.message === "PAIR_EXISTS") {
+        if (err.message === "CODE_ALREADY_CLAIMED") {
           Alert.alert(
             "Từ chối",
-            "Bạn và người này đã từng giới thiệu nhau rồi, không thể quét chéo để cộng điểm nhiều lần."
+            "Mã giới thiệu này đã được dùng để nhận thưởng rồi, không thể dùng lại lần nữa."
           );
         } else {
           Alert.alert("Lỗi kết nối", "Không thể kết nối đến Firestore. Vui lòng kiểm tra mạng Internet.");

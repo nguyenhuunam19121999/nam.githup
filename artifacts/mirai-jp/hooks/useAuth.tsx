@@ -65,6 +65,7 @@ async function ensureUserDocument(uid: string): Promise<string> {
       await ref.set({
         referralCode: code,
         referralPoints: 0,
+        codeClaimed: false, 
         createdAt: firestore.FieldValue.serverTimestamp(),
       });
       return code;
