@@ -24,7 +24,7 @@ import { findExamplesByVocab, ExampleSentence } from '../assets/sentences';
 
 // ✅ MÀU CHỦ ĐẠO
 const TEAL = "#1f7a1f";
-const TEAL_DARK = "#1c5765";
+const TEAL_DARK = "#004370";
 const BG_GRAY = "#f0f4f8";
 
 // ============================================
@@ -752,7 +752,7 @@ const styles = StyleSheet.create({
   },
   headerRow: { flexDirection: 'row', alignItems: 'flex-start' },
   bigKanji: { fontSize: 32, fontWeight: '800', color: TEAL_DARK, lineHeight: 40 },
-  bigHanViet: { fontSize: 18, color: TEAL, fontWeight: '700', letterSpacing: 1, marginTop: 2 },
+  bigHanViet: { fontSize: 18, color: TEAL_DARK, fontWeight: '700', letterSpacing: 1, marginTop: 2 },
   bigHiragana: { fontSize: 16, color: TEAL_DARK, marginTop: 2 },
   bigNghia: { fontSize: 15, color: '#475569', marginTop: 2 },
   divider: { height: StyleSheet.hairlineWidth, backgroundColor: '#e2e8f0', marginVertical: 14 },

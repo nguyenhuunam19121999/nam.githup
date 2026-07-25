@@ -22,21 +22,14 @@ import {
   type KanjiItem,
   type KanjiExample,
 } from '../assets/data_JLPT_kanji';
-// import {
-//   type KanjiItem,
-//   type KanjiExample,
-// } from '../assets/data_JLPT_kanji';
-// import {
-//   getKanjiByChar,
-//   getExamplesByKanjiChar,
-// } from '../services/kanjiRepository';
 import { preloader } from '../services/KanjiPreloader';
 import VocabDetailInline from './VocabDetailInline';
 
-const TEAL = '#1F6F7A';
+// const TEAL = '#004370';
 // const TEAL_DARK = '#1c5765';
-const TEXT_COLOR = '#e47b0b';
-const textColor = "#1d4ed8";
+const icon_line_COLOR = '#e47b0b';
+const textColor = "#004370";
+// const BG_GRAY = "#f0f4f8";
 
 interface KanjiDetailInlineProps {
   kanjiChars: string[];
@@ -69,8 +62,6 @@ const TabItem = React.memo(
 );
 TabItem.displayName = 'TabItem';
 
-// ─── MemoizedStrokeOrder: dùng requestAnimationFrame thay InteractionManager ──
-// requestAnimationFrame chỉ trễ 1 frame (~16ms) thay vì 100-300ms
 const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
   const [renderStroke, setRenderStroke] = useState(false);
 
@@ -156,14 +147,9 @@ export default function KanjiDetailInline({
 
   const currentKanji = kanjiChars[currentIndex];
   const totalKanji = kanjiChars.length;
-
-  // Dữ liệu kanji chính
   const [kanjiData, setKanjiData] = useState<KanjiItem | null>(null);
-
-  // Ví dụ tra từ toàn bộ từ vựng (JLPT + ngành nghề)
   const [examples, setExamples] = useState<KanjiExample[]>([]);
 
-  // Khi currentKanji thay đổi: load dữ liệu + ví dụ cùng lúc
   useEffect(() => {
     setKanjiData(null);
     setExamples([]);
@@ -171,15 +157,9 @@ export default function KanjiDetailInline({
       setKanjiData(getKanjiByCharFull(currentKanji) || null);
       setExamples(getExamplesByKanjiChar(currentKanji));
     });
-    // const id = requestAnimationFrame(async () => {
-    //   setKanjiData(await getKanjiByChar(currentKanji) || null);
-    //   setExamples(await getExamplesByKanjiChar(currentKanji));
-    // });
     return () => cancelAnimationFrame(id);
   }, [currentKanji]);
 
-  // Khi currentKanji thay đổi: reset sections, dùng requestAnimationFrame
-  // (nhanh hơn InteractionManager ~10-20x: 1 frame ~16ms thay vì 100-300ms)
   useEffect(() => {
     setSectionsReady(false);
     const id = requestAnimationFrame(() => {
@@ -331,8 +311,6 @@ export default function KanjiDetailInline({
                 ))}
               </View>
 
-              {/* Ví dụ — tra từ toàn bộ từ vựng (JLPT + ngành nghề) */}
-              {/* Ví dụ — nhấn vào để xem chi tiết từ vựng */}
               {examples.length > 0 && (
                 <View style={styles.section}>
                   <Text style={styles.sectionTitle}>
@@ -341,14 +319,14 @@ export default function KanjiDetailInline({
                   {examples.map((ex, idx) => (
                     <TouchableOpacity
                       key={idx}
-                      style={[styles.exampleBox, { borderLeftColor: '#10b981' }]}
+                      style={[styles.exampleBox, { borderLeftColor: textColor }]}
                       onPress={() => setSelectedExample(ex)}
                       activeOpacity={0.7}
                     >
                       <Text style={styles.exampleJp}>{ex.jp}</Text>
                       <Text style={styles.exampleReading}>{ex.reading}</Text>
                       <Text style={styles.exampleVi}>→ {ex.vi}</Text>
-                      <Text style={{ fontSize: 48, marginTop: 8, right: 8, opacity: 0.05, position: 'absolute', zIndex: -1 }}>
+                      <Text style={{ fontSize: 48, marginTop: 16, right: 8, opacity: 0.06, position: 'absolute', zIndex: -1 }}>
                         🔍 
                       </Text>
                     </TouchableOpacity>
@@ -394,27 +372,52 @@ export default function KanjiDetailInline({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fff' ,
+    // backgroundColor: BG_GRAY,
   },
   tabBar: {
     maxHeight: 50,
     borderBottomWidth: 1,
     borderColor: '#eee',
   },
-  tabContainer: { flexDirection: 'row', paddingHorizontal: 10 },
+  tabContainer: { 
+    flexDirection: 'row', 
+    paddingHorizontal: 10 
+  },
   tabItem: {
     paddingHorizontal: 15,
     paddingVertical: 12,
     borderBottomWidth: 2,
     borderBottomColor: 'transparent',
   },
-  tabItemActive: { borderBottomColor: textColor },
-  tabText: { fontSize: 16, color: '#666' },
-  tabTextActive: { color: textColor, fontWeight: 'bold' },
-  content: { flex: 1, padding: 15 },
-  kanjiHeader: { alignItems: 'center', marginBottom: 20 },
-  furiganaContainer: { height: 20, justifyContent: 'center' },
-  furiganaText: { fontSize: 14, color: '#666' },
+  tabItemActive: { 
+    borderBottomColor: textColor 
+  },
+  tabText: { 
+    fontSize: 16, 
+    color: '#666' 
+  },
+  tabTextActive: { 
+    color: textColor, 
+    fontWeight: 'bold' 
+  },
+  content: { 
+    flex: 1, 
+    padding: 15, 
+    paddingTop: 0 
+  },
+  kanjiHeader: { 
+    alignItems: 'center', 
+    marginBottom: 20 
+  },
+  furiganaContainer: { 
+    height: 20, 
+    justifyContent: 'center' 
+  },
+  furiganaText: { 
+    fontSize: 14, 
+    color: '#666' 
+  },
   bigKanji: {
     fontSize: 42,
     fontWeight: 'bold',
@@ -431,7 +434,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 20,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#e7e4e443',
     padding: 10,
     borderRadius: 8,
   },
@@ -481,7 +484,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',  
   },
   diamond: { 
-    color: textColor, 
+    color: icon_line_COLOR, 
     marginRight: 8, 
     fontSize: 12, 
     marginTop: 2 

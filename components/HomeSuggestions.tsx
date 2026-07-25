@@ -18,8 +18,8 @@ import { useAuth } from '../artifacts/mirai-jp/hooks/useAuth';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-const TEAL      = '#1F6F7A';
-const TEAL_DARK = '#0B3540';
+const TEAL      = '#004370';
+const TEAL_DARK = '#004370';
 
 const LEVEL_COLORS: Record<string, string> = {
   N5: '#22C55E', N4: '#3B82F6', N3: '#F59E0B', N2: '#EA580C', N1: '#C0392B',
@@ -435,7 +435,7 @@ const styles = StyleSheet.create({
   },
   chipText: {
     fontSize: 13,
-    color: '#334155',
+    color: TEAL,
   },
   chipTextSelected: {
     color: '#ffffff',

@@ -15,8 +15,8 @@ import VocabImagePicker from './VocabImagePicker';
 import { findExamplesByVocab, ExampleSentence } from '../assets/sentences';
 
 const TEAL = "#1f7a1f";
-const TEAL_DARK = "#1c5765";
-const BG_GRAY = "#f0f4f8";
+const TEAL_DARK = "#004370";
+// const BG_GRAY = "#f0f4f8";
 
 // ============================================
 // INTERFACE PROPS
@@ -42,22 +42,6 @@ interface VocabDetailInlineProps {
   conjugatedForm?: string | null;
   onClose: () => void;
 }
-// interface VocabDetailInlineProps {
-//   kanji: string;
-//   hiragana?: string;
-//   hira?: string;
-//   han?: string;
-//   nghia?: string;
-//   example?: string;
-//   exampleMeaning?: string;
-//   level?: string;
-//   id?: string;
-//   onClose: () => void;
-// }
-
-// ============================================
-// LOẠI TỪ
-// ============================================
 type WordType = 'godan' | 'ichidan' | 'sahen' | 'kahen' | 'irregular' | 'i-adjective' | 'na-adjective' | 'noun-only' | 'noun-suru';
 
 const VALID_WORD_TYPES: WordType[] = [
@@ -367,8 +351,6 @@ export default function VocabDetailInline({
     }
   };
 
-  // const wordType = detectWordType(kanji, nghia);
-  // const conjugationWord = kanji;
   const resolvedWordType = resolveWordType({ wordType, isNaAdjective }, kanji, nghia);
   const { word: conjugationWord, skip: skipConjugation, baseNote } = resolveConjugationTarget(
     { isExtractedVerb, extractedVerb, isConjugatedForm, conjugatedForm }, kanji
@@ -400,18 +382,18 @@ export default function VocabDetailInline({
         borderBottomWidth: 1, borderBottomColor: '#e2e8f0',
         backgroundColor: '#fff',
       }}>
-        <Text style={{ fontSize: 16, fontWeight: '700', color: '#1e293b' }}>
+        <Text style={{ fontSize: 16, fontWeight: '700', color: TEAL_DARK }}>
           📖 {kanji} — Chi tiết từ vựng
         </Text>
         <TouchableOpacity onPress={onClose} hitSlop={10}>
-          <Text style={{ fontSize: 22, color: '#64748b', fontWeight: '300' }}>✕</Text>
+          <Text style={{ fontSize: 22, color: '#TEAL_DARK', fontWeight: '300' }}>✕</Text>
         </TouchableOpacity>
       </View>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.card}>
           {/* Từ vựng chính */}
           <View style={styles.kanjiSection}>
-            <Text style={styles.hiraganaText}>{displayHiragana}</Text>
+            {/* <Text style={styles.hiraganaText}>{displayHiragana}</Text> */}
             <Text style={styles.kanjiText}>{kanji}</Text>
             <Text style={styles.nghiaText}>{nghia}</Text>
           </View>
@@ -543,7 +525,7 @@ const styles = StyleSheet.create({
   },
   kanjiSection: { alignItems: 'center', marginBottom: 20 },
   hiraganaText: { fontSize: 16, color: '#64748b' },
-  kanjiText: { fontSize: 40, fontWeight: '800', color: TEAL_DARK },
+  kanjiText: { fontSize: 20, fontWeight: '800', color: TEAL_DARK },
   nghiaText: { fontSize: 16, color: '#64748b', marginTop: 4 },
   mainVocabHan: { fontSize: 14, color: '#94a3b8', textAlign: 'center', marginBottom: 4 },
   funcRow: { flexDirection: 'row', justifyContent: 'center', marginBottom: 24 },

@@ -10,6 +10,8 @@ import React, {
 import auth from "@react-native-firebase/auth";
 import firestore from "@react-native-firebase/firestore";
 
+// await AsyncStorage.clear(); // 👈 THÊM DÒNG NÀY xóa dữ liệu người dùng 
+
 interface UserRecord {
   username: string;
   password: string;
@@ -26,7 +28,7 @@ interface AuthContextValue {
     password: string,
   ) => Promise<{ ok: boolean; error?: string }>;
   logout: () => Promise<void>;
-  deleteAccount: () => Promise<{ ok: boolean; error?: string }>;   // 👈 thêm dòng này
+  deleteAccount: () => Promise<{ ok: boolean; error?: string }>;   
   scopedKey: (key: string) => string;
 }
 

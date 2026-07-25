@@ -30,8 +30,8 @@ import {
 } from "react-native";
 
 // ✅ MÀU CHỦ ĐẠO - ĐỒNG BỘ VỚI KANJI
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#1c5765";
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 const TEXT_COLOR = "#e47b0b";
 
 // ─── Dữ liệu từ vựng ─────────────────────────────────────────────────────────

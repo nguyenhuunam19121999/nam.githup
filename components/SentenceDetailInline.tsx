@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 import * as Speech from 'expo-speech';
 
-const TEAL = "#1f7a1f";
-const TEAL_DARK = "#1c5765";
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 const BG_GRAY = "#f0f4f8";
 
 interface SentenceDetailInlineProps {

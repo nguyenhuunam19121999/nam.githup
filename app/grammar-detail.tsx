@@ -26,8 +26,8 @@ import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 
 // ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#1c5765";
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 // const GRAD = [TEAL, TEAL_DARK] as const;
 const TEXT_COLOR = "#e47b0b";
 
@@ -237,7 +237,7 @@ const s = StyleSheet.create({
   },
   sectionContent: { flexDirection: "row" },
   bulletDot: {
-    color: TEAL,
+    color: TEXT_COLOR,
     fontSize: 14,
     marginRight: 8,
     marginTop: 4,

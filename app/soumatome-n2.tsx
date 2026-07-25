@@ -24,8 +24,11 @@ import { getKanjiByBook, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { getGrammarByBook, type GrammarItem } from "../assets/data_nn";
 import { getVocab, getVocabByBook, type RawVocab } from "../assets/vocab";
 
-const TEAL = "#7C3AED" /* old: #4ECDC4 */;
-const GRAD = ["#7C3AED", "#5B21B6"] /* old: ["#7C3AED","#5B21B6"] */ as const;
+const TEAL = "#004370";
+const GRAD = ["#004370", "#004370"] as const;
+const TEXT_COLOR_kanji = "#004370";
+const TEXT_COLOR_vocab = "#004370";
+const TEXT_COLOR_grammar = "#004370";
 
 type Part = "kanji" | "vocab" | "grammar";
 
@@ -39,9 +42,9 @@ interface PartConfig {
 }
 
 const PARTS: PartConfig[] = [
-  { key: "kanji",   label: "Hán tự",  jpLabel: "漢字", color: "#E03131", weeks: 8, lessonsPerWeek: 6 },
-  { key: "vocab",   label: "Từ vựng", jpLabel: "語彙", color: "#2563EB", weeks: 8, lessonsPerWeek: 6 },
-  { key: "grammar", label: "Ngữ pháp",jpLabel: "文法", color: "#7C3AED", weeks: 8, lessonsPerWeek: 0 },
+  { key: "kanji",   label: "Hán tự",  jpLabel: "漢字", color: TEXT_COLOR_kanji, weeks: 8, lessonsPerWeek: 6 },
+  { key: "vocab",   label: "Từ vựng", jpLabel: "語彙", color: TEXT_COLOR_vocab, weeks: 8, lessonsPerWeek: 6 },
+  { key: "grammar", label: "Ngữ pháp",jpLabel: "文法", color: TEXT_COLOR_grammar, weeks: 8, lessonsPerWeek: 0 },
 ];
 
 // ─── Group kanji/vocab by week → lesson ──────────────────────────────────────
@@ -203,7 +206,7 @@ export default function SoumatomeN2Screen() {
   // ── Render grammar weeks ────────────────────────────────────────────────────
   const renderGrammarWeeks = () => grammarWeeks.map(({ week, items }) => {
     const isOpen = expandedWeeks.has(week);
-    const color = "#7C3AED";
+    const color = TEXT_COLOR_grammar;
     const preview = items.slice(0, 4).map((g) => g.pattern).join("・");
     return (
       <View key={week} style={s.weekCard}>
@@ -313,8 +316,8 @@ export default function SoumatomeN2Screen() {
           )}
         </View>
 
-        {activePart === "kanji"   && renderWeekLesson(kanjiWeeks, "#E03131", goKanjiLesson)}
-        {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any, "#2563EB", goVocabLesson)}
+        {activePart === "kanji"   && renderWeekLesson(kanjiWeeks, TEXT_COLOR_kanji, goKanjiLesson)}
+        {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any, TEXT_COLOR_vocab, goVocabLesson)}
         {activePart === "grammar" && renderGrammarWeeks()}
 
         <View style={{ height: 16 }} />

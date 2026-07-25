@@ -214,6 +214,8 @@ const styles = StyleSheet.create({
   hintText: { textAlign: "center", marginBottom: 20, color: "#353b48", fontSize: 15, fontWeight: "500" },
   manualCard: {
     width: "100%",
+    maxWidth: 420,
+    alignSelf: "center",
     backgroundColor: "#fff",
     borderRadius: 16,
     padding: 20,

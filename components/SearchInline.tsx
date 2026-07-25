@@ -53,10 +53,9 @@ interface KanjiItem {
   jlpt?: string;
 }
 
-const TEAL = '#1F6F7A';
-const TEAL_DARK = '#0B3540';
+const TEAL = '#004370';
+const TEAL_DARK = '#004370';
 const BG_GRAY = '#f0f4f8';
-const bgrColor = "#f1f5f9";
 
 type SearchType = 'vocab' | 'kanji' | 'sentence' | 'grammar';
 

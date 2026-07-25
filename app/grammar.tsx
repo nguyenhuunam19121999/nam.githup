@@ -25,8 +25,8 @@ import { getGrammar, getGrammarByBook, type GrammarItem } from "../assets/data_n
 import { FeedbackSection } from "../components/FeedbackSection";
 
 // ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#1c5765";
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 //const GRAD = [TEAL, TEAL_DARK] as const;
 const TEXT_COLOR = "#e47b0b";
 

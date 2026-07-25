@@ -8,23 +8,41 @@ import {
   SafeAreaView,
   ActivityIndicator,
   Alert,
+  Linking,
 } from "react-native";
 import QRCode from "react-native-qrcode-svg";
 import firestore from "@react-native-firebase/firestore";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
-
-// 👇 Số điểm cần để đổi 1 lần thưởng — đổi số này nếu bạn muốn ngưỡng khác
-const REWARD_THRESHOLD = 100;
+import remoteConfig from "@react-native-firebase/remote-config";
 
 interface Props {
   onClose: () => void;
 }
 
+const REWARD_CONTACT_FB_URL = "https://www.facebook.com/profile.php?id=61592659400404";
+
 export default function ReferralQRScreen({ onClose }: Props) {
   const { currentUser, firebaseUid, referralCode } = useAuth();
   const [livePoints, setLivePoints] = useState<number>(0);
   const [claiming, setClaiming] = useState(false);
+  const [rewardThreshold, setRewardThreshold] = useState<number>(100); // giá trị mặc định khi chưa kịp fetch xong
 
+  // Lấy ngưỡng thưởng từ Remote Config — cho phép đổi mức quà mà không cần build lại app
+  useEffect(() => {
+    (async () => {
+      try {
+        await remoteConfig().setDefaults({ reward_threshold: 100 });
+        await remoteConfig().fetchAndActivate();
+        const value = remoteConfig().getValue("reward_threshold").asNumber();
+        setRewardThreshold(value);
+      } catch (err) {
+        console.error("Lỗi tải cấu hình ngưỡng thưởng:", err);
+        // Giữ nguyên giá trị mặc định 100 nếu fetch lỗi (offline...)
+      }
+    })();
+  }, []);
+
+  // Lắng nghe điểm realtime từ Firestore
   useEffect(() => {
     if (!firebaseUid) return;
     const unsubscribe = firestore()
@@ -38,14 +56,14 @@ export default function ReferralQRScreen({ onClose }: Props) {
   }, [firebaseUid]);
 
   const qrValue = referralCode ? `PUBLICAPP-REF|${referralCode}` : null;
-  const canClaim = livePoints >= REWARD_THRESHOLD;
+  const canClaim = livePoints >= rewardThreshold;
 
   const handleClaimReward = async () => {
     if (!firebaseUid || claiming) return;
 
     Alert.alert(
       "🎁 Đổi thưởng",
-      `Bạn có chắc muốn đổi thưởng? Sẽ trừ ${REWARD_THRESHOLD} điểm, phần dư (nếu có) vẫn được giữ nguyên.`,
+      `Bạn có chắc muốn đổi thưởng? Sẽ trừ ${rewardThreshold} điểm, phần dư (nếu có) vẫn được giữ nguyên.`,
       [
         { text: "Huỷ", style: "cancel" },
         {
@@ -55,30 +73,41 @@ export default function ReferralQRScreen({ onClose }: Props) {
             try {
               const userRef = firestore().collection("users").doc(firebaseUid);
 
-              // Dùng transaction để đảm bảo an toàn: đọc điểm mới nhất và trừ
-              // đúng lúc, tránh trường hợp 2 người quét mã cùng lúc gây sai số.
               await firestore().runTransaction(async (transaction) => {
                 const doc = await transaction.get(userRef);
                 const currentPoints = doc.data()?.referralPoints ?? 0;
 
-                if (currentPoints < REWARD_THRESHOLD) {
+                if (currentPoints < rewardThreshold) {
                   throw new Error("Bạn không đủ điểm để đổi thưởng.");
                 }
 
-                const newPoints = currentPoints - REWARD_THRESHOLD;
+                const newPoints = currentPoints - rewardThreshold;
                 transaction.update(userRef, { referralPoints: newPoints });
 
-                // Ghi lại lịch sử đổi thưởng — để đối chiếu sau này nếu cần
                 const redemptionRef = userRef.collection("redemptions").doc();
                 transaction.set(redemptionRef, {
-                  pointsClaimed: REWARD_THRESHOLD,
+                  pointsClaimed: rewardThreshold,
                   pointsBefore: currentPoints,
                   pointsAfter: newPoints,
                   claimedAt: firestore.FieldValue.serverTimestamp(),
                 });
               });
 
-              Alert.alert("🎉 Thành công", "Bạn đã đổi thưởng! Điểm dư (nếu có) vẫn được giữ nguyên.");
+              Alert.alert(
+                "🎉 Thành công",
+                "Bạn đã đổi thưởng! Chụp lại màn hình này và gửi qua Facebook để nhận quà. Điểm dư (nếu có) vẫn được giữ nguyên.",
+                [
+                  { text: "Đóng", style: "cancel" },
+                  {
+                    text: "Mở Facebook",
+                    onPress: () => {
+                      Linking.openURL(REWARD_CONTACT_FB_URL).catch(() => {
+                        Alert.alert("Lỗi", "Không thể mở Facebook, vui lòng thử lại.");
+                      });
+                    },
+                  },
+                ]
+              );
             } catch (error: any) {
               Alert.alert("Lỗi", error?.message || "Không thể đổi thưởng lúc này, thử lại sau.");
             } finally {
@@ -139,7 +168,7 @@ export default function ReferralQRScreen({ onClose }: Props) {
             <ActivityIndicator size="small" color="#004370" style={{ marginTop: 6 }} />
           ) : (
             <Text style={[styles.giftStatus, canClaim && styles.giftStatusReady]}>
-              {canClaim ? `Chạm để đổi thưởng (${REWARD_THRESHOLD} điểm)` : `Cần đủ ${REWARD_THRESHOLD} điểm để đổi thưởng`}
+              {canClaim ? `Chạm để đổi thưởng (${rewardThreshold} điểm)` : `Cần đủ ${rewardThreshold} điểm để đổi thưởng`}
             </Text>
           )}
         </TouchableOpacity>
@@ -194,6 +223,8 @@ const styles = StyleSheet.create({
   giftBox: {
     marginTop: 24,
     width: "100%",
+    maxWidth: 420, 
+    alignSelf: "center",
     backgroundColor: "#f1f5f9",
     borderRadius: 16,
     paddingVertical: 20,

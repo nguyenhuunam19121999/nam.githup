@@ -50,7 +50,7 @@ const STROKE_COLORS = [
 const CDN_BASE = 'https://cdn.jsdelivr.net/gh/kanjivg/kanjivg@master/kanji/';
 const ASYNC_STORAGE_PREFIX = 'kanji_stroke_v1:';
 
-const BG_GRAY = "#f0f4f8";
+// const BG_GRAY = "#f0f4f8";
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 
@@ -102,9 +102,6 @@ function SourceBadge({ source }: { source: StrokeSource }) {
   );
 }
 
-// ── Animated Stroke — dùng Animated.Value thay vì CSS style ───────────────
-// react-native-svg Path không hỗ trợ prop style, dùng AnimatedStroke riêng
-
 interface AnimatedStrokeProps {
   d: string;
   color: string;
@@ -122,37 +119,26 @@ function AnimatedStroke({ d, color, onDone }: AnimatedStrokeProps) {
     if (hasRun.current) return;
     hasRun.current = true;
     
-    // 1. Gán animation vào một biến hằng để dễ quản lý dọn dẹp
     const animation = Animated.timing(offsetAnim, {
       toValue: 0,
       duration: speed,
-      useNativeDriver: false, // strokeDashoffset không hỗ trợ native driver
+      useNativeDriver: false, 
     });
     
-    // 2. Kích hoạt chạy animation
     animation.start(({ finished }) => {
       if (finished) onDone();
     });
 
-    // 3. THÊM HÀM RETURN NÀY: Giúp ngắt animation ngay lập tức nếu đổi chữ Kanji đột ngột
     return () => {
       animation.stop();
     };
-  }, [offsetAnim, speed, onDone]); // Đã điền đầy đủ dependency chống cảnh báo từ React ESLint
-
-  // Animated.Value → string cần interpolate
+  }, [offsetAnim, speed, onDone]); 
 
   const dashOffsetStr = offsetAnim.interpolate({
     inputRange:  [0, dashTotal],
-    outputRange: [0, dashTotal],  // ← number thay vì string
+    outputRange: [0, dashTotal],  
   });
 
-  // const dashOffsetStr = offsetAnim.interpolate({
-  //   inputRange:  [0, dashTotal],
-  //   outputRange: ['0', `${dashTotal}`],
-  // });
-
-  // react-native-svg hỗ trợ AnimatedPath qua createAnimatedComponent
   const AnimatedPath = Animated.createAnimatedComponent(Path);
 
   return (
@@ -165,8 +151,6 @@ function AnimatedStroke({ d, color, onDone }: AnimatedStrokeProps) {
       strokeLinejoin="round"
       strokeDasharray={dashTotal}
       strokeDashoffset={dashOffsetStr}
-      // strokeDasharray={`${dashTotal}`}
-      // strokeDashoffset={dashOffsetStr as any}
     />
   );
 }
@@ -180,7 +164,7 @@ export function KanjiStrokeOrder({
   autoPlay = true,
   showNumbers = true,
   showSourceBadge = true,
-  onReload, // ← Thêm vào params cho ô luyện vẽ
+  onReload, 
 }: Props) {
   const boxSize = containerSize ?? size;
 
@@ -188,8 +172,8 @@ export function KanjiStrokeOrder({
   const [paths, setPaths]               = useState<string[] | null>(null);
   const [source, setSource]             = useState<StrokeSource>('none');
   const [isLoading, setIsLoading]       = useState(true);
-  const [currentIdx, setCurrentIdx]     = useState(-1);   // nét đang animate (-1 = không)
-  const [drawnCount, setDrawnCount]     = useState(0);    // số nét đã xong
+  const [currentIdx, setCurrentIdx]     = useState(-1);   
+  const [drawnCount, setDrawnCount]     = useState(0);    
   const [isPlaying, setIsPlaying]       = useState(false);
   const [progressText, setProgressText] = useState('');
   const [staticMask, setStaticMask]     = useState<boolean[]>([]);
@@ -211,12 +195,10 @@ export function KanjiStrokeOrder({
     setStaticMask([]);
     setIsPlaying(false);
     setProgressText('');
-    cancelRef.current    = true;   // hủy animation cũ nếu đang chạy
+    cancelRef.current    = true;   
     animatingRef.current = false;
 
     async function load() {
-      // Gọi thẳng hàm chuẩn của KanjiPreloader — đúng thứ tự ưu tiên,
-      // tự phát hiện & tự sửa chữ có dữ liệu local bị lỗi/thiếu nét.
       const { paths: result, source: src } = await loadStrokePaths(kanji);
       if (!cancelled) {
         setPaths(result.length > 0 ? result : []);
@@ -232,75 +214,6 @@ export function KanjiStrokeOrder({
       if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
     };
   }, [kanji]);
-
-  // useEffect(() => {
-  //   let cancelled = false;
-  //   setIsLoading(true);
-  //   setDrawnCount(0);
-  //   setCurrentIdx(-1);
-  //   setStaticMask([]);
-  //   setIsPlaying(false);
-  //   setProgressText('');
-  //   cancelRef.current    = true;   // hủy animation cũ nếu đang chạy
-  //   animatingRef.current = false;
-
-  //   async function load() {
-  //     // 1. Kiểm tra Bộ nhớ đệm Session (RAM) trước để có tốc độ hiển thị tức thì (0ms)
-  //     if (memoryCache.has(kanji)) {
-  //       const cached = memoryCache.get(kanji)!;
-  //       if (!cancelled) { setPaths(cached); setSource('cache'); setIsLoading(false); }
-  //       return;
-  //     }
-
-  //     // 2. Kiểm tra bộ nhớ máy (AsyncStorage) - Nơi lưu bản sửa lỗi CDN (Lưu đè Local)
-  //     try {
-  //       const stored = await AsyncStorage.getItem(ASYNC_STORAGE_PREFIX + kanji);
-  //       if (stored) {
-  //         const parsed: string[] = JSON.parse(stored);
-  //         if (parsed.length > 0) {
-  //           memoryCache.set(kanji, parsed);
-  //           if (!cancelled) { setPaths(parsed); setSource('cache'); setIsLoading(false); }
-  //           return;
-  //         }
-  //       }
-  //     } catch (_) {}
-
-  //     // 3. Nếu bộ nhớ máy chưa có bản lưu đè, lúc này mới dùng đến file Local mặc định
-  //     const local = (strokesMap as Record<string, string[]>)[kanji];
-  //     if (local && local.length > 0) {
-  //       if (!cancelled) { setPaths(local); setSource('local'); setIsLoading(false); }
-  //       return;
-  //     }
-
-  //     // 4. Fetch CDN (Trường hợp cả Local lẫn bộ nhớ đều chưa có dữ liệu của chữ này)
-  //     const hexId = toHexId(kanji);
-  //     try {
-  //       const res     = await fetch(`${CDN_BASE}${hexId}.svg`);
-  //       const text    = await res.text();
-  //       const fetched = parseSvgPaths(text);
-  //       if (fetched && !cancelled) {
-  //         AsyncStorage.setItem(ASYNC_STORAGE_PREFIX + kanji, JSON.stringify(fetched)).catch(() => {});
-  //         memoryCache.set(kanji, fetched);
-  //         setPaths(fetched);
-  //         setSource('cdn');
-  //         setIsLoading(false);
-  //       } else if (!cancelled) {
-  //         setPaths([]);
-  //         setSource('none');
-  //         setIsLoading(false);
-  //       }
-  //     } catch (_) {
-  //       if (!cancelled) { setPaths([]); setSource('none'); setIsLoading(false); }
-  //     }
-  //   }
-  //   InteractionManager.runAfterInteractions(() => { load(); });
-  //   // load();
-  //   return () => { 
-  //     cancelled = true; 
-  //     if (playTimeoutRef.current) clearTimeout(playTimeoutRef.current);
-  //     if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
-  //   };
-  // }, [kanji]);
 
   // ── Animation logic ────────────────────────────────────────────────────
 
@@ -544,9 +457,10 @@ const styles = StyleSheet.create({
   }, 
   canvasBox: {
     width: "100%",
-    height: 200,
+    aspectRatio: 1,        
+    maxWidth: 340,          
+    alignSelf: "center",    
     backgroundColor: 'transparent',
-    // backgroundColor: BG_GRAY,
     borderRadius: 0,
     borderTopWidth: 1,
     borderBottomWidth: 1,
