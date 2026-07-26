@@ -7,8 +7,8 @@
 // - Khi đã đăng nhập: hiện ô nhập nội dung + nút "Gửi".
 // ─────────────────────────────────────────────────────────────────────────────
 
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+import firestore from "@react-native-firebase/firestore";
+import React, { useEffect, useState } from "react";
 import {
   Alert,
   StyleSheet,
@@ -22,120 +22,139 @@ import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 
 interface Feedback {
   id: string;
-  user: string; // tên hiển thị (để "Khách" nếu chưa đăng nhập)
+  user: string; 
   text: string;
-  likes: string[]; // danh sách username đã like
-  dislikes: string[]; // danh sách username đã dislike
+  likes: string[]; 
+  dislikes: string[]; 
   createdAt: number;
 }
 
-// Màu chủ đạo — xanh ngọc teal rgb(78,205,196), đồng bộ toàn app
 const PRIMARY = "#7C3AED"; /* old: #4ECDC4 */;
 
 interface Props {
-  pageKey: string; // duy nhất cho từng trang để tách biệt thread
-  /** Tiêu đề tuỳ chỉnh nếu trang muốn (mặc định: "Có N góp ý") */
+  pageKey: string; 
+}
+
+// Chuẩn hoá text để so khớp không phân biệt hoa/thường, dấu tiếng Việt
+function normalizeForFilter(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, " ");
+}
+
+// Danh sách từ cấm — bạn tự bổ sung thêm khi phát hiện từ mới cần chặn
+const BANNED_WORDS = [
+  "dm", "vcl", "vl", "clm", "djt", "dit me", "cc", "loz",
+  "ngu", "cho chet", "do ngu", "sex",
+  // 👈 thêm từ khác vào đây nếu cần, viết thường, không dấu
+];
+
+function containsBannedWord(text: string): boolean {
+  const normalized = normalizeForFilter(text);
+  return BANNED_WORDS.some((word) => normalized.includes(word));
 }
 
 export function FeedbackSection({ pageKey }: Props) {
   const { currentUser } = useAuth();
-  const storageKey = useMemo(() => `feedback::${pageKey}`, [pageKey]);
 
   const [items, setItems] = useState<Feedback[]>([]);
   const [text, setText] = useState("");
   const [showAll, setShowAll] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  // Đọc danh sách góp ý đã lưu
   useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const raw = await AsyncStorage.getItem(storageKey);
-        if (cancelled) return;
-        if (raw) {
-          const parsed = JSON.parse(raw) as Feedback[];
-          if (Array.isArray(parsed)) setItems(parsed);
-        } else {
-          setItems([]);
-        }
-      } catch {
-        if (!cancelled) setItems([]);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [storageKey]);
-
-  const persist = useCallback(
-    async (next: Feedback[]) => {
-      setItems(next);
-      try {
-        await AsyncStorage.setItem(storageKey, JSON.stringify(next));
-      } catch {
-        /* ignore */
-      }
-    },
-    [storageKey],
-  );
+    const unsubscribe = firestore()
+      .collection("feedback")
+      .where("pageKey", "==", pageKey)
+      .orderBy("createdAt", "desc")
+      .onSnapshot(
+        (snapshot) => {
+          const list: Feedback[] = snapshot.docs.map((doc) => {
+            const data = doc.data();
+            return {
+              id: doc.id,
+              user: data.user,
+              text: data.text,
+              likes: data.likes || [],
+              dislikes: data.dislikes || [],
+              createdAt: data.createdAt?.toMillis?.() ?? Date.now(),
+            };
+          });
+          setItems(list);
+        },
+        (err) => console.error("Lỗi tải góp ý:", err)
+      );
+    return unsubscribe;
+  }, [pageKey]);
 
   const handleSubmit = async () => {
     if (submitting) return;
     if (!currentUser) {
-      Alert.alert(
-        "Cần đăng nhập",
-        "Bạn vui lòng quay về trang chủ và đăng nhập để gửi góp ý.",
-      );
+      Alert.alert("Cần đăng nhập", "Bạn vui lòng quay về trang chủ và đăng nhập để gửi góp ý.");
       return;
     }
     const content = text.trim();
     if (!content) return;
+
+    if (containsBannedWord(content)) {
+      Alert.alert(
+        "Không thể gửi",
+        "Nội dung góp ý chứa từ ngữ không phù hợp, vui lòng chỉnh sửa lại.",
+      );
+      return;
+    }
+
     setSubmitting(true);
-    const next: Feedback[] = [
-      {
-        id: `${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+    try {
+      await firestore().collection("feedback").add({
+        pageKey,
         user: currentUser,
         text: content,
         likes: [],
         dislikes: [],
-        createdAt: Date.now(),
-      },
-      ...items,
-    ];
-    await persist(next);
-    setText("");
-    setSubmitting(false);
+        createdAt: firestore.FieldValue.serverTimestamp(),
+      });
+      setText("");
+    } catch (err) {
+      Alert.alert("Lỗi", "Không thể gửi góp ý, vui lòng thử lại.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
-  const handleVote = (id: string, type: "like" | "dislike") => {
+  const handleVote = async (id: string, type: "like" | "dislike") => {
     if (!currentUser) {
-      Alert.alert(
-        "Cần đăng nhập",
-        "Bạn vui lòng quay về trang chủ và đăng nhập để bình chọn.",
-      );
+      Alert.alert("Cần đăng nhập", "Bạn vui lòng quay về trang chủ và đăng nhập để bình chọn.");
       return;
     }
-    const next = items.map((it) => {
-      if (it.id !== id) return it;
-      const likes = new Set(it.likes);
-      const dislikes = new Set(it.dislikes);
+    const target = items.find((it) => it.id === id);
+    if (!target) return;
+
+    const ref = firestore().collection("feedback").doc(id);
+    const liked = target.likes.includes(currentUser);
+    const disliked = target.dislikes.includes(currentUser);
+
+    try {
       if (type === "like") {
-        if (likes.has(currentUser)) likes.delete(currentUser);
-        else {
-          likes.add(currentUser);
-          dislikes.delete(currentUser);
-        }
+        await ref.update({
+          likes: liked
+            ? firestore.FieldValue.arrayRemove(currentUser)
+            : firestore.FieldValue.arrayUnion(currentUser),
+          dislikes: firestore.FieldValue.arrayRemove(currentUser),
+        });
       } else {
-        if (dislikes.has(currentUser)) dislikes.delete(currentUser);
-        else {
-          dislikes.add(currentUser);
-          likes.delete(currentUser);
-        }
+        await ref.update({
+          dislikes: disliked
+            ? firestore.FieldValue.arrayRemove(currentUser)
+            : firestore.FieldValue.arrayUnion(currentUser),
+          likes: firestore.FieldValue.arrayRemove(currentUser),
+        });
       }
-      return { ...it, likes: [...likes], dislikes: [...dislikes] };
-    });
-    persist(next);
+    } catch (err) {
+      console.error("Lỗi vote:", err);
+    }
   };
 
   const visible = showAll ? items : items.slice(0, 3);

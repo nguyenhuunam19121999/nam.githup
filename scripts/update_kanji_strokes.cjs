@@ -47,6 +47,7 @@ const SOURCES = {
     '../assets/data_nn/n1.json',
   ],
   sentences: '../assets/sentences/sentences.json',
+  kanjiFull: '../assets/data_JLPT_kanji/kanjifull.json',
 };
 
 // ── HÀM TIỆN ÍCH ──────────────────────────────────────────────────────────
@@ -64,7 +65,7 @@ function readJsonFile(filePath) {
 function extractKanjiFromText(text) {
   if (!text || typeof text !== 'string') return [];
   const matches = text.match(KANJI_REGEX) || [];
-  return [...new Set(matches)];
+  return [...new Set(matches.map(k => k.normalize('NFC')))];   
 }
 
 function extractKanjiFromObject(obj) {
@@ -128,6 +129,23 @@ function scanAllKanji() {
   const sentences = readJsonFile(SOURCES.sentences);
   if (Array.isArray(sentences)) {
     extractKanjiFromObject(sentences).forEach(k => kanjiSet.add(k));
+  }
+
+  console.log('📚 Đang quét KANJIFULL...');
+  const kanjiFullData = readJsonFile(SOURCES.kanjiFull);
+  if (kanjiFullData) {
+    if (Array.isArray(kanjiFullData)) {
+      kanjiFullData.forEach((item) => {
+        if (!item || typeof item !== 'object') return;
+        Object.keys(item).forEach(k => {
+          extractKanjiFromText(k).forEach(ch => kanjiSet.add(ch));
+        });
+      });
+    } else if (typeof kanjiFullData === 'object') {
+      Object.keys(kanjiFullData).forEach(k => {
+        extractKanjiFromText(k).forEach(ch => kanjiSet.add(ch));
+      });
+    }
   }
 
   return [...kanjiSet].sort((a, b) => a.localeCompare(b));
@@ -194,6 +212,25 @@ async function main() {
   if (fs.existsSync(FILE_PATH)) {
     existingData = JSON.parse(fs.readFileSync(FILE_PATH, 'utf8'));
     console.log(`📁 File hiện tại có: ${Object.keys(existingData).length} chữ`);
+
+    // 🔧 Dọn key bị lẫn ký tự compatibility (NFC normalize + gộp trùng)
+    const cleaned = {};
+    let mergedCount = 0;
+    for (const [k, paths] of Object.entries(existingData)) {
+      const normK = k.normalize('NFC');
+      if (normK !== k) {
+        console.warn(`  🔧 Gộp key trùng do lệch Unicode: "${k}" → "${normK}"`);
+        mergedCount++;
+      }
+      // Nếu đã có key chuẩn rồi mà key cũ có nhiều nét hơn thì giữ bản nhiều nét hơn
+      if (!cleaned[normK] || (paths?.length ?? 0) > (cleaned[normK]?.length ?? 0)) {
+        cleaned[normK] = paths;
+      }
+    }
+    existingData = cleaned;
+    if (mergedCount > 0) {
+      console.log(`✅ Đã gộp ${mergedCount} key bị trùng do lỗi Unicode cũ`);
+    }
   } else {
     console.log('📁 Chưa có file, sẽ tạo mới');
   }

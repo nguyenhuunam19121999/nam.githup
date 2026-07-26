@@ -44,10 +44,10 @@ const examLevels: ExamLevel[] = [
     title: "Trung cấp", 
     description: "Tổng hợp bộ đề thi JLPT N3", 
     icon: "🌸", 
-    // color: "#F59E0B",
-    // isUpdated: true,
-    color: "#94A3B8", // đóng
-    isUpdated: false, // đóng
+    color: "#F59E0B",
+    isUpdated: true,
+    // color: "#94A3B8", // đóng
+    // isUpdated: false, // đóng
     // ✅ Khai báo trực tiếp danh sách file đề của bạn tại đây
     exams: [
       { name: "Đề luyện thi số 1", file: "n3_01", description: "Từ vựng, Ngữ pháp, Đọc hiểu & Nghe hiểu" }

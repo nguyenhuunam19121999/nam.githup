@@ -42,9 +42,30 @@ interface PartConfig {
 }
 
 const PARTS: PartConfig[] = [
-  { key: "kanji",   label: "Hán tự",  jpLabel: "漢字", color: TEXT_COLOR_kanji, weeks: 8, lessonsPerWeek: 6 },
-  { key: "vocab",   label: "Từ vựng", jpLabel: "語彙", color: TEXT_COLOR_vocab, weeks: 8, lessonsPerWeek: 6 },
-  { key: "grammar", label: "Ngữ pháp",jpLabel: "文法", color: TEXT_COLOR_grammar, weeks: 8, lessonsPerWeek: 0 },
+  {
+    key: "kanji",
+    label: "Hán tự",
+    jpLabel: "漢字",
+    color: TEXT_COLOR_kanji,
+    weeks: 8,
+    lessonsPerWeek: 6,
+  },
+  {
+    key: "vocab",
+    label: "Từ vựng",
+    jpLabel: "語彙",
+    color: TEXT_COLOR_vocab,
+    weeks: 8,
+    lessonsPerWeek: 6,
+  },
+  {
+    key: "grammar",
+    label: "Ngữ pháp",
+    jpLabel: "文法",
+    color: TEXT_COLOR_grammar,
+    weeks: 8,
+    lessonsPerWeek: 0,
+  },
 ];
 
 // ─── Group kanji/vocab by week → lesson ──────────────────────────────────────
@@ -52,24 +73,33 @@ function groupByWeekLesson<T extends { week?: number; lesson?: number }>(
   items: T[],
   numWeeks: number,
   lessonsPerWeek: number,
-): { week: number; total: number; lessons: { lesson: number; items: T[] }[] }[] {
-  const actualWeeks = items.length > 0
-    ? Math.max(...items.map((i) => i.week ?? 0), numWeeks)
-    : numWeeks;
+): {
+  week: number;
+  total: number;
+  lessons: { lesson: number; items: T[] }[];
+}[] {
+  const actualWeeks =
+    items.length > 0
+      ? Math.max(...items.map((i) => i.week ?? 0), numWeeks)
+      : numWeeks;
 
   return Array.from({ length: actualWeeks }, (_, wi) => {
     const w = wi + 1;
     const weekItems = items.filter((i) => i.week === w);
 
     const lessonsInWeek = weekItems.map((i) => i.lesson ?? 0);
-    const isPerWeekLesson = lessonsInWeek.length > 0
-      && lessonsInWeek.every((l) => l >= 1 && l <= lessonsPerWeek);
+    const isPerWeekLesson =
+      lessonsInWeek.length > 0 &&
+      lessonsInWeek.every((l) => l >= 1 && l <= lessonsPerWeek);
 
     const lessons = Array.from({ length: lessonsPerWeek }, (_, li) => {
       const globalL = wi * lessonsPerWeek + li + 1;
       const localL = li + 1;
       const targetLesson = isPerWeekLesson ? localL : globalL;
-      return { lesson: globalL, items: weekItems.filter((i) => i.lesson === targetLesson) };
+      return {
+        lesson: globalL,
+        items: weekItems.filter((i) => i.lesson === targetLesson),
+      };
     });
 
     const total = lessons.reduce((s, l) => s + l.items.length, 0);
@@ -84,7 +114,12 @@ function groupGrammarByWeek(
 ): { week: number; items: GrammarItem[] }[] {
   return Array.from({ length: numWeeks }, (_, wi) => {
     const w = wi + 1;
-    return { week: w, items: items.filter((g) => (g as GrammarItem & { week?: number }).week === w) };
+    return {
+      week: w,
+      items: items.filter(
+        (g) => (g as GrammarItem & { week?: number }).week === w,
+      ),
+    };
   });
 }
 
@@ -94,16 +129,37 @@ export default function SoumatomeN2Screen() {
   const [activePart, setActivePart] = useState<Part>("kanji");
   const [expandedWeeks, setExpandedWeeks] = useState<Set<number>>(new Set([1]));
 
-  const kanjiData = useMemo(() => getKanjiByBook("soumatome-n2") as (KanjiItem & { lesson?: number; week?: number })[], []);
-  const vocabData  = useMemo(() => getVocabByBook("soumatome-n2") as (RawVocab & { lesson?: number; week?: number })[], []);
+  const kanjiData = useMemo(
+    () =>
+      getKanjiByBook("soumatome-n2") as (KanjiItem & {
+        lesson?: number;
+        week?: number;
+      })[],
+    [],
+  );
+  const vocabData = useMemo(
+    () =>
+      getVocabByBook("soumatome-n2") as (RawVocab & {
+        lesson?: number;
+        week?: number;
+      })[],
+    [],
+  );
   const grammarData = useMemo(() => getGrammarByBook("soumatome-n2"), []);
 
-  const kanjiWeeks   = useMemo(() => groupByWeekLesson(kanjiData, 8, 6), [kanjiData]);
-  const vocabWeeks   = useMemo(() => groupByWeekLesson(vocabData, 8, 6), [vocabData]);
+  const kanjiWeeks = useMemo(
+    () => groupByWeekLesson(kanjiData, 8, 6),
+    [kanjiData],
+  );
+  const vocabWeeks = useMemo(
+    () => groupByWeekLesson(vocabData, 8, 6),
+    [vocabData],
+  );
   const grammarWeeks = useMemo(() => {
-    const actualWeeks = grammarData.length > 0
-      ? Math.max(...grammarData.map((g) => (g as any).week ?? 0))
-      : 8;
+    const actualWeeks =
+      grammarData.length > 0
+        ? Math.max(...grammarData.map((g) => (g as any).week ?? 0))
+        : 8;
     return groupGrammarByWeek(grammarData, actualWeeks);
   }, [grammarData]);
   // const grammarWeeks = useMemo(() => groupGrammarByWeek(grammarData, 7), [grammarData]);
@@ -128,21 +184,33 @@ export default function SoumatomeN2Screen() {
   const goKanjiLesson = (lesson: number) => {
     router.push({
       pathname: "/kanji",
-      params: { bookId: "soumatome-n2", lesson: String(lesson), title: `漢字 · Bài ${lesson}` },
+      params: {
+        bookId: "soumatome-n2",
+        lesson: String(lesson),
+        title: `漢字 · Bài ${lesson}`,
+      },
     });
   };
 
   const goVocabLesson = (lesson: number) => {
     router.push({
       pathname: "/vocab",
-      params: { bookId: "soumatome-n2", lesson: String(lesson), title: `語彙 · Bài ${lesson}` },
+      params: {
+        bookId: "soumatome-n2",
+        lesson: String(lesson),
+        title: `語彙 · Bài ${lesson}`,
+      },
     });
   };
 
   const goGrammarWeek = (week: number, count: number) => {
     router.push({
       pathname: "/grammar",
-      params: { bookId: "soumatome-n2", week: String(week), title: `文法 · Tuần ${week} (${count} mẫu)` },
+      params: {
+        bookId: "soumatome-n2",
+        week: String(week),
+        title: `文法 · Tuần ${week} (${count} mẫu)`,
+      },
     });
   };
 
@@ -151,97 +219,110 @@ export default function SoumatomeN2Screen() {
     weeks: ReturnType<typeof groupByWeekLesson>,
     color: string,
     onLesson: (l: number) => void,
-  ) => weeks.map(({ week, total, lessons }) => {
-    const isOpen = expandedWeeks.has(week);
-    return (
-      <View key={week} style={s.weekCard}>
-        {/* Week header row */}
-        <TouchableOpacity
-          style={[s.weekHeader, { borderLeftColor: color }]}
-          onPress={() => toggleWeek(week)}
-          activeOpacity={0.75}
-        >
-          <View style={[s.weekBadge, { backgroundColor: color }]}>
-            <Text style={s.weekBadgeJP}>第{week}週</Text>
-            <Text style={s.weekBadgeVI}>Tuần {week}</Text>
-          </View>
-          <View style={s.weekMeta}>
-            <Text style={s.weekMetaLessons}>{lessons.length} bài học</Text>
-            <Text style={s.weekMetaCount}>{total} mục</Text>
-          </View>
-          <View style={[s.progressBar]}>
-            <View style={[s.progressFill, { backgroundColor: color, width: "0%" }]} />
-          </View>
-          <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
-        </TouchableOpacity>
+  ) =>
+    weeks.map(({ week, total, lessons }) => {
+      const isOpen = expandedWeeks.has(week);
+      return (
+        <View key={week} style={s.weekCard}>
+          {/* Week header row */}
+          <TouchableOpacity
+            style={[s.weekHeader, { borderLeftColor: color }]}
+            onPress={() => toggleWeek(week)}
+            activeOpacity={0.75}
+          >
+            <View style={[s.weekBadge, { backgroundColor: color }]}>
+              <Text style={s.weekBadgeJP}>第{week}週</Text>
+              <Text style={s.weekBadgeVI}>Tuần {week}</Text>
+            </View>
+            <View style={s.weekMeta}>
+              <Text style={s.weekMetaLessons}>{lessons.length} bài học</Text>
+              <Text style={s.weekMetaCount}>{total} mục</Text>
+            </View>
+            <View style={[s.progressBar]}>
+              <View
+                style={[
+                  s.progressFill,
+                  { backgroundColor: color, width: "0%" },
+                ]}
+              />
+            </View>
+            <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
+          </TouchableOpacity>
 
-        {/* Lessons inside week */}
-        {isOpen && (
-          <View style={s.lessonsWrap}>
-            {lessons.map(({ lesson, items }) => (
-              <TouchableOpacity
-                key={lesson}
-                style={s.lessonRow}
-                onPress={() => onLesson(lesson)}
-                activeOpacity={0.7}
-              >
-                <View style={[s.lessonNumCircle, { borderColor: color }]}>
-                  <Text style={[s.lessonNumText, { color }]}>{lesson}</Text>
-                </View>
-                <View style={s.lessonInfo}>
-                  <Text style={s.lessonTitle}>Bài {lesson}</Text>
-                  <Text style={s.lessonCount}>{items.length} mục</Text>
-                </View>
-                <View style={[s.studyBtn, { backgroundColor: color }]}>
-                  <Text style={s.studyBtnText}>Học ▶</Text>
-                </View>
-              </TouchableOpacity>
-            ))}
-          </View>
-        )}
-      </View>
-    );
-  });
+          {/* Lessons inside week */}
+          {isOpen && (
+            <View style={s.lessonsWrap}>
+              {lessons.map(({ lesson, items }) => (
+                <TouchableOpacity
+                  key={lesson}
+                  style={s.lessonRow}
+                  onPress={() => onLesson(lesson)}
+                  activeOpacity={0.7}
+                >
+                  <View style={[s.lessonNumCircle, { borderColor: color }]}>
+                    <Text style={[s.lessonNumText, { color }]}>{lesson}</Text>
+                  </View>
+                  <View style={s.lessonInfo}>
+                    <Text style={s.lessonTitle}>Bài {lesson}</Text>
+                    <Text style={s.lessonCount}>{items.length} mục</Text>
+                  </View>
+                  <View style={[s.studyBtn, { backgroundColor: color }]}>
+                    <Text style={s.studyBtnText}>Học ▶</Text>
+                  </View>
+                </TouchableOpacity>
+              ))}
+            </View>
+          )}
+        </View>
+      );
+    });
 
   // ── Render grammar weeks ────────────────────────────────────────────────────
-  const renderGrammarWeeks = () => grammarWeeks.map(({ week, items }) => {
-    const isOpen = expandedWeeks.has(week);
-    const color = TEXT_COLOR_grammar;
-    const preview = items.slice(0, 4).map((g) => g.pattern).join("・");
-    return (
-      <View key={week} style={s.weekCard}>
-        <TouchableOpacity
-          style={[s.weekHeader, { borderLeftColor: color }]}
-          onPress={() => toggleWeek(week)}
-          activeOpacity={0.75}
-        >
-          <View style={[s.weekBadge, { backgroundColor: color }]}>
-            <Text style={s.weekBadgeJP}>第{week}週</Text>
-            <Text style={s.weekBadgeVI}>Tuần {week}</Text>
-          </View>
-          <View style={s.weekMeta}>
-            <Text style={s.weekMetaLessons}>{items.length} mẫu</Text>
-            <Text style={s.weekMetaCount}>Ngữ pháp</Text>
-          </View>
-          <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
-        </TouchableOpacity>
-        {isOpen && (
-          <View style={s.grammarContent}>
-            <Text style={s.grammarPreview} numberOfLines={2}>
-              {preview}{items.length > 4 ? "..." : ""}
-            </Text>
-            <TouchableOpacity
-              style={[s.grammarStudyBtn, { backgroundColor: color }]}
-              onPress={() => goGrammarWeek(week, items.length)}
-              activeOpacity={0.8}
-            >
-              <Text style={s.grammarStudyBtnText}>Học {items.length} mẫu ngữ pháp  ▶</Text>
-            </TouchableOpacity>
-          </View>
-        )}
-      </View>
-    );
-  });
+  const renderGrammarWeeks = () =>
+    grammarWeeks.map(({ week, items }) => {
+      const isOpen = expandedWeeks.has(week);
+      const color = TEXT_COLOR_grammar;
+      const preview = items
+        .slice(0, 4)
+        .map((g) => g.pattern)
+        .join("・");
+      return (
+        <View key={week} style={s.weekCard}>
+          <TouchableOpacity
+            style={[s.weekHeader, { borderLeftColor: color }]}
+            onPress={() => toggleWeek(week)}
+            activeOpacity={0.75}
+          >
+            <View style={[s.weekBadge, { backgroundColor: color }]}>
+              <Text style={s.weekBadgeJP}>第{week}週</Text>
+              <Text style={s.weekBadgeVI}>Tuần {week}</Text>
+            </View>
+            <View style={s.weekMeta}>
+              <Text style={s.weekMetaLessons}>{items.length} mẫu</Text>
+              <Text style={s.weekMetaCount}>Ngữ pháp</Text>
+            </View>
+            <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
+          </TouchableOpacity>
+          {isOpen && (
+            <View style={s.grammarContent}>
+              <Text style={s.grammarPreview} numberOfLines={2}>
+                {preview}
+                {items.length > 4 ? "..." : ""}
+              </Text>
+              <TouchableOpacity
+                style={[s.grammarStudyBtn, { backgroundColor: color }]}
+                onPress={() => goGrammarWeek(week, items.length)}
+                activeOpacity={0.8}
+              >
+                <Text style={s.grammarStudyBtnText}>
+                  Học {items.length} mẫu ngữ pháp ▶
+                </Text>
+              </TouchableOpacity>
+            </View>
+          )}
+        </View>
+      );
+    });
 
   return (
     <View style={s.root}>
@@ -251,7 +332,11 @@ export default function SoumatomeN2Screen() {
       <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
         <SafeAreaView edges={["top", "left", "right"]}>
           <View style={s.headerTopRow}>
-            <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
+            <TouchableOpacity
+              style={s.backBtn}
+              onPress={() => router.back()}
+              activeOpacity={0.7}
+            >
               <Text style={s.backIcon}>‹</Text>
             </TouchableOpacity>
             <Text style={s.headerTitle}>総まとめ N2</Text>
@@ -287,7 +372,9 @@ export default function SoumatomeN2Screen() {
                   onPress={() => switchPart(p.key)}
                   activeOpacity={0.8}
                 >
-                  <Text style={[s.partTabJP, active && s.partTabJPActive]}>{p.jpLabel}</Text>
+                  <Text style={[s.partTabJP, active && s.partTabJPActive]}>
+                    {p.jpLabel}
+                  </Text>
                   {/* <Text style={[s.partTabVI, active && s.partTabVIActive]}>{p.label}</Text> */}
                 </TouchableOpacity>
               );
@@ -308,7 +395,8 @@ export default function SoumatomeN2Screen() {
           <Text style={s.sectionLabelVI}> · {currentPart.label}</Text>
           {activePart !== "grammar" && (
             <Text style={s.sectionLabelMeta}>
-              {currentPart.weeks} tuần · {currentPart.weeks * currentPart.lessonsPerWeek} bài
+              {currentPart.weeks} tuần ·{" "}
+              {currentPart.weeks * currentPart.lessonsPerWeek} bài
             </Text>
           )}
           {activePart === "grammar" && (
@@ -316,8 +404,10 @@ export default function SoumatomeN2Screen() {
           )}
         </View>
 
-        {activePart === "kanji"   && renderWeekLesson(kanjiWeeks, TEXT_COLOR_kanji, goKanjiLesson)}
-        {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any, TEXT_COLOR_vocab, goVocabLesson)}
+        {activePart === "kanji" &&
+          renderWeekLesson(kanjiWeeks, TEXT_COLOR_kanji, goKanjiLesson)}
+        {activePart === "vocab" &&
+          renderWeekLesson(vocabWeeks as any, TEXT_COLOR_vocab, goVocabLesson)}
         {activePart === "grammar" && renderGrammarWeeks()}
 
         <View style={{ height: 16 }} />
@@ -343,12 +433,25 @@ const s = StyleSheet.create({
   },
   titleWrap: { flex: 1 },
   backBtn: {
-    width: 40, height: 40, borderRadius: 20,
-    alignItems: "center", justifyContent: "center",
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
   },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-  headerTitle: { color: "#fff", fontSize: 20, fontWeight: "900", letterSpacing: 0.5 },
-  headerSub:   { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600", marginTop: 2 },
+  headerTitle: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "900",
+    letterSpacing: 0.5,
+  },
+  headerSub: {
+    color: "rgba(255,255,255,0.75)",
+    fontSize: 11,
+    fontWeight: "600",
+    marginTop: 2,
+  },
 
   /* Summary chips */
   // summaryRow: {
@@ -379,7 +482,11 @@ const s = StyleSheet.create({
     borderRadius: 12,
     backgroundColor: "rgba(255,255,255,0.18)",
   },
-  partTabJP:       { color: "rgba(255,255,255,0.85)", fontSize: 16, fontWeight: "900" },
+  partTabJP: {
+    color: "rgba(255,255,255,0.85)",
+    fontSize: 16,
+    fontWeight: "900",
+  },
   partTabJPActive: { color: "#fff" },
   // partTabVI:       { color: "rgba(255,255,255,0.65)", fontSize: 9,  fontWeight: "600", marginTop: 1 },
   // partTabVIActive: { color: "rgba(255,255,255,0.9)" },
@@ -397,8 +504,8 @@ const s = StyleSheet.create({
     marginBottom: 12,
     marginTop: 4,
   },
-  sectionLabelJP:   { fontSize: 15, fontWeight: "900", color: "#0f172a" },
-  sectionLabelVI:   { fontSize: 13, fontWeight: "700", color: "#475569" },
+  sectionLabelJP: { fontSize: 15, fontWeight: "900", color: "#0f172a" },
+  sectionLabelVI: { fontSize: 13, fontWeight: "700", color: "#475569" },
   sectionLabelMeta: { fontSize: 11, color: "#94a3b8", marginLeft: "auto" },
 
   /* Week card */
@@ -421,18 +528,31 @@ const s = StyleSheet.create({
     gap: 10,
   },
   weekBadge: {
-    width: 56, height: 56, borderRadius: 10,
-    alignItems: "center", justifyContent: "center",
+    width: 56,
+    height: 56,
+    borderRadius: 10,
+    alignItems: "center",
+    justifyContent: "center",
   },
   weekBadgeJP: { color: "#fff", fontSize: 13, fontWeight: "900" },
-  weekBadgeVI: { color: "rgba(255,255,255,0.85)", fontSize: 9, fontWeight: "700", marginTop: 1 },
-  weekMeta:   { flex: 1 },
+  weekBadgeVI: {
+    color: "rgba(255,255,255,0.85)",
+    fontSize: 9,
+    fontWeight: "700",
+    marginTop: 1,
+  },
+  weekMeta: { flex: 1 },
   weekMetaLessons: { fontSize: 15, fontWeight: "800", color: "#0f172a" },
-  weekMetaCount:   { fontSize: 12, color: "#64748b", marginTop: 2 },
-  progressBar:     { width: 60, height: 4, backgroundColor: "#e2e8f0", borderRadius: 2 },
-  progressFill:    { height: 4, borderRadius: 2 },
-  chevron:         { fontSize: 24, color: "#94a3b8", transform: [{ rotate: "0deg" }] },
-  chevronOpen:     { transform: [{ rotate: "90deg" }] },
+  weekMetaCount: { fontSize: 12, color: "#64748b", marginTop: 2 },
+  progressBar: {
+    width: 60,
+    height: 4,
+    backgroundColor: "#e2e8f0",
+    borderRadius: 2,
+  },
+  progressFill: { height: 4, borderRadius: 2 },
+  chevron: { fontSize: 24, color: "#94a3b8", transform: [{ rotate: "0deg" }] },
+  chevronOpen: { transform: [{ rotate: "90deg" }] },
 
   /* Lessons inside week */
   lessonsWrap: { borderTopWidth: 1, borderTopColor: "#f1f5f9" },
@@ -446,16 +566,21 @@ const s = StyleSheet.create({
     gap: 12,
   },
   lessonNumCircle: {
-    width: 36, height: 36, borderRadius: 18,
-    borderWidth: 1.5, alignItems: "center", justifyContent: "center",
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    borderWidth: 1.5,
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "#f8fafc",
   },
   lessonNumText: { fontSize: 13, fontWeight: "800" },
-  lessonInfo:    { flex: 1 },
-  lessonTitle:   { fontSize: 14, fontWeight: "700", color: "#1e293b" },
-  lessonCount:   { fontSize: 11, color: "#64748b", marginTop: 1 },
+  lessonInfo: { flex: 1 },
+  lessonTitle: { fontSize: 14, fontWeight: "700", color: "#1e293b" },
+  lessonCount: { fontSize: 11, color: "#64748b", marginTop: 1 },
   studyBtn: {
-    paddingHorizontal: 12, paddingVertical: 6,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
     borderRadius: 8,
   },
   studyBtnText: { color: "#fff", fontSize: 12, fontWeight: "800" },

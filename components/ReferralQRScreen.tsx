@@ -19,7 +19,8 @@ interface Props {
   onClose: () => void;
 }
 
-const REWARD_CONTACT_FB_URL = "https://www.facebook.com/profile.php?id=61592659400404";
+const REWARD_CONTACT_FB_URL =
+  "https://www.facebook.com/profile.php?id=61592659400404";
 
 export default function ReferralQRScreen({ onClose }: Props) {
   const { currentUser, firebaseUid, referralCode } = useAuth();
@@ -102,20 +103,26 @@ export default function ReferralQRScreen({ onClose }: Props) {
                     text: "Mở Facebook",
                     onPress: () => {
                       Linking.openURL(REWARD_CONTACT_FB_URL).catch(() => {
-                        Alert.alert("Lỗi", "Không thể mở Facebook, vui lòng thử lại.");
+                        Alert.alert(
+                          "Lỗi",
+                          "Không thể mở Facebook, vui lòng thử lại.",
+                        );
                       });
                     },
                   },
-                ]
+                ],
               );
             } catch (error: any) {
-              Alert.alert("Lỗi", error?.message || "Không thể đổi thưởng lúc này, thử lại sau.");
+              Alert.alert(
+                "Lỗi",
+                error?.message || "Không thể đổi thưởng lúc này, thử lại sau.",
+              );
             } finally {
               setClaiming(false);
             }
           },
         },
-      ]
+      ],
     );
   };
 
@@ -151,9 +158,7 @@ export default function ReferralQRScreen({ onClose }: Props) {
           )}
         </View>
 
-        {referralCode && (
-          <Text style={styles.codeText}>{referralCode}</Text>
-        )}
+        {referralCode && <Text style={styles.codeText}>{referralCode}</Text>}
 
         {/* Hộp quà + điểm */}
         <TouchableOpacity
@@ -165,10 +170,18 @@ export default function ReferralQRScreen({ onClose }: Props) {
           <Text style={styles.giftEmoji}>{canClaim ? "🎁" : "📦"}</Text>
           <Text style={styles.giftPoints}>{livePoints} điểm</Text>
           {claiming ? (
-            <ActivityIndicator size="small" color="#004370" style={{ marginTop: 6 }} />
+            <ActivityIndicator
+              size="small"
+              color="#004370"
+              style={{ marginTop: 6 }}
+            />
           ) : (
-            <Text style={[styles.giftStatus, canClaim && styles.giftStatusReady]}>
-              {canClaim ? `Chạm để đổi thưởng (${rewardThreshold} điểm)` : `Cần đủ ${rewardThreshold} điểm để đổi thưởng`}
+            <Text
+              style={[styles.giftStatus, canClaim && styles.giftStatusReady]}
+            >
+              {canClaim
+                ? `Chạm để đổi thưởng (${rewardThreshold} điểm)`
+                : `Cần đủ ${rewardThreshold} điểm để đổi thưởng`}
             </Text>
           )}
         </TouchableOpacity>
@@ -191,7 +204,12 @@ const styles = StyleSheet.create({
   headerTitle: { fontSize: 16, fontWeight: "bold", color: "#2f3640" },
   closeButton: { padding: 6, backgroundColor: "#e74c3c", borderRadius: 4 },
   closeText: { color: "#fff", fontWeight: "bold", fontSize: 12 },
-  content: { flex: 1, alignItems: "center", justifyContent: "center", padding: 20 },
+  content: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: 20,
+  },
   userText: { fontSize: 14, color: "#7f8c8d", marginBottom: 8 },
   hintText: {
     textAlign: "center",
@@ -223,7 +241,7 @@ const styles = StyleSheet.create({
   giftBox: {
     marginTop: 24,
     width: "100%",
-    maxWidth: 420, 
+    maxWidth: 420,
     alignSelf: "center",
     backgroundColor: "#f1f5f9",
     borderRadius: 16,
@@ -238,6 +256,11 @@ const styles = StyleSheet.create({
   },
   giftEmoji: { fontSize: 40, marginBottom: 6 },
   giftPoints: { fontSize: 20, fontWeight: "900", color: "#0f172a" },
-  giftStatus: { marginTop: 6, fontSize: 12, color: "#94a3b8", textAlign: "center" },
+  giftStatus: {
+    marginTop: 6,
+    fontSize: 12,
+    color: "#94a3b8",
+    textAlign: "center",
+  },
   giftStatusReady: { color: "#b45309", fontWeight: "700" },
 });

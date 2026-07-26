@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// scripts/buildDb.cjs
+// node scripts/buildDb.cjs
 // Build multiple SQLite asset files from the JSON source data.
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -247,12 +247,16 @@ function insertKanjiFull(db, filePath) {
     let count = 0;
     for (const [kanjiChar, item] of list) {
       if (!kanjiChar || !item) continue;
-      const unicode = item.metadata?.Unicode || charToUnicode(kanjiChar);
+      const normalizedKanji = kanjiChar.normalize('NFC');   
+      if (normalizedKanji !== kanjiChar) {
+        console.warn(`  🔧 NFC normalize kanji: "${kanjiChar}" (${[...kanjiChar].map(c=>c.codePointAt(0).toString(16)).join(',')}) → "${normalizedKanji}"`);
+      }
+      const unicode = item.metadata?.Unicode || charToUnicode(normalizedKanji);   
       const kunyomi = Array.isArray(item.readings?.kunyomi) ? item.readings.kunyomi : [];
       const onyomi = Array.isArray(item.readings?.onyomi) ? item.readings.onyomi : [];
       stmt.run({
-        id: unicode || kanjiChar,
-        kanji: kanjiChar,
+        id: unicode || normalizedKanji,
+        kanji: normalizedKanji,   
         strokes: typeof item.strokes === 'number' ? item.strokes : null,
         freq: item.freq !== undefined ? String(item.freq) : null,
         jlpt: item.jlpt || 'N/A',
@@ -289,7 +293,8 @@ function insertKanjiStrokes(db, filePath) {
     let count = 0;
     for (const [char, paths] of entries) {
       if (!char || !Array.isArray(paths) || paths.length === 0) continue;
-      stmt.run({ kanji: char, paths: JSON.stringify(paths) });
+      const normalizedChar = char.normalize('NFC');   
+      stmt.run({ kanji: normalizedChar, paths: JSON.stringify(paths) });
       count++;
     }
     return count;
@@ -320,7 +325,7 @@ function insertKanjiBookFile(db, filePath, defaultLevel, bookId) {
       const onyomi = Array.isArray(item.readings?.onyomi) ? item.readings.onyomi : [];
       stmt.run({
         id,
-        kanji: item.kanji,
+        kanji: item.kanji.normalize('NFC'),
         hira: item.hira || '',
         hanviet: toJson(item.hanviet),
         strokes: typeof item.strokes === 'number' ? item.strokes : null,
@@ -369,7 +374,7 @@ function insertVocabFile(db, filePath, { level, book, source }) {
     list.forEach((item) => {
       if (!item || !item.kanji) return;
       stmt.run({
-        kanji: item.kanji,
+        kanji: item.kanji.normalize('NFC'),
         hira: item.hira || '',
         han: item.han || null,
         nghia: item.nghia || '',

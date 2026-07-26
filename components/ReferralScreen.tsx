@@ -22,7 +22,11 @@ interface ReferralScreenProps {
   onClose: () => void;
 }
 
-export default function ReferralScreen({ currentUser, scopedKey, onClose }: ReferralScreenProps) {
+export default function ReferralScreen({
+  currentUser,
+  scopedKey,
+  onClose,
+}: ReferralScreenProps) {
   const { referralCode: myOwnCode } = useAuth();
   const [loading, setLoading] = useState(false);
   const [localPoints, setLocalPoints] = useState(0);
@@ -67,7 +71,9 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
         return;
       }
 
-      const deviceRef = firestore().collection("activated_devices").doc(myDeviceId);
+      const deviceRef = firestore()
+        .collection("activated_devices")
+        .doc(myDeviceId);
       const deviceDoc = await deviceRef.get();
 
       if (deviceDoc.exists()) {
@@ -109,10 +115,13 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
         if (err.message === "CODE_ALREADY_CLAIMED") {
           Alert.alert(
             "Từ chối",
-            "Mã giới thiệu này đã được dùng để nhận thưởng rồi, không thể dùng lại lần nữa."
+            "Mã giới thiệu này đã được dùng để nhận thưởng rồi, không thể dùng lại lần nữa.",
           );
         } else {
-          Alert.alert("Lỗi kết nối", "Không thể kết nối đến Firestore. Vui lòng kiểm tra mạng Internet.");
+          Alert.alert(
+            "Lỗi kết nối",
+            "Không thể kết nối đến Firestore. Vui lòng kiểm tra mạng Internet.",
+          );
         }
         setLoading(false);
         return;
@@ -132,10 +141,16 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
       await AsyncStorage.setItem(scopedKey("points"), newPoints.toString());
       setLocalPoints(newPoints);
 
-      Alert.alert("Thành công", "Bạn đã nhập mã và người giới thiệu được cộng 1 điểm thưởng!");
+      Alert.alert(
+        "Thành công",
+        "Bạn đã nhập mã và người giới thiệu được cộng 1 điểm thưởng!",
+      );
       onClose();
     } catch (error) {
-      Alert.alert("Lỗi kết nối", "Không thể kết nối đến Firestore. Vui lòng kiểm tra mạng Internet.");
+      Alert.alert(
+        "Lỗi kết nối",
+        "Không thể kết nối đến Firestore. Vui lòng kiểm tra mạng Internet.",
+      );
     } finally {
       setLoading(false);
     }
@@ -152,8 +167,12 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
       </View>
 
       <View style={styles.infoBox}>
-        <Text style={styles.userText}>Tài khoản: <Text style={{fontWeight: 'bold'}}>{currentUser}</Text></Text>
-        <Text style={styles.pointsText}>Điểm tích lũy: <Text style={styles.pointNum}>{localPoints}</Text></Text>
+        <Text style={styles.userText}>
+          Tài khoản: <Text style={{ fontWeight: "bold" }}>{currentUser}</Text>
+        </Text>
+        <Text style={styles.pointsText}>
+          Điểm tích lũy: <Text style={styles.pointNum}>{localPoints}</Text>
+        </Text>
       </View>
 
       <View style={styles.content}>
@@ -162,7 +181,7 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
         <View style={styles.manualCard}>
           <TextInput
             style={styles.manualInput}
-            placeholder="Nhập mã giới thiệu (VD: A3K9XZ)"
+            placeholder="Nhập mã giới thiệu (VD: A1B2C3)"
             placeholderTextColor="#94a3b8"
             autoCapitalize="characters"
             autoCorrect={false}
@@ -190,16 +209,41 @@ export default function ReferralScreen({ currentUser, scopedKey, onClose }: Refe
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#f5f6fa" },
-  header: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 16, backgroundColor: "#fff", borderBottomWidth: 1, borderColor: "#e1b12c" },
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    padding: 16,
+    backgroundColor: "#fff",
+    borderBottomWidth: 1,
+    borderColor: "#e1b12c",
+  },
   headerTitle: { fontSize: 16, fontWeight: "bold", color: "#2f3640" },
   closeButton: { padding: 6, backgroundColor: "#e74c3c", borderRadius: 4 },
   closeText: { color: "#fff", fontWeight: "bold", fontSize: 12 },
-  infoBox: { padding: 16, backgroundColor: "#fff", margin: 16, borderRadius: 8, elevation: 2 },
+  infoBox: {
+    padding: 16,
+    backgroundColor: "#fff",
+    margin: 16,
+    borderRadius: 8,
+    elevation: 2,
+  },
   userText: { fontSize: 14, color: "#7f8c8d" },
   pointsText: { fontSize: 16, marginTop: 4, color: "#2c3e50" },
-  pointNum: { fontSize: 24, fontWeight: "bold", color: "#4cd137" },
-  content: { flex: 1, alignItems: "center", paddingHorizontal: 16, paddingTop: 40 },
-  hintText: { textAlign: "center", marginBottom: 20, color: "#353b48", fontSize: 15, fontWeight: "500" },
+  pointNum: { fontSize: 24, fontWeight: "bold", color: "#EA580C" },
+  content: {
+    flex: 1,
+    alignItems: "center",
+    paddingHorizontal: 16,
+    paddingTop: 40,
+  },
+  hintText: {
+    textAlign: "center",
+    marginBottom: 20,
+    color: "#353b48",
+    fontSize: 15,
+    fontWeight: "500",
+  },
   manualCard: {
     width: "100%",
     maxWidth: 420,

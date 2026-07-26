@@ -63,6 +63,10 @@ export default function RootLayout() {
   });
 
   useEffect(() => {
+    ensureKanjiDbReady(); 
+  }, []);
+
+  useEffect(() => {
     if ((fontsLoaded || fontError) && dbReady) {
       SplashScreen.hideAsync();
     }

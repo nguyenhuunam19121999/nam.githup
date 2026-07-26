@@ -66,15 +66,20 @@ const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
   const [renderStroke, setRenderStroke] = useState(false);
 
   useEffect(() => {
+    console.log(`[MemoizedStrokeOrder] "${kanji}" — bắt đầu effect, đặt renderStroke=false`);
     setRenderStroke(false);
     const id = requestAnimationFrame(() => {
+      console.log(`[MemoizedStrokeOrder] "${kanji}" — rAF chạy, đặt renderStroke=true`);
       setRenderStroke(true);
     });
     return () => {
+      console.log(`[MemoizedStrokeOrder] "${kanji}" — cleanup, hủy rAF`);
       cancelAnimationFrame(id);
       setRenderStroke(false);
     };
   }, [kanji]);
+
+  console.log(`[MemoizedStrokeOrder] render "${kanji}" — renderStroke =`, renderStroke);
 
   if (!renderStroke) {
     return (
@@ -86,10 +91,45 @@ const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
 
   return (
     <View style={styles.strokeWrap}>
-      <KanjiStrokeOrder kanji={kanji} size={180} />
+      <KanjiStrokeOrder key={kanji} kanji={kanji} size={180} />
     </View>
   );
+
+  // return (
+  //   <View style={styles.strokeWrap}>
+  //     <KanjiStrokeOrder kanji={kanji} size={180} />
+  //   </View>
+  // );
 });
+
+// const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
+//   const [renderStroke, setRenderStroke] = useState(false);
+
+//   useEffect(() => {
+//     setRenderStroke(false);
+//     const id = requestAnimationFrame(() => {
+//       setRenderStroke(true);
+//     });
+//     return () => {
+//       cancelAnimationFrame(id);
+//       setRenderStroke(false);
+//     };
+//   }, [kanji]);
+
+//   if (!renderStroke) {
+//     return (
+//       <View style={[styles.strokeWrap, { height: 180, justifyContent: 'center' }]}>
+//         <ActivityIndicator color={textColor} />
+//       </View>
+//     );
+//   }
+
+//   return (
+//     <View style={styles.strokeWrap}>
+//       <KanjiStrokeOrder kanji={kanji} size={180} />
+//     </View>
+//   );
+// });
 MemoizedStrokeOrder.displayName = 'MemoizedStrokeOrder';
 
 // ─── Skeleton cho sections đang chờ render ───────────────────────────────────
@@ -153,8 +193,18 @@ export default function KanjiDetailInline({
   useEffect(() => {
     setKanjiData(null);
     setExamples([]);
+    // const id = requestAnimationFrame(() => {
+    //   setKanjiData(getKanjiByCharFull(currentKanji) || null);
+    //   setExamples(getExamplesByKanjiChar(currentKanji));
+    // });
     const id = requestAnimationFrame(() => {
-      setKanjiData(getKanjiByCharFull(currentKanji) || null);
+      const data = getKanjiByCharFull(currentKanji) || null;
+      const hexCurrent = [...currentKanji].map(c => c.codePointAt(0)!.toString(16));
+      const hexDataKanji = data?.kanji ? [...data.kanji].map(c => c.codePointAt(0)!.toString(16)) : [];
+      console.log('[KanjiDetail] currentKanji =', JSON.stringify(currentKanji), 'length=', currentKanji.length, 'hex=', hexCurrent);
+      console.log('[KanjiDetail] kanjiData.kanji =', JSON.stringify(data?.kanji), 'length=', data?.kanji?.length, 'hex=', hexDataKanji);
+      console.log('[KanjiDetail] ⚖️ SO SÁNH: currentKanji === kanjiData.kanji ?', currentKanji === data?.kanji);
+      setKanjiData(data);
       setExamples(getExamplesByKanjiChar(currentKanji));
     });
     return () => cancelAnimationFrame(id);
@@ -169,9 +219,15 @@ export default function KanjiDetailInline({
   }, [currentKanji]);
 
   const handleIndexChange = (index: number) => {
+    console.log('[Tab] Bấm tab index =', index, 'kanji =', JSON.stringify(kanjiChars[index]));
     startTransition(() => setCurrentIndex(index));
     preloader.preloadSurroundingKanji(kanjiChars, index);
   };
+
+  // const handleIndexChange = (index: number) => {
+  //   startTransition(() => setCurrentIndex(index));
+  //   preloader.preloadSurroundingKanji(kanjiChars, index);
+  // };
 
   return (
     <View style={styles.container}>
@@ -284,7 +340,8 @@ export default function KanjiDetailInline({
               {/* Thứ tự nét */}
               <View style={styles.section}>
                 <Text style={styles.sectionTitle}>Thứ tự nét</Text>
-                <MemoizedStrokeOrder kanji={kanjiData.kanji} />
+                <MemoizedStrokeOrder key={kanjiData.kanji} kanji={kanjiData.kanji} />
+                {/* <MemoizedStrokeOrder kanji={kanjiData.kanji} /> */}
               </View>
 
               {/* Bộ thủ & Phân tích */}

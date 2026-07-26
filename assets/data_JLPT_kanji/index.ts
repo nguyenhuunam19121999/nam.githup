@@ -160,13 +160,38 @@ function getKanjiDbHandle(): any | null {
 let _kanjiDbWarningShown = false;
 
 function getDbOrNull(): any | null {
-  const db = getKanjiDbHandle();
+  const db = getKanjiDbHandle(); // ✅ dùng đúng tên hàm
   if (!db && !_kanjiDbWarningShown) {
     console.warn('[kanji] SQLite DB unavailable; returning no data');
     _kanjiDbWarningShown = true;
   }
   return db;
 }
+
+// let _kanjiDb: any | null = null;
+// let _kanjiDbPromise: Promise<any | null> | null = null;
+
+// function getKanjiDbHandle(): any | null {
+//   if (_kanjiDb) return _kanjiDb;
+//   if (!_kanjiDbPromise) {
+//     _kanjiDbPromise = initDb().then((db) => {
+//       _kanjiDb = db;
+//       return db;
+//     }).catch(() => null);
+//   }
+//   return null;
+// }
+
+// let _kanjiDbWarningShown = false;
+
+// function getDbOrNull(): any | null {
+//   const db = getKanjiDbHandle();
+//   if (!db && !_kanjiDbWarningShown) {
+//     console.warn('[kanji] SQLite DB unavailable; returning no data');
+//     _kanjiDbWarningShown = true;
+//   }
+//   return db;
+// }
 
 function stripInvisible(s: string): string {
   return s.replace(/[\u200B-\u200D\uFEFF\uFE00-\uFE0F]/g, '').trim();

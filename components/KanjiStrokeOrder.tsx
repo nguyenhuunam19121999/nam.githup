@@ -195,16 +195,26 @@ export function KanjiStrokeOrder({
     setStaticMask([]);
     setIsPlaying(false);
     setProgressText('');
-    cancelRef.current    = true;   
+    cancelRef.current    = true;
     animatingRef.current = false;
 
-    async function load() {
+    async function load(attempt = 1) {
+      console.log(`[StrokeOrder] load "${kanji}" — lần thử ${attempt}`);
       const { paths: result, source: src } = await loadStrokePaths(kanji);
-      if (!cancelled) {
-        setPaths(result.length > 0 ? result : []);
-        setSource(result.length > 0 ? src : 'none');
-        setIsLoading(false);
+
+      if (cancelled) return;
+
+      if (result.length === 0 && attempt < 3) {
+        console.warn(`[StrokeOrder] "${kanji}" trả về rỗng (lần ${attempt}) — thử lại sau 400ms`);
+        await new Promise(r => setTimeout(r, 400));
+        if (!cancelled) return load(attempt + 1);
+        return;
       }
+
+      console.log(`[StrokeOrder] load "${kanji}" hoàn tất — source: ${src}, paths: ${result.length}`);
+      setPaths(result.length > 0 ? result : []);
+      setSource(result.length > 0 ? src : 'none');
+      setIsLoading(false);
     }
 
     InteractionManager.runAfterInteractions(() => { load(); });
@@ -214,7 +224,6 @@ export function KanjiStrokeOrder({
       if (startTimeoutRef.current) clearTimeout(startTimeoutRef.current);
     };
   }, [kanji]);
-
   // ── Animation logic ────────────────────────────────────────────────────
 
   const startFrom = useCallback((idx: number) => {
@@ -276,8 +285,6 @@ export function KanjiStrokeOrder({
   }, [isLoading, paths, autoPlay, play]);
 
   // ── Render ─────────────────────────────────────────────────────────────
-
-  // Hàm ép buộc tải lại từ CDN khi nét Local bị sai
   const forceFetchCDN = useCallback(async () => {
     setIsLoading(true);
     setDrawnCount(0);
@@ -288,11 +295,19 @@ export function KanjiStrokeOrder({
     cancelRef.current = true;
     animatingRef.current = false;
 
+    // const hexId = toHexId(kanji);
+
     const hexId = toHexId(kanji);
+    console.log('[StrokeOrder] forceFetchCDN kanji =', JSON.stringify(kanji), '→ hexId =', hexId);
+    const url = `${CDN_BASE}${hexId}.svg`;
+    console.log('[StrokeOrder] fetch URL =', url);
+
     try {
       const res = await fetch(`${CDN_BASE}${hexId}.svg`);
+      console.log('[StrokeOrder] CDN response status =', res.status);
       const text = await res.text();
       const fetched = parseSvgPaths(text);
+      console.log('[StrokeOrder] parsed paths.length =', fetched?.length ?? 0);
 
       if (fetched && fetched.length > 0) {
         await AsyncStorage.setItem(ASYNC_STORAGE_PREFIX + kanji, JSON.stringify(fetched));
