@@ -4,10 +4,10 @@
 // Thiết kế: "Giấy thi + con dấu đỏ" (Ink & Hanko)
 // ============================================
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useMemo } from 'react';
 import {
   ActivityIndicator,
-  ScrollView,
+  FlatList,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -228,7 +228,7 @@ export default function ExamDetailScreen() {
   // ============================================
   // 📋 LẤY DANH SÁCH NHÓM (mondai) CHO TAB HIỆN TẠI
   // ============================================
-  const getRenderSections = (): RenderSection[] => {
+  const renderSections = useMemo((): RenderSection[] => {
     if (!exam) return [];
     switch (currentSection) {
       case 'vocab':
@@ -243,7 +243,57 @@ export default function ExamDetailScreen() {
       default:
         return [];
     }
-  };
+  }, [exam, currentSection]); 
+
+  type FlatItem =
+  | { type: 'instruction'; key: string; mondaiNumber: string; mondaiLabel: string; instruction: string }
+  | { type: 'passage'; key: string; passage: string; underlines?: string[] }
+  | { type: 'question'; key: string; question: Question; displayNumber: number };
+
+  const flatListData = useMemo((): FlatItem[] => {
+    const items: FlatItem[] = [];
+    let runningNumber = 0;  
+
+    renderSections.forEach((section) => {
+      items.push({
+        type: 'instruction',
+        key: `${section.key}-instr`,
+        mondaiNumber: section.mondaiNumber,
+        mondaiLabel: section.mondaiLabel,
+        instruction: section.instruction,
+      });
+
+      if (section.passages) {
+        section.passages.forEach((pg) => {
+          items.push({
+            type: 'passage',
+            key: `${section.key}-p${pg.passage_id}`,
+            passage: pg.passage,
+            underlines: pg.underlines,
+          });
+          pg.questions.forEach((q) => {
+            runningNumber += 1;
+            items.push({ type: 'question', key: `${section.key}-${q.id}`, question: q, displayNumber: runningNumber });
+          });
+        });
+      } else {
+        if (section.passage) {
+          items.push({
+            type: 'passage',
+            key: `${section.key}-passage`,
+            passage: section.passage,
+            underlines: section.underlines,
+          });
+        }
+        section.questions.forEach((q) => {
+          runningNumber += 1;
+          items.push({ type: 'question', key: `${section.key}-${q.id}`, question: q, displayNumber: runningNumber });
+        });
+      }
+    });
+
+    return items;
+  }, [renderSections]);
 
   const getQuestions = (): Question[] => {
     if (!exam) return [];
@@ -293,7 +343,6 @@ export default function ExamDetailScreen() {
     }
   };
 
-  const renderSections = getRenderSections();
   const currentAnswers = getCurrentAnswers();
   const isListening = currentSection === 'listening';
   const currentTabIndex = TAB_ORDER.indexOf(currentSection);
@@ -493,13 +542,7 @@ export default function ExamDetailScreen() {
     ? { text: `Chuyển sang ${TAB_LABELS[TAB_ORDER[currentTabIndex + 1]]}`, isActive: true }
     : { text: `Cần trả lời thêm ${currentTabProgress.total - currentTabProgress.answered} câu`, isActive: false };
 
-  // Đếm số câu chạy liên tục theo đúng thứ tự xuất hiện trong tab hiện tại
-  // (không dùng question.id để tránh lệch số nếu dữ liệu JSON có id trùng/thiếu)
-  let runningNumber = 0;
-
-  const renderQuestionCard = (question: Question, cardKey: string) => {
-    runningNumber += 1;
-    const displayNumber = runningNumber;
+  const renderQuestionCard = (question: Question, cardKey: string, displayNumber: number) => {
     const isAnswered = currentAnswers[question.id] !== undefined;
     const isCurrentPlaying = isPlaying && currentPlayingQuestion?.id === question.id;
 
@@ -558,6 +601,30 @@ export default function ExamDetailScreen() {
         </View>
       </View>
     );
+  };
+
+  const renderFlatItem = ({ item }: { item: FlatItem }) => {
+    if (item.type === 'instruction') {
+      return (
+        <View style={styles.instructionRow}>
+          <View style={styles.stampBadge}>
+            <Text style={styles.stampNumber}>{item.mondaiNumber}</Text>
+          </View>
+          <View style={styles.instructionTextWrap}>
+            <Text style={styles.mondaiLabel}>{item.mondaiLabel}</Text>
+            <Text style={styles.instructionText}>{item.instruction}</Text>
+          </View>
+        </View>
+      );
+    }
+    if (item.type === 'passage') {
+      return (
+        <View style={styles.passageBox}>
+          {renderPassageText(item.passage, item.underlines, styles.passageText, styles.underlineText)}
+        </View>
+      );
+    }
+    return renderQuestionCard(item.question, item.key, item.displayNumber);
   };
 
   const segmentWidth = tabTrackWidth > 0 ? (tabTrackWidth - TRACK_PADDING * 2) / 3 : 0;
@@ -635,93 +702,60 @@ export default function ExamDetailScreen() {
           })}
         </View>
       </View>
-
-      {/* ===== NỘI DUNG: từng mondai (con dấu đề bài + đoạn văn + câu hỏi) ===== */}
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        {renderSections.map((section) => (
-          <View key={section.key} style={styles.sectionBlock}>
-            {/* Con dấu đề bài của mondai */}
-            <View style={styles.instructionRow}>
-              <View style={styles.stampBadge}>
-                <Text style={styles.stampNumber}>{section.mondaiNumber}</Text>
-              </View>
-              <View style={styles.instructionTextWrap}>
-                <Text style={styles.mondaiLabel}>{section.mondaiLabel}</Text>
-                <Text style={styles.instructionText}>{section.instruction}</Text>
-              </View>
-            </View>
-
-            {/* Nếu mondai có NHIỀU đoạn văn ngắn (vd: mondai4) — mỗi đoạn + câu hỏi riêng */}
-            {section.passages ? (
-              section.passages.map((pg) => (
-                <View key={`${section.key}-p${pg.passage_id}`} style={styles.passageGroup}>
-                  <View style={styles.passageBox}>
-                    {renderPassageText(pg.passage, pg.underlines, styles.passageText, styles.underlineText)}
-                  </View>
-                  {pg.questions.map((question) =>
-                    renderQuestionCard(question, `${section.key}-${question.id}`)
-                  )}
-                </View>
-              ))
-            ) : (
-              <>
-                {/* Đoạn văn đọc hiểu đơn (nếu có) */}
-                {section.passage && (
-                  <View style={styles.passageBox}>
-                    {renderPassageText(section.passage, section.underlines, styles.passageText, styles.underlineText)}
-                  </View>
-                )}
-
-                {/* Danh sách câu hỏi thuộc mondai này */}
-                {section.questions.map((question) =>
-                  renderQuestionCard(question, `${section.key}-${question.id}`)
-                )}
-              </>
-            )}
-          </View>
-        ))}
-
-        {!isLastTab ? (
-          <TouchableOpacity
-            style={[
-              styles.nextBtn,
-              nextButtonState.isActive ? styles.nextBtnActive : styles.nextBtnDisabled
-            ]}
-            onPress={handleNextTab}
-            activeOpacity={nextButtonState.isActive ? 0.85 : 1}
-          >
-            <Text style={[
-              styles.nextBtnText,
-              nextButtonState.isActive ? styles.nextBtnTextActive : styles.nextBtnTextDisabled
-            ]}>
-              {nextButtonState.text}
-            </Text>
-            {!nextButtonState.isActive && (
-              <View style={styles.nextBtnProgress}>
-                <View style={styles.nextBtnProgressTrack}>
-                  <View
-                    style={[
-                      styles.nextBtnProgressFill,
-                      { width: `${(currentTabProgress.answered / currentTabProgress.total) * 100}%` }
-                    ]}
-                  />
-                </View>
-                <Text style={styles.nextBtnProgressText}>
-                  {currentTabProgress.answered}/{currentTabProgress.total}
+      <FlatList
+        style={styles.content}
+        data={flatListData}
+        keyExtractor={(item) => item.key}
+        renderItem={renderFlatItem}
+        showsVerticalScrollIndicator={false}
+        initialNumToRender={8}
+        maxToRenderPerBatch={6}
+        windowSize={7}
+        removeClippedSubviews={true}
+        ListFooterComponent={
+          <>
+            {!isLastTab ? (
+              <TouchableOpacity
+                style={[
+                  styles.nextBtn,
+                  nextButtonState.isActive ? styles.nextBtnActive : styles.nextBtnDisabled
+                ]}
+                onPress={handleNextTab}
+                activeOpacity={nextButtonState.isActive ? 0.85 : 1}
+              >
+                <Text style={[
+                  styles.nextBtnText,
+                  nextButtonState.isActive ? styles.nextBtnTextActive : styles.nextBtnTextDisabled
+                ]}>
+                  {nextButtonState.text}
                 </Text>
-              </View>
+                {!nextButtonState.isActive && (
+                  <View style={styles.nextBtnProgress}>
+                    <View style={styles.nextBtnProgressTrack}>
+                      <View
+                        style={[
+                          styles.nextBtnProgressFill,
+                          { width: `${(currentTabProgress.answered / currentTabProgress.total) * 100}%` }
+                        ]}
+                      />
+                    </View>
+                    <Text style={styles.nextBtnProgressText}>
+                      {currentTabProgress.answered}/{currentTabProgress.total}
+                    </Text>
+                  </View>
+                )}
+              </TouchableOpacity>
+            ) : (
+              <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit} activeOpacity={0.85}>
+                <Text style={styles.submitBtnText}>
+                  Nộp bài · {answered}/{total}
+                </Text>
+              </TouchableOpacity>
             )}
-          </TouchableOpacity>
-        ) : (
-          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit} activeOpacity={0.85}>
-            <Text style={styles.submitBtnText}>
-              Nộp bài · {answered}/{total}
-            </Text>
-          </TouchableOpacity>
-        )}
-
-        <View style={styles.footer} />
-      </ScrollView>
+            <View style={styles.footer} />
+          </>
+        }
+      />
     </View>
   );
 }

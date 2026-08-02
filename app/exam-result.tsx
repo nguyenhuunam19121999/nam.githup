@@ -64,11 +64,6 @@ export default function ExamResultScreen() {
         const readingQuestions = await getReadingQuestions(level, examId);
         const listeningQuestions = await getListeningQuestions(level, examId);
 
-        // const vocabQuestions = getVocabQuestions(level, examId);
-        // const grammarQuestions = getGrammarQuestions(level, examId);
-        // const readingQuestions = getReadingQuestions(level, examId);
-        // const listeningQuestions = getListeningQuestions(level, examId);
-
         const totalResult = calculateTotalScore(
           vocabQuestions,
           vocabAnswers,
@@ -76,7 +71,8 @@ export default function ExamResultScreen() {
           readingQuestions,
           grammarAnswers,
           listeningQuestions,
-          listeningAnswers
+          listeningAnswers,
+          { passing_score: exam.passing_score, section_scores: exam.section_scores }
         );
 
         setResult(totalResult);

@@ -199,8 +199,16 @@ export const calculateTotalScore = (
   readingQuestions: Question[],
   grammarReadingAnswersCombined: number[],
   listeningQuestions: Question[],
-  listeningAnswers: number[]
+  listeningAnswers: number[],
+  examMeta?: {
+    passing_score?: number;
+    section_scores?: { vocab: number; grammar_reading: number; listening: number };
+  }
 ): TotalScoreResult => {
+  // ✅ Lấy thang điểm & ngưỡng đậu TỪ JSON của từng đề, không cố định nữa
+  const sectionScores = examMeta?.section_scores ?? { vocab: 60, grammar_reading: 60, listening: 60 };
+  const passingScore = examMeta?.passing_score ?? 95;
+
   const grammarAnswers = grammarReadingAnswersCombined.slice(0, grammarQuestions.length);
   const readingAnswers = grammarReadingAnswersCombined.slice(grammarQuestions.length);
 
@@ -209,14 +217,26 @@ export const calculateTotalScore = (
   const readingCorrect = countCorrect(readingQuestions, readingAnswers);
   const listeningCorrect = countCorrect(listeningQuestions, listeningAnswers);
 
-  const vocabScaled = vocabQuestions.length > 0 ? (vocabCorrect / vocabQuestions.length) * 60 : 0;
+  const vocabScaled = vocabQuestions.length > 0 ? (vocabCorrect / vocabQuestions.length) * sectionScores.vocab : 0;
   const grammarReadingTotal = grammarQuestions.length + readingQuestions.length;
   const grammarReadingCorrect = grammarCorrect + readingCorrect;
-  const grammarReadingScaled = grammarReadingTotal > 0 ? (grammarReadingCorrect / grammarReadingTotal) * 60 : 0;
-  const listeningScaled = listeningQuestions.length > 0 ? (listeningCorrect / listeningQuestions.length) * 60 : 0;
+  const grammarReadingScaled = grammarReadingTotal > 0 ? (grammarReadingCorrect / grammarReadingTotal) * sectionScores.grammar_reading : 0;
+  const listeningScaled = listeningQuestions.length > 0 ? (listeningCorrect / listeningQuestions.length) * sectionScores.listening : 0;
 
   const totalScore = vocabScaled + grammarReadingScaled + listeningScaled;
-  const isPassed = totalScore >= 95 && vocabScaled >= 19 && grammarReadingScaled >= 19 && listeningScaled >= 19;
+  const maxScore = sectionScores.vocab + sectionScores.grammar_reading + sectionScores.listening;
+
+  // ✅ Ngưỡng tối thiểu từng phần giữ nguyên tỉ lệ cũ (19/60 ≈ 31.7%) nhưng áp theo thang điểm JSON
+  const ratio = 19 / 60;
+  const minVocab = sectionScores.vocab * ratio;
+  const minGrammarReading = sectionScores.grammar_reading * ratio;
+  const minListening = sectionScores.listening * ratio;
+
+  const isPassed =
+    totalScore >= passingScore &&
+    vocabScaled >= minVocab &&
+    grammarReadingScaled >= minGrammarReading &&
+    listeningScaled >= minListening;
 
   return {
     vocab: {
@@ -237,7 +257,7 @@ export const calculateTotalScore = (
       maxRawScore: listeningQuestions.length,
       scaledScore: listeningScaled,
     },
-    total: { score: totalScore, maxScore: 180, percentage: (totalScore / 180) * 100 },
+    total: { score: totalScore, maxScore, percentage: (totalScore / maxScore) * 100 },
     isPassed,
   };
 };
