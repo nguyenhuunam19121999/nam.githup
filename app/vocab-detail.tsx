@@ -534,6 +534,7 @@ export default function VocabDetailScreen() {
     hiragana?: string;
     han?: string;
     nghia?: string;
+    jisho_meaning_en?: string;
     example?: string;
     exampleMeaning?: string;
     level?: string;
@@ -557,6 +558,7 @@ export default function VocabDetailScreen() {
     hiragana: params.hiragana || "",
     han: params.han || "",
     nghia: params.nghia || "",
+    jisho_meaning_en: params.jisho_meaning_en || "",
     example: params.example || "",
     exampleMeaning: params.exampleMeaning || "",
     level: params.level || "N3",
@@ -774,7 +776,9 @@ export default function VocabDetailScreen() {
                     <VocabImagePicker
                       vocabId={vocabData.id}
                       vocabWord={vocabData.kanji}
-                      onImagesSelected={(images) => {
+                      vocabMeaning={vocabData.nghia}
+                      vocabMeaningEn={vocabData.jisho_meaning_en || ""}
+                      onImagesSelected={(_images) => {
                         setShowImageModal(false);
                       }}
                     />

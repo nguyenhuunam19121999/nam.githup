@@ -5,7 +5,7 @@
     "phienAm": "げ",
     "meaning": "Có vẻ… (trông như có cảm giác…)",
     "level": "N2",
-    "structure": "Aiい→(bỏ い)＋げ　/　Anaな→(bỏ な)＋げ　/　Vたい→(bỏ い)＋げ",
+    "structure": "Aiい→(bỏ い)＋げ / Anaな→(bỏ な)＋げ / Vたい→(bỏ い)＋げ",
     "explanation": "Dùng để diễn đạt một trạng thái hay cảm giác trông có vẻ như thế nào đó khi quan sát từ bên ngoài. Tương đương với 〜そう nhưng mang sắc thái quan sát chủ quan hơn.",
     "notes": "よい→よさげ、ない→なさげ (thêm さ trước げ).",
     "caution": "Không dùng trực tiếp với danh từ thông thường.",
@@ -37,7 +37,7 @@
     "phienAm": "がち",
     "meaning": "Thường…/ Hay…/ Dễ… (thiên về)",
     "level": "N2",
-    "structure": "Nがち　/　Vます(bỏ ます)＋がち",
+    "structure": "Nがち / Vます(bỏ ます)＋がち",
     "explanation": "Dùng để diễn đạt một sự việc dễ xảy ra hoặc có khuynh hướng nào đó. Thường dùng khi trình bày sự việc xấu hoặc không tốt.",
     "notes": "Hay dùng với: 病気がち、休みがち、曇りがち、忘れがち。",
     "caution": "Thường mang sắc thái tiêu cực.",
@@ -69,7 +69,7 @@
     "phienAm": "っぽい",
     "meaning": "Có vẻ…/ Hay…/ Thường… (giống như)",
     "level": "N2",
-    "structure": "Nっぽい　/　Vます(bỏ ます)＋っぽい",
+    "structure": "Nっぽい / Vます(bỏ ます)＋っぽい",
     "explanation": "a. Dùng diễn đạt cảm giác hoặc vẻ ngoài giống như thế nào đó. b. Dùng trình bày hành động, sự việc thường hoặc dễ xảy ra.",
     "notes": "Ví dụ hay gặp: 子供っぽい、男っぽい、油っぽい、忘れっぽい、白っぽい。",
     "related_forms": [
@@ -106,7 +106,7 @@
     "phienAm": "ぎみ",
     "meaning": "Cảm thấy hơi…/ Có xu hướng nhẹ…",
     "level": "N2",
-    "structure": "N気味　/　Vます(bỏ ます)＋気味",
+    "structure": "N気味 / Vます(bỏ ます)＋気味",
     "explanation": "Dùng để diễn đạt một cảm giác hoặc trạng thái đang có xu hướng xảy ra ở một mức độ nhẹ.",
     "notes": "Hay dùng với: 疲れ気味、風邪気味、太り気味、焦り気味。",
     "caution": "Thường mô tả trạng thái nhẹ, chưa đến mức nghiêm trọng.",
@@ -138,7 +138,7 @@
     "phienAm": "っけ",
     "meaning": "Chẳng phải là…sao? (xác nhận lại thông tin)",
     "level": "N2",
-    "structure": "Nだ(った)っけ　/　Anaだ(った)っけ　/　Aiかったっけ　/　Vたっけ",
+    "structure": "Nだ(った)っけ / Anaだ(った)っけ / Aiかったっけ / Vたっけ",
     "explanation": "Dùng để xác nhận lại thông tin mà người nói chưa chắc chắn hoặc muốn kiểm tra lại. Cũng có thể dùng hình thức でしたっけ và ましたっけ.",
     "notes": "Cũng có hình thức lịch sự: でしたっけ、ましたっけ。",
     "caution": "Chủ yếu dùng trong văn nói.",
@@ -201,7 +201,7 @@
     "phienAm": "こそ／からこそ",
     "meaning": "Chính…/ Chính vì… (nhấn mạnh)",
     "level": "N2",
-    "structure": "Nこそ　/　〜からこそ",
+    "structure": "Nこそ / 〜からこそ",
     "explanation": "Dùng để nhấn mạnh một sự vật hoặc lý do. こそ nhấn mạnh danh từ/đối tượng; からこそ nhấn mạnh lý do.",
     "related_forms": [
       "〜だからこそ"
@@ -230,7 +230,7 @@
     "phienAm": "ものか／もんか",
     "meaning": "Tuyệt đối không…/ Dứt khoát không…",
     "level": "N2",
-    "structure": "Vる＋ものか　/　Aiい＋もんか　/　Anaな＋ものですか",
+    "structure": "Vる＋ものか / Aiい＋もんか / Anaな＋ものですか",
     "explanation": "Biểu hiện mang tính phủ định mạnh mẽ, thể hiện quyết tâm hoặc cảm xúc không chấp nhận.",
     "notes": "もんか là hình thức nói thân mật hơn ものか. ものですか là hình thức lịch sự.",
     "caution": "Chủ yếu dùng trong văn nói, thể hiện cảm xúc mạnh.",
@@ -324,7 +324,7 @@
     "phienAm": "ことだ",
     "meaning": "Nên…/ Tốt hơn là… (lời khuyên)",
     "level": "N2",
-    "structure": "Vる＋ことだ　/　Vない＋ことだ",
+    "structure": "Vる＋ことだ / Vない＋ことだ",
     "explanation": "Dùng trình bày lời khuyên cần nên hay không nên làm việc gì đó.",
     "notes": "Mạnh hơn 〜ほうがいい. Thường dùng khi người lớn hơn khuyên người nhỏ hơn.",
     "related_forms": [
@@ -416,7 +416,7 @@
     "phienAm": "ものだから／もんだから",
     "meaning": "Vì… (điều kiện khách quan như thời tiết, hoàn cảnh)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋ものだから　/　Anaな＋もんだから　/　Nな＋もんだから",
+    "structure": "V/Ai[普通形]＋ものだから / Anaな＋もんだから / Nな＋もんだから",
     "explanation": "Dùng trình bày lý do, thường là điều kiện khách quan bên ngoài như thời tiết, phương tiện. Thường dùng để biện hộ hoặc giải thích.",
     "notes": "Tính từ đuôi な và danh từ bỏ だ, thêm な khi chia ở hiện tại.",
     "related_forms": [
@@ -447,7 +447,7 @@
     "phienAm": "もの／もん／んだもの",
     "meaning": "Vì… (điều kiện chủ quan, giải thích cá nhân)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋もの／もん　/　Anaな＋んだもの　/　Nな＋んだもん",
+    "structure": "V/Ai[普通形]＋もの／もん / Anaな＋んだもの / Nな＋んだもん",
     "explanation": "Dùng trình bày lý do mang tính chủ quan, giống với から. Thường dùng để tự bào chữa hoặc giải thích lý do của bản thân.",
     "notes": "もん là hình thức thân mật, hay dùng ở cuối câu. Tính từ đuôi な và N bỏ だ thêm な ở hiện tại.",
     "caution": "Thường dùng trong văn nói, mang tính giải thích/biện hộ.",
@@ -479,7 +479,7 @@
     "phienAm": "ものの",
     "meaning": "…nhưng…/ Tuy nhiên… (nghịch ý)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋ものの　/　Anaな(bỏ だ)＋ものの　/　Nである＋ものの",
+    "structure": "V/Ai[普通形]＋ものの / Anaな(bỏ だ)＋ものの / Nである＋ものの",
     "explanation": "Được sử dụng trong câu văn mang ý nghĩa ngược, để trình bày sự nghịch ý. Mệnh đề sau trái với điều được kỳ vọng từ mệnh đề trước.",
     "notes": "Tính từ đuôi な ở hiện tại vắn tắt bỏ だ thêm な. Danh từ ở hiện tại vắn tắt bỏ だ thêm である.",
     "caution": "Thường dùng trong văn viết.",
@@ -512,7 +512,7 @@
     "phienAm": "にしては",
     "meaning": "Mặc dù là…nhưng… (ngoài dự đoán)",
     "level": "N2",
-    "structure": "V/Ai/Ana/N[普通形]＋にしては　※N・Anaはだを省く",
+    "structure": "V/Ai/Ana/N[普通形]＋にしては ※N・Anaはだを省く",
     "explanation": "Dùng trình bày một sự việc khác với điều đã dự đoán, khác với điều thông thường.",
     "notes": "Cũng có hình thức それにしては。",
     "related_forms": [
@@ -543,7 +543,7 @@
     "phienAm": "わりに／わりには",
     "meaning": "Mặc dù…nhưng… (so với tiêu chuẩn thông thường)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋わりに　/　Nの＋わりには　/　Anaな＋わりに",
+    "structure": "V/Ai[普通形]＋わりに / Nの＋わりには / Anaな＋わりに",
     "explanation": "Dùng trình bày một sự việc khác với sự dự đoán bình thường. Thường so sánh kết quả với tiêu chuẩn kỳ vọng.",
     "notes": "N và tính từ đuôi な ở hiện tại vắn tắt bỏ だ. Ở quá khứ vẫn có だった.",
     "related_forms": [
@@ -574,7 +574,7 @@
     "phienAm": "くせに／くせして",
     "meaning": "Mặc dù…thế nhưng… (chê trách, bực bội)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋くせに　/　Nの＋くせに　/　Anaな＋くせに",
+    "structure": "V/Ai[普通形]＋くせに / Nの＋くせに / Anaな＋くせに",
     "explanation": "Dùng trong hình thức nối tiếp ngược hoặc trình bày 2 mệnh đề nghịch ý nhau. Mang sắc thái chê trách hoặc bực bội.",
     "notes": "N và tính từ đuôi な ở hiện tại vắn tắt bỏ だ thêm の (N) hoặc な (Ana).",
     "caution": "Mang sắc thái tiêu cực, thể hiện sự chê trách.",
@@ -606,7 +606,7 @@
     "phienAm": "なんか／なんて／など",
     "meaning": "Chẳng hạn như là… (đưa ra ví dụ điển hình)",
     "level": "N2",
-    "structure": "N＋なんか　/　N＋なんて　/　N＋など",
+    "structure": "N＋なんか / N＋なんて / N＋など",
     "explanation": "Dùng để đưa ra một ví dụ điển hình trong nhiều cái khác. なんか và なんて dùng trong văn nói (thân mật), など dùng trong văn viết (trang trọng).",
     "notes": "など là hình thức cứng, dùng trong văn viết. なんか, なんて là hình thức mềm, dùng khi nói.",
     "related_forms": [
@@ -760,7 +760,7 @@
     "phienAm": "おかげで／おかげだ",
     "meaning": "Nhờ có…/ Nhờ vào… (kết quả tốt)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋おかげで　/　Nの＋おかげで　/　Anaな＋おかげで",
+    "structure": "V/Ai[普通形]＋おかげで / Nの＋おかげで / Anaな＋おかげで",
     "explanation": "Dùng trình bày sự việc trở lên kết quả tốt và ý cảm tạ. Đối với người nói thì đây là kết quả tốt.",
     "notes": "Ngược lại với せいで (kết quả xấu).",
     "caution": "Chỉ dùng khi kết quả là tốt.",
@@ -792,7 +792,7 @@
     "phienAm": "せいで／せいか／せいだ",
     "meaning": "Vì…/ Tại vì… (kết quả xấu)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋せいで　/　Nの＋せいか　/　Anaな＋せいだ",
+    "structure": "V/Ai[普通形]＋せいで / Nの＋せいか / Anaな＋せいだ",
     "explanation": "Dùng trình bày sự việc nào đó là nguyên nhân của kết quả xấu.",
     "notes": "Ngược lại với おかげで (kết quả tốt). せいか mang tính không chắc chắn.",
     "caution": "Chỉ dùng khi kết quả là xấu.",
@@ -824,7 +824,7 @@
     "phienAm": "かわりに",
     "meaning": "Thay vì…/ Đổi lại…",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋かわりに　/　Nの＋かわりに　/　Anaな＋かわりに",
+    "structure": "V/Ai[普通形]＋かわりに / Nの＋かわりに / Anaな＋かわりに",
     "explanation": "a. Dùng trình bày một sự việc được tiến hành thay cho một sự việc khác. b. Dùng trình bày 2 sự việc tương đương nhau (đổi lại).",
     "notes": "Cũng có hình thức そのかわりに。",
     "related_forms": [
@@ -884,7 +884,7 @@
     "phienAm": "ついでに",
     "meaning": "Nhân tiện…/ Sẵn dịp…",
     "level": "N2",
-    "structure": "Vる＋ついでに　/　Nの＋ついでに",
+    "structure": "Vる＋ついでに / Nの＋ついでに",
     "explanation": "Dùng trình bày ý: khi làm một sự việc nào đó, lợi dụng cơ hội để làm một việc khác nữa.",
     "related_forms": [
       "〜たびに",
@@ -914,7 +914,7 @@
     "phienAm": "たびに",
     "meaning": "Cứ mỗi lần…/ Mỗi khi…",
     "level": "N2",
-    "structure": "Vる＋たびに　/　Nの＋たびに",
+    "structure": "Vる＋たびに / Nの＋たびに",
     "explanation": "Dùng trình bày ý: khi làm một sự việc thì bao giờ cũng có một sự việc khác xảy ra.",
     "related_forms": [
       "〜ついでに",
@@ -944,7 +944,7 @@
     "phienAm": "さいちゅうに／さいちゅうだ",
     "meaning": "Đúng lúc đang…/ Trong khi…",
     "level": "N2",
-    "structure": "Nの＋最中に　/　Vている＋最中だ",
+    "structure": "Nの＋最中に / Vている＋最中だ",
     "explanation": "Dùng trình bày ý: Đúng lúc đang tiến hành một việc gì đó thì có một sự việc khác chen vào.",
     "related_forms": [
       "〜ているところに",
@@ -974,7 +974,7 @@
     "phienAm": "さいに",
     "meaning": "Khi, lúc…/ Nhân dịp…/ Trong trường hợp…",
     "level": "N2",
-    "structure": "Nの＋際に　/　V[普通形]＋際",
+    "structure": "Nの＋際に / V[普通形]＋際",
     "explanation": "Dùng để trình bày thời điểm, lúc xảy ra sự việc. Là hình thức cứng (văn viết) của とき.",
     "notes": "Thường dùng trong văn viết, thông báo chính thức.",
     "caution": "Là hình thức trang trọng, ít dùng trong văn nói thân mật.",
@@ -1006,7 +1006,7 @@
     "phienAm": "はもちろん／はもとより",
     "meaning": "N1 thì đương nhiên, N2 cũng…",
     "level": "N2",
-    "structure": "N1はもちろん＋N2も〜　/　N1はもとより＋N2も〜",
+    "structure": "N1はもちろん＋N2も〜 / N1はもとより＋N2も〜",
     "explanation": "Dùng trình bày ý: N1 thì đương nhiên rồi, và N2 cũng vậy. もとより mang sắc thái trang trọng hơn.",
     "notes": "もとより là hình thức cứng hơn, hay dùng trong văn viết.",
     "related_forms": [
@@ -1037,7 +1037,7 @@
     "phienAm": "はともかく／はともかくとして",
     "meaning": "Tạm thời chưa đề cập đến N1, nhưng mà N2 thì…",
     "level": "N2",
-    "structure": "N1はともかく＋N2は〜　/　N1はともかくとして＋N2が〜",
+    "structure": "N1はともかく＋N2は〜 / N1はともかくとして＋N2が〜",
     "explanation": "Dùng để tạm thời gác lại vấn đề N1 sang một bên và tập trung vào N2.",
     "related_forms": [
       "〜はさておき"
@@ -1066,7 +1066,7 @@
     "phienAm": "ぬきにして／ぬきにしては",
     "meaning": "Gạt qua một bên…/ Bỏ…/ Không có…thì không thể…",
     "level": "N2",
-    "structure": "Nは抜きにして　/　Nを抜きにしては〜ない　/　N抜きには〜ない",
+    "structure": "Nは抜きにして / Nを抜きにしては〜ない / N抜きには〜ない",
     "explanation": "Dùng trình bày ý gạt một sự việc sang một bên để tiến hành sự việc khác, hoặc không có thứ đó thì không thể làm được.",
     "related_forms": [
       "〜はともかく"
@@ -1095,7 +1095,7 @@
     "phienAm": "ぬきで／ぬきに／ぬきの",
     "meaning": "Không có…/ Bỏ…/ Không phải là…",
     "level": "N2",
-    "structure": "N抜きで　/　N抜きに　/　N抜きのN",
+    "structure": "N抜きで / N抜きに / N抜きのN",
     "explanation": "Dùng trình bày ý làm gì đó mà không có, không kể tới yếu tố đó.",
     "notes": "Các ví dụ hay gặp: 冗談抜きで、わさび抜きで、世辞抜きに。",
     "related_forms": [
@@ -1125,7 +1125,7 @@
     "phienAm": "てたまらない",
     "meaning": "Không thể chịu được…/ Rất là…",
     "level": "N2",
-    "structure": "Vて＋たまらない　/　Anaで＋たまらない　/　Aiくて＋たまらない",
+    "structure": "Vて＋たまらない / Anaで＋たまらない / Aiくて＋たまらない",
     "explanation": "Dùng trình bày ý: vì một lý do nào đó mà không thể chịu đựng nổi. Biểu hiện khi nói về tâm trạng, tình cảm của người nói.",
     "caution": "Chỉ dùng với cảm xúc, cảm giác của người nói, không dùng cho người khác.",
     "related_forms": [
@@ -1156,7 +1156,7 @@
     "phienAm": "てしょうがない／てしかたがない",
     "meaning": "Không nhịn được…/ Không sao được…",
     "level": "N2",
-    "structure": "Vて＋しょうがない　/　Anaで＋しかたがない　/　Aiくて＋しょうがない",
+    "structure": "Vて＋しょうがない / Anaで＋しかたがない / Aiくて＋しょうがない",
     "explanation": "Dùng trình bày ý: cảm giác hoặc tình trạng mạnh đến mức không thể kiểm soát được.",
     "notes": "Tương đương với たまらない nhưng mang sắc thái nhẹ hơn một chút.",
     "related_forms": [
@@ -1187,7 +1187,7 @@
     "phienAm": "ほど",
     "meaning": "…đến mức…/ Như… (mức độ)",
     "level": "N2",
-    "structure": "Ai＋ほど　/　Anaな＋ほど　/　Nほど",
+    "structure": "Ai＋ほど / Anaな＋ほど / Nほど",
     "explanation": "Dùng trình bày mức độ cao của sự việc bằng cách so sánh hoặc liệt kê.",
     "notes": "Cũng dùng trong cấu trúc 〜ほど〜はない (không gì bằng).",
     "related_forms": [
@@ -1218,7 +1218,7 @@
     "phienAm": "ば〜ほど",
     "meaning": "Càng…thì càng…",
     "level": "N2",
-    "structure": "VばVるほど　/　AiければAiほど　/　AnaならAnaなほど",
+    "structure": "VばVるほど / AiければAiほど / AnaならAnaなほど",
     "explanation": "Dùng trình bày ý: Nếu mức độ của một phía lên cao thì mức độ của phía kia cũng thay đổi theo.",
     "related_forms": [
       "〜につれて",
@@ -1248,7 +1248,7 @@
     "phienAm": "ほど〜はない／くらい〜はない",
     "meaning": "Không có gì như…/ Không gì bằng… (so sánh cực độ)",
     "level": "N2",
-    "structure": "Nくらい〜はない　/　Nほど〜はない",
+    "structure": "Nくらい〜はない / Nほど〜はない",
     "explanation": "Dùng trình bày ý: không có cái gì đạt đến mức độ như N.",
     "related_forms": [
       "〜ほど"
@@ -1398,7 +1398,7 @@
     "phienAm": "うちに",
     "meaning": "Trong khi…còn… (làm trước khi tình trạng thay đổi)",
     "level": "N2",
-    "structure": "Vない＋うちに　/　Vている＋うちに　/　Aiい＋うちに　/　Anaな＋うちに",
+    "structure": "Vない＋うちに / Vている＋うちに / Aiい＋うちに / Anaな＋うちに",
     "explanation": "Dùng trình bày một sự việc nào đó được tiến hành trước khi tình trạng nào đó thay đổi.",
     "related_forms": [
       "〜間に",
@@ -1458,7 +1458,7 @@
     "phienAm": "かぎり／かぎりは／かぎりでは",
     "meaning": "Trong khi còn…/ Theo…/ Trong giới hạn…",
     "level": "N2",
-    "structure": "V[普通形]＋限り　/　Anaである＋限りは　/　Nである＋限りでは",
+    "structure": "V[普通形]＋限り / Anaである＋限りは / Nである＋限りでは",
     "explanation": "a. Trong khi…còn…(phạm vi, điều kiện). b. Theo…/dựa theo…(căn cứ vào phạm vi nào đó). c. Trong…, trong giới hạn…",
     "notes": "Ana và N ở hiện tại vắn tắt bỏ だ thêm である.",
     "related_forms": [
@@ -1489,7 +1489,7 @@
     "phienAm": "にかぎり／にかぎって／にかぎらず",
     "meaning": "Chỉ…/ Đặc biệt…/ Không chỉ…",
     "level": "N2",
-    "structure": "N＋に限り（只...）　/　Nに限って（Đặc biệt chỉ...）　/　Nに限らず（Không chỉ...）",
+    "structure": "N＋に限り（只...） / Nに限って（Đặc biệt chỉ...） / Nに限らず（Không chỉ...）",
     "explanation": "に限り biểu thị giới hạn. に限って nhấn mạnh sự đặc biệt (thường dùng khi điều bất ngờ xảy ra). に限らず nghĩa là không chỉ giới hạn ở đó.",
     "notes": "Ví dụ: 本日限り、一回限り、70歳以上の方に限り。",
     "related_forms": [
@@ -1520,7 +1520,7 @@
     "phienAm": "さえ",
     "meaning": "Thậm chí…/ Ngay cả…",
     "level": "N2",
-    "structure": "N＋さえ　/　Nに＋さえ　/　Nで＋さえ",
+    "structure": "N＋さえ / Nに＋さえ / Nで＋さえ",
     "explanation": "Dùng trình bày ý nhấn mạnh một trường hợp cực đoan, thậm chí một điều bất ngờ cũng xảy ra.",
     "related_forms": [
       "〜も",
@@ -1550,7 +1550,7 @@
     "phienAm": "さえ〜ば",
     "meaning": "Chỉ cần…thì…",
     "level": "N2",
-    "structure": "Nさえ＋Vば　/　Nさえ＋Aiければ　/　Nさえ＋Anaなら",
+    "structure": "Nさえ＋Vば / Nさえ＋Aiければ / Nさえ＋Anaなら",
     "explanation": "Dùng trình bày ý: chỉ cần điều kiện đó thỏa mãn thì kết quả sẽ được.",
     "notes": "Vます bỏ ます cộng với すれば.",
     "related_forms": [
@@ -1700,7 +1700,7 @@
     "phienAm": "としても／にしても",
     "meaning": "Cho dù…nhưng…/ Dù có…thì…",
     "level": "N2",
-    "structure": "N/Ana/V[普通形]＋としても　/　N＋にしても",
+    "structure": "N/Ana/V[普通形]＋としても / N＋にしても",
     "explanation": "Dùng trình bày sự giả định nhưng khả năng tính tới là rất ít, hoặc dù điều đó xảy ra thì kết quả vẫn vậy.",
     "related_forms": [
       "〜ても",
@@ -1730,7 +1730,7 @@
     "phienAm": "をNとして／をNとする",
     "meaning": "Với…là… (mục đích/nền tảng)",
     "level": "N2",
-    "structure": "NをNと＋して＋V　/　する＋N　/　した＋N",
+    "structure": "NをNと＋して＋V / する＋N / した＋N",
     "explanation": "Dùng trình bày một sự việc được quyết định để làm một việc gì đó, lấy N làm nền tảng hoặc mục đích.",
     "related_forms": [
       "〜を目的として"
@@ -1759,7 +1759,7 @@
     "phienAm": "とともに",
     "meaning": "Cùng với…",
     "level": "N2",
-    "structure": "Nと＋ともに　/　Vると＋ともに",
+    "structure": "Nと＋ともに / Vると＋ともに",
     "explanation": "Dùng để trình bày đối tượng cùng hành động hoặc sự thay đổi đồng thời.",
     "related_forms": [
       "〜に伴い",
@@ -1789,7 +1789,7 @@
     "phienAm": "にともない／にともなって／にともなう",
     "meaning": "Cùng với…/ Kèm theo…",
     "level": "N2",
-    "structure": "Nに＋伴い　/　Vるのに＋伴って　/　Vたのに＋伴う＋N",
+    "structure": "Nに＋伴い / Vるのに＋伴って / Vたのに＋伴う＋N",
     "explanation": "Dùng để trình bày một sự việc nào đó thay đổi cùng với sự thay đổi của một sự việc khác.",
     "related_forms": [
       "〜とともに",
@@ -1819,7 +1819,7 @@
     "phienAm": "にしたがって／にしたがい",
     "meaning": "Theo như…/ Tuỳ theo… (thay đổi song song)",
     "level": "N2",
-    "structure": "Nに＋したがって　/　Vるに＋したがい",
+    "structure": "Nに＋したがって / Vるに＋したがい",
     "explanation": "Dùng trình bày sự thay đổi đồng thời theo một chiều hướng nhất định.",
     "related_forms": [
       "〜につれて",
@@ -1849,7 +1849,7 @@
     "phienAm": "とおりに／とおり",
     "meaning": "Đúng như…/ Theo đúng…/ Y như…",
     "level": "N2",
-    "structure": "Vた＋とおりに　/　Vる＋とおりに　/　Nの＋とおりに",
+    "structure": "Vた＋とおりに / Vる＋とおりに / Nの＋とおりに",
     "explanation": "Dùng trình bày ý làm đúng theo, làm y như điều đã được nói hoặc hướng dẫn.",
     "related_forms": [
       "〜ように",
@@ -1879,7 +1879,7 @@
     "phienAm": "すえに／すえの",
     "meaning": "Sau khi…(quá trình dài)…cuối cùng…",
     "level": "N2",
-    "structure": "Vた＋末に　/　Nの＋末に",
+    "structure": "Vた＋末に / Nの＋末に",
     "explanation": "Dùng trình bày kết quả sau một quá trình dài, thường là kết quả sau khi đã cố gắng hoặc trăn trở nhiều.",
     "notes": "あげく cũng có nghĩa tương tự nhưng 末に thường dùng cho cả kết quả tốt lẫn xấu, còn あげく thiên về kết quả xấu.",
     "related_forms": [
@@ -1910,7 +1910,7 @@
     "phienAm": "あまり／あまりの",
     "meaning": "Quá…đến mức…/ Vì…quá mà…",
     "level": "N2",
-    "structure": "Vた＋あまり　/　Nの＋あまり　/　Aiい＋あまり",
+    "structure": "Vた＋あまり / Nの＋あまり / Aiい＋あまり",
     "explanation": "Dùng trình bày trạng thái quá mức, vì cảm xúc hay tình trạng quá lớn mà dẫn đến kết quả ngoài ý muốn.",
     "related_forms": [
       "〜すぎて"
@@ -1939,7 +1939,7 @@
     "phienAm": "ことに",
     "meaning": "Thật là… (biểu hiện cảm xúc của người nói)",
     "level": "N2",
-    "structure": "Aiい＋ことに　/　Anaな＋ことに　/　Vた＋ことに",
+    "structure": "Aiい＋ことに / Anaな＋ことに / Vた＋ことに",
     "explanation": "Dùng để biểu đạt cảm xúc mạnh của người nói về sự kiện xảy ra. Thường đặt ở đầu câu.",
     "notes": "Các từ hay đi kèm: 残念なことに、幸いなことに、驚いたことに、悲しいことに。",
     "related_forms": [
@@ -2001,7 +2001,7 @@
     "phienAm": "あげく／あげくに",
     "meaning": "Sau khi…cuối cùng… (thường kết quả xấu)",
     "level": "N2",
-    "structure": "Vた＋あげく（に）　/　Nの＋あげく",
+    "structure": "Vた＋あげく（に） / Nの＋あげく",
     "explanation": "Dùng trình bày kết quả sau một quá trình, thường là kết quả xấu hoặc không mong muốn.",
     "notes": "Ngược với 末に ở chỗ あげく thường thiên về kết quả tiêu cực.",
     "caution": "Thường dùng khi kết quả không tốt.",
@@ -2033,7 +2033,7 @@
     "phienAm": "ところ",
     "meaning": "Đúng lúc…/ Đúng vào lúc đang…",
     "level": "N2",
-    "structure": "Ai＋ところ　/　Nの＋ところに　/　Vている＋ところへ　/　Vていた＋ところを",
+    "structure": "Ai＋ところ / Nの＋ところに / Vている＋ところへ / Vていた＋ところを",
     "explanation": "Dùng trình bày thời điểm, trường hợp xảy ra một việc gì đó. Thường dùng để xin lỗi vì đã làm phiền.",
     "notes": "お忙しいところ(を)すみません là cách dùng lịch sự phổ biến.",
     "related_forms": [
@@ -2094,7 +2094,7 @@
     "phienAm": "どころではない／どころじゃない",
     "meaning": "Không thể… (tình huống nghiêm trọng không cho phép)",
     "level": "N2",
-    "structure": "N＋どころではない　/　Vている＋どころではなく",
+    "structure": "N＋どころではない / Vている＋どころではなく",
     "explanation": "Dùng trình bày ý: vì tình hình nào đó mà không thể làm một việc gì đó.",
     "related_forms": [
       "〜どころか"
@@ -2123,7 +2123,7 @@
     "phienAm": "どころか",
     "meaning": "Không những không…mà còn… (nhấn mạnh ngược lại)",
     "level": "N2",
-    "structure": "N＋どころか　/　Vる＋どころか　/　Anaな＋どころか",
+    "structure": "N＋どころか / Vる＋どころか / Anaな＋どころか",
     "explanation": "Dùng trình bày sự việc sau ngược lại với sự việc trước, và nhấn mạnh sự việc đó.",
     "related_forms": [
       "〜どころではない"
@@ -2184,7 +2184,7 @@
     "phienAm": "きり／きりだ／たきり",
     "meaning": "Chỉ…/ Biền biệt từ sau khi…",
     "level": "N2",
-    "structure": "N＋きり　/　Vる＋きりだ　/　Vた＋きり",
+    "structure": "N＋きり / Vる＋きりだ / Vた＋きり",
     "explanation": "きり dùng trình bày trạng thái chỉ có như thế, không còn gì khác. たきり dùng trình bày từ sau khi sự việc xảy ra thì không thay đổi gì nữa.",
     "notes": "Cũng có hình thức っきり／っきりだ。それっきり／それきり = từ đó về sau.",
     "related_forms": [
@@ -2215,7 +2215,7 @@
     "phienAm": "にはんして／にはんし／にはんする",
     "meaning": "Trái ngược với…/ Ngược với…",
     "level": "N2",
-    "structure": "Nに＋反して／反し　/　反する＋N",
+    "structure": "Nに＋反して／反し / 反する＋N",
     "explanation": "Dùng trình bày một sự việc khác với sự dự đoán hoặc một sự việc trái ngược với một sự việc khác.",
     "related_forms": [
       "〜に逆らって",
@@ -2245,7 +2245,7 @@
     "phienAm": "はんめん",
     "meaning": "Mặt khác…/ Thế nhưng… (hai mặt của cùng một sự việc)",
     "level": "N2",
-    "structure": "Nである＋反面　/　Anaな/である＋反面　/　Ai/Vる＋反面",
+    "structure": "Nである＋反面 / Anaな/である＋反面 / Ai/Vる＋反面",
     "explanation": "Dùng trình bày ý: trên một phương diện nào đó thì được nghĩ như thế, nhưng nếu nhìn ở phương diện khác thì lại không phải như vậy.",
     "notes": "Hai mặt đối lập của cùng một sự vật/người.",
     "related_forms": [
@@ -2276,7 +2276,7 @@
     "phienAm": "いっぽう／いっぽうで",
     "meaning": "Mặt khác… (so sánh hai khía cạnh)",
     "level": "N2",
-    "structure": "Nである＋一方　/　Anaな/である＋一方で　/　Ai/Vる＋一方では",
+    "structure": "Nである＋一方 / Anaな/である＋一方で / Ai/Vる＋一方では",
     "explanation": "Dùng trình bày sự so sánh của 2 sự việc, tình trạng đối lập nhau.",
     "related_forms": [
       "〜反面",
@@ -2336,7 +2336,7 @@
     "phienAm": "うえに",
     "meaning": "Không những…mà hơn nữa…",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋上に　/　Anaな/である＋上に　/　Nの/である＋上に",
+    "structure": "V/Ai[普通形]＋上に / Anaな/である＋上に / Nの/である＋上に",
     "explanation": "Dùng trình bày thêm vào một sự việc nào đó, thường là thêm một điều tương tự hoặc cùng chiều.",
     "notes": "Ana và N ở hiện tại vắn tắt bỏ だ thêm な hoặc である.",
     "related_forms": [
@@ -2367,7 +2367,7 @@
     "phienAm": "うえで／うえでの",
     "meaning": "Sau khi…thì… (thực hiện xong rồi mới làm tiếp)",
     "level": "N2",
-    "structure": "Vた＋上で　/　Nの＋上で／上での",
+    "structure": "Vた＋上で / Nの＋上で／上での",
     "explanation": "Dùng trình bày một sự việc hoặc hành động sau một sự việc hoặc hành động khác.",
     "related_forms": [
       "〜てから",
@@ -2427,7 +2427,7 @@
     "phienAm": "うえでは／じょう",
     "meaning": "Theo…thì…/ Trên phạm vi…/ Về mặt…",
     "level": "N2",
-    "structure": "Nの＋上では／上でも　/　N＋上（じょう）／上は／上も",
+    "structure": "Nの＋上では／上でも / N＋上（じょう）／上は／上も",
     "explanation": "Dùng trình bày một phạm vi của sự việc, tình trạng. Hình thức じょう dùng với những từ như 理論、法律、制度、数字。",
     "notes": "Hay gặp: 理論上、法律上、制度上、数字上、記録上。",
     "related_forms": [
@@ -2458,7 +2458,7 @@
     "phienAm": "しだいで／しだいだ",
     "meaning": "Tuỳ vào…/ Phụ thuộc vào…",
     "level": "N2",
-    "structure": "N＋次第で　/　N＋次第だ",
+    "structure": "N＋次第で / N＋次第だ",
     "explanation": "Dùng trình bày ý: kết quả hoặc sự việc phụ thuộc vào yếu tố nêu ra.",
     "related_forms": [
       "〜によって",
@@ -2488,7 +2488,7 @@
     "phienAm": "べきだ／べきではない",
     "meaning": "Nên…/ Không nên…/ Phải…",
     "level": "N2",
-    "structure": "Vる＋べきだ　※するべき/すべき",
+    "structure": "Vる＋べきだ ※するべき/すべき",
     "explanation": "Dùng trình bày ý phán đoán về nghĩa vụ hoặc điều nên làm theo chuẩn mực đạo đức, xã hội.",
     "notes": "するべき hoặc すべき đều dùng được. べきではない là phủ định.",
     "caution": "Không dùng với ý muốn cá nhân. Dùng khi nói về nghĩa vụ chung.",
@@ -2520,7 +2520,7 @@
     "phienAm": "ざるをえない",
     "meaning": "Không thể không…/ Buộc phải…",
     "level": "N2",
-    "structure": "Vない(bỏ ない)＋ざるをえない　※するざるをえない→せざるをえない",
+    "structure": "Vない(bỏ ない)＋ざるをえない ※するざるをえない→せざるをえない",
     "explanation": "Dùng trình bày ý không thể không làm điều gì đó, dù không muốn vẫn phải làm.",
     "notes": "する→せざるをえない (bất quy tắc).",
     "related_forms": [
@@ -2581,7 +2581,7 @@
     "phienAm": "わけにはいかない",
     "meaning": "Không thể…được (lý do đạo đức, quy tắc xã hội)",
     "level": "N2",
-    "structure": "Vる＋わけにはいかない　/　Vない＋わけにはいかない",
+    "structure": "Vる＋わけにはいかない / Vない＋わけにはいかない",
     "explanation": "Dùng trình bày ý không thể làm điều gì đó do lý do đạo đức, hoàn cảnh xã hội hoặc trách nhiệm.",
     "notes": "わけにはいかない (không thể làm) ≠ わけにいかない (cũng dùng được).",
     "related_forms": [
@@ -2704,7 +2704,7 @@
     "phienAm": "にわたって／にわたる",
     "meaning": "Trong suốt…/ Trải qua…/ Khắp…",
     "level": "N2",
-    "structure": "N（期間/回数/範囲）に＋わたって　/　わたる＋N",
+    "structure": "N（期間/回数/範囲）に＋わたって / わたる＋N",
     "explanation": "Dùng trình bày phạm vi thời gian, số lần hoặc không gian rộng lớn.",
     "related_forms": [
       "〜を通じて"
@@ -2733,7 +2733,7 @@
     "phienAm": "にさきだって／にさきだち",
     "meaning": "Trước khi…/ Nhân dịp trước khi…",
     "level": "N2",
-    "structure": "Nに＋先立って　/　Vるに＋先立ち",
+    "structure": "Nに＋先立って / Vるに＋先立ち",
     "explanation": "Dùng trình bày việc tiến hành trước, như sự chuẩn bị hoặc hành động trước khi sự kiện chính xảy ra.",
     "related_forms": [
       "〜の前に",
@@ -2763,7 +2763,7 @@
     "phienAm": "にそって／にそい／にそう",
     "meaning": "Theo…/ Dọc theo…/ Căn cứ vào…",
     "level": "N2",
-    "structure": "Nに＋沿って　/　沿い　/　沿う＋N",
+    "structure": "Nに＋沿って / 沿い / 沿う＋N",
     "explanation": "Dùng trình bày ý làm theo, đi theo hoặc dọc theo một điều gì đó.",
     "related_forms": [
       "〜に従って",
@@ -2793,7 +2793,7 @@
     "phienAm": "にあたって／にあたり",
     "meaning": "Khi, vào dịp…/ Nhân dịp…",
     "level": "N2",
-    "structure": "Nに＋当たって　/　Vるに＋当たり",
+    "structure": "Nに＋当たって / Vるに＋当たり",
     "explanation": "Dùng trình bày thời điểm đặc biệt quan trọng khi thực hiện sự việc, thường dùng trong văn phong trang trọng.",
     "caution": "Thường dùng trong văn phong trang trọng.",
     "related_forms": [
@@ -2950,7 +2950,7 @@
     "phienAm": "ことから",
     "meaning": "Vì…nên…/ Do…mà… (lý do, căn cứ)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋ことから　/　N/Ana[普通形]＋ことから",
+    "structure": "V/Ai[普通形]＋ことから / N/Ana[普通形]＋ことから",
     "explanation": "Dùng trình bày lý do. Thông thường mệnh đề lý do là mệnh đề phía trước.",
     "notes": "Ana bỏ だ thêm な. N bỏ だ thêm である.",
     "related_forms": [
@@ -3074,7 +3074,7 @@
     "phienAm": "というより",
     "meaning": "Hơn là…/ Đúng hơn là…",
     "level": "N2",
-    "structure": "N/Ana＋というより　/　V/Ai[普通形]＋というより",
+    "structure": "N/Ana＋というより / V/Ai[普通形]＋というより",
     "explanation": "Dùng đánh giá về một sự việc nào đó, cho rằng cách diễn đạt này chính xác hơn.",
     "notes": "Ana và N cộng trực tiếp với というより.",
     "related_forms": [
@@ -3105,7 +3105,7 @@
     "phienAm": "といっても",
     "meaning": "Mặc dù nói rằng…nhưng thực ra…",
     "level": "N2",
-    "structure": "N/Ana＋といっても　/　V/Ai[普通形]＋といっても",
+    "structure": "N/Ana＋といっても / V/Ai[普通形]＋といっても",
     "explanation": "Dùng trình bày sự việc hoặc tình trạng thực tế khác với điều người ta nghĩ khi nghe.",
     "related_forms": [
       "〜とはいえ",
@@ -3135,7 +3135,7 @@
     "phienAm": "というと／といえば／といったら",
     "meaning": "Nếu nói đến…thì…/ Nhắc đến…thì nghĩ đến…",
     "level": "N2",
-    "structure": "N/Ana＋というと　/　V/Ai[普通形]＋といえば／といったら",
+    "structure": "N/Ana＋というと / V/Ai[普通形]＋といえば／といったら",
     "explanation": "Dùng khi đưa ra sự việc đã liên tưởng hoặc nhớ ra từ đâu đó.",
     "related_forms": [
       "〜と言えば"
@@ -3164,7 +3164,7 @@
     "phienAm": "たとえ〜ても",
     "meaning": "Cho dù là…thì…/ Dù có…đi nữa thì…",
     "level": "N2",
-    "structure": "たとえ＋V ても／V なくても　/　Ai くても　/　Ana でも　/　N でも",
+    "structure": "たとえ＋V ても／V なくても / Ai くても / Ana でも / N でも",
     "explanation": "Dùng để diễn đạt ý: dù trong hoàn cảnh nào đó đi nữa, kết quả vẫn không thay đổi.",
     "notes": "たとえ thường đi kèm ở đầu câu để nhấn mạnh.",
     "related_forms": [
@@ -3195,7 +3195,7 @@
     "phienAm": "だけあって／だけに／だけのことはある",
     "meaning": "Vì…nên (đương nhiên)/ Xứng đáng là…",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋だけあって　/　Ana/N[普通形]＋だけに",
+    "structure": "V/Ai[普通形]＋だけあって / Ana/N[普通形]＋だけに",
     "explanation": "Dùng trình bày ý: vì có điều đó nên kết quả là đương nhiên, xứng đáng. Ana và N ở hiện tại vắn tắt cộng với だけあって.",
     "notes": "Ana だ→だな、N だ→だ cộng với だけあって.",
     "related_forms": [
@@ -3225,7 +3225,7 @@
     "phienAm": "ばかりか／ばかりでなく",
     "meaning": "Không chỉ…mà còn…/ Không những…mà hơn nữa…",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋ばかりか　/　Ana/N[普通形]＋ばかりでなく",
+    "structure": "V/Ai[普通形]＋ばかりか / Ana/N[普通形]＋ばかりでなく",
     "explanation": "Dùng trình bày ý: không chỉ điều đó mà còn cả điều này nữa.",
     "notes": "Ana だ→だな、N だ→だ cộng với ばかりか.",
     "related_forms": [
@@ -3256,7 +3256,7 @@
     "phienAm": "ばかりに",
     "meaning": "Chỉ vì…mà… (nhấn mạnh nguyên nhân dẫn đến kết quả xấu)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋ばかりに　/　Ana/N[普通形]＋ばかりに",
+    "structure": "V/Ai[普通形]＋ばかりに / Ana/N[普通形]＋ばかりに",
     "explanation": "Dùng trình bày ý: cường điệu, nhấn mạnh tới lý do dẫn tới sự việc không tốt.",
     "notes": "Ana だ→だな、N だ→だ である cộng với ばかりに.",
     "caution": "Thường dùng khi kết quả là xấu.",
@@ -3412,7 +3412,7 @@
     "phienAm": "において／においては／における",
     "meaning": "Ở…/ Tại…/ Vào lúc… (trang trọng)",
     "level": "N2",
-    "structure": "Nに＋おいて／おいては／おいても　/　おける＋N",
+    "structure": "Nに＋おいて／おいては／おいても / おける＋N",
     "explanation": "Dùng trình bày thời gian, nơi chốn, phạm vi của sự việc. Hình thức trang trọng của で、に。",
     "notes": "Hình thức trang trọng, hay dùng trong văn viết và văn phong chính thức.",
     "related_forms": [
@@ -3443,7 +3443,7 @@
     "phienAm": "をはじめ／をはじめとして",
     "meaning": "Tiêu biểu là…/ Trước tiên là…/ Ví dụ điển hình là…",
     "level": "N2",
-    "structure": "N＋をはじめ　/　Nをはじめとして　/　Nをはじめとする＋N",
+    "structure": "N＋をはじめ / Nをはじめとして / Nをはじめとする＋N",
     "explanation": "Dùng đưa ra một thí dụ chủ yếu, điển hình, và ngụ ý còn nhiều ví dụ khác nữa.",
     "related_forms": [
       "〜など",
@@ -3473,7 +3473,7 @@
     "phienAm": "をめぐって／をめぐる",
     "meaning": "Xoay quanh…/ Liên quan đến…",
     "level": "N2",
-    "structure": "N＋をめぐって　/　をめぐる＋N",
+    "structure": "N＋をめぐって / をめぐる＋N",
     "explanation": "Dùng trình bày một sự liên quan đến vấn đề nào đó, và vấn đề đó là trọng tâm.",
     "related_forms": [
       "〜に関して",
@@ -3503,7 +3503,7 @@
     "phienAm": "からすると／からすれば／からいって",
     "meaning": "Nếu suy nghĩ từ góc độ…thì…/ Nếu phán đoán từ…thì…",
     "level": "N2",
-    "structure": "N＋からすると　/　からすれば　/　からいって",
+    "structure": "N＋からすると / からすれば / からいって",
     "explanation": "Dùng trình bày sự phán đoán, đánh giá dựa trên một căn cứ, góc độ, quan điểm nào đó.",
     "related_forms": [
       "〜から見ると",
@@ -3563,7 +3563,7 @@
     "phienAm": "からみると／からみれば／からみて",
     "meaning": "Nếu nhìn từ…thì…/ Nhìn từ quan điểm của…",
     "level": "N2",
-    "structure": "N＋から見ると　/　から見れば　/　から見て　/　から見ても",
+    "structure": "N＋から見ると / から見れば / から見て / から見ても",
     "explanation": "Dùng trình bày sự phán đoán, suy nghĩ một sự việc nào đó trên một lập trường, quan điểm nào đó.",
     "related_forms": [
       "〜にとって",
@@ -3593,7 +3593,7 @@
     "phienAm": "からといって",
     "meaning": "Chỉ vì…(không nhất thiết)/  Dù vì…nhưng không nhất thiết là…",
     "level": "N2",
-    "structure": "V[普通形]＋からといって　/　N/Ana[普通形]＋からって",
+    "structure": "V[普通形]＋からといって / N/Ana[普通形]＋からって",
     "explanation": "Dùng trình bày ý: dù có lý do đó nhưng không phải vì thế mà kết quả nhất thiết phải như vậy.",
     "related_forms": [
       "〜だからといって"
@@ -3622,7 +3622,7 @@
     "phienAm": "てからでないと／てからでなければ",
     "meaning": "Nếu không…trước thì không thể…",
     "level": "N2",
-    "structure": "Vて＋からでないと〜できない　/　からでなければ〜できない",
+    "structure": "Vて＋からでないと〜できない / からでなければ〜できない",
     "explanation": "Dùng trình bày ý: phải làm điều này trước thì mới có thể làm điều tiếp theo.",
     "related_forms": [
       "〜なければ〜できない",
@@ -3652,7 +3652,7 @@
     "phienAm": "にかけて",
     "meaning": "Từ…đến… (phạm vi thời gian hoặc không gian)",
     "level": "N2",
-    "structure": "[時間]から[時間]にかけて　/　[場所]から[場所]にかけて",
+    "structure": "[時間]から[時間]にかけて / [場所]から[場所]にかけて",
     "explanation": "Dùng trình bày phạm vi từ điểm này đến điểm kia, không xác định rõ ràng điểm bắt đầu hay kết thúc.",
     "related_forms": [
       "〜から〜まで",
@@ -3682,7 +3682,7 @@
     "phienAm": "にかけては／にかけても",
     "meaning": "Nếu mà nói về…thì…/ Về lĩnh vực…thì…",
     "level": "N2",
-    "structure": "N＋にかけては　/　NのAiさ＋にかけては",
+    "structure": "N＋にかけては / NのAiさ＋にかけては",
     "explanation": "Dùng trình bày ý: nếu nói về điều gì đó thì sẽ như thế nào đó (mang tính tự tin, danh tiếng).",
     "notes": "Tính từ đuôi い bỏ い, na bỏ な rồi cộng với にかけては.",
     "related_forms": [
@@ -3743,7 +3743,7 @@
     "phienAm": "まい",
     "meaning": "Quyết không…/ Nhất định sẽ không…",
     "level": "N2",
-    "structure": "Vる＋まい　※する→するまい/すまい、来る→来るまい/来まい",
+    "structure": "Vる＋まい ※する→するまい/すまい、来る→来るまい/来まい",
     "explanation": "Dùng để trình bày ý phủ định mạnh mẽ, quyết tâm không làm điều gì đó.",
     "notes": "する→するまい または すまい. 来る→来るまい または 来まい.",
     "related_forms": [
@@ -3835,7 +3835,7 @@
     "phienAm": "もかまわず",
     "meaning": "Mà không bận tâm tới…/ Mặc kệ…",
     "level": "N2",
-    "structure": "N＋もかまわず　/　Vるの＋もかまわず",
+    "structure": "N＋もかまわず / Vるの＋もかまわず",
     "explanation": "Dùng để trình bày ý: tiến hành một sự việc nào đó mà không quan tâm đến cái gì đó.",
     "related_forms": [
       "〜にもかかわらず",
@@ -3865,7 +3865,7 @@
     "phienAm": "にもかかわらず",
     "meaning": "Dù cho…/ Mặc cho… (nghịch lý)",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋にもかかわらず　/　N/Ana[普通形]＋にもかかわらず　※Ana/Nはだを除く",
+    "structure": "V/Ai[普通形]＋にもかかわらず / N/Ana[普通形]＋にもかかわらず ※Ana/Nはだを除く",
     "explanation": "Mệnh đề sau trình bày tình trạng không khớp với sự dự đoán từ mệnh đề trước.",
     "notes": "Ana và N ở hiện tại vắn tắt bỏ だ cộng trực tiếp với にもかかわらず.",
     "related_forms": [
@@ -3896,7 +3896,7 @@
     "phienAm": "にかかわらず／にかかわりなく",
     "meaning": "Bất kể…/ Không liên quan tới…/ Dù…hay…",
     "level": "N2",
-    "structure": "VるーVない＋にかかわらず　/　AiーAiくない＋にかかわりなく　/　N＋にかかわらず",
+    "structure": "VるーVない＋にかかわらず / AiーAiくない＋にかかわりなく / N＋にかかわらず",
     "explanation": "Dùng trong câu biểu hiện 2 sự việc đối lập. Trình bày ý: không liên quan đến những sự việc đó.",
     "notes": "Hay gặp: あるなし、好ききらい、上手下手 にかかわらず.",
     "related_forms": [
@@ -3927,7 +3927,7 @@
     "phienAm": "をとわず／はとわない",
     "meaning": "Bất kể…/ Không phân biệt…/ Không kể là…",
     "level": "N2",
-    "structure": "N＋を問わず　/　Nは問いません",
+    "structure": "N＋を問わず / Nは問いません",
     "explanation": "Dùng trình bày một sự việc không liên quan hoặc không ảnh hưởng tới tình trạng hoặc sự việc khác.",
     "notes": "Hay gặp: 年齢を問わず、性別を問わず、経験の有無を問わず、国の内外を問わず。",
     "related_forms": [
@@ -3958,7 +3958,7 @@
     "phienAm": "やら〜やら",
     "meaning": "Chẳng hạn như…cũng có…/ Khi thì…khi thì… (liệt kê mơ hồ)",
     "level": "N2",
-    "structure": "N＋やら、N＋やら　/　Ai＋やら　/　Vる＋やら",
+    "structure": "N＋やら、N＋やら / Ai＋やら / Vる＋やら",
     "explanation": "Dùng liệt kê đại khái sự vật, sự việc. Thường dùng khi liệt kê một số thứ trong nhiều thứ, không xác định rõ.",
     "related_forms": [
       "〜とか〜とか",
@@ -3988,7 +3988,7 @@
     "phienAm": "につけ",
     "meaning": "Dù…hay là…/ Bất kể trường hợp nào thì…",
     "level": "N2",
-    "structure": "Vる＋につけ　/　Ai＋につけ",
+    "structure": "Vる＋につけ / Ai＋につけ",
     "explanation": "Dùng trình bày ý: dù trường hợp nào cũng sẽ như thế nào đó. Thường dùng cặp từ đối lập trước につけ.",
     "notes": "Mở rộng: 何かにつけ（= 何かあるたびに）. Trước につけ là những từ đối lập: 暑い、寒い、見る、聞く。",
     "related_forms": [
@@ -4019,7 +4019,7 @@
     "phienAm": "にしろ〜にしろ／にせよ〜にせよ",
     "meaning": "Cho dù…hay là…/ Dù trong trường hợp nào thì…",
     "level": "N2",
-    "structure": "V/Ai[普通形]＋にしろ　/　N/Ana[普通形]＋にせよ　※Ana/Nはだを除く",
+    "structure": "V/Ai[普通形]＋にしろ / N/Ana[普通形]＋にせよ ※Ana/Nはだを除く",
     "explanation": "Dùng trình bày sự việc: cho dù trường hợp hoặc sự việc như thế nào thì cũng sẽ tiến hành hoặc xảy ra một việc gì đó.",
     "notes": "Ana và N ở hiện tại vắn tắt bỏ だ cộng trực tiếp với にしろ/ にせよ.",
     "related_forms": [
@@ -4050,7 +4050,7 @@
     "phienAm": "もVばもV",
     "meaning": "N1 cũng…N2 cũng… (liệt kê hai điều cùng chiều)",
     "level": "N2",
-    "structure": "N1もVばN2もVる　/　N1もAiければN2もAi　/　N1もAnaならN2もAnaだ",
+    "structure": "N1もVばN2もVる / N1もAiければN2もAi / N1もAnaならN2もAnaだ",
     "explanation": "Dùng trình bày thêm một sự việc vào sau sự việc đã trình bày ở mệnh đề trước.",
     "notes": "Hay gặp: すれば〜もする、よければ〜もいい、上手なら〜も上手だ。",
     "related_forms": [
@@ -4081,7 +4081,7 @@
     "phienAm": "ものだ",
     "meaning": "…là đương nhiên/ …là lẽ thường",
     "level": "N2",
-    "structure": "Vる/Vない＋ものだ　/　Ai/Aiくない＋ものだ　/　Anaな/Anaじゃない＋ものだ",
+    "structure": "Vる/Vない＋ものだ / Ai/Aiくない＋ものだ / Anaな/Anaじゃない＋ものだ",
     "explanation": "Dùng trình bày một sự thật, lẽ thường hoặc quy luật mang tính phổ quát.",
     "related_forms": [
       "〜はずだ",
@@ -4111,7 +4111,7 @@
     "phienAm": "ものだ",
     "meaning": "Thật muốn…/ Biết bao… (ước muốn hoặc cảm thán)",
     "level": "N2",
-    "structure": "Vたい/Vたくない＋ものだ　/　ほしい/ほしくない＋ものだ",
+    "structure": "Vたい/Vたくない＋ものだ / ほしい/ほしくない＋ものだ",
     "explanation": "Dùng trình bày sự mong muốn, ước vọng, hoặc cảm thán về điều gì đó.",
     "related_forms": [
       "〜なあ",
@@ -4141,7 +4141,7 @@
     "phienAm": "ものだ",
     "meaning": "Hồi đó hay…/ Ngày xưa thường… (nhớ lại quá khứ)",
     "level": "N2",
-    "structure": "Vた＋ものだ　/　Vなかった＋ものだ",
+    "structure": "Vた＋ものだ / Vなかった＋ものだ",
     "explanation": "Dùng hồi tưởng, nhớ lại những việc xảy ra trước đây, những việc ở quá khứ đã trải qua.",
     "related_forms": [
       "〜たものだ"
@@ -4170,7 +4170,7 @@
     "phienAm": "ものではない／もんじゃない",
     "meaning": "Không nên…/ Không được…/ Đừng… (lời khuyên/mệnh lệnh)",
     "level": "N2",
-    "structure": "Vる＋ものではない　/　もんじゃない",
+    "structure": "Vる＋ものではない / もんじゃない",
     "explanation": "Dùng với ý nghĩa như một lời khuyên, mệnh lệnh không nên làm điều gì đó.",
     "related_forms": [
       "〜べきではない",
@@ -4200,7 +4200,7 @@
     "phienAm": "というものだ",
     "meaning": "…đương nhiên là vậy/ …chính là như thế (nhấn mạnh phán đoán)",
     "level": "N2",
-    "structure": "Vる/Ai/Vない/Aiくな＋というものだ　/　Ana/Anaじゃない＋というものだ",
+    "structure": "Vる/Ai/Vない/Aiくな＋というものだ / Ana/Anaじゃない＋というものだ",
     "explanation": "Dùng để nhấn mạnh cảm tưởng hoặc chủ trương của người nói: việc đó là chuyện đương nhiên, cái đó là đương nhiên.",
     "related_forms": [
       "〜ものだ",
@@ -4230,7 +4230,7 @@
     "phienAm": "をちゅうしんに／をちゅうしんにして",
     "meaning": "Lấy…làm trọng tâm/ Lấy…làm trung tâm",
     "level": "N2",
-    "structure": "Nを＋中心に　/　中心にして　/　中心にした＋N　/　中心として／中心とした＋N",
+    "structure": "Nを＋中心に / 中心にして / 中心にした＋N / 中心として／中心とした＋N",
     "explanation": "Dùng để trình bày một sự việc nào đó được xem là trọng tâm, trung tâm.",
     "related_forms": [
       "〜を主として"
@@ -4289,7 +4289,7 @@
     "phienAm": "をつうじて／をとおして",
     "meaning": "Suốt…/ Thông qua…",
     "level": "N2",
-    "structure": "Nを＋通じて　/　通して",
+    "structure": "Nを＋通じて / 通して",
     "explanation": "a. Dùng trình bày sự việc được tiến hành từ đầu thời kỳ tới cuối thời kỳ. b. Dùng trình bày một sự việc không phải trực tiếp mà thông qua một cái gì đó ở giữa.",
     "related_forms": [
       "〜によって",
@@ -4319,7 +4319,7 @@
     "phienAm": "おそれがある",
     "meaning": "E rằng…/ Sợ rằng…/ Có nguy cơ…",
     "level": "N2",
-    "structure": "Nの＋おそれがある　/　Vる＋おそれがある",
+    "structure": "Nの＋おそれがある / Vる＋おそれがある",
     "explanation": "Dùng trình bày sự lo lắng, bất an về một việc gì đó có khả năng sẽ xảy ra.",
     "related_forms": [
       "〜かねない",
@@ -4349,7 +4349,7 @@
     "phienAm": "ものがある",
     "meaning": "Có cảm giác…/ Cảm thấy như là…/ Cái gì đó đặc biệt trong…",
     "level": "N2",
-    "structure": "Vる＋ものがある　/　Ai＋ものがある　/　Anaな＋ものがある",
+    "structure": "Vる＋ものがある / Ai＋ものがある / Anaな＋ものがある",
     "explanation": "Dùng biểu đạt ý kiến hoặc cảm giác chủ quan, có điều gì đó đặc biệt, ấn tượng.",
     "related_forms": [
       "〜ような気がする"
@@ -4408,7 +4408,7 @@
     "phienAm": "をもとに／をもとにして",
     "meaning": "Dựa trên…/ Dựa theo…/ Căn cứ vào…",
     "level": "N2",
-    "structure": "N＋をもとに　/　をもとにして",
+    "structure": "N＋をもとに / をもとにして",
     "explanation": "Dùng trình bày một sự việc được tiến hành dựa theo nguyên tắc, cơ sở, nền tảng, căn cứ nào đó.",
     "related_forms": [
       "〜に基づいて",
@@ -4438,7 +4438,7 @@
     "phienAm": "をきっかけに／をけいきに",
     "meaning": "Nhân cơ hội…/ Từ sau khi…/ Lấy…làm cơ hội",
     "level": "N2",
-    "structure": "N＋をきっかけに　/　Vるの＋をきっかけとして　/　Nを契機に",
+    "structure": "N＋をきっかけに / Vるの＋をきっかけとして / Nを契機に",
     "explanation": "Dùng trình bày một sự việc nào đó bắt đầu thay đổi từ một sự việc ngẫu nhiên khác.",
     "notes": "契機（けいき）là hình thức trang trọng hơn きっかけ.",
     "related_forms": [

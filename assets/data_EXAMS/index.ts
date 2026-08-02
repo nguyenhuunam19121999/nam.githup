@@ -1,246 +1,152 @@
 // ============================================
 // FILE: assets/data_EXAMS/index.ts
-// QUẢN LÝ TỔNG HỢP ĐỀ THI - CHỈ TẬP TRUNG N3
+// QUẢN LÝ TỔNG HỢP ĐỀ THI - MỌI CẤP ĐỘ
+// Đọc từ exams.db (SQLite) qua services/db.ts
 // ============================================
 
-// 📥 IMPORT MODULE N3 (đang hoạt động)
-import * as N3 from './n3/index';
+import { getDb } from '../../services/db';
+import * as Shared from './shared';
+import type { ExamData, Question, Section } from './shared';
+export type { ExamData, Question, Section };
 
-// 🔒 CÁC MODULE KHÁC (TẠM THỜI COMMENT, SẼ MỞ SAU)
-// import * as N1 from './n1/index';
-// import * as N2 from './n2/index';
-// import * as N4 from './n4/index';
-// import * as N5 from './n5/index';
+// Cache trong bộ nhớ để không phải parse lại JSON mỗi lần gọi
+// (đề thi không đổi trong 1 phiên sử dụng app)
+const examCache = new Map<string, ExamData>();
 
-// ============================================
-// 📌 ĐỊNH NGHĨA INTERFACE
-// ============================================
-export interface Question {
-  id: number;
-  mondai: string;
-  text: string;
-  options: string[];
-  correct: number;
-  image?: string;
-  transcript?: string;
-}
+export const AVAILABLE_LEVELS = ['N1', 'N2', 'N3', 'N4', 'N5'];
+export const getExamById = async (level: string, id: string): Promise<ExamData | null> => {
+  const normLevel = level.toLowerCase(); // v.d: "n3"
+  const normId = id.toLowerCase();       // v.d: "n3_01" hoặc "01"
+  
+  // Cache key chuẩn hóa
+  const cacheKey = `${normLevel}_${normId}`;
+  if (examCache.has(cacheKey)) return examCache.get(cacheKey)!;
 
-export interface Section {
-  type: string;
-  name: string;
-  instruction: string;
-  points_per_question: number;
-  questions: Question[];
-}
-
-export interface VocabSection {
-  name: string;
-  max_score: number;
-  sections: Section[];
-}
-
-export interface GrammarReadingSection {
-  name: string;
-  max_score: number;
-  time_limit?: number;
-  grammar_sections: Section[];
-  reading_sections: Section[];
-}
-
-export interface ListeningSection {
-  name: string;
-  max_score: number;
-  time_limit?: number;
-  sections: Section[];
-}
-
-export interface ExamData {
-  ky_thi: string;
-  level: string;
-  year: number;
-  month: number;
-  nguon: string;
-  images: string[];
-  time_vocab: number;
-  time_grammar: number;
-  time_reading: number;
-  time_listening: number;
-  passing_score: number;
-  section_scores: {
-    vocab: number;
-    grammar_reading: number;
-    listening: number;
-  };
-  vocab: VocabSection;
-  grammar_reading: GrammarReadingSection;
-  listening: ListeningSection;
-}
-
-export interface ExamModule {
-  getExamById: (id: string) => ExamData | null;
-  getAllExams: () => ExamData[];
-  getExamIds: () => string[];
-  getVocabQuestions: (exam: ExamData) => Question[];
-  getGrammarQuestions: (exam: ExamData) => Question[];
-  getReadingQuestions: (exam: ExamData) => Question[];
-  getListeningQuestions: (exam: ExamData) => Question[];
-  getAllQuestions: (exam: ExamData) => Question[];
-  getGrammarReadingQuestions: (exam: ExamData) => Question[];
-  getExamStats: (exam: ExamData) => any;
-  // ✅ Chỉ giữ các hàm phát âm cho phần nghe
-  speakTranscriptWithVoices: (transcript: string, options?: any) => void;
-  stopSpeaking: () => Promise<void>;
-  isSpeaking: () => Promise<boolean>;
-  setVoiceConfig: (config: any) => void;
-  getVoiceConfig: () => any;
-  parseTranscript: (transcript: string) => any[];
-}
-
-// ============================================
-// 📂 ĐĂNG KÝ CÁC MODULE (CHỈ N3 ĐANG HOẠT ĐỘNG)
-// ============================================
-const EXAM_MODULES: Record<string, ExamModule> = {
-  // ✅ ĐANG HOẠT ĐỘNG
-  N3: N3 as unknown as ExamModule,
-  // 🔒 TẠM THỜI COMMENT
-  // N1,
-  // N2,
-  // N4,
-  // N5,
-};
-
-// Danh sách các level đang có
-export const AVAILABLE_LEVELS = Object.keys(EXAM_MODULES);
-
-// ============================================
-// 🔍 HÀM LẤY ĐỀ THI THEO CẤP ĐỘ
-// ============================================
-export const getExamById = (level: string, id: string): ExamData | null => {
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) {
-    console.warn(`⚠️ Module not found for level: ${level}. Available: ${AVAILABLE_LEVELS.join(', ')}`);
+  const db = await getDb('exams');
+  if (!db) {
+    console.warn(`⚠️ Không mở được exams.db`);
     return null;
   }
-  return module.getExamById(id);
-};
 
-export const getAllExams = (level: string): ExamData[] => {
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getAllExams();
-};
+  // Tách lấy phần số/mã gốc (VD: "n3_01" -> "01", "01" -> "01")
+  const rawNumber = normId.replace(new RegExp(`^${normLevel}_`, 'g'), '');
 
-export const getExamIds = (level: string): string[] => {
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getExamIds();
-};
+  // Tạo các khả năng ID có thể có trong DB
+  const possibleIds = [
+    normId,                                
+    `${normLevel}_${normId}`,               
+    `${normLevel}_${rawNumber}`,            
+    `${normLevel}_${normLevel}_${rawNumber}` 
+  ];
 
-// ============================================
-// 📋 HÀM LẤY CÂU HỎI THEO PHẦN
-// ============================================
-export const getVocabQuestions = (level: string, examId: string): Question[] => {
-  const exam = getExamById(level, examId);
-  if (!exam) return [];
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getVocabQuestions(exam);
-};
+  // Truy vấn tìm ID trùng 1 trong các khả năng trên
+  const row = await db.getFirstAsync<{ id: string; data: string }>(
+    `SELECT id, data FROM exams WHERE LOWER(id) IN (?, ?, ?, ?)`,
+    possibleIds
+  );
 
-export const getGrammarQuestions = (level: string, examId: string): Question[] => {
-  const exam = getExamById(level, examId);
-  if (!exam) return [];
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getGrammarQuestions(exam);
-};
-
-export const getReadingQuestions = (level: string, examId: string): Question[] => {
-  const exam = getExamById(level, examId);
-  if (!exam) return [];
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getReadingQuestions(exam);
-};
-
-export const getListeningQuestions = (level: string, examId: string): Question[] => {
-  const exam = getExamById(level, examId);
-  if (!exam) return [];
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getListeningQuestions(exam);
-};
-
-export const getGrammarReadingQuestions = (level: string, examId: string): Question[] => {
-  const exam = getExamById(level, examId);
-  if (!exam) return [];
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getGrammarReadingQuestions(exam);
-};
-
-export const getAllQuestions = (level: string, examId: string): Question[] => {
-  const exam = getExamById(level, examId);
-  if (!exam) return [];
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return [];
-  return module.getAllQuestions(exam);
-};
-
-export const getExamStats = (level: string, examId: string): any => {
-  const exam = getExamById(level, examId);
-  if (!exam) return null;
-  const module = EXAM_MODULES[level.toUpperCase()];
-  if (!module) return null;
-  return module.getExamStats(exam);
-};
-
-// ============================================
-// 🔊 HÀM PHÁT ÂM (CHỈ CHO PHẦN NGHE)
-// ============================================
-export const speakTranscriptWithVoices = (
-  transcript: string,
-  options?: {
-    onStart?: () => void;
-    onDone?: () => void;
-    onError?: (error: Error) => void;
+  if (!row) {
+    console.warn(`⚠️ Không tìm thấy đề thi với param (level=${level}, id=${id})`);
+    return null;
   }
-): void => {
-  N3.speakTranscriptWithVoices(transcript, options);
+
+  try {
+    const exam = JSON.parse(row.data) as ExamData;
+    examCache.set(cacheKey, exam);
+    return exam;
+  } catch (e) {
+    console.warn(`⚠️ Lỗi parse JSON đề thi ${id}:`, e);
+    return null;
+  }
 };
 
-export const stopSpeaking = async (): Promise<void> => {
-  await N3.stopSpeaking();
+export const getAllExams = async (level: string): Promise<ExamData[]> => {
+  const db = await getDb('exams');
+  if (!db) return [];
+  const rows = await db.getAllAsync<{ id: string; data: string }>(
+    'SELECT id, data FROM exams WHERE level = ? ORDER BY exam_id',
+    [level.toUpperCase()]
+  );
+  return rows.map((r) => {
+    const exam = JSON.parse(r.data) as ExamData;
+    examCache.set(r.id, exam);
+    return exam;
+  });
 };
 
-export const isSpeaking = async (): Promise<boolean> => {
-  return await N3.isSpeaking();
-};
-
-export const setVoiceConfig = (config: any): void => {
-  N3.setVoiceConfig(config);
-};
-
-export const getVoiceConfig = (): any => {
-  return N3.getVoiceConfig();
-};
-
-export const parseTranscript = (transcript: string): any[] => {
-  return N3.parseTranscript(transcript);
+export const getExamIds = async (level: string): Promise<string[]> => {
+  const db = await getDb('exams');
+  if (!db) return [];
+  const rows = await db.getAllAsync<{ exam_id: string }>(
+    'SELECT exam_id FROM exams WHERE level = ? ORDER BY exam_id',
+    [level.toUpperCase()]
+  );
+  return rows.map((r) => r.exam_id);
 };
 
 // ============================================
-// 📊 HÀM LẤY TẤT CẢ ĐỀ THI TẤT CẢ CẤP ĐỘ
+// 📋 HÀM LẤY CÂU HỎI THEO PHẦN (ASYNC)
 // ============================================
-export const getAllExamsAllLevels = (): { level: string; exams: ExamData[] }[] => {
-  return Object.entries(EXAM_MODULES).map(([level, module]) => ({
-    level,
-    exams: module.getAllExams(),
-  }));
+export const getVocabQuestions = async (level: string, examId: string): Promise<Question[]> => {
+  const exam = await getExamById(level, examId);
+  return exam ? Shared.getVocabQuestions(exam) : [];
+};
+
+export const getGrammarQuestions = async (level: string, examId: string): Promise<Question[]> => {
+  const exam = await getExamById(level, examId);
+  return exam ? Shared.getGrammarQuestions(exam) : [];
+};
+
+export const getReadingQuestions = async (level: string, examId: string): Promise<Question[]> => {
+  const exam = await getExamById(level, examId);
+  return exam ? Shared.getReadingQuestions(exam) : [];
+};
+
+export const getListeningQuestions = async (level: string, examId: string): Promise<Question[]> => {
+  const exam = await getExamById(level, examId);
+  return exam ? Shared.getListeningQuestions(exam) : [];
+};
+
+export const getGrammarReadingQuestions = async (level: string, examId: string): Promise<Question[]> => {
+  const exam = await getExamById(level, examId);
+  return exam ? Shared.getGrammarReadingQuestions(exam) : [];
+};
+
+export const getAllQuestions = async (level: string, examId: string): Promise<Question[]> => {
+  const exam = await getExamById(level, examId);
+  return exam ? Shared.getAllQuestions(exam) : [];
+};
+
+export const getExamStats = async (level: string, examId: string): Promise<any> => {
+  const exam = await getExamById(level, examId);
+  return exam ? Shared.getExamStats(exam) : null;
 };
 
 // ============================================
-// 🧮 HÀM TÍNH ĐIỂM TỔNG (CHUẨN JLPT: mỗi phần quy về thang 60, tổng 180)
+// 🔊 HÀM PHÁT ÂM — không đụng tới DB, re-export thẳng từ shared
+// ============================================
+export const speakTranscriptWithVoices = Shared.speakTranscriptWithVoices;
+export const stopSpeaking = Shared.stopSpeaking;
+export const isSpeaking = Shared.isSpeaking;
+export const setVoiceConfig = Shared.setVoiceConfig;
+export const getVoiceConfig = Shared.getVoiceConfig;
+export const parseTranscript = Shared.parseTranscript;
+
+// ============================================
+// 📊 HÀM LẤY TẤT CẢ ĐỀ THI TẤT CẢ CẤP ĐỘ (ASYNC)
+// ============================================
+export const getAllExamsAllLevels = async (): Promise<{ level: string; exams: ExamData[] }[]> => {
+  const results = await Promise.all(
+    AVAILABLE_LEVELS.map(async (level) => ({
+      level,
+      exams: await getAllExams(level),
+    }))
+  );
+  return results;
+};
+
+// ============================================
+// 🧮 HÀM TÍNH ĐIỂM TỔNG — hàm thuần (pure function), không đụng DB, giữ nguyên y hệt
 // ============================================
 export interface SectionScoreResult {
   rawScore: number;
@@ -286,8 +192,6 @@ const buildVocabDetails = (
   return details;
 };
 
-// LƯU Ý: ngưỡng đậu (95/180 tổng, tối thiểu 19/60 mỗi phần) là quy tắc chuẩn JLPT N3 phổ biến.
-// Nếu đề thi của bạn dùng ngưỡng khác (exam.passing_score), có thể thay 2 số 95 và 19 bên dưới.
 export const calculateTotalScore = (
   vocabQuestions: Question[],
   vocabAnswers: number[],

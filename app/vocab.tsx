@@ -51,6 +51,7 @@ interface Vocab {
   hiragana: string;
   han: string;
   nghia: string;
+  jisho_meaning_en?: string;
   example?: string;
   exampleMeaning?: string;
   category?: string;
@@ -81,6 +82,7 @@ function normalizeVocab(
     hiragana: item.hiragana ?? item.hira ?? "",
     han: item.han ?? "",
     nghia: item.nghia ?? "",
+    jisho_meaning_en: (item as any).jisho_meaning_en ?? "",
     example: item.example,
     exampleMeaning: item.exampleMeaning,
     category: item.category,
@@ -986,6 +988,7 @@ export default function VocabScreen() {
                         hiragana: vocab.hiragana,
                         han: vocab.han,
                         nghia: vocab.nghia,
+                        jisho_meaning_en: vocab.jisho_meaning_en || "",
                         example: vocab.example || "",
                         exampleMeaning: vocab.exampleMeaning || "",
                         level: vocab.level || "N3",

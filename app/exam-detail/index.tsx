@@ -1,8 +1,8 @@
 // ============================================
 // FILE: app/exam-detail/index.tsx
-// TRANG LÀM BÀI THI - 5 ĐỀ N3
+// TRANG LÀM BÀI THI - CHUẨN JLPT
+// Thiết kế: "Giấy thi + con dấu đỏ" (Ink & Hanko)
 // ============================================
-
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import React, { useEffect, useState, useRef } from 'react';
 import {
@@ -16,52 +16,155 @@ import {
   StatusBar,
   Animated,
   Alert,
-  Modal,
-  Pressable,
+  LayoutChangeEvent,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { getExamById as getExamByIdGeneric } from '../../assets/data_EXAMS';
 import {
-  getExamById,
   getVocabQuestions,
   getGrammarQuestions,
   getReadingQuestions,
   getListeningQuestions,
   speakQuestionWithDialogue,
   stopSpeaking,
-  isSpeaking,
-  setVoiceGender,
-  getVoiceGender,
   type ExamData,
   type Question,
-  type VoiceGender,
-} from '../../assets/data_EXAMS/n3';
+  type Section,
+} from '../../assets/data_EXAMS/shared';
+
+const getExamByIdAnyLevel = async (id: string): Promise<ExamData | null> => {
+  const level = id.split('_')[0].toUpperCase();
+  return getExamByIdGeneric(level, id);
+};
+
+// const getExamByIdAnyLevel = (id: string): ExamData | null => {
+//   const level = id.split('_')[0].toUpperCase();
+//   return getExamByIdGeneric(level, id);
+// };
+
 
 // ============================================
-// 🎨 BIẾN MÀU
+// 🎨 BẢNG MÀU — "Giấy thi & con dấu đỏ"
 // ============================================
-const BG_GRAY = "#f0f4f8";
-const TEAL = "#004370";
-const TEAL_LIGHT = "#e6f0f5";
-const TEAL_DARK = "#003055";
-const GRAD = [TEAL, TEAL_DARK] as const;
+// INK   : mực bút / cấu trúc chính (header, tab, số câu)
+// PAPER : nền giấy thi ấm, không trắng lạnh
+// HANKO : đỏ con dấu — dùng cho hành động & điểm nhấn (gạch chân, nộp bài, tiến độ)
+// GOLD  : điểm nhấn phụ, tinh tế (đang phát audio, hoàn thành)
+const INK = '#16232F';
+const INK_SOFT = '#2E4457';
+const PAPER = '#F7F3E9';
+const CARD = '#FFFFFF';
+const HANKO = '#B3382C';
+const HANKO_SOFT = '#F6E4E1';
+const GOLD = '#C99A44';
+const MUTE = '#8C8577';
+const LINE = '#E6DFCC';
+const INK_LIGHT = '#E8EEF2';
+
+const GRAD = [INK, INK_SOFT] as const;
 
 const EXAM_NAME_MAP: Record<string, string> = {
   'n3_01': 'Đề luyện thi số 1',
+  'n3_02': 'Đề luyện thi số 2',
+  'n3_03': 'Đề luyện thi số 3',
+  'n3_04': 'Đề luyện thi số 4',
+  'n3_05': 'Đề luyện thi số 5',
+  'n2_01': 'Đề luyện thi số 1',
+  'n2_02': 'Đề luyện thi số 2',
+  'n2_03': 'Đề luyện thi số 3',
+  'n2_04': 'Đề luyện thi số 4',
+  'n2_05': 'Đề luyện thi số 5',
 };
 
 type SectionType = 'vocab' | 'grammar_reading' | 'listening';
 
-const TAB_CONFIG: Record<SectionType, { label: string; activeColor: string }> = {
-  vocab: { label: 'Từ vựng', activeColor: '#F59E0B' },
-  grammar_reading: { label: 'Ngữ pháp & Đọc', activeColor: '#3B82F6' },
-  listening: { label: 'Nghe hiểu', activeColor: '#EC4899' },
-};
-
-const TAB_ORDER: SectionType[] = ['vocab', 'grammar_reading', 'listening'];
 const TAB_LABELS: Record<SectionType, string> = {
   vocab: 'Từ vựng',
   grammar_reading: 'Ngữ pháp & Đọc',
   listening: 'Nghe hiểu',
+};
+
+const TAB_ORDER: SectionType[] = ['vocab', 'grammar_reading', 'listening'];
+const TRACK_PADDING = 4;
+
+// Nhóm câu hỏi kèm đề bài (instruction) + đoạn văn (passage) của từng mondai
+interface RenderSection {
+  key: string;
+  mondaiLabel: string; // "問題1", "問題2"...
+  mondaiNumber: string; // "1", "2"...
+  instruction: string;
+  passage?: string;
+  passages?: { passage_id: number; passage: string; questions: Question[]; underlines?: string[] }[];
+  underlines?: string[];
+  questions: Question[];
+}
+
+const toRenderSections = (sections: Section[]): RenderSection[] =>
+  sections.map((s, idx) => ({
+    key: `${s.mondai}-${idx}`,
+    mondaiLabel: s.name,
+    mondaiNumber: s.name.replace(/[^0-9]/g, '') || `${idx + 1}`,
+    instruction: s.instruction,
+    passage: s.passage,
+    passages: s.passages,
+    underlines: s.underlines,
+    questions: s.questions ?? (s.passages ? s.passages.flatMap(p => p.questions) : []),
+  }));
+
+// ============================================
+// ✏️ HIỂN THỊ CÂU HỎI CÓ GẠCH CHÂN (underline)
+// ============================================
+const renderQuestionText = (
+  text: string,
+  underline: string | undefined,
+  textStyle: any,
+  underlineStyle: any
+) => {
+  if (!underline) {
+    return <Text style={textStyle}>{text}</Text>;
+  }
+  const index = text.indexOf(underline);
+  if (index === -1) {
+    return <Text style={textStyle}>{text}</Text>;
+  }
+  const before = text.slice(0, index);
+  const after = text.slice(index + underline.length);
+  return (
+    <Text style={textStyle}>
+      {before}
+      <Text style={underlineStyle}>{underline}</Text>
+      {after}
+    </Text>
+  );
+};
+
+// Gạch chân NHIỀU cụm từ trong đoạn văn (passage), theo đúng thứ tự xuất hiện trong "underlines"
+const renderPassageText = (
+  text: string,
+  underlines: string[] | undefined,
+  textStyle: any,
+  underlineStyle: any
+) => {
+  if (!underlines || underlines.length === 0) {
+    return <Text style={textStyle}>{text}</Text>;
+  }
+
+  const parts: React.ReactNode[] = [];
+  let cursor = 0;
+
+  underlines.forEach((phrase, i) => {
+    const idx = text.indexOf(phrase, cursor);
+    if (idx === -1) return; // không tìm thấy trong text thì bỏ qua, không crash
+    if (idx > cursor) parts.push(text.slice(cursor, idx));
+    parts.push(
+      <Text key={`u-${i}`} style={underlineStyle}>{phrase}</Text>
+    );
+    cursor = idx + phrase.length;
+  });
+
+  if (cursor < text.length) parts.push(text.slice(cursor));
+
+  return <Text style={textStyle}>{parts}</Text>;
 };
 
 export default function ExamDetailScreen() {
@@ -73,25 +176,33 @@ export default function ExamDetailScreen() {
   const [exam, setExam] = useState<ExamData | null>(null);
   const [loading, setLoading] = useState(true);
   const [currentSection, setCurrentSection] = useState<SectionType>('vocab');
-  
+
   const [vocabAnswers, setVocabAnswers] = useState<Record<number, number>>({});
   const [grammarAnswers, setGrammarAnswers] = useState<Record<number, number>>({});
   const [readingAnswers, setReadingAnswers] = useState<Record<number, number>>({});
   const [listeningAnswers, setListeningAnswers] = useState<Record<number, number>>({});
-  
+
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentPlayingQuestion, setCurrentPlayingQuestion] = useState<Question | null>(null);
-  const [voiceGender, setVoiceGenderState] = useState<VoiceGender>('female');
-  const [showVoiceModal, setShowVoiceModal] = useState(false);
 
+  // 👉 Đo chiều rộng thật của thanh tab để tính vị trí con trượt bằng PIXEL,
+  // không dùng translateX dạng % (nguyên nhân gây lệch/lỗi trước đây).
+  const [tabTrackWidth, setTabTrackWidth] = useState(0);
   const tabAnimation = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
-    const data = getExamById(examId);
-    setExam(data);
-    setLoading(false);
-    const current = getVoiceGender();
-    setVoiceGenderState(current);
+    let cancelled = false;
+    (async () => {
+     const data = await getExamByIdAnyLevel(examId);
+     if (!cancelled) {
+       setExam(data);
+       setLoading(false);
+    }
+   })();
+   return () => { cancelled = true; };
+    // const data = getExamByIdAnyLevel(examId);
+    // setExam(data);
+    // setLoading(false);
   }, [examId]);
 
   useEffect(() => {
@@ -105,30 +216,59 @@ export default function ExamDetailScreen() {
     Animated.spring(tabAnimation, {
       toValue: tabIndex,
       useNativeDriver: true,
-      friction: 8,
-      tension: 40,
+      friction: 9,
+      tension: 60,
     }).start();
   }, [currentSection]);
+
+  const handleTabTrackLayout = (e: LayoutChangeEvent) => {
+    setTabTrackWidth(e.nativeEvent.layout.width);
+  };
+
+  // ============================================
+  // 📋 LẤY DANH SÁCH NHÓM (mondai) CHO TAB HIỆN TẠI
+  // ============================================
+  const getRenderSections = (): RenderSection[] => {
+    if (!exam) return [];
+    switch (currentSection) {
+      case 'vocab':
+        return toRenderSections(exam.vocab.sections);
+      case 'grammar_reading':
+        return [
+          ...toRenderSections(exam.grammar_reading.grammar_sections),
+          ...toRenderSections(exam.grammar_reading.reading_sections),
+        ];
+      case 'listening':
+        return toRenderSections(exam.listening.sections);
+      default:
+        return [];
+    }
+  };
 
   const getQuestions = (): Question[] => {
     if (!exam) return [];
     switch (currentSection) {
-      case 'vocab': return getVocabQuestions(exam);
-      case 'grammar_reading': return [
-        ...getGrammarQuestions(exam),
-        ...getReadingQuestions(exam),
-      ];
-      case 'listening': return getListeningQuestions(exam);
-      default: return [];
+      case 'vocab':
+        return getVocabQuestions(exam);
+      case 'grammar_reading':
+        return [...getGrammarQuestions(exam), ...getReadingQuestions(exam)];
+      case 'listening':
+        return getListeningQuestions(exam);
+      default:
+        return [];
     }
   };
 
   const getCurrentAnswers = (): Record<number, number> => {
     switch (currentSection) {
-      case 'vocab': return vocabAnswers;
-      case 'grammar_reading': return { ...grammarAnswers, ...readingAnswers };
-      case 'listening': return listeningAnswers;
-      default: return {};
+      case 'vocab':
+        return vocabAnswers;
+      case 'grammar_reading':
+        return { ...grammarAnswers, ...readingAnswers };
+      case 'listening':
+        return listeningAnswers;
+      default:
+        return {};
     }
   };
 
@@ -153,7 +293,7 @@ export default function ExamDetailScreen() {
     }
   };
 
-  const questions = getQuestions();
+  const renderSections = getRenderSections();
   const currentAnswers = getCurrentAnswers();
   const isListening = currentSection === 'listening';
   const currentTabIndex = TAB_ORDER.indexOf(currentSection);
@@ -166,13 +306,13 @@ export default function ExamDetailScreen() {
     const totalReading = getReadingQuestions(exam).length;
     const totalListening = getListeningQuestions(exam).length;
     const total = totalVocab + totalGrammar + totalReading + totalListening;
-    
-    const answered = 
+
+    const answered =
       Object.keys(vocabAnswers).length +
       Object.keys(grammarAnswers).length +
       Object.keys(readingAnswers).length +
       Object.keys(listeningAnswers).length;
-    
+
     return { answered, total };
   };
 
@@ -180,19 +320,34 @@ export default function ExamDetailScreen() {
 
   const isCurrentTabComplete = (): boolean => {
     const currentQuestions = getQuestions();
-    const currentAnswers = getCurrentAnswers();
-    return currentQuestions.every(q => currentAnswers[q.id] !== undefined);
+    const currentAnswersMap = getCurrentAnswers();
+    return currentQuestions.every(q => currentAnswersMap[q.id] !== undefined);
   };
 
   const getCurrentTabAnswered = (): { answered: number; total: number } => {
     const currentQuestions = getQuestions();
-    const currentAnswers = getCurrentAnswers();
-    const answered = currentQuestions.filter(q => currentAnswers[q.id] !== undefined).length;
-    return { answered, total: currentQuestions.length };
+    const currentAnswersMap = getCurrentAnswers();
+    const answeredCount = currentQuestions.filter(q => currentAnswersMap[q.id] !== undefined).length;
+    return { answered: answeredCount, total: currentQuestions.length };
   };
 
   const currentTabProgress = getCurrentTabAnswered();
   const isComplete = isCurrentTabComplete();
+
+  const isTabCompleteByKey = (key: SectionType): boolean => {
+    if (!exam) return false;
+    if (key === 'vocab') {
+      const qs = getVocabQuestions(exam);
+      return qs.length > 0 && qs.every(q => vocabAnswers[q.id] !== undefined);
+    } else if (key === 'grammar_reading') {
+      const qs = [...getGrammarQuestions(exam), ...getReadingQuestions(exam)];
+      const allAnswers = { ...grammarAnswers, ...readingAnswers };
+      return qs.length > 0 && qs.every(q => allAnswers[q.id] !== undefined);
+    } else {
+      const qs = getListeningQuestions(exam);
+      return qs.length > 0 && qs.every(q => listeningAnswers[q.id] !== undefined);
+    }
+  };
 
   const handleNextTab = () => {
     if (!isComplete) {
@@ -212,8 +367,8 @@ export default function ExamDetailScreen() {
         `Bạn đã hoàn thành phần ${TAB_LABELS[currentSection]}. Chuyển sang phần ${nextTabName}?`,
         [
           { text: "Ở lại", style: "cancel" },
-          { 
-            text: "Chuyển tiếp", 
+          {
+            text: "Chuyển tiếp",
             onPress: () => setCurrentSection(TAB_ORDER[nextIndex])
           }
         ]
@@ -222,16 +377,16 @@ export default function ExamDetailScreen() {
   };
 
   const handleSubmit = () => {
-    const { answered, total } = getTotalAnswered();
-    
-    if (answered < total) {
+    const { answered: ans, total: tot } = getTotalAnswered();
+
+    if (ans < tot) {
       Alert.alert(
         "⚠️ Chưa hoàn thành",
-        `Bạn mới trả lời ${answered}/${total} câu hỏi. Bạn có muốn nộp bài không?`,
+        `Bạn mới trả lời ${ans}/${tot} câu hỏi. Bạn có muốn nộp bài không?`,
         [
           { text: "Tiếp tục làm", style: "cancel" },
-          { 
-            text: "Nộp bài", 
+          {
+            text: "Nộp bài",
             style: "destructive",
             onPress: () => goToResult()
           }
@@ -296,7 +451,6 @@ export default function ExamDetailScreen() {
     }
 
     speakQuestionWithDialogue(question, {
-      gender: voiceGender,
       onStart: () => setIsPlaying(true),
       onDone: () => {
         setIsPlaying(false);
@@ -315,16 +469,10 @@ export default function ExamDetailScreen() {
     setCurrentPlayingQuestion(null);
   };
 
-  const toggleVoiceGender = (gender: VoiceGender) => {
-    setVoiceGenderState(gender);
-    setVoiceGender(gender);
-    setShowVoiceModal(false);
-  };
-
   if (loading) {
     return (
       <View style={styles.center}>
-        <ActivityIndicator size="large" color={TEAL} />
+        <ActivityIndicator size="large" color={INK} />
         <Text style={styles.loadingText}>Đang tải đề thi...</Text>
       </View>
     );
@@ -341,189 +489,221 @@ export default function ExamDetailScreen() {
     );
   }
 
-  const nextButtonState = isComplete 
-    ? { text: `✅ Hoàn thành! Chuyển sang ${TAB_LABELS[TAB_ORDER[currentTabIndex + 1]]}`, isActive: true, icon: '➡️' }
-    : { text: `⚠️ Cần trả lời ${currentTabProgress.total - currentTabProgress.answered} câu nữa`, isActive: false, icon: '⏳' };
+  const nextButtonState = isComplete
+    ? { text: `Chuyển sang ${TAB_LABELS[TAB_ORDER[currentTabIndex + 1]]}`, isActive: true }
+    : { text: `Cần trả lời thêm ${currentTabProgress.total - currentTabProgress.answered} câu`, isActive: false };
+
+  // Đếm số câu chạy liên tục theo đúng thứ tự xuất hiện trong tab hiện tại
+  // (không dùng question.id để tránh lệch số nếu dữ liệu JSON có id trùng/thiếu)
+  let runningNumber = 0;
+
+  const renderQuestionCard = (question: Question, cardKey: string) => {
+    runningNumber += 1;
+    const displayNumber = runningNumber;
+    const isAnswered = currentAnswers[question.id] !== undefined;
+    const isCurrentPlaying = isPlaying && currentPlayingQuestion?.id === question.id;
+
+    return (
+      <View key={cardKey} style={styles.questionCard}>
+        <View style={styles.questionHeader}>
+          <View style={styles.numberChip}>
+            <Text style={styles.numberChipText}>{displayNumber}</Text>
+          </View>
+          <View style={styles.actionButtons}>
+            {isListening && (
+              <TouchableOpacity
+                style={[
+                  styles.speakBtn,
+                  isCurrentPlaying && styles.speakBtnActive,
+                  isPlaying && !isCurrentPlaying && styles.speakBtnDisabled
+                ]}
+                onPress={() => handleSpeak(question)}
+                disabled={isPlaying && !isCurrentPlaying}
+              >
+                <Text style={styles.speakIcon}>{isCurrentPlaying ? '⏸' : '🔊'}</Text>
+              </TouchableOpacity>
+            )}
+            {isAnswered && (
+              <View style={styles.answeredBadge}>
+                <Text style={styles.answeredText}>✓</Text>
+              </View>
+            )}
+          </View>
+        </View>
+
+        {!isListening && renderQuestionText(question.text, question.underline, styles.questionText, styles.underlineText)}
+
+        <View style={styles.options}>
+          {question.options.map((option: string, idx: number) => {
+            const isSelected = currentAnswers[question.id] === idx;
+            const letter = String.fromCharCode(65 + idx);
+            return (
+              <TouchableOpacity
+                key={idx}
+                style={[styles.option, isSelected && styles.optionSelected]}
+                onPress={() => handleSelectAnswer(question.id, idx)}
+                activeOpacity={0.75}
+              >
+                <View style={[styles.optionLetter, isSelected && styles.optionLetterSelected]}>
+                  <Text style={[styles.optionLetterText, isSelected && styles.optionLetterTextSelected]}>
+                    {letter}
+                  </Text>
+                </View>
+                <Text style={[styles.optionText, isSelected && styles.optionTextSelected]}>
+                  {option}
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+      </View>
+    );
+  };
+
+  const segmentWidth = tabTrackWidth > 0 ? (tabTrackWidth - TRACK_PADDING * 2) / 3 : 0;
 
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
+      <StatusBar barStyle="light-content" backgroundColor={INK} />
 
-      {/* Header */}
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
-        <SafeAreaView style={styles.header}>
-          <View style={styles.headerRow}>
-            <TouchableOpacity style={styles.backBtn} onPress={() => router.back()}>
+      {/* ===== HEADER: tiêu đề đầy đủ + tiến độ tổng ===== */}
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.headerGradient}>
+        <SafeAreaView>
+          <View style={styles.headerTopRow}>
+            <TouchableOpacity style={styles.iconBtn} onPress={() => router.back()}>
               <Text style={styles.backIcon}>‹</Text>
             </TouchableOpacity>
-            <View style={styles.headerInfo}>
-              <Text style={styles.headerTitle}>{examName}</Text>
-              <Text style={styles.headerSubtitle}>
-                {exam.level} · {exam.year}/{exam.month} · {exam.source}
-              </Text>
-            </View>
-            <View style={styles.headerRight}>
-              <TouchableOpacity style={styles.voiceBtn} onPress={() => setShowVoiceModal(true)}>
-                <Text style={styles.voiceIcon}>{voiceGender === 'male' ? '👦' : '👧'}</Text>
-              </TouchableOpacity>
+            <View style={styles.headerTopActions}>
               {isPlaying && (
-                <TouchableOpacity style={styles.stopBtn} onPress={handleStopSpeaking}>
+                <TouchableOpacity style={[styles.iconBtn, styles.stopBtn]} onPress={handleStopSpeaking}>
                   <Text style={styles.stopBtnText}>⏹</Text>
                 </TouchableOpacity>
               )}
-              <View style={styles.headerBadge}>
-                <Text style={styles.headerBadgeText}>
-                  {answered}/{total}
-                </Text>
-              </View>
             </View>
+          </View>
+
+          <View style={styles.headerBody}>
+            <Text style={styles.eyebrow}>{exam.level} · JLPT</Text>
+            <Text style={styles.headerTitle}>{examName}</Text>
           </View>
         </SafeAreaView>
       </LinearGradient>
 
-      {/* Tab */}
-      <View style={styles.tabContainer}>
-        <View style={styles.tabWrapper}>
+      {/* ===== TAB (segmented control, đo pixel thật — không lệch) ===== */}
+      <View style={styles.tabOuter}>
+        <View style={styles.tabTrack} onLayout={handleTabTrackLayout}>
+          {segmentWidth > 0 && (
+            <Animated.View
+              style={[
+                styles.tabThumb,
+                {
+                  width: segmentWidth,
+                  transform: [
+                    {
+                      translateX: tabAnimation.interpolate({
+                        inputRange: [0, 1, 2],
+                        outputRange: [
+                          TRACK_PADDING,
+                          TRACK_PADDING + segmentWidth,
+                          TRACK_PADDING + segmentWidth * 2,
+                        ],
+                      }),
+                    },
+                  ],
+                },
+              ]}
+            />
+          )}
           {TAB_ORDER.map((key) => {
-            const config = TAB_CONFIG[key];
             const isActive = currentSection === key;
-            const counts: Record<SectionType, number> = {
-              vocab: getVocabQuestions(exam).length,
-              grammar_reading: getGrammarQuestions(exam).length + getReadingQuestions(exam).length,
-              listening: getListeningQuestions(exam).length,
-            };
-
-            let isTabComplete = false;
-            if (key === 'vocab') {
-              const qs = getVocabQuestions(exam);
-              isTabComplete = qs.every(q => vocabAnswers[q.id] !== undefined);
-            } else if (key === 'grammar_reading') {
-              const qs = [...getGrammarQuestions(exam), ...getReadingQuestions(exam)];
-              const allAnswers = { ...grammarAnswers, ...readingAnswers };
-              isTabComplete = qs.every(q => allAnswers[q.id] !== undefined);
-            } else if (key === 'listening') {
-              const qs = getListeningQuestions(exam);
-              isTabComplete = qs.every(q => listeningAnswers[q.id] !== undefined);
-            }
-
+            const tabDone = isTabCompleteByKey(key);
             return (
               <TouchableOpacity
                 key={key}
-                style={[styles.tab, isActive && styles.tabActive]}
+                style={styles.tabItem}
                 onPress={() => setCurrentSection(key)}
-                activeOpacity={0.7}
+                activeOpacity={0.8}
               >
-                <Text style={[styles.tabLabel, isActive && styles.tabLabelActive]}>
-                  {config.label}
+                <Text style={[styles.tabItemLabel, isActive && styles.tabItemLabelActive]}>
+                  {TAB_LABELS[key]}
                 </Text>
-                <View style={[styles.tabBadge, isActive && { backgroundColor: config.activeColor }]}>
-                  <Text style={[styles.tabBadgeText, isActive && styles.tabBadgeTextActive]}>
-                    {counts[key]}
-                  </Text>
-                </View>
-                {isTabComplete && !isActive && (
-                  <Text style={styles.tabCompleteIcon}>✅</Text>
+                {tabDone && (
+                  <View style={[styles.tabCheckDot, isActive && styles.tabCheckDotActive]} />
                 )}
               </TouchableOpacity>
             );
           })}
         </View>
-        <Animated.View
-          style={[
-            styles.tabIndicator,
-            {
-              transform: [{ translateX: tabAnimation.interpolate({ inputRange: [0, 1, 2], outputRange: [0, 100/3, 200/3] }) }],
-              width: `${100/3}%`,
-            },
-          ]}
-        />
       </View>
 
-      {/* Câu hỏi */}
+      {/* ===== NỘI DUNG: từng mondai (con dấu đề bài + đoạn văn + câu hỏi) ===== */}
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        {questions.map((question: Question, index: number) => {
-          const isAnswered = currentAnswers[question.id] !== undefined;
-          const isCurrentPlaying = isPlaying && currentPlayingQuestion?.id === question.id;
-
-          return (
-            <View key={question.id} style={styles.questionCard}>
-              <View style={styles.questionHeader}>
-                <View style={styles.questionNumber}>
-                  <Text style={styles.numberText}>Câu {index + 1}</Text>
-                  {question.mondai && (
-                    <Text style={styles.mondaiTag}>{question.mondai}</Text>
-                  )}
-                </View>
-                <View style={styles.actionButtons}>
-                  {isListening && (
-                    <TouchableOpacity
-                      style={[
-                        styles.speakBtn, 
-                        isCurrentPlaying && styles.speakBtnActive,
-                        isPlaying && !isCurrentPlaying && styles.speakBtnDisabled
-                      ]}
-                      onPress={() => handleSpeak(question)}
-                      disabled={isPlaying && !isCurrentPlaying}
-                    >
-                      <Text style={styles.speakIcon}>
-                        {isCurrentPlaying ? '⏸' : '🔊'}
-                      </Text>
-                    </TouchableOpacity>
-                  )}
-                  {isAnswered && (
-                    <View style={styles.answeredBadge}>
-                      <Text style={styles.answeredText}>✓</Text>
-                    </View>
-                  )}
-                </View>
+        {renderSections.map((section) => (
+          <View key={section.key} style={styles.sectionBlock}>
+            {/* Con dấu đề bài của mondai */}
+            <View style={styles.instructionRow}>
+              <View style={styles.stampBadge}>
+                <Text style={styles.stampNumber}>{section.mondaiNumber}</Text>
               </View>
-
-              <Text style={styles.questionText}>{question.text}</Text>
-
-              <View style={styles.options}>
-                {question.options.map((option: string, idx: number) => {
-                  const isSelected = currentAnswers[question.id] === idx;
-
-                  return (
-                    <TouchableOpacity
-                      key={idx}
-                      style={[styles.option, isSelected && styles.optionSelected]}
-                      onPress={() => handleSelectAnswer(question.id, idx)}
-                    >
-                      <Text style={[styles.optionText, isSelected && styles.optionTextSelected]}>
-                        {String.fromCharCode(65 + idx)}. {option}
-                      </Text>
-                    </TouchableOpacity>
-                  );
-                })}
+              <View style={styles.instructionTextWrap}>
+                <Text style={styles.mondaiLabel}>{section.mondaiLabel}</Text>
+                <Text style={styles.instructionText}>{section.instruction}</Text>
               </View>
             </View>
-          );
-        })}
+
+            {/* Nếu mondai có NHIỀU đoạn văn ngắn (vd: mondai4) — mỗi đoạn + câu hỏi riêng */}
+            {section.passages ? (
+              section.passages.map((pg) => (
+                <View key={`${section.key}-p${pg.passage_id}`} style={styles.passageGroup}>
+                  <View style={styles.passageBox}>
+                    {renderPassageText(pg.passage, pg.underlines, styles.passageText, styles.underlineText)}
+                  </View>
+                  {pg.questions.map((question) =>
+                    renderQuestionCard(question, `${section.key}-${question.id}`)
+                  )}
+                </View>
+              ))
+            ) : (
+              <>
+                {/* Đoạn văn đọc hiểu đơn (nếu có) */}
+                {section.passage && (
+                  <View style={styles.passageBox}>
+                    {renderPassageText(section.passage, section.underlines, styles.passageText, styles.underlineText)}
+                  </View>
+                )}
+
+                {/* Danh sách câu hỏi thuộc mondai này */}
+                {section.questions.map((question) =>
+                  renderQuestionCard(question, `${section.key}-${question.id}`)
+                )}
+              </>
+            )}
+          </View>
+        ))}
 
         {!isLastTab ? (
-          <TouchableOpacity 
+          <TouchableOpacity
             style={[
               styles.nextBtn,
               nextButtonState.isActive ? styles.nextBtnActive : styles.nextBtnDisabled
-            ]} 
+            ]}
             onPress={handleNextTab}
-            activeOpacity={nextButtonState.isActive ? 0.7 : 1}
+            activeOpacity={nextButtonState.isActive ? 0.85 : 1}
           >
             <Text style={[
               styles.nextBtnText,
               nextButtonState.isActive ? styles.nextBtnTextActive : styles.nextBtnTextDisabled
             ]}>
-              {nextButtonState.icon} {nextButtonState.text}
+              {nextButtonState.text}
             </Text>
             {!nextButtonState.isActive && (
               <View style={styles.nextBtnProgress}>
                 <View style={styles.nextBtnProgressTrack}>
-                  <View 
+                  <View
                     style={[
-                      styles.nextBtnProgressFill, 
+                      styles.nextBtnProgressFill,
                       { width: `${(currentTabProgress.answered / currentTabProgress.total) * 100}%` }
-                    ]} 
+                    ]}
                   />
                 </View>
                 <Text style={styles.nextBtnProgressText}>
@@ -533,398 +713,298 @@ export default function ExamDetailScreen() {
             )}
           </TouchableOpacity>
         ) : (
-          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit}>
+          <TouchableOpacity style={styles.submitBtn} onPress={handleSubmit} activeOpacity={0.85}>
             <Text style={styles.submitBtnText}>
-              📤 Nộp bài ({answered}/{total})
+              Nộp bài · {answered}/{total}
             </Text>
           </TouchableOpacity>
         )}
 
         <View style={styles.footer} />
       </ScrollView>
-
-      {/* Modal chọn giọng */}
-      <Modal
-        visible={showVoiceModal}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setShowVoiceModal(false)}
-      >
-        <Pressable style={styles.modalOverlay} onPress={() => setShowVoiceModal(false)}>
-          <View style={styles.voiceModal}>
-            <View style={styles.voiceModalHeader}>
-              <Text style={styles.voiceModalTitle}>🎤 Chọn giọng đọc</Text>
-              <TouchableOpacity onPress={() => setShowVoiceModal(false)}>
-                <Text style={styles.voiceModalClose}>✕</Text>
-              </TouchableOpacity>
-            </View>
-
-            <TouchableOpacity
-              style={[
-                styles.voiceOption,
-                voiceGender === 'female' && styles.voiceOptionActive,
-              ]}
-              onPress={() => toggleVoiceGender('female')}
-            >
-              <Text style={styles.voiceOptionIcon}>👧</Text>
-              <View style={styles.voiceOptionInfo}>
-                <Text style={styles.voiceOptionName}>Giọng nữ</Text>
-                <Text style={styles.voiceOptionDesc}>Trong trẻo, dễ nghe</Text>
-              </View>
-              {voiceGender === 'female' && (
-                <Text style={styles.voiceOptionCheck}>✅</Text>
-              )}
-            </TouchableOpacity>
-
-            <TouchableOpacity
-              style={[
-                styles.voiceOption,
-                voiceGender === 'male' && styles.voiceOptionActive,
-              ]}
-              onPress={() => toggleVoiceGender('male')}
-            >
-              <Text style={styles.voiceOptionIcon}>👦</Text>
-              <View style={styles.voiceOptionInfo}>
-                <Text style={styles.voiceOptionName}>Giọng nam</Text>
-                <Text style={styles.voiceOptionDesc}>Trầm ấm, mạnh mẽ</Text>
-              </View>
-              {voiceGender === 'male' && (
-                <Text style={styles.voiceOptionCheck}>✅</Text>
-              )}
-            </TouchableOpacity>
-          </View>
-        </Pressable>
-      </Modal>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: BG_GRAY },
-  center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: BG_GRAY },
-  loadingText: { marginTop: 12, fontSize: 16, color: TEAL },
-  errorText: { fontSize: 18, color: '#ef4444' },
-  backLink: { fontSize: 16, color: TEAL, marginTop: 10 },
+  container: { flex: 1, backgroundColor: PAPER },
+  center: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: PAPER },
+  loadingText: { marginTop: 12, fontSize: 15, color: INK },
+  errorText: { fontSize: 18, color: HANKO },
+  backLink: { fontSize: 15, color: INK, marginTop: 10 },
 
-  header: { paddingBottom: 16 },
-  headerRow: {
+  // ---------- HEADER ----------
+  headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
+  },
+  headerTopRow: {
     flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
     paddingHorizontal: 16,
-    paddingTop: 12,
+    paddingTop: 6,
   },
-  backBtn: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
+  headerTopActions: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  iconBtn: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
-    marginRight: 12,
+    backgroundColor: 'rgba(255,255,255,0.12)',
   },
-  backIcon: { color: '#fff', fontSize: 32, fontWeight: '300', marginTop: -4 },
-  headerInfo: { flex: 1 },
-  headerTitle: { fontSize: 18, fontWeight: '700', color: '#fff' },
-  headerSubtitle: { fontSize: 12, color: 'rgba(255,255,255,0.7)' },
-  headerRight: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
+  backIcon: { color: '#fff', fontSize: 26, fontWeight: '300', marginTop: -3 },
+  stopBtn: { backgroundColor: HANKO },
+  stopBtnText: { fontSize: 15, color: '#fff' },
+
+  headerBody: { paddingHorizontal: 20, paddingTop: 6 },
+  eyebrow: {
+    fontSize: 10.5,
+    fontWeight: '700',
+    color: GOLD,
+    letterSpacing: 1.5,
+    marginBottom: 4,
   },
-  voiceBtn: {
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  voiceIcon: { fontSize: 18 },
-  stopBtn: {
-    backgroundColor: '#ef4444',
-    width: 36,
-    height: 36,
-    borderRadius: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  stopBtnText: { fontSize: 18, color: '#fff' },
-  headerBadge: {
-    backgroundColor: 'rgba(255,255,255,0.2)',
-    paddingHorizontal: 12,
-    paddingVertical: 4,
-    borderRadius: 12,
-  },
-  headerBadgeText: {
+  headerTitle: {
+    fontSize: 17,
+    fontWeight: '700',
     color: '#fff',
-    fontSize: 12,
-    fontWeight: '600',
+    lineHeight: 22,
   },
 
-  tabContainer: {
-    backgroundColor: '#fff',
-    paddingHorizontal: 12,
-    paddingTop: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#e2e8f0',
+  // ---------- TAB (segmented control) ----------
+  tabOuter: {
+    paddingHorizontal: 16,
+    paddingTop: 8,
+    paddingBottom: 4,
+    backgroundColor: PAPER,
   },
-  tabWrapper: {
+  tabTrack: {
     flexDirection: 'row',
+    backgroundColor: INK_LIGHT,
+    borderRadius: 11,
+    padding: TRACK_PADDING,
     position: 'relative',
   },
-  tab: {
+  tabThumb: {
+    position: 'absolute',
+    top: TRACK_PADDING,
+    bottom: TRACK_PADDING,
+    backgroundColor: INK,
+    borderRadius: 9,
+    shadowColor: INK,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  tabItem: {
     flex: 1,
+    paddingVertical: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 10,
-    paddingHorizontal: 6,
-    borderRadius: 10,
     flexDirection: 'row',
     gap: 4,
   },
-  tabActive: { backgroundColor: TEAL_LIGHT },
-  tabLabel: { 
-    fontSize: 12, 
-    fontWeight: '600', 
-    color: '#94a3b8',
-    textAlign: 'center',
+  tabItemLabel: { fontSize: 12.5, fontWeight: '600', color: MUTE },
+  tabItemLabelActive: { color: '#fff' },
+  tabCheckDot: {
+    width: 5,
+    height: 5,
+    borderRadius: 2.5,
+    backgroundColor: GOLD,
   },
-  tabLabelActive: { color: TEAL },
-  tabBadge: {
-    backgroundColor: '#f1f5f9',
-    paddingHorizontal: 6,
-    paddingVertical: 1,
-    borderRadius: 10,
-    minWidth: 18,
+  tabCheckDotActive: { backgroundColor: GOLD },
+
+  // ---------- CONTENT ----------
+  content: { flex: 1, paddingHorizontal: 16 },
+  sectionBlock: { marginBottom: 8 },
+
+  // Con dấu đề bài (signature element)
+  instructionRow: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+    gap: 12,
+    marginBottom: 12,
+    paddingHorizontal: 2,
+  },
+  stampBadge: {
+    width: 38,
+    height: 38,
+    borderRadius: 8,
+    borderWidth: 2,
+    borderColor: HANKO,
+    backgroundColor: HANKO_SOFT,
     alignItems: 'center',
+    justifyContent: 'center',
+    transform: [{ rotate: '-6deg' }],
   },
-  tabBadgeText: { fontSize: 10, fontWeight: '700', color: '#94a3b8' },
-  tabBadgeTextActive: { color: '#fff' },
-  tabCompleteIcon: { fontSize: 10, marginLeft: 2 },
-  tabIndicator: {
-    height: 3,
-    backgroundColor: TEAL,
-    borderRadius: 2,
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
+  stampNumber: { fontSize: 16, fontWeight: '800', color: HANKO },
+  instructionTextWrap: { flex: 1, paddingTop: 2 },
+  mondaiLabel: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: INK,
+    letterSpacing: 1,
+    marginBottom: 3,
+  },
+  instructionText: {
+    fontSize: 13,
+    color: MUTE,
+    lineHeight: 19,
   },
 
-  content: { flex: 1, paddingHorizontal: 16, paddingTop: 12 },
-  questionCard: {
-    backgroundColor: '#fff',
+  passageGroup: {
+    marginBottom: 4,
+  },
+  passageBox: {
+    backgroundColor: CARD,
     borderRadius: 12,
     padding: 16,
     marginBottom: 12,
+    borderLeftWidth: 3,
+    borderLeftColor: HANKO,
+  },
+  passageText: {
+    fontSize: 14.5,
+    color: '#2A2A2A',
+    lineHeight: 25,
+  },
+
+  questionCard: {
+    backgroundColor: CARD,
+    borderRadius: 14,
+    padding: 16,
+    marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#e2e8f0',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.03,
-    shadowRadius: 2,
-    elevation: 1,
+    borderColor: LINE,
   },
   questionHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: 8,
+    marginBottom: 10,
   },
-  questionNumber: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    gap: 8,
-  },
-  numberText: { fontSize: 13, fontWeight: '600', color: TEAL },
-  mondaiTag: {
-    fontSize: 10,
-    color: '#94a3b8',
-    backgroundColor: '#f1f5f9',
+  numberChip: {
+    minWidth: 26,
+    height: 26,
     paddingHorizontal: 6,
-    paddingVertical: 2,
-    borderRadius: 4,
-  },
-  actionButtons: {
-    flexDirection: 'row',
+    borderRadius: 13,
+    backgroundColor: INK,
     alignItems: 'center',
-    gap: 6,
+    justifyContent: 'center',
   },
+  numberChipText: { fontSize: 12, fontWeight: '700', color: '#fff' },
+  actionButtons: { flexDirection: 'row', alignItems: 'center', gap: 6 },
   speakBtn: {
-    padding: 4,
     width: 32,
     height: 32,
     borderRadius: 16,
     alignItems: 'center',
     justifyContent: 'center',
   },
-  speakBtnActive: { backgroundColor: '#fee2e2' },
-  speakBtnDisabled: { opacity: 0.5 },
-  speakIcon: { fontSize: 18 },
+  speakBtnActive: { backgroundColor: HANKO_SOFT },
+  speakBtnDisabled: { opacity: 0.4 },
+  speakIcon: { fontSize: 17 },
   answeredBadge: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    backgroundColor: '#dbeafe',
+    width: 22,
+    height: 22,
+    borderRadius: 11,
+    backgroundColor: '#E4EFE7',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  answeredText: { fontSize: 12, color: TEAL, fontWeight: '700' },
+  answeredText: { fontSize: 11, color: '#3A7350', fontWeight: '700' },
 
   questionText: {
     fontSize: 15,
-    color: '#1e293b',
+    color: '#1E1E1E',
     lineHeight: 24,
-    marginBottom: 12,
+    marginBottom: 14,
+  },
+  underlineText: {
+    textDecorationLine: 'underline',
+    fontWeight: '700',
+    color: HANKO,
   },
 
   options: { gap: 8 },
   option: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 10,
     paddingVertical: 10,
-    paddingHorizontal: 14,
-    borderRadius: 8,
+    paddingHorizontal: 12,
+    borderRadius: 10,
     borderWidth: 1.5,
-    borderColor: '#e2e8f0',
+    borderColor: LINE,
   },
   optionSelected: {
-    borderColor: TEAL,
-    backgroundColor: TEAL_LIGHT,
+    borderColor: INK,
+    backgroundColor: INK_LIGHT,
   },
-  optionText: { fontSize: 14, color: '#334155' },
-  optionTextSelected: { color: TEAL, fontWeight: '600' },
+  optionLetter: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 1.5,
+    borderColor: '#C7C0AD',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  optionLetterSelected: { borderColor: INK, backgroundColor: INK },
+  optionLetterText: { fontSize: 11, fontWeight: '700', color: MUTE },
+  optionLetterTextSelected: { color: '#fff' },
+  optionText: { flex: 1, fontSize: 14, color: '#334155', lineHeight: 20 },
+  optionTextSelected: { color: INK, fontWeight: '600' },
 
   nextBtn: {
-    paddingVertical: 14,
+    paddingVertical: 15,
     paddingHorizontal: 16,
-    borderRadius: 12,
+    borderRadius: 14,
     alignItems: 'center',
     marginTop: 8,
     marginBottom: 24,
   },
   nextBtnActive: {
-    backgroundColor: TEAL,
-    shadowColor: TEAL,
-    shadowOffset: { width: 0, height: 2 },
+    backgroundColor: INK,
+    shadowColor: INK,
+    shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.2,
-    shadowRadius: 4,
+    shadowRadius: 6,
     elevation: 3,
   },
-  nextBtnDisabled: {
-    backgroundColor: '#e2e8f0',
-  },
-  nextBtnText: {
-    fontSize: 14,
-    fontWeight: '700',
-  },
-  nextBtnTextActive: {
-    color: '#fff',
-  },
-  nextBtnTextDisabled: {
-    color: '#94a3b8',
-  },
-  nextBtnProgress: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    marginTop: 8,
-    width: '80%',
-    gap: 8,
-  },
+  nextBtnDisabled: { backgroundColor: '#E4DFD1' },
+  nextBtnText: { fontSize: 14.5, fontWeight: '700' },
+  nextBtnTextActive: { color: '#fff' },
+  nextBtnTextDisabled: { color: '#9A9284' },
+  nextBtnProgress: { flexDirection: 'row', alignItems: 'center', marginTop: 10, width: '85%', gap: 8 },
   nextBtnProgressTrack: {
     flex: 1,
     height: 4,
-    backgroundColor: 'rgba(255,255,255,0.3)',
+    backgroundColor: 'rgba(0,0,0,0.08)',
     borderRadius: 2,
     overflow: 'hidden',
   },
-  nextBtnProgressFill: {
-    height: '100%',
-    backgroundColor: '#F59E0B',
-    borderRadius: 2,
-  },
-  nextBtnProgressText: {
-    fontSize: 11,
-    fontWeight: '600',
-    color: '#94a3b8',
-  },
+  nextBtnProgressFill: { height: '100%', backgroundColor: HANKO, borderRadius: 2 },
+  nextBtnProgressText: { fontSize: 11, fontWeight: '600', color: '#9A9284' },
 
   submitBtn: {
-    backgroundColor: TEAL,
+    backgroundColor: HANKO,
     paddingVertical: 16,
-    borderRadius: 12,
+    borderRadius: 14,
     alignItems: 'center',
     marginTop: 8,
     marginBottom: 24,
-    shadowColor: TEAL,
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.2,
-    shadowRadius: 4,
+    shadowColor: HANKO,
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.25,
+    shadowRadius: 6,
     elevation: 3,
   },
-  submitBtnText: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: '700',
-  },
+  submitBtnText: { color: '#fff', fontSize: 15.5, fontWeight: '700', letterSpacing: 0.3 },
 
   footer: { height: 40 },
-
-  modalOverlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  voiceModal: {
-    backgroundColor: '#fff',
-    borderRadius: 20,
-    padding: 24,
-    width: '85%',
-    maxWidth: 340,
-  },
-  voiceModalHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    marginBottom: 20,
-  },
-  voiceModalTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#1e293b',
-  },
-  voiceModalClose: {
-    fontSize: 20,
-    color: '#94a3b8',
-    fontWeight: '600',
-  },
-  voiceOption: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    padding: 14,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#e2e8f0',
-    marginBottom: 10,
-    gap: 12,
-  },
-  voiceOptionActive: {
-    borderColor: TEAL,
-    backgroundColor: TEAL_LIGHT,
-  },
-  voiceOptionIcon: {
-    fontSize: 28,
-  },
-  voiceOptionInfo: {
-    flex: 1,
-  },
-  voiceOptionName: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: '#1e293b',
-  },
-  voiceOptionDesc: {
-    fontSize: 13,
-    color: '#94a3b8',
-  },
-  voiceOptionCheck: {
-    fontSize: 18,
-  },
 });

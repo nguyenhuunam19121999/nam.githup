@@ -26,7 +26,7 @@
       ],
       "googleServicesFile": "./google-services.json"
     },
-        "plugins": [
+    "plugins": [
       "expo-router",
       "@react-native-firebase/app/app.plugin.js",
       [
@@ -40,6 +40,12 @@
       ],
       "./plugins/withFirebaseModularHeadersFix.js",
       [
+        "expo-tracking-transparency",
+        {
+          "userTrackingPermission": "Chúng tôi sử dụng dữ liệu này để hiển thị quảng cáo phù hợp hơn và đo lường hiệu quả quảng cáo trong ứng dụng."
+        }
+      ],
+      [
         "expo-splash-screen",
         {
           "image": "./assets/images_icon/Icon_loading.png",
@@ -50,8 +56,8 @@
       [
         "react-native-google-mobile-ads",
         {
-          "androidAppId": "ca-app-pub-3940256099942544~3347511713",
-          "iosAppId": "ca-app-pub-3940256099942544~1458002511",
+          "androidAppId": "ca-app-pub-8412799227715643~5192802251",
+          "iosAppId": "ca-app-pub-8412799227715643~3262901236",
           "skAdNetworkItems": [
             "cstr6suwn9.skadnetwork",
             "4fzdc2evr5.skadnetwork",

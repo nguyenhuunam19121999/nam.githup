@@ -17,7 +17,6 @@ import { findExamplesByVocab, ExampleSentence } from '../assets/sentences';
 const TEAL = "#1f7a1f";
 const TEAL_DARK = "#004370";
 // const BG_GRAY = "#f0f4f8";
-
 // ============================================
 // INTERFACE PROPS
 // ============================================
@@ -29,6 +28,7 @@ interface VocabDetailInlineProps {
   hira?: string;
   han?: string;
   nghia?: string;
+  jisho_meaning_en?: string;
   example?: string;
   exampleMeaning?: string;
   level?: string;
@@ -278,6 +278,7 @@ export default function VocabDetailInline({
   hira = '',
   han = '',
   nghia = '',
+  jisho_meaning_en = '',
   example = '',
   exampleMeaning = '',
   level = 'N3',
@@ -376,18 +377,22 @@ export default function VocabDetailInline({
     <View style={{ flex: 1, backgroundColor: '#fff' }}>
       {/* Header với nút đóng */}
       <View style={{
-        flexDirection: 'row', alignItems: 'center',
+        flexDirection: 'row', 
+        alignItems: 'center',
         justifyContent: 'space-between',
-        paddingHorizontal: 16, paddingVertical: 12,
-        borderBottomWidth: 1, borderBottomColor: '#e2e8f0',
+        paddingHorizontal: 16, 
+        paddingVertical: 12,
+        borderBottomWidth: 1, 
+        borderBottomColor: '#e2e8f0',
         backgroundColor: '#fff',
       }}>
-        <Text style={{ fontSize: 16, fontWeight: '700', color: TEAL_DARK }}>
+        <TouchableOpacity onPress={onClose} hitSlop={10} style={{ width: 30 }}>
+          <Text style={{ fontSize: 22, color: TEAL_DARK, fontWeight: '600' }}>←</Text>
+        </TouchableOpacity>
+        <Text style={{ fontSize: 16, fontWeight: '700', color: TEAL_DARK, textAlign: 'center', flex: 1 }}>
           📖 {kanji} — Chi tiết từ vựng
         </Text>
-        <TouchableOpacity onPress={onClose} hitSlop={10}>
-          <Text style={{ fontSize: 22, color: '#TEAL_DARK', fontWeight: '300' }}>✕</Text>
-        </TouchableOpacity>
+        <View style={{ width: 30 }} />
       </View>
       <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
         <View style={styles.card}>
@@ -420,6 +425,8 @@ export default function VocabDetailInline({
                   <VocabImagePicker
                     vocabId={id}
                     vocabWord={kanji}
+                    vocabMeaning={nghia}
+                    vocabMeaningEn={jisho_meaning_en}
                     onImagesSelected={() => setShowImageModal(false)}
                   />
                 </ScrollView>

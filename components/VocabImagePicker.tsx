@@ -17,6 +17,7 @@ interface VocabImagePickerProps {
   vocabId: string;
   vocabWord: string;
   vocabMeaning?: string;
+  vocabMeaningEn?: string;
   onImagesSelected?: (images: string[]) => void;
 }
 
@@ -42,17 +43,31 @@ const fetchSuggestedImages = async (keyword: string): Promise<string[]> => {
   }
 };
 
-export default function VocabImagePicker({ vocabId, vocabWord, vocabMeaning, onImagesSelected }: VocabImagePickerProps) {
+export default function VocabImagePicker({
+  vocabId,
+  vocabWord,
+  vocabMeaning,
+  vocabMeaningEn, 
+  onImagesSelected,
+}: VocabImagePickerProps) {
   const { currentUser, scopedKey } = useAuth();
   const [suggestedImages, setSuggestedImages] = useState<string[]>([]);
   const [selectedImages, setSelectedImages] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
-  const [contributedImages, setContributedImages] = useState<string[]>([]); // ✅ Lưu ảnh đã đóng góp
-
-  // Tải ảnh đã đóng góp trước
+  const [contributedImages, setContributedImages] = useState<string[]>([]); 
+  const [currentKeyword, setCurrentKeyword] = useState<string>('');
+  
+  // ✅ Code mới (Dùng Promise.all chạy song song):
   useEffect(() => {
-    loadContributedImages();
-    loadSuggestedImages();
+    const initData = async () => {
+      setLoading(true);
+      await Promise.all([
+        loadContributedImages(),
+        loadSuggestedImages(),
+      ]);
+      setLoading(false);
+    };
+    initData();
   }, [vocabId]);
 
   // ✅ Load ảnh đã đóng góp từ storage
@@ -68,12 +83,63 @@ export default function VocabImagePicker({ vocabId, vocabWord, vocabMeaning, onI
     }
   };
 
+  const getSearchKeyword = (): string => {
+    // 1. Ưu tiên 1: Lấy nghĩa tiếng Anh từ vocabMeaningEn nếu có
+    if (vocabMeaningEn && vocabMeaningEn.trim() !== '') {
+      const cleanEn = vocabMeaningEn
+        .replace(/\(.*?\)/g, '') // Xóa ngoặc ()
+        .replace(/\[.*?\]/g, '') // Xóa ngoặc []
+        .split(/[,;/]/)[0]
+        .trim();
+      if (cleanEn) return cleanEn;
+    }
+
+    // 2. Ưu tiên 2: Xử lý nghĩa tiếng Việt (vocabMeaning) để làm sạch từ khóa
+    if (vocabMeaning && vocabMeaning.trim() !== '') {
+      let cleanVi = vocabMeaning
+        .replace(/\(.*?\)/g, '') // Xóa ngoặc ()
+        .replace(/\[.*?\]/g, '') // Xóa ngoặc []
+        .split(/[,;/]/)[0]
+        .replace(/^(cách|sự|việc|tính|sự việc|được|bị)\s+/i, '') // Xóa tiền tố tiếng Việt
+        .trim();
+
+      if (cleanVi) return cleanVi;
+    }
+
+    // 3. Fallback cuối cùng: Dùng từ vựng gốc (Kanji/Hiragana)
+    return vocabWord || '';
+  };
+
   const loadSuggestedImages = async () => {
-    setLoading(true);
-    const searchKeyword = vocabMeaning || vocabWord;
-    const images = await fetchSuggestedImages(searchKeyword);
+    // Log dữ liệu đầu vào nhận từ Props
+    console.log('🚀 [loadSuggestedImages] Input Props:', {
+      vocabWord,
+      vocabMeaning,
+      vocabMeaningEn,
+    });
+
+    // 👉 DÙNG HÀM getSearchKeyword THAY CHO LOGIC CŨ AT HERE
+    let searchKeyword = getSearchKeyword();
+
+    setCurrentKeyword(searchKeyword);
+
+    let images = await fetchSuggestedImages(searchKeyword);
+
+    // Fallback nếu không ra ảnh
+    if (
+      (images.length === 0 || (images[0] && images[0].includes('picsum.photos'))) &&
+      searchKeyword !== vocabWord
+    ) {
+      console.warn(`⚠️ [loadSuggestedImages] Không tìm thấy ảnh phù hợp với "${searchKeyword}". Chuyển sang fallback từ tiếng Nhật: "${vocabWord}"`);
+      
+      searchKeyword = vocabWord;
+      setCurrentKeyword(vocabWord);
+      images = await fetchSuggestedImages(vocabWord);
+      
+      console.log(`📸 [loadSuggestedImages] Kết quả ảnh fallback cho "${vocabWord}":`, images);
+    }
+
     setSuggestedImages(images);
-    setLoading(false);
   };
 
   const toggleSelectImage = (url: string) => {
@@ -143,7 +209,7 @@ export default function VocabImagePicker({ vocabId, vocabWord, vocabMeaning, onI
       <View style={styles.header}>
         <Text style={styles.title}>📸 Cùng Mirai hoàn thiện từ điển hình ảnh</Text>
         <Text style={styles.subtitle}>
-          Vui lòng chọn tối đa 4 ảnh phù hợp với từ &quot;{vocabWord}&quot;
+          Chọn tối đa 4 ảnh phù hợp với từ &quot;{vocabWord}&quot;
         </Text>
       </View>
 
@@ -158,7 +224,7 @@ export default function VocabImagePicker({ vocabId, vocabWord, vocabMeaning, onI
           >
             <View style={styles.imageGrid}>
               {contributedImages.map((url, index) => (
-                <View key={index} style={styles.gridImageCard}>
+                <View key={`contributed-${index}`} style={styles.gridImageCard}>
                   <Image source={{ uri: url }} style={styles.gridImage} />
                   <View style={styles.contributedMark}>
                     <Text style={styles.contributedText}>✓</Text>
@@ -171,7 +237,9 @@ export default function VocabImagePicker({ vocabId, vocabWord, vocabMeaning, onI
       )}
 
       {/* Ảnh đề xuất */}
-      <Text style={styles.sectionTitle}>✨ Ảnh đề xuất (chọn thêm)</Text>
+      <Text style={styles.sectionTitle}>
+        ✨ Ảnh đề xuất {currentKeyword ? `cho (${currentKeyword})` : ''} chọn thêm
+      </Text>
       <ScrollView 
         showsVerticalScrollIndicator={true} 
         style={styles.imageGridScroll}
@@ -182,7 +250,7 @@ export default function VocabImagePicker({ vocabId, vocabWord, vocabMeaning, onI
             const isSelected = selectedImages.includes(url);
             return (
               <TouchableOpacity
-                key={index}
+                key={`suggested-${index}`}
                 style={[styles.gridImageCard, isSelected && styles.imageCardSelected]}
                 onPress={() => toggleSelectImage(url)}
               >

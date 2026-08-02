@@ -376,7 +376,7 @@ export default function LevelBookScreen() {
     <View style={s.root}>
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
 
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
         <SafeAreaView edges={["top", "left", "right"]}>
           <View style={s.headerTopRow}>
             <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
@@ -434,7 +434,11 @@ export default function LevelBookScreen() {
 // ─── Styles ───────────────────────────────────────────────────────────────────
 const s = StyleSheet.create({
   root: { flex: 1, backgroundColor: "#f1f5f9" },
-
+  headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
+  },
   headerTopRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingLeft: 12, paddingRight: 28, paddingTop: 6, paddingBottom: 0 },
   backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },

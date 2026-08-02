@@ -71,8 +71,7 @@ export default function PracticeScreen() {
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.root}>
         <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-        
-        <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
+        <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.headerGradient}>
           <SafeAreaView style={styles.topBar}>
             <View style={styles.topBarInner}>
               <TouchableOpacity
@@ -125,6 +124,11 @@ export default function PracticeScreen() {
 }
 
 const styles = StyleSheet.create({
+  headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
+  },
   root: {
     flex: 1,
     backgroundColor: "#f1f5f9",

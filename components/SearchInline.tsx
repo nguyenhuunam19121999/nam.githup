@@ -98,7 +98,7 @@ function hiraganaToRomaji(hiragana: string): string {
     ら: 'ra', り: 'ri', る: 'ru', れ: 're', ろ: 'ro',
     わ: 'wa', を: 'wo', ん: 'n',
     が: 'ga', ぎ: 'gi', ぐ: 'gu', げ: 'ge', ご: 'go',
-    ざ: 'za', じ: 'ji', zu: 'zu', ぜ: 'ze', ぞ: 'zo',
+    ざ: 'za', じ: 'ji', ず: 'zu', ぜ: 'ze', ぞ: 'zo',
     だ: 'da', ぢ: 'ji', づ: 'zu', で: 'de', ど: 'do',
     ば: 'ba', び: 'bi', ぶ: 'bu', べ: 'be', ぼ: 'bo',
     ぱ: 'pa', ぴ: 'pi', ぷ: 'pu', ぺ: 'pe', ぽ: 'po',
@@ -174,6 +174,11 @@ export default function SearchInline({
   const inputRef = useRef<TextInput>(null);
   const [drawModalVisible, setDrawModalVisible] = useState(false);
   const [kanjiModalVisible, setKanjiModalVisible] = useState(false);
+  const kanjiModalVisibleRef = useRef(false);
+  useEffect(() => {
+    kanjiModalVisibleRef.current = kanjiModalVisible;
+  }, [kanjiModalVisible]);
+
   const [foundKanjiChars, setFoundKanjiChars] = useState<string[]>([]);
   const [currentKanjiResults, setCurrentKanjiResults] = useState<string[]>([]);
   const [selectedResult, setSelectedResult] = useState<SearchResult | null>(null);
@@ -377,48 +382,11 @@ export default function SearchInline({
           startTransition(() => {
             setCurrentKanjiResults(chars);
             setFoundKanjiChars(chars);
-            if (chars.length > 0 && !kanjiModalVisible) {  // ← thêm lại check
+            if (chars.length > 0 && !kanjiModalVisibleRef.current) {
               setKanjiModalVisible(true);
             }
           });
         };
-
-          // // THÀNH (version cũ dùng check !kanjiModalVisible — ok vì không còn trong deps):
-          // const updateUI = () => {
-          //   const chars = allFoundKanji.map(k => k.kanji);
-          //   startTransition(() => {
-          //     setCurrentKanjiResults(chars);
-          //     setFoundKanjiChars(chars);
-          //     if (chars.length > 0 && !kanjiModalVisible) {
-          //       setKanjiModalVisible(true);
-          //     }
-          //   });
-          // };
-
-          // Trong runKanjiStream, thay đoạn updateUI():
-          // const updateUI = () => {
-          //   const chars = allFoundKanji.map(k => k.kanji);
-          //   startTransition(() => {
-          //     setCurrentKanjiResults(chars);
-          //     setFoundKanjiChars(chars);
-          //     // Dùng ref thay vì check kanjiModalVisible trực tiếp để tránh stale closure
-          //     if (chars.length > 0) {
-          //       setKanjiModalVisible(true);  // luôn set, không check !kanjiModalVisible
-          //     }
-          //   });
-          // };
-          
-          // const updateUI = () => {
-          //   const chars = allFoundKanji.map(k => k.kanji);
-          //   startTransition(() => {
-          //     setCurrentKanjiResults(chars);
-          //     setFoundKanjiChars(chars);
-          //     if (chars.length > 0 && !kanjiModalVisible) {
-          //       setKanjiModalVisible(true);
-          //     }
-          //   });
-          // };
-
           const searchVocabKanji = async () => {
             if (token !== searchTokenRef.current) return;
             if (seenKanji.size >= 50) return;
@@ -986,6 +954,7 @@ export default function SearchInline({
               kanji={selectedResult.title}
               hiragana={selectedResult.subtitle}
               nghia={selectedResult.description}
+              jisho_meaning_en={selectedResult.data?.jisho_meaning_en || ''}
               han={selectedResult.data?.han || ''}
               level={selectedResult.data?.level || 'N3'}
               example={selectedResult.data?.example || ''}

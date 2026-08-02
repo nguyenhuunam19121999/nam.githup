@@ -21,10 +21,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 
 // ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#1c5765";
+
+const TEAL = "#004370";
+const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
-const TEXT_COLOR = "#e47b0b";
+// const BG_GRAY = "#f0f4f8";
+// const headerColor = "#f1f5f9";
 
 interface MenuItem {
   id: string;
@@ -109,8 +111,7 @@ export default function LearningMenuScreen() {
   return (
     <View style={s.root}>
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity
@@ -156,8 +157,15 @@ export default function LearningMenuScreen() {
 }
 
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f1f5f9" },
-
+  root: { 
+    flex: 1, 
+    backgroundColor: "#f1f5f9" 
+  },
+  headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
+  },
   topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",

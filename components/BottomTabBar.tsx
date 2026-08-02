@@ -5,7 +5,7 @@ import { Alert, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 // ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#1F6F7A";
+const TEAL = "#004370";
 const TEAL_DARK = "#0B3540";
 
 export function BottomTabBar() {
@@ -33,7 +33,7 @@ export function BottomTabBar() {
           <View style={s.tabContent}>
             <Text style={[s.icon, pathname === "/exam" && s.iconActive]}>🎓</Text>
             <Text style={[s.label, pathname === "/exam" && s.labelActive]}>
-              Đang phát triển
+              Luyện thi
             </Text>
           </View>
         </TouchableOpacity>
@@ -98,15 +98,14 @@ const s = StyleSheet.create({
     paddingVertical: 0, 
   },
   icon: { 
-    fontSize: 20, 
-    opacity: 0.45,
+    fontSize: 18, 
   },
   iconActive: { 
     opacity: 1,
     color: TEAL,
   },
   label: { 
-    fontSize: 10, 
+    fontSize: 12, 
     color: "#475569", 
     marginTop: 0, 
     fontWeight: "600", 

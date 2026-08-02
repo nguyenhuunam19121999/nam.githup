@@ -6,6 +6,7 @@ export interface RawVocab {
   hiragana?: string;
   han?: string;
   nghia?: string;
+  jisho_meaning_en?: string;
   example?: string;
   exampleMeaning?: string;
   category?: string;
@@ -49,6 +50,7 @@ function normalizeRow(row: any): RawVocab {
     hiragana: row.hira ?? undefined,
     han: row.han ?? undefined,
     nghia: row.nghia ?? undefined,
+    jisho_meaning_en: row.jisho_meaning_en ?? undefined,
     lesson: row.lesson ?? undefined,
     week: row.week ?? undefined,
     level: row.jlpt ?? undefined,

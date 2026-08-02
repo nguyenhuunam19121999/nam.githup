@@ -329,7 +329,7 @@ export default function SoumatomeN2Screen() {
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
 
       {/* ── Header ── */}
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
         <SafeAreaView edges={["top", "left", "right"]}>
           <View style={s.headerTopRow}>
             <TouchableOpacity
@@ -419,9 +419,15 @@ export default function SoumatomeN2Screen() {
 
 // ─── Styles ──────────────────────────────────────────────────────────────────
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f1f5f9" },
-
-  /* Header */
+  root: { 
+    flex: 1, 
+    backgroundColor: "#f1f5f9" 
+  },
+  headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
+  },
   headerTopRow: {
     flexDirection: "row",
     alignItems: "center",

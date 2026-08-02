@@ -166,6 +166,27 @@ const TARGETS = [
       );
     `,
   },
+  {
+  name: 'exams',
+    output: path.join(ASSETS, 'exams.db'),
+    schema: `
+      CREATE TABLE IF NOT EXISTS exams (
+        id TEXT PRIMARY KEY,
+        level TEXT NOT NULL,
+        exam_id TEXT NOT NULL,
+        total_time_minutes INTEGER,
+        passing_score INTEGER,
+        section_scores TEXT DEFAULT '{}',
+        vocab_count INTEGER DEFAULT 0,
+        grammar_count INTEGER DEFAULT 0,
+        reading_count INTEGER DEFAULT 0,
+        listening_count INTEGER DEFAULT 0,
+        data TEXT NOT NULL
+      );
+      CREATE INDEX IF NOT EXISTS idx_exams_level ON exams(level);
+      CREATE INDEX IF NOT EXISTS idx_exams_exam_id ON exams(exam_id);
+    `,
+  },
 ];
 
 function removeIfExists(filePath) {
@@ -475,6 +496,51 @@ function insertSentencesFile(db, filePath) {
   return count;
 }
 
+function getSectionQuestions(s) {
+  if (s.questions) return s.questions;
+  if (s.passages) return s.passages.flatMap((p) => p.questions || []);
+  return [];
+}
+
+function countQuestions(sections) {
+  if (!Array.isArray(sections)) return 0;
+  return sections.reduce((acc, s) => acc + getSectionQuestions(s).length, 0);
+}
+
+function insertExamFile(db, filePath, level) {
+  const data = readJson(filePath);
+  if (!data) return 0;
+
+  const examId = data.exam_id || path.basename(filePath, '.json');
+  const vocabCount = countQuestions(data.vocab?.sections);
+  const grammarCount = countQuestions(data.grammar_reading?.grammar_sections);
+  const readingCount = countQuestions(data.grammar_reading?.reading_sections);
+  const listeningCount = countQuestions(data.listening?.sections);
+
+  const stmt = db.prepare(`
+    INSERT OR REPLACE INTO exams
+      (id, level, exam_id, total_time_minutes, passing_score, section_scores, vocab_count, grammar_count, reading_count, listening_count, data)
+    VALUES (@id, @level, @exam_id, @total_time_minutes, @passing_score, @section_scores, @vocab_count, @grammar_count, @reading_count, @listening_count, @data)
+  `);
+
+  stmt.run({
+    id: `${level}_${examId}`,
+    level: level.toUpperCase(),
+    exam_id: examId,
+    total_time_minutes: typeof data.total_time_minutes === 'number' ? data.total_time_minutes : null,
+    passing_score: typeof data.passing_score === 'number' ? data.passing_score : null,
+    section_scores: toJson(data.section_scores, '{}'),
+    vocab_count: vocabCount,
+    grammar_count: grammarCount,
+    reading_count: readingCount,
+    listening_count: listeningCount,
+    data: JSON.stringify(data),
+  });
+
+  console.log(`  ✓ ${path.basename(filePath)}: exam ${examId} (${level.toUpperCase()})`);
+  return 1;
+}
+
 console.log('📦 Đang insert kanjifull.json...');
 insertKanjiFull(dbs.kanji, path.join(ASSETS, 'data_JLPT_kanji', 'kanjifull.json'));
 
@@ -552,6 +618,24 @@ for (const { file, book } of [
 console.log('\n📦 Đang insert mẫu câu (sentences.json)...');
 const sentencePath = path.join(ASSETS, 'sentences', 'sentences.json');
 if (fs.existsSync(sentencePath)) insertSentencesFile(dbs.sentences, sentencePath);
+
+console.log('\n📦 Đang insert đề thi (data_EXAMS/)...');
+for (const level of ['n1', 'n2', 'n3', 'n4', 'n5']) {
+  const levelDir = path.join(ASSETS, 'data_EXAMS', level);
+  if (!fs.existsSync(levelDir)) {
+    console.log(`  ⏭  ${level.toUpperCase()}: chưa có thư mục, bỏ qua`);
+    continue;
+  }
+  const files = fs
+    .readdirSync(levelDir)
+    .filter((f) => f.endsWith('.json'))
+    .sort();
+  let count = 0;
+  for (const file of files) {
+    count += insertExamFile(dbs.exams, path.join(levelDir, file), level);
+  }
+  console.log(`  📁 ${level.toUpperCase()}: ${count} đề thi`);
+}
 
 for (const db of Object.values(dbs)) db.close();
 

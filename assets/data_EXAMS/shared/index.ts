@@ -1,6 +1,7 @@
 // ============================================
-// FILE: assets/data_EXAMS/n3/index.ts
-// QUẢN LÝ DỮ LIỆU ĐỀ THI N3 - 8 ĐỀ
+// FILE: assets/data_EXAMS/shared/index.ts
+// LOGIC DÙNG CHUNG CHO MỌI CẤP ĐỘ (N1-N5)
+// Không chứa dữ liệu đề thi — chỉ chứa type & hàm xử lý.
 // ============================================
 
 import * as Speech from 'expo-speech';
@@ -18,26 +19,34 @@ export interface Question {
   image?: string;
   mondai?: string;
   correct_sentence?: string;
+  underline?: string;
+}
+
+export interface PassageGroup {
+  passage_id: number;
+  passage: string;
+  questions: Question[];
+  underlines?: string[];
 }
 
 export interface Section {
   mondai: string;
   name: string;
   instruction: string;
-  questions: Question[];
+  questions?: Question[];
   passage?: string;
+  passages?: PassageGroup[];
+  underlines?: string[];
 }
 
 export interface VocabSection {
   name: string;
-  time_limit: number;
   max_score: number;
   sections: Section[];
 }
 
 export interface GrammarReadingSection {
   name: string;
-  time_limit: number;
   max_score: number;
   grammar_sections: Section[];
   reading_sections: Section[];
@@ -45,18 +54,13 @@ export interface GrammarReadingSection {
 
 export interface ListeningSection {
   name: string;
-  time_limit: number;
   max_score: number;
   sections: Section[];
 }
 
 export interface ExamData {
   exam_id: string;
-  title: string;
   level: string;
-  year: number;
-  month: number;
-  source: string;
   total_time_minutes: number;
   passing_score: number;
   section_scores: {
@@ -83,65 +87,41 @@ export interface VoiceConfig {
 
 const DEFAULT_VOICE_CONFIG: VoiceConfig = {
   selected: 'female',
-  male: { pitch: 0.7, rate: 0.75, language: 'ja-JP' },
-  female: { pitch: 1.3, rate: 0.8, language: 'ja-JP' },
+  male: { pitch: 0.92, rate: 0.92, language: 'ja-JP' },
+  female: { pitch: 1.08, rate: 0.92, language: 'ja-JP' },
 };
 
 let currentVoiceConfig: VoiceConfig = { ...DEFAULT_VOICE_CONFIG };
 let isCurrentlySpeaking = false;
 
 // ============================================
-// 📥 IMPORT 8 ĐỀ THI
+// 📋 HÀM LẤY CÂU HỎI (generic theo ExamData, không phụ thuộc cấp độ)
 // ============================================
 
-import n3_01 from './n3_01.json';
-
-// ============================================
-// 📂 DATABASE ĐỀ THI
-// ============================================
-
-const EXAM_DATABASE: Record<string, ExamData> = {
-  'n3_01': n3_01 as ExamData,
+const getSectionQuestions = (s: Section): Question[] => {
+  if (s.questions) return s.questions;
+  if (s.passages) return s.passages.flatMap(p => p.questions);
+  return [];
 };
-
-// ============================================
-// 🔍 HÀM LẤY ĐỀ THI
-// ============================================
-
-export const getExamById = (id: string): ExamData | null => {
-  return EXAM_DATABASE[id] || null;
-};
-
-export const getAllExams = (): ExamData[] => {
-  return Object.values(EXAM_DATABASE);
-};
-
-export const getExamIds = (): string[] => {
-  return Object.keys(EXAM_DATABASE);
-};
-
-// ============================================
-// 📋 HÀM LẤY CÂU HỎI
-// ============================================
 
 export const getVocabQuestions = (exam: ExamData): Question[] => {
   if (!exam) return [];
-  return exam.vocab.sections.flatMap((s: Section) => s.questions);
+  return exam.vocab.sections.flatMap(getSectionQuestions);
 };
 
 export const getGrammarQuestions = (exam: ExamData): Question[] => {
   if (!exam) return [];
-  return exam.grammar_reading.grammar_sections.flatMap((s: Section) => s.questions);
+  return exam.grammar_reading.grammar_sections.flatMap(getSectionQuestions);
 };
 
 export const getReadingQuestions = (exam: ExamData): Question[] => {
   if (!exam) return [];
-  return exam.grammar_reading.reading_sections.flatMap((s: Section) => s.questions);
+  return exam.grammar_reading.reading_sections.flatMap(getSectionQuestions);
 };
 
 export const getListeningQuestions = (exam: ExamData): Question[] => {
   if (!exam) return [];
-  return exam.listening.sections.flatMap((s: Section) => s.questions);
+  return exam.listening.sections.flatMap(getSectionQuestions);
 };
 
 export const getAllQuestions = (exam: ExamData): Question[] => {
@@ -152,6 +132,21 @@ export const getAllQuestions = (exam: ExamData): Question[] => {
     ...getReadingQuestions(exam),
     ...getListeningQuestions(exam),
   ];
+};
+
+export const getGrammarReadingQuestions = (exam: ExamData): Question[] => {
+  return [...getGrammarQuestions(exam), ...getReadingQuestions(exam)];
+};
+
+export const getExamStats = (exam: ExamData) => {
+  if (!exam) return null;
+  return {
+    vocab: getVocabQuestions(exam).length,
+    grammar: getGrammarQuestions(exam).length,
+    reading: getReadingQuestions(exam).length,
+    listening: getListeningQuestions(exam).length,
+    total: getAllQuestions(exam).length,
+  };
 };
 
 // ============================================
@@ -170,6 +165,10 @@ export const getVoiceConfig = (): VoiceConfig => {
   return { ...currentVoiceConfig };
 };
 
+export const setVoiceConfig = (config: Partial<VoiceConfig>): void => {
+  currentVoiceConfig = { ...currentVoiceConfig, ...config };
+};
+
 // ============================================
 // 🎭 TÁCH HỘI THOẠI THEO NGƯỜI NÓI
 // ============================================
@@ -179,8 +178,18 @@ export interface DialogueTurn {
   text: string;
 }
 
+const cleanForSpeech = (raw: string): string => {
+  return raw
+    .replace(/【[^】]*】/g, '')
+    .replace(/^\s*\d+[.\uFF0E]\s*/, '')
+    .trim();
+};
+
 const parseDialogue = (rawText: string, fallbackGender: VoiceGender): DialogueTurn[] => {
-  const lines = rawText.split('\n').map(l => l.trim()).filter(Boolean);
+  const lines = rawText
+    .split('\n')
+    .map(l => cleanForSpeech(l))
+    .filter(Boolean);
   const turns: DialogueTurn[] = [];
 
   for (const line of lines) {
@@ -190,8 +199,6 @@ const parseDialogue = (rawText: string, fallbackGender: VoiceGender): DialogueTu
       const content = match[2].trim();
       const gender: VoiceGender = label.includes('男') ? 'male' : label.includes('女') ? 'female' : fallbackGender;
       turns.push({ gender, text: content });
-    } else if (turns.length > 0) {
-      turns[turns.length - 1].text += ' ' + line;
     } else {
       turns.push({ gender: fallbackGender, text: line });
     }
@@ -199,7 +206,6 @@ const parseDialogue = (rawText: string, fallbackGender: VoiceGender): DialogueTu
   return turns;
 };
 
-// 👇 Đọc 1 câu, trả Promise để chờ xong mới đọc câu kế
 const speakOneTurn = (text: string, gender: VoiceGender): Promise<void> => {
   return new Promise((resolve) => {
     const voiceConfig = gender === 'male' ? currentVoiceConfig.male : currentVoiceConfig.female;
@@ -217,7 +223,6 @@ const speakOneTurn = (text: string, gender: VoiceGender): Promise<void> => {
 const pause = (ms: number): Promise<void> =>
   new Promise(resolve => setTimeout(resolve, ms));
 
-// 👇 Đọc câu hỏi trước, rồi đọc hội thoại phân vai nam/nữ theo transcript
 export const speakQuestionWithDialogue = async (
   question: Question,
   options?: {
@@ -236,19 +241,18 @@ export const speakQuestionWithDialogue = async (
   const fallbackGender = options?.gender || currentVoiceConfig.selected;
 
   try {
-    // 1. Đọc câu hỏi trước (giọng mặc định người dùng chọn)
-    if (question.text) {
-      await speakOneTurn(question.text, fallbackGender);
+    const cleanedQuestionText = question.text ? cleanForSpeech(question.text) : '';
+    if (cleanedQuestionText) {
+      await speakOneTurn(cleanedQuestionText, fallbackGender);
       await pause(400);
     }
 
-    // 2. Đọc hội thoại, tách theo 男/女, đổi giọng theo từng lượt
     if (question.transcript) {
       const turns = parseDialogue(question.transcript.trim(), fallbackGender);
       let prevGender: VoiceGender | null = null;
 
       for (const turn of turns) {
-        if (!isCurrentlySpeaking) break; // đã bị stop giữa chừng
+        if (!isCurrentlySpeaking) break;
         if (prevGender !== null) {
           await pause(prevGender !== turn.gender ? 450 : 200);
         }
@@ -300,9 +304,8 @@ export const speakText = (
     rate: options?.rate || voiceConfig.rate,
   };
 
-  // Chia câu để có nhịp điệu tự nhiên
   const sentences = text.split(/[。！？.!?]/).filter(s => s.trim().length > 0);
-  
+
   if (sentences.length > 1) {
     let index = 0;
     const speakNextSentence = () => {
@@ -359,7 +362,6 @@ export const speakQuestion = (
 ): void => {
   if (!question) return;
 
-  // Ưu tiên transcript nếu có (phần nghe)
   if (question.transcript && question.transcript.trim().length > 0) {
     speakText(question.transcript, options);
     return;
@@ -391,29 +393,6 @@ export const isSpeaking = async (): Promise<boolean> => {
   return isCurrentlySpeaking || await Speech.isSpeakingAsync();
 };
 
-// ============================================
-// 📊 HÀM THỐNG KÊ
-// ============================================
-
-export const getExamStats = (exam: ExamData) => {
-  if (!exam) return null;
-  return {
-    vocab: getVocabQuestions(exam).length,
-    grammar: getGrammarQuestions(exam).length,
-    reading: getReadingQuestions(exam).length,
-    listening: getListeningQuestions(exam).length,
-    total: getAllQuestions(exam).length,
-  };
-};
-
-// ============================================
-// 🔗 CÁC HÀM ALIAS ĐỂ TƯƠNG THÍCH VỚI FILE CHA (data_EXAMS/index.ts)
-// ============================================
-
-export const getGrammarReadingQuestions = (exam: ExamData): Question[] => {
-  return [...getGrammarQuestions(exam), ...getReadingQuestions(exam)];
-};
-
 export const parseTranscript = (
   transcript: string,
   fallbackGender: VoiceGender = 'female'
@@ -435,14 +414,7 @@ export const speakTranscriptWithVoices = async (
   );
 };
 
-export const setVoiceConfig = (config: Partial<VoiceConfig>): void => {
-  currentVoiceConfig = { ...currentVoiceConfig, ...config };
-};
-
 export default {
-  getExamById,
-  getAllExams,
-  getExamIds,
   getVocabQuestions,
   getGrammarQuestions,
   getReadingQuestions,

@@ -29,7 +29,7 @@ interface Feedback {
   createdAt: number;
 }
 
-const PRIMARY = "#7C3AED"; /* old: #4ECDC4 */;
+const PRIMARY = "#004370";
 
 interface Props {
   pageKey: string; 
@@ -46,8 +46,8 @@ function normalizeForFilter(text: string): string {
 
 // Danh sách từ cấm — bạn tự bổ sung thêm khi phát hiện từ mới cần chặn
 const BANNED_WORDS = [
-  "dm", "vcl", "vl", "clm", "djt", "dit me", "cc", "loz",
-  "ngu", "cho chet", "do ngu", "sex",
+  "đm", "vcl", "vl", "clm", "djt", "địt mẹ", "cc", "loz","lồn",
+  "ngu", "chó chết", "đồ ngu", "sex",
   // 👈 thêm từ khác vào đây nếu cần, viết thường, không dấu
 ];
 

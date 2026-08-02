@@ -5,7 +5,7 @@
     "phienAm": "かわりに",
     "meaning": "① Đổi lại, bù lại ② Thay vì, thay cho…",
     "level": "N3",
-    "structure": "N の（である） / A な（である） / A い / V（普）+ かわりに",
+    "structure": "N の であN)  / A な であN)  / A い / V (普) + かわりに",
     "explanation": "① Đổi lại cái này thì làm cái kia. ② Thay thế cho ai/cái gì đó.",
     "examples": [
       {
@@ -47,7 +47,7 @@
     "phienAm": "ばかりでなく",
     "meaning": "Không chỉ… mà còn…",
     "level": "N3",
-    "structure": "普通形 / N である + ばかりで（は）なく",
+    "structure": "普通形 / N である + ばかりで N) なく",
     "explanation": "Diễn đạt không chỉ điều A mà còn có cả điều B, thường mang ý nhấn mạnh thêm.",
     "examples": [
       {
@@ -89,7 +89,7 @@
     "phienAm": "からでなければ",
     "meaning": "Nếu không làm… trước thì…",
     "level": "N3",
-    "structure": "V て + からでなければ・からでないと + （どうなるかわからない）",
+    "structure": "V て + からでなければ・からでないと +  どうなるかわからなN) ",
     "explanation": "Diễn đạt nếu không thực hiện hành động trước đó thì không thể biết hay đánh giá được.",
     "examples": [
       {
@@ -110,7 +110,7 @@
     "phienAm": "かのように",
     "meaning": "Cứ như thể là…",
     "level": "N3",
-    "structure": "普通形 / A な・N + である + かのように・かのような（N）・かのよう",
+    "structure": "普通形 / A な・N + である + かのように・かのような N) ・かのよう",
     "explanation": "So sánh với điều gì đó thực ra không phải vậy, nhưng cứ như thể là như vậy. Mang tính văn viết.",
     "examples": [
       {
@@ -131,7 +131,7 @@
     "phienAm": "にする・ことにする",
     "meaning": "Chọn / Quyết định…",
     "level": "N3",
-    "structure": "N・V る / V ない + こと + にする\nV る + ようにしている（cố gắng thực hiện thành thói quen）",
+    "structure": "N・V る / V ない + こと + にする\nV る + ようにしている cố gắng thực hiện thành thói queN) ",
     "explanation": "Diễn đạt quyết định của bản thân về việc gì đó. ようにしている: đang cố gắng duy trì như thói quen.",
     "examples": [
       {
@@ -152,7 +152,7 @@
     "phienAm": "ようとする",
     "meaning": "① Cố gắng / Nỗ lực thực hiện ② Sắp xảy ra",
     "level": "N3",
-    "structure": "V よう形 + とする（としない：không cố gắng）",
+    "structure": "V よう形 + とする としない：không cố gắnN) ",
     "explanation": "① Cố gắng làm điều gì đó. ② Một sự việc sắp xảy ra hoặc thay đổi.",
     "examples": [
       {
@@ -173,7 +173,7 @@
     "phienAm": "ていく・てくる",
     "meaning": "Ngày càng ~ / Dần dần ~",
     "level": "N3",
-    "structure": "V て + いく（xu hướng tương lai）\nV て + くる（xu hướng từ quá khứ đến hiện tại）",
+    "structure": "V て + いく xu hướng tương laN) \nV て + くる xu hướng từ quá khứ đến hiện tạN) ",
     "explanation": "ていく: diễn đạt sự thay đổi hay tiếp diễn hướng về tương lai. てくる: diễn đạt sự thay đổi hay tiếp diễn từ quá khứ đến hiện tại.",
     "examples": [
       {
@@ -194,7 +194,7 @@
     "phienAm": "かとおもった",
     "meaning": "Cứ tưởng là… (nhưng hóa ra không phải)",
     "level": "N3",
-    "structure": "普通形（N/Aなだ）+ かと思った",
+    "structure": "普通形 N/AなN) + かと思った",
     "explanation": "Diễn đạt điều mình dự đoán nhưng thực tế lại không diễn ra như thế.",
     "examples": [
       {
@@ -211,7 +211,7 @@
   },
   {
     "id": "n3m-11",
-    "pattern": "N + について（は・も・のN）",
+    "pattern": "N + について は・も・のN) ",
     "phienAm": "について",
     "meaning": "Về…",
     "level": "N3",
@@ -236,7 +236,7 @@
     "phienAm": "によって",
     "meaning": "① Bằng, thông qua ② Vì, lý do ③ Tùy vào, tùy theo",
     "level": "N3",
-    "structure": "N / V る こと + によって\nN + によって（は）",
+    "structure": "N / V る こと + によって\nN + によって N) ",
     "explanation": "① Phương tiện, cách thức. ② Nguyên nhân. ③ Tùy theo điều kiện, mỗi trường hợp khác nhau.",
     "examples": [
       {
@@ -261,7 +261,7 @@
     "phienAm": "にかんして",
     "meaning": "Về, liên quan đến…",
     "level": "N3",
-    "structure": "N + に関して（は・も）\nN + に関する + N",
+    "structure": "N + に関して は・N) \nN + に関する + N",
     "explanation": "Diễn đạt về chủ đề, vấn đề liên quan đến N. Mang tính văn viết và chính thức hơn について.",
     "examples": [
       {
@@ -282,7 +282,7 @@
     "phienAm": "にたいして",
     "meaning": "Đối với, với / Cho đối tượng nào đó…",
     "level": "N3",
-    "structure": "N + に対して・に対し（は・も）\nN + に対する + N",
+    "structure": "N + に対して・に対し は・N) \nN + に対する + N",
     "explanation": "Diễn đạt hành động, thái độ hướng đến một đối tượng cụ thể.",
     "examples": [
       {
@@ -303,7 +303,7 @@
     "phienAm": "のにたいして",
     "meaning": "Trái với, so với… thì…",
     "level": "N3",
-    "structure": "普通形 / N（な・である） + のに対して",
+    "structure": "普通形 / N な・であN)  + のに対して",
     "explanation": "Diễn đạt sự đối lập, tương phản giữa hai điều.",
     "examples": [
       {
@@ -341,11 +341,11 @@
   },
   {
     "id": "n3m-17",
-    "pattern": "N / Aな / Aい / V普通形 + くらい（ぐらい）",
+    "pattern": "N / Aな / Aい / V普通形 + くらい ぐらN) ",
     "phienAm": "くらい・ぐらい",
     "meaning": "① Tới mức, đến mức ② Ít nhất là, chỉ cần",
     "level": "N3",
-    "structure": "N / A な / A い / V 普通形 + くらい（ぐらい）",
+    "structure": "N / A な / A い / V 普通形 + くらい ぐらN) ",
     "explanation": "① Diễn đạt mức độ. ② Ít nhất là, đây là điều tối thiểu có thể làm được.",
     "examples": [
       {
@@ -408,7 +408,7 @@
     "phienAm": "って",
     "meaning": "Thường dùng thay cho は / Thì…",
     "level": "N3",
-    "structure": "N + って（= N + は）",
+    "structure": "N + って = N + N) ",
     "explanation": "Dạng thông thường của trợ từ は trong hội thoại thường ngày.",
     "examples": [
       {
@@ -446,11 +446,11 @@
   },
   {
     "id": "n3m-22",
-    "pattern": "普通形 + って（伝聞）",
-    "phienAm": "って（でんぶん）",
+    "pattern": "普通形 + って 伝N) ",
+    "phienAm": "って でんぶN) ",
     "meaning": "Nghe nói là… / Thấy bảo là…",
     "level": "N3",
-    "structure": "普通形 + って（口語的な伝聞）",
+    "structure": "普通形 + って 口語的な伝N) ",
     "explanation": "Dạng khẩu ngữ của そうだ (truyền đạt thông tin). Dùng trong hội thoại thường ngày.",
     "examples": [
       {
@@ -471,7 +471,7 @@
     "phienAm": "だって・たって",
     "meaning": "Dù có, Cho dù… (vẫn ~)",
     "level": "N3",
-    "structure": "N + だって\nV過去形 + たって・だって\nN + だって〜N + だって（cả... lẫn...）",
+    "structure": "N + だって\nV過去形 + たって・だって\nN + だって〜N + だって cả... lẫn..N) ",
     "explanation": "Diễn đạt sự nhượng bộ: dù có điều đó cũng không thay đổi kết quả.",
     "examples": [
       {
@@ -490,9 +490,9 @@
     "id": "n3m-24",
     "pattern": "V た / N / Aなだ・だった / Aいかった + っけ",
     "phienAm": "っけ",
-    "meaning": "… ấy nhỉ? / … phải không?（hỏi lại, xác nhận）",
+    "meaning": "… ấy nhỉ? / … phải không? hỏi lại, xác nhậN) ",
     "level": "N3",
-    "structure": "V た / N / A + っけ（丁寧語：ましたっけ・でしたっけ）",
+    "structure": "V た / N / A + っけ 丁寧語：ましたっけ・でしたっN) ",
     "explanation": "Dùng để xác nhận lại thông tin mình không chắc, hoặc hỏi người kia để nhớ lại điều gì đó.",
     "examples": [
       {
@@ -576,7 +576,7 @@
     "phienAm": "ごらん",
     "meaning": "Hãy thử… đi",
     "level": "N3",
-    "structure": "V て形 + ごらん（ごらんなさい）",
+    "structure": "V て形 + ごらん ごらんなさN) ",
     "explanation": "Khuyến khích ai đó thử làm điều gì đó. Thường người lớn nói với trẻ em hoặc bề trên nói với bề dưới.",
     "examples": [
       {
@@ -593,11 +593,11 @@
   },
   {
     "id": "n3m-29",
-    "pattern": "V ない → ず / ず（に）",
+    "pattern": "V ない → ず / ず N) ",
     "phienAm": "ず・ずに",
     "meaning": "Không… mà / Mà không làm…",
     "level": "N3",
-    "structure": "V ない形（する→せず、くる→来ずに）+ ず（に）",
+    "structure": "V ない形 する→せず、くる→来ずN) + ず N) ",
     "explanation": "Thể văn viết của V ないで. Diễn đạt hai hành động, trong đó không thực hiện hành động đầu mà làm hành động sau.",
     "examples": [
       {
@@ -660,7 +660,7 @@
     "phienAm": "はずだ・はずがない",
     "meaning": "Chắc chắn là / Không lẽ nào mà…",
     "level": "N3",
-    "structure": "（V・A い）普通形 / N の / A な（N は） + はずだ・はずがない",
+    "structure": " V・A N) 普通形 / N の / A な N N)  + はずだ・はずがない",
     "explanation": "はずだ: có căn cứ tin chắc điều đó đúng. はずがない: chắc chắn không thể nào như vậy.",
     "examples": [
       {
@@ -702,7 +702,7 @@
     "phienAm": "ものか・もんか",
     "meaning": "Không đời nào / Nhất định không ~",
     "level": "N3",
-    "structure": "（V・A い）普通形 / N な + ものか・もんか（口語）",
+    "structure": " V・A N) 普通形 / N な + ものか・もんか 口N) ",
     "explanation": "Diễn đạt quyết tâm tuyệt đối không làm điều gì đó, hoặc điều đó không thể nào đúng. Mang tính cảm xúc mạnh.",
     "examples": [
       {
@@ -723,7 +723,7 @@
     "phienAm": "べきだ",
     "meaning": "Nên, cần, phải ~ / Không nên ~",
     "level": "N3",
-    "structure": "V る / A な（である） + べきだ・べきN・べきではない",
+    "structure": "V る / A な であN)  + べきだ・べきN・べきではない",
     "explanation": "Diễn đạt điều nên làm hoặc không nên làm theo đạo lý, quy tắc chung.",
     "examples": [
       {
@@ -744,7 +744,7 @@
     "phienAm": "だけ",
     "meaning": "Trong khả năng / Trong phạm vi có thể ~",
     "level": "N3",
-    "structure": "V可能形・V欲求 / A な / A い / N + だけ・だけの＋N",
+    "structure": "V可能形・V欲求 / A な / A い / N + だけ・だけの+N",
     "explanation": "Diễn đạt hết mức có thể, trong phạm vi cho phép.",
     "examples": [
       {
@@ -765,7 +765,7 @@
     "phienAm": "めったに",
     "meaning": "Hiếm khi…",
     "level": "N3",
-    "structure": "めったに + V ない（否定）\nめったにない + N",
+    "structure": "めったに + V ない 否N) \nめったにない + N",
     "explanation": "Diễn đạt việc gì đó xảy ra rất ít, hiếm khi. Luôn dùng với dạng phủ định.",
     "examples": [
       {
@@ -828,7 +828,7 @@
     "phienAm": "ぎみ",
     "meaning": "Cảm thấy hơi / Có cảm giác hơi ~",
     "level": "N3",
-    "structure": "V ます形 / N + ぎみ（だ）",
+    "structure": "V ます形 / N + ぎみ N) ",
     "explanation": "Diễn đạt cảm giác nhẹ, xu hướng hơi có dấu hiệu của trạng thái nào đó.",
     "examples": [
       {
@@ -870,7 +870,7 @@
     "phienAm": "っぽい",
     "meaning": "① Cứ như, trông có vẻ ② Thường hay, dễ ③ Thiên về, nhiều",
     "level": "N3",
-    "structure": "N / V ます形 / A い + っぽい（〜っぽく・っぽさ）",
+    "structure": "N / V ます形 / A い + っぽい 〜っぽく・っぽN) ",
     "explanation": "① Trông có vẻ như, mang đặc điểm của. ② Hay có xu hướng đó. ③ Thiên về hướng đó.",
     "examples": [
       {
@@ -945,7 +945,7 @@
     "phienAm": "さえ",
     "meaning": "Đến cả ~, thậm chí ~",
     "level": "N3",
-    "structure": "N（助詞省略）/ V て / V ます形 + さえ\n[疑問詞 + か] + さえ",
+    "structure": "N 助詞省N) / V て / V ます形 + さえ\n[疑問詞 + か] + さえ",
     "explanation": "Nhấn mạnh sự cực đoan: ngay cả điều bình thường nhất / điều không ngờ nhất cũng xảy ra hoặc không thể làm được.",
     "examples": [
       {
@@ -995,7 +995,7 @@
     "phienAm": "からといって",
     "meaning": "Tuy là ~ nhưng không nhất thiết / Không phải vì ~ mà…",
     "level": "N3",
-    "structure": "普通形（N/A な だ・A い・V） + からといって + （否定・批判）",
+    "structure": "普通形 N/A な だ・A い・N)  + からといって +  否定・批N) ",
     "explanation": "Diễn đạt: dù lý do A là thật nhưng không thể dùng A để biện hộ cho hành động B, hoặc A không nhất thiết dẫn đến B.",
     "examples": [
       {
@@ -1020,7 +1020,7 @@
     "phienAm": "にはんして",
     "meaning": "Trái với ~, ngược với ~",
     "level": "N3",
-    "structure": "N + に反して・に反し・に反する（N）",
+    "structure": "N + に反して・に反し・に反する N) ",
     "explanation": "Diễn đạt kết quả hoặc hành động đi ngược lại với kỳ vọng, quy định, dự đoán ban đầu.",
     "examples": [
       {
@@ -1045,7 +1045,7 @@
     "phienAm": "にもとづいて",
     "meaning": "Căn cứ vào ~, dựa trên ~",
     "level": "N3",
-    "structure": "N + にもとづいて・にもとづき・にもとづく（N）",
+    "structure": "N + にもとづいて・にもとづき・にもとづく N) ",
     "explanation": "Diễn đạt hành động hay kết quả dựa trên, căn cứ vào một nền tảng, dữ liệu, luật lệ nào đó. Mang tính trang trọng, văn viết.",
     "examples": [
       {
@@ -1066,11 +1066,11 @@
   },
   {
     "id": "n3m-50",
-    "pattern": "N + をもとに（して）",
+    "pattern": "N + をもとに しN) ",
     "phienAm": "をもとに",
     "meaning": "Dựa trên ~, lấy ~ làm cơ sở",
     "level": "N3",
-    "structure": "N + をもとに（して）・をもとにした（N）",
+    "structure": "N + をもとに しN) ・をもとにした N) ",
     "explanation": "Diễn đạt lấy N làm nguyên liệu, căn cứ, gốc gác để tạo ra hoặc thực hiện điều gì đó. Gần nghĩa với にもとづいて nhưng mang tính sáng tạo hơn.",
     "examples": [
       {
@@ -1091,11 +1091,11 @@
   },
   {
     "id": "n3m-51",
-    "pattern": "V + れる / られる（自発）",
-    "phienAm": "れる・られる（じはつ）",
-    "meaning": "Tự nhiên ~, tự dưng ~（cảm giác tự phát）",
+    "pattern": "V + れる / られる 自N) ",
+    "phienAm": "れる・られる じはN) ",
+    "meaning": "Tự nhiên ~, tự dưng ~ cảm giác tự pháN) ",
     "level": "N3",
-    "structure": "V ない形 + れる / られる（自発の意味）",
+    "structure": "V ない形 + れる / られる 自発の意N) ",
     "explanation": "Diễn đạt cảm xúc, cảm giác tự nhiên nảy sinh, không do cố ý. Khác với bị động, đây là dạng diễn đạt tự phát. Thường dùng với các động từ chỉ cảm xúc, suy nghĩ.",
     "examples": [
       {
@@ -1120,7 +1120,7 @@
     "phienAm": "てたまらない",
     "meaning": "Không chịu được ~, vô cùng ~, hết sức ~",
     "level": "N3",
-    "structure": "V て / A い くて / A な で + たまらない（たまりません）",
+    "structure": "V て / A い くて / A な で + たまらない たまりませN) ",
     "explanation": "Diễn đạt cảm giác hay trạng thái quá mức không thể chịu đựng được, không kiểm soát được. Dùng với cảm giác của bản thân (vui, buồn, nóng, muốn…).",
     "examples": [
       {
@@ -1145,7 +1145,7 @@
     "phienAm": "てならない",
     "meaning": "Vô cùng ~, hết sức ~ (cảm xúc tự nhiên, văn viết)",
     "level": "N3",
-    "structure": "V て / A い くて / A な で + ならない（なりません）",
+    "structure": "V て / A い くて / A な で + ならない なりませN) ",
     "explanation": "Ý nghĩa tương tự てたまらない — diễn đạt cảm xúc mạnh mẽ tự nhiên không kiểm soát được. Mang tính trang trọng, văn viết hơn てたまらない. Không dùng với ý chí chủ động.",
     "examples": [
       {
@@ -1167,10 +1167,10 @@
   {
     "id": "n3m-54",
     "pattern": "普通形 + とか",
-    "phienAm": "とか（でんぶん）",
+    "phienAm": "とか でんぶN) ",
     "meaning": "Nghe nói là ~, nghe rằng ~ (truyền đạt không chắc chắn)",
     "level": "N3",
-    "structure": "普通形（N/A な・V）+ とか（聞いた・聞いたけど）",
+    "structure": "普通形 N/A な・N) + とか 聞いた・聞いたけN) ",
     "explanation": "Dùng để truyền đạt thông tin nghe được từ người khác nhưng không chắc chắn về tính xác thực. Mang tính khẩu ngữ, thường dùng trong hội thoại thường ngày.",
     "examples": [
       {
@@ -1195,7 +1195,7 @@
     "phienAm": "かけ・かける",
     "meaning": "Làm dở, đang làm dang dở ~",
     "level": "N3",
-    "structure": "V ます形（去ます）+ かけ（N）/ かける・かけた（N）",
+    "structure": "V ます形 去まN) + かけ N) / かける・かけた N) ",
     "explanation": "Diễn đạt trạng thái đã bắt đầu làm nhưng chưa hoàn thành, bỏ dở giữa chừng. Danh từ hóa bằng かけ, động từ hóa bằng かける.",
     "examples": [
       {
@@ -1224,7 +1224,7 @@
     "phienAm": "をこめて",
     "meaning": "Với tất cả ~, đong đầy ~ (tình cảm, tâm huyết)",
     "level": "N3",
-    "structure": "N（気持ち・心・愛情・感謝…）+ をこめて",
+    "structure": "N 気持ち・心・愛情・感謝N) + をこめて",
     "explanation": "Diễn đạt việc làm gì đó với tất cả tình cảm, tâm huyết, lòng thành. N thường là danh từ chỉ cảm xúc hoặc ý chí.",
     "examples": [
       {
@@ -1245,11 +1245,11 @@
   },
   {
     "id": "n3m-57",
-    "pattern": "普通形 / N + わりに（は）",
+    "pattern": "普通形 / N + わりに N) ",
     "phienAm": "わりに",
     "meaning": "Thế mà ~, dù ~ mà lại… (kết quả bất ngờ so với tiêu chuẩn)",
     "level": "N3",
-    "structure": "V / A い（普通形） / A な / N + わりに（は）",
+    "structure": "V / A い 普通N)  / A な / N + わりに N) ",
     "explanation": "Diễn đạt kết quả khác với những gì người ta mong đợi dựa trên tiêu chuẩn nhất định. Thường mang ý ngạc nhiên hoặc bất cân xứng.",
     "examples": [
       {
@@ -1274,7 +1274,7 @@
     "phienAm": "くせに",
     "meaning": "Dù ~, mà lại ~ (chê trách, khinh miệt)",
     "level": "N3",
-    "structure": "V / A い（普通形） / A な / N + くせに",
+    "structure": "V / A い 普通N)  / A な / N + くせに",
     "explanation": "Diễn đạt sự chê trách, bất bình khi điều sau không phù hợp với điều trước. Mang sắc thái phê phán, không dùng trong văn viết trang trọng.",
     "examples": [
       {
@@ -1328,7 +1328,7 @@
     "phienAm": "をきっかけに",
     "meaning": "Nhờ ~ mà, lấy ~ làm cơ hội / bước ngoặt",
     "level": "N3",
-    "structure": "N + をきっかけに（して）・をきっかけとして",
+    "structure": "N + をきっかけに しN) ・をきっかけとして",
     "explanation": "Diễn đạt N là tác nhân, bước ngoặt dẫn đến sự thay đổi hay phát triển sau đó. N thường là sự kiện, cơ hội cụ thể.",
     "examples": [
       {
@@ -1353,7 +1353,7 @@
     "phienAm": "とする・としたら",
     "meaning": "Giả định rằng ~, nếu giả sử ~",
     "level": "N3",
-    "structure": "普通形（N/A な・A い・V）+ とする・とした（ら）・とすれば・とすると",
+    "structure": "普通形 N/A な・A い・N) + とする・とした N) ・とすれば・とすると",
     "explanation": "Giả định một điều chưa chắc chắn hoặc chưa xảy ra để từ đó suy luận kết quả. とする: đặt giả định; としたら/とすれば/とすると: nếu giả định rằng…",
     "examples": [
       {
@@ -1382,7 +1382,7 @@
     "phienAm": "としても",
     "meaning": "Kể cả là ~, giả sử là ~ đi chăng nữa",
     "level": "N3",
-    "structure": "普通形（N/A な・A い・V）+ としても",
+    "structure": "普通形 N/A な・A い・N) + としても",
     "explanation": "Diễn đạt: dù giả sử điều A là thật thì kết quả B vẫn không thay đổi. Khác với てもở chỗ としても nhấn mạnh vào sự giả định.",
     "examples": [
       {
@@ -1403,11 +1403,11 @@
   },
   {
     "id": "n3m-63",
-    "pattern": "N の / V る / V た + 際（に）/ 際（に）は",
+    "pattern": "N の / V る / V た + 際 N) / 際 N) は",
     "phienAm": "さいに",
-    "meaning": "Lúc ~, khi ~（trang trọng hơn とき）",
+    "meaning": "Lúc ~, khi ~ trang trọng hơn とN) ",
     "level": "N3",
-    "structure": "N の / V る / V た + 際に・際には・際の（N）",
+    "structure": "N の / V る / V た + 際に・際には・際の N) ",
     "explanation": "Cách nói trang trọng của とき. Thường dùng trong văn viết, thông báo, hướng dẫn chính thức. Có thể dùng cả với hành động trong quá khứ (Vた) và tương lai (Vる).",
     "examples": [
       {
@@ -1432,7 +1432,7 @@
     "phienAm": "おそれがある",
     "meaning": "E là ~, có nguy cơ ~, sợ rằng ~",
     "level": "N3",
-    "structure": "N の / V る（辞書形）+ おそれがある・おそれがあります",
+    "structure": "N の / V る 辞書N) + おそれがある・おそれがあります",
     "explanation": "Diễn đạt khả năng xảy ra điều xấu, điều nguy hiểm hoặc điều không mong muốn. Mang sắc thái lo ngại, thường dùng trong văn viết, tin tức, thông báo chính thức.",
     "examples": [
       {

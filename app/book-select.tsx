@@ -95,7 +95,7 @@ export default function BookSelectScreen() {
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
 
       {/* ── Thanh trên cùng: nút quay lại + tiêu đề ── */}
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
+        <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7} hitSlop={10}>
@@ -142,6 +142,12 @@ export default function BookSelectScreen() {
 
 // ─── Style chung của trang ────────────────────────────────────────────────────
 const s = StyleSheet.create({
+
+   headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
+  },
   root: { flex: 1, backgroundColor: "#f1f5f9" },
 
   // Thanh xanh trên cùng

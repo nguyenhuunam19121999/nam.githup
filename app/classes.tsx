@@ -37,8 +37,7 @@ export default function ClassesScreen() {
   return (
     <View style={styles.container}>
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-      
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={styles.headerGradient}>
         <SafeAreaView style={styles.header}>
           <Text style={styles.headerTitle}>📚 Lớp học của tôi</Text>
           <Text style={styles.headerSubtitle}>Chọn lớp để tiếp tục học</Text>
@@ -79,6 +78,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#f1f5f9",
+  },
+   headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
   },
   header: {
     paddingHorizontal: 20,

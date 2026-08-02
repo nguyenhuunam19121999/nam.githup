@@ -11,9 +11,11 @@ import {
   ScrollView,
   TouchableOpacity,
   ActivityIndicator,
+  StatusBar,
   Alert,
 } from 'react-native';
 import { router, useLocalSearchParams, Stack } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { 
   getExamById, 
   calculateTotalScore, 
@@ -24,7 +26,10 @@ import {
   TotalScoreResult
 } from '../assets/data_EXAMS';
 
+const TEAL = "#004370"; 
+
 export default function ExamResultScreen() {
+  const insets = useSafeAreaInsets();
   const params = useLocalSearchParams();
   const [result, setResult] = useState<TotalScoreResult | null>(null);
   const [loading, setLoading] = useState(true);
@@ -46,20 +51,23 @@ export default function ExamResultScreen() {
         const vocabAnswers = JSON.parse(vocabAnswersRaw);
         const grammarAnswers = JSON.parse(grammarAnswersRaw);
         const listeningAnswers = JSON.parse(listeningAnswersRaw);
-
-        // examId dạng "n3_01" → suy ra level "N3" từ tiền tố trước dấu gạch dưới
         const level = examId.split('_')[0].toUpperCase();
 
-        const exam = getExamById(level, examId);
+        const exam = await getExamById(level, examId);
         if (!exam) {
           setLoading(false);
           return;
         }
 
-        const vocabQuestions = getVocabQuestions(level, examId);
-        const grammarQuestions = getGrammarQuestions(level, examId);
-        const readingQuestions = getReadingQuestions(level, examId);
-        const listeningQuestions = getListeningQuestions(level, examId);
+        const vocabQuestions = await getVocabQuestions(level, examId);
+        const grammarQuestions = await getGrammarQuestions(level, examId);
+        const readingQuestions = await getReadingQuestions(level, examId);
+        const listeningQuestions = await getListeningQuestions(level, examId);
+
+        // const vocabQuestions = getVocabQuestions(level, examId);
+        // const grammarQuestions = getGrammarQuestions(level, examId);
+        // const readingQuestions = getReadingQuestions(level, examId);
+        // const listeningQuestions = getListeningQuestions(level, examId);
 
         const totalResult = calculateTotalScore(
           vocabQuestions,
@@ -148,10 +156,11 @@ export default function ExamResultScreen() {
 
   return (
     <>
+      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
       <Stack.Screen options={{ headerShown: false }} />
       <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
         
-        <View style={styles.header}>
+        <View style={[styles.header, { paddingTop: insets.top + 12 }]}>
           <TouchableOpacity onPress={handleHome} style={styles.backButton}>
             <Text style={styles.backButtonText}>←</Text>
           </TouchableOpacity>

@@ -7,6 +7,7 @@ import {
   Modal,
   NativeScrollEvent,
   NativeSyntheticEvent,
+  Platform,
   Pressable,
   ScrollView,
   StatusBar,
@@ -31,14 +32,13 @@ import {
   MobileAds,
 } from "react-native-google-mobile-ads";
 import remoteConfig from "@react-native-firebase/remote-config";
+import * as TrackingTransparency from "expo-tracking-transparency";
 
 const TEAL = "#004370";
 const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
 const BG_GRAY = "#f0f4f8";
 // const headerColor = "#f1f5f9";
-
-const ADS_ENABLED = false; // 👈 Đặt false để ẩn hoàn toàn quảng cáo khi AdMob chưa duyệt
 
 interface Item {
   id: string;
@@ -232,8 +232,8 @@ export default function HomeScreen() {
   const scrollViewRef = useRef<ScrollView>(null);
   const isPaused = useRef(false);
   const searchAnim = useRef(new Animated.Value(0)).current;
-  // Đơn vị ID quảng cáo lưu động lấy tự động từ đám mây Firebase
   const [adBannerUnitId, setAdBannerUnitId] = useState<string>(TestIds.BANNER);
+  const [adsEnabled, setAdsEnabled] = useState(false);
 
   // ── Banner auto-scroll ───────────────────────────────────────────────────
   const scrollToNext = useCallback(() => {
@@ -252,17 +252,30 @@ export default function HomeScreen() {
 
   // ── Initialize AdMob ─────────────────────────────────────────────────────
   useEffect(() => {
-    if (!ADS_ENABLED) return;
     (async () => {
-      MobileAds().initialize();
-      remoteConfig().setDefaults({ ad_banner_id: TestIds.BANNER });
-      remoteConfig()
-        .fetchAndActivate()
-        .then(() => {
-          const idTuXa = remoteConfig().getValue("ad_banner_id").asString();
-          if (idTuXa) setAdBannerUnitId(idTuXa);
-        })
-        .catch((error) => console.log("Lỗi Firebase: ", error));
+      try {
+        await remoteConfig().setDefaults({
+          ads_enabled: false,
+          ad_banner_id_ios: TestIds.BANNER,
+          ad_banner_id_android: TestIds.BANNER,
+        });
+        await remoteConfig().fetchAndActivate();
+
+        const isAdsOn = remoteConfig().getValue("ads_enabled").asBoolean();
+        setAdsEnabled(isAdsOn);
+        if (!isAdsOn) return;
+
+        const configKey = Platform.OS === "ios" ? "ad_banner_id_ios" : "ad_banner_id_android";
+        const idTuXa = remoteConfig().getValue(configKey).asString();
+        if (idTuXa) setAdBannerUnitId(idTuXa);
+
+        const { status } = await TrackingTransparency.requestTrackingPermissionsAsync();
+        console.log("ATT status:", status); 
+
+        await MobileAds().initialize();
+      } catch (error) {
+        console.log("Lỗi khởi tạo quảng cáo: ", error);
+      }
     })();
   }, []);
 
@@ -359,7 +372,8 @@ export default function HomeScreen() {
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
 
       {/* ── Header gradient ──────────────────────────────────────────────── */}
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}>
+      {/* <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 0, y: 1 }}> */}
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
         <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
           <View style={s.topBarInner}>
             <View style={s.logoBadge}>
@@ -694,7 +708,7 @@ export default function HomeScreen() {
       <BottomTabBar />
 
       {/* ── AdMob Banner Ad ──────────────────────────────────────────────── */}
-      {ADS_ENABLED && (
+      {adsEnabled && (
         <View style={s.adContainer}>
           <BannerAd
             unitId={adBannerUnitId}
@@ -747,6 +761,11 @@ const s = StyleSheet.create({
   // ============================================================================
   // ─── BƯỚC 4: ĐỊNH DẠNG STYLE NỀN CHO VÙNG QUẢNG CÁO ĐÁY ──────────────────────
   // ============================================================================
+  headerGradient: {
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
+    paddingBottom: 10,
+  },
   adContainer: {
     alignItems: "center", // Căn giữa banner theo chiều ngang
     justifyContent: "center", // Căn giữa banner theo chiều dọc
@@ -760,8 +779,9 @@ const s = StyleSheet.create({
     flex: 1,
     backgroundColor: BG_GRAY,
   },
-
-  topBar: { backgroundColor: "transparent" },
+  topBar: { 
+    backgroundColor: "transparent" ,
+  },
   topBarInner: {
     flexDirection: "row",
     alignItems: "center",
@@ -893,8 +913,16 @@ const s = StyleSheet.create({
     gap: 6,
     marginTop: 10,
   },
-  dot: { width: 6, height: 6, borderRadius: 3, backgroundColor: "#cbd5e1" },
-  dotActive: { backgroundColor: TEAL, width: 18 },
+  dot: { 
+    width: 6, 
+    height: 6, 
+    borderRadius: 3, 
+    backgroundColor: "#cbd5e1" 
+  },
+  dotActive: { 
+    backgroundColor: TEAL, 
+    width: 18 
+  },
 
   // Search bar (tap-target — mở SearchInline overlay)
   // ── Thay bằng đoạn Style mới chuẩn từ điển cao cấp:

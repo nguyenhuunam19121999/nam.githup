@@ -12,6 +12,7 @@ const DB_NAMES = {
   vocab: 'vocab.db',
   grammar: 'grammar.db',
   sentences: 'sentences.db',
+  exams: 'exams.db', 
 } as const;
 
 export type DbScope = keyof typeof DB_NAMES;
@@ -30,6 +31,8 @@ function getAssetDbModule(scope: DbScope) {
         return require('../assets/grammar.db');
       case 'sentences':
         return require('../assets/sentences.db');
+      case 'exams':                                 
+        return require('../assets/exams.db'); 
       default:
         return null;
     }
