@@ -17,7 +17,6 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 
 interface Feedback {

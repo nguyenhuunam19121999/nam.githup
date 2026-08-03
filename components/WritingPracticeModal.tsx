@@ -21,6 +21,7 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
+import { AdBanner } from "../components/AdBanner";
 import Svg, { Line, Path, Rect } from "react-native-svg";
 import { type KanjiItem, getKunyomiFromFull } from "../assets/data_JLPT_kanji";
 import { KanjiStrokeOrder } from "./KanjiStrokeOrder";
@@ -385,6 +386,7 @@ export function WritingPracticeModal({
           <View style={ws.bottomPad} />
         </View>
       </View>
+    <AdBanner />
     </Modal>
   );
 }

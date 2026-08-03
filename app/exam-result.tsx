@@ -25,8 +25,9 @@ import {
   getListeningQuestions,
   TotalScoreResult
 } from '../assets/data_EXAMS';
+import { AdBanner } from "../components/AdBanner";
 
-const TEAL = "#004370"; 
+// const TEAL = "#004370"; 
 
 export default function ExamResultScreen() {
   const insets = useSafeAreaInsets();
@@ -272,6 +273,7 @@ export default function ExamResultScreen() {
           </TouchableOpacity>
         </View>
       </ScrollView>
+      <AdBanner />
     </>
   );
 }

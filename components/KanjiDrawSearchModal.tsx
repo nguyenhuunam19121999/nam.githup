@@ -19,8 +19,8 @@ import {
   Animated,
 } from "react-native";
 import Svg, { Line, Path } from "react-native-svg";
-
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
+import { AdBanner } from "../components/AdBanner";
 
 const strokesMap: Record<string, string[]> = {};
 
@@ -825,6 +825,7 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
             </TouchableOpacity>
           </View>
         </View>
+        <AdBanner />
       </Animated.View>
     );
   }
@@ -936,7 +937,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
     alignItems: "center",
     justifyContent: "center",
-    opacity: 0.25,
+    opacity: 0.55,
   },
   placeholderIcon: {
     fontSize: 32,

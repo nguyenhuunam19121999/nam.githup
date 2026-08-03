@@ -16,6 +16,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
+import { AdBanner } from "../components/AdBanner";
 import remoteConfig from "@react-native-firebase/remote-config";
 
 const TEAL = "#004370";
@@ -178,8 +179,7 @@ export default function ExamScreen() {
 useEffect(() => {
   (async () => {
     try {
-      // await remoteConfig().setConfigSettings({ minimumFetchIntervalMillis: 3600000 }); // 1 giờ, tránh cache quá lâu
-      await remoteConfig().setConfigSettings({ minimumFetchIntervalMillis: 300000 }); // 5 phút 
+      // await remoteConfig().setConfigSettings({ minimumFetchIntervalMillis: 300000 }); // 5 phút 
       await remoteConfig().setDefaults({
         exam_n5_open: false,
         exam_n4_open: false,
@@ -339,6 +339,7 @@ const displayLevels = examLevels.map((lv) => {
               )}
         </ScrollView>
         <BottomTabBar />
+        <AdBanner />
       </View>
     </>
   );

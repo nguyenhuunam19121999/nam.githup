@@ -6,6 +6,7 @@
 
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
+import { AdBanner } from "../components/AdBanner";
 import {
   ScrollView,
   // StatusBar,
@@ -249,22 +250,6 @@ export default function KanjiDetailScreen() {
       </>
     );
   }
-  // if (!kanjiData) {
-  //   return (
-  //     <View style={styles.root}>
-  //       <Stack.Screen options={{ headerShown: false }} />
-  //       <StatusBar style="dark" />
-  //       {renderHeader()}
-  //       {renderTabs()}
-  //       <View style={{ flex: 1, justifyContent: 'center', padding: 24 }}>
-  //         <Text style={{ fontSize: 16, color: '#475569' }}>
-  //           Không tìm thấy chữ{activeChar ? ` "${activeChar}"` : ""} trong cơ sở dữ liệu.
-  //         </Text>
-  //       </View>
-  //       <BottomTabBar />
-  //     </View>
-  //   );
-  // }
 
   // ── Main render ───────────────────────────────────────────────────────────
   return (
@@ -399,6 +384,7 @@ export default function KanjiDetailScreen() {
         <WritingPracticeModal item={writingItem} onClose={() => setWritingItem(null)} />
         <KanjiNotesModal item={notesItem} onClose={() => setNotesItem(null)} />
         <BottomTabBar />
+        <AdBanner />
       </View>
     </>
   );

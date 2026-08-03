@@ -11,10 +11,6 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
-
-// const TEAL = "#7C3AED";
-// const GRAD = ["#7C3AED", "#5B21B6"] as const;
-// ✅ MÀU CHỦ ĐẠO MỚI
 const TEAL = "#004370";
 const TEAL_DARK = "#004370";
 const GRAD = [TEAL, TEAL_DARK] as const;
@@ -116,7 +112,6 @@ export default function PracticeScreen() {
             </TouchableOpacity>
           ))}
         </ScrollView>
-        
         <BottomTabBar />
       </View>
     </>

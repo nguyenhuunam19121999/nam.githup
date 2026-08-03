@@ -8,6 +8,7 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { BottomTabBar } from "../components/BottomTabBar";
+import { AdBanner } from "../components/AdBanner";
 import React, { useMemo, useState } from "react";
 import {
   ScrollView,
@@ -427,6 +428,7 @@ export default function LevelBookScreen() {
         <View style={{ height: 16 }} />
       </ScrollView>
       <BottomTabBar />
+      <AdBanner />
     </View>
   );
 }

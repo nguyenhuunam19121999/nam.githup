@@ -16,6 +16,7 @@ import {
 } from "react-native";
 import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
+import { AdBanner } from "../components/AdBanner";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Speech from "expo-speech";
@@ -925,8 +926,8 @@ export default function VocabDetailScreen() {
             </TouchableOpacity>
           </View>
         </ScrollView>
-
         <BottomTabBar />
+        <AdBanner />
       </View>
     </>
   );

@@ -41,6 +41,7 @@ import { useAuth } from '../artifacts/mirai-jp/hooks/useAuth';
 import SearchSuggestions from './SearchSuggestions';
 import { preloader } from '../services/KanjiPreloader';
 import { searchKanji } from '../assets/data_JLPT_kanji';
+import { AdBanner } from "../components/AdBanner";
 
 // Giả định kiểu dữ liệu cho KanjiItem nếu chưa được import từ file gốc
 interface KanjiItem {
@@ -1065,6 +1066,7 @@ export default function SearchInline({
         onSelectKanji={handleSelectKanji}
         isInline={false}
       />
+      <AdBanner />
     </View>
   );
 }

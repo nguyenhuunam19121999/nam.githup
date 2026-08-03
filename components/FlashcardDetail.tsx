@@ -32,14 +32,14 @@ import {
   Switch,
   ScrollView,
 } from 'react-native';
-import { router } from 'expo-router';
 import * as Speech from 'expo-speech';
+import { AdBanner } from "../components/AdBanner";
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
 // Màu chủ đạo
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#1c5765";
+const TEAL = "#004370";
+// const TEAL_DARK = "#004370";
 
 export interface VocabItem {
   id: string;
@@ -450,7 +450,7 @@ export default function FlashcardDetail({
             onPress={goToNext}
             disabled={currentIndex === total - 1}
           >
-            <Text style={styles.navButtonText}>Tiếp ▶</Text>
+            <Text style={[styles.actionButtonText,isShuffled && styles.actionButtonTextActive]}>Tiếp ▶</Text>
           </TouchableOpacity>
         </View>
 
@@ -460,7 +460,7 @@ export default function FlashcardDetail({
             style={[styles.actionButton, isShuffled && styles.actionButtonActive]}
             onPress={handleShuffle}
           >
-            <Text style={styles.actionButtonText}>🔀 Xáo trộn</Text>
+            <Text style={[styles.actionButtonText,isShuffled && styles.actionButtonTextActive]}>🔀 Xáo trộn</Text>
           </TouchableOpacity>
           
           {isShuffled && (
@@ -568,6 +568,7 @@ export default function FlashcardDetail({
           </View>
         </View>
       </Modal>
+      <AdBanner />
     </>
   );
 }
@@ -742,21 +743,6 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#333',
   },
-  // closeButton: {
-  //   backgroundColor: '#fff',
-  //   paddingVertical: 12,
-  //   paddingHorizontal: 24,
-  //   borderRadius: 12,
-  //   borderWidth: 1.5,
-  //   borderColor: TEAL,
-  // },
-  // closeButtonText: {
-  //   fontSize: 15,
-  //   fontWeight: '600',
-  //   color: TEAL,
-  // },
-
-  // Action buttons
   actionButtons: {
     flexDirection: 'row',
     justifyContent: 'center',
@@ -779,6 +765,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#1a202c',
   },
+  actionButtonTextActive: {
+      color: "#fff",  
+    },
   
   // Auto-scroll indicator
   autoScrollIndicator: {

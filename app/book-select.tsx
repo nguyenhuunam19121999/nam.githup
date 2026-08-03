@@ -8,6 +8,7 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import React from "react";
 import { BottomTabBar } from "../components/BottomTabBar";
+import { AdBanner } from "../components/AdBanner";
 import {
   ScrollView,
   StatusBar,
@@ -20,18 +21,13 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 import { LinearGradient } from "expo-linear-gradient";
 
-// Màu chủ đạo (đồng bộ với toàn app)
 const TEAL = "#004370" /* old: #4ECDC4 */;
 const GRAD = ["#004370", "#004370"]  as const;
 
-// Cấu trúc 1 cuốn sách hiển thị trong danh sách
 interface Book {
   id: string;
-  // Tên đầu sách (Mimikara / Soumatome)
   series: "mimikara" | "soumatome";
-  // Cấp độ JLPT của cuốn này
   level: "N3" | "N2";
-  // Tên hiển thị, ví dụ "Mimikara N3"
   label: string;
 }
 
@@ -71,17 +67,10 @@ function SoumatomeCover({ level }: { level: "N3" | "N2" }) {
 
 export default function BookSelectScreen() {
   const router = useRouter();
-  // Nhận tham số `level` để biết cần lọc sách nào (N3 hoặc N2)
   const params = useLocalSearchParams<{ level?: string }>();
   const level = params.level === "N2" ? "N2" : "N3";
-
-  // Lọc danh sách sách theo cấp độ đang chọn
   const books = BOOKS.filter((b) => b.level === level);
 
-  // Khi bấm 1 cuốn sách:
-  // - Soumatome N2  → màn hình riêng (soumatome-n2)
-  // - Soumatome N3  → màn hình tuần/bài chung (level-book)
-  // - Mimikara N2/N3 → menu học như cũ (learning-menu)
   const handleSelect = (book: Book) => {
     if (book.id === "soumatome-n2") {
       router.push({ pathname: "/soumatome-n2" });
@@ -93,9 +82,7 @@ export default function BookSelectScreen() {
   return (
     <View style={s.root}>
       <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-
-      {/* ── Thanh trên cùng: nút quay lại + tiêu đề ── */}
-        <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
+      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7} hitSlop={10}>
@@ -107,7 +94,6 @@ export default function BookSelectScreen() {
       </SafeAreaView>
       </LinearGradient>
 
-      {/* ── Danh sách sách (xếp theo cột, mỗi cuốn 1 viên thuốc bo tròn) ── */}
       <ScrollView
         style={s.scroll}
         contentContainerStyle={s.scrollContent}
@@ -136,6 +122,7 @@ export default function BookSelectScreen() {
         ))}
       </ScrollView>
       <BottomTabBar />
+      <AdBanner />
     </View>
   );
 }

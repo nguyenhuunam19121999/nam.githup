@@ -3,6 +3,7 @@
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { BottomTabBar } from "../components/BottomTabBar";
+import { AdBanner } from "../components/AdBanner";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import * as Speech from "expo-speech";
 import React, { useEffect, useMemo, useState } from "react";
@@ -313,6 +314,7 @@ const QuizMode = ({ data, onExit }: { data: Vocab[]; onExit: () => void }) => {
           </View>
         )}
       </View>
+      <AdBanner />
     </>
   );
 };
@@ -428,6 +430,7 @@ const PracticeMode = ({
           <Text style={s.buttonTextDark}>Quay lại</Text>
         </TouchableOpacity>
       </View>
+      <AdBanner />
     </>
   );
 };
@@ -1042,8 +1045,6 @@ export default function VocabScreen() {
                   <View style={{ height: 40 }} />
                 </>
               }
-              // Windowing — chỉ render ~20 dòng đầu, khi cuộn gần hết batch đang render
-              // (còn khoảng 1 màn hình nữa) FlatList tự động render thêm batch kế tiếp.
               initialNumToRender={20}
               maxToRenderPerBatch={20}
               windowSize={7}
@@ -1051,68 +1052,6 @@ export default function VocabScreen() {
               updateCellsBatchingPeriod={50}
             />
           )}
-          {/* {isLoading ? (
-              <View style={s.loadingContainer}>
-                <Text style={s.loadingText}>Đang tải từ vựng...</Text>
-              </View>
-            ) : filteredVocabList.length === 0 ? (
-              <View style={s.empty}>
-                <Text style={s.emptyText}>Không có từ vựng nào.</Text>
-              </View>
-            ) : (
-              filteredVocabList.map((vocab, index) => (
-                <TouchableOpacity
-                    key={vocab.id}
-                    style={s.vocabRow}
-                    activeOpacity={0.7}
-                    onPress={() => {
-                      router.push({ 
-                        pathname: '/vocab-detail',
-                        params: {
-                          id: vocab.id,
-                          kanji: vocab.kanji,
-                          hiragana: vocab.hiragana,
-                          han: vocab.han,
-                          nghia: vocab.nghia,
-                          example: vocab.example || '',
-                          exampleMeaning: vocab.exampleMeaning || '',
-                          level: vocab.level || 'N3',
-                          wordType: vocab.wordType || '',
-                          typeLabel: vocab.typeLabel || '',
-                          isNaAdjective: String(!!vocab.isNaAdjective),
-                          isExtractedVerb: String(!!vocab.isExtractedVerb),
-                          extractedVerb: vocab.extractedVerb || '',
-                          isConjugatedForm: String(!!vocab.isConjugatedForm),
-                          conjugatedForm: vocab.conjugatedForm || '',
-                        }
-                      });
-                    }}
-                  >
-                    <View style={s.rowMain}>
-                      <View style={s.rowTopLine}>
-                        <Text style={s.indexNum}>{index + 1}.</Text>
-                        <Text style={s.vocabKanji}>{vocab.kanji}</Text>
-                      </View>
-                      <Text style={s.vocabHan}>{vocab.han}</Text>
-                      <Text style={s.vocabReading}>{vocab.hiragana}</Text>
-                      <Text style={s.vocabMeaning} numberOfLines={2}>{vocab.nghia}</Text>
-                    </View>
-                    <View style={s.rowActions}>
-                      <TouchableOpacity style={s.speakBtn} onPress={() => speak(vocab.kanji)} hitSlop={8}>
-                        <Text style={s.speakIcon}>🔊</Text>
-                      </TouchableOpacity>
-                      <TouchableOpacity style={s.starBtn} onPress={() => toggleBookmark(vocab.id)} hitSlop={8}>
-                        <Text style={s.starIcon}>{bookmarks.has(vocab.id) ? "⭐" : "☆"}</Text>
-                      </TouchableOpacity>
-                    </View>
-                </TouchableOpacity>
-              ))
-            )}
-            
-            <FeedbackSection pageKey={`vocab::${level}_${bookId}_${lessonParam}`} />
-            <View style={{ height: 40 }} />
-          </ScrollView> */}
-
           {/* Menu Modal */}
           <Modal
             visible={menuOpen}
@@ -1216,8 +1155,8 @@ export default function VocabScreen() {
               setShowStats(false);
             }}
           />
-
           <BottomTabBar />
+          <AdBanner />
         </View>
       </TouchableWithoutFeedback>
     </>

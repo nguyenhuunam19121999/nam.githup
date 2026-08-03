@@ -9,6 +9,7 @@
 
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
+import { AdBanner } from "../components/AdBanner";
 import React, { useMemo, useState } from "react";
 import {
   Alert,
@@ -470,6 +471,7 @@ export default function GrammarScreen() {
         </View>
       </Modal>
       <BottomTabBar />
+      <AdBanner />
     </View>
   );
 }

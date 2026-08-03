@@ -9,12 +9,12 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import React, { useEffect } from "react";
-// import { requestTrackingPermissionsAsync } from "expo-tracking-transparency";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { ErrorBoundary } from "../components/ErrorBoundary";
 import { AuthProvider } from "../artifacts/mirai-jp/hooks/useAuth";
+import { AdsProvider } from "../artifacts/mirai-jp/hooks/useAds";
 import { ensureKanjiDbReady } from "../assets/data_JLPT_kanji";
 import { ensureVocabDbReady } from "../assets/vocab";
 import { ensureGrammarDbReady } from "../assets/data_nn";
@@ -31,15 +31,11 @@ function RootLayoutNav() {
       animation: 'slide_from_right',
     }}>
       <Stack.Screen name="index" options={{ headerShown: false }} />
-      {/* Trang chọn sách (chỉ áp dụng cho N3 và N2) */}
       <Stack.Screen name="book-select" options={{ headerShown: false }} />
-      {/* Trang menu trung gian (Hướng Dẫn / Từ Vựng / Ngữ Pháp / Kanji) */}
       <Stack.Screen name="learning-menu" options={{ headerShown: false }} />
       <Stack.Screen name="vocab" options={{ headerShown: false }} />
-      {/* Trang danh sách ngữ pháp + chi tiết 1 mẫu ngữ pháp */}
       <Stack.Screen name="grammar" options={{ headerShown: false }} />
       <Stack.Screen name="grammar-detail" options={{ headerShown: false }} />
-      {/* Trang kanji */}
       <Stack.Screen name="kanji" options={{ headerShown: false }} />
       <Stack.Screen name="kanji-detail" options={{ headerShown: false }} />
       <Stack.Screen name="soumatome-n2" options={{ headerShown: false }} />
@@ -90,14 +86,6 @@ export default function RootLayout() {
     })();
   }, []);
 
-  // Xin quyền App Tracking Transparency (ATT) — bắt buộc trên iOS 14+
-  // trước khi bất kỳ SDK quảng cáo nào (AdMob) bắt đầu tracking.
-  useEffect(() => {
-    (async () => {
-      // await requestTrackingPermissionsAsync();
-    })();
-  }, []);
-
   if ((!fontsLoaded && !fontError) || !dbReady) return null;
 
   return (
@@ -106,11 +94,11 @@ export default function RootLayout() {
         <QueryClientProvider client={queryClient}>
           <GestureHandlerRootView>
             <KeyboardProvider>
-              {/* AuthProvider phải bọc bên trong cùng để mọi màn hình
-                  (kể cả vocab) đều có thể đọc/ghi trạng thái đăng nhập */}
-              <AuthProvider>
-                <RootLayoutNav />
-              </AuthProvider>
+              <AdsProvider>
+                <AuthProvider>
+                  <RootLayoutNav />
+                </AuthProvider>
+              </AdsProvider>
             </KeyboardProvider>
           </GestureHandlerRootView>
         </QueryClientProvider>

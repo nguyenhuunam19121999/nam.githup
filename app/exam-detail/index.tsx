@@ -31,25 +31,13 @@ import {
   type Question,
   type Section,
 } from '../../assets/data_EXAMS/shared';
+import { AdBanner } from "../../components/AdBanner";
 
 const getExamByIdAnyLevel = async (id: string): Promise<ExamData | null> => {
   const level = id.split('_')[0].toUpperCase();
   return getExamByIdGeneric(level, id);
 };
 
-// const getExamByIdAnyLevel = (id: string): ExamData | null => {
-//   const level = id.split('_')[0].toUpperCase();
-//   return getExamByIdGeneric(level, id);
-// };
-
-
-// ============================================
-// 🎨 BẢNG MÀU — "Giấy thi & con dấu đỏ"
-// ============================================
-// INK   : mực bút / cấu trúc chính (header, tab, số câu)
-// PAPER : nền giấy thi ấm, không trắng lạnh
-// HANKO : đỏ con dấu — dùng cho hành động & điểm nhấn (gạch chân, nộp bài, tiến độ)
-// GOLD  : điểm nhấn phụ, tinh tế (đang phát audio, hoàn thành)
 const INK = '#16232F';
 const INK_SOFT = '#2E4457';
 const PAPER = '#F7F3E9';
@@ -756,6 +744,7 @@ export default function ExamDetailScreen() {
           </>
         }
       />
+      <AdBanner />
     </View>
   );
 }

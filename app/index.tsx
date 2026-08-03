@@ -25,14 +25,7 @@ import HomeSuggestions from "../components/HomeSuggestions";
 import ReferralScreen from "../components/ReferralScreen";
 import ReferralQRScreen from "../components/ReferralQRScreen";
 import { Animated, Easing } from "react-native";
-import {
-  BannerAd,
-  BannerAdSize,
-  TestIds,
-  MobileAds,
-} from "react-native-google-mobile-ads";
-import remoteConfig from "@react-native-firebase/remote-config";
-import * as TrackingTransparency from "expo-tracking-transparency";
+import { AdBanner } from "../components/AdBanner";
 
 const TEAL = "#004370";
 const TEAL_DARK = "#004370";
@@ -232,8 +225,6 @@ export default function HomeScreen() {
   const scrollViewRef = useRef<ScrollView>(null);
   const isPaused = useRef(false);
   const searchAnim = useRef(new Animated.Value(0)).current;
-  const [adBannerUnitId, setAdBannerUnitId] = useState<string>(TestIds.BANNER);
-  const [adsEnabled, setAdsEnabled] = useState(false);
 
   // ── Banner auto-scroll ───────────────────────────────────────────────────
   const scrollToNext = useCallback(() => {
@@ -249,35 +240,6 @@ export default function HomeScreen() {
     const id = setInterval(scrollToNext, 20000);
     return () => clearInterval(id);
   }, [scrollToNext]);
-
-  // ── Initialize AdMob ─────────────────────────────────────────────────────
-  useEffect(() => {
-    (async () => {
-      try {
-        await remoteConfig().setDefaults({
-          ads_enabled: false,
-          ad_banner_id_ios: TestIds.BANNER,
-          ad_banner_id_android: TestIds.BANNER,
-        });
-        await remoteConfig().fetchAndActivate();
-
-        const isAdsOn = remoteConfig().getValue("ads_enabled").asBoolean();
-        setAdsEnabled(isAdsOn);
-        if (!isAdsOn) return;
-
-        const configKey = Platform.OS === "ios" ? "ad_banner_id_ios" : "ad_banner_id_android";
-        const idTuXa = remoteConfig().getValue(configKey).asString();
-        if (idTuXa) setAdBannerUnitId(idTuXa);
-
-        const { status } = await TrackingTransparency.requestTrackingPermissionsAsync();
-        console.log("ATT status:", status); 
-
-        await MobileAds().initialize();
-      } catch (error) {
-        console.log("Lỗi khởi tạo quảng cáo: ", error);
-      }
-    })();
-  }, []);
 
   const onBannerScroll = (e: NativeSyntheticEvent<NativeScrollEvent>) => {
     const x = e.nativeEvent.contentOffset.x;
@@ -499,11 +461,7 @@ export default function HomeScreen() {
         {/* ── Search bar + HomeSuggestions ───────────────────────────────── */}
         <View style={s.searchSection}>
           <View style={s.searchCard}>
-            {/* Dải màu teal nổi bật ở đầu khung */}
             <View style={s.searchCardAccent} />
-
-            {/* Thanh tìm kiếm — tap để mở SearchInline */}
-            {/* ✅ Ô TÌM KIẾM MỚI CHUẨN TỪ ĐIỂN CAO CẤP */}
             <TouchableOpacity
               style={s.premiumSearchBar}
               onPress={openSearch}
@@ -515,8 +473,6 @@ export default function HomeScreen() {
                   Tìm từ vựng, kanji, ngữ pháp...
                 </Text>
               </View>
-
-              {/* Nút viết tay/vẽ chữ nằm gọn gàng bên phải thanh tìm kiếm */}
               <TouchableOpacity
                 style={s.premiumDrawBtn}
                 onPress={openSearchWithDrawer}
@@ -526,11 +482,7 @@ export default function HomeScreen() {
                 <Text style={s.premiumDrawIcon}>✍️</Text>
               </TouchableOpacity>
             </TouchableOpacity>
-
-            {/* Divider */}
             <View style={s.suggDivider} />
-
-            {/* Gợi ý: từ vựng → câu → ngữ pháp → từ tiếp theo */}
             <View style={s.suggWrap}>
               <HomeSuggestions onSelectSuggestion={openSearchFromSuggestion} />
             </View>
@@ -690,11 +642,6 @@ export default function HomeScreen() {
           scopedKey={scopedKey}
           onClose={() => setShowReferralModal(false)}
         />
-        {/* <ReferralScreen
-          currentUser={currentUser!}
-          scopedKey={(key) => `${currentUser ?? "guest"}::${key}`}
-          onClose={() => setShowReferralModal(false)}
-        /> */}
       </Modal>
 
       {/* Màn hình xem QR của tôi (User A) */}
@@ -706,17 +653,7 @@ export default function HomeScreen() {
         <ReferralQRScreen onClose={() => setShowQrModal(false)} />
       </Modal>
       <BottomTabBar />
-
-      {/* ── AdMob Banner Ad ──────────────────────────────────────────────── */}
-      {adsEnabled && (
-        <View style={s.adContainer}>
-          <BannerAd
-            unitId={adBannerUnitId}
-            size={BannerAdSize.ANCHORED_ADAPTIVE_BANNER}
-            requestOptions={{ requestNonPersonalizedAdsOnly: true }}
-          />
-        </View>
-      )}
+      <AdBanner />
 
       {/* ── SearchInline overlay toàn màn hình ──────────────────────────── */}
       <Animated.View
@@ -758,23 +695,19 @@ export default function HomeScreen() {
 
 // ─── STYLES ──────────────────────────────────────────────────────────────────
 const s = StyleSheet.create({
-  // ============================================================================
-  // ─── BƯỚC 4: ĐỊNH DẠNG STYLE NỀN CHO VÙNG QUẢNG CÁO ĐÁY ──────────────────────
-  // ============================================================================
   headerGradient: {
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
     paddingBottom: 10,
   },
   adContainer: {
-    alignItems: "center", // Căn giữa banner theo chiều ngang
-    justifyContent: "center", // Căn giữa banner theo chiều dọc
-    backgroundColor: "#fff", // Màu nền trắng bao quanh quảng cáo để tăng độ tương phản
-    borderTopWidth: 1, // Đường viền kẻ mỏng phía trên phân cách với khu vực nội dung App
-    borderTopColor: "#E5E7EB", // Màu viền xám nhạt tinh tế
-    paddingVertical: 4, // Tạo khoảng cách lề trên và dưới 4px để banner không bị dính chặt vào viền app
+    alignItems: "center", 
+    justifyContent: "center", 
+    backgroundColor: "#fff", 
+    borderTopWidth: 1, 
+    borderTopColor: "#E5E7EB", 
+    paddingVertical: 4, 
   },
-
   root: {
     flex: 1,
     backgroundColor: BG_GRAY,
