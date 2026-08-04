@@ -214,7 +214,7 @@ const displayLevels = examLevels.map((lv) => {
     if (exam.isUpdated) {
       setSelectedLevel(exam.id);
     } else {
-      Alert.alert("📢 Thông báo", `Đề thi ${exam.level} sẽ mở tính năng trước ngày thi chính thức đúng 30 ngày`, [
+      Alert.alert("📢 Thông báo về vấn đề bản quyền", `Đề thi ${exam.level} sẽ mở tính năng trước ngày thi chính thức 30 ngày`, [
         { text: "OK", style: "default" },
       ]);
     }

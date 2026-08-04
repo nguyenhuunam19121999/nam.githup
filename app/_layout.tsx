@@ -15,6 +15,8 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 import { ErrorBoundary } from "../components/ErrorBoundary";
 import { AuthProvider } from "../artifacts/mirai-jp/hooks/useAuth";
 import { AdsProvider } from "../artifacts/mirai-jp/hooks/useAds";
+import { useForceUpdate } from "../artifacts/mirai-jp/hooks/useForceUpdate";
+import { ForceUpdateScreen } from "../components/ForceUpdateScreen";
 import { ensureKanjiDbReady } from "../assets/data_JLPT_kanji";
 import { ensureVocabDbReady } from "../assets/vocab";
 import { ensureGrammarDbReady } from "../assets/data_nn";
@@ -57,6 +59,7 @@ export default function RootLayout() {
     Inter_600SemiBold,
     Inter_700Bold,
   });
+  const { needsUpdate, storeUrl } = useForceUpdate();
 
   useEffect(() => {
     ensureKanjiDbReady(); 
@@ -87,6 +90,10 @@ export default function RootLayout() {
   }, []);
 
   if ((!fontsLoaded && !fontError) || !dbReady) return null;
+
+  if (needsUpdate) {
+    return <ForceUpdateScreen storeUrl={storeUrl} />;
+  }
 
   return (
     <SafeAreaProvider>
