@@ -329,7 +329,8 @@ export function KanjiStrokeOrder({
   }, [kanji, onReload]);
 
   return (
-    <View style={styles.canvasBox}>
+    // <View style={styles.canvasBox}>
+    <View style={[styles.canvasBox, { height: boxSize, maxWidth: boxSize }]}>
       {/* Source badge */}
         {showSourceBadge && !isLoading && (
           <View style={styles.topRightContainer}>
@@ -357,7 +358,7 @@ export function KanjiStrokeOrder({
               width="100%"
               height={boxSize}    
               viewBox="0 0 109 109"
-              style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}
+              style={{ position: 'absolute', top: -6, left: 0, right: 0, bottom: 0 }}
             >
               <Line x1={0} y1={54.5}
               x2={109} y2={54.5}
@@ -472,8 +473,9 @@ const styles = StyleSheet.create({
   }, 
   canvasBox: {
     width: "100%",
-    aspectRatio: 1,        
-    maxWidth: 340,          
+    // aspectRatio: 1,     
+    // maxWidth: 340,
+    // maxHeight: 250,          
     alignSelf: "center",    
     backgroundColor: 'transparent',
     borderRadius: 0,

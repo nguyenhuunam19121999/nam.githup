@@ -58,7 +58,7 @@ const TEAL = '#004370';
 const TEAL_DARK = '#004370';
 const BG_GRAY = '#f0f4f8';
 
-type SearchType = 'vocab' | 'kanji' | 'sentence' | 'grammar';
+type SearchType = 'vocab' | 'kanji' | 'sentence' | 'grammar' | 'all';
 
 interface SearchResult {
   id: string;
@@ -160,6 +160,87 @@ function getIndustryLabel(bookId: string): string {
 // COMPONENT CHÍNH
 // ════════════════════════════════════════════════════════════════════════════
 
+interface JishoEntry {
+  japanese?: { word?: string; reading?: string }[];
+  senses?: { english_definitions?: string[]; parts_of_speech?: string[] }[];
+}
+
+// ─── DỊCH (dùng endpoint free "gtx" của Google, không cần API key — React Native
+// không dùng được thư viện "google-translate-api-x" vì nó là package Node.js thuần,
+// nên chỉ dùng nhánh fallback fetch giống indexconver.js) ─────────────────────────
+async function translateText(text: string, from: string, to: string): Promise<string | null> {
+  const t = text?.trim();
+  if (!t) return null;
+  try {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${from}&tl=${to}&dt=t&q=${encodeURIComponent(t)}`;
+    const res = await fetch(url);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const translated = (data?.[0] || []).map((chunk: any) => chunk?.[0]).join('');
+    return translated || null;
+  } catch (_) {
+    return null;
+  }
+}
+
+async function searchJisho(query: string, isVietnameseQuery: boolean): Promise<SearchResult[]> {
+  const q = query.trim();
+  if (!q) return [];
+
+  // ── IN: query tiếng Việt -> dịch sang tiếng Anh trước khi tra Jisho ──────────
+  let jishoKeyword = q;
+  if (isVietnameseQuery) {
+    const translatedQuery = await translateText(q, 'vi', 'en');
+    if (translatedQuery) jishoKeyword = translatedQuery;
+  }
+
+  try {
+    const url = `https://jisho.org/api/v1/search/words?keyword=${encodeURIComponent(jishoKeyword)}`;
+    const res = await fetch(url);
+    if (!res.ok) return [];
+    const json = await res.json();
+    const data: JishoEntry[] = Array.isArray(json?.data) ? json.data : [];
+    const sliced = data.slice(0, 12); // giới hạn thấp hơn vì mỗi item giờ tốn thêm 1 lượt dịch
+
+    // ── OUT: dịch song song nghĩa EN -> VI cho từng kết quả ──────────────────
+    const mapped = await Promise.all(
+      sliced.map(async (entry, idx) => {
+        const jp = entry.japanese?.[0] || {};
+        const title = jp.word || jp.reading || '';
+        const subtitle = jp.reading || '';
+        const sense = entry.senses?.[0];
+        const meaningEn = sense?.english_definitions?.join(', ') || '';
+        const pos = sense?.parts_of_speech?.join(', ') || '';
+        if (!title) return null;
+
+        const meaningVi = meaningEn ? await translateText(meaningEn, 'en', 'vi') : null;
+        const displayMeaning = meaningVi || meaningEn;
+
+        return {
+          id: `jisho_${idx}_${title}`,
+          type: 'vocab',
+          title,
+          subtitle,
+          description: displayMeaning,
+          data: {
+            kanji: title,
+            hiragana: subtitle,
+            nghia: displayMeaning,
+            jisho_meaning_en: meaningEn,
+            wordType: pos,
+            level: '',
+          },
+          sourceLabel: meaningVi ? '🌍' : '🌍',
+        } as SearchResult;
+      })
+    );
+
+    return mapped.filter((r): r is SearchResult => r !== null);
+  } catch (_) {
+    return [];
+  }
+}
+
 export default function SearchInline({
   onBack,
   autoOpenDrawer = false,
@@ -205,7 +286,7 @@ export default function SearchInline({
 
   const saveToHistory = async (text: string, tab: SearchType) => {
     if (!currentUser || !text.trim()) return;
-    const histType = tab === 'kanji' ? 'vocab' : tab;
+    const histType = (tab === 'kanji' || tab === 'all') ? 'vocab' : tab;
     const key = scopedKey(`search_history_${histType}`);
     try {
       const raw = await AsyncStorage.getItem(key);
@@ -642,16 +723,161 @@ export default function SearchInline({
           if (token === searchTokenRef.current) setLoading(false);
         };
 
+        // ── ALL (gộp 4 nguồn local + Jisho) ──────────────────────────────────
+        const runAllStream = async () => {
+          const localVocab = (async () => {
+            const seen = new Map<string, boolean>();
+            let totalFound = 0;
+            for (const chunk of vocabByLevel) {
+              if (token !== searchTokenRef.current) return;
+              if (seen.size >= 15) break;
+              const found: SearchResult[] = [];
+              for (const v of chunk) {
+                if (seen.size >= 15) break;
+                if (!v.kanji || seen.has(v.kanji)) continue;
+                if (matchVocabItem(v)) {
+                  seen.set(v.kanji, true);
+                  found.push(toVocabResult(v, totalFound + found.length, 'all_jlpt', '📖 Từ vựng'));
+                }
+              }
+              if (found.length > 0) {
+                totalFound += found.length;
+                startTransition(() => setResults(prev => [...prev, ...found]));
+                preloader.preloadVocabBatch(found.map(f => f.title));
+              }
+              await yieldToUI();
+            }
+          })();
+
+          const localIndustry = (async () => {
+            const seen = new Map<string, boolean>();
+            let idx = 0;
+            for (const [bookId, items] of Object.entries(INDUSTRY_VOCAB) as [string, any[]][]) {
+              if (token !== searchTokenRef.current) return;
+              if (seen.size >= 10) break;
+              const label = getIndustryLabel(bookId);
+              for (const v of items) {
+                if (seen.size >= 10) break;
+                const key = `${bookId}_${v.kanji || v.hira || v.hiragana}`;
+                if (!v.kanji && !v.hira && !v.hiragana) continue;
+                if (seen.has(key)) continue;
+                if (matchVocabItem(v)) {
+                  seen.set(key, true);
+                  const one = [toVocabResult(v, idx++, `all_ind_${bookId}`, label)];
+                  startTransition(() => setResults(prev => [...prev, ...one]));
+                  preloader.preloadVocabBatch(one.map(f => f.title));
+                }
+              }
+              await yieldToUI();
+            }
+          })();
+
+          const localKanjiDict = (async () => {
+            if (token !== searchTokenRef.current) return;
+            const kanjiFound = searchKanji(targetQuery);
+            if (kanjiFound.length === 0) return;
+            const mapped: SearchResult[] = kanjiFound.slice(0, 10).map((k, idx) => ({
+              id: `all_kanjidict_${idx}_${k.kanji}`,
+              type: 'vocab',
+              title: k.kanji,
+              subtitle: k.hanviet.join(' • '),
+              description: k.meanings_vi.join(', '),
+              data: k,
+              sourceLabel: '🈳 Hán tự',
+            }));
+            startTransition(() => setResults(prev => [...prev, ...mapped]));
+          })();
+
+          const localSentence = (async () => {
+            const seen = new Map<string, boolean>();
+            let total = 0;
+            const CHUNK = 300;
+            for (let i = 0; i < allSentences.length; i += CHUNK) {
+              if (token !== searchTokenRef.current) return;
+              if (total >= 8) break;
+              const slice = allSentences.slice(i, i + CHUNK);
+              const found: SearchResult[] = [];
+              for (const s of slice) {
+                if (!s?.jp) continue;
+                const match = s.jp.includes(targetQuery) || normalizeString(s.vi || '').includes(nq);
+                if (match && !seen.has(s.jp)) {
+                  seen.set(s.jp, true);
+                  found.push({
+                    id: `all_sentence_${total + found.length}`,
+                    type: 'sentence',
+                    title: s.jp.length > 60 ? s.jp.slice(0, 60) + '...' : s.jp,
+                    subtitle: s.source === 'grammar' ? `📝 ${s.pattern || 'Ngữ pháp'}` : s.level ? `📚 ${s.level}` : '',
+                    description: s.vi,
+                    data: s,
+                  });
+                  if (total + found.length >= 8) break;
+                }
+              }
+              if (found.length > 0) {
+                total += found.length;
+                startTransition(() => setResults(prev => [...prev, ...found]));
+                found.forEach(f => preloader.preloadSentence(f.id));
+              }
+              await yieldToUI();
+            }
+          })();
+
+          const localGrammar = (async () => {
+            const seen = new Map<string, boolean>();
+            let total = 0;
+            const CHUNK = 100;
+            for (let i = 0; i < allGrammar.length; i += CHUNK) {
+              if (token !== searchTokenRef.current) return;
+              if (total >= 8) break;
+              const slice = allGrammar.slice(i, i + CHUNK);
+              const found: SearchResult[] = [];
+              for (const g of slice) {
+                const match =
+                  g.pattern?.includes(targetQuery) ||
+                  normalizeString(g.phienAm || '').includes(nq) ||
+                  normalizeString(g.meaning || '').includes(nq);
+                if (match && !seen.has(g.pattern)) {
+                  seen.set(g.pattern, true);
+                  found.push({
+                    id: `all_grammar_${total + found.length}`,
+                    type: 'grammar',
+                    title: g.pattern,
+                    subtitle: g.phienAm || '',
+                    description: g.meaning,
+                    data: g,
+                  });
+                  if (total + found.length >= 8) break;
+                }
+              }
+              if (found.length > 0) {
+                total += found.length;
+                startTransition(() => setResults(prev => [...prev, ...found]));
+                preloader.preloadGrammarBatch(found.map(f => f.title));
+              }
+              await yieldToUI();
+            }
+          })();
+
+          const jishoStream = (async () => {
+            const jishoResults = await searchJisho(targetQuery, isVietnamese);
+            if (token !== searchTokenRef.current || jishoResults.length === 0) return;
+            startTransition(() => setResults(prev => [...prev, ...jishoResults]));
+          })();
+
+          await Promise.all([localVocab, localIndustry, localKanjiDict, localSentence, localGrammar, jishoStream]);
+          if (token === searchTokenRef.current) setLoading(false);
+        };
+
         switch (targetTab) {
           case 'vocab':    runVocabStream();    break;
           case 'kanji':    runKanjiStream();    break;
           case 'sentence': runSentenceStream(); break;
           case 'grammar':  runGrammarStream();  break;
+          case 'all':      runAllStream();      break;
         }
       });
     },
     [vocabByLevel, allGrammar, allSentences, industryVocab, startTransition]
-    // [vocabByLevel, allGrammar, allSentences, industryVocab, startTransition, kanjiModalVisible]
   );
 
   // THAY toàn bộ useEffect hiện tại:
@@ -705,28 +931,6 @@ export default function SearchInline({
       setResults([]);
     }
   };
-
-  // const handleTabChange = (tabId: SearchType) => {
-  //   searchTokenRef.current++;
-  //   setLoading(false);
-  //   setActiveTab(tabId);
-  //   setSelectedResult(null);
-  //   setHistoryKey(prev => prev + 1);
-  //   if (tabId !== 'kanji') {
-  //     setKanjiModalVisible(false);
-  //     setDrawModalVisible(false);
-  //   }
-  //   if (query.trim().length > 0) {
-  //     if (tabId === 'kanji') {
-  //       setResults([]);
-  //       executeSearchLogic(query, tabId);
-  //     } else {
-  //       executeSearchLogic(query, tabId);
-  //     }
-  //   } else {
-  //     setResults([]);
-  //   }
-  // };
 
   const handleSearchPress = (candidates?: any[]) => {
     setDrawModalVisible(false);
@@ -913,6 +1117,7 @@ export default function SearchInline({
 
       <View style={styles.tabBar}>
         {[
+          { id: 'all',      label: 'Tất cả',  icon: '🌐' },
           { id: 'vocab',    label: 'Từ vựng', icon: '📖' },
           { id: 'kanji',   label: 'Hán tự',  icon: '🈳' },
           { id: 'sentence', label: 'Mẫu câu', icon: '📚' },
@@ -1003,7 +1208,7 @@ export default function SearchInline({
                 ListHeaderComponent={
                   <>
                     <SearchSuggestions
-                      activeTab={activeTab}
+                      activeTab={activeTab === 'all' ? 'vocab' : activeTab}
                       onSelectSuggestion={(text, tab) => {
                         setQuery(text);
                         setActiveTab(tab);
@@ -1018,7 +1223,7 @@ export default function SearchInline({
                         setQuery(text);
                         executeSearchLogic(text, activeTab);
                       }}
-                      type={activeTab === 'kanji' ? 'vocab' : activeTab}
+                      type={(activeTab === 'kanji' || activeTab === 'all') ? 'vocab' : activeTab}
                     />
                     <View style={{ height: 30 }} />
                   </>

@@ -26,6 +26,9 @@ import ReferralScreen from "../components/ReferralScreen";
 import ReferralQRScreen from "../components/ReferralQRScreen";
 import { Animated, Easing } from "react-native";
 import { AdBanner } from "../components/AdBanner";
+import { useGiftPromo } from "../artifacts/mirai-jp/hooks/useGiftPromo";
+import { GiftIconAnimated } from "../components/GiftIconAnimated";
+import { GiftPromoModal } from "../components/GiftPromoModal";
 
 const TEAL = "#004370";
 const TEAL_DARK = "#004370";
@@ -206,6 +209,7 @@ const BANNER_WIDTH = SCREEN_WIDTH - 32;
 export default function HomeScreen() {
   const router = useRouter();
   const { currentUser, scopedKey } = useAuth();
+  const { config: giftConfig, showPopup, closePopup } = useGiftPromo();
 
   const [bannerIdx, setBannerIdx] = useState(0);
   const [menuVisible, setMenuVisible] = useState(false);
@@ -218,8 +222,8 @@ export default function HomeScreen() {
   const [autoOpenDrawer, setAutoOpenDrawer] = useState(false);
   const [searchInitQuery, setSearchInitQuery] = useState("");
   const [searchInitTab, setSearchInitTab] = useState<
-    "vocab" | "kanji" | "sentence" | "grammar"
-  >("vocab");
+    "all" | "vocab" | "kanji" | "sentence" | "grammar"
+  >("all");
 
   const bannerRef = useRef<ScrollView>(null);
   const scrollViewRef = useRef<ScrollView>(null);
@@ -251,7 +255,7 @@ export default function HomeScreen() {
   const openSearch = useCallback(() => {
     setAutoOpenDrawer(false);
     setSearchInitQuery("");
-    setSearchInitTab("vocab");
+    setSearchInitTab("all");
     setSearchActive(true);
     searchAnim.setValue(0);
     Animated.spring(searchAnim, {
@@ -340,8 +344,6 @@ export default function HomeScreen() {
           <View style={s.topBarInner}>
             <View style={s.logoBadge}>
               <Text style={s.logoText}>Mirai</Text>
-              <Text style={s.logoDot}>.</Text>
-              <Text style={s.logoJP}>JP</Text>
             </View>
 
             {currentUser ? (
@@ -360,16 +362,6 @@ export default function HomeScreen() {
               </View>
             ) : (
               <View style={{ flex: 1 }} />
-            )}
-
-            {currentUser && (
-              <TouchableOpacity
-                style={s.giftBtn}
-                activeOpacity={0.8}
-                onPress={() => setShowChoiceMenu(true)}
-              >
-                <Text style={s.giftBtnText}>🎁</Text>
-              </TouchableOpacity>
             )}
 
             <TouchableOpacity
@@ -652,6 +644,28 @@ export default function HomeScreen() {
       >
         <ReferralQRScreen onClose={() => setShowQrModal(false)} />
       </Modal>
+        <GiftPromoModal
+        visible={showPopup}
+        title={giftConfig.title}
+        message={giftConfig.message}
+        onClose={closePopup}
+        onViewNow={() => {
+          closePopup();
+          setShowChoiceMenu(true);
+        }}
+      />
+      {currentUser && (
+        <TouchableOpacity
+          style={s.floatingGiftBtn}
+          activeOpacity={0.85}
+          onPress={() => setShowChoiceMenu(true)}
+        >
+          <GiftIconAnimated>
+            <Text style={s.floatingGiftIcon}>🎁</Text>
+          </GiftIconAnimated>
+        </TouchableOpacity>
+      )}
+
       <BottomTabBar />
       <AdBanner />
 
@@ -760,14 +774,6 @@ const s = StyleSheet.create({
     fontWeight: "800",
     letterSpacing: 0.3,
   },
-  logoDot: { color: TEAL, fontSize: 24, fontWeight: "900" },
-  logoJP: {
-    color: "#fff",
-    fontSize: 22,
-    fontWeight: "900",
-    letterSpacing: 0.5,
-  },
-
   iconBtn: {
     width: 42,
     height: 42,
@@ -777,18 +783,6 @@ const s = StyleSheet.create({
     backgroundColor: "rgba(255,255,255,0.18)",
     marginLeft: 10,
   },
-
-  giftBtn: {
-    width: 42,
-    height: 42,
-    borderRadius: 10,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "rgba(255,255,255,0.18)",
-    marginLeft: 10,
-  },
-  giftBtnText: { fontSize: 18 },
-
   hamburger: { width: 22, height: 16, justifyContent: "space-between" },
   hamburgerLine: {
     width: "100%",
@@ -1000,4 +994,22 @@ const s = StyleSheet.create({
   },
   suggDivider: { height: 1, backgroundColor: "#f1f5f9", marginHorizontal: 14 },
   suggWrap: { paddingHorizontal: 14, paddingBottom: 14 },
+  floatingGiftBtn: {
+    position: "absolute",
+    right: 16,
+    bottom: 110,
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: "#e1b12c",
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 8,
+    zIndex: 50,
+  },
+  floatingGiftIcon: { fontSize: 28 },
 });

@@ -21,7 +21,7 @@ export function AdsProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     (async () => {
       try {
-        await remoteConfig().setConfigSettings({ minimumFetchIntervalMillis: 300000 }); // 5 phút — khớp với ExamScreen.tsx đang dùng
+        await remoteConfig().setConfigSettings({ minimumFetchIntervalMillis: 300000 }); // 5 phút 300000 — khớp với ExamScreen.tsx đang dùng
         await remoteConfig().setDefaults({
           ads_enabled: false,
           ad_banner_id_ios: TestIds.BANNER,

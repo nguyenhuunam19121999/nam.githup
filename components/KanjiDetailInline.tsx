@@ -94,42 +94,8 @@ const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
       <KanjiStrokeOrder key={kanji} kanji={kanji} size={180} />
     </View>
   );
-
-  // return (
-  //   <View style={styles.strokeWrap}>
-  //     <KanjiStrokeOrder kanji={kanji} size={180} />
-  //   </View>
-  // );
 });
 
-// const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
-//   const [renderStroke, setRenderStroke] = useState(false);
-
-//   useEffect(() => {
-//     setRenderStroke(false);
-//     const id = requestAnimationFrame(() => {
-//       setRenderStroke(true);
-//     });
-//     return () => {
-//       cancelAnimationFrame(id);
-//       setRenderStroke(false);
-//     };
-//   }, [kanji]);
-
-//   if (!renderStroke) {
-//     return (
-//       <View style={[styles.strokeWrap, { height: 180, justifyContent: 'center' }]}>
-//         <ActivityIndicator color={textColor} />
-//       </View>
-//     );
-//   }
-
-//   return (
-//     <View style={styles.strokeWrap}>
-//       <KanjiStrokeOrder kanji={kanji} size={180} />
-//     </View>
-//   );
-// });
 MemoizedStrokeOrder.displayName = 'MemoizedStrokeOrder';
 
 // ─── Skeleton cho sections đang chờ render ───────────────────────────────────
@@ -179,12 +145,7 @@ export default function KanjiDetailInline({
 }: KanjiDetailInlineProps) {
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [selectedExample, setSelectedExample] = useState<KanjiExample | null>(null);
-
-  // ── PHASED RENDERING ──────────────────────────────────────────────────────
-  // sectionsReady = false → chỉ render Header + Stats (nhẹ, < 1 frame)
-  // sectionsReady = true  → render toàn bộ sections (sau requestAnimationFrame)
   const [sectionsReady, setSectionsReady] = useState(false);
-
   const currentKanji = kanjiChars[currentIndex];
   const totalKanji = kanjiChars.length;
   const [kanjiData, setKanjiData] = useState<KanjiItem | null>(null);
@@ -193,10 +154,6 @@ export default function KanjiDetailInline({
   useEffect(() => {
     setKanjiData(null);
     setExamples([]);
-    // const id = requestAnimationFrame(() => {
-    //   setKanjiData(getKanjiByCharFull(currentKanji) || null);
-    //   setExamples(getExamplesByKanjiChar(currentKanji));
-    // });
     const id = requestAnimationFrame(() => {
       const data = getKanjiByCharFull(currentKanji) || null;
       const hexCurrent = [...currentKanji].map(c => c.codePointAt(0)!.toString(16));
@@ -223,11 +180,6 @@ export default function KanjiDetailInline({
     startTransition(() => setCurrentIndex(index));
     preloader.preloadSurroundingKanji(kanjiChars, index);
   };
-
-  // const handleIndexChange = (index: number) => {
-  //   startTransition(() => setCurrentIndex(index));
-  //   preloader.preloadSurroundingKanji(kanjiChars, index);
-  // };
 
   return (
     <View style={styles.container}>
@@ -268,10 +220,6 @@ export default function KanjiDetailInline({
           {/* ── PHASE 1: Header — render ngay lập tức ──────────────────────── */}
           <View style={styles.kanjiHeader}>
             <View style={styles.furiganaContainer}>
-              {/* Ưu tiên kunyomi, fallback onyomi nếu không có kunyomi */}
-              {/* {kanjiData.readings.kunyomi.length > 0 && (
-                <Text style={styles.furiganaText}>{kanjiData.readings.kunyomi[0]}</Text>
-              )} */}
               {kanjiData.readings.onyomi.length > 0 &&
                 kanjiData.readings.kunyomi.length === 0 && (
                   <Text style={styles.furiganaText}>{kanjiData.readings.onyomi[0]}</Text>
@@ -283,12 +231,6 @@ export default function KanjiDetailInline({
 
           {/* Stats row — nhẹ, render ngay cùng header */}
           <View style={styles.statsRow}>
-            {/* <View style={styles.statCol}>
-              <View style={styles.statChip}>
-                <Text style={styles.statChipText}>Số nét</Text>
-              </View>
-              <Text style={styles.statValue}>{kanjiData.strokes}</Text>
-            </View> */}
             <View style={styles.statCol}>
               <View style={styles.statChip}>
                 <Text style={styles.statChipText}>JLPT</Text>
@@ -352,6 +294,9 @@ export default function KanjiDetailInline({
                     <View key={`${comp.kanji}_${idx}`} style={styles.componentRow}>
                       <View style={styles.componentBar} />
                       <Text style={styles.componentKanji}>{comp.kanji}</Text>
+                      {comp.hanViet ? (
+                        <Text style={styles.componentHanViet}>{comp.hanViet}</Text>
+                      ) : null}
                     </View>
                   ))}
                 </View>
@@ -390,18 +335,6 @@ export default function KanjiDetailInline({
                   ))}
                 </View>
               )}
-              {/* {examples.map((ex, idx) => (
-                <TouchableOpacity
-                  key={idx}
-                  style={styles.exampleBox}
-                  onPress={() => setSelectedExample(ex)}
-                  activeOpacity={0.7}
-                >
-                  <Text style={styles.exampleJp}>{ex.jp}</Text>
-                  <Text style={styles.exampleReading}>{ex.reading}</Text>
-                  <Text style={styles.exampleVi}>→ {ex.vi}</Text>
-                </TouchableOpacity>
-              ))} */}
             </>
           )}
           <View style={{ height: 30 }} />

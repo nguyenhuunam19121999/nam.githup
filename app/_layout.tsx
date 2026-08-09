@@ -16,6 +16,7 @@ import { ErrorBoundary } from "../components/ErrorBoundary";
 import { AuthProvider } from "../artifacts/mirai-jp/hooks/useAuth";
 import { AdsProvider } from "../artifacts/mirai-jp/hooks/useAds";
 import { useForceUpdate } from "../artifacts/mirai-jp/hooks/useForceUpdate";
+import { GiftPromoProvider } from "../artifacts/mirai-jp/hooks/useGiftPromo";
 import { ForceUpdateScreen } from "../components/ForceUpdateScreen";
 import { ensureKanjiDbReady } from "../assets/data_JLPT_kanji";
 import { ensureVocabDbReady } from "../assets/vocab";
@@ -102,9 +103,11 @@ export default function RootLayout() {
           <GestureHandlerRootView>
             <KeyboardProvider>
               <AdsProvider>
-                <AuthProvider>
-                  <RootLayoutNav />
-                </AuthProvider>
+                <GiftPromoProvider>
+                  <AuthProvider>
+                    <RootLayoutNav />
+                  </AuthProvider>
+                </GiftPromoProvider>
               </AdsProvider>
             </KeyboardProvider>
           </GestureHandlerRootView>

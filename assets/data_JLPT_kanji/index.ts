@@ -168,31 +168,6 @@ function getDbOrNull(): any | null {
   return db;
 }
 
-// let _kanjiDb: any | null = null;
-// let _kanjiDbPromise: Promise<any | null> | null = null;
-
-// function getKanjiDbHandle(): any | null {
-//   if (_kanjiDb) return _kanjiDb;
-//   if (!_kanjiDbPromise) {
-//     _kanjiDbPromise = initDb().then((db) => {
-//       _kanjiDb = db;
-//       return db;
-//     }).catch(() => null);
-//   }
-//   return null;
-// }
-
-// let _kanjiDbWarningShown = false;
-
-// function getDbOrNull(): any | null {
-//   const db = getKanjiDbHandle();
-//   if (!db && !_kanjiDbWarningShown) {
-//     console.warn('[kanji] SQLite DB unavailable; returning no data');
-//     _kanjiDbWarningShown = true;
-//   }
-//   return db;
-// }
-
 function stripInvisible(s: string): string {
   return s.replace(/[\u200B-\u200D\uFEFF\uFE00-\uFE0F]/g, '').trim();
 }
@@ -207,8 +182,61 @@ function parseJsonValue<T>(value: unknown, fallback: T): T {
   }
 }
 
+// Ký hiệu Ideographic Description Characters: ⿰⿱⿲⿳⿴⿵⿶⿷⿸⿹⿺⿻ (U+2FF0–U+2FFB)
+const IDS_SYMBOLS_REGEX = /[\u2FF0-\u2FFB]/g;
+const CJK_CHAR_REGEX = /[\u3400-\u9fff\uf900-\ufaff]/;
+
+function lookupHanVietForChar(char: string): string | undefined {
+  const db = getDbOrNull();
+  if (!db) return undefined;
+  try {
+    const row = db.getFirstSync(`SELECT hanviet FROM kanji WHERE kanji = ? LIMIT 1`, [char]);
+    if (!row) return undefined;
+    const arr = parseJsonValue<string[]>((row as any).hanviet, []);
+    return arr[0];
+  } catch {
+    return undefined;
+  }
+}
+
+function parseComponentsFromMetadata(
+  metadata: Record<string, unknown> | undefined,
+  selfChar: string
+): KanjiComponent[] {
+  if (!metadata) return [];
+
+  const seen = new Set<string>();
+  const components: KanjiComponent[] = [];
+
+  const addChar = (char: string) => {
+    if (!char || char === selfChar || seen.has(char)) return;
+    if (!CJK_CHAR_REGEX.test(char)) return;
+    seen.add(char);
+    components.push({ kanji: char, hanViet: lookupHanVietForChar(char) });
+  };
+
+  // 1) Ưu tiên "Hình thái" (IDS) — vd "⿰口虛" → thành phần: 口, 虛
+  const hinhThai = metadata['Hình thái'];
+  if (typeof hinhThai === 'string' && hinhThai.trim()) {
+    [...hinhThai.replace(IDS_SYMBOLS_REGEX, '')].forEach(addChar);
+  }
+
+  // 2) Bổ sung "Bộ" — vd "khẩu 口 (+12 nét)" → lấy ký tự bộ thủ 口
+  const boStr = metadata['Bộ'];
+  if (typeof boStr === 'string' && boStr.trim()) {
+    const m = boStr.match(CJK_CHAR_REGEX);
+    if (m) addChar(m[0]);
+  }
+
+  return components;
+}
+
 function normalizeDbKanjiRow(row: any): KanjiItem | null {
   if (!row) return null;
+  const metadata = parseJsonValue<{ Unicode?: string; [key: string]: unknown }>(
+    row.metadata,
+    { Unicode: row.id ?? undefined }
+  );
   return {
     id: row.id ?? undefined,
     kanji: row.kanji ?? '',
@@ -220,7 +248,8 @@ function normalizeDbKanjiRow(row: any): KanjiItem | null {
     grade: row.grade ?? undefined,
     meanings_vi: parseJsonValue<string[]>(row.meanings_vi, []),
     meanings_en: parseJsonValue<string[]>(row.meanings_en, []),
-    metadata: parseJsonValue<{ Unicode?: string; [key: string]: unknown }>(row.metadata, { Unicode: row.id ?? undefined }),
+    metadata,
+    components: parseComponentsFromMetadata(metadata, row.kanji ?? ''),
     book: row.book ?? undefined,
     lesson: row.lesson ?? undefined,
     week: row.week ?? undefined,
@@ -268,84 +297,6 @@ export const KANJI_BOOK_CONFIG: Record<string, LessonConfig> = {
 };
 
 const DEFAULT_KANJI_CONFIG: LessonConfig = { weeks: 6, lessonsPerWeek: 6 };
-
-// export function getKanjiByBook(bookId: string): KanjiItem[] {
-//   const db = getDbOrNull();
-//   if (!db) return [];
-
-//   const rows = db.getAllSync(`SELECT * FROM kanji_book_vocab WHERE book = ? ORDER BY id ASC`, [bookId]);
-//   const data = rows.map(normalizeDbKanjiRow).filter(Boolean) as KanjiItem[];
-//   if (data.length === 0) return [];
-
-//   // Ưu tiên dùng lesson có sẵn trong DB — chỉ tính lại cho các mục thiếu lesson
-//   const hasWeekInJson = data.some((item) => item.week != null);
-//   const allHaveLesson = data.every((item) => item.lesson != null);
-
-//   if (allHaveLesson) {
-//     // Mọi mục đã có sẵn lesson từ DB (JSON gốc có week/lesson đầy đủ) → dùng nguyên
-//     return data;
-//   }
-
-//   if (!hasWeekInJson) {
-//     // JSON gốc KHÔNG có week/lesson — chia đều CHÍNH XÁC vào đúng số tuần/số bài
-//     // đã cấu hình trong KANJI_BOOK_CONFIG. Dùng phần dư (remainder distribution)
-//     // để đảm bảo dùng hết đủ totalSlots bài, không bị thiếu bài cuối.
-//     const config = KANJI_BOOK_CONFIG[bookId] ?? DEFAULT_KANJI_CONFIG;
-//     const totalSlots = config.weeks * config.lessonsPerWeek;
-//     const total = data.length;
-//     const base = Math.floor(total / totalSlots);
-//     const remainder = total % totalSlots;
-//     // `remainder` bài đầu tiên nhận (base + 1) mục, các bài còn lại nhận base mục.
-//     // Nếu total < totalSlots, base = 0 và chỉ `remainder` bài đầu có 1 mục,
-//     // các bài sau sẽ trống — không tránh được vì không đủ dữ liệu để lấp đầy.
-
-//     const result: KanjiItem[] = [];
-//     let idx = 0;
-//     for (let slot = 0; slot < totalSlots; slot++) {
-//       const countForThisSlot = base + (slot < remainder ? 1 : 0);
-//       const week = Math.floor(slot / config.lessonsPerWeek) + 1;
-//       const lesson = slot + 1;
-//       for (let k = 0; k < countForThisSlot && idx < total; k++, idx++) {
-//         result.push({ ...data[idx], week, lesson });
-//       }
-//     }
-//     return result;
-//   }
-
-//   // Chỉ những mục thiếu lesson mới cần tự tính lại, theo từng tuần
-//   const byWeek: Record<number, KanjiItem[]> = {};
-//   data.forEach((item) => {
-//     const w = typeof item.week === 'number' ? item.week : 1;
-//     if (!byWeek[w]) byWeek[w] = [];
-//     byWeek[w].push(item);
-//   });
-
-//   const result: KanjiItem[] = [];
-//   Object.keys(byWeek).map(Number).sort((a, b) => a - b).forEach((w) => {
-//     const weekItems = byWeek[w];
-
-//     const withLesson = weekItems.filter((item) => item.lesson != null);
-//     const withoutLesson = weekItems.filter((item) => item.lesson == null);
-
-//     result.push(...withLesson.map((item) => ({ ...item, week: w })));
-
-//     if (withoutLesson.length > 0) {
-//       const config = KANJI_BOOK_CONFIG[bookId] ?? DEFAULT_KANJI_CONFIG;
-//       const itemsPerLesson = Math.ceil(withoutLesson.length / config.lessonsPerWeek);
-//       withoutLesson.forEach((item, posInWeek) => {
-//         const lessonInWeek = Math.min(
-//           Math.floor(posInWeek / Math.max(1, itemsPerLesson)),
-//           config.lessonsPerWeek - 1,
-//         );
-//         const globalLesson = (w - 1) * config.lessonsPerWeek + lessonInWeek + 1;
-//         result.push({ ...item, week: w, lesson: globalLesson });
-//       });
-//     }
-//   });
-
-//   return result;
-// }
-
 export function getKanjiByBook(bookId: string): KanjiItem[] {
   const LOG = (...args: any[]) => console.log('[kanji]', `[${bookId}]`, ...args);
 

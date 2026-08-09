@@ -398,8 +398,8 @@ export default function VocabDetailInline({
         <View style={styles.card}>
           {/* Từ vựng chính */}
           <View style={styles.kanjiSection}>
-            {/* <Text style={styles.hiraganaText}>{displayHiragana}</Text> */}
             <Text style={styles.kanjiText}>{kanji}</Text>
+            <Text style={styles.hiraganaText}>{displayHiragana}</Text>
             <Text style={styles.nghiaText}>{nghia}</Text>
           </View>
           {han ? <Text style={styles.mainVocabHan}>{han}</Text> : null}

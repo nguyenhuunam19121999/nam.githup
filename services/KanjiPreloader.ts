@@ -135,10 +135,10 @@ async function fetchFromCdnDeduped(kanji: string): Promise<{ paths: string[]; so
   const promise = (async () => {
     const hexId = toHexId(kanji);
     const url = `${CDN_BASE}${hexId}.svg`;
-    console.log(`[KanjiPreloader] → Thử CDN: ${url}`);
+    //console.log(`[KanjiPreloader] → Thử CDN: ${url}`);
     try {
       const res = await fetch(url);
-      console.log(`[KanjiPreloader] CDN response status = ${res.status} cho "${kanji}"`);
+      //console.log(`[KanjiPreloader] CDN response status = ${res.status} cho "${kanji}"`);
       const text = await res.text();
       const fetched = parseSvgPaths(text);
       console.log(`[KanjiPreloader] parseSvgPaths → ${fetched?.length ?? 0} path(s) cho "${kanji}"`);

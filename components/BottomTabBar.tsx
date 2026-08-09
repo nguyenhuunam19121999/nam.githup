@@ -12,7 +12,7 @@ export function BottomTabBar() {
   const router = useRouter();
   const pathname = usePathname();
 
-  // Hàm xử lý khi nhấn vào Tin Tức
+  // Hàm xử lý khi nhấn vào
   const handleNewsPress = () => {
     Alert.alert(
       "📢 Thông báo",
@@ -41,13 +41,12 @@ export function BottomTabBar() {
         {/* Spacer cho nút giữa nổi */}
         <View style={s.spacer} />
 
-        {/* Tin Tức - Phải */}
+        {/* đang phát triển - Phải */}
         <TouchableOpacity 
           style={s.tab} 
           activeOpacity={0.7}
           onPress={handleNewsPress}
         >
-          {/* ✅ Đã cập nhật pathname thành /news để đồng bộ với tính năng Tin Tức */}
           <Text style={[s.icon, pathname === "/news" && s.iconActive]}>📝</Text>
           <Text style={[s.label, pathname === "/news" && s.labelActive]}>
             Đang phát triển 
