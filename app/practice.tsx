@@ -81,8 +81,6 @@ export default function PracticeScreen() {
               <View style={{ flex: 1 }} />
               <View style={styles.logoBadge}>
                 <Text style={styles.logoText}>Mirai</Text>
-                <Text style={styles.logoDot}>.</Text>
-                <Text style={styles.logoJP}>JP</Text>
               </View>
             </View>
           </SafeAreaView>
@@ -162,17 +160,6 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "800",
     letterSpacing: 0.3,
-  },
-  logoDot: {
-    color: TEAL,
-    fontSize: 24,
-    fontWeight: "900",
-  },
-  logoJP: {
-    color: "#fff",
-    fontSize: 22,
-    fontWeight: "900",
-    letterSpacing: 0.5,
   },
   headerText: {
     paddingHorizontal: 20,

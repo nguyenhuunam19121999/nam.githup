@@ -126,8 +126,6 @@ export default function LearningMenuScreen() {
           <View style={{ flex: 1 }} />
           <View style={s.logoBadge}>
             <Text style={s.logoText}>Mirai</Text>
-            <Text style={s.logoDot}>.</Text>
-            <Text style={s.logoJP}>JP</Text>
           </View>
         </View>
       </SafeAreaView>
@@ -190,8 +188,6 @@ const s = StyleSheet.create({
     height: 50,
   },
   logoText: { color: "#fff", fontSize: 22, fontWeight: "800", letterSpacing: 0.3 },
-  logoDot:  { color: TEAL,  fontSize: 24, fontWeight: "900" },
-  logoJP:   { color: "#fff", fontSize: 22, fontWeight: "900", letterSpacing: 0.5 },
   backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
   headerTitle: {
     flex: 1,

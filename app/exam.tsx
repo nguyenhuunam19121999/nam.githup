@@ -253,8 +253,6 @@ const displayLevels = examLevels.map((lv) => {
               <View style={{ flex: 1 }} />
               <View style={styles.logoBadge}>
                 <Text style={styles.logoText}>Mirai</Text>
-                <Text style={styles.logoDot}>.</Text>
-                <Text style={styles.logoJP}>JP</Text>
               </View>
             </View>
             <Text style={styles.headerTitle}>
@@ -374,8 +372,6 @@ const styles = StyleSheet.create({
     height: 50,
   },
   logoText: { color: "#fff", fontSize: 22, fontWeight: "800" },
-  logoDot: { color: "#F59E0B", fontSize: 24, fontWeight: "900" },
-  logoJP: { color: "#fff", fontSize: 22, fontWeight: "900" },
   headerTitle: {
     fontSize: 24,
     fontWeight: "800",
