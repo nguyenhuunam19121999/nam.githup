@@ -1,3 +1,4 @@
+// components/SearchHistory.tsx
 import React, { useEffect, useState, useImperativeHandle, forwardRef } from "react";
 import {
   View,
@@ -9,11 +10,7 @@ import {
 } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
-
-// ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#1F6F7A";
-const TEAL_DARK = "#0B3540";
-const GRAD = [TEAL, TEAL_DARK] as const;
+import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 interface SearchHistoryProps {
   onSelectHistory: (item: string) => void;
@@ -33,6 +30,7 @@ interface HistoryItem {
 
 export const SearchHistory = forwardRef<SearchHistoryRef, SearchHistoryProps>(
   ({ onSelectHistory, type }, ref) => {
+    const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
     const { currentUser, scopedKey } = useAuth();
     const [history, setHistory] = useState<HistoryItem[]>([]);
     const [isVisible, setIsVisible] = useState(true);
@@ -43,7 +41,7 @@ export const SearchHistory = forwardRef<SearchHistoryRef, SearchHistoryProps>(
 
     const loadHistory = async () => {
       if (!currentUser) return;
-      
+
       try {
         const key = getStorageKey();
         const raw = await AsyncStorage.getItem(key);
@@ -61,7 +59,6 @@ export const SearchHistory = forwardRef<SearchHistoryRef, SearchHistoryProps>(
       }
     }, [currentUser]);
 
-    // Expose saveSearch function to parent
     const saveSearch = async (text: string) => {
       if (!currentUser || !text.trim()) return;
 
@@ -143,34 +140,37 @@ export const SearchHistory = forwardRef<SearchHistoryRef, SearchHistoryProps>(
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={toggleVisible} style={styles.historyToggle}>
-          <Text style={styles.historyToggleText}>
+          <Text style={[styles.historyToggleText, { color: c.text }]}>
             {isVisible ? "▼" : "▶"} Lịch sử tìm kiếm
           </Text>
           {history.length > 0 && (
             <TouchableOpacity onPress={clearAllHistory} style={styles.clearAllBtn}>
-              <Text style={styles.clearAllText}>Xóa tất cả</Text>
+              <Text style={[styles.clearAllText, { color: c.destructive }]}>Xóa tất cả</Text>
             </TouchableOpacity>
           )}
         </TouchableOpacity>
 
         {isVisible && history.length > 0 && (
-          <ScrollView style={styles.historyList} showsVerticalScrollIndicator={false}>
+          <ScrollView
+            style={[styles.historyList, { backgroundColor: c.card, borderColor: c.border }]}
+            showsVerticalScrollIndicator={false}
+          >
             {history.map((item) => (
               <TouchableOpacity
                 key={item.id}
-                style={styles.historyItem}
+                style={[styles.historyItem, { borderBottomColor: c.border }]}
                 onPress={() => onSelectHistory(item.text)}
                 activeOpacity={0.7}
               >
                 <Text style={styles.historyIcon}>
                   {type === "kanji" ? "🈳" : type === "vocab" ? "📖" : type === "grammar" ? "📝" : "💬"}
                 </Text>
-                <Text style={styles.historyText}>{item.text}</Text>
+                <Text style={[styles.historyText, { color: c.text }]}>{item.text}</Text>
                 <TouchableOpacity
                   onPress={() => deleteHistoryItem(item.id)}
                   style={styles.deleteBtn}
                 >
-                  <Text style={styles.deleteText}>✕</Text>
+                  <Text style={[styles.deleteText, { color: c.mutedForeground }]}>✕</Text>
                 </TouchableOpacity>
               </TouchableOpacity>
             ))}
@@ -178,8 +178,8 @@ export const SearchHistory = forwardRef<SearchHistoryRef, SearchHistoryProps>(
         )}
 
         {isVisible && history.length === 0 && (
-          <View style={styles.emptyHistory}>
-            <Text style={styles.emptyText}>Chưa có lịch sử tìm kiếm</Text>
+          <View style={[styles.emptyHistory, { backgroundColor: c.card, borderColor: c.border }]}>
+            <Text style={[styles.emptyText, { color: c.mutedForeground }]}>Chưa có lịch sử tìm kiếm</Text>
           </View>
         )}
       </View>
@@ -201,7 +201,6 @@ const styles = StyleSheet.create({
   },
   historyToggleText: {
     fontSize: 12,
-    color: TEAL_DARK,
     fontWeight: "600",
   },
   clearAllBtn: {
@@ -210,15 +209,12 @@ const styles = StyleSheet.create({
   },
   clearAllText: {
     fontSize: 14,
-    color: "#ef4444",
   },
   historyList: {
     maxHeight: 200,
-    backgroundColor: "#f8fafc",
     borderRadius: 12,
     padding: 8,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   historyItem: {
     flexDirection: "row",
@@ -226,7 +222,6 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     paddingHorizontal: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#e2e8f0",
   },
   historyIcon: {
     fontSize: 22,
@@ -235,7 +230,6 @@ const styles = StyleSheet.create({
   historyText: {
     flex: 1,
     fontSize: 14,
-    color: TEAL_DARK,
   },
   deleteBtn: {
     width: 28,
@@ -245,20 +239,16 @@ const styles = StyleSheet.create({
   },
   deleteText: {
     fontSize: 14,
-    color: "#94a3b8",
     fontWeight: "600",
   },
   emptyHistory: {
     paddingVertical: 16,
     alignItems: "center",
-    backgroundColor: "#f8fafc",
     borderRadius: 12,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   emptyText: {
     fontSize: 12,
-    color: "#94a3b8",
   },
 });
 SearchHistory.displayName = 'SearchHistory';

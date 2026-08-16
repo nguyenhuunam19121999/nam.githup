@@ -16,12 +16,9 @@ import {
 } from "react-native";
 
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
+import { useColors, ThemeFadeOverlay} from "../artifacts/mirai-jp/hooks/useColors";
+import { ThemeSettings } from "./ThemeSettings";
 
-// ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#004370";
-// const TEAL = "#1F6F7A";
-const TEAL_DARK = "#004370";
-const GRAD = [TEAL, TEAL_DARK] as const;
 const SCREEN_WIDTH = Dimensions.get("window").width;
 const PANEL_WIDTH = Math.min(360, SCREEN_WIDTH * 0.88);
 
@@ -33,6 +30,7 @@ interface Props {
 }
 
 export function AuthMenu({ visible, onClose }: Props) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const { currentUser, login, register, logout, deleteAccount } = useAuth();
   const [mode, setMode] = useState<Mode>("login");
   const [username, setUsername] = useState("");
@@ -137,23 +135,23 @@ export function AuthMenu({ visible, onClose }: Props) {
         <Animated.View
           style={[
             s.panel,
-            { width: PANEL_WIDTH, transform: [{ translateX }] },
+            { width: PANEL_WIDTH, transform: [{ translateX }], backgroundColor: c.card },
           ]}
         >
           <KeyboardAvoidingView
             behavior={Platform.OS === "ios" ? "padding" : undefined}
             style={{ flex: 1 }}
           >
-            <View style={s.header}>
-              <Text style={s.headerTitle}>
+            <View style={[s.header, { backgroundColor: c.primary }]}>
+              <Text style={[s.headerTitle, { color: c.primaryForeground }]}>
                 {currentUser ? "Tài khoản" : "Chào mừng"}
               </Text>
               <TouchableOpacity
-                style={s.closeBtn}
+                style={[s.closeBtn, { backgroundColor: c.primaryForeground + "40" }]}
                 onPress={onClose}
                 hitSlop={10}
               >
-                <Text style={s.closeIcon}>✕</Text>
+                <Text style={[s.closeIcon, { color: c.primaryForeground }]}>✕</Text>
               </TouchableOpacity>
             </View>
 
@@ -161,21 +159,25 @@ export function AuthMenu({ visible, onClose }: Props) {
               {currentUser ? (
                 <View>
                   <View style={s.userBlock}>
-                    <View style={s.avatarBig}>
-                      <Text style={s.avatarBigText}>
+                    <View style={[s.avatarBig, { backgroundColor: c.primary }]}>
+                      <Text style={[s.avatarBigText, { color: c.primaryForeground }]}>
                         {currentUser.charAt(0).toUpperCase()}
                       </Text>
                     </View>
-                    <Text style={s.userBigName} numberOfLines={1}>
+                    <Text style={[s.userBigName, { color: c.text }]} numberOfLines={1}>
                       {currentUser}
                     </Text>
-                    <Text style={s.userMeta}>Đã đăng nhập</Text>
+                    <Text style={[s.userMeta, { color: c.mutedForeground }]}>Đã đăng nhập</Text>
                   </View>
+
+                  {/* ── Cài đặt giao diện Sáng / Tối / Tự động ─────────── */}
+                  <ThemeSettings />
+
                   <TouchableOpacity
-                    style={s.primaryBtn}
+                    style={[s.primaryBtn, { backgroundColor: c.primary, marginTop: 20 }]}
                     onPress={handleLogout}
                   >
-                    <Text style={s.primaryBtnText}>Đăng xuất</Text>
+                    <Text style={[s.primaryBtnText, { color: c.primaryForeground }]}>Đăng xuất</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                     style={s.deleteBtn}
@@ -186,9 +188,12 @@ export function AuthMenu({ visible, onClose }: Props) {
                 </View>
               ) : (
                 <View>
-                  <View style={s.tabRow}>
+                  {/* ── Cài đặt giao diện cũng hiện cả khi chưa đăng nhập ── */}
+                  <ThemeSettings />
+
+                  <View style={[s.tabRow, { backgroundColor: c.muted, marginTop: 20 }]}>
                     <TouchableOpacity
-                      style={[s.tabBtn, mode === "login" && s.tabBtnActive]}
+                      style={[s.tabBtn, mode === "login" && { backgroundColor: c.card }]}
                       onPress={() => {
                         setMode("login");
                         setError(null);
@@ -197,14 +202,15 @@ export function AuthMenu({ visible, onClose }: Props) {
                       <Text
                         style={[
                           s.tabText,
-                          mode === "login" && s.tabTextActive,
+                          { color: mode === "login" ? c.primary : c.mutedForeground },
+                          mode === "login" && { fontWeight: "800" },
                         ]}
                       >
                         Đăng nhập
                       </Text>
                     </TouchableOpacity>
                     <TouchableOpacity
-                      style={[s.tabBtn, mode === "register" && s.tabBtnActive]}
+                      style={[s.tabBtn, mode === "register" && { backgroundColor: c.card }]}
                       onPress={() => {
                         setMode("register");
                         setError(null);
@@ -213,7 +219,8 @@ export function AuthMenu({ visible, onClose }: Props) {
                       <Text
                         style={[
                           s.tabText,
-                          mode === "register" && s.tabTextActive,
+                          { color: mode === "register" ? c.primary : c.mutedForeground },
+                          mode === "register" && { fontWeight: "800" },
                         ]}
                       >
                         Đăng ký
@@ -221,47 +228,48 @@ export function AuthMenu({ visible, onClose }: Props) {
                     </TouchableOpacity>
                   </View>
 
-                  <Text style={s.fieldLabel}>Tên đăng nhập</Text>
+                  <Text style={[s.fieldLabel, { color: c.text }]}>Tên đăng nhập</Text>
                   <TextInput
-                    style={s.input}
+                    style={[s.input, { backgroundColor: c.muted, borderColor: c.border, color: c.text }]}
                     value={username}
                     onChangeText={setUsername}
                     placeholder="Nhập tên đăng nhập"
-                    placeholderTextColor="#94a3b8"
+                    placeholderTextColor={c.mutedForeground}
                     autoCapitalize="none"
                     autoCorrect={false}
                   />
 
-                  <Text style={s.fieldLabel}>Mật khẩu (tối đa 8 ký tự)</Text>
-                    <TextInput
-                      style={s.input}
-                      value={password}
-                      onChangeText={setPassword}
-                      placeholder="Nhập mật khẩu"
-                      placeholderTextColor="#94a3b8"
-                      secureTextEntry
-                      maxLength={8}
-                    />
+                  <Text style={[s.fieldLabel, { color: c.text }]}>Mật khẩu (tối đa 8 ký tự)</Text>
+                  <TextInput
+                    style={[s.input, { backgroundColor: c.muted, borderColor: c.border, color: c.text }]}
+                    value={password}
+                    onChangeText={setPassword}
+                    placeholder="Nhập mật khẩu"
+                    placeholderTextColor={c.mutedForeground}
+                    secureTextEntry
+                    maxLength={8}
+                  />
 
                   {error && <Text style={s.errorText}>{error}</Text>}
 
                   <TouchableOpacity
-                    style={[s.primaryBtn, loading && { opacity: 0.7 }]}
+                    style={[s.primaryBtn, { backgroundColor: c.primary }, loading && { opacity: 0.7 }]}
                     onPress={handleSubmit}
                     disabled={loading}
                   >
-                    <Text style={s.primaryBtnText}>
+                    <Text style={[s.primaryBtnText, { color: c.primaryForeground }]}>
                       {mode === "login" ? "Đăng nhập" : "Tạo tài khoản"}
                     </Text>
                   </TouchableOpacity>
 
-                  <Text style={s.hint}>
+                  <Text style={[s.hint, { color: c.mutedForeground }]}>
                     Tài khoản được lưu cục bộ trên thiết bị của bạn.
                   </Text>
                 </View>
               )}
             </View>
           </KeyboardAvoidingView>
+          <ThemeFadeOverlay />
         </Animated.View>
       </View>
     </Modal>
@@ -279,7 +287,6 @@ const s = StyleSheet.create({
     right: 0,
     top: 0,
     bottom: 0,
-    backgroundColor: "#fff",
     shadowColor: "#000",
     shadowOpacity: 0.2,
     shadowRadius: 18,
@@ -287,7 +294,6 @@ const s = StyleSheet.create({
     elevation: 12,
   },
   header: {
-    backgroundColor: TEAL,
     paddingTop: Platform.OS === "ios" ? 56 : 28,
     paddingBottom: 18,
     paddingHorizontal: 20,
@@ -295,20 +301,18 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
   },
-  headerTitle: { color: "#fff", fontSize: 20, fontWeight: "800" },
+  headerTitle: { fontSize: 20, fontWeight: "800" },
   closeBtn: {
     width: 32,
     height: 32,
     borderRadius: 16,
-    backgroundColor: "rgba(255,255,255,0.25)",
     alignItems: "center",
     justifyContent: "center",
   },
-  closeIcon: { color: "#fff", fontSize: 14, fontWeight: "800" },
+  closeIcon: { fontSize: 14, fontWeight: "800" },
   body: { padding: 20, flex: 1 },
   tabRow: {
     flexDirection: "row",
-    backgroundColor: "#f1f5f9",
     borderRadius: 12,
     padding: 4,
     marginBottom: 18,
@@ -319,25 +323,19 @@ const s = StyleSheet.create({
     borderRadius: 10,
     alignItems: "center",
   },
-  tabBtnActive: { backgroundColor: "#fff" },
-  tabText: { fontSize: 14, fontWeight: "600", color: "#64748b" },
-  tabTextActive: { color: TEAL_DARK, fontWeight: "800" },
+  tabText: { fontSize: 14, fontWeight: "600" },
   fieldLabel: {
     fontSize: 13,
     fontWeight: "700",
-    color: "#334155",
     marginBottom: 6,
     marginTop: 6,
   },
   input: {
-    backgroundColor: "#f8fafc",
     borderWidth: 1,
-    borderColor: "#e2e8f0",
     borderRadius: 12,
     paddingHorizontal: 14,
     paddingVertical: 12,
     fontSize: 15,
-    color: "#0f172a",
     marginBottom: 6,
   },
   errorText: {
@@ -347,13 +345,12 @@ const s = StyleSheet.create({
     fontWeight: "600",
   },
   primaryBtn: {
-    backgroundColor: TEAL,
     borderRadius: 12,
     paddingVertical: 14,
     alignItems: "center",
     marginTop: 14,
   },
-  primaryBtnText: { color: "#fff", fontWeight: "800", fontSize: 15 },
+  primaryBtnText: { fontWeight: "800", fontSize: 15 },
   deleteBtn: {
     borderRadius: 12,
     paddingVertical: 14,
@@ -364,7 +361,6 @@ const s = StyleSheet.create({
   },
   deleteBtnText: { color: "#dc2626", fontWeight: "800", fontSize: 15 },
   hint: {
-    color: "#94a3b8",
     fontSize: 12,
     marginTop: 14,
     textAlign: "center",
@@ -374,12 +370,11 @@ const s = StyleSheet.create({
     width: 72,
     height: 72,
     borderRadius: 36,
-    backgroundColor: TEAL,
     alignItems: "center",
     justifyContent: "center",
     marginBottom: 12,
   },
-  avatarBigText: { color: "#fff", fontSize: 28, fontWeight: "800" },
-  userBigName: { fontSize: 20, fontWeight: "800", color: "#0f172a" },
-  userMeta: { color: "#64748b", fontSize: 13, marginTop: 4 },
+  avatarBigText: { fontSize: 28, fontWeight: "800" },
+  userBigName: { fontSize: 20, fontWeight: "800" },
+  userMeta: { fontSize: 13, marginTop: 4 },
 });

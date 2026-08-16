@@ -18,14 +18,10 @@ import { useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
 import { AdBanner } from "../components/AdBanner";
 import remoteConfig from "@react-native-firebase/remote-config";
+import { useColors, useThemeMode } from "../artifacts/mirai-jp/hooks/useColors";
 
-const TEAL = "#004370";
-const INK = "#16232F";
-const INK_SOFT = "#2E4457";
-const GRAD = [INK, INK_SOFT] as const;
-// const GRAD = ["#1F6F7A", "#004370"] as const;
-
-
+// Màu định danh riêng cho từng cấp độ đề thi (giống JLPT_COLORS ở trang chủ)
+// — giữ cố định, không đổi theo theme, để luôn phân biệt được cấp độ.
 const OPEN_COLORS: Record<string, string> = {
   n5: "#22C55E",
   n4: "#06B6D4",
@@ -83,9 +79,6 @@ const examLevels: ExamLevel[] = [
     icon: "🌸",
     color: "#94A3B8", // đóng đề thi
     isUpdated: false, // đóng đề thi
-    // color: "#F59E0B", // mở đề thi
-    // isUpdated: true, // mở đề thi
-    // ✅ Khai báo trực tiếp danh sách file đề của bạn tại đây
     exams: [
       {
         name: "Đề luyện thi số 1",
@@ -122,8 +115,6 @@ const examLevels: ExamLevel[] = [
     icon: "🗻",
     color: "#94A3B8", // đóng đề thi
     isUpdated: false, // đóng đề thi
-    // color: "#3B82F6", // mở đề thi
-    // isUpdated: true, // mở đề thi
     exams: [
       {
         name: "Đề luyện thi số 1",
@@ -165,6 +156,10 @@ const examLevels: ExamLevel[] = [
 ];
 
 export default function ExamScreen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const router = useRouter();
   const [selectedLevel, setSelectedLevel] = useState<string | null>(null);
 
@@ -179,7 +174,6 @@ export default function ExamScreen() {
 useEffect(() => {
   (async () => {
     try {
-      // await remoteConfig().setConfigSettings({ minimumFetchIntervalMillis: 300000 }); // 5 phút 
       await remoteConfig().setDefaults({
         exam_n5_open: false,
         exam_n4_open: false,
@@ -232,10 +226,10 @@ const displayLevels = examLevels.map((lv) => {
   return (
     <>
       <Stack.Screen options={{ headerShown: false }} />
-      <View style={styles.root}>
-        <StatusBar barStyle="light-content" backgroundColor={TEAL} />
+      <View style={[styles.root, { backgroundColor: c.background }]}>
+        <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.primary} />
         <LinearGradient
-          colors={GRAD}
+          colors={[c.primary, c.primary + "cc"]}
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 1 }}
           style={styles.headerGradient}
@@ -248,14 +242,14 @@ const displayLevels = examLevels.map((lv) => {
                   selectedLevel ? setSelectedLevel(null) : router.back()
                 }
               >
-                <Text style={styles.backIcon}>‹</Text>
+                <Text style={[styles.backIcon, { color: c.primaryForeground }]}>‹</Text>
               </TouchableOpacity>
               <View style={{ flex: 1 }} />
               <View style={styles.logoBadge}>
-                <Text style={styles.logoText}>Mirai</Text>
+                <Text style={[styles.logoText, { color: c.primaryForeground }]}>Mirai</Text>
               </View>
             </View>
-            <Text style={styles.headerTitle}>
+            <Text style={[styles.headerTitle, { color: c.primaryForeground }]}>
               {selectedLevel
                 ? `📝 ${selectedExam?.level} - Danh sách đề`
                 : "📝 Luyện đề JLPT"}
@@ -271,7 +265,8 @@ const displayLevels = examLevels.map((lv) => {
                   key={exam.id}
                   style={[
                     styles.examCard,
-                    !exam.isUpdated && styles.examCardDisabled,
+                    { backgroundColor: c.card, borderColor: c.border },
+                    !exam.isUpdated && { opacity: 0.6, backgroundColor: c.muted },
                   ]}
                   onPress={() => handleLevelSelect(exam)}
                 >
@@ -288,14 +283,16 @@ const displayLevels = examLevels.map((lv) => {
                       <Text style={[styles.examLevel, { color: exam.color }]}>
                         {exam.level}
                       </Text>
-                      <Text style={styles.examTitle}>{exam.title}</Text>
+                      <Text style={[styles.examTitle, { color: c.mutedForeground }]}>
+                        {exam.title}
+                      </Text>
                     </View>
-                    <Text style={styles.examDescription}>
+                    <Text style={[styles.examDescription, { color: c.mutedForeground }]}>
                       {exam.description}
                     </Text>
                   </View>
                   {exam.isUpdated ? (
-                    <Text style={styles.arrowIcon}>›</Text>
+                    <Text style={[styles.arrowIcon, { color: c.mutedForeground }]}>›</Text>
                   ) : (
                     <Text style={styles.lockIcon}>🔒</Text>
                   )}
@@ -304,8 +301,13 @@ const displayLevels = examLevels.map((lv) => {
             : // ✅ GIAO DIỆN PHẲNG MỚI: LIỆT KÊ TRỰC TIẾP DANH SÁCH ĐỀ THI
               selectedExam && (
                 <View style={styles.examListContainer}>
-                  <View style={styles.infoBox}>
-                    <Text style={styles.infoText}>
+                  <View
+                    style={[
+                      styles.infoBox,
+                      { backgroundColor: c.primary + "14", borderColor: c.primary + "40" },
+                    ]}
+                  >
+                    <Text style={[styles.infoText, { color: c.primary }]}>
                       📊 Hệ thống có: {selectedExam.exams.length} đề thi sẵn
                       sàng
                     </Text>
@@ -314,17 +316,17 @@ const displayLevels = examLevels.map((lv) => {
                   {selectedExam.exams.map((item, index) => (
                     <TouchableOpacity
                       key={item.file}
-                      style={styles.flatExamCard}
+                      style={[styles.flatExamCard, { backgroundColor: c.card, borderColor: c.border }]}
                       onPress={() => handleStartExam(item.file)}
                     >
-                      <View style={styles.flatExamBadge}>
-                        <Text style={styles.flatExamBadgeText}>
+                      <View style={[styles.flatExamBadge, { backgroundColor: c.primary }]}>
+                        <Text style={[styles.flatExamBadgeText, { color: c.primaryForeground }]}>
                           {index + 1}
                         </Text>
                       </View>
                       <View style={styles.flatExamInfo}>
-                        <Text style={styles.flatExamName}>{item.name}</Text>
-                        <Text style={styles.flatExamDesc}>
+                        <Text style={[styles.flatExamName, { color: c.text }]}>{item.name}</Text>
+                        <Text style={[styles.flatExamDesc, { color: c.mutedForeground }]}>
                           {item.description}
                         </Text>
                       </View>
@@ -349,7 +351,7 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 20,
     paddingBottom: 10,
   },
-  root: { flex: 1, backgroundColor: "#f8fafc" },
+  root: { flex: 1 },
   topBar: { backgroundColor: "transparent", paddingBottom: 16 },
   topBarInner: {
     flexDirection: "row",
@@ -364,18 +366,17 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  backIcon: { fontSize: 32, fontWeight: "300", marginTop: -4 },
   logoBadge: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 4,
     height: 50,
   },
-  logoText: { color: "#fff", fontSize: 22, fontWeight: "800" },
+  logoText: { fontSize: 22, fontWeight: "800" },
   headerTitle: {
     fontSize: 24,
     fontWeight: "800",
-    color: "#fff",
     paddingHorizontal: 20,
     paddingTop: 4,
   },
@@ -385,14 +386,11 @@ const styles = StyleSheet.create({
   examCard: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
     borderRadius: 16,
     padding: 16,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
-  examCardDisabled: { opacity: 0.6, backgroundColor: "#f1f5f9" },
   examIcon: {
     width: 56,
     height: 56,
@@ -410,33 +408,29 @@ const styles = StyleSheet.create({
     marginBottom: 4,
   },
   examLevel: { fontSize: 16, fontWeight: "800" },
-  examTitle: { fontSize: 14, color: "#64748b" },
-  examDescription: { fontSize: 13, color: "#475569" },
-  arrowIcon: { fontSize: 24, color: "#cbd5e1", marginLeft: 8 },
+  examTitle: { fontSize: 14 },
+  examDescription: { fontSize: 13 },
+  arrowIcon: { fontSize: 24, marginLeft: 8 },
   lockIcon: { fontSize: 16, marginLeft: 8, opacity: 0.6 },
 
   infoBox: {
-    backgroundColor: "#e0f2fe",
     borderRadius: 12,
     padding: 12,
     marginBottom: 16,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#bae6fd",
   },
-  infoText: { fontSize: 14, fontWeight: "700", color: "#0369a1" },
+  infoText: { fontSize: 14, fontWeight: "700" },
 
   // ✅ Style cho danh sách đề thi phẳng mới
   examListContainer: { paddingBottom: 24 },
   flatExamCard: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#fff",
     borderRadius: 14,
     padding: 14,
     marginBottom: 10,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 1 },
     shadowOpacity: 0.05,
@@ -447,13 +441,11 @@ const styles = StyleSheet.create({
     width: 36,
     height: 36,
     borderRadius: 10,
-    backgroundColor: TEAL,
     alignItems: "center",
     justifyContent: "center",
     marginRight: 12,
   },
   flatExamBadgeText: {
-    color: "#fff",
     fontWeight: "700",
     fontSize: 14,
   },
@@ -464,13 +456,13 @@ const styles = StyleSheet.create({
   flatExamName: {
     fontSize: 15,
     fontWeight: "700",
-    color: "#1e293b",
     marginBottom: 2,
   },
   flatExamDesc: {
     fontSize: 12,
-    color: "#64748b",
   },
+  // Nút "VÀO THI" — giữ màu cam CTA cố định (giống các nút CTA banner khác
+  // trong app), không đổi theo theme để luôn là điểm nhấn hành động rõ ràng.
   startBadge: {
     backgroundColor: "#F59E0B",
     paddingHorizontal: 10,

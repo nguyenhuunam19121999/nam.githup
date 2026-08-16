@@ -26,8 +26,7 @@ import {
 
 import { type KanjiItem } from "../assets/data_JLPT_kanji";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
-
-const BLUE = "#7C3AED"; /* old: #4ECDC4 */;
+import { useColors, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
 
 // ─────────────────────────────────────────────────────────────────────────────
 export function KanjiNotesModal({
@@ -37,6 +36,7 @@ export function KanjiNotesModal({
   item: KanjiItem | null;
   onClose: () => void;
 }) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const { currentUser, scopedKey } = useAuth();
   const isLoggedIn = currentUser !== null;
 
@@ -93,19 +93,24 @@ export function KanjiNotesModal({
         style={n.flex}
         behavior={Platform.OS === "ios" ? "padding" : "height"}
       >
-        <TouchableOpacity style={n.backdrop} activeOpacity={1} onPress={() => { Keyboard.dismiss(); onClose(); }} />
+        <TouchableOpacity
+          style={[n.backdrop, { backgroundColor: "rgba(0,0,0,0.5)" }]}
+          activeOpacity={1}
+          onPress={() => { Keyboard.dismiss(); onClose(); }}
+        />
 
-        <View style={n.sheet}>
+        <View style={[n.sheet, { backgroundColor: c.card }]}>
           {/* Handle + tiêu đề */}
-          <View style={n.handle} />
+          <View style={[n.handle, { backgroundColor: c.border }]} />
           <View style={n.sheetHeader}>
-            <Text style={n.sheetTitle}>📋 Ghi chú — {item.kanji}</Text>
+            <Text style={[n.sheetTitle, { color: c.text }]}>📋 Ghi chú — {item.kanji}</Text>
             <TouchableOpacity onPress={onClose} hitSlop={10}>
-              <Text style={n.closeText}>Đóng</Text>
+              <Text style={[n.closeText, { color: c.primary }]}>Đóng</Text>
             </TouchableOpacity>
           </View>
 
-          {/* Banner cảnh báo khi chưa đăng nhập */}
+          {/* Banner cảnh báo khi chưa đăng nhập — giữ màu vàng cảnh báo
+              cố định (không đổi theo theme) vì đây là màu ngữ nghĩa. */}
           {!isLoggedIn && (
             <View style={n.warningBanner}>
               <Text style={n.warningIcon}>🔒</Text>
@@ -116,11 +121,11 @@ export function KanjiNotesModal({
           )}
 
           {/* Thông tin chữ mini */}
-          <View style={n.infoChip}>
-            <Text style={n.infoKanji}>{item.kanji}</Text>
-            <Text style={n.infoHanViet}> {item.hanviet?.[0] ?? ""}</Text>
-            <Text style={n.infoDash}> — </Text>
-            <Text style={n.infoMeaning} numberOfLines={1}>
+          <View style={[n.infoChip, { backgroundColor: c.muted }]}>
+            <Text style={[n.infoKanji, { color: c.destructive }]}>{item.kanji}</Text>
+            <Text style={[n.infoHanViet, { color: c.mutedForeground }]}> {item.hanviet?.[0] ?? ""}</Text>
+            <Text style={[n.infoDash, { color: c.mutedForeground }]}> — </Text>
+            <Text style={[n.infoMeaning, { color: c.text }]} numberOfLines={1}>
               {item.meanings_vi?.[0] ?? ""}
             </Text>
           </View>
@@ -129,7 +134,11 @@ export function KanjiNotesModal({
           <ScrollView style={n.scrollArea} keyboardShouldPersistTaps="handled" showsVerticalScrollIndicator={false}>
             <TextInput
               ref={inputRef}
-              style={[n.textInput, !isLoggedIn && n.textInputGuest]}
+              style={[
+                n.textInput,
+                { backgroundColor: c.muted, borderColor: c.border, color: c.text },
+                !isLoggedIn && { backgroundColor: c.muted, color: c.mutedForeground },
+              ]}
               value={loading ? "Đang tải..." : text}
               onChangeText={setText}
               placeholder={
@@ -137,7 +146,7 @@ export function KanjiNotesModal({
                   ? "Viết ghi chú của bạn ở đây…\nVí dụ: mẹo nhớ, cách dùng, ví dụ thêm…"
                   : "Bạn đang xem ở chế độ khách. Đăng nhập để lưu ghi chú."
               }
-              placeholderTextColor="#94a3b8"
+              placeholderTextColor={c.mutedForeground}
               multiline
               textAlignVertical="top"
               editable={isLoggedIn && !loading}
@@ -147,49 +156,58 @@ export function KanjiNotesModal({
 
           {/* Nút Lưu */}
           <TouchableOpacity
-            style={[n.saveBtn, (!isLoggedIn || loading) && n.saveBtnDisabled]}
+            style={[
+              n.saveBtn,
+              { backgroundColor: c.primary },
+              (!isLoggedIn || loading) && { backgroundColor: c.muted },
+            ]}
             onPress={handleSave}
             activeOpacity={0.85}
             disabled={!isLoggedIn || loading}
           >
-            <Text style={[n.saveBtnText, (!isLoggedIn || loading) && n.saveBtnTextDisabled]}>
+            <Text
+              style={[
+                n.saveBtnText,
+                { color: c.primaryForeground },
+                (!isLoggedIn || loading) && { color: c.mutedForeground },
+              ]}
+            >
               {saved ? "✓ Đã lưu" : "💾 Lưu ghi chú"}
             </Text>
           </TouchableOpacity>
         </View>
+        <ThemeFadeOverlay />
       </KeyboardAvoidingView>
     </Modal>
   );
 }
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
+// ─── Styles (chỉ layout — màu gán inline theo theme ở trên) ───────────────────
 const n = StyleSheet.create({
   flex: { flex: 1, justifyContent: "flex-end" },
 
   // Lớp tối phía sau sheet
   backdrop: {
     ...StyleSheet.absoluteFillObject,
-    backgroundColor: "rgba(0,0,0,0.5)",
   },
 
   sheet: {
-    backgroundColor: "#fff",
     borderTopLeftRadius: 24, borderTopRightRadius: 24,
     paddingHorizontal: 20, paddingBottom: 36, paddingTop: 12,
     maxHeight: "85%",
   },
   handle: {
     alignSelf: "center", width: 40, height: 4,
-    borderRadius: 2, backgroundColor: "#e2e8f0", marginBottom: 14,
+    borderRadius: 2, marginBottom: 14,
   },
   sheetHeader: {
     flexDirection: "row", justifyContent: "space-between",
     alignItems: "center", marginBottom: 14,
   },
-  sheetTitle: { fontSize: 17, fontWeight: "800", color: "#0f172a" },
-  closeText:  { fontSize: 15, color: BLUE, fontWeight: "600" },
+  sheetTitle: { fontSize: 17, fontWeight: "800" },
+  closeText:  { fontSize: 15, fontWeight: "600" },
 
-  // Banner cảnh báo chưa đăng nhập
+  // Banner cảnh báo chưa đăng nhập — màu vàng cố định (ngữ nghĩa, không theo theme)
   warningBanner: {
     flexDirection: "row", alignItems: "flex-start",
     backgroundColor: "#fffbeb", borderRadius: 12,
@@ -202,35 +220,28 @@ const n = StyleSheet.create({
   // Chip thông tin chữ
   infoChip: {
     flexDirection: "row", alignItems: "center",
-    backgroundColor: "#f8fafc", borderRadius: 10,
+    borderRadius: 10,
     paddingHorizontal: 12, paddingVertical: 8,
     marginBottom: 12,
   },
-  infoKanji:   { fontSize: 20, fontWeight: "700", color: "#E03131" },
-  infoHanViet: { fontSize: 13, fontWeight: "700", color: "#64748b" },
-  infoDash:    { fontSize: 13, color: "#94a3b8" },
-  infoMeaning: { flex: 1, fontSize: 13, color: "#0f172a" },
+  infoKanji:   { fontSize: 20, fontWeight: "700" },
+  infoHanViet: { fontSize: 13, fontWeight: "700" },
+  infoDash:    { fontSize: 13 },
+  infoMeaning: { flex: 1, fontSize: 13 },
 
   scrollArea: { maxHeight: 220, marginBottom: 14 },
 
   // TextInput
   textInput: {
-    backgroundColor: "#f8fafc",
-    borderRadius: 14, borderWidth: 1.5, borderColor: "#e2e8f0",
-    padding: 14, fontSize: 15, color: "#0f172a",
+    borderRadius: 14, borderWidth: 1.5,
+    padding: 14, fontSize: 15,
     lineHeight: 22, minHeight: 160,
-  },
-  textInputGuest: {
-    backgroundColor: "#f1f5f9", borderColor: "#e2e8f0",
-    color: "#94a3b8",
   },
 
   // Nút lưu
   saveBtn: {
-    backgroundColor: BLUE, borderRadius: 14,
+    borderRadius: 14,
     paddingVertical: 14, alignItems: "center",
   },
-  saveBtnDisabled: { backgroundColor: "#e2e8f0" },
-  saveBtnText:     { color: "#fff", fontWeight: "700", fontSize: 16 },
-  saveBtnTextDisabled: { color: "#94a3b8" },
+  saveBtnText: { fontWeight: "700", fontSize: 16 },
 });

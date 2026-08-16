@@ -20,19 +20,15 @@ import {
   TouchableOpacity,
   View,
 } from "react-native";
-// import { SafeAreaView } from "react-native-safe-area-context";
-
-// import { LinearGradient } from "expo-linear-gradient";
 import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
-
-// ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#004370";
-const TEAL_DARK = "#004370";
-// const GRAD = [TEAL, TEAL_DARK] as const;
-const TEXT_COLOR = "#e47b0b";
+import { useColors, useThemeMode } from "../artifacts/mirai-jp/hooks/useColors";
 
 export default function GrammarDetailScreen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const router = useRouter();
   const params = useLocalSearchParams<{ id?: string }>();
   const id = typeof params.id === "string" ? params.id : "";
@@ -42,19 +38,19 @@ export default function GrammarDetailScreen() {
     return (
       <>
         <Stack.Screen options={{ headerShown: false }} />
-        <View style={s.root}>
-          <View style={s.header}>
+        <View style={[s.root, { backgroundColor: c.background }]}>
+          <View style={[s.header, { backgroundColor: c.background }]}>
             <TouchableOpacity
               onPress={() => router.back()}
-              style={s.backBtnHeader}
+              style={[s.backBtnHeader, { backgroundColor: c.card, borderColor: c.border }]}
             >
-              <Text style={s.backIcon}>‹</Text>
+              <Text style={[s.backIcon, { color: c.primary }]}>‹</Text>
             </TouchableOpacity>
-            <Text style={s.headerTitle}>Chi tiết Ngữ pháp</Text>
+            <Text style={[s.headerTitle, { color: c.primary }]}>Chi tiết Ngữ pháp</Text>
             <View style={{ width: 42 }} />
           </View>
           <View style={s.empty}>
-            <Text style={s.emptyText}>Không tìm thấy mẫu ngữ pháp.</Text>
+            <Text style={[s.emptyText, { color: c.text }]}>Không tìm thấy mẫu ngữ pháp.</Text>
           </View>
         </View>
       </>
@@ -64,18 +60,18 @@ export default function GrammarDetailScreen() {
   return (
     <>
       <Stack.Screen options={{ headerShown: false }} />
-      <View style={s.root}>
-        <StatusBar barStyle="dark-content" backgroundColor="#f1f5f9" />
+      <View style={[s.root, { backgroundColor: c.background }]}>
+        <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
 
         {/* Top bar */}
-        <View style={s.header}>
+        <View style={[s.header, { backgroundColor: c.background }]}>
           <TouchableOpacity
             onPress={() => router.back()}
-            style={s.backBtnHeader}
+            style={[s.backBtnHeader, { backgroundColor: c.card, borderColor: c.border }]}
           >
-            <Text style={s.backIcon}>‹</Text>
+            <Text style={[s.backIcon, { color: c.primary }]}>‹</Text>
           </TouchableOpacity>
-          <Text style={s.headerTitle}>Chi tiết Ngữ pháp</Text>
+          <Text style={[s.headerTitle, { color: c.primary }]}>Chi tiết Ngữ pháp</Text>
           <View style={{ width: 42 }} />
         </View>
 
@@ -85,33 +81,33 @@ export default function GrammarDetailScreen() {
           showsVerticalScrollIndicator={false}
         >
           {/* Card chi tiết */}
-          <View style={s.card}>
+          <View style={[s.card, { backgroundColor: c.card }]}>
             <View style={s.cardHeader}>
               <View style={{ flex: 1 }}>
-                <Text style={s.pattern}>{grammar.pattern}</Text>
-                <Text style={s.meaning}>{grammar.meaning}</Text>
+                <Text style={[s.pattern, { color: c.primary }]}>{grammar.pattern}</Text>
+                <Text style={[s.meaning, { color: c.text }]}>{grammar.meaning}</Text>
               </View>
               <View style={s.headerActions}>
-                <View style={s.actionBtn}>
-                  <Text style={s.actionIcon}>📌</Text>
+                <View style={[s.actionBtn, { borderColor: c.primary }]}>
+                  <Text style={[s.actionIcon, { color: c.mutedForeground }]}>📌</Text>
                 </View>
               </View>
             </View>
 
-            <View style={s.levelBadge}>
+            <View style={[s.levelBadge, { backgroundColor: c.accent }]}>
               <Text style={s.levelBadgeText}>JLPT {grammar.level}</Text>
             </View>
 
             {(grammar.week || grammar.day) && (
               <View style={s.weekRow}>
                 {grammar.week && (
-                  <Text style={s.weekText}>Tuần {grammar.week}</Text>
+                  <Text style={[s.weekText, { color: c.mutedForeground }]}>Tuần {grammar.week}</Text>
                 )}
                 {grammar.day && (
-                  <Text style={s.weekText}> · Ngày {grammar.day}</Text>
+                  <Text style={[s.weekText, { color: c.mutedForeground }]}> · Ngày {grammar.day}</Text>
                 )}
                 {(grammar as any).day_title && (
-                  <Text style={s.dayTitle}>
+                  <Text style={[s.dayTitle, { color: c.primary }]}>
                     {" "}
                     · {(grammar as any).day_title}
                   </Text>
@@ -119,35 +115,38 @@ export default function GrammarDetailScreen() {
               </View>
             )}
 
-            <Text style={s.sectionTitle}>Cấu trúc</Text>
+            <Text style={[s.sectionTitle, { color: c.text }]}>Cấu trúc</Text>
             <View style={s.sectionContent}>
-              <Text style={s.bulletDot}>◆</Text>
-              <Text style={s.sectionBody}>{grammar.structure}</Text>
+              <Text style={[s.bulletDot, { color: c.accent }]}>◆</Text>
+              <Text style={[s.sectionBody, { color: c.text }]}>{grammar.structure}</Text>
             </View>
 
-            <View style={s.divider} />
+            <View style={[s.divider, { backgroundColor: c.border }]} />
 
-            <Text style={s.sectionTitle}>Giải thích</Text>
+            <Text style={[s.sectionTitle, { color: c.text }]}>Giải thích</Text>
             <View style={s.sectionContent}>
-              <Text style={s.bulletDot}>◆</Text>
-              <Text style={s.sectionBody}>{grammar.explanation}</Text>
+              <Text style={[s.bulletDot, { color: c.accent }]}>◆</Text>
+              <Text style={[s.sectionBody, { color: c.text }]}>{grammar.explanation}</Text>
             </View>
 
             {grammar.notes && (
               <>
-                <View style={s.divider} />
-                <Text style={s.sectionTitle}>Ghi chú</Text>
+                <View style={[s.divider, { backgroundColor: c.border }]} />
+                <Text style={[s.sectionTitle, { color: c.text }]}>Ghi chú</Text>
                 <View style={s.sectionContent}>
-                  <Text style={s.bulletDot}>◆</Text>
-                  <Text style={s.sectionBody}>{grammar.notes}</Text>
+                  <Text style={[s.bulletDot, { color: c.accent }]}>◆</Text>
+                  <Text style={[s.sectionBody, { color: c.text }]}>{grammar.notes}</Text>
                 </View>
               </>
             )}
 
             {grammar.caution ? (
               <>
-                <View style={s.divider} />
-                <Text style={s.sectionTitle}>⚠️ Chú ý</Text>
+                <View style={[s.divider, { backgroundColor: c.border }]} />
+                <Text style={[s.sectionTitle, { color: c.text }]}>⚠️ Chú ý</Text>
+                {/* Hộp cảnh báo giữ tông màu cam/vàng cố định — không đổi theo
+                    theme để luôn dễ nhận biết là cảnh báo, giống cách xử lý
+                    màu đúng/sai trong Quiz. */}
                 <View style={s.cautionBox}>
                   <Text style={s.cautionText}>{grammar.caution}</Text>
                 </View>
@@ -156,12 +155,15 @@ export default function GrammarDetailScreen() {
 
             {grammar.related_forms && grammar.related_forms.length > 0 && (
               <>
-                <View style={s.divider} />
-                <Text style={s.sectionTitle}>Dạng liên quan</Text>
+                <View style={[s.divider, { backgroundColor: c.border }]} />
+                <Text style={[s.sectionTitle, { color: c.text }]}>Dạng liên quan</Text>
                 <View style={s.relatedRow}>
                   {grammar.related_forms.map((f, i) => (
-                    <View key={i} style={s.relatedChip}>
-                      <Text style={s.relatedChipText}>{f}</Text>
+                    <View
+                      key={i}
+                      style={[s.relatedChip, { backgroundColor: c.muted, borderColor: c.border }]}
+                    >
+                      <Text style={[s.relatedChipText, { color: c.primary }]}>{f}</Text>
                     </View>
                   ))}
                 </View>
@@ -170,19 +172,19 @@ export default function GrammarDetailScreen() {
 
             {grammar.examples && grammar.examples.length > 0 && (
               <>
-                <View style={s.divider} />
-                <Text style={s.sectionTitle}>Ví dụ</Text>
+                <View style={[s.divider, { backgroundColor: c.border }]} />
+                <Text style={[s.sectionTitle, { color: c.text }]}>Ví dụ</Text>
                 {grammar.examples.map((ex, i) => (
                   <View key={i} style={s.exampleBlock}>
-                    <Text style={s.exampleJp}>
+                    <Text style={[s.exampleJp, { color: c.primary }]}>
                       {i + 1}. {ex.jp}
                     </Text>
                     {(ex as any).paraphrase ? (
-                      <Text style={s.exampleParaphrase}>
+                      <Text style={[s.exampleParaphrase, { color: c.mutedForeground }]}>
                         {(ex as any).paraphrase}
                       </Text>
                     ) : null}
-                    <Text style={s.exampleVi}>→ {ex.vi}</Text>
+                    <Text style={[s.exampleVi, { color: c.text }]}>→ {ex.vi}</Text>
                   </View>
                 ))}
               </>
@@ -204,24 +206,20 @@ export default function GrammarDetailScreen() {
 const s = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: "#f1f5f9",
   },
   scroll: { flex: 1 },
   scrollContent: { padding: 14 },
   card: {
-    backgroundColor: "#fff",
     borderRadius: 14,
     padding: 18,
   },
   cardHeader: { flexDirection: "row", alignItems: "flex-start" },
   pattern: {
-    color: TEAL,
     fontSize: 32,
     fontWeight: "800",
     marginBottom: 6,
   },
   meaning: {
-    color: "#334155",
     fontSize: 16,
     lineHeight: 22,
   },
@@ -233,32 +231,29 @@ const s = StyleSheet.create({
     height: 36,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: TEAL,
     alignItems: "center",
     justifyContent: "center",
   },
-  actionIcon: { fontSize: 16, color: "#475569" },
+  actionIcon: { fontSize: 16 },
 
   levelBadge: {
     alignSelf: "flex-start",
-    backgroundColor: TEXT_COLOR,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 6,
     marginTop: 14,
   },
+  // Chữ trên badge JLPT luôn trắng — nền badge (c.accent) luôn đủ đậm để tương phản
   levelBadgeText: { color: "#fff", fontWeight: "700", fontSize: 13 },
 
   sectionTitle: {
     fontSize: 20,
     fontWeight: "800",
-    color: "#0f172a",
     marginTop: 18,
     marginBottom: 8,
   },
   sectionContent: { flexDirection: "row" },
   bulletDot: {
-    color: TEXT_COLOR,
     fontSize: 14,
     marginRight: 8,
     marginTop: 4,
@@ -267,21 +262,19 @@ const s = StyleSheet.create({
     flex: 1,
     fontSize: 15,
     lineHeight: 24,
-    color: "#0f172a",
   },
 
   divider: {
     height: StyleSheet.hairlineWidth,
-    backgroundColor: "#e2e8f0",
     marginTop: 18,
   },
 
   exampleBlock: { marginTop: 10 },
-  exampleJp: { fontSize: 15, color: TEAL, lineHeight: 22, fontWeight: "600" },
-  exampleVi: { fontSize: 14, color: TEAL_DARK, marginTop: 2 },
+  exampleJp: { fontSize: 15, lineHeight: 22, fontWeight: "600" },
+  exampleVi: { fontSize: 14, marginTop: 2 },
 
   empty: { flex: 1, alignItems: "center", justifyContent: "center" },
-  emptyText: { color: TEXT_COLOR, fontSize: 14 },
+  emptyText: { fontSize: 14 },
 
   weekRow: {
     flexDirection: "row",
@@ -289,8 +282,9 @@ const s = StyleSheet.create({
     marginTop: 8,
     marginBottom: 4,
   },
-  weekText: { fontSize: 13, color: "#64748b", fontWeight: "600" },
-  dayTitle: { fontSize: 13, color: TEAL, fontWeight: "600" },
+  weekText: { fontSize: 13, fontWeight: "600" },
+  dayTitle: { fontSize: 13, fontWeight: "600" },
+  // Hộp cảnh báo — giữ màu cam/vàng cố định (semantic warning), không theo theme
   cautionBox: {
     backgroundColor: "#fff7ed",
     borderRadius: 8,
@@ -301,17 +295,14 @@ const s = StyleSheet.create({
   cautionText: { fontSize: 14, color: "#9a3412", lineHeight: 20 },
   relatedRow: { flexDirection: "row", flexWrap: "wrap", gap: 8, marginTop: 4 },
   relatedChip: {
-    backgroundColor: "#f1f5f9",
     borderRadius: 20,
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
-  relatedChipText: { fontSize: 13, color: TEAL_DARK, fontWeight: "600" },
+  relatedChipText: { fontSize: 13, fontWeight: "600" },
   exampleParaphrase: {
     fontSize: 13,
-    color: "#94a3b8",
     fontStyle: "italic",
     marginTop: 2,
   },
@@ -322,23 +313,19 @@ const s = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 56,
     paddingBottom: 16,
-    backgroundColor: "#f1f5f9",
   },
   backBtnHeader: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
   },
   backIcon: {
     fontSize: 28,
-    color: TEAL_DARK,
     fontWeight: "300",
     marginTop: -4,
   },
-  headerTitle: { fontSize: 18, fontWeight: "700", color: TEAL_DARK },
+  headerTitle: { fontSize: 18, fontWeight: "700" },
 });

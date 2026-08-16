@@ -20,9 +20,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { LinearGradient } from "expo-linear-gradient";
-
-const TEAL = "#004370" /* old: #4ECDC4 */;
-const GRAD = ["#004370", "#004370"]  as const;
+import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 interface Book {
   id: string;
@@ -40,6 +38,8 @@ const BOOKS: Book[] = [
 ];
 
 // ── Vẽ icon bìa sách Mimikara (nền trắng, chữ "日本語" đỏ, dải đỏ ở dưới) ──
+// Giữ nguyên màu thương hiệu của bìa sách thật (đỏ/vàng cam) — không đổi
+// theo theme, vì đây là bản sao thiết kế bìa sách in thật, không phải UI app.
 function MimikaraCover({ level }: { level: "N3" | "N2" }) {
   return (
     <View style={cover.wrap}>
@@ -66,6 +66,7 @@ function SoumatomeCover({ level }: { level: "N3" | "N2" }) {
 }
 
 export default function BookSelectScreen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const router = useRouter();
   const params = useLocalSearchParams<{ level?: string }>();
   const level = params.level === "N2" ? "N2" : "N3";
@@ -80,15 +81,15 @@ export default function BookSelectScreen() {
   };
 
   return (
-    <View style={s.root}>
-      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
+    <View style={[s.root, { backgroundColor: c.background }]}>
+      <StatusBar barStyle="light-content" backgroundColor={c.primary} />
+      <LinearGradient colors={[c.primary, c.primary]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
       <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
         <View style={s.topBarInner}>
           <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7} hitSlop={10}>
-            <Text style={s.backIcon}>‹</Text>
+            <Text style={[s.backIcon, { color: c.primaryForeground }]}>‹</Text>
           </TouchableOpacity>
-          <Text style={s.topTitle}>Chọn sách · JLPT {level}</Text>
+          <Text style={[s.topTitle, { color: c.primaryForeground }]}>Chọn sách · JLPT {level}</Text>
           <View style={{ width: 40 }} />
         </View>
       </SafeAreaView>
@@ -102,7 +103,7 @@ export default function BookSelectScreen() {
         {books.map((book) => (
           <TouchableOpacity
             key={book.id}
-            style={s.bookCard}
+            style={[s.bookCard, { backgroundColor: c.card, borderColor: c.border }]}
             onPress={() => handleSelect(book)}
             activeOpacity={0.7}
           >
@@ -115,7 +116,7 @@ export default function BookSelectScreen() {
               )}
             </View>
             {/* Tên sách bên phải */}
-            <Text style={s.bookLabel} numberOfLines={1}>
+            <Text style={[s.bookLabel, { color: c.text }]} numberOfLines={1}>
               {book.label}
             </Text>
           </TouchableOpacity>
@@ -127,7 +128,7 @@ export default function BookSelectScreen() {
   );
 }
 
-// ─── Style chung của trang ────────────────────────────────────────────────────
+// ─── Style chung của trang (chỉ layout — màu gán inline theo theme ở trên) ────
 const s = StyleSheet.create({
 
    headerGradient: {
@@ -135,9 +136,9 @@ const s = StyleSheet.create({
     borderBottomRightRadius: 20,
     paddingBottom: 10,
   },
-  root: { flex: 1, backgroundColor: "#f1f5f9" },
+  root: { flex: 1 },
 
-  // Thanh xanh trên cùng
+  // Thanh trên cùng
   topBar: { backgroundColor: "transparent" },
   topBarInner: {
     flexDirection: "row",
@@ -152,10 +153,9 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  backIcon: { fontSize: 32, fontWeight: "300", marginTop: -4 },
   topTitle: {
     flex: 1,
-    color: "#fff",
     fontSize: 18,
     fontWeight: "800",
     textAlign: "center",
@@ -169,12 +169,10 @@ const s = StyleSheet.create({
   bookCard: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#ffffff",
     borderRadius: 32,
     paddingVertical: 12,
     paddingHorizontal: 14,
     borderWidth: 1.5,
-    borderColor: "#bfdbfe",
     marginBottom: 14,
     minHeight: 78,
   },
@@ -190,12 +188,13 @@ const s = StyleSheet.create({
     flex: 1,
     fontSize: 18,
     fontWeight: "700",
-    color: "#0f172a",
     marginLeft: 14,
   },
 });
 
 // ─── Style cho các bìa sách (Mimikara / Soumatome) ────────────────────────────
+// Giữ nguyên hex cố định — đây là màu thương hiệu bìa sách thật (đỏ Mimikara,
+// vàng cam Soumatome), không phải màu giao diện app nên KHÔNG đổi theo theme.
 const cover = StyleSheet.create({
   // Khung chung của bìa sách: vuông trắng có viền xám nhạt
   wrap: {

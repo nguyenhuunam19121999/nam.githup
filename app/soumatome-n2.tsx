@@ -23,12 +23,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getKanjiByBook, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { getGrammarByBook, type GrammarItem } from "../assets/data_nn";
 import { getVocab, getVocabByBook, type RawVocab } from "../assets/vocab";
-
-const TEAL = "#004370";
-const GRAD = ["#004370", "#004370"] as const;
-const TEXT_COLOR_kanji = "#004370";
-const TEXT_COLOR_vocab = "#004370";
-const TEXT_COLOR_grammar = "#004370";
+import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 type Part = "kanji" | "vocab" | "grammar";
 
@@ -36,36 +31,18 @@ interface PartConfig {
   key: Part;
   label: string;
   jpLabel: string;
-  color: string;
   weeks: number;
   lessonsPerWeek: number;
 }
 
-const PARTS: PartConfig[] = [
-  {
-    key: "kanji",
-    label: "Hán tự",
-    jpLabel: "漢字",
-    color: TEXT_COLOR_kanji,
-    weeks: 8,
-    lessonsPerWeek: 6,
-  },
-  {
-    key: "vocab",
-    label: "Từ vựng",
-    jpLabel: "語彙",
-    color: TEXT_COLOR_vocab,
-    weeks: 8,
-    lessonsPerWeek: 6,
-  },
-  {
-    key: "grammar",
-    label: "Ngữ pháp",
-    jpLabel: "文法",
-    color: TEXT_COLOR_grammar,
-    weeks: 8,
-    lessonsPerWeek: 0,
-  },
+// Bỏ "color" cố định khỏi config — 3 phần dùng chung c.primary hiện tại của theme,
+// gán ở nơi dùng (bên trong component, nơi có quyền truy cập c).
+type PartConfigBase = Omit<PartConfig, "color">;
+
+const PARTS_BASE: PartConfigBase[] = [
+  { key: "kanji", label: "Hán tự", jpLabel: "漢字", weeks: 8, lessonsPerWeek: 6 },
+  { key: "vocab", label: "Từ vựng", jpLabel: "語彙", weeks: 8, lessonsPerWeek: 6 },
+  { key: "grammar", label: "Ngữ pháp", jpLabel: "文法", weeks: 8, lessonsPerWeek: 0 },
 ];
 
 // ─── Group kanji/vocab by week → lesson ──────────────────────────────────────
@@ -125,9 +102,13 @@ function groupGrammarByWeek(
 
 // ─── Main Screen ─────────────────────────────────────────────────────────────
 export default function SoumatomeN2Screen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const router = useRouter();
   const [activePart, setActivePart] = useState<Part>("kanji");
   const [expandedWeeks, setExpandedWeeks] = useState<Set<number>>(new Set([1]));
+
+  // 3 phần dùng chung màu primary hiện tại của theme
+  const PARTS: PartConfig[] = PARTS_BASE.map((p) => ({ ...p, color: c.primary }));
 
   const kanjiData = useMemo(
     () =>
@@ -162,7 +143,6 @@ export default function SoumatomeN2Screen() {
         : 8;
     return groupGrammarByWeek(grammarData, actualWeeks);
   }, [grammarData]);
-  // const grammarWeeks = useMemo(() => groupGrammarByWeek(grammarData, 7), [grammarData]);
 
   const currentPart = PARTS.find((p) => p.key === activePart)!;
 
@@ -223,7 +203,7 @@ export default function SoumatomeN2Screen() {
     weeks.map(({ week, total, lessons }) => {
       const isOpen = expandedWeeks.has(week);
       return (
-        <View key={week} style={s.weekCard}>
+        <View key={week} style={[s.weekCard, { backgroundColor: c.card }]}>
           {/* Week header row */}
           <TouchableOpacity
             style={[s.weekHeader, { borderLeftColor: color }]}
@@ -231,14 +211,14 @@ export default function SoumatomeN2Screen() {
             activeOpacity={0.75}
           >
             <View style={[s.weekBadge, { backgroundColor: color }]}>
-              <Text style={s.weekBadgeJP}>第{week}週</Text>
-              <Text style={s.weekBadgeVI}>Tuần {week}</Text>
+              <Text style={[s.weekBadgeJP, { color: c.primaryForeground }]}>第{week}週</Text>
+              <Text style={[s.weekBadgeVI, { color: c.primaryForeground + "d9" }]}>Tuần {week}</Text>
             </View>
             <View style={s.weekMeta}>
-              <Text style={s.weekMetaLessons}>{lessons.length} bài học</Text>
-              <Text style={s.weekMetaCount}>{total} mục</Text>
+              <Text style={[s.weekMetaLessons, { color: c.text }]}>{lessons.length} bài học</Text>
+              <Text style={[s.weekMetaCount, { color: c.mutedForeground }]}>{total} mục</Text>
             </View>
-            <View style={[s.progressBar]}>
+            <View style={[s.progressBar, { backgroundColor: c.muted }]}>
               <View
                 style={[
                   s.progressFill,
@@ -246,28 +226,28 @@ export default function SoumatomeN2Screen() {
                 ]}
               />
             </View>
-            <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
+            <Text style={[s.chevron, { color: c.mutedForeground }, isOpen && s.chevronOpen]}>›</Text>
           </TouchableOpacity>
 
           {/* Lessons inside week */}
           {isOpen && (
-            <View style={s.lessonsWrap}>
+            <View style={[s.lessonsWrap, { borderTopColor: c.border }]}>
               {lessons.map(({ lesson, items }) => (
                 <TouchableOpacity
                   key={lesson}
-                  style={s.lessonRow}
+                  style={[s.lessonRow, { borderBottomColor: c.border }]}
                   onPress={() => onLesson(lesson)}
                   activeOpacity={0.7}
                 >
-                  <View style={[s.lessonNumCircle, { borderColor: color }]}>
+                  <View style={[s.lessonNumCircle, { borderColor: color, backgroundColor: c.muted }]}>
                     <Text style={[s.lessonNumText, { color }]}>{lesson}</Text>
                   </View>
                   <View style={s.lessonInfo}>
-                    <Text style={s.lessonTitle}>Bài {lesson}</Text>
-                    <Text style={s.lessonCount}>{items.length} mục</Text>
+                    <Text style={[s.lessonTitle, { color: c.text }]}>Bài {lesson}</Text>
+                    <Text style={[s.lessonCount, { color: c.mutedForeground }]}>{items.length} mục</Text>
                   </View>
                   <View style={[s.studyBtn, { backgroundColor: color }]}>
-                    <Text style={s.studyBtnText}>Học ▶</Text>
+                    <Text style={[s.studyBtnText, { color: c.primaryForeground }]}>Học ▶</Text>
                   </View>
                 </TouchableOpacity>
               ))}
@@ -281,31 +261,31 @@ export default function SoumatomeN2Screen() {
   const renderGrammarWeeks = () =>
     grammarWeeks.map(({ week, items }) => {
       const isOpen = expandedWeeks.has(week);
-      const color = TEXT_COLOR_grammar;
+      const color = c.primary;
       const preview = items
         .slice(0, 4)
         .map((g) => g.pattern)
         .join("・");
       return (
-        <View key={week} style={s.weekCard}>
+        <View key={week} style={[s.weekCard, { backgroundColor: c.card }]}>
           <TouchableOpacity
             style={[s.weekHeader, { borderLeftColor: color }]}
             onPress={() => toggleWeek(week)}
             activeOpacity={0.75}
           >
             <View style={[s.weekBadge, { backgroundColor: color }]}>
-              <Text style={s.weekBadgeJP}>第{week}週</Text>
-              <Text style={s.weekBadgeVI}>Tuần {week}</Text>
+              <Text style={[s.weekBadgeJP, { color: c.primaryForeground }]}>第{week}週</Text>
+              <Text style={[s.weekBadgeVI, { color: c.primaryForeground + "d9" }]}>Tuần {week}</Text>
             </View>
             <View style={s.weekMeta}>
-              <Text style={s.weekMetaLessons}>{items.length} mẫu</Text>
-              <Text style={s.weekMetaCount}>Ngữ pháp</Text>
+              <Text style={[s.weekMetaLessons, { color: c.text }]}>{items.length} mẫu</Text>
+              <Text style={[s.weekMetaCount, { color: c.mutedForeground }]}>Ngữ pháp</Text>
             </View>
-            <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
+            <Text style={[s.chevron, { color: c.mutedForeground }, isOpen && s.chevronOpen]}>›</Text>
           </TouchableOpacity>
           {isOpen && (
-            <View style={s.grammarContent}>
-              <Text style={s.grammarPreview} numberOfLines={2}>
+            <View style={[s.grammarContent, { borderTopColor: c.border }]}>
+              <Text style={[s.grammarPreview, { color: c.text }]} numberOfLines={2}>
                 {preview}
                 {items.length > 4 ? "..." : ""}
               </Text>
@@ -314,7 +294,7 @@ export default function SoumatomeN2Screen() {
                 onPress={() => goGrammarWeek(week, items.length)}
                 activeOpacity={0.8}
               >
-                <Text style={s.grammarStudyBtnText}>
+                <Text style={[s.grammarStudyBtnText, { color: c.primaryForeground }]}>
                   Học {items.length} mẫu ngữ pháp ▶
                 </Text>
               </TouchableOpacity>
@@ -325,11 +305,11 @@ export default function SoumatomeN2Screen() {
     });
 
   return (
-    <View style={s.root}>
-      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
+    <View style={[s.root, { backgroundColor: c.background }]}>
+      <StatusBar barStyle="light-content" backgroundColor={c.primary} />
 
       {/* ── Header ── */}
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
+      <LinearGradient colors={[c.primary, c.primary]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
         <SafeAreaView edges={["top", "left", "right"]}>
           <View style={s.headerTopRow}>
             <TouchableOpacity
@@ -337,29 +317,11 @@ export default function SoumatomeN2Screen() {
               onPress={() => router.back()}
               activeOpacity={0.7}
             >
-              <Text style={s.backIcon}>‹</Text>
+              <Text style={[s.backIcon, { color: c.primaryForeground }]}>‹</Text>
             </TouchableOpacity>
-            <Text style={s.headerTitle}>総まとめ N2</Text>
+            <Text style={[s.headerTitle, { color: c.primaryForeground }]}>総まとめ N2</Text>
             <View style={{ width: 40 }} />
           </View>
-
-          {/* Summary chips */}
-          {/* <View style={s.summaryRow}>
-            <View style={s.summaryChip}>
-              <Text style={s.summaryNum}>{kanjiData.length}</Text>
-              <Text style={s.summaryLbl}>Kanji</Text>
-            </View>
-            <View style={s.summaryDivider} />
-            <View style={s.summaryChip}>
-              <Text style={s.summaryNum}>{vocabData.length}</Text>
-              <Text style={s.summaryLbl}>Từ vựng</Text>
-            </View>
-            <View style={s.summaryDivider} />
-            <View style={s.summaryChip}>
-              <Text style={s.summaryNum}>{grammarData.length}</Text>
-              <Text style={s.summaryLbl}>Ngữ pháp</Text>
-            </View>
-          </View> */}
 
           {/* Part tabs */}
           <View style={s.partTabsRow}>
@@ -368,14 +330,23 @@ export default function SoumatomeN2Screen() {
               return (
                 <TouchableOpacity
                   key={p.key}
-                  style={[s.partTab, active && { backgroundColor: p.color }]}
+                  style={[
+                    s.partTab,
+                    { backgroundColor: c.primaryForeground + "2e" },
+                    active && { backgroundColor: p.color },
+                  ]}
                   onPress={() => switchPart(p.key)}
                   activeOpacity={0.8}
                 >
-                  <Text style={[s.partTabJP, active && s.partTabJPActive]}>
+                  <Text
+                    style={[
+                      s.partTabJP,
+                      { color: c.primaryForeground + "d9" },
+                      active && { color: c.primaryForeground },
+                    ]}
+                  >
                     {p.jpLabel}
                   </Text>
-                  {/* <Text style={[s.partTabVI, active && s.partTabVIActive]}>{p.label}</Text> */}
                 </TouchableOpacity>
               );
             })}
@@ -391,23 +362,23 @@ export default function SoumatomeN2Screen() {
       >
         {/* Section title */}
         <View style={[s.sectionLabel, { borderLeftColor: currentPart.color }]}>
-          <Text style={s.sectionLabelJP}>{currentPart.jpLabel}</Text>
-          <Text style={s.sectionLabelVI}> · {currentPart.label}</Text>
+          <Text style={[s.sectionLabelJP, { color: c.text }]}>{currentPart.jpLabel}</Text>
+          <Text style={[s.sectionLabelVI, { color: c.mutedForeground }]}> · {currentPart.label}</Text>
           {activePart !== "grammar" && (
-            <Text style={s.sectionLabelMeta}>
+            <Text style={[s.sectionLabelMeta, { color: c.mutedForeground }]}>
               {currentPart.weeks} tuần ·{" "}
               {currentPart.weeks * currentPart.lessonsPerWeek} bài
             </Text>
           )}
           {activePart === "grammar" && (
-            <Text style={s.sectionLabelMeta}>{currentPart.weeks} tuần</Text>
+            <Text style={[s.sectionLabelMeta, { color: c.mutedForeground }]}>{currentPart.weeks} tuần</Text>
           )}
         </View>
 
         {activePart === "kanji" &&
-          renderWeekLesson(kanjiWeeks, TEXT_COLOR_kanji, goKanjiLesson)}
+          renderWeekLesson(kanjiWeeks, c.primary, goKanjiLesson)}
         {activePart === "vocab" &&
-          renderWeekLesson(vocabWeeks as any, TEXT_COLOR_vocab, goVocabLesson)}
+          renderWeekLesson(vocabWeeks as any, c.primary, goVocabLesson)}
         {activePart === "grammar" && renderGrammarWeeks()}
 
         <View style={{ height: 16 }} />
@@ -417,11 +388,10 @@ export default function SoumatomeN2Screen() {
   );
 }
 
-// ─── Styles ──────────────────────────────────────────────────────────────────
+// ─── Styles (chỉ layout — màu gán inline theo theme ở trên) ───────────────────
 const s = StyleSheet.create({
   root: { 
     flex: 1, 
-    backgroundColor: "#f1f5f9" 
   },
   headerGradient: {
     borderBottomLeftRadius: 20,
@@ -445,33 +415,17 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  backIcon: { fontSize: 32, fontWeight: "300", marginTop: -4 },
   headerTitle: {
-    color: "#fff",
     fontSize: 20,
     fontWeight: "900",
     letterSpacing: 0.5,
   },
   headerSub: {
-    color: "rgba(255,255,255,0.75)",
     fontSize: 11,
     fontWeight: "600",
     marginTop: 2,
   },
-
-  /* Summary chips */
-  // summaryRow: {
-  //   flexDirection: "row",
-  //   justifyContent: "center",
-  //   alignItems: "center",
-  //   paddingVertical: 8,
-  //   paddingHorizontal: 20,
-  //   gap: 0,
-  // },
-  // summaryChip: { flex: 1, alignItems: "center" },
-  // summaryNum:  { color: "#fff", fontSize: 22, fontWeight: "900" },
-  // summaryLbl:  { color: "rgba(255,255,255,0.75)", fontSize: 11, fontWeight: "600", marginTop: 1 },
-  // summaryDivider: { width: 1, height: 32, backgroundColor: "rgba(255,255,255,0.3)" },
 
   /* Part tabs */
   partTabsRow: {
@@ -486,16 +440,11 @@ const s = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 8,
     borderRadius: 12,
-    backgroundColor: "rgba(255,255,255,0.18)",
   },
   partTabJP: {
-    color: "rgba(255,255,255,0.85)",
     fontSize: 16,
     fontWeight: "900",
   },
-  partTabJPActive: { color: "#fff" },
-  // partTabVI:       { color: "rgba(255,255,255,0.65)", fontSize: 9,  fontWeight: "600", marginTop: 1 },
-  // partTabVIActive: { color: "rgba(255,255,255,0.9)" },
 
   /* Scroll */
   scroll: { flex: 1 },
@@ -510,13 +459,12 @@ const s = StyleSheet.create({
     marginBottom: 12,
     marginTop: 4,
   },
-  sectionLabelJP: { fontSize: 15, fontWeight: "900", color: "#0f172a" },
-  sectionLabelVI: { fontSize: 13, fontWeight: "700", color: "#475569" },
-  sectionLabelMeta: { fontSize: 11, color: "#94a3b8", marginLeft: "auto" },
+  sectionLabelJP: { fontSize: 15, fontWeight: "900" },
+  sectionLabelVI: { fontSize: 13, fontWeight: "700" },
+  sectionLabelMeta: { fontSize: 11, marginLeft: "auto" },
 
   /* Week card */
   weekCard: {
-    backgroundColor: "#fff",
     borderRadius: 14,
     marginBottom: 10,
     overflow: "hidden",
@@ -540,35 +488,32 @@ const s = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  weekBadgeJP: { color: "#fff", fontSize: 13, fontWeight: "900" },
+  weekBadgeJP: { fontSize: 13, fontWeight: "900" },
   weekBadgeVI: {
-    color: "rgba(255,255,255,0.85)",
     fontSize: 9,
     fontWeight: "700",
     marginTop: 1,
   },
   weekMeta: { flex: 1 },
-  weekMetaLessons: { fontSize: 15, fontWeight: "800", color: "#0f172a" },
-  weekMetaCount: { fontSize: 12, color: "#64748b", marginTop: 2 },
+  weekMetaLessons: { fontSize: 15, fontWeight: "800" },
+  weekMetaCount: { fontSize: 12, marginTop: 2 },
   progressBar: {
     width: 60,
     height: 4,
-    backgroundColor: "#e2e8f0",
     borderRadius: 2,
   },
   progressFill: { height: 4, borderRadius: 2 },
-  chevron: { fontSize: 24, color: "#94a3b8", transform: [{ rotate: "0deg" }] },
+  chevron: { fontSize: 24, transform: [{ rotate: "0deg" }] },
   chevronOpen: { transform: [{ rotate: "90deg" }] },
 
   /* Lessons inside week */
-  lessonsWrap: { borderTopWidth: 1, borderTopColor: "#f1f5f9" },
+  lessonsWrap: { borderTopWidth: 1 },
   lessonRow: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 14,
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#f8fafc",
     gap: 12,
   },
   lessonNumCircle: {
@@ -578,28 +523,25 @@ const s = StyleSheet.create({
     borderWidth: 1.5,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f8fafc",
   },
   lessonNumText: { fontSize: 13, fontWeight: "800" },
   lessonInfo: { flex: 1 },
-  lessonTitle: { fontSize: 14, fontWeight: "700", color: "#1e293b" },
-  lessonCount: { fontSize: 11, color: "#64748b", marginTop: 1 },
+  lessonTitle: { fontSize: 14, fontWeight: "700" },
+  lessonCount: { fontSize: 11, marginTop: 1 },
   studyBtn: {
     paddingHorizontal: 12,
     paddingVertical: 6,
     borderRadius: 8,
   },
-  studyBtnText: { color: "#fff", fontSize: 12, fontWeight: "800" },
+  studyBtnText: { fontSize: 12, fontWeight: "800" },
 
   /* Grammar specific */
   grammarContent: {
     padding: 14,
     borderTopWidth: 1,
-    borderTopColor: "#f1f5f9",
   },
   grammarPreview: {
     fontSize: 13,
-    color: "#475569",
     lineHeight: 20,
     marginBottom: 10,
     fontWeight: "500",
@@ -610,7 +552,6 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   grammarStudyBtnText: {
-    color: "#fff",
     fontSize: 14,
     fontWeight: "800",
   },

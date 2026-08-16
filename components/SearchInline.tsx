@@ -1,4 +1,4 @@
-//////////Searchinline.tsx ////////////
+// //////////Searchinline.tsx ////////////
 import React, {
   useState,
   useEffect,
@@ -19,6 +19,7 @@ import {
   ActivityIndicator,
   Alert,
   InteractionManager,
+  Animated,
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -38,6 +39,7 @@ import SentenceDetailInline from './SentenceDetailInline';
 import { SearchHistory, SearchHistoryRef } from './SearchHistory';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useAuth } from '../artifacts/mirai-jp/hooks/useAuth';
+import { useColors } from '../artifacts/mirai-jp/hooks/useColors';
 import SearchSuggestions from './SearchSuggestions';
 import { preloader } from '../services/KanjiPreloader';
 import { searchKanji } from '../assets/data_JLPT_kanji';
@@ -54,9 +56,19 @@ interface KanjiItem {
   jlpt?: string;
 }
 
-const TEAL = '#004370';
-const TEAL_DARK = '#004370';
-const BG_GRAY = '#f0f4f8';
+// ── Sunrise accent — đồng bộ với ô tìm kiếm nổi bật ở trang chủ ─────────────
+const SUN_CORAL = '#FF7A59';
+const SUN_GOLD = '#FFB238';
+const SUN_GRAD = [SUN_CORAL, SUN_GOLD] as const;
+
+// ── Chữ mẫu chạy tự động khi ô tìm kiếm đang trống ──────────────────────────
+const SEARCH_PLACEHOLDERS = [
+  'Tìm từ vựng, kanji, ngữ pháp...',
+  '単語・漢字・文法を検索...',
+  'Ví dụ: 食べる, ăn cơm...',
+  'Ví dụ: 水を飲む, uống nước...',
+  'Ví dụ: 日本語を勉強する, học tiếng Nhật...',
+];
 
 type SearchType = 'vocab' | 'kanji' | 'sentence' | 'grammar' | 'all';
 
@@ -249,6 +261,31 @@ export default function SearchInline({
   initialQuery = '',
   active = true,
 }: SearchInlineProps) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+
+  // ── Chữ mẫu chạy tự động trong ô tìm kiếm (chỉ hiện khi trống & chưa focus) ──
+  const [placeholderIdx, setPlaceholderIdx] = useState(0);
+  const [inputFocused, setInputFocused] = useState(false);
+  const placeholderOpacity = useRef(new Animated.Value(1)).current;
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      Animated.timing(placeholderOpacity, {
+        toValue: 0,
+        duration: 220,
+        useNativeDriver: true,
+      }).start(() => {
+        setPlaceholderIdx((p) => (p + 1) % SEARCH_PLACEHOLDERS.length);
+        Animated.timing(placeholderOpacity, {
+          toValue: 1,
+          duration: 260,
+          useNativeDriver: true,
+        }).start();
+      });
+    }, 2600);
+    return () => clearInterval(id);
+  }, []);
+
   const [query, setQuery] = useState(initialQuery);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
@@ -1011,35 +1048,37 @@ export default function SearchInline({
       if (item.type === 'vocab') {
         return (
           <TouchableOpacity
-            style={styles.vocabResultCard}
+            style={[styles.vocabResultCard, { backgroundColor: c.card }]}
             onPress={() => handleResultPress(item)}
             activeOpacity={0.7}
           >
-            <Text style={styles.vocabResultChar}>{item.title}</Text>
+            <Text style={[styles.vocabResultChar, { color: c.primary }]}>{item.title}</Text>
             <View style={styles.vocabResultInfo}>
-              <Text style={styles.vocabResultReading}>{item.subtitle}</Text>
-              <Text style={styles.vocabResultMeaning} numberOfLines={1}>
+              <Text style={[styles.vocabResultReading, { color: c.mutedForeground }]}>{item.subtitle}</Text>
+              <Text style={[styles.vocabResultMeaning, { color: c.mutedForeground }]} numberOfLines={1}>
                 {item.description}
               </Text>
               {item.sourceLabel ? (
-                <View style={styles.sourceBadge}>
-                  <Text style={styles.sourceBadgeText}>{item.sourceLabel}</Text>
+                <View style={[styles.sourceBadge, { backgroundColor: c.accent + '1a', borderColor: c.accent + '55' }]}>
+                  <Text style={[styles.sourceBadgeText, { color: c.accent }]}>{item.sourceLabel}</Text>
                 </View>
               ) : null}
             </View>
-            <Text style={styles.arrowIcon}>›</Text>
+            <Text style={[styles.arrowIcon, { color: c.mutedForeground }]}>›</Text>
           </TouchableOpacity>
         );
       }
       return (
         <TouchableOpacity
-          style={styles.resultCard}
+          style={[styles.resultCard, { backgroundColor: c.card }]}
           onPress={() => handleResultPress(item)}
           activeOpacity={0.7}
         >
-          <Text style={styles.resultTitle} numberOfLines={2}>{item.title}</Text>
-          <Text style={styles.resultSubtitle}>{item.subtitle}</Text>
-          <Text style={styles.resultDesc} numberOfLines={2}>{item.description}</Text>
+          <Text style={[styles.resultTitle, { color: c.text }]} numberOfLines={2}>{item.title}</Text>
+          <Text style={[styles.resultSubtitle, { color: c.mutedForeground }]}>{item.subtitle}</Text>
+          <Text style={[styles.resultDesc, { color: c.mutedForeground }]} numberOfLines={2}>{item.description}</Text>
+          {/* Badge phân loại Mẫu câu / Ngữ pháp — giữ 2 màu cố định (xanh lá /
+              vàng) để luôn phân biệt được loại kết quả, không phụ thuộc theme. */}
           <View
             style={[
               styles.resultTypeBadge,
@@ -1050,11 +1089,11 @@ export default function SearchInline({
               {item.type === 'sentence' ? 'Mẫu câu' : 'Ngữ pháp'}
             </Text>
           </View>
-          <Text style={styles.arrowIcon}>›</Text>
+          <Text style={[styles.arrowIcon, { color: c.mutedForeground }]}>›</Text>
         </TouchableOpacity>
       );
     },
-    [currentKanjiResults]
+    [currentKanjiResults, c]
   );
 
   const keyExtractor = useCallback((item: SearchResult) => item.id, []);
@@ -1062,9 +1101,9 @@ export default function SearchInline({
   const isStale = results !== deferredResults;
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: c.background }]}>
       <LinearGradient
-        colors={[TEAL, TEAL_DARK]}
+        colors={[c.primary, c.primary + 'cc']}
         start={{ x: 0, y: 0 }}
         end={{ x: 0, y: 1 }}
       >
@@ -1072,50 +1111,77 @@ export default function SearchInline({
         <View style={styles.header}>
           {onBack ? (
             <TouchableOpacity onPress={onBack} style={styles.backBtn}>
-              <Text style={styles.backIcon}>←</Text>
+              <Text style={[styles.backIcon, { color: c.primaryForeground }]}>←</Text>
             </TouchableOpacity>
           ) : null}
-          <View style={[styles.searchContainer, !onBack && { marginLeft: 0 }]}>
-            <TouchableOpacity
-              onPress={() => handleSearchPress()}
-              style={styles.searchIconBtn}
-              activeOpacity={0.7}
-            >
-              <Text style={styles.searchIconText}>🔍</Text>
-            </TouchableOpacity>
-            <TextInput
-              ref={inputRef}
-              style={styles.searchInput}
-              placeholder="Tìm từ vựng, kanji, mẫu câu, ngữ pháp..."
-              placeholderTextColor="#94a3b8"
-              value={query}
-              onChangeText={text => {
-                setQuery(text);
-                if (!text.trim()) {
-                  setResults([]);
-                  setLoading(false);
-                }
-              }}
-              returnKeyType="search"
-              onSubmitEditing={() => handleSearchPress()}
-              autoFocus={false}
-              onFocus={() => {
-                if (drawModalVisible) setDrawModalVisible(false);
-              }}
-            />
-            {(loading || isPending) ? (
-              <ActivityIndicator size="small" color={TEAL} style={{ marginHorizontal: 4 }} />
-            ) : (
-              <TouchableOpacity onPress={openDrawKanjiModal} style={styles.drawKanjiBtn}>
-                <Text style={styles.drawKanjiIcon}>✏️</Text>
+          <LinearGradient
+            colors={SUN_GRAD}
+            start={{ x: 0, y: 0 }}
+            end={{ x: 1, y: 1 }}
+            style={[styles.heroBorder, !onBack && { marginLeft: 0 }]}
+          >
+            <View style={[styles.searchContainer, { backgroundColor: c.card }]}>
+              <TouchableOpacity
+                onPress={() => handleSearchPress()}
+                style={[styles.searchIconBtn, { backgroundColor: c.muted }]}
+                activeOpacity={0.7}
+              >
+                <Text style={styles.searchIconText}>🔍</Text>
               </TouchableOpacity>
-            )}
-          </View>
+
+              <View style={styles.inputWrap}>
+                <TextInput
+                  ref={inputRef}
+                  style={[styles.searchInput, { color: c.text }]}
+                  placeholder=""
+                  value={query}
+                  onChangeText={text => {
+                    setQuery(text);
+                    if (!text.trim()) {
+                      setResults([]);
+                      setLoading(false);
+                    }
+                  }}
+                  returnKeyType="search"
+                  onSubmitEditing={() => handleSearchPress()}
+                  autoFocus={false}
+                  onFocus={() => {
+                    setInputFocused(true);
+                    if (drawModalVisible) setDrawModalVisible(false);
+                  }}
+                  onBlur={() => setInputFocused(false)}
+                />
+                {/* Chữ mẫu chạy tự động — chỉ hiện khi ô trống & chưa focus */}
+                {!query && !inputFocused && (
+                  <Animated.Text
+                    pointerEvents="none"
+                    style={[
+                      styles.animatedPlaceholder,
+                      { opacity: placeholderOpacity, color: c.mutedForeground },
+                    ]}
+                    numberOfLines={1}
+                  >
+                    {SEARCH_PLACEHOLDERS[placeholderIdx]}
+                  </Animated.Text>
+                )}
+              </View>
+
+              {(loading || isPending) ? (
+                <ActivityIndicator size="small" color={c.primary} style={{ marginHorizontal: 4 }} />
+              ) : (
+                <TouchableOpacity onPress={openDrawKanjiModal} style={styles.drawKanjiBtn}>
+                  <LinearGradient colors={SUN_GRAD} style={styles.drawKanjiBtnGrad}>
+                    <Text style={styles.drawKanjiIcon}>✏️</Text>
+                  </LinearGradient>
+                </TouchableOpacity>
+              )}
+            </View>
+          </LinearGradient>
         </View>
         </SafeAreaView>
       </LinearGradient>
 
-      <View style={styles.tabBar}>
+      <View style={[styles.tabBar, { backgroundColor: c.card, borderBottomColor: c.border }]}>
         {[
           { id: 'all',      label: 'Tất cả',  icon: '🌐' },
           { id: 'vocab',    label: 'Từ vựng', icon: '📖' },
@@ -1125,14 +1191,21 @@ export default function SearchInline({
         ].map(tab => (
           <TouchableOpacity
             key={tab.id}
-            style={[styles.tabBtn, activeTab === tab.id && styles.tabBtnActive]}
+            style={[
+              styles.tabBtn,
+              activeTab === tab.id && { borderBottomWidth: 2, borderBottomColor: c.primary },
+            ]}
             onPress={() => handleTabChange(tab.id as SearchType)}
             activeOpacity={0.7}
           >
-            <Text style={[styles.tabIcon, activeTab === tab.id && styles.tabIconActive]}>
-              {tab.icon}
-            </Text>
-            <Text style={[styles.tabLabel, activeTab === tab.id && styles.tabLabelActive]}>
+            <Text style={styles.tabIcon}>{tab.icon}</Text>
+            <Text
+              style={[
+                styles.tabLabel,
+                { color: c.mutedForeground },
+                activeTab === tab.id && { color: c.primary, fontWeight: '700' },
+              ]}
+            >
               {tab.label}
             </Text>
           </TouchableOpacity>
@@ -1233,12 +1306,12 @@ export default function SearchInline({
             ) : displayResults.length === 0 && !loading ? (
               <View style={styles.emptyContainer}>
                 <Text style={styles.emptyEmoji}>✏️</Text>
-                <Text style={styles.emptyTitle}>
+                <Text style={[styles.emptyTitle, { color: c.text }]}>
                   {debouncedQuery.trim()
                     ? 'Không tìm thấy kết quả'
                     : 'Nhấn kính lúp để tìm kiếm'}
                 </Text>
-                <Text style={styles.emptySub}>Thử từ khóa khác</Text>
+                <Text style={[styles.emptySub, { color: c.mutedForeground }]}>Thử từ khóa khác</Text>
               </View>
             ) : (
               <FlatList
@@ -1276,9 +1349,9 @@ export default function SearchInline({
   );
 }
 
-// ─── STYLES ──────────────────────────────────────────────────────────────────
+// ─── STYLES (chỉ layout — màu gán inline theo theme ở trên) ───────────────────
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: BG_GRAY },
+  container: { flex: 1 },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -1288,7 +1361,6 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   backBtn: { 
-    // padding: 8,
     width: 42,
     height: 42,
     backgroundColor: 'transparent',
@@ -1296,43 +1368,73 @@ const styles = StyleSheet.create({
     justifyContent: 'center', 
   },
   backIcon: { 
-    color: '#fff', 
     fontSize: 22, 
     fontWeight: '700',
     textAlign: 'center', 
     marginTop: -5,
   },
+  // Viền gradient cam-vàng bọc ngoài ô tìm kiếm — đồng bộ với "hero search
+  // dock" ở trang chủ.
+  heroBorder: {
+    flex: 1,
+    borderRadius: 70,
+    padding: 2,
+    shadowColor: '#FF7A59',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.25,
+    shadowRadius: 8,
+    elevation: 4,
+  },
   searchContainer: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
-    borderRadius: 70,
-    paddingHorizontal: 8,
+    borderRadius: 68,
+    paddingHorizontal: 6,
+    paddingVertical: 4,
   },
-  searchIconBtn: { padding: 6 },
-  searchIconText: { fontSize: 18 },
-  searchInput: {
+  searchIconBtn: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  searchIconText: { fontSize: 16 },
+  inputWrap: {
     flex: 1,
+    justifyContent: 'center',
+    marginHorizontal: 4,
+  },
+  searchInput: {
     fontSize: 15,
-    color: '#1e293b',
-    paddingVertical: 10,
+    paddingVertical: 8,
     paddingHorizontal: 4,
   },
-  drawKanjiBtn: { 
-    backgroundColor: '#f1f5f9', 
-    borderRadius: 70,
-    padding: 6,
-    paddingHorizontal: 8,
+  // Chữ mẫu chạy tự động, đè lên trên input khi đang trống/chưa focus
+  animatedPlaceholder: {
+    position: 'absolute',
+    left: 4,
+    right: 4,
+    fontSize: 14.5,
+    fontWeight: '500',
+  },
+  drawKanjiBtn: {
+    marginLeft: 2,
+  },
+  drawKanjiBtnGrad: {
+    width: 36,
+    height: 36,
+    borderRadius: 18,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   drawKanjiIcon: { 
     fontSize: 16, 
   },
   tabBar: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
     borderBottomWidth: 1,
-    borderBottomColor: '#e2e8f0',
   },
   tabBtn: {
     flex: 1,
@@ -1341,15 +1443,11 @@ const styles = StyleSheet.create({
     gap: 2,
     position: 'relative',
   },
-  tabBtnActive: { borderBottomWidth: 2, borderBottomColor: TEAL },
   tabIcon: { fontSize: 18 },
-  tabIconActive: {},
-  tabLabel: { fontSize: 11, color: '#64748b' },
-  tabLabelActive: { color: TEAL, fontWeight: '700' },
+  tabLabel: { fontSize: 11 },
   vocabResultCard: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#fff',
     borderRadius: 12,
     padding: 14,
     marginBottom: 8,
@@ -1362,25 +1460,21 @@ const styles = StyleSheet.create({
   vocabResultChar: {
     fontSize: 22,
     fontWeight: '700',
-    color: TEAL,
     minWidth: 44,
   },
   vocabResultInfo: { flex: 1, marginHorizontal: 10 },
-  vocabResultReading: { fontSize: 14, color: '#475569' },
-  vocabResultMeaning: { fontSize: 13, color: '#64748b', marginTop: 2 },
+  vocabResultReading: { fontSize: 14 },
+  vocabResultMeaning: { fontSize: 13, marginTop: 2 },
   sourceBadge: {
     alignSelf: 'flex-start',
     marginTop: 5,
-    backgroundColor: '#fff7ed',
     borderRadius: 6,
     paddingHorizontal: 7,
     paddingVertical: 2,
     borderWidth: 1,
-    borderColor: '#fed7aa',
   },
-  sourceBadgeText: { fontSize: 10, color: '#c2410c', fontWeight: '600' },
+  sourceBadgeText: { fontSize: 10, fontWeight: '600' },
   resultCard: {
-    backgroundColor: '#fff',
     borderRadius: 12,
     padding: 14,
     marginBottom: 8,
@@ -1390,9 +1484,9 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
-  resultTitle: { fontSize: 17, fontWeight: '700', color: '#1e293b' },
-  resultSubtitle: { fontSize: 13, color: '#64748b', marginTop: 3 },
-  resultDesc: { fontSize: 13, color: '#475569', marginTop: 4 },
+  resultTitle: { fontSize: 17, fontWeight: '700' },
+  resultSubtitle: { fontSize: 13, marginTop: 3 },
+  resultDesc: { fontSize: 13, marginTop: 4 },
   resultTypeBadge: {
     alignSelf: 'flex-start',
     borderRadius: 6,
@@ -1400,8 +1494,10 @@ const styles = StyleSheet.create({
     paddingVertical: 2,
     marginTop: 6,
   },
+  // Chữ trên badge Mẫu câu/Ngữ pháp giữ màu tối cố định — nền badge cũng cố
+  // định (xanh lá/vàng nhạt) nên luôn đủ tương phản, không cần đổi theo theme.
   resultTypeText: { fontSize: 11, color: '#334155', fontWeight: '600' },
-  arrowIcon: { fontSize: 20, color: '#94a3b8', marginLeft: 6 },
+  arrowIcon: { fontSize: 20, marginLeft: 6 },
   emptyContainer: {
     flex: 1,
     alignItems: 'center',
@@ -1412,8 +1508,7 @@ const styles = StyleSheet.create({
   emptyTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#475569',
     textAlign: 'center',
   },
-  emptySub: { fontSize: 13, color: '#94a3b8', marginTop: 6 },
+  emptySub: { fontSize: 13, marginTop: 6 },
 });

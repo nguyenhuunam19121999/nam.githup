@@ -16,6 +16,7 @@ import {
 } from "../assets/vocab";
 import { FeedbackSection } from "../components/FeedbackSection";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
+import { useColors, useThemeMode, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
 import FlashcardDetail, {
   VocabItem,
   Field,
@@ -39,11 +40,6 @@ import {
   TouchableWithoutFeedback,
   View,
 } from "react-native";
-
-// ✅ MÀU CHỦ ĐẠO - ĐỒNG BỘ VỚI KANJI
-const TEAL = "#004370";
-const TEAL_DARK = "#004370";
-const TEXT_COLOR = "#e47b0b";
 
 // ─── Dữ liệu từ vựng ─────────────────────────────────────────────────────────
 interface Vocab {
@@ -77,7 +73,6 @@ function normalizeVocab(
     filtered = raw.filter((item: any) => (item.lesson || 1) === lessonNumber);
   }
   return filtered.map((item, idx) => ({
-    // id: `${lessonNumber || 1}_${item.kanji || idx}`,
     id: `${lessonNumber || 1}_${idx}_${item.kanji || "noKanji"}`,
     kanji: item.kanji ?? "",
     hiragana: item.hiragana ?? item.hira ?? "",
@@ -121,23 +116,25 @@ function ToggleRow({
   value,
   onToggle,
   isLast,
+  c,
 }: {
   label: string;
   value: boolean;
   onToggle: () => void;
   isLast: boolean;
+  c: ReturnType<typeof useColors>;
 }) {
   return (
     <TouchableOpacity
-      style={[s.menuRow, isLast && { borderBottomWidth: 0 }]}
+      style={[s.menuRow, { borderBottomColor: c.border }, isLast && { borderBottomWidth: 0 }]}
       onPress={onToggle}
       activeOpacity={0.7}
     >
-      <Text style={s.menuRowLabel}>{label}</Text>
+      <Text style={[s.menuRowLabel, { color: c.text }]}>{label}</Text>
       <Switch
         value={value}
         onValueChange={onToggle}
-        trackColor={{ false: "#cbd5e1", true: TEAL }}
+        trackColor={{ false: c.border, true: c.primary }}
         thumbColor="#fff"
       />
     </TouchableOpacity>
@@ -153,6 +150,10 @@ interface QuizQuestion {
 }
 
 const QuizMode = ({ data, onExit }: { data: Vocab[]; onExit: () => void }) => {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const { scopedKey } = useAuth();
   const [questions, setQuestions] = useState<QuizQuestion[]>([]);
   const [currentQ, setCurrentQ] = useState(0);
@@ -227,8 +228,8 @@ const QuizMode = ({ data, onExit }: { data: Vocab[]; onExit: () => void }) => {
 
   if (questions.length === 0) {
     return (
-      <View style={s.quizContainer}>
-        <Text style={s.loadingText}>Đang tạo câu hỏi...</Text>
+      <View style={[s.quizContainer, { backgroundColor: c.background }]}>
+        <Text style={[s.loadingText, { color: c.mutedForeground }]}>Đang tạo câu hỏi...</Text>
       </View>
     );
   }
@@ -236,22 +237,22 @@ const QuizMode = ({ data, onExit }: { data: Vocab[]; onExit: () => void }) => {
   if (showResult) {
     const percentage = Math.round((score / questions.length) * 100);
     return (
-      <View style={s.quizContainer}>
-        <View style={s.resultCard}>
-          <Text style={s.resultTitle}>📊 Kết quả của bạn</Text>
-          <Text style={s.resultScore}>
+      <View style={[s.quizContainer, { backgroundColor: c.background }]}>
+        <View style={[s.resultCard, { backgroundColor: c.card }]}>
+          <Text style={[s.resultTitle, { color: c.text }]}>📊 Kết quả của bạn</Text>
+          <Text style={[s.resultScore, { color: c.primary }]}>
             {score} / {questions.length}
           </Text>
-          <Text style={s.resultPercentage}>{percentage}%</Text>
-          <Text style={s.resultMessage}>
+          <Text style={[s.resultPercentage, { color: c.mutedForeground }]}>{percentage}%</Text>
+          <Text style={[s.resultMessage, { color: c.text }]}>
             {percentage >= 80
               ? "🎉 Xuất sắc! 🎉"
               : percentage >= 60
                 ? "👍 Khá tốt!"
                 : "💪 Cố gắng hơn nữa nhé!"}
           </Text>
-          <TouchableOpacity style={s.quizExitBtn} onPress={onExit}>
-            <Text style={s.buttonTextWhite}>Quay lại học</Text>
+          <TouchableOpacity style={[s.quizExitBtn, { backgroundColor: c.primary }]} onPress={onExit}>
+            <Text style={[s.buttonTextWhite, { color: c.primaryForeground }]}>Quay lại học</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -262,35 +263,40 @@ const QuizMode = ({ data, onExit }: { data: Vocab[]; onExit: () => void }) => {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
-      <View style={s.quizContainer}>
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
+      <View style={[s.quizContainer, { backgroundColor: c.background }]}>
         <View style={s.quizHeader}>
-          <Text style={s.quizCounter}>
+          <Text style={[s.quizCounter, { color: c.mutedForeground }]}>
             Câu {currentQ + 1}/{questions.length}
           </Text>
-          <Text style={s.quizScore}>Điểm: {score}</Text>
+          <Text style={[s.quizScore, { color: c.primary }]}>Điểm: {score}</Text>
         </View>
 
-        <View style={s.questionCard}>
-          <Text style={s.questionText}>{current.question}</Text>
-          <Text style={s.questionHint}>Chọn nghĩa đúng</Text>
+        <View style={[s.questionCard, { backgroundColor: c.card }]}>
+          <Text style={[s.questionText, { color: c.text }]}>{current.question}</Text>
+          <Text style={[s.questionHint, { color: c.mutedForeground }]}>Chọn nghĩa đúng</Text>
         </View>
 
         <View style={s.optionsGrid}>
           {current.options.map((opt, idx) => {
-            let btnStyle = s.optionBtn;
-            if (selectedAnswer === opt) {
-              btnStyle =
-                opt === current.correct ? s.correctOption : s.wrongOption;
+            const isChosen = selectedAnswer === opt;
+            const isCorrect = opt === current.correct;
+            // Xanh lá "đúng" và đỏ "sai" giữ màu ngữ nghĩa cố định — không đổi
+            // theo theme để luôn dễ nhận biết đúng/sai bất kể chế độ nào.
+            let dynamicStyle: any = { backgroundColor: c.card, borderColor: c.border };
+            if (isChosen) {
+              dynamicStyle = isCorrect
+                ? { backgroundColor: "#10b981", borderColor: "#059669" }
+                : { backgroundColor: "#f56565", borderColor: "#e53e3e" };
             }
             return (
               <TouchableOpacity
                 key={idx}
-                style={btnStyle}
+                style={[s.optionBtn, dynamicStyle]}
                 onPress={() => handleAnswer(opt)}
                 disabled={!!selectedAnswer}
               >
-                <Text style={s.optionText}>{opt}</Text>
+                <Text style={[s.optionText, { color: isChosen ? "#fff" : c.text }]}>{opt}</Text>
               </TouchableOpacity>
             );
           })}
@@ -301,18 +307,26 @@ const QuizMode = ({ data, onExit }: { data: Vocab[]; onExit: () => void }) => {
             style={s.explainBtn}
             onPress={() => setShowExplanation(true)}
           >
-            <Text style={s.explainText}>📖 Xem giải thích</Text>
+            <Text style={[s.explainText, { color: c.primary }]}>📖 Xem giải thích</Text>
           </TouchableOpacity>
         )}
 
         {showExplanation && (
-          <View style={s.explanationBox}>
-            <Text style={s.explanationTitle}>💡 Giải thích:</Text>
-            <Text style={s.explanationContent}>
+          <View style={[s.explanationBox, { backgroundColor: c.primary + "1a" }]}>
+            <Text style={[s.explanationTitle, { color: c.primary }]}>💡 Giải thích:</Text>
+            <Text style={[s.explanationContent, { color: c.text }]}>
               {current.question} có nghĩa là &quot;{current.correct}&quot;
             </Text>
           </View>
         )}
+
+        {/* Nút thoát quiz — cố định, bấm lúc nào cũng được, giống Luyện viết */}
+        <TouchableOpacity
+          style={[s.practiceExitBtn, { backgroundColor: c.muted, marginTop: 16 }]}
+          onPress={onExit}
+        >
+          <Text style={[s.buttonTextDark, { color: c.text }]}>Quay lại</Text>
+        </TouchableOpacity>
       </View>
       <AdBanner />
     </>
@@ -327,6 +341,10 @@ const PracticeMode = ({
   data: Vocab[];
   onExit: () => void;
 }) => {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [userAnswer, setUserAnswer] = useState("");
   const [feedback, setFeedback] = useState<{
@@ -371,10 +389,10 @@ const PracticeMode = ({
 
   if (!currentVocab) {
     return (
-      <View style={s.practiceContainer}>
-        <Text style={s.loadingText}>Không có từ vựng để luyện</Text>
-        <TouchableOpacity style={s.practiceExitBtn} onPress={onExit}>
-          <Text style={s.buttonTextDark}>Quay lại</Text>
+      <View style={[s.practiceContainer, { backgroundColor: c.background }]}>
+        <Text style={[s.loadingText, { color: c.mutedForeground }]}>Không có từ vựng để luyện</Text>
+        <TouchableOpacity style={[s.practiceExitBtn, { backgroundColor: c.muted }]} onPress={onExit}>
+          <Text style={[s.buttonTextDark, { color: c.text }]}>Quay lại</Text>
         </TouchableOpacity>
       </View>
     );
@@ -382,30 +400,30 @@ const PracticeMode = ({
 
   return (
     <>
-      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
-      <View style={s.practiceContainer}>
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
+      <View style={[s.practiceContainer, { backgroundColor: c.background }]}>
         <View style={s.practiceHeader}>
-          <Text style={s.practiceCounter}>
+          <Text style={[s.practiceCounter, { color: c.mutedForeground }]}>
             {currentIndex + 1}/{total}
           </Text>
-          <Text style={s.practiceScore}>✅ {score}</Text>
+          <Text style={[s.practiceScore, { color: c.primary }]}>✅ {score}</Text>
         </View>
 
         <View style={s.progressBarWrapper}>
-          <View style={s.progressBarTrack}>
-            <View style={[s.progressBarFill, { width: `${progress}%` }]} />
+          <View style={[s.progressBarTrack, { backgroundColor: c.border }]}>
+            <View style={[s.progressBarFill, { width: `${progress}%`, backgroundColor: c.primary }]} />
           </View>
         </View>
 
-        <View style={s.questionCard}>
-          <Text style={s.questionText}>{currentVocab.kanji}</Text>
-          <Text style={s.questionSub}>{currentVocab.hiragana}</Text>
+        <View style={[s.questionCard, { backgroundColor: c.card }]}>
+          <Text style={[s.questionText, { color: c.text }]}>{currentVocab.kanji}</Text>
+          <Text style={[s.questionSub, { color: c.mutedForeground }]}>{currentVocab.hiragana}</Text>
         </View>
 
         <TextInput
-          style={s.practiceInput}
+          style={[s.practiceInput, { backgroundColor: c.card, borderColor: c.border, color: c.text }]}
           placeholder="Nhập nghĩa tiếng Việt..."
-          placeholderTextColor="#94a3b8"
+          placeholderTextColor={c.mutedForeground}
           value={userAnswer}
           onChangeText={setUserAnswer}
           onSubmitEditing={checkAnswer}
@@ -415,19 +433,22 @@ const PracticeMode = ({
           <View
             style={[
               s.feedbackBox,
-              feedback.type === "correct" ? s.feedbackCorrect : s.feedbackWrong,
+              // Giữ màu ngữ nghĩa cố định (xanh đúng / đỏ sai)
+              feedback.type === "correct"
+                ? { backgroundColor: "#c6f6d5" }
+                : { backgroundColor: "#fed7d7" },
             ]}
           >
-            <Text style={s.feedbackText}>{feedback.message}</Text>
+            <Text style={[s.feedbackText, { color: "#1a202c" }]}>{feedback.message}</Text>
           </View>
         )}
 
-        <TouchableOpacity style={s.checkBtn} onPress={checkAnswer}>
-          <Text style={s.buttonTextWhite}>Kiểm tra</Text>
+        <TouchableOpacity style={[s.checkBtn, { backgroundColor: c.primary }]} onPress={checkAnswer}>
+          <Text style={[s.buttonTextWhite, { color: c.primaryForeground }]}>Kiểm tra</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={s.practiceExitBtn} onPress={onExit}>
-          <Text style={s.buttonTextDark}>Quay lại</Text>
+        <TouchableOpacity style={[s.practiceExitBtn, { backgroundColor: c.muted }]} onPress={onExit}>
+          <Text style={[s.buttonTextDark, { color: c.text }]}>Quay lại</Text>
         </TouchableOpacity>
       </View>
       <AdBanner />
@@ -449,6 +470,7 @@ const StatisticsModal = ({
   bookmarkCount: number;
   onShowBookmarks: () => void;
 }) => {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const { scopedKey } = useAuth();
   const [stats, setStats] = useState({
     bestScore: 0,
@@ -471,49 +493,54 @@ const StatisticsModal = ({
 
   return (
     <Modal visible={visible} animationType="slide" transparent>
-      <View style={s.modalOverlay}>
-        <View style={s.statsModal}>
-          <Text style={s.statsTitle}>📈 Thống kê học tập</Text>
+      <View style={[s.modalOverlay, { backgroundColor: "rgba(0,0,0,0.5)" }]}>
+        <View style={[s.statsModal, { backgroundColor: c.card }]}>
+          <Text style={[s.statsTitle, { color: c.text }]}>📈 Thống kê học tập</Text>
 
-          <View style={s.statCard}>
-            <Text style={s.statValue}>{totalCount}</Text>
-            <Text style={s.statLabel}>Tổng số từ vựng</Text>
+          <View style={[s.statCard, { backgroundColor: c.primary + "14" }]}>
+            <Text style={[s.statValue, { color: c.primary }]}>{totalCount}</Text>
+            <Text style={[s.statLabel, { color: c.mutedForeground }]}>Tổng số từ vựng</Text>
           </View>
 
           <TouchableOpacity
-            style={[s.statCard, s.statCardTappable]}
+            style={[
+              s.statCard,
+              s.statCardTappable,
+              { backgroundColor: c.accent + "14", borderColor: c.accent },
+            ]}
             activeOpacity={0.75}
             onPress={() => {
               onClose();
               onShowBookmarks();
             }}
           >
-            <Text style={s.statValue}>⭐ {bookmarkCount}</Text>
-            <Text style={[s.statLabel, s.statLabelHint]}>
+            <Text style={[s.statValue, { color: c.primary }]}>⭐ {bookmarkCount}</Text>
+            <Text style={[s.statLabel, s.statLabelHint, { color: c.accent }]}>
               Từ đã ghim · Nhấn để xem
             </Text>
           </TouchableOpacity>
 
-          <View style={s.statsDivider} />
+          <View style={[s.statsDivider, { backgroundColor: c.border }]} />
 
-          <Text style={s.sectionTitle}>🎯 Kết quả Quiz</Text>
+          <Text style={[s.sectionTitle, { color: c.text }]}>🎯 Kết quả Quiz</Text>
           <View style={s.statRow}>
-            <Text style={s.statRowLabel}>Điểm cao nhất:</Text>
-            <Text style={s.statRowValue}>{stats.bestScore}%</Text>
+            <Text style={[s.statRowLabel, { color: c.mutedForeground }]}>Điểm cao nhất:</Text>
+            <Text style={[s.statRowValue, { color: c.primary }]}>{stats.bestScore}%</Text>
           </View>
           <View style={s.statRow}>
-            <Text style={s.statRowLabel}>Trung bình:</Text>
-            <Text style={s.statRowValue}>{stats.avgScore}%</Text>
+            <Text style={[s.statRowLabel, { color: c.mutedForeground }]}>Trung bình:</Text>
+            <Text style={[s.statRowValue, { color: c.primary }]}>{stats.avgScore}%</Text>
           </View>
           <View style={s.statRow}>
-            <Text style={s.statRowLabel}>Đã chơi:</Text>
-            <Text style={s.statRowValue}>{stats.totalPlayed} lần</Text>
+            <Text style={[s.statRowLabel, { color: c.mutedForeground }]}>Đã chơi:</Text>
+            <Text style={[s.statRowValue, { color: c.primary }]}>{stats.totalPlayed} lần</Text>
           </View>
 
-          <TouchableOpacity style={s.closeStatsBtn} onPress={onClose}>
-            <Text style={s.buttonTextWhite}>Đóng</Text>
+          <TouchableOpacity style={[s.closeStatsBtn, { backgroundColor: c.primary }]} onPress={onClose}>
+            <Text style={[s.buttonTextWhite, { color: c.primaryForeground }]}>Đóng</Text>
           </TouchableOpacity>
         </View>
+        <ThemeFadeOverlay />
       </View>
     </Modal>
   );
@@ -521,6 +548,10 @@ const StatisticsModal = ({
 
 // ─── Main Component ───────────────────────────────────────────────────────────
 export default function VocabScreen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const router = useRouter();
   const { scopedKey } = useAuth();
   const params = useLocalSearchParams<{
@@ -607,8 +638,6 @@ export default function VocabScreen() {
           ? getVocabByBook(bookId)
           : getVocab(level, bookId);
 
-      // isIndustry → truyền undefined cho lessonNumber → normalizeVocab
-      // không lọc theo bài, giữ nguyên toàn bộ danh sách phẳng.
       const formatted = normalizeVocab(
         rawVocab,
         isIndustry ? undefined : hasBookId ? lessonParam : undefined,
@@ -621,21 +650,6 @@ export default function VocabScreen() {
       setIsLoading(false);
     }
   }, [level, bookId, lessonParam]);
-
-  // Tải từ vựng
-  // useEffect(() => {
-  //   setIsLoading(true);
-  //   try {
-  //     const hasBookId = typeof params.bookId === "string" && params.bookId.length > 0;
-  //     const rawVocab: RawVocab[] = hasBookId ? getVocabByBook(bookId) : getVocab(level, bookId);
-  //     const formatted = normalizeVocab(rawVocab, hasBookId ? lessonParam : undefined, level);
-  //     setVocabList(formatted);
-  //   } catch (error) {
-  //     Alert.alert("Lỗi", "Không thể tải dữ liệu từ vựng");
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // }, [level, bookId, lessonParam]);
 
   // Load bookmarks
   useEffect(() => {
@@ -853,33 +867,32 @@ export default function VocabScreen() {
   // Render chính: Danh sách từ vựng
   return (
     <>
-      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
       <TouchableWithoutFeedback
         onPress={() => {
           if (menuOpen) setMenuOpen(false);
           Keyboard.dismiss();
         }}
       >
-        <View style={s.container}>
+        <View style={[s.container, { backgroundColor: c.background }]}>
           {/* Header - CỐ ĐỊNH */}
-          <View style={s.headerRow}>
+          <View style={[s.headerRow, { backgroundColor: c.background }]}>
             <TouchableOpacity
-              style={s.backBtn}
+              style={[s.backBtn, { backgroundColor: c.card, borderColor: c.border }]}
               onPress={() => router.back()}
               activeOpacity={0.7}
             >
-              <Text style={s.backBtnText}>‹</Text>
+              <Text style={[s.backBtnText, { color: c.primary }]}>‹</Text>
             </TouchableOpacity>
             <View style={s.titleBlock}>
-              <Text style={s.title} numberOfLines={1}>
+              <Text style={[s.title, { color: c.text }]} numberOfLines={1}>
                 {headerInfo.emoji} {headerInfo.vi}
-                {/* {headerInfo.emoji} {headerInfo.vi} · Bài {lessonParam} */}
               </Text>
-              <Text style={s.subtitle}>{filteredVocabList.length} từ vựng</Text>
+              <Text style={[s.subtitle, { color: c.mutedForeground }]}>{filteredVocabList.length} từ vựng</Text>
             </View>
             <View style={s.headerButtons}>
               <TouchableOpacity
-                style={s.statsBtn}
+                style={[s.statsBtn, { backgroundColor: c.card, borderColor: c.border }]}
                 onPress={() => setShowStats(true)}
               >
                 <Text style={s.statsBtnText}>📊</Text>
@@ -890,11 +903,11 @@ export default function VocabScreen() {
           {/* Banner lọc bookmark - CỐ ĐỊNH */}
           {showBookmarksOnly && (
             <TouchableOpacity
-              style={s.bookmarkBanner}
+              style={[s.bookmarkBanner, { backgroundColor: c.accent + "1a", borderColor: c.accent }]}
               onPress={() => setShowBookmarksOnly(false)}
               activeOpacity={0.8}
             >
-              <Text style={s.bookmarkBannerText}>
+              <Text style={[s.bookmarkBannerText, { color: c.text }]}>
                 ⭐ Đang xem {filteredVocabList.length} từ đã ghim · Nhấn để xem
                 tất cả
               </Text>
@@ -902,9 +915,9 @@ export default function VocabScreen() {
           )}
 
           {/* Mode Switch - CỐ ĐỊNH, KHÔNG CUỘN */}
-          <View style={s.modeSwitch}>
+          <View style={[s.modeSwitch, { backgroundColor: c.card, borderBottomColor: c.border }]}>
             <TouchableOpacity
-              style={s.modeBtn}
+              style={[s.modeBtn, { backgroundColor: c.muted }]}
               onPress={() => {
                 setGameMode("vocab");
                 openVocabMode();
@@ -913,7 +926,8 @@ export default function VocabScreen() {
               <Text
                 style={[
                   s.modeBtnText,
-                  gameMode === "vocab" && s.modeBtnTextActive,
+                  { color: c.mutedForeground },
+                  gameMode === "vocab" && { color: c.primary, fontWeight: "700" },
                 ]}
               >
                 📇 Flashcard
@@ -921,7 +935,7 @@ export default function VocabScreen() {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[s.modeBtn, gameMode === "quiz" && s.modeActive]}
+              style={[s.modeBtn, { backgroundColor: c.muted }, gameMode === "quiz" && { backgroundColor: c.primary }]}
               onPress={() => {
                 setGameMode("quiz");
                 setShowVocabMode(false);
@@ -930,7 +944,8 @@ export default function VocabScreen() {
               <Text
                 style={[
                   s.modeBtnText,
-                  gameMode === "quiz" && s.modeBtnTextActive,
+                  { color: c.mutedForeground },
+                  gameMode === "quiz" && { color: c.primaryForeground, fontWeight: "700" },
                 ]}
               >
                 📝 Quiz
@@ -938,7 +953,7 @@ export default function VocabScreen() {
             </TouchableOpacity>
 
             <TouchableOpacity
-              style={[s.modeBtn, gameMode === "practice" && s.modeActive]}
+              style={[s.modeBtn, { backgroundColor: c.muted }, gameMode === "practice" && { backgroundColor: c.primary }]}
               onPress={() => {
                 setGameMode("practice");
                 setShowVocabMode(false);
@@ -947,7 +962,8 @@ export default function VocabScreen() {
               <Text
                 style={[
                   s.modeBtnText,
-                  gameMode === "practice" && s.modeBtnTextActive,
+                  { color: c.mutedForeground },
+                  gameMode === "practice" && { color: c.primaryForeground, fontWeight: "700" },
                 ]}
               >
                 ✍️ Luyện viết
@@ -955,17 +971,10 @@ export default function VocabScreen() {
             </TouchableOpacity>
           </View>
 
-          {/* ScrollView - CHỈ CUỘN DANH SÁCH TỪ VỰNG */}
-          {/* <ScrollView
-            contentContainerStyle={s.scrollContent}
-            showsVerticalScrollIndicator={true}
-            nestedScrollEnabled={true}
-            style={{ flex: 1 }}
-          > */}
           {/* Danh sách từ vựng */}
           {isLoading ? (
             <View style={s.loadingContainer}>
-              <Text style={s.loadingText}>Đang tải từ vựng...</Text>
+              <Text style={[s.loadingText, { color: c.mutedForeground }]}>Đang tải từ vựng...</Text>
             </View>
           ) : (
             <FlatList
@@ -975,12 +984,12 @@ export default function VocabScreen() {
               showsVerticalScrollIndicator={true}
               ListEmptyComponent={
                 <View style={s.empty}>
-                  <Text style={s.emptyText}>Không có từ vựng nào.</Text>
+                  <Text style={[s.emptyText, { color: c.text }]}>Không có từ vựng nào.</Text>
                 </View>
               }
               renderItem={({ item: vocab, index }) => (
                 <TouchableOpacity
-                  style={s.vocabRow}
+                  style={[s.vocabRow, { backgroundColor: c.card }]}
                   activeOpacity={0.7}
                   onPress={() => {
                     router.push({
@@ -1008,12 +1017,12 @@ export default function VocabScreen() {
                 >
                   <View style={s.rowMain}>
                     <View style={s.rowTopLine}>
-                      <Text style={s.indexNum}>{index + 1}.</Text>
-                      <Text style={s.vocabKanji}>{vocab.kanji}</Text>
+                      <Text style={[s.indexNum, { color: c.mutedForeground }]}>{index + 1}.</Text>
+                      <Text style={[s.vocabKanji, { color: c.text }]}>{vocab.kanji}</Text>
                     </View>
-                    <Text style={s.vocabHan}>{vocab.han}</Text>
-                    <Text style={s.vocabReading}>{vocab.hiragana}</Text>
-                    <Text style={s.vocabMeaning} numberOfLines={2}>
+                    <Text style={[s.vocabHan, { color: c.primary }]}>{vocab.han}</Text>
+                    <Text style={[s.vocabReading, { color: c.text }]}>{vocab.hiragana}</Text>
+                    <Text style={[s.vocabMeaning, { color: c.mutedForeground }]} numberOfLines={2}>
                       {vocab.nghia}
                     </Text>
                   </View>
@@ -1023,7 +1032,7 @@ export default function VocabScreen() {
                       onPress={() => speak(vocab.kanji)}
                       hitSlop={8}
                     >
-                      <Text style={s.speakIcon}>🔊</Text>
+                      <Text style={[s.speakIcon, { color: c.primary }]}>🔊</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                       style={s.starBtn}
@@ -1059,50 +1068,52 @@ export default function VocabScreen() {
             animationType="slide"
             onRequestClose={() => setMenuOpen(false)}
           >
-            <View style={s.menuModalOverlay}>
+            <View style={[s.menuModalOverlay, { backgroundColor: "rgba(15,23,42,0.45)" }]}>
               <Pressable
                 style={StyleSheet.absoluteFill}
                 onPress={() => setMenuOpen(false)}
               />
-              <View style={s.menuSheet}>
-                <View style={s.menuSheetHandle} />
+              <View style={[s.menuSheet, { backgroundColor: c.card }]}>
+                <View style={[s.menuSheetHandle, { backgroundColor: c.border }]} />
                 <View style={s.menuSheetHeader}>
-                  <Text style={s.menuSheetTitle}>Cài đặt thẻ</Text>
+                  <Text style={[s.menuSheetTitle, { color: c.text }]}>Cài đặt thẻ</Text>
                   <TouchableOpacity
                     onPress={() => setMenuOpen(false)}
                     hitSlop={10}
                   >
-                    <Text style={s.menuSheetClose}>Đóng</Text>
+                    <Text style={[s.menuSheetClose, { color: c.primary }]}>Đóng</Text>
                   </TouchableOpacity>
                 </View>
 
                 {/* Tự động cuộn */}
-                <Text style={s.menuGroupLabel}>Tự động cuộn</Text>
+                <Text style={[s.menuGroupLabel, { color: c.mutedForeground }]}>Tự động cuộn</Text>
                 <ToggleRow
                   label="Bật tự động cuộn"
                   value={autoScroll}
                   onToggle={() => setAutoScroll(!autoScroll)}
                   isLast
+                  c={c}
                 />
 
                 {autoScroll && (
                   <>
-                    <Text style={s.autoScrollHint}>Thời gian giữa mỗi thẻ</Text>
+                    <Text style={[s.autoScrollHint, { color: c.mutedForeground }]}>Thời gian giữa mỗi thẻ</Text>
                     <View style={s.autoScrollChips}>
                       {AUTO_SCROLL_PRESETS.map((sec) => (
                         <TouchableOpacity
                           key={sec}
                           style={[
                             s.autoScrollChip,
-                            sec === autoScrollSec && s.autoScrollChipActive,
+                            { backgroundColor: c.muted, borderColor: c.border },
+                            sec === autoScrollSec && { backgroundColor: c.primary, borderColor: c.primary },
                           ]}
                           onPress={() => setAutoScrollSec(sec)}
                         >
                           <Text
                             style={[
                               s.autoScrollChipText,
-                              sec === autoScrollSec &&
-                                s.autoScrollChipTextActive,
+                              { color: c.text },
+                              sec === autoScrollSec && { color: c.primaryForeground },
                             ]}
                           >
                             {sec}s
@@ -1114,7 +1125,7 @@ export default function VocabScreen() {
                 )}
 
                 {/* Mặt trước */}
-                <Text style={[s.menuGroupLabel, { marginTop: 16 }]}>
+                <Text style={[s.menuGroupLabel, { color: c.mutedForeground, marginTop: 16 }]}>
                   Mặt trước
                 </Text>
                 {ALL_FIELDS.map((f, i) => (
@@ -1124,11 +1135,12 @@ export default function VocabScreen() {
                     value={frontSel[f]}
                     onToggle={() => toggleField("front", f)}
                     isLast={i === ALL_FIELDS.length - 1}
+                    c={c}
                   />
                 ))}
 
                 {/* Mặt sau */}
-                <Text style={[s.menuGroupLabel, { marginTop: 14 }]}>
+                <Text style={[s.menuGroupLabel, { color: c.mutedForeground, marginTop: 14 }]}>
                   Mặt sau
                 </Text>
                 {ALL_FIELDS.map((f, i) => (
@@ -1138,9 +1150,11 @@ export default function VocabScreen() {
                     value={backSel[f]}
                     onToggle={() => toggleField("back", f)}
                     isLast={i === ALL_FIELDS.length - 1}
+                    c={c}
                   />
                 ))}
               </View>
+              <ThemeFadeOverlay />
             </View>
           </Modal>
 
@@ -1163,9 +1177,9 @@ export default function VocabScreen() {
   );
 }
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
+// ─── Styles (chỉ layout — màu gán inline theo theme ở trên) ───────────────────
 const s = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f0f4f8" },
+  container: { flex: 1 },
   scrollContent: { paddingHorizontal: 16, paddingBottom: 60 },
 
   // Header
@@ -1176,31 +1190,26 @@ const s = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 56,
     paddingBottom: 12,
-    backgroundColor: "#f0f4f8",
   },
   backBtn: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
     borderRadius: 12,
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
     alignItems: "center",
     justifyContent: "center",
     marginRight: 10,
   },
-  backBtnText: { fontSize: 28, color: TEAL, lineHeight: 30 },
+  backBtnText: { fontSize: 28, lineHeight: 30 },
   titleBlock: { flex: 1, marginRight: 10 },
-  title: { fontSize: 16, fontWeight: "700", color: "#2d3748", marginBottom: 3 },
-  subtitle: { fontSize: 13, color: "#718096" },
+  title: { fontSize: 16, fontWeight: "700", marginBottom: 3 },
+  subtitle: { fontSize: 13 },
   headerButtons: { flexDirection: "row", gap: 8, alignItems: "center" },
   statsBtn: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
     borderRadius: 12,
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -1209,11 +1218,9 @@ const s = StyleSheet.create({
   // Menu Modal
   menuModalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(15,23,42,0.45)",
     justifyContent: "flex-end",
   },
   menuSheet: {
-    backgroundColor: "#fff",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 18,
@@ -1224,7 +1231,6 @@ const s = StyleSheet.create({
     width: 40,
     height: 4,
     borderRadius: 2,
-    backgroundColor: "#cbd5e1",
     alignSelf: "center",
     marginBottom: 10,
   },
@@ -1234,12 +1240,11 @@ const s = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 12,
   },
-  menuSheetTitle: { fontSize: 16, fontWeight: "800", color: "#0f172a" },
-  menuSheetClose: { fontSize: 14, fontWeight: "600", color: TEAL },
+  menuSheetTitle: { fontSize: 16, fontWeight: "800" },
+  menuSheetClose: { fontSize: 14, fontWeight: "600" },
   menuGroupLabel: {
     fontSize: 11,
     fontWeight: "700",
-    color: "#69475c",
     textTransform: "uppercase",
     marginBottom: 6,
   },
@@ -1249,12 +1254,10 @@ const s = StyleSheet.create({
     justifyContent: "space-between",
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#f1f5f9",
   },
-  menuRowLabel: { fontSize: 14, fontWeight: "500", color: "#1e293b" },
+  menuRowLabel: { fontSize: 14, fontWeight: "500" },
   autoScrollHint: {
     fontSize: 12,
-    color: "#64748b",
     marginTop: 10,
     marginBottom: 6,
   },
@@ -1269,13 +1272,8 @@ const s = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 999,
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
-    backgroundColor: "#f8fafc",
   },
-  autoScrollChipActive: { backgroundColor: TEAL, borderColor: TEAL },
-  autoScrollChipDisabled: { opacity: 0.45 },
-  autoScrollChipText: { fontSize: 13, fontWeight: "700", color: "#1e293b" },
-  autoScrollChipTextActive: { color: "#fff" },
+  autoScrollChipText: { fontSize: 13, fontWeight: "700" },
 
   // Mode Switch
   modeSwitch: {
@@ -1283,28 +1281,18 @@ const s = StyleSheet.create({
     gap: 8,
     paddingHorizontal: 14,
     paddingVertical: 10,
-    backgroundColor: "#fff",
     borderBottomWidth: 1,
-    borderBottomColor: "#f0e2ed",
     marginBottom: 16,
   },
   modeBtn: {
     flex: 1,
     paddingVertical: 9,
-    backgroundColor: "#e2e8f0",
     borderRadius: 10,
     alignItems: "center",
-  },
-  modeActive: {
-    backgroundColor: TEAL_DARK,
   },
   modeBtnText: {
     fontSize: 13,
     fontWeight: "600",
-    color: "#475569",
-  },
-  modeBtnTextActive: {
-    color: "#475569",
   },
 
   // Banner bookmark
@@ -1313,55 +1301,38 @@ const s = StyleSheet.create({
     marginBottom: 6,
     paddingVertical: 9,
     paddingHorizontal: 14,
-    backgroundColor: "#fefce8",
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#fde047",
   },
-  bookmarkBannerText: { color: "#854d0e", fontSize: 13, fontWeight: "600" },
+  bookmarkBannerText: { fontSize: 13, fontWeight: "600" },
 
   // Vocab list styles
   vocabRow: {
     flexDirection: "row",
-    backgroundColor: "#fff",
     borderRadius: 12,
     paddingVertical: 12,
     paddingHorizontal: 14,
     marginBottom: 8,
     alignItems: "flex-start",
   },
-  vocabCol: {
-    width: 60,
-    alignItems: "center",
-    justifyContent: "center",
-  },
   indexNum: {
     fontSize: 14,
-    color: TEXT_COLOR,
     marginBottom: 2,
     marginRight: 8,
   },
-  vocabInfoCol: {
-    flex: 1,
-    justifyContent: "center",
-    paddingLeft: 6,
-  },
   vocabReading: {
     fontSize: 14,
-    color: TEAL_DARK,
     fontWeight: "500",
     marginBottom: 2,
   },
   vocabHan: {
     fontSize: 13,
-    color: TEAL,
     fontWeight: "600",
     letterSpacing: 0.5,
     marginBottom: 3,
   },
   vocabMeaning: {
     fontSize: 13,
-    color: "#475569",
   },
   speakBtn: {
     padding: 6,
@@ -1369,7 +1340,6 @@ const s = StyleSheet.create({
   },
   speakIcon: {
     fontSize: 18,
-    color: TEAL,
   },
   starBtn: {
     padding: 6,
@@ -1379,18 +1349,17 @@ const s = StyleSheet.create({
     fontSize: 20,
   },
 
-  buttonTextWhite: { color: "#fff", fontSize: 13, fontWeight: "600" },
-  buttonTextDark: { fontSize: 14, fontWeight: "600", color: "#1a202c" },
+  buttonTextWhite: { fontSize: 13, fontWeight: "600" },
+  buttonTextDark: { fontSize: 14, fontWeight: "600" },
 
   // Progress bar
   progressBarWrapper: { marginVertical: 12 },
   progressBarTrack: {
     height: 6,
-    backgroundColor: "#e2e8f0",
     borderRadius: 3,
     overflow: "hidden",
   },
-  progressBarFill: { height: "100%", backgroundColor: TEAL, borderRadius: 3 },
+  progressBarFill: { height: "100%", borderRadius: 3 },
 
   // Quiz styles
   quizContainer: {
@@ -1398,17 +1367,15 @@ const s = StyleSheet.create({
     padding: 20,
     paddingTop: 56,
     paddingBottom: 80,
-    backgroundColor: "#f0f8f0",
   },
   quizHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 24,
   },
-  quizCounter: { fontSize: 16, fontWeight: "600", color: "#4a5568" },
-  quizScore: { fontSize: 16, fontWeight: "700", color: TEAL },
+  quizCounter: { fontSize: 16, fontWeight: "600" },
+  quizScore: { fontSize: 16, fontWeight: "700" },
   questionCard: {
-    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 32,
     alignItems: "center",
@@ -1418,47 +1385,27 @@ const s = StyleSheet.create({
     shadowRadius: 12,
     elevation: 4,
   },
-  questionText: { fontSize: 36, fontWeight: "800", color: "#1a202c" },
-  questionSub: { fontSize: 18, color: "#718096", marginTop: 8 },
-  questionHint: { fontSize: 14, color: "#a0aec0", marginTop: 12 },
+  questionText: { fontSize: 36, fontWeight: "800" },
+  questionSub: { fontSize: 18, marginTop: 8 },
+  questionHint: { fontSize: 14, marginTop: 12 },
   optionsGrid: { gap: 12, marginBottom: 20 },
   optionBtn: {
-    backgroundColor: "#fff",
-    padding: 16,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: "#e2e8f0",
-    alignItems: "center",
-  },
-  correctOption: {
-    backgroundColor: TEAL_DARK,
-    borderColor: "#290763",
     padding: 16,
     borderRadius: 12,
     borderWidth: 2,
     alignItems: "center",
   },
-  wrongOption: {
-    backgroundColor: "#f56565",
-    borderColor: "#e53e3e",
-    padding: 16,
-    borderRadius: 12,
-    borderWidth: 2,
-    alignItems: "center",
-  },
-  optionText: { fontSize: 16, fontWeight: "500", color: "#2d3748" },
+  optionText: { fontSize: 16, fontWeight: "500" },
   explainBtn: { alignItems: "center", padding: 12 },
-  explainText: { fontSize: 14, color: TEAL },
+  explainText: { fontSize: 14 },
   explanationBox: {
-    backgroundColor: "#ebf8ff",
     padding: 16,
     borderRadius: 12,
     marginTop: 12,
   },
-  explanationTitle: { fontWeight: "700", color: TEAL, marginBottom: 8 },
-  explanationContent: { fontSize: 14, color: "#2d3748" },
+  explanationTitle: { fontWeight: "700", marginBottom: 8 },
+  explanationContent: { fontSize: 14 },
   resultCard: {
-    backgroundColor: "#fff",
     borderRadius: 24,
     padding: 32,
     alignItems: "center",
@@ -1471,13 +1418,11 @@ const s = StyleSheet.create({
   resultScore: {
     fontSize: 48,
     fontWeight: "800",
-    color: TEAL,
     marginBottom: 8,
   },
-  resultPercentage: { fontSize: 20, color: "#4a5568", marginBottom: 16 },
+  resultPercentage: { fontSize: 20, marginBottom: 16 },
   resultMessage: { fontSize: 18, marginBottom: 24 },
   quizExitBtn: {
-    backgroundColor: TEAL,
     paddingVertical: 14,
     paddingHorizontal: 32,
     borderRadius: 12,
@@ -1489,33 +1434,28 @@ const s = StyleSheet.create({
     padding: 20,
     paddingTop: 56,
     paddingBottom: 80,
-    backgroundColor: "#f0f4f8",
   },
   practiceHeader: {
     flexDirection: "row",
     justifyContent: "space-between",
     marginBottom: 16,
   },
-  practiceCounter: { fontSize: 16, fontWeight: "600", color: "#4a5568" },
-  practiceScore: { fontSize: 16, fontWeight: "700", color: TEAL },
+  practiceCounter: { fontSize: 16, fontWeight: "600" },
+  practiceScore: { fontSize: 16, fontWeight: "700" },
   practiceInput: {
-    backgroundColor: "#fff",
     borderWidth: 2,
-    borderColor: "#e2e8f0",
     borderRadius: 12,
     padding: 16,
     fontSize: 16,
     marginBottom: 20,
   },
   checkBtn: {
-    backgroundColor: TEAL,
     paddingVertical: 14,
     borderRadius: 12,
     alignItems: "center",
     marginBottom: 12,
   },
   practiceExitBtn: {
-    backgroundColor: "#e2e8f0",
     paddingVertical: 12,
     borderRadius: 12,
     alignItems: "center",
@@ -1526,19 +1466,15 @@ const s = StyleSheet.create({
     marginBottom: 16,
     alignItems: "center",
   },
-  feedbackCorrect: { backgroundColor: "#c6f6d5" },
-  feedbackWrong: { backgroundColor: "#fed7d7" },
   feedbackText: { fontSize: 14, fontWeight: "500" },
 
   // Statistics Modal
   modalOverlay: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
     justifyContent: "center",
     alignItems: "center",
   },
   statsModal: {
-    backgroundColor: "#fff",
     borderRadius: 24,
     padding: 24,
     width: "85%",
@@ -1548,23 +1484,20 @@ const s = StyleSheet.create({
     fontSize: 22,
     fontWeight: "700",
     marginBottom: 20,
-    color: "#2d3748",
   },
   statCard: {
     alignItems: "center",
     marginBottom: 16,
     padding: 16,
-    backgroundColor: "#ebf8ff",
     borderRadius: 16,
     width: "100%",
   },
-  statValue: { fontSize: 40, fontWeight: "800", color: TEAL },
-  statLabel: { fontSize: 14, color: "#4a5568", marginTop: 4 },
-  statCardTappable: { borderWidth: 1.5, borderColor: "#ed3aa2" },
-  statLabelHint: { color: "#ed3a9f", fontStyle: "italic" },
+  statValue: { fontSize: 40, fontWeight: "800" },
+  statLabel: { fontSize: 14, marginTop: 4 },
+  statCardTappable: { borderWidth: 1.5 },
+  statLabelHint: { fontStyle: "italic" },
   statsDivider: {
     height: 1,
-    backgroundColor: "#e2e8f0",
     width: "100%",
     marginVertical: 16,
   },
@@ -1580,10 +1513,9 @@ const s = StyleSheet.create({
     width: "100%",
     marginBottom: 10,
   },
-  statRowLabel: { fontSize: 14, color: "#4a5568" },
-  statRowValue: { fontSize: 14, fontWeight: "700", color: TEAL },
+  statRowLabel: { fontSize: 14 },
+  statRowValue: { fontSize: 14, fontWeight: "700" },
   closeStatsBtn: {
-    backgroundColor: TEAL,
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 10,
@@ -1594,13 +1526,12 @@ const s = StyleSheet.create({
   loadingText: {
     textAlign: "center",
     fontSize: 18,
-    color: "#4a5568",
     marginTop: 40,
   },
   empty: { padding: 30, alignItems: "center" },
-  emptyText: { color: TEAL_DARK, fontSize: 16, fontWeight: "600" },
+  emptyText: { fontSize: 16, fontWeight: "600" },
   rowMain: { flex: 1 },
   rowTopLine: { flexDirection: "row", alignItems: "baseline", marginBottom: 4 },
   rowActions: { flexDirection: "row", alignItems: "center", marginLeft: 8 },
-  vocabKanji: { fontSize: 20, fontWeight: "700", color: TEAL_DARK },
+  vocabKanji: { fontSize: 20, fontWeight: "700" },
 });

@@ -22,14 +22,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { getKanjiByBook, KANJI_BOOK_CONFIG, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { getGrammarByBook, GRAMMAR_BOOK_CONFIG, type GrammarItem } from "../assets/data_nn";
 import { getVocabByBook, VOCAB_BOOK_CONFIG } from "../assets/vocab";
-
-// ✅ MÀU CHỦ ĐẠO MỚI
-const TEAL = "#004370";
-const TEAL_DARK = "#004370";
-const GRAD = [TEAL, TEAL_DARK] as const;
-const TEXT_COLOR_kanji = "#004370";
-const TEXT_COLOR_vocab = "#004370";
-const TEXT_COLOR_grammar = "#004370";
+import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 type Part = "kanji" | "vocab" | "grammar";
 
@@ -137,6 +130,7 @@ function getFlatLessons<T extends { lesson?: number }>(items: T[]): { lesson: nu
 // ── Main Screen ───────────────────────────────────────────────────────────────
 
 export default function LevelBookScreen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const router = useRouter();
   const params = useLocalSearchParams<{ bookId?: string }>();
   const bookId = typeof params.bookId === "string" ? params.bookId : "n5";
@@ -185,12 +179,13 @@ export default function LevelBookScreen() {
     [vocabData]
   );
 
+  // ── Màu các phần (漢字/語彙/文法) — dùng chung 1 màu primary hiện tại của theme ──
   const PARTS = [
     ...(!config.hideKanji
-      ? [{ key: "kanji" as Part, jpLabel: "漢字", color: TEXT_COLOR_kanji }]
+      ? [{ key: "kanji" as Part, jpLabel: "漢字", color: c.primary }]
       : []),
-    { key: "vocab" as Part, jpLabel: "語彙", color: TEXT_COLOR_vocab },
-    { key: "grammar" as Part, jpLabel: "文法", color: TEXT_COLOR_grammar },
+    { key: "vocab" as Part, jpLabel: "語彙", color: c.primary },
+    { key: "grammar" as Part, jpLabel: "文法", color: c.primary },
   ];
 
   const currentPart = PARTS.find((p) => p.key === activePart)!;
@@ -223,38 +218,38 @@ export default function LevelBookScreen() {
   ) => weeks.map(({ week, total, lessons }) => {
     const isOpen = expandedWeeks.has(week);
     return (
-      <View key={week} style={s.weekCard}>
+      <View key={week} style={[s.weekCard, { backgroundColor: c.card }]}>
         <TouchableOpacity
           style={[s.weekHeader, { borderLeftColor: color }]}
           onPress={() => toggleWeek(week)}
           activeOpacity={0.75}
         >
           <View style={[s.weekBadge, { backgroundColor: color }]}>
-            <Text style={s.weekBadgeJP}>第{week}週</Text>
-            <Text style={s.weekBadgeVI}>Tuần {week}</Text>
+            <Text style={[s.weekBadgeJP, { color: c.primaryForeground }]}>第{week}週</Text>
+            <Text style={[s.weekBadgeVI, { color: c.primaryForeground + "d9" }]}>Tuần {week}</Text>
           </View>
           <View style={s.weekMeta}>
-            <Text style={s.weekMetaLessons}>{lessons.length} bài học</Text>
-            <Text style={s.weekMetaCount}>{total} mục</Text>
+            <Text style={[s.weekMetaLessons, { color: c.text }]}>{lessons.length} bài học</Text>
+            <Text style={[s.weekMetaCount, { color: c.mutedForeground }]}>{total} mục</Text>
           </View>
-          <View style={s.progressBar}>
+          <View style={[s.progressBar, { backgroundColor: c.muted }]}>
             <View style={[s.progressFill, { backgroundColor: color, width: "0%" }]} />
           </View>
-          <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
+          <Text style={[s.chevron, { color: c.mutedForeground }, isOpen && s.chevronOpen]}>›</Text>
         </TouchableOpacity>
         {isOpen && (
-          <View style={s.lessonsWrap}>
+          <View style={[s.lessonsWrap, { borderTopColor: c.border }]}>
             {lessons.map(({ lesson, items }) => (
-              <TouchableOpacity key={lesson} style={s.lessonRow} onPress={() => onLesson(lesson)} activeOpacity={0.7}>
-                <View style={[s.lessonNumCircle, { borderColor: color }]}>
+              <TouchableOpacity key={lesson} style={[s.lessonRow, { borderBottomColor: c.border }]} onPress={() => onLesson(lesson)} activeOpacity={0.7}>
+                <View style={[s.lessonNumCircle, { borderColor: color, backgroundColor: c.muted }]}>
                   <Text style={[s.lessonNumText, { color }]}>{lesson}</Text>
                 </View>
                 <View style={s.lessonInfo}>
-                  <Text style={s.lessonTitle}>Bài {lesson}</Text>
-                  <Text style={s.lessonCount}>{items.length} mục</Text>
+                  <Text style={[s.lessonTitle, { color: c.text }]}>Bài {lesson}</Text>
+                  <Text style={[s.lessonCount, { color: c.mutedForeground }]}>{items.length} mục</Text>
                 </View>
                 <View style={[s.studyBtn, { backgroundColor: color }]}>
-                  <Text style={s.studyBtnText}>Học ▶</Text>
+                  <Text style={[s.studyBtnText, { color: c.primaryForeground }]}>Học ▶</Text>
                 </View>
               </TouchableOpacity>
             ))}
@@ -266,34 +261,34 @@ export default function LevelBookScreen() {
 
   const renderGrammarWeeks = () => grammarWeeks.map(({ week, items }) => {
     const isOpen = expandedWeeks.has(week);
-    const color = TEXT_COLOR_grammar;
+    const color = c.primary;
     const preview = items.slice(0, 4).map((g) => g.pattern).join("・");
     return (
-      <View key={week} style={s.weekCard}>
+      <View key={week} style={[s.weekCard, { backgroundColor: c.card }]}>
         <TouchableOpacity
           style={[s.weekHeader, { borderLeftColor: color }]}
           onPress={() => toggleWeek(week)}
           activeOpacity={0.75}
         >
           <View style={[s.weekBadge, { backgroundColor: color }]}>
-            <Text style={s.weekBadgeJP}>第{week}週</Text>
-            <Text style={s.weekBadgeVI}>Tuần {week}</Text>
+            <Text style={[s.weekBadgeJP, { color: c.primaryForeground }]}>第{week}週</Text>
+            <Text style={[s.weekBadgeVI, { color: c.primaryForeground + "d9" }]}>Tuần {week}</Text>
           </View>
           <View style={s.weekMeta}>
-            <Text style={s.weekMetaLessons}>{items.length} mẫu</Text>
-            <Text style={s.weekMetaCount}>Ngữ pháp</Text>
+            <Text style={[s.weekMetaLessons, { color: c.text }]}>{items.length} mẫu</Text>
+            <Text style={[s.weekMetaCount, { color: c.mutedForeground }]}>Ngữ pháp</Text>
           </View>
-          <Text style={[s.chevron, isOpen && s.chevronOpen]}>›</Text>
+          <Text style={[s.chevron, { color: c.mutedForeground }, isOpen && s.chevronOpen]}>›</Text>
         </TouchableOpacity>
         {isOpen && (
-          <View style={s.grammarContent}>
-            <Text style={s.grammarPreview} numberOfLines={2}>{preview}{items.length > 4 ? "..." : ""}</Text>
+          <View style={[s.grammarContent, { borderTopColor: c.border }]}>
+            <Text style={[s.grammarPreview, { color: c.text }]} numberOfLines={2}>{preview}{items.length > 4 ? "..." : ""}</Text>
             <TouchableOpacity
               style={[s.grammarStudyBtn, { backgroundColor: color }]}
               onPress={() => goGrammarWeek(week, items.length)}
               activeOpacity={0.8}
             >
-              <Text style={s.grammarStudyBtnText}>Học {items.length} mẫu ngữ pháp  ▶</Text>
+              <Text style={[s.grammarStudyBtnText, { color: c.primaryForeground }]}>Học {items.length} mẫu ngữ pháp  ▶</Text>
             </TouchableOpacity>
           </View>
         )}
@@ -307,23 +302,23 @@ export default function LevelBookScreen() {
     color: string,
     onLesson: (l: number) => void,
   ) => (
-    <View style={s.flatCard}>
+    <View style={[s.flatCard, { backgroundColor: c.card }]}>
       {lessons.map(({ lesson, items }, idx) => (
         <TouchableOpacity
           key={lesson}
-          style={[s.flatRow, idx < lessons.length - 1 && s.flatRowBorder]}
+          style={[s.flatRow, idx < lessons.length - 1 && { borderBottomWidth: 1, borderBottomColor: c.border }]}
           onPress={() => onLesson(lesson)}
           activeOpacity={0.7}
         >
-          <View style={[s.lessonNumCircle, { borderColor: color }]}>
+          <View style={[s.lessonNumCircle, { borderColor: color, backgroundColor: c.muted }]}>
             <Text style={[s.lessonNumText, { color }]}>{lesson}</Text>
           </View>
           <View style={s.lessonInfo}>
-            <Text style={s.lessonTitle}>Bài {lesson}</Text>
-            <Text style={s.lessonCount}>{items.length} mục</Text>
+            <Text style={[s.lessonTitle, { color: c.text }]}>Bài {lesson}</Text>
+            <Text style={[s.lessonCount, { color: c.mutedForeground }]}>{items.length} mục</Text>
           </View>
           <View style={[s.studyBtn, { backgroundColor: color }]}>
-            <Text style={s.studyBtnText}>Học ▶</Text>
+            <Text style={[s.studyBtnText, { color: c.primaryForeground }]}>Học ▶</Text>
           </View>
         </TouchableOpacity>
       ))}
@@ -331,18 +326,18 @@ export default function LevelBookScreen() {
   );
 
   const renderFlatGrammar = () => {
-    const color = TEXT_COLOR_grammar;
+    const color = c.primary;
     const preview = grammarData.slice(0, 5).map((g) => g.pattern).join("・");
     return (
-      <View style={s.flatCard}>
+      <View style={[s.flatCard, { backgroundColor: c.card }]}>
         <View style={[s.grammarAllHeader, { borderLeftColor: color }]}>
           <View style={[s.grammarAllBadge, { backgroundColor: color }]}>
-            <Text style={s.grammarAllBadgeText}>{grammarData.length}</Text>
-            <Text style={s.grammarAllBadgeSub}>mẫu</Text>
+            <Text style={[s.grammarAllBadgeText, { color: c.primaryForeground }]}>{grammarData.length}</Text>
+            <Text style={[s.grammarAllBadgeSub, { color: c.primaryForeground + "d9" }]}>mẫu</Text>
           </View>
           <View style={{ flex: 1 }}>
-            <Text style={s.grammarAllTitle}>Tất cả mẫu ngữ pháp</Text>
-            <Text style={s.grammarAllPreview} numberOfLines={2}>{preview}...</Text>
+            <Text style={[s.grammarAllTitle, { color: c.text }]}>Tất cả mẫu ngữ pháp</Text>
+            <Text style={[s.grammarAllPreview, { color: c.mutedForeground }]} numberOfLines={2}>{preview}...</Text>
           </View>
         </View>
         <TouchableOpacity
@@ -350,7 +345,7 @@ export default function LevelBookScreen() {
           onPress={goGrammarAll}
           activeOpacity={0.8}
         >
-          <Text style={s.grammarStudyBtnText}>Học tất cả {grammarData.length} mẫu ngữ pháp  ▶</Text>
+          <Text style={[s.grammarStudyBtnText, { color: c.primaryForeground }]}>Học tất cả {grammarData.length} mẫu ngữ pháp  ▶</Text>
         </TouchableOpacity>
       </View>
     );
@@ -374,16 +369,16 @@ export default function LevelBookScreen() {
   };
 
   return (
-    <View style={s.root}>
-      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
+    <View style={[s.root, { backgroundColor: c.background }]}>
+      <StatusBar barStyle="light-content" backgroundColor={c.primary} />
 
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
+      <LinearGradient colors={[c.primary, c.primary]} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
         <SafeAreaView edges={["top", "left", "right"]}>
           <View style={s.headerTopRow}>
             <TouchableOpacity style={s.backBtn} onPress={() => router.back()} activeOpacity={0.7}>
-              <Text style={s.backIcon}>‹</Text>
+              <Text style={[s.backIcon, { color: c.primaryForeground }]}>‹</Text>
             </TouchableOpacity>
-            <Text style={s.headerTitle}>{config.headerTitle}</Text>
+            <Text style={[s.headerTitle, { color: c.primaryForeground }]}>{config.headerTitle}</Text>
             <View style={{ width: 40 }} />
           </View>
 
@@ -393,11 +388,23 @@ export default function LevelBookScreen() {
               return (
                 <TouchableOpacity
                   key={p.key}
-                  style={[s.partTab, active && { backgroundColor: p.color }]}
+                  style={[
+                    s.partTab,
+                    { backgroundColor: c.primaryForeground + "2e" },
+                    active && { backgroundColor: p.color },
+                  ]}
                   onPress={() => switchPart(p.key)}
                   activeOpacity={0.8}
                 >
-                  <Text style={[s.partTabJP, active && s.partTabJPActive]}>{p.jpLabel}</Text>
+                  <Text
+                    style={[
+                      s.partTabJP,
+                      { color: c.primaryForeground + "d9" },
+                      active && { color: c.primaryForeground },
+                    ]}
+                  >
+                    {p.jpLabel}
+                  </Text>
                 </TouchableOpacity>
               );
             })}
@@ -407,20 +414,20 @@ export default function LevelBookScreen() {
 
       <ScrollView style={s.scroll} contentContainerStyle={s.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={[s.sectionLabel, { borderLeftColor: currentPart.color }]}>
-          <Text style={s.sectionLabelJP}>{currentPart.jpLabel}</Text>
-          <Text style={s.sectionLabelMeta}>{sectionMeta()}</Text>
+          <Text style={[s.sectionLabelJP, { color: c.text }]}>{currentPart.jpLabel}</Text>
+          <Text style={[s.sectionLabelMeta, { color: c.mutedForeground }]}>{sectionMeta()}</Text>
         </View>
 
         {config.useWeeks ? (
           <>
-            {activePart === "kanji"   && renderWeekLesson(kanjiWeeks,        TEXT_COLOR_kanji, goKanjiLesson)}
-            {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any, TEXT_COLOR_vocab, goVocabLesson)}
+            {activePart === "kanji"   && renderWeekLesson(kanjiWeeks,        c.primary, goKanjiLesson)}
+            {activePart === "vocab"   && renderWeekLesson(vocabWeeks as any, c.primary, goVocabLesson)}
             {activePart === "grammar" && renderGrammarWeeks()}
           </>
         ) : (
           <>
-            {activePart === "kanji"   && renderFlatLessons(kanjiFlatLessons,        TEXT_COLOR_kanji, goKanjiLesson)}
-            {activePart === "vocab"   && renderFlatLessons(vocabFlatLessons as any, TEXT_COLOR_vocab, goVocabLesson)}
+            {activePart === "kanji"   && renderFlatLessons(kanjiFlatLessons,        c.primary, goKanjiLesson)}
+            {activePart === "vocab"   && renderFlatLessons(vocabFlatLessons as any, c.primary, goVocabLesson)}
             {activePart === "grammar" && renderFlatGrammar()}
           </>
         )}
@@ -433,9 +440,9 @@ export default function LevelBookScreen() {
   );
 }
 
-// ─── Styles ───────────────────────────────────────────────────────────────────
+// ─── Styles (chỉ layout — màu gán inline theo theme ở trên) ───────────────────
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f1f5f9" },
+  root: { flex: 1 },
   headerGradient: {
     borderBottomLeftRadius: 20,
     borderBottomRightRadius: 20,
@@ -443,8 +450,8 @@ const s = StyleSheet.create({
   },
   headerTopRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingLeft: 12, paddingRight: 28, paddingTop: 6, paddingBottom: 0 },
   backBtn: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center" },
-  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
-  headerTitle: { color: "#fff", fontSize: 18, fontWeight: "900", letterSpacing: 0.3 },
+  backIcon: { fontSize: 32, fontWeight: "300", marginTop: -4 },
+  headerTitle: { fontSize: 18, fontWeight: "900", letterSpacing: 0.3 },
 
   partTabsRow: {
     flexDirection: "row",
@@ -453,56 +460,54 @@ const s = StyleSheet.create({
     paddingTop: 10,
     gap: 8
   },
-  partTab: { flex: 1, alignItems: "center", paddingVertical: 8, borderRadius: 12, backgroundColor: "rgba(255,255,255,0.18)" },
-  partTabJP:       { color: "rgba(255,255,255,0.85)", fontSize: 16, fontWeight: "900" },
-  partTabJPActive: { color: "#fff" },
+  partTab: { flex: 1, alignItems: "center", paddingVertical: 8, borderRadius: 12 },
+  partTabJP:       { fontSize: 16, fontWeight: "900" },
 
   scroll: { flex: 1 },
   scrollContent: { padding: 12 },
 
   sectionLabel: { flexDirection: "row", alignItems: "center", borderLeftWidth: 3, paddingLeft: 10, marginBottom: 12, marginTop: 4 },
-  sectionLabelJP:   { fontSize: 15, fontWeight: "900", color: "#0f172a" },
-  sectionLabelMeta: { fontSize: 11, color: "#94a3b8", marginLeft: "auto" },
+  sectionLabelJP:   { fontSize: 15, fontWeight: "900" },
+  sectionLabelMeta: { fontSize: 11, marginLeft: "auto" },
 
   // Week accordion cards
-  weekCard: { backgroundColor: "#fff", borderRadius: 14, marginBottom: 10, overflow: "hidden", elevation: 2, shadowColor: "#000", shadowOpacity: 0.06, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
+  weekCard: { borderRadius: 14, marginBottom: 10, overflow: "hidden", elevation: 2, shadowColor: "#000", shadowOpacity: 0.06, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
   weekHeader: { flexDirection: "row", alignItems: "center", padding: 12, borderLeftWidth: 4, gap: 10 },
   weekBadge: { width: 56, height: 56, borderRadius: 10, alignItems: "center", justifyContent: "center" },
-  weekBadgeJP: { color: "#fff", fontSize: 13, fontWeight: "900" },
-  weekBadgeVI: { color: "rgba(255,255,255,0.85)", fontSize: 9, fontWeight: "700", marginTop: 1 },
+  weekBadgeJP: { fontSize: 13, fontWeight: "900" },
+  weekBadgeVI: { fontSize: 9, fontWeight: "700", marginTop: 1 },
   weekMeta: { flex: 1 },
-  weekMetaLessons: { fontSize: 15, fontWeight: "800", color: "#0f172a" },
-  weekMetaCount:   { fontSize: 12, color: "#64748b", marginTop: 2 },
-  progressBar: { width: 60, height: 4, backgroundColor: "#e2e8f0", borderRadius: 2 },
+  weekMetaLessons: { fontSize: 15, fontWeight: "800" },
+  weekMetaCount:   { fontSize: 12, marginTop: 2 },
+  progressBar: { width: 60, height: 4, borderRadius: 2 },
   progressFill: { height: 4, borderRadius: 2 },
-  chevron: { fontSize: 24, color: "#94a3b8" },
+  chevron: { fontSize: 24 },
   chevronOpen: { transform: [{ rotate: "90deg" }] },
 
-  lessonsWrap: { borderTopWidth: 1, borderTopColor: "#f1f5f9" },
-  lessonRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 14, paddingVertical: 10, borderBottomWidth: 1, borderBottomColor: "#f8fafc", gap: 12 },
-  lessonNumCircle: { width: 36, height: 36, borderRadius: 18, borderWidth: 1.5, alignItems: "center", justifyContent: "center", backgroundColor: "#f8fafc" },
+  lessonsWrap: { borderTopWidth: 1 },
+  lessonRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 14, paddingVertical: 10, borderBottomWidth: 1, gap: 12 },
+  lessonNumCircle: { width: 36, height: 36, borderRadius: 18, borderWidth: 1.5, alignItems: "center", justifyContent: "center" },
   lessonNumText: { fontSize: 13, fontWeight: "800" },
   lessonInfo: { flex: 1 },
-  lessonTitle: { fontSize: 14, fontWeight: "700", color: "#1e293b" },
-  lessonCount: { fontSize: 11, color: "#64748b", marginTop: 1 },
+  lessonTitle: { fontSize: 14, fontWeight: "700" },
+  lessonCount: { fontSize: 11, marginTop: 1 },
   studyBtn: { paddingHorizontal: 12, paddingVertical: 6, borderRadius: 8 },
-  studyBtnText: { color: "#fff", fontSize: 12, fontWeight: "800" },
+  studyBtnText: { fontSize: 12, fontWeight: "800" },
 
-  grammarContent: { padding: 14, borderTopWidth: 1, borderTopColor: "#f1f5f9" },
-  grammarPreview: { fontSize: 13, color: "#475569", lineHeight: 20, marginBottom: 10, fontWeight: "500" },
+  grammarContent: { padding: 14, borderTopWidth: 1 },
+  grammarPreview: { fontSize: 13, lineHeight: 20, marginBottom: 10, fontWeight: "500" },
   grammarStudyBtn: { borderRadius: 10, paddingVertical: 10, alignItems: "center" },
-  grammarStudyBtnText: { color: "#fff", fontSize: 14, fontWeight: "800" },
+  grammarStudyBtnText: { fontSize: 14, fontWeight: "800" },
 
   // Flat list card
-  flatCard: { backgroundColor: "#fff", borderRadius: 14, overflow: "hidden", elevation: 2, shadowColor: "#000", shadowOpacity: 0.06, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
+  flatCard: { borderRadius: 14, overflow: "hidden", elevation: 2, shadowColor: "#000", shadowOpacity: 0.06, shadowRadius: 4, shadowOffset: { width: 0, height: 2 } },
   flatRow: { flexDirection: "row", alignItems: "center", paddingHorizontal: 14, paddingVertical: 12, gap: 12 },
-  flatRowBorder: { borderBottomWidth: 1, borderBottomColor: "#f1f5f9" },
 
   // Grammar all-in-one block
   grammarAllHeader: { flexDirection: "row", alignItems: "center", padding: 14, borderLeftWidth: 4, gap: 12 },
   grammarAllBadge: { width: 60, height: 60, borderRadius: 10, alignItems: "center", justifyContent: "center" },
-  grammarAllBadgeText: { color: "#fff", fontSize: 20, fontWeight: "900" },
-  grammarAllBadgeSub: { color: "rgba(255,255,255,0.85)", fontSize: 10, fontWeight: "700" },
-  grammarAllTitle: { fontSize: 15, fontWeight: "800", color: "#0f172a", marginBottom: 4 },
-  grammarAllPreview: { fontSize: 12, color: "#64748b", lineHeight: 18 },
+  grammarAllBadgeText: { fontSize: 20, fontWeight: "900" },
+  grammarAllBadgeSub: { fontSize: 10, fontWeight: "700" },
+  grammarAllTitle: { fontSize: 15, fontWeight: "800", marginBottom: 4 },
+  grammarAllPreview: { fontSize: 12, lineHeight: 18 },
 });

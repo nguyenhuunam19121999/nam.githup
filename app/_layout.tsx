@@ -18,6 +18,7 @@ import { AuthProvider } from "../artifacts/mirai-jp/hooks/useAuth";
 import { AdsProvider } from "../artifacts/mirai-jp/hooks/useAds";
 import { useForceUpdate } from "../artifacts/mirai-jp/hooks/useForceUpdate";
 import { GiftPromoProvider } from "../artifacts/mirai-jp/hooks/useGiftPromo";
+import { ColorsProvider } from "../artifacts/mirai-jp/hooks/useColors";
 import { ForceUpdateScreen } from "../components/ForceUpdateScreen";
 import { ensureKanjiDbReady } from "../assets/data_JLPT_kanji";
 import { ensureVocabDbReady } from "../assets/vocab";
@@ -174,23 +175,25 @@ export default function RootLayout() {
   }
 
   return (
-    <SafeAreaProvider>
-      <ErrorBoundary>
-        <QueryClientProvider client={queryClient}>
-          <GestureHandlerRootView>
-            <KeyboardProvider>
-              <AdsProvider>
-                <GiftPromoProvider>
-                  <AuthProvider>
-                    <RootLayoutNav />
-                  </AuthProvider>
-                </GiftPromoProvider>
-              </AdsProvider>
-            </KeyboardProvider>
-          </GestureHandlerRootView>
-        </QueryClientProvider>
-      </ErrorBoundary>
-    </SafeAreaProvider>
+    <ColorsProvider>
+      <SafeAreaProvider>
+        <ErrorBoundary>
+          <QueryClientProvider client={queryClient}>
+            <GestureHandlerRootView>
+              <KeyboardProvider>
+                <AdsProvider>
+                  <GiftPromoProvider>
+                    <AuthProvider>
+                      <RootLayoutNav />
+                    </AuthProvider>
+                  </GiftPromoProvider>
+                </AdsProvider>
+              </KeyboardProvider>
+            </GestureHandlerRootView>
+          </QueryClientProvider>
+        </ErrorBoundary>
+      </SafeAreaProvider>
+    </ColorsProvider>
   );
 }
 

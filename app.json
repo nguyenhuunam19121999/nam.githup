@@ -2,9 +2,9 @@
   "expo": {
     "name": "Mirai",
     "slug": "mirai-jp",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "orientation": "portrait",
-    "icon": "./assets/images_icon/Icon_clean.png",
+    "icon": "./assets/images_icon/icon_app.png",
     "scheme": "mirai-jp",
     "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [

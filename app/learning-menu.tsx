@@ -20,14 +20,7 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import { LinearGradient } from "expo-linear-gradient";
-
-// ✅ MÀU CHỦ ĐẠO MỚI
-
-const TEAL = "#004370";
-const TEAL_DARK = "#004370";
-const GRAD = [TEAL, TEAL_DARK] as const;
-// const BG_GRAY = "#f0f4f8";
-// const headerColor = "#f1f5f9";
+import { useColors, useThemeMode } from "../artifacts/mirai-jp/hooks/useColors";
 
 interface MenuItem {
   id: string;
@@ -71,6 +64,10 @@ function buildItems(): MenuItem[] {
 }
 
 export default function LearningMenuScreen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const router = useRouter();
   const params = useLocalSearchParams<{
     level?: string;
@@ -110,25 +107,30 @@ export default function LearningMenuScreen() {
   };
 
   return (
-    <View style={s.root}>
-      <StatusBar barStyle="light-content" backgroundColor={TEAL} />
-      <LinearGradient colors={GRAD} start={{ x: 0, y: 0 }} end={{ x: 1, y: 1 }} style={s.headerGradient}>
-      <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
-        <View style={s.topBarInner}>
-          <TouchableOpacity
-            style={s.backBtn}
-            onPress={() => router.back()}
-            activeOpacity={0.7}
-            hitSlop={10}
-          >
-            <Text style={s.backIcon}>‹</Text>
-          </TouchableOpacity>
-          <View style={{ flex: 1 }} />
-          <View style={s.logoBadge}>
-            <Text style={s.logoText}>Mirai</Text>
+    <View style={[s.root, { backgroundColor: c.background }]}>
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.primary} />
+      <LinearGradient
+        colors={[c.primary, c.primary + "cc"]}
+        start={{ x: 0, y: 0 }}
+        end={{ x: 1, y: 1 }}
+        style={s.headerGradient}
+      >
+        <SafeAreaView style={s.topBar} edges={["top", "left", "right"]}>
+          <View style={s.topBarInner}>
+            <TouchableOpacity
+              style={s.backBtn}
+              onPress={() => router.back()}
+              activeOpacity={0.7}
+              hitSlop={10}
+            >
+              <Text style={[s.backIcon, { color: c.primaryForeground }]}>‹</Text>
+            </TouchableOpacity>
+            <View style={{ flex: 1 }} />
+            <View style={s.logoBadge}>
+              <Text style={[s.logoText, { color: c.primaryForeground }]}>Mirai</Text>
+            </View>
           </View>
-        </View>
-      </SafeAreaView>
+        </SafeAreaView>
       </LinearGradient>
 
       <ScrollView
@@ -139,12 +141,12 @@ export default function LearningMenuScreen() {
         {buildItems().map((item) => (
           <TouchableOpacity
             key={item.id}
-            style={s.menuCard}
+            style={[s.menuCard, { backgroundColor: c.card, borderColor: c.border }]}
             onPress={() => handlePress(item)}
             activeOpacity={0.7}
           >
-            <View style={s.iconBox}>{item.renderIcon()}</View>
-            <Text style={s.menuLabel} numberOfLines={2}>
+            <View style={[s.iconBox, { backgroundColor: c.muted }]}>{item.renderIcon()}</View>
+            <Text style={[s.menuLabel, { color: c.text }]} numberOfLines={2}>
               {item.label}
             </Text>
           </TouchableOpacity>
@@ -157,9 +159,8 @@ export default function LearningMenuScreen() {
 }
 
 const s = StyleSheet.create({
-  root: { 
-    flex: 1, 
-    backgroundColor: "#f1f5f9" 
+  root: {
+    flex: 1,
   },
   headerGradient: {
     borderBottomLeftRadius: 20,
@@ -187,11 +188,10 @@ const s = StyleSheet.create({
     paddingHorizontal: 4,
     height: 50,
   },
-  logoText: { color: "#fff", fontSize: 22, fontWeight: "800", letterSpacing: 0.3 },
-  backIcon: { color: "#fff", fontSize: 32, fontWeight: "300", marginTop: -4 },
+  logoText: { fontSize: 22, fontWeight: "800", letterSpacing: 0.3 },
+  backIcon: { fontSize: 32, fontWeight: "300", marginTop: -4 },
   headerTitle: {
     flex: 1,
-    color: "#fff",
     fontSize: 17,
     fontWeight: "700",
     marginLeft: 6,
@@ -203,12 +203,10 @@ const s = StyleSheet.create({
   menuCard: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#ffffff",
     borderRadius: 20,
     paddingVertical: 14,
     paddingHorizontal: 18,
     borderWidth: 1.5,
-    borderColor: "#bfdbfe",
   },
   iconBox: {
     width: 56,
@@ -216,16 +214,16 @@ const s = StyleSheet.create({
     borderRadius: 14,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#f8fafc",
     marginRight: 16,
   },
   menuLabel: {
     fontSize: 17,
     fontWeight: "700",
-    color: "#0f172a",
   },
 });
 
+// Icon trang trí — giữ màu sắc cố định (đây là icon minh hoạ nhiều màu,
+// không phải text cần tương phản theo nền, nên không đổi theo theme).
 const iconStyles = StyleSheet.create({
   hexOuter: {
     width: 40,
@@ -266,5 +264,4 @@ const iconStyles = StyleSheet.create({
     fontSize: 22,
     fontWeight: "900",
   },
-
 });

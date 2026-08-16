@@ -15,12 +15,15 @@ import { getGrammar } from '../assets/data_nn';
 import { EXAMPLE_SENTENCES } from '../assets/sentences';
 import { ALL_INDUSTRY_VOCAB, INDUSTRY_INFO } from '../assets/data_nghanh_hoc';
 import { useAuth } from '../artifacts/mirai-jp/hooks/useAuth';
+import { useColors } from '../artifacts/mirai-jp/hooks/useColors';
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
 
-const TEAL      = '#004370';
-const TEAL_DARK = '#004370';
-
+// ── Màu cố định, KHÔNG đổi theo theme ───────────────────────────────────────
+// LEVEL_COLORS / JLPT_LEVELS: mã màu ngữ nghĩa theo cấp N5–N1 (giống badge cấp
+// độ ở trang chủ) — mỗi cấp luôn 1 màu cố định để nhận diện nhanh.
+// cardBg / kindBadgeStyle / primaryStyle: tông pastel theo loại thẻ gợi ý
+// (từ vựng/câu ví dụ/ngữ pháp) — giữ cố định để phân biệt loại thẻ nhất quán.
 const LEVEL_COLORS: Record<string, string> = {
   N5: '#22C55E', N4: '#3B82F6', N3: '#F59E0B', N2: '#EA580C', N1: '#C0392B',
 };
@@ -74,6 +77,7 @@ async function getTopLevelFromHistory(history: { text: string }[], allVocab: any
 }
 
 export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsProps) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const { scopedKey, currentUser } = useAuth();
   const [cards, setCards] = useState<SuggCard[]>([]);
   const [loading, setLoading] = useState(true);
@@ -231,7 +235,7 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
       setCards(result);
     } catch (e) {
       console.error(e);
-    } crystalline: { setLoading(false); }
+    } finally { setLoading(false); }
   }, [KEY_LEVEL, KEY_MAJOR, scopedKey]);
 
   useEffect(() => { buildCards(); }, [buildCards]);
@@ -261,8 +265,8 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
   if (loading) {
     return (
       <View style={styles.loadingRow}>
-        <ActivityIndicator size="small" color={TEAL} />
-        <Text style={styles.loadingTxt}>Đang tải gợi ý...</Text>
+        <ActivityIndicator size="small" color={c.primary} />
+        <Text style={[styles.loadingTxt, { color: c.mutedForeground }]}>Đang tải gợi ý...</Text>
       </View>
     );
   }
@@ -270,15 +274,25 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
   if (needsPicker) {
     return (
       <View style={styles.pickerWrap}>
-        <Text style={styles.pickerLabel}>Cấp độ mục tiêu</Text>
+        <Text style={[styles.pickerLabel, { color: c.mutedForeground }]}>Cấp độ mục tiêu</Text>
         <View style={styles.chipRow}>
           {JLPT_LEVELS.map(lv => (
             <TouchableOpacity
               key={lv.label}
-              style={[styles.chip, surveyLevel === lv.label && styles.chipSelected]}
+              style={[
+                styles.chip,
+                { backgroundColor: c.card, borderColor: c.border },
+                surveyLevel === lv.label && { backgroundColor: c.primary, borderColor: c.primary },
+              ]}
               onPress={() => setSurveyLevel(surveyLevel === lv.label ? '' : lv.label)}
             >
-              <Text style={[styles.chipText, surveyLevel === lv.label && styles.chipTextSelected]}>
+              <Text
+                style={[
+                  styles.chipText,
+                  { color: c.primary },
+                  surveyLevel === lv.label && { color: c.primaryForeground },
+                ]}
+              >
                 {lv.label}
               </Text>
             </TouchableOpacity>
@@ -287,16 +301,26 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
 
         {PICK_INDUSTRIES.length > 0 && (
           <>
-            <Text style={[styles.pickerLabel, { marginTop: 14 }]}>Ngành học</Text>
+            <Text style={[styles.pickerLabel, { color: c.mutedForeground, marginTop: 14 }]}>Ngành học</Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               <View style={{ flexDirection: 'row', gap: 6, paddingRight: 16 }}>
                 {PICK_INDUSTRIES.map(ind => (
                   <TouchableOpacity
                     key={ind.key}
-                    style={[styles.chip, surveyIndustry === ind.key && styles.chipSelected]}
+                    style={[
+                      styles.chip,
+                      { backgroundColor: c.card, borderColor: c.border },
+                      surveyIndustry === ind.key && { backgroundColor: c.primary, borderColor: c.primary },
+                    ]}
                     onPress={() => setSurveyIndustry(surveyIndustry === ind.key ? '' : ind.key)}
                   >
-                    <Text style={[styles.chipText, surveyIndustry === ind.key && styles.chipTextSelected]}>
+                    <Text
+                      style={[
+                        styles.chipText,
+                        { color: c.primary },
+                        surveyIndustry === ind.key && { color: c.primaryForeground },
+                      ]}
+                    >
                       {ind.emoji} {ind.label}
                     </Text>
                   </TouchableOpacity>
@@ -308,10 +332,14 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
 
         <TouchableOpacity
           disabled={!surveyLevel && !surveyIndustry}
-          style={[styles.confirmBtn, (!surveyLevel && !surveyIndustry) && styles.confirmBtnDisabled]}
+          style={[
+            styles.confirmBtn,
+            { backgroundColor: c.primary },
+            (!surveyLevel && !surveyIndustry) && { backgroundColor: c.muted },
+          ]}
           onPress={handleSaveSurvey}
         >
-          <Text style={styles.confirmBtnText}>Xác nhận</Text>
+          <Text style={[styles.confirmBtnText, { color: c.primaryForeground }]}>Xác nhận</Text>
         </TouchableOpacity>
       </View>
     );
@@ -321,8 +349,8 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
   return (
     <View style={styles.wrap}>
       <View style={styles.titleRow}>
-        <Text style={styles.titleTxt}>✨ Gợi ý tìm kiếm hôm nay</Text>
-        <Text style={styles.countTxt}>{cards.length} thẻ</Text>
+        <Text style={[styles.titleTxt, { color: c.mutedForeground }]}>✨ Gợi ý tìm kiếm hôm nay</Text>
+        <Text style={[styles.countTxt, { color: c.mutedForeground }]}>{cards.length} thẻ</Text>
       </View>
 
       <View style={styles.sliderWrap} onLayout={(e) => setContainerWidth(e.nativeEvent.layout.width)}>
@@ -342,11 +370,11 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
           {cards.map(card => (
             <View key={card.id} style={{ width: containerWidth, paddingHorizontal: 4 }}>
               <TouchableOpacity
-                style={[styles.cardSearchStyle, cardBg(card.kind)]}
+                style={[styles.cardSearchStyle, { borderColor: c.border }, cardBg(card.kind)]}
                 activeOpacity={0.82}
                 onPress={() => onSelectSuggestion(card.searchQuery, card.searchTab)}
               >
-                <Text style={styles.bgSearchIcon}>🔍</Text>
+                <Text style={[styles.bgSearchIcon, { color: c.text }]}>🔍</Text>
                 <View style={[styles.kindBadge, kindBadgeStyle(card.kind)]}>
                   <Text style={styles.kindBadgeTxt}>{kindLabel(card.kind)}</Text>
                 </View>
@@ -358,17 +386,17 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
                 )}
 
                 <Text style={[styles.primary, primaryStyle(card.kind)]} numberOfLines={2}>{card.primary}</Text>
-                {!!card.reading && <Text style={styles.reading} numberOfLines={1}>{card.reading}</Text>}
-                <Text style={styles.meaning} numberOfLines={2}>{card.meaning}</Text>
+                {!!card.reading && <Text style={[styles.reading, { color: c.mutedForeground }]} numberOfLines={1}>{card.reading}</Text>}
+                <Text style={[styles.meaning, { color: c.mutedForeground }]} numberOfLines={2}>{card.meaning}</Text>
 
                 {card.kind !== 'vocab' && (
                   <View style={styles.wordRefRow}>
                     <Text style={styles.wordRefIcon}>📌</Text>
-                    <Text style={styles.wordRef}>{card.wordKey}</Text>
+                    <Text style={[styles.wordRef, { color: c.mutedForeground }]}>{card.wordKey}</Text>
                   </View>
                 )}
                 <View style={styles.searchAction}>
-                  <Text style={styles.searchActionTxt}>Chạm để tra cứu ➔</Text>
+                  <Text style={[styles.searchActionTxt, { color: c.primary }]}>Chạm để tra cứu ➔</Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -379,6 +407,7 @@ export default function HomeSuggestions({ onSelectSuggestion }: HomeSuggestionsP
   );
 }
 
+// ── Các hàm màu theo loại thẻ — cố định, xem giải thích ở đầu file ─────────
 function cardBg(kind: CardKind) {
   if (kind === 'vocab')    return { backgroundColor: '#f0fdf4' };
   if (kind === 'sentence') return { backgroundColor: '#eff6ff' };
@@ -395,7 +424,7 @@ function kindLabel(kind: CardKind) {
   return '📝 Ngữ pháp';
 }
 function primaryStyle(kind: CardKind) {
-  if (kind === 'vocab')    return { color: TEAL_DARK, fontSize: 26, fontWeight: '800' as const };
+  if (kind === 'vocab')    return { color: '#004370', fontSize: 26, fontWeight: '800' as const };
   if (kind === 'sentence') return { color: '#1e3a5f', fontSize: 15, fontWeight: '700' as const };
   return { color: '#7c2d12', fontSize: 18, fontWeight: '800' as const };
 }
@@ -403,17 +432,16 @@ function primaryStyle(kind: CardKind) {
 const styles = StyleSheet.create({
   wrap: { marginTop: 12, paddingBottom: 4 },
   titleRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: 12, marginBottom: 10 },
-  titleTxt: { fontSize: 13, fontWeight: '700', color: '#64748b' },
-  countTxt: { fontSize: 11, color: '#94a3b8' },
+  titleTxt: { fontSize: 13, fontWeight: '700' },
+  countTxt: { fontSize: 11 },
   loadingRow: { flexDirection: 'row', alignItems: 'center', gap: 8, paddingVertical: 20, justifyContent: 'center' },
-  loadingTxt: { fontSize: 12, color: '#94a3b8' },
+  loadingTxt: { fontSize: 12 },
   pickerWrap: {
   paddingVertical: 16,
   paddingHorizontal: 16,
 },
   pickerLabel: {
     fontSize: 12,
-    color: '#64748b',
     marginBottom: 8,
   },
   chipRow: {
@@ -426,49 +454,34 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     borderRadius: 20,
     borderWidth: 0.5,
-    borderColor: '#cbd5e1',
-    backgroundColor: '#ffffff',
-  },
-  chipSelected: {
-    backgroundColor: TEAL,
-    borderColor: TEAL,
   },
   chipText: {
     fontSize: 13,
-    color: TEAL,
-  },
-  chipTextSelected: {
-    color: '#ffffff',
   },
   confirmBtn: {
     marginTop: 18,
     height: 42,
     borderRadius: 8,
-    backgroundColor: TEAL,
     justifyContent: 'center',
     alignItems: 'center',
   },
-  confirmBtnDisabled: {
-    backgroundColor: '#cbd5e1',
-  },
   confirmBtnText: {
-    color: '#ffffff',
     fontSize: 14,
     fontWeight: '500',
   },
   sliderWrap: { width: '100%' },
-  cardSearchStyle: { borderRadius: 14, padding: 16, borderWidth: 1.5, borderColor: '#cbd5e177', borderStyle: 'dashed', minHeight: 140, position: 'relative', overflow: 'hidden' },
-  bgSearchIcon: { position: 'absolute', right: 12, bottom: 30, fontSize: 45, opacity: 0.07, color: '#000' },
+  cardSearchStyle: { borderRadius: 14, padding: 16, borderWidth: 1.5, borderStyle: 'dashed', minHeight: 140, position: 'relative', overflow: 'hidden' },
+  bgSearchIcon: { position: 'absolute', right: 12, bottom: 30, fontSize: 45, opacity: 0.07 },
   kindBadge: { alignSelf: 'flex-start', borderRadius: 8, paddingHorizontal: 10, paddingVertical: 3, marginBottom: 10 },
   kindBadgeTxt: { fontSize: 11, fontWeight: '700', color: '#334155' },
   levelBadge: { position: 'absolute', top: 16, right: 16, borderRadius: 12, paddingHorizontal: 8, paddingVertical: 2 },
   levelTxt: { fontSize: 10, fontWeight: '700' },
   primary: { marginBottom: 4, lineHeight: 30 },
-  reading: { fontSize: 13, color: '#64748b', marginBottom: 4 },
-  meaning: { fontSize: 13, color: '#475569', lineHeight: 18, marginBottom: 8 },
+  reading: { fontSize: 13, marginBottom: 4 },
+  meaning: { fontSize: 13, lineHeight: 18, marginBottom: 8 },
   wordRefRow: { flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 4, marginBottom: 15 },
   wordRefIcon: { fontSize: 11 },
-  wordRef: { fontSize: 11, color: '#94a3b8', fontWeight: '600' },
+  wordRef: { fontSize: 11, fontWeight: '600' },
   searchAction: { position: 'absolute', bottom: 12, right: 16 },
-  searchActionTxt: { fontSize: 11, color: TEAL, fontWeight: '700' },
+  searchActionTxt: { fontSize: 11, fontWeight: '700' },
 });

@@ -24,12 +24,11 @@ import {
 } from '../assets/data_JLPT_kanji';
 import { preloader } from '../services/KanjiPreloader';
 import VocabDetailInline from './VocabDetailInline';
+import { useColors } from '../artifacts/mirai-jp/hooks/useColors';
 
-// const TEAL = '#004370';
-// const TEAL_DARK = '#1c5765';
+// Giữ cố định — màu cam của viên kim cương "◆" trước Kunyomi/Onyomi là điểm
+// nhấn trang trí riêng, không phải màu giao diện chính, nên không đổi theo theme.
 const icon_line_COLOR = '#e47b0b';
-const textColor = "#004370";
-// const BG_GRAY = "#f0f4f8";
 
 interface KanjiDetailInlineProps {
   kanjiChars: string[];
@@ -38,23 +37,39 @@ interface KanjiDetailInlineProps {
 }
 
 // ─── TabItem: React.memo, không re-render nếu props không đổi ────────────────
+// Nhận thêm "color" (c.primary hiện tại) làm prop vì component đã memo hoá —
+// nếu chỉ đọc useColors() bên trong, đổi theme sẽ KHÔNG trigger re-render vì
+// props không đổi. Truyền color qua prop để memo so sánh đúng.
 const TabItem = React.memo(
   ({
     char,
     index,
     isActive,
     onPress,
+    activeColor,
+    inactiveTextColor,
   }: {
     char: string;
     index: number;
     isActive: boolean;
     onPress: (idx: number) => void;
+    activeColor: string;
+    inactiveTextColor: string;
   }) => (
     <TouchableOpacity
-      style={[styles.tabItem, isActive && styles.tabItemActive]}
+      style={[
+        styles.tabItem,
+        { borderBottomColor: isActive ? activeColor : 'transparent' },
+      ]}
       onPress={() => onPress(index)}
     >
-      <Text style={[styles.tabText, isActive && styles.tabTextActive]}>
+      <Text
+        style={[
+          styles.tabText,
+          { color: isActive ? activeColor : inactiveTextColor },
+          isActive && styles.tabTextActive,
+        ]}
+      >
         {char}
       </Text>
     </TouchableOpacity>
@@ -62,7 +77,7 @@ const TabItem = React.memo(
 );
 TabItem.displayName = 'TabItem';
 
-const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
+const MemoizedStrokeOrder = React.memo(({ kanji, spinnerColor }: { kanji: string; spinnerColor: string }) => {
   const [renderStroke, setRenderStroke] = useState(false);
 
   useEffect(() => {
@@ -84,7 +99,7 @@ const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
   if (!renderStroke) {
     return (
       <View style={[styles.strokeWrap, { height: 180, justifyContent: 'center' }]}>
-        <ActivityIndicator color={textColor} />
+        <ActivityIndicator color={spinnerColor} />
       </View>
     );
   }
@@ -99,17 +114,19 @@ const MemoizedStrokeOrder = React.memo(({ kanji }: { kanji: string }) => {
 MemoizedStrokeOrder.displayName = 'MemoizedStrokeOrder';
 
 // ─── Skeleton cho sections đang chờ render ───────────────────────────────────
-const SectionSkeleton = React.memo(() => (
+const SectionSkeleton = React.memo(({ lineColor }: { lineColor: string }) => (
   <View style={styles.skeletonWrap}>
     {[80, 120, 60].map((w, i) => (
-      <View key={i} style={[styles.skeletonLine, { width: `${w}%` as any }]} />
+      <View key={i} style={[styles.skeletonLine, { width: `${w}%` as any, backgroundColor: lineColor }]} />
     ))}
   </View>
 ));
 SectionSkeleton.displayName = 'SectionSkeleton';
 
 // ─── Banner "Sớm cập nhật" — hiện khi chữ không có trong CSDL ───────────────
-const NoDataBanner = React.memo(({ char }: { char: string }) => {
+// Giữ nguyên tông màu cam cảnh báo cố định — đây là banner thông báo đặc
+// biệt, không phải UI nền chính, nên không đổi theo theme.
+const NoDataBanner = React.memo(({ char, accentColor }: { char: string; accentColor: string }) => {
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {
@@ -126,7 +143,7 @@ const NoDataBanner = React.memo(({ char }: { char: string }) => {
       <View style={styles.noDataTextWrap}>
         <Text style={styles.noDataTitle}>Sớm cập nhật</Text>
         <Text style={styles.noDataSub}>
-          Chữ <Text style={styles.noDataChar}>&quot;{char}&quot;</Text> chưa có trong cơ sở dữ liệu.{'\n'}
+          Chữ <Text style={[styles.noDataChar, { color: accentColor }]}>&quot;{char}&quot;</Text> chưa có trong cơ sở dữ liệu.{'\n'}
           Chúng tôi sẽ bổ sung trong thời gian tới.
         </Text>
       </View>
@@ -143,6 +160,7 @@ export default function KanjiDetailInline({
   kanjiChars,
   initialIndex = 0,
 }: KanjiDetailInlineProps) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [selectedExample, setSelectedExample] = useState<KanjiExample | null>(null);
   const [sectionsReady, setSectionsReady] = useState(false);
@@ -182,13 +200,13 @@ export default function KanjiDetailInline({
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: c.background }]}>
       {/* Tab chuyển đổi kanji — LUÔN hiện kể cả khi không có dữ liệu */}
       {totalKanji > 1 && (
         <ScrollView
           horizontal
           showsHorizontalScrollIndicator={false}
-          style={styles.tabBar}
+          style={[styles.tabBar, { borderColor: c.border }]}
           contentContainerStyle={{ paddingVertical: 0 }}
           removeClippedSubviews={true}
         >
@@ -200,6 +218,8 @@ export default function KanjiDetailInline({
                 index={idx}
                 isActive={currentIndex === idx}
                 onPress={handleIndexChange}
+                activeColor={c.primary}
+                inactiveTextColor={c.mutedForeground}
               />
             ))}
           </View>
@@ -209,7 +229,7 @@ export default function KanjiDetailInline({
       {/* ── Nếu không có dữ liệu: hiện banner, vẫn giữ nav bên dưới ──────── */}
       {!kanjiData ? (
         <View style={styles.noDataContainer}>
-          <NoDataBanner char={currentKanji} />
+          <NoDataBanner char={currentKanji} accentColor={c.primary} />
         </View>
       ) : (
         <ScrollView
@@ -222,26 +242,26 @@ export default function KanjiDetailInline({
             <View style={styles.furiganaContainer}>
               {kanjiData.readings.onyomi.length > 0 &&
                 kanjiData.readings.kunyomi.length === 0 && (
-                  <Text style={styles.furiganaText}>{kanjiData.readings.onyomi[0]}</Text>
+                  <Text style={[styles.furiganaText, { color: c.mutedForeground }]}>{kanjiData.readings.onyomi[0]}</Text>
                 )}
             </View>
-            <Text style={styles.bigKanji}>{kanjiData.kanji}</Text>
-            <Text style={styles.bigHanViet}>{kanjiData.hanviet.join(' • ')}</Text>
+            <Text style={[styles.bigKanji, { color: c.text }]}>{kanjiData.kanji}</Text>
+            <Text style={[styles.bigHanViet, { color: c.primary }]}>{kanjiData.hanviet.join(' • ')}</Text>
           </View>
 
           {/* Stats row — nhẹ, render ngay cùng header */}
-          <View style={styles.statsRow}>
+          <View style={[styles.statsRow, { backgroundColor: c.muted }]}>
             <View style={styles.statCol}>
-              <View style={styles.statChip}>
-                <Text style={styles.statChipText}>JLPT</Text>
+              <View style={[styles.statChip, { backgroundColor: c.primary }]}>
+                <Text style={[styles.statChipText, { color: c.primaryForeground }]}>JLPT</Text>
               </View>
-              <Text style={styles.statValue}>{kanjiData.jlpt}</Text>
+              <Text style={[styles.statValue, { color: c.text }]}>{kanjiData.jlpt}</Text>
             </View>
             <View style={styles.statCol}>
-              <View style={styles.statChip}>
-                <Text style={styles.statChipText}>Tần suất</Text>
+              <View style={[styles.statChip, { backgroundColor: c.primary }]}>
+                <Text style={[styles.statChipText, { color: c.primaryForeground }]}>Tần suất</Text>
               </View>
-              <Text style={styles.statValue}>
+              <Text style={[styles.statValue, { color: c.text }]}>
                 {kanjiData.freq ? `#${kanjiData.freq}` : '—'}
               </Text>
             </View>
@@ -249,18 +269,18 @@ export default function KanjiDetailInline({
 
           {/* ── PHASE 2: Sections nặng — chỉ render khi sectionsReady = true */}
           {!sectionsReady ? (
-            <SectionSkeleton />
+            <SectionSkeleton lineColor={c.muted} />
           ) : (
             <>
               {/* Phát âm */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Phát âm</Text>
+                <Text style={[styles.sectionTitle, { color: c.primary }]}>Phát âm</Text>
                 {kanjiData.readings.kunyomi.length > 0 && (
                   <View style={styles.pronRow}>
-                    <Text style={styles.diamond}>◆</Text>
+                    <Text style={[styles.diamond, { color: icon_line_COLOR }]}>◆</Text>
                     <View>
-                      <Text style={styles.pronLabel}>Kunyomi</Text>
-                      <Text style={styles.pronValue}>
+                      <Text style={[styles.pronLabel, { color: c.mutedForeground }]}>Kunyomi</Text>
+                      <Text style={[styles.pronValue, { color: c.text }]}>
                         {kanjiData.readings.kunyomi.join('、')}
                       </Text>
                     </View>
@@ -268,10 +288,10 @@ export default function KanjiDetailInline({
                 )}
                 {kanjiData.readings.onyomi.length > 0 && (
                   <View style={styles.pronRow}>
-                    <Text style={styles.diamond}>◆</Text>
+                    <Text style={[styles.diamond, { color: icon_line_COLOR }]}>◆</Text>
                     <View>
-                      <Text style={styles.pronLabel}>Onyomi</Text>
-                      <Text style={styles.pronValue}>
+                      <Text style={[styles.pronLabel, { color: c.mutedForeground }]}>Onyomi</Text>
+                      <Text style={[styles.pronValue, { color: c.text }]}>
                         {kanjiData.readings.onyomi.join('、')}
                       </Text>
                     </View>
@@ -281,21 +301,20 @@ export default function KanjiDetailInline({
 
               {/* Thứ tự nét */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Thứ tự nét</Text>
-                <MemoizedStrokeOrder key={kanjiData.kanji} kanji={kanjiData.kanji} />
-                {/* <MemoizedStrokeOrder kanji={kanjiData.kanji} /> */}
+                <Text style={[styles.sectionTitle, { color: c.primary }]}>Thứ tự nét</Text>
+                <MemoizedStrokeOrder key={kanjiData.kanji} kanji={kanjiData.kanji} spinnerColor={c.primary} />
               </View>
 
               {/* Bộ thủ & Phân tích */}
               {kanjiData.components && kanjiData.components.length > 0 && (
                 <View style={styles.section}>
-                  <Text style={styles.sectionTitle}>Bộ & Phân tích</Text>
+                  <Text style={[styles.sectionTitle, { color: c.primary }]}>Bộ & Phân tích</Text>
                   {kanjiData.components.map((comp, idx) => (
                     <View key={`${comp.kanji}_${idx}`} style={styles.componentRow}>
-                      <View style={styles.componentBar} />
-                      <Text style={styles.componentKanji}>{comp.kanji}</Text>
+                      <View style={[styles.componentBar, { backgroundColor: c.primary }]} />
+                      <Text style={[styles.componentKanji, { color: c.text }]}>{comp.kanji}</Text>
                       {comp.hanViet ? (
-                        <Text style={styles.componentHanViet}>{comp.hanViet}</Text>
+                        <Text style={[styles.componentHanViet, { color: c.mutedForeground }]}>{comp.hanViet}</Text>
                       ) : null}
                     </View>
                   ))}
@@ -304,30 +323,30 @@ export default function KanjiDetailInline({
 
               {/* Nghĩa */}
               <View style={styles.section}>
-                <Text style={styles.sectionTitle}>Nghĩa</Text>
+                <Text style={[styles.sectionTitle, { color: c.primary }]}>Nghĩa</Text>
                 {kanjiData.meanings_vi.map((m, idx) => (
                   <View key={idx} style={styles.meaningRow}>
-                    <Text style={styles.meaningDot}>•</Text>
-                    <Text style={styles.meaningText}>{m}</Text>
+                    <Text style={[styles.meaningDot, { color: c.primary }]}>•</Text>
+                    <Text style={[styles.meaningText, { color: c.text }]}>{m}</Text>
                   </View>
                 ))}
               </View>
 
               {examples.length > 0 && (
                 <View style={styles.section}>
-                  <Text style={styles.sectionTitle}>
+                  <Text style={[styles.sectionTitle, { color: c.primary }]}>
                     Ví dụ {examples.length}
                   </Text>
                   {examples.map((ex, idx) => (
                     <TouchableOpacity
                       key={idx}
-                      style={[styles.exampleBox, { borderLeftColor: textColor }]}
+                      style={[styles.exampleBox, { backgroundColor: c.muted, borderLeftColor: c.primary }]}
                       onPress={() => setSelectedExample(ex)}
                       activeOpacity={0.7}
                     >
-                      <Text style={styles.exampleJp}>{ex.jp}</Text>
-                      <Text style={styles.exampleReading}>{ex.reading}</Text>
-                      <Text style={styles.exampleVi}>→ {ex.vi}</Text>
+                      <Text style={[styles.exampleJp, { color: c.text }]}>{ex.jp}</Text>
+                      <Text style={[styles.exampleReading, { color: c.mutedForeground }]}>{ex.reading}</Text>
+                      <Text style={[styles.exampleVi, { color: c.mutedForeground }]}>→ {ex.vi}</Text>
                       <Text style={{ fontSize: 48, marginTop: 16, right: 8, opacity: 0.06, position: 'absolute', zIndex: -1 }}>
                         🔍 
                       </Text>
@@ -359,16 +378,14 @@ export default function KanjiDetailInline({
   );
 }
 
+// ─── Styles (chỉ layout — màu gán inline theo theme ở trên) ───────────────────
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff' ,
-    // backgroundColor: BG_GRAY,
   },
   tabBar: {
     maxHeight: 50,
     borderBottomWidth: 1,
-    borderColor: '#eee',
   },
   tabContainer: { 
     flexDirection: 'row', 
@@ -378,17 +395,11 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
     paddingVertical: 12,
     borderBottomWidth: 2,
-    borderBottomColor: 'transparent',
-  },
-  tabItemActive: { 
-    borderBottomColor: textColor 
   },
   tabText: { 
     fontSize: 16, 
-    color: '#666' 
   },
   tabTextActive: { 
-    color: textColor, 
     fontWeight: 'bold' 
   },
   content: { 
@@ -406,17 +417,14 @@ const styles = StyleSheet.create({
   },
   furiganaText: { 
     fontSize: 14, 
-    color: '#666' 
   },
   bigKanji: {
     fontSize: 42,
     fontWeight: 'bold',
-    color: '#333',
     marginVertical: 5,
   },
   bigHanViet: {
     fontSize: 18,
-    color: textColor,
     fontWeight: 'bold',
     textTransform: 'uppercase',
   },
@@ -424,27 +432,23 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 20,
-    backgroundColor: '#e7e4e443',
     padding: 10,
     borderRadius: 8,
   },
   statCol: { alignItems: 'center' },
   statChip: {
-    backgroundColor: textColor,
     paddingHorizontal: 10,
     paddingVertical: 4,
     borderRadius: 12,
     marginBottom: 5,
   },
   statChipText: { 
-    color: '#fff', 
     fontSize: 11, 
     fontWeight: 'bold' 
   },
   statValue: { 
     fontSize: 16, 
     fontWeight: 'bold', 
-    color: '#333' 
   },
   skeletonWrap: { 
     paddingTop: 16, 
@@ -453,7 +457,6 @@ const styles = StyleSheet.create({
   },
   skeletonLine: {
     height: 14,
-    backgroundColor: '#e2e8f0',
     borderRadius: 7,
     opacity: 0.6,
   },
@@ -463,7 +466,6 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 18,
     fontWeight: 'bold',
-    color: textColor,
     marginBottom: 10,
     paddingBottom: 5,
   },
@@ -474,19 +476,16 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',  
   },
   diamond: { 
-    color: icon_line_COLOR, 
     marginRight: 8, 
     fontSize: 12, 
     marginTop: 2 
   },
   pronLabel: { 
     fontSize: 12, 
-    color: '#999' 
   },
   pronValue: 
   { 
     fontSize: 16, 
-    color: '#333', 
     fontWeight: '500',
     flex: 1,                 
     flexWrap: 'wrap',        
@@ -508,28 +507,25 @@ const styles = StyleSheet.create({
   componentBar: {
     width: 3,
     height: 20,
-    backgroundColor: textColor,
     borderRadius: 2,
     marginRight: 10,
   },
-  componentKanji: { fontSize: 20, fontWeight: 'bold', color: '#333', marginRight: 8 },
-  componentHanViet: { fontSize: 14, color: '#666' },
+  componentKanji: { fontSize: 20, fontWeight: 'bold', marginRight: 8 },
+  componentHanViet: { fontSize: 14 },
   meaningRow: { flexDirection: 'row', marginBottom: 6, alignItems: 'flex-start' },
-  meaningDot: { color: textColor, marginRight: 8, fontSize: 16, lineHeight: 22 },
-  meaningText: { fontSize: 15, color: '#444', flex: 1, lineHeight: 22 },
+  meaningDot: { marginRight: 8, fontSize: 16, lineHeight: 22 },
+  meaningText: { fontSize: 15, flex: 1, lineHeight: 22 },
   exampleBox: {
-    backgroundColor: '#f8fafc',
     borderRadius: 8,
     padding: 12,
     marginBottom: 10,
     borderLeftWidth: 3,
-    borderLeftColor: textColor,
   },
-  exampleJp: { fontSize: 16, color: '#1e293b', fontWeight: '600', marginBottom: 4 },
-  exampleReading: { fontSize: 13, color: '#64748b', marginBottom: 4 },
-  exampleVi: { fontSize: 14, color: '#475569' },
+  exampleJp: { fontSize: 16, fontWeight: '600', marginBottom: 4 },
+  exampleReading: { fontSize: 13, marginBottom: 4 },
+  exampleVi: { fontSize: 14 },
 
-  // Banner "Sớm cập nhật"
+  // Banner "Sớm cập nhật" — tông cam cố định, không đổi theo theme (xem comment ở component)
   noDataContainer: {
     flex: 1,
     justifyContent: 'center',
@@ -568,6 +564,5 @@ const styles = StyleSheet.create({
   },
   noDataChar: {
     fontWeight: '800',
-    color: textColor,
   },
 });

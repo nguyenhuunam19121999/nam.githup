@@ -34,12 +34,9 @@ import {
 } from 'react-native';
 import * as Speech from 'expo-speech';
 import { AdBanner } from "../components/AdBanner";
+import { useColors, useThemeMode, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
 
 const { width: SCREEN_WIDTH } = Dimensions.get('window');
-
-// Màu chủ đạo
-const TEAL = "#004370";
-// const TEAL_DARK = "#004370";
 
 export interface VocabItem {
   id: string;
@@ -95,23 +92,25 @@ function ToggleRow({
   value,
   onToggle,
   isLast,
+  c,
 }: {
   label: string;
   value: boolean;
   onToggle: () => void;
   isLast: boolean;
+  c: ReturnType<typeof useColors>;
 }) {
   return (
     <TouchableOpacity
-      style={[styles.menuRow, isLast && { borderBottomWidth: 0 }]}
+      style={[styles.menuRow, { borderBottomColor: c.border }, isLast && { borderBottomWidth: 0 }]}
       onPress={onToggle}
       activeOpacity={0.7}
     >
-      <Text style={styles.menuRowLabel}>{label}</Text>
+      <Text style={[styles.menuRowLabel, { color: c.text }]}>{label}</Text>
       <Switch
         value={value}
         onValueChange={onToggle}
-        trackColor={{ false: "#cbd5e1", true: TEAL }}
+        trackColor={{ false: c.border, true: c.primary }}
         thumbColor="#fff"
       />
     </TouchableOpacity>
@@ -133,6 +132,10 @@ export default function FlashcardDetail({
   onAutoScrollChange,
   onFieldsChange,
 }: FlashcardDetailProps) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   // State cho danh sách từ vựng (có thể bị xáo trộn)
   const [vocabList, setVocabList] = useState<VocabItem[]>(initialVocabList);
   const [currentIndex, setCurrentIndex] = useState(initialIndex);
@@ -312,8 +315,8 @@ export default function FlashcardDetail({
       
       return (
         <View key={field} style={styles.fieldBlock}>
-          <Text style={styles.fieldLabel}>{FIELD_LABELS[field]}</Text>
-          <Text style={[styles.fieldText, { fontSize }]}>
+          <Text style={[styles.fieldLabel, { color: c.mutedForeground }]}>{FIELD_LABELS[field]}</Text>
+          <Text style={[styles.fieldText, { fontSize, color: c.text }]}>
             {value}
           </Text>
         </View>
@@ -321,15 +324,22 @@ export default function FlashcardDetail({
     });
   };
 
-    // Render mặt sau
+    // Render mặt sau — nằm trên nền c.primary, nên chữ dùng c.primaryForeground
   const renderBackContent = () => {
     return backFields.map((field) => {
       if (field === 'example') {
         if (!currentVocab.example) return null;
         return (
-          <View key={field} style={styles.exampleContainer}>
-            <Text style={styles.exampleLabel}>📖 {FIELD_LABELS[field]}</Text>
-            <Text style={styles.exampleText}>{currentVocab.example}</Text>
+          <View
+            key={field}
+            style={[styles.exampleContainer, { borderTopColor: c.primaryForeground + '33' }]}
+          >
+            <Text style={[styles.exampleLabel, { color: c.primaryForeground + '99' }]}>
+              📖 {FIELD_LABELS[field]}
+            </Text>
+            <Text style={[styles.exampleText, { color: c.primaryForeground }]}>
+              {currentVocab.example}
+            </Text>
             {currentVocab.exampleMeaning && (
               <Text style={styles.exampleMeaningText}>→ {currentVocab.exampleMeaning}</Text>
             )}
@@ -348,8 +358,10 @@ export default function FlashcardDetail({
       
       return (
         <View key={field} style={styles.fieldBlock}>
-          <Text style={[styles.fieldLabel, styles.fieldLabelBack]}>{FIELD_LABELS[field]}</Text>
-          <Text style={[styles.fieldTextBack, { fontSize }]}>
+          <Text style={[styles.fieldLabel, { color: c.primaryForeground + '99' }]}>
+            {FIELD_LABELS[field]}
+          </Text>
+          <Text style={[styles.fieldTextBack, { fontSize, color: c.primaryForeground }]}>
             {value}
           </Text>
         </View>
@@ -363,15 +375,15 @@ export default function FlashcardDetail({
 
   return (
     <>
-      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
-      <View style={styles.container}>
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
+      <View style={[styles.container, { backgroundColor: c.background }]}>
         {/* Header - ✅ ĐÃ THAY icon 🏠 thành nút back ← */}
-        <View style={styles.header}>
+        <View style={[styles.header, { backgroundColor: c.card, borderBottomColor: c.border }]}>
           <TouchableOpacity onPress={handleBack} style={styles.headerBtn}>
-            <Text style={styles.headerIcon}>←</Text>
+            <Text style={[styles.headerIcon, { color: c.text }]}>←</Text>
           </TouchableOpacity>
 
-          <Text style={styles.headerTitle}>
+          <Text style={[styles.headerTitle, { color: c.text }]}>
             {currentIndex + 1} / {total}
           </Text>
 
@@ -392,8 +404,8 @@ export default function FlashcardDetail({
 
         {/* Thanh tiến trình */}
         <View style={styles.progressContainer}>
-          <View style={styles.progressBar}>
-            <View style={[styles.progressFill, { width: `${progress}%` }]} />
+          <View style={[styles.progressBar, { backgroundColor: c.border }]}>
+            <View style={[styles.progressFill, { width: `${progress}%`, backgroundColor: c.primary }]} />
           </View>
         </View>
 
@@ -411,6 +423,8 @@ export default function FlashcardDetail({
                 styles.card,
                 styles.cardFront,
                 {
+                  backgroundColor: c.card,
+                  borderColor: c.border,
                   opacity: frontOpacity,
                   transform: [{ perspective: 1000 }, { rotateY: frontRotate }],
                 },
@@ -425,6 +439,7 @@ export default function FlashcardDetail({
                 styles.card,
                 styles.cardBack,
                 {
+                  backgroundColor: c.primary,
                   opacity: backOpacity,
                   transform: [{ perspective: 1000 }, { rotateY: backRotate }],
                 },
@@ -436,39 +451,53 @@ export default function FlashcardDetail({
         </View>
 
         {/* Nút điều hướng chính */}
-        <View style={styles.navigation}>
+        <View style={[styles.navigation, { backgroundColor: c.card, borderTopColor: c.border }]}>
           <TouchableOpacity
-            style={[styles.navButton, currentIndex === 0 && styles.navButtonDisabled]}
+            style={[
+              styles.navButton,
+              { backgroundColor: c.muted },
+              currentIndex === 0 && styles.navButtonDisabled,
+            ]}
             onPress={goToPrevious}
             disabled={currentIndex === 0}
           >
-            <Text style={styles.navButtonText}>◀ Trước</Text>
+            <Text style={[styles.navButtonText, { color: c.text }]}>◀ Trước</Text>
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.navButton, styles.navButtonNext, currentIndex === total - 1 && styles.navButtonDisabled]}
+            style={[
+              styles.navButton,
+              styles.navButtonNext,
+              { backgroundColor: c.primary },
+              currentIndex === total - 1 && styles.navButtonDisabled,
+            ]}
             onPress={goToNext}
             disabled={currentIndex === total - 1}
           >
-            <Text style={[styles.actionButtonText,isShuffled && styles.actionButtonTextActive]}>Tiếp ▶</Text>
+            <Text style={[styles.navButtonText, { color: c.primaryForeground }]}>Tiếp ▶</Text>
           </TouchableOpacity>
         </View>
 
         {/* Nút xáo trộn và đặt lại */}
         <View style={styles.actionButtons}>
           <TouchableOpacity
-            style={[styles.actionButton, isShuffled && styles.actionButtonActive]}
+            style={[
+              styles.actionButton,
+              { backgroundColor: isShuffled ? c.primary : c.muted },
+            ]}
             onPress={handleShuffle}
           >
-            <Text style={[styles.actionButtonText,isShuffled && styles.actionButtonTextActive]}>🔀 Xáo trộn</Text>
+            <Text style={[styles.actionButtonText, { color: isShuffled ? c.primaryForeground : c.text }]}>
+              🔀 Xáo trộn
+            </Text>
           </TouchableOpacity>
           
           {isShuffled && (
             <TouchableOpacity
-              style={styles.actionButton}
+              style={[styles.actionButton, { backgroundColor: c.muted }]}
               onPress={handleReset}
             >
-              <Text style={styles.actionButtonText}>↺ Đặt lại</Text>
+              <Text style={[styles.actionButtonText, { color: c.text }]}>↺ Đặt lại</Text>
             </TouchableOpacity>
           )}
         </View>
@@ -487,41 +516,48 @@ export default function FlashcardDetail({
       <Modal visible={menuOpen} transparent animationType="slide" onRequestClose={() => setMenuOpen(false)}>
         <View style={styles.menuModalOverlay}>
           <Pressable style={StyleSheet.absoluteFill} onPress={() => setMenuOpen(false)} />
-          <View style={styles.menuSheet}>
-            <View style={styles.menuSheetHandle} />
+          <View style={[styles.menuSheet, { backgroundColor: c.card }]}>
+            <View style={[styles.menuSheetHandle, { backgroundColor: c.border }]} />
             <View style={styles.menuSheetHeader}>
-              <Text style={styles.menuSheetTitle}>Cài đặt thẻ</Text>
+              <Text style={[styles.menuSheetTitle, { color: c.text }]}>Cài đặt thẻ</Text>
               <TouchableOpacity onPress={() => setMenuOpen(false)} hitSlop={10}>
-                <Text style={styles.menuSheetClose}>Đóng</Text>
+                <Text style={[styles.menuSheetClose, { color: c.primary }]}>Đóng</Text>
               </TouchableOpacity>
             </View>
 
             {/* Tự động cuộn */}
-            <Text style={styles.menuGroupLabel}>Tự động cuộn</Text>
+            <Text style={[styles.menuGroupLabel, { color: c.mutedForeground }]}>Tự động cuộn</Text>
             <ToggleRow
               label="Bật tự động cuộn"
               value={autoScroll}
               onToggle={() => setAutoScroll(!autoScroll)}
               isLast
+              c={c}
             />
             
             {autoScroll && (
               <>
-                <Text style={styles.autoScrollHint}>Thời gian giữa mỗi thẻ</Text>
+                <Text style={[styles.autoScrollHint, { color: c.mutedForeground }]}>
+                  Thời gian giữa mỗi thẻ
+                </Text>
                 <View style={styles.autoScrollChips}>
                   {AUTO_SCROLL_PRESETS.map((sec) => (
                     <TouchableOpacity
                       key={sec}
                       style={[
                         styles.autoScrollChip,
-                        sec === autoScrollSec && styles.autoScrollChipActive,
+                        { backgroundColor: c.muted, borderColor: c.border },
+                        sec === autoScrollSec && { backgroundColor: c.primary, borderColor: c.primary },
                       ]}
                       onPress={() => setAutoScrollSec(sec)}
                     >
-                      <Text style={[
-                        styles.autoScrollChipText,
-                        sec === autoScrollSec && styles.autoScrollChipTextActive
-                      ]}>
+                      <Text
+                        style={[
+                          styles.autoScrollChipText,
+                          { color: c.text },
+                          sec === autoScrollSec && { color: c.primaryForeground },
+                        ]}
+                      >
                         {sec}s
                       </Text>
                     </TouchableOpacity>
@@ -531,7 +567,9 @@ export default function FlashcardDetail({
             )}
 
             {/* Mặt trước */}
-            <Text style={[styles.menuGroupLabel, { marginTop: 16 }]}>Mặt trước</Text>
+            <Text style={[styles.menuGroupLabel, { color: c.mutedForeground, marginTop: 16 }]}>
+              Mặt trước
+            </Text>
             {ALL_FIELDS.map((f, i) => (
               <ToggleRow
                 key={`front-${f}`}
@@ -545,11 +583,14 @@ export default function FlashcardDetail({
                   }
                 }}
                 isLast={i === ALL_FIELDS.length - 1}
+                c={c}
               />
             ))}
             
             {/* Mặt sau */}
-            <Text style={[styles.menuGroupLabel, { marginTop: 14 }]}>Mặt sau</Text>
+            <Text style={[styles.menuGroupLabel, { color: c.mutedForeground, marginTop: 14 }]}>
+              Mặt sau
+            </Text>
             {ALL_FIELDS.map((f, i) => (
               <ToggleRow
                 key={`back-${f}`}
@@ -563,9 +604,11 @@ export default function FlashcardDetail({
                   }
                 }}
                 isLast={i === ALL_FIELDS.length - 1}
+                c={c}
               />
             ))}
           </View>
+          <ThemeFadeOverlay />
         </View>
       </Modal>
       <AdBanner />
@@ -576,7 +619,6 @@ export default function FlashcardDetail({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f0f4f8',
   },
 
   // Header
@@ -587,9 +629,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 56,
     paddingBottom: 12,
-    backgroundColor: '#fff',
     borderBottomWidth: 1,
-    borderBottomColor: '#e2e8f0',
   },
   headerBtn: {
     width: 40,
@@ -604,7 +644,6 @@ const styles = StyleSheet.create({
   headerTitle: {
     fontSize: 16,
     fontWeight: '600',
-    color: '#333',
   },
   headerRight: {
     flexDirection: 'row',
@@ -618,13 +657,11 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     height: 4,
-    backgroundColor: '#e2e8f0',
     borderRadius: 2,
     overflow: 'hidden',
   },
   progressFill: {
     height: '100%',
-    backgroundColor: TEAL,
     borderRadius: 2,
   },
 
@@ -651,23 +688,17 @@ const styles = StyleSheet.create({
     backfaceVisibility: 'hidden',
   },
   cardFront: {
-    backgroundColor: '#fff',
     borderWidth: 2,
-    borderColor: '#e2e8f0',
   },
-  cardBack: {
-    backgroundColor: TEAL,
-  },
+  cardBack: {},
 
   // Field text styles
   fieldText: {
-    color: '#1a202c',
     textAlign: 'center',
     marginBottom: 12,
     fontWeight: '600',
   },
   fieldTextBack: {
-    color: '#fff',
     textAlign: 'center',
     marginBottom: 12,
     fontWeight: '600',
@@ -679,38 +710,22 @@ const styles = StyleSheet.create({
     marginTop: 8,
     paddingTop: 16,
     borderTopWidth: 1,
-    borderTopColor: 'rgba(255,255,255,0.2)',
   },
   exampleLabel: {
     fontSize: 12,
-    color: 'rgba(255,255,255,0.6)',
     marginBottom: 8,
   },
   exampleText: {
     fontSize: 16,
-    color: '#fff',
     fontStyle: 'italic',
     textAlign: 'center',
     marginBottom: 6,
   },
   exampleMeaningText: {
+    // Giữ màu vàng nổi bật cố định — luôn dễ đọc trên nền c.primary dù theme nào
     fontSize: 13,
     color: '#f6e05e',
     textAlign: 'center',
-  },
-
-  // Flip button
-  flipButton: {
-    marginTop: 24,
-    paddingVertical: 12,
-    paddingHorizontal: 28,
-    backgroundColor: '#f0f0f0',
-    borderRadius: 30,
-  },
-  flipButtonText: {
-    fontSize: 16,
-    color: TEAL,
-    fontWeight: '600',
   },
 
   // Navigation buttons
@@ -720,28 +735,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 16,
-    backgroundColor: '#fff',
     borderTopWidth: 1,
-    borderTopColor: '#e2e8f0',
     gap: 12,
   },
   navButton: {
     flex: 1,
-    backgroundColor: '#e2e8f0',
     paddingVertical: 12,
     borderRadius: 12,
     alignItems: 'center',
   },
-  navButtonNext: {
-    backgroundColor: TEAL,
-  },
+  navButtonNext: {},
   navButtonDisabled: {
     opacity: 0.5,
   },
   navButtonText: {
     fontSize: 15,
     fontWeight: '600',
-    color: '#333',
   },
   actionButtons: {
     flexDirection: 'row',
@@ -752,24 +761,17 @@ const styles = StyleSheet.create({
   },
   actionButton: {
     flex: 1,
-    backgroundColor: '#e2e8f0',
     paddingVertical: 10,
     borderRadius: 12,
     alignItems: 'center',
   },
-  actionButtonActive: {
-    backgroundColor: TEAL,
-  },
   actionButtonText: {
     fontSize: 14,
     fontWeight: '600',
-    color: '#1a202c',
   },
-  actionButtonTextActive: {
-      color: "#fff",  
-    },
-  
-  // Auto-scroll indicator
+
+  // Auto-scroll indicator — luôn nền tối/chữ trắng cố định, không đổi theo
+  // theme vì đây là lớp phủ nổi trên thẻ, cần tương phản ổn định mọi lúc.
   autoScrollIndicator: {
     position: 'absolute',
     bottom: 100,
@@ -791,7 +793,6 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   menuSheet: {
-    backgroundColor: "#fff",
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
     paddingHorizontal: 18,
@@ -802,7 +803,6 @@ const styles = StyleSheet.create({
     width: 40,
     height: 4,
     borderRadius: 2,
-    backgroundColor: "#cbd5e1",
     alignSelf: "center",
     marginBottom: 10,
   },
@@ -815,17 +815,14 @@ const styles = StyleSheet.create({
   menuSheetTitle: {
     fontSize: 16,
     fontWeight: "800",
-    color: "#0f172a",
   },
   menuSheetClose: {
     fontSize: 14,
     fontWeight: "600",
-    color: TEAL,
   },
   menuGroupLabel: {
     fontSize: 11,
     fontWeight: "700",
-    color: "#475569",
     textTransform: "uppercase",
     letterSpacing: 0.6,
     marginBottom: 6,
@@ -836,16 +833,13 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#f1f5f9",
   },
   menuRowLabel: {
     fontSize: 14,
     fontWeight: "500",
-    color: "#1e293b",
   },
   autoScrollHint: {
     fontSize: 12,
-    color: "#64748b",
     marginTop: 10,
     marginBottom: 6,
   },
@@ -860,20 +854,10 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     borderRadius: 999,
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
-    backgroundColor: "#f8fafc",
-  },
-  autoScrollChipActive: {
-    backgroundColor: TEAL,
-    borderColor: TEAL,
   },
   autoScrollChipText: {
     fontSize: 13,
     fontWeight: "700",
-    color: "#1e293b",
-  },
-  autoScrollChipTextActive: {
-    color: "#fff",
   },
   cardTouch: {
     width: '100%',
@@ -889,12 +873,8 @@ const styles = StyleSheet.create({
   fieldLabel: {
     fontSize: 12,
     fontWeight: '600',
-    color: '#64748b',
     textTransform: 'uppercase',
     letterSpacing: 0.8,
     marginBottom: 6,
-  },
-  fieldLabelBack: {
-    color: 'rgba(255,255,255,0.6)',
   },
 });

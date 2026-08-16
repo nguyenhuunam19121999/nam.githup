@@ -18,15 +18,11 @@ import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
 import { AdBanner } from "../components/AdBanner";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
+import { useColors, useThemeMode, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Speech from "expo-speech";
 import VocabImagePicker from "../components/VocabImagePicker";
 import { findExamplesByVocab, ExampleSentence } from "../assets/sentences";
-
-// ✅ MÀU CHỦ ĐẠO
-const TEAL = "#1f7a1f";
-const TEAL_DARK = "#004370";
-const BG_GRAY = "#f0f4f8";
 
 // ============================================
 // 📖 XÁC ĐỊNH LOẠI TỪ CHI TIẾT
@@ -270,7 +266,6 @@ function conjugateGodan(verb: string): { name: string; japanese: string }[] {
     { name: "Từ điển (辞書形)", japanese: verb },
     { name: "Phủ định (ない形)", japanese: stem + map.negative },
     { name: "Quá khứ (た形)", japanese: stem + map.past },
-    // { name: 'Phủ định quá khứ', japanese: stem + map.negative.slice(0, -2) + 'かった' },
     {
       name: "Phủ định quá khứ",
       japanese: stem + map.negative.slice(0, -1) + "かった",
@@ -425,10 +420,12 @@ function ConjugationTable({
   word,
   wordType,
   originalWord,
+  c,
 }: {
   word: string;
   wordType: WordType;
   originalWord: string;
+  c: ReturnType<typeof useColors>;
 }) {
   let conjugations: { name: string; japanese: string }[] = [];
   let displayTitle = "";
@@ -477,20 +474,26 @@ function ConjugationTable({
   if (conjugations.length === 0) return null;
 
   return (
-    <View style={styles.tableContainer}>
-      <Text style={styles.tableTitle}>{displayTitle}</Text>
-      <View style={styles.tableHeader}>
-        <Text style={[styles.headerCell, styles.headerName]}>Tên thể</Text>
-        <Text style={[styles.headerCell, styles.headerValue]}>Từ vựng</Text>
+    <View style={[styles.tableContainer, { backgroundColor: c.card, borderColor: c.border }]}>
+      <Text style={[styles.tableTitle, { backgroundColor: c.muted, color: c.text, borderBottomColor: c.border }]}>
+        {displayTitle}
+      </Text>
+      <View style={[styles.tableHeader, { backgroundColor: c.primary }]}>
+        <Text style={[styles.headerCell, styles.headerName, { color: c.primaryForeground }]}>Tên thể</Text>
+        <Text style={[styles.headerCell, styles.headerValue, { color: c.primaryForeground }]}>Từ vựng</Text>
       </View>
       <ScrollView nestedScrollEnabled={true} style={styles.tableScroll}>
         {conjugations.map((item, index) => (
           <View
             key={index}
-            style={[styles.tableRow, index % 2 === 0 && styles.tableRowAlt]}
+            style={[
+              styles.tableRow,
+              { borderBottomColor: c.border },
+              index % 2 === 0 && { backgroundColor: c.muted },
+            ]}
           >
-            <Text style={[styles.rowCell, styles.rowName]}>{item.name}</Text>
-            <Text style={[styles.rowCell, styles.rowValue]}>
+            <Text style={[styles.rowCell, styles.rowName, { color: c.text }]}>{item.name}</Text>
+            <Text style={[styles.rowCell, styles.rowValue, { color: c.text }]}>
               {item.japanese}
             </Text>
           </View>
@@ -527,6 +530,10 @@ function resolveConjugationTarget(
 }
 
 export default function VocabDetailScreen() {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const router = useRouter();
   const { scopedKey } = useAuth();
   const params = useLocalSearchParams<{
@@ -587,7 +594,8 @@ export default function VocabDetailScreen() {
     };
   }, [vocabData.kanji]);
 
-  // Hàm lấy màu cho level badge
+  // Màu badge cấp độ JLPT — giữ cố định (định danh cấp độ), không đổi theo
+  // theme, giống cách JLPT_COLORS ở trang chủ giữ tính phân loại nhất quán.
   const getLevelColor = (level: string) => {
     switch (level) {
       case "N5":
@@ -611,14 +619,6 @@ export default function VocabDetailScreen() {
     skip: skipConjugation,
     baseNote,
   } = resolveConjugationTarget(vocabData, vocabData.kanji);
-  // Xác định loại từ
-  // const wordType = detectWordType(vocabData.kanji, vocabData.nghia);
-
-  // // Xác định từ dùng để chia
-  // let conjugationWord = vocabData.kanji;
-  // if (wordType === 'noun-suru') {
-  //   conjugationWord = vocabData.kanji;
-  // }
 
   useEffect(() => {
     const checkBookmark = async () => {
@@ -695,10 +695,15 @@ export default function VocabDetailScreen() {
 
   if (!vocabData.kanji) {
     return (
-      <View style={styles.center}>
-        <Text style={styles.errorText}>Không tìm thấy dữ liệu từ vựng</Text>
-        <TouchableOpacity onPress={() => router.back()} style={styles.backBtn}>
-          <Text style={styles.backBtnText}>← Quay lại</Text>
+      <View style={[styles.center, { backgroundColor: c.background }]}>
+        <Text style={[styles.errorText, { color: c.destructive }]}>
+          Không tìm thấy dữ liệu từ vựng
+        </Text>
+        <TouchableOpacity
+          onPress={() => router.back()}
+          style={[styles.backBtn, { backgroundColor: c.primary }]}
+        >
+          <Text style={[styles.backBtnText, { color: c.primaryForeground }]}>← Quay lại</Text>
         </TouchableOpacity>
       </View>
     );
@@ -707,52 +712,55 @@ export default function VocabDetailScreen() {
   return (
     <>
       <Stack.Screen options={{ headerShown: false }} />
-      <StatusBar barStyle="dark-content" backgroundColor={BG_GRAY} />
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
 
-      <View style={styles.container}>
+      <View style={[styles.container, { backgroundColor: c.background }]}>
         {/* Header */}
-        <View style={styles.header}>
+        <View style={[styles.header, { backgroundColor: c.background }]}>
           <TouchableOpacity
             onPress={() => router.back()}
-            style={styles.backBtnHeader}
+            style={[styles.backBtnHeader, { backgroundColor: c.card, borderColor: c.border }]}
           >
-            <Text style={styles.backIcon}>‹</Text>
+            <Text style={[styles.backIcon, { color: c.primary }]}>‹</Text>
           </TouchableOpacity>
-          <Text style={styles.headerTitle}>Chi tiết từ vựng</Text>
+          <Text style={[styles.headerTitle, { color: c.primary }]}>Chi tiết từ vựng</Text>
           <View style={{ width: 42 }} />
         </View>
 
         <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-          <View style={styles.card}>
+          <View style={[styles.card, { backgroundColor: c.card, borderColor: c.border }]}>
             <View style={styles.headerRow}>
               <View style={{ flex: 1 }}>
-                <Text style={styles.bigKanji}>{vocabData.kanji}</Text>
-                <Text style={styles.bigHanViet}>{vocabData.han}</Text>
-                <Text style={styles.bigHiragana}>{vocabData.hiragana}</Text>
-                <Text style={styles.bigNghia}>{vocabData.nghia}</Text>
+                <Text style={[styles.bigKanji, { color: c.text }]}>{vocabData.kanji}</Text>
+                <Text style={[styles.bigHanViet, { color: c.primary }]}>{vocabData.han}</Text>
+                <Text style={[styles.bigHiragana, { color: c.text }]}>{vocabData.hiragana}</Text>
+                <Text style={[styles.bigNghia, { color: c.mutedForeground }]}>{vocabData.nghia}</Text>
               </View>
               <View style={styles.headerActions}>
                 <TouchableOpacity
                   onPress={toggleBookmark}
-                  style={styles.iconBtn}
+                  style={[styles.iconBtn, { backgroundColor: c.card, borderColor: c.border }]}
                 >
                   <Text style={styles.iconText}>
                     {isBookmarked ? "⭐" : "☆"}
                   </Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={speakWord} style={styles.iconBtn}>
+                <TouchableOpacity
+                  onPress={speakWord}
+                  style={[styles.iconBtn, { backgroundColor: c.card, borderColor: c.border }]}
+                >
                   <Text style={styles.iconText}>🔊</Text>
                 </TouchableOpacity>
               </View>
             </View>
-            <View style={styles.divider} />
+            <View style={[styles.divider, { backgroundColor: c.border }]} />
             {/* 3 nút chức năng */}
             <View style={styles.funcRow}>
               <TouchableOpacity
-                style={styles.funcBtn}
+                style={[styles.funcBtn, { backgroundColor: c.muted }]}
                 onPress={() => setShowImageModal(true)}
               >
-                <Text style={styles.funcBtnText}>🖼️ Ảnh minh họa</Text>
+                <Text style={[styles.funcBtnText, { color: c.mutedForeground }]}>🖼️ Ảnh minh họa</Text>
               </TouchableOpacity>
             </View>
 
@@ -764,13 +772,13 @@ export default function VocabDetailScreen() {
               onRequestClose={() => setShowImageModal(false)}
             >
               <View style={styles.modalOverlay}>
-                <View style={styles.imageModalContainer}>
-                  <View style={styles.imageModalHeader}>
-                    <Text style={styles.imageModalTitle}>
+                <View style={[styles.imageModalContainer, { backgroundColor: c.card }]}>
+                  <View style={[styles.imageModalHeader, { borderBottomColor: c.border }]}>
+                    <Text style={[styles.imageModalTitle, { color: c.text }]}>
                       📸 Đóng góp hình ảnh
                     </Text>
                     <TouchableOpacity onPress={() => setShowImageModal(false)}>
-                      <Text style={styles.imageModalClose}>✕</Text>
+                      <Text style={[styles.imageModalClose, { color: c.mutedForeground }]}>✕</Text>
                     </TouchableOpacity>
                   </View>
                   <ScrollView style={styles.imageModalContent}>
@@ -785,12 +793,13 @@ export default function VocabDetailScreen() {
                     />
                   </ScrollView>
                 </View>
+                <ThemeFadeOverlay />
               </View>
             </Modal>
 
             {/* Trình độ */}
             <View style={styles.levelRow}>
-              <Text style={styles.levelLabel}>Trình độ:</Text>
+              <Text style={[styles.levelLabel, { color: c.mutedForeground }]}>Trình độ:</Text>
               <View
                 style={[
                   styles.levelBadge,
@@ -809,12 +818,12 @@ export default function VocabDetailScreen() {
             </View>
 
             {/* Từ loại */}
-            <View style={styles.wordTypeRow}>
-              <Text style={styles.wordTypeText}>{getWordTypeText()}</Text>
+            <View style={[styles.wordTypeRow, { backgroundColor: c.muted }]}>
+              <Text style={[styles.wordTypeText, { color: c.text }]}>{getWordTypeText()}</Text>
               <TouchableOpacity
                 onPress={() => setShowFullMeaning(!showFullMeaning)}
               >
-                <Text style={styles.wordTypeMore}>
+                <Text style={[styles.wordTypeMore, { color: c.primary }]}>
                   {showFullMeaning ? "Thu gọn" : "⇒ Đầy đủ"}
                 </Text>
               </TouchableOpacity>
@@ -822,23 +831,23 @@ export default function VocabDetailScreen() {
 
             {/* Nội dung Đầy đủ */}
             {showFullMeaning && (
-              <View style={styles.fullMeaningBox}>
-                <Text style={styles.fullMeaningTitle}>
+              <View style={[styles.fullMeaningBox, { backgroundColor: c.primary + "14" }]}>
+                <Text style={[styles.fullMeaningTitle, { color: c.primary }]}>
                   📖 Đầy đủ nghĩa và cách dùng:
                 </Text>
-                <Text style={styles.fullMeaningText}>
+                <Text style={[styles.fullMeaningText, { color: c.text }]}>
                   • {vocabData.kanji} ({vocabData.hiragana}): {vocabData.nghia}
                 </Text>
-                <Text style={styles.fullMeaningText}>
+                <Text style={[styles.fullMeaningText, { color: c.text }]}>
                   • Loại từ: {getWordTypeText()}
                 </Text>
                 {wordType === "noun-suru" && (
-                  <Text style={styles.fullMeaningText}>
+                  <Text style={[styles.fullMeaningText, { color: c.text }]}>
                     • Có thể thêm する để tạo động từ: {vocabData.kanji}する
                   </Text>
                 )}
                 {wordType === "noun-only" && (
-                  <Text style={styles.fullMeaningText}>
+                  <Text style={[styles.fullMeaningText, { color: c.text }]}>
                     • Danh từ thuần túy, không thêm する
                   </Text>
                 )}
@@ -847,16 +856,16 @@ export default function VocabDetailScreen() {
 
             {/* Nghĩa số 1 */}
             <View style={styles.meaningSection}>
-              <Text style={styles.meaningNumber}>1.</Text>
-              <Text style={styles.meaningText}>{vocabData.nghia}</Text>
+              <Text style={[styles.meaningNumber, { color: c.primary }]}>1.</Text>
+              <Text style={[styles.meaningText, { color: c.text }]}>{vocabData.nghia}</Text>
             </View>
 
             {/* Ví dụ */}
             {vocabData.example && (
-              <View style={styles.exampleBox}>
-                <Text style={styles.exampleJp}>{vocabData.example}</Text>
+              <View style={[styles.exampleBox, { backgroundColor: c.primary + "14" }]}>
+                <Text style={[styles.exampleJp, { color: c.primary }]}>{vocabData.example}</Text>
                 {vocabData.exampleMeaning && (
-                  <Text style={styles.exampleVi}>
+                  <Text style={[styles.exampleVi, { color: c.text }]}>
                     {vocabData.exampleMeaning}
                   </Text>
                 )}
@@ -867,8 +876,8 @@ export default function VocabDetailScreen() {
             {relatedExamples.length > 0 && (
               <View style={styles.examplesSection}>
                 <View style={styles.sectionHeader}>
-                  <Text style={styles.sectionTitle}>📖 Mẫu câu ví dụ</Text>
-                  <Text style={styles.sectionCount}>
+                  <Text style={[styles.sectionTitle, { color: c.text }]}>📖 Mẫu câu ví dụ</Text>
+                  <Text style={[styles.sectionCount, { color: c.mutedForeground }]}>
                     {relatedExamples.length} câu
                   </Text>
                 </View>
@@ -878,19 +887,22 @@ export default function VocabDetailScreen() {
                   ? relatedExamples
                   : relatedExamples.slice(0, 3)
                 ).map((item) => (
-                  <View key={item.id} style={styles.exampleCard}>
-                    <Text style={styles.exampleJp}>{item.jp}</Text>
-                    <Text style={styles.exampleVi}>{item.vi}</Text>
+                  <View
+                    key={item.id}
+                    style={[styles.exampleCard, { backgroundColor: c.muted, borderColor: c.border }]}
+                  >
+                    <Text style={[styles.exampleJp, { color: c.primary }]}>{item.jp}</Text>
+                    <Text style={[styles.exampleVi, { color: c.mutedForeground }]}>{item.vi}</Text>
                   </View>
                 ))}
 
                 {/* Nút xem thêm/thu gọn */}
                 {relatedExamples.length > 3 && (
                   <TouchableOpacity
-                    style={styles.showMoreBtn}
+                    style={[styles.showMoreBtn, { backgroundColor: c.muted }]}
                     onPress={() => setShowAllExamples(!showAllExamples)}
                   >
-                    <Text style={styles.showMoreText}>
+                    <Text style={[styles.showMoreText, { color: c.primary }]}>
                       {showAllExamples
                         ? "📖 Thu gọn"
                         : `📖 Xem thêm ${relatedExamples.length - 3} câu`}
@@ -901,14 +913,9 @@ export default function VocabDetailScreen() {
             )}
 
             {/* Bảng chia từ - Luôn hiển thị cho mọi loại từ */}
-            {/* <ConjugationTable 
-              word={conjugationWord}
-              wordType={wordType}
-              originalWord={vocabData.kanji}
-            /> */}
             {skipConjugation ? (
-              <View style={styles.wordTypeRow}>
-                <Text style={styles.wordTypeText}>
+              <View style={[styles.wordTypeRow, { backgroundColor: c.muted }]}>
+                <Text style={[styles.wordTypeText, { color: c.text }]}>
                   📌 Đây là dạng chia sẵn của: {baseNote || "—"}
                 </Text>
               </View>
@@ -917,12 +924,13 @@ export default function VocabDetailScreen() {
                 word={conjugationWord}
                 wordType={wordType}
                 originalWord={vocabData.kanji}
+                c={c}
               />
             )}
 
             {/* Xem thêm */}
-            <TouchableOpacity style={styles.viewMoreBtn}>
-              <Text style={styles.viewMoreText}>Xem thêm</Text>
+            <TouchableOpacity style={[styles.viewMoreBtn, { borderTopColor: c.border }]}>
+              <Text style={[styles.viewMoreText, { color: c.primary }]}>Xem thêm</Text>
             </TouchableOpacity>
           </View>
         </ScrollView>
@@ -936,28 +944,23 @@ export default function VocabDetailScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: BG_GRAY,
   },
   center: {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: BG_GRAY,
   },
   errorText: {
     fontSize: 16,
-    color: "#ef4444",
     marginBottom: 16,
     textAlign: "center",
   },
   backBtn: {
     paddingHorizontal: 20,
     paddingVertical: 10,
-    backgroundColor: TEAL,
     borderRadius: 8,
   },
   backBtnText: {
-    color: "#fff",
     fontSize: 14,
     fontWeight: "600",
   },
@@ -968,28 +971,23 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 56,
     paddingBottom: 16,
-    backgroundColor: BG_GRAY,
   },
   backBtnHeader: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
   },
   backIcon: {
     fontSize: 28,
-    color: TEAL_DARK,
     fontWeight: "300",
     marginTop: -4,
   },
   headerTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: TEAL_DARK,
   },
   headerRight: {
     flexDirection: "row",
@@ -998,9 +996,7 @@ const styles = StyleSheet.create({
   iconBtn: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
     borderRadius: 12,
     alignItems: "center",
     justifyContent: "center",
@@ -1016,26 +1012,22 @@ const styles = StyleSheet.create({
   bigKanji: {
     fontSize: 32,
     fontWeight: "800",
-    color: TEAL_DARK,
     lineHeight: 40,
   },
   bigHanViet: {
     fontSize: 18,
-    color: TEAL_DARK,
     fontWeight: "700",
     letterSpacing: 1,
     marginTop: 2,
   },
-  bigHiragana: { fontSize: 16, color: TEAL_DARK, marginTop: 2 },
-  bigNghia: { fontSize: 15, color: "#475569", marginTop: 2 },
+  bigHiragana: { fontSize: 16, marginTop: 2 },
+  bigNghia: { fontSize: 15, marginTop: 2 },
   divider: {
     height: StyleSheet.hairlineWidth,
-    backgroundColor: "#e2e8f0",
     marginVertical: 14,
   },
   headerActions: { flexDirection: "row", alignItems: "flex-start", gap: 6 },
   card: {
-    backgroundColor: "#fff",
     borderRadius: 16,
     padding: 20,
     marginBottom: 20,
@@ -1045,24 +1037,20 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 3,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   mainVocab: {
     fontSize: 48,
     fontWeight: "800",
-    color: TEAL_DARK,
     textAlign: "center",
     marginBottom: 8,
   },
   mainVocabKana: {
     fontSize: 18,
-    color: "#64748b",
     textAlign: "center",
     marginBottom: 4,
   },
   mainVocabHan: {
     fontSize: 14,
-    color: "#94a3b8",
     textAlign: "center",
     marginBottom: 4,
   },
@@ -1076,13 +1064,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 10,
     marginHorizontal: 4,
-    backgroundColor: "#f1f5f9",
     borderRadius: 20,
   },
   funcBtnText: {
     fontSize: 12,
     fontWeight: "600",
-    color: "#475569",
   },
   levelRow: {
     flexDirection: "row",
@@ -1092,7 +1078,6 @@ const styles = StyleSheet.create({
   levelLabel: {
     fontSize: 14,
     fontWeight: "600",
-    color: "#475569",
     marginRight: 8,
   },
   levelBadge: {
@@ -1105,25 +1090,21 @@ const styles = StyleSheet.create({
     fontWeight: "700",
   },
   wordTypeRow: {
-    backgroundColor: "#f8fafc",
     padding: 12,
     borderRadius: 12,
     marginBottom: 16,
   },
   wordTypeText: {
     fontSize: 13,
-    color: "#475569",
     lineHeight: 18,
     marginBottom: 8,
   },
   wordTypeMore: {
     fontSize: 13,
     fontWeight: "600",
-    color: TEAL,
     textAlign: "right",
   },
   fullMeaningBox: {
-    backgroundColor: "#f0fdf4",
     padding: 12,
     borderRadius: 12,
     marginBottom: 16,
@@ -1131,12 +1112,10 @@ const styles = StyleSheet.create({
   fullMeaningTitle: {
     fontSize: 13,
     fontWeight: "700",
-    color: "#166534",
     marginBottom: 8,
   },
   fullMeaningText: {
     fontSize: 13,
-    color: "#166534",
     lineHeight: 20,
     marginBottom: 4,
   },
@@ -1147,18 +1126,15 @@ const styles = StyleSheet.create({
   meaningNumber: {
     fontSize: 16,
     fontWeight: "700",
-    color: TEAL,
     marginRight: 8,
     width: 24,
   },
   meaningText: {
     fontSize: 16,
-    color: "#1e293b",
     flex: 1,
     lineHeight: 24,
   },
   exampleBox: {
-    backgroundColor: "#f0fdf4",
     padding: 16,
     borderRadius: 12,
     marginBottom: 16,
@@ -1166,19 +1142,16 @@ const styles = StyleSheet.create({
   exampleJp: {
     fontSize: 16,
     fontWeight: "600",
-    color: "#166534",
     marginBottom: 8,
   },
   exampleVi: {
     fontSize: 14,
-    color: "#475569",
     lineHeight: 20,
   },
   // Mẫu câu liên quan
   sectionTitle: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#1e293b",
     marginBottom: 12,
     marginTop: 8,
   },
@@ -1186,16 +1159,13 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   exampleCard: {
-    backgroundColor: "#f8fafc",
     padding: 16,
     borderRadius: 12,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   exampleNote: {
     fontSize: 12,
-    color: "#64748b",
     marginTop: 8,
     fontStyle: "italic",
   },
@@ -1203,7 +1173,6 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 12,
     right: 12,
-    backgroundColor: "#e2e8f0",
     paddingHorizontal: 8,
     paddingVertical: 2,
     borderRadius: 12,
@@ -1211,37 +1180,29 @@ const styles = StyleSheet.create({
   exampleLevelText: {
     fontSize: 10,
     fontWeight: "600",
-    color: "#475569",
   },
   // Bảng chia từ
   tableContainer: {
     marginTop: 20,
     marginBottom: 16,
-    backgroundColor: "#fff",
     borderRadius: 12,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   tableTitle: {
     fontSize: 14,
     fontWeight: "700",
-    color: "#1e293b",
     padding: 12,
-    backgroundColor: "#f8fafc",
     borderBottomWidth: 1,
-    borderBottomColor: "#e2e8f0",
   },
   tableHeader: {
     flexDirection: "row",
-    backgroundColor: TEAL,
     paddingVertical: 12,
     paddingHorizontal: 16,
   },
   headerCell: {
     fontSize: 13,
     fontWeight: "700",
-    color: "#fff",
   },
   headerName: {
     flex: 0.5,
@@ -1257,14 +1218,9 @@ const styles = StyleSheet.create({
     paddingVertical: 14,
     paddingHorizontal: 16,
     borderBottomWidth: 1,
-    borderBottomColor: "#f1f5f9",
-  },
-  tableRowAlt: {
-    backgroundColor: "#f8fafc",
   },
   rowCell: {
     fontSize: 12,
-    color: "#334155",
   },
   rowName: {
     flex: 0.4,
@@ -1279,14 +1235,11 @@ const styles = StyleSheet.create({
     alignItems: "center",
     paddingVertical: 12,
     borderTopWidth: 1,
-    borderTopColor: "#e2e8f0",
   },
   viewMoreText: {
     fontSize: 14,
     fontWeight: "600",
-    color: TEAL,
   },
-  // Thêm vào styles, sau các style hiện có (ví dụ sau `viewMoreText`)
   modalOverlay: {
     flex: 1,
     backgroundColor: "rgba(0,0,0,0.5)",
@@ -1294,7 +1247,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   imageModalContainer: {
-    backgroundColor: "#fff",
     borderRadius: 24,
     padding: 20,
     width: "90%",
@@ -1308,17 +1260,14 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     paddingBottom: 12,
     borderBottomWidth: 1,
-    borderBottomColor: "#e2e8f0",
   },
   imageModalTitle: {
     fontSize: 18,
     fontWeight: "700",
-    color: "#1e293b",
   },
   imageModalClose: {
     fontSize: 20,
     fontWeight: "600",
-    color: "#64748b",
     padding: 8,
   },
   imageModalContent: {
@@ -1333,19 +1282,16 @@ const styles = StyleSheet.create({
   },
   sectionCount: {
     fontSize: 12,
-    color: "#94a3b8",
     fontWeight: "500",
   },
   showMoreBtn: {
     alignItems: "center",
     paddingVertical: 12,
     marginTop: 4,
-    backgroundColor: "#f8fafc",
     borderRadius: 12,
   },
   showMoreText: {
     fontSize: 13,
     fontWeight: "600",
-    color: TEAL,
   },
 });

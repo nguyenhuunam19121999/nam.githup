@@ -33,13 +33,8 @@ import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 import { WritingPracticeModal } from "../components/WritingPracticeModal";
 import { AdBanner } from "../components/AdBanner";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
-
-// const SCREEN_W = Dimensions.get("window").width;
-const TEAL = "#004370";
-const TEAL_DARK = "#004370";
-const TEXT_COLOR = "#e47b0b";
-// const bgrColor = "#f1f5f9";
-// const textColor = "#1d4ed8";
+import { useColors, useThemeMode, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
+import type { ColorTokens } from "../artifacts/mirai-jp/constants/colors";
 
 type Mode = "list" | "quiz" | "writing";
 
@@ -77,6 +72,7 @@ function StatsModal({
   onShowBookmarks: () => void;
   scopedKey: (k: string) => string;
 }) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const [stats, setStats] = useState({
     bestScore: 0,
     totalPlayed: 0,
@@ -103,54 +99,62 @@ function StatsModal({
       transparent
       onRequestClose={onClose}
     >
-      <View style={ms.overlay}>
-        <View style={ms.sheet}>
-          <Text style={ms.title}>📊 Thống kê học Kanji</Text>
-          <View style={ms.card}>
-            <Text style={ms.cardValue}>{totalCount}</Text>
-            <Text style={ms.cardLabel}>Tổng số chữ Kanji</Text>
+      <View style={[ms.overlay, { backgroundColor: "rgba(0,0,0,0.45)" }]}>
+        <View style={[ms.sheet, { backgroundColor: c.card }]}>
+          <Text style={[ms.title, { color: c.text }]}>📊 Thống kê học Kanji</Text>
+          <View style={[ms.card, { backgroundColor: c.muted }]}>
+            <Text style={[ms.cardValue, { color: c.text }]}>{totalCount}</Text>
+            <Text style={[ms.cardLabel, { color: c.mutedForeground }]}>Tổng số chữ Kanji</Text>
           </View>
           <TouchableOpacity
-            style={[ms.card, ms.cardTap]}
+            style={[
+              ms.card,
+              ms.cardTap,
+              { backgroundColor: c.accent + "1a", borderColor: c.accent },
+            ]}
             activeOpacity={0.75}
             onPress={() => {
               onClose();
               onShowBookmarks();
             }}
           >
-            <Text style={ms.cardValue}>⭐ {bookmarkCount}</Text>
-            <Text style={[ms.cardLabel, ms.cardLabelHint]}>
+            <Text style={[ms.cardValue, { color: c.text }]}>⭐ {bookmarkCount}</Text>
+            <Text style={[ms.cardLabel, ms.cardLabelHint, { color: c.accentForeground === "#ffffff" ? c.text : c.accentForeground }]}>
               Chữ đã ghim · Nhấn để xem
             </Text>
           </TouchableOpacity>
-          <View style={ms.divider} />
-          <Text style={ms.sectionTitle}>🎯 Kết quả Quiz</Text>
+          <View style={[ms.divider, { backgroundColor: c.border }]} />
+          <Text style={[ms.sectionTitle, { color: c.text }]}>🎯 Kết quả Quiz</Text>
           <View style={ms.row}>
-            <Text style={ms.rowLabel}>Điểm cao nhất:</Text>
-            <Text style={ms.rowVal}>{stats.bestScore}%</Text>
+            <Text style={[ms.rowLabel, { color: c.mutedForeground }]}>Điểm cao nhất:</Text>
+            <Text style={[ms.rowVal, { color: c.text }]}>{stats.bestScore}%</Text>
           </View>
           <View style={ms.row}>
-            <Text style={ms.rowLabel}>Trung bình:</Text>
-            <Text style={ms.rowVal}>{stats.avgScore}%</Text>
+            <Text style={[ms.rowLabel, { color: c.mutedForeground }]}>Trung bình:</Text>
+            <Text style={[ms.rowVal, { color: c.text }]}>{stats.avgScore}%</Text>
           </View>
           <View style={ms.row}>
-            <Text style={ms.rowLabel}>Đã chơi:</Text>
-            <Text style={ms.rowVal}>{stats.totalPlayed} lần</Text>
+            <Text style={[ms.rowLabel, { color: c.mutedForeground }]}>Đã chơi:</Text>
+            <Text style={[ms.rowVal, { color: c.text }]}>{stats.totalPlayed} lần</Text>
           </View>
           <TouchableOpacity
-            style={ms.closeBtn}
+            style={[ms.closeBtn, { backgroundColor: c.primary }]}
             onPress={onClose}
             activeOpacity={0.85}
           >
-            <Text style={ms.closeBtnText}>Đóng</Text>
+            <Text style={[ms.closeBtnText, { color: c.primaryForeground }]}>Đóng</Text>
           </TouchableOpacity>
         </View>
+        <ThemeFadeOverlay />
       </View>
     </Modal>
   );
 }
 
 export default function KanjiListScreen() {
+  const c = useColors(); 
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
   const router = useRouter();
   const { scopedKey } = useAuth();
   const params = useLocalSearchParams<{
@@ -331,43 +335,43 @@ export default function KanjiListScreen() {
   };
 
   return (
-    <View style={s.root}>
-      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
-      <View style={s.headerRow}>
+    <View style={[s.root, { backgroundColor: c.background }]}>
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
+      <View style={[s.headerRow, { backgroundColor: c.background }]}>
         <TouchableOpacity
-          style={s.backBtn}
+          style={[s.backBtn, { backgroundColor: c.card, borderColor: c.border }]}
           onPress={() => router.back()}
           activeOpacity={0.7}
         >
-          <Text style={s.backBtnText}>‹</Text>
+          <Text style={[s.backBtnText, { color: c.primary }]}>‹</Text>
         </TouchableOpacity>
         <View style={s.titleBlock}>
-          <Text style={s.headerTitle} numberOfLines={1}>
+          <Text style={[s.headerTitle, { color: c.text }]} numberOfLines={1}>
             {title}
           </Text>
-          <Text style={s.headerSubtitle}>{BASE.length} chữ Kanji</Text>
+          <Text style={[s.headerSubtitle, { color: c.mutedForeground }]}>{BASE.length} chữ Kanji</Text>
         </View>
         <View style={s.headerBtns}>
           <TouchableOpacity
-            style={s.headerActionBtn}
+            style={[s.headerActionBtn, { backgroundColor: c.card, borderColor: c.border }]}
             onPress={() => setShowStats(true)}
             activeOpacity={0.8}
           >
             <Text style={s.statsBtnText}>📊</Text>
           </TouchableOpacity>
           <TouchableOpacity
-            style={s.headerActionBtn}
+            style={[s.headerActionBtn, { backgroundColor: c.card, borderColor: c.border }]}
             onPress={() => setMenuOpen(true)}
             activeOpacity={0.8}
           >
-            <View style={s.menuLine} />
-            <View style={s.menuLine} />
-            <View style={s.menuLine} />
+            <View style={[s.menuLine, { backgroundColor: c.text }]} />
+            <View style={[s.menuLine, { backgroundColor: c.text }]} />
+            <View style={[s.menuLine, { backgroundColor: c.text }]} />
           </TouchableOpacity>
         </View>
       </View>
 
-      <View style={s.tabBar}>
+      <View style={[s.tabBar, { backgroundColor: c.card, borderBottomColor: c.border }]}>
         {(
           [
             {
@@ -378,11 +382,21 @@ export default function KanjiListScreen() {
         ).map(({ key, label }) => (
           <TouchableOpacity
             key={key}
-            style={[s.tabBtn, mode === key && s.tabActive]}
+            style={[
+              s.tabBtn,
+              { backgroundColor: c.muted },
+              mode === key && { backgroundColor: c.primary },
+            ]}
             onPress={() => switchMode(mode === key ? "list" : key)}
             activeOpacity={0.8}
           >
-            <Text style={[s.tabText, mode === key && s.tabTextActive]}>
+            <Text
+              style={[
+                s.tabText,
+                { color: c.mutedForeground },
+                mode === key && { color: c.primaryForeground },
+              ]}
+            >
               {label}
             </Text>
           </TouchableOpacity>
@@ -391,14 +405,17 @@ export default function KanjiListScreen() {
 
       {showBookmarksOnly && (
         <TouchableOpacity
-          style={s.bookmarkBanner}
+          style={[
+            s.bookmarkBanner,
+            { backgroundColor: c.accent + "1a", borderColor: c.accent },
+          ]}
           onPress={() => {
             setShowBookmarksOnly(false);
             setQuizIdx(0);
           }}
           activeOpacity={0.85}
         >
-          <Text style={s.bookmarkBannerText}>
+          <Text style={[s.bookmarkBannerText, { color: c.text }]}>
             ⭐ Đang xem {filtered.length} chữ đã ghim · Nhấn để xem tất cả
           </Text>
         </TouchableOpacity>
@@ -414,14 +431,13 @@ export default function KanjiListScreen() {
         >
           {filtered.length === 0 ? (
             <View style={s.empty}>
-              <Text style={s.emptyText}>Chưa có kanji nào phù hợp.</Text>
+              <Text style={[s.emptyText, { color: c.text }]}>Chưa có kanji nào phù hợp.</Text>
             </View>
           ) : (
             filtered.map((it, idx) => (
               <TouchableOpacity
-                // key={it.id ?? it.kanji}
                 key={`${it.id ?? it.kanji}_${idx}`}
-                style={s.row}
+                style={[s.row, { backgroundColor: c.card }]}
                 activeOpacity={0.7}
                 onPress={() =>
                   router.push({
@@ -437,21 +453,18 @@ export default function KanjiListScreen() {
               >
                 <View style={s.rowMain}>
                   <View style={s.rowTopLine}>
-                    <Text style={s.indexNum}>{idx + 1}.</Text>
-                    <Text style={s.kanjiChar}>{it.kanji}</Text>
+                    <Text style={[s.indexNum, { color: c.mutedForeground }]}>{idx + 1}.</Text>
+                    <Text style={[s.kanjiChar, { color: c.text }]}>{it.kanji}</Text>
                   </View>
-                  <Text style={s.hanViet}>{it.hanviet.join(" • ")}</Text>
-                  <Text style={s.readings} numberOfLines={1}>
+                  <Text style={[s.hanViet, { color: c.primary }]}>{it.hanviet.join(" • ")}</Text>
+                  <Text style={[s.readings, { color: c.text }]} numberOfLines={1}>
                     {it.readings.onyomi.join("／") || "—"}
                   </Text>
-                  <Text style={s.meaning} numberOfLines={2}>
+                  <Text style={[s.meaning, { color: c.mutedForeground }]} numberOfLines={2}>
                     {it.meanings_vi[0] ?? ""}
                   </Text>
                 </View>
                 <View style={s.rowActions}>
-                  {/* <TouchableOpacity style={s.writeBtn} onPress={() => setWritingItem(it)} hitSlop={8}>
-                    <Text style={s.writeBtnIcon}>✏️</Text>
-                  </TouchableOpacity> */}
                   <TouchableOpacity
                     style={s.starBtn}
                     onPress={() => toggleBookmark(it.id ?? it.kanji)}
@@ -482,39 +495,39 @@ export default function KanjiListScreen() {
         >
           {filtered.length < 4 ? (
             <View style={s.empty}>
-              <Text style={s.emptyText}>Cần ít nhất 4 kanji để chơi quiz.</Text>
+              <Text style={[s.emptyText, { color: c.text }]}>Cần ít nhất 4 kanji để chơi quiz.</Text>
             </View>
           ) : quizDone ? (
-            <View style={s.resultBox}>
+            <View style={[s.resultBox, { backgroundColor: c.card }]}>
               <Text style={s.resultEmoji}>
                 {quizScore / filtered.length >= 0.8 ? "🎉" : "💪"}
               </Text>
-              <Text style={s.resultTitle}>Kết quả Quiz</Text>
-              <Text style={s.resultScore}>
+              <Text style={[s.resultTitle, { color: c.text }]}>Kết quả Quiz</Text>
+              <Text style={[s.resultScore, { color: c.primary }]}>
                 {quizScore} / {filtered.length}
               </Text>
-              <Text style={s.resultPct}>
+              <Text style={[s.resultPct, { color: c.mutedForeground }]}>
                 {Math.round((quizScore / filtered.length) * 100)}%
               </Text>
               <TouchableOpacity
-                style={s.retryBtn}
+                style={[s.retryBtn, { backgroundColor: c.primary }]}
                 onPress={resetQuiz}
                 activeOpacity={0.8}
               >
-                <Text style={s.retryBtnText}>Làm lại</Text>
+                <Text style={[s.retryBtnText, { color: c.primaryForeground }]}>Làm lại</Text>
               </TouchableOpacity>
             </View>
           ) : (
             <>
-              <Text style={s.counter}>
+              <Text style={[s.counter, { color: c.mutedForeground }]}>
                 {quizIdx + 1} / {filtered.length}
               </Text>
-              <View style={s.quizCard}>
-                <Text style={s.quizKanji}>{quizItem?.kanji}</Text>
-                <Text style={s.quizHanViet}>
+              <View style={[s.quizCard, { backgroundColor: c.card }]}>
+                <Text style={[s.quizKanji, { color: c.text }]}>{quizItem?.kanji}</Text>
+                <Text style={[s.quizHanViet, { color: c.mutedForeground }]}>
                   {quizItem?.hanviet.join(" • ")}
                 </Text>
-                <Text style={s.quizQuestion}>Nghĩa của chữ này là gì?</Text>
+                <Text style={[s.quizQuestion, { color: c.mutedForeground }]}>Nghĩa của chữ này là gì?</Text>
               </View>
               <View style={s.optionsWrap}>
                 {quizOptions.map((opt, optIdx) => {
@@ -525,11 +538,14 @@ export default function KanjiListScreen() {
                       key={`${opt}_${optIdx}`}
                       style={[
                         s.optionBtn,
+                        { backgroundColor: c.card, borderColor: c.border },
                         quizAnswered !== null && isCorrect && s.optionCorrect,
                         quizAnswered !== null &&
                           isChosen &&
-                          !isCorrect &&
-                          s.optionWrong,
+                          !isCorrect && [
+                            s.optionWrong,
+                            { backgroundColor: c.destructive + "1a", borderColor: c.destructive },
+                          ],
                       ]}
                       onPress={() => handleAnswer(opt)}
                       activeOpacity={0.75}
@@ -537,13 +553,16 @@ export default function KanjiListScreen() {
                       <Text
                         style={[
                           s.optionText,
+                          { color: c.text },
                           quizAnswered !== null &&
                             isCorrect &&
                             s.optionTextCorrect,
                           quizAnswered !== null &&
                             isChosen &&
-                            !isCorrect &&
-                            s.optionTextWrong,
+                            !isCorrect && [
+                              s.optionTextWrong,
+                              { color: c.destructive },
+                            ],
                         ]}
                       >
                         {opt}
@@ -552,7 +571,7 @@ export default function KanjiListScreen() {
                   );
                 })}
               </View>
-              <Text style={s.scoreHint}>
+              <Text style={[s.scoreHint, { color: c.mutedForeground }]}>
                 Điểm: {quizScore} / {quizIdx}
               </Text>
             </>
@@ -571,16 +590,16 @@ export default function KanjiListScreen() {
         >
           {filtered.length === 0 ? (
             <View style={s.empty}>
-              <Text style={s.emptyText}>Không tìm thấy Kanji phù hợp.</Text>
+              <Text style={[s.emptyText, { color: c.text }]}>Không tìm thấy Kanji phù hợp.</Text>
             </View>
           ) : (
             <>
-              <Text style={s.counter}>
+              <Text style={[s.counter, { color: c.mutedForeground }]}>
                 {writeSafe + 1} / {filtered.length}
               </Text>
-              <View style={s.writeCard}>
-                <Text style={s.writeKanji}>{writeItem?.kanji}</Text>
-                <Text style={s.writeHanViet}>
+              <View style={[s.writeCard, { backgroundColor: c.card }]}>
+                <Text style={[s.writeKanji, { color: c.text }]}>{writeItem?.kanji}</Text>
+                <Text style={[s.writeHanViet, { color: c.primary }]}>
                   {writeItem?.hanviet.join(" • ")}
                 </Text>
                 {(() => {
@@ -588,44 +607,40 @@ export default function KanjiListScreen() {
                     ? getKunyomiFromFull(writeItem.kanji)
                     : [];
                   return kun.length > 0 ? (
-                    <Text style={s.writeReading}>訓 {kun.join("、")}</Text>
+                    <Text style={[s.writeReading, { color: c.text }]}>訓 {kun.join("、")}</Text>
                   ) : null;
                 })()}
-                {/* {(writeItem?.readings.kunyomi.length ?? 0) > 0 && (
-                  <Text style={s.writeReading}>訓 {writeItem!.readings.kunyomi.join("、")}</Text>
-                )} */}
                 {(writeItem?.readings.onyomi.length ?? 0) > 0 && (
-                  <Text style={s.writeReading}>
+                  <Text style={[s.writeReading, { color: c.text }]}>
                     音 {writeItem!.readings.onyomi.join("、")}
                   </Text>
                 )}
-                <Text style={s.writeMeaning}>
+                <Text style={[s.writeMeaning, { color: c.text }]}>
                   {writeItem?.meanings_vi.slice(0, 2).join(" / ")}
                 </Text>
                 <View style={s.strokeWrap}>
                   <KanjiStrokeOrder kanji={writeItem?.kanji ?? ""} size={220} />
                 </View>
-                {/* <Text style={s.strokeHint}>Mỗi màu = 1 nét · Thứ tự viết: 1 → {writeItem?.strokes}</Text> */}
-                <Text style={s.strokeHint}>
+                <Text style={[s.strokeHint, { color: c.mutedForeground }]}>
                   Mỗi màu = 1 nét · Thứ tự viết: 1 → {writeItem?.strokes ?? "?"}
                 </Text>
               </View>
               <View style={s.navRow}>
                 <TouchableOpacity
-                  style={s.navBtn}
+                  style={[s.navBtn, { backgroundColor: c.card, borderColor: c.border }]}
                   onPress={() => setWriteIdx((i) => Math.max(0, i - 1))}
                   activeOpacity={0.7}
                 >
-                  <Text style={s.navBtnText}>‹ Trước</Text>
+                  <Text style={[s.navBtnText, { color: c.text }]}>‹ Trước</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  style={s.navBtn}
+                  style={[s.navBtn, { backgroundColor: c.card, borderColor: c.border }]}
                   onPress={() =>
                     setWriteIdx((i) => Math.min(filtered.length - 1, i + 1))
                   }
                   activeOpacity={0.7}
                 >
-                  <Text style={s.navBtnText}>Sau ›</Text>
+                  <Text style={[s.navBtnText, { color: c.text }]}>Sau ›</Text>
                 </TouchableOpacity>
               </View>
             </>
@@ -657,40 +672,44 @@ export default function KanjiListScreen() {
         animationType="slide"
         onRequestClose={() => setMenuOpen(false)}
       >
-        <View style={ms.overlay}>
+        <View style={[ms.overlay, { backgroundColor: "rgba(0,0,0,0.45)" }]}>
           <Pressable
             style={StyleSheet.absoluteFill}
             onPress={() => setMenuOpen(false)}
           />
-          <View style={ms.sheet}>
-            <View style={ms.handle} />
+          <View style={[ms.sheet, { backgroundColor: c.card }]}>
+            <View style={[ms.handle, { backgroundColor: c.border }]} />
             <View style={ms.sheetHeader}>
-              <Text style={ms.sheetTitle}>Tuỳ chọn</Text>
+              <Text style={[ms.sheetTitle, { color: c.text }]}>Tuỳ chọn</Text>
               <TouchableOpacity onPress={() => setMenuOpen(false)} hitSlop={10}>
-                <Text style={ms.sheetClose}>Đóng</Text>
+                <Text style={[ms.sheetClose, { color: c.primary }]}>Đóng</Text>
               </TouchableOpacity>
             </View>
             <TouchableOpacity
-              style={ms.menuItem}
+              style={[ms.menuItem, { borderBottomColor: c.border }]}
               onPress={doShuffle}
               activeOpacity={0.75}
             >
               <Text style={ms.menuItemIcon}>🔀</Text>
-              <Text style={ms.menuItemText}>Xáo trộn danh sách</Text>
-              {isShuffled && <Text style={ms.menuItemBadge}>Đang xáo</Text>}
+              <Text style={[ms.menuItemText, { color: c.text }]}>Xáo trộn danh sách</Text>
+              {isShuffled && (
+                <Text style={[ms.menuItemBadge, { backgroundColor: c.primary, color: c.primaryForeground }]}>
+                  Đang xáo
+                </Text>
+              )}
             </TouchableOpacity>
             {isShuffled && (
               <TouchableOpacity
-                style={ms.menuItem}
+                style={[ms.menuItem, { borderBottomColor: c.border }]}
                 onPress={doReset}
                 activeOpacity={0.75}
               >
                 <Text style={ms.menuItemIcon}>↩️</Text>
-                <Text style={ms.menuItemText}>Đặt lại thứ tự gốc</Text>
+                <Text style={[ms.menuItemText, { color: c.text }]}>Đặt lại thứ tự gốc</Text>
               </TouchableOpacity>
             )}
             <TouchableOpacity
-              style={ms.menuItem}
+              style={[ms.menuItem, { borderBottomColor: c.border }]}
               onPress={() => {
                 setShowBookmarksOnly((v) => !v);
                 setMode("list");
@@ -699,14 +718,17 @@ export default function KanjiListScreen() {
               activeOpacity={0.75}
             >
               <Text style={ms.menuItemIcon}>⭐</Text>
-              <Text style={ms.menuItemText}>
+              <Text style={[ms.menuItemText, { color: c.text }]}>
                 {showBookmarksOnly ? "Xem tất cả chữ" : "Chỉ xem chữ đã ghim"}
               </Text>
               {bookmarks.size > 0 && (
-                <Text style={ms.menuItemBadge}>{bookmarks.size}</Text>
+                <Text style={[ms.menuItemBadge, { backgroundColor: c.primary, color: c.primaryForeground }]}>
+                  {bookmarks.size}
+                </Text>
               )}
             </TouchableOpacity>
           </View>
+          <ThemeFadeOverlay />
         </View>
       </Modal>
       <BottomTabBar />
@@ -715,8 +737,9 @@ export default function KanjiListScreen() {
   );
 }
 
+// ─── Styles (chỉ layout — màu gán inline theo theme ở trên) ───────────────────
 const s = StyleSheet.create({
-  root: { flex: 1, backgroundColor: "#f0f4f8" },
+  root: { flex: 1 },
   headerRow: {
     flexDirection: "row",
     alignItems: "flex-start",
@@ -724,36 +747,30 @@ const s = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 56,
     paddingBottom: 12,
-    backgroundColor: "#f0f4f8",
   },
   backBtn: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
     borderRadius: 12,
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
     alignItems: "center",
     justifyContent: "center",
     marginRight: 10,
   },
-  backBtnText: { fontSize: 28, color: TEAL, lineHeight: 30 },
+  backBtnText: { fontSize: 28, lineHeight: 30 },
   titleBlock: { flex: 1, marginRight: 10 },
   headerTitle: {
     fontSize: 16,
     fontWeight: "700",
-    color: "#2d3748",
     marginBottom: 3,
   },
-  headerSubtitle: { fontSize: 13, color: "#718096" },
+  headerSubtitle: { fontSize: 13 },
   headerBtns: { flexDirection: "row", gap: 8, alignItems: "center" },
   headerActionBtn: {
     width: 42,
     height: 42,
-    backgroundColor: "#fff",
     borderRadius: 12,
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
     alignItems: "center",
     justifyContent: "center",
     shadowColor: "#000",
@@ -765,60 +782,47 @@ const s = StyleSheet.create({
   menuLine: {
     width: 20,
     height: 2,
-    backgroundColor: "#1e293b",
     borderRadius: 2,
     marginVertical: 2,
   },
   searchRow: {
     paddingHorizontal: 14,
     paddingBottom: 8,
-    backgroundColor: "#f0f4f8",
   },
   searchInput: {
-    backgroundColor: "#fff",
     borderRadius: 10,
     paddingHorizontal: 14,
     paddingVertical: 10,
     fontSize: 14,
-    color: "#1e293b",
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   tabBar: {
     flexDirection: "row",
     gap: 8,
     paddingHorizontal: 14,
     paddingVertical: 10,
-    backgroundColor: "#fff",
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#e2e8f0",
   },
   tabBtn: {
     flex: 1,
     paddingVertical: 9,
-    backgroundColor: "#e2e8f0",
     borderRadius: 10,
     alignItems: "center",
   },
-  tabActive: { backgroundColor: TEAL_DARK },
-  tabText: { fontSize: 13, fontWeight: "600", color: "#475569" },
-  tabTextActive: { color: "#fff" },
+  tabText: { fontSize: 13, fontWeight: "600" },
   bookmarkBanner: {
     marginHorizontal: 14,
     marginBottom: 6,
     paddingVertical: 9,
     paddingHorizontal: 14,
-    backgroundColor: "#fefce8",
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#fde047",
   },
-  bookmarkBannerText: { color: "#854d0e", fontSize: 13, fontWeight: "600" },
+  bookmarkBannerText: { fontSize: 13, fontWeight: "600" },
   scroll: { flex: 1 },
   scrollContent: { paddingHorizontal: 16, paddingTop: 4 },
   counter: {
     textAlign: "center",
-    color: "#64748b",
     fontSize: 13,
     marginBottom: 12,
     marginTop: 8,
@@ -826,7 +830,6 @@ const s = StyleSheet.create({
 
   row: {
     flexDirection: "row",
-    backgroundColor: "#fff",
     paddingVertical: 12,
     paddingHorizontal: 14,
     alignItems: "flex-start",
@@ -835,22 +838,20 @@ const s = StyleSheet.create({
   },
   rowMain: { flex: 1 },
   rowTopLine: { flexDirection: "row", alignItems: "baseline", marginBottom: 4 },
-  indexNum: { fontSize: 14, color: TEXT_COLOR, marginRight: 8 },
-  kanjiChar: { fontSize: 20, fontWeight: "700", color: TEAL_DARK },
+  indexNum: { fontSize: 14, marginRight: 8 },
+  kanjiChar: { fontSize: 20, fontWeight: "700" },
   readings: {
     fontSize: 16,
-    color: TEAL_DARK,
     fontWeight: "600",
     marginBottom: 2,
   },
   hanViet: {
     fontSize: 14,
-    color: TEAL,
     fontWeight: "700",
     letterSpacing: 0.5,
     marginBottom: 3,
   },
-  meaning: { fontSize: 14, color: TEAL },
+  meaning: { fontSize: 14 },
   rowActions: { flexDirection: "row", alignItems: "center", marginLeft: 8 },
   writeBtn: { padding: 6, marginRight: 2 },
   writeBtnIcon: { fontSize: 18 },
@@ -864,7 +865,6 @@ const s = StyleSheet.create({
     justifyContent: "center",
   },
   quizCard: {
-    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 28,
     alignItems: "center",
@@ -878,44 +878,37 @@ const s = StyleSheet.create({
   quizKanji: {
     fontSize: 68,
     fontWeight: "700",
-    color: TEAL_DARK,
     lineHeight: 78,
   },
   quizHanViet: {
     fontSize: 13,
-    color: "#94a3b8",
     fontWeight: "700",
     letterSpacing: 1,
     marginBottom: 6,
   },
-  quizQuestion: { fontSize: 14, color: "#64748b" },
+  quizQuestion: { fontSize: 14 },
   optionsWrap: { gap: 10, marginBottom: 12 },
   optionBtn: {
-    backgroundColor: "#fff",
     borderRadius: 12,
     paddingVertical: 14,
     paddingHorizontal: 18,
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
   },
   optionCorrect: { backgroundColor: "#d1fae5", borderColor: "#10b981" },
-  optionWrong: { backgroundColor: "#fee2e2", borderColor: "#ef4444" },
+  optionWrong: {},
   optionText: {
     fontSize: 15,
     fontWeight: "600",
-    color: "#334155",
     textAlign: "center",
   },
   optionTextCorrect: { color: "#065f46" },
-  optionTextWrong: { color: "#991b1b" },
+  optionTextWrong: {},
   scoreHint: {
     textAlign: "center",
     fontSize: 13,
-    color: "#94a3b8",
     marginBottom: 8,
   },
   resultBox: {
-    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 32,
     alignItems: "center",
@@ -930,20 +923,17 @@ const s = StyleSheet.create({
   resultTitle: {
     fontSize: 18,
     fontWeight: "800",
-    color: "#0f172a",
     marginBottom: 8,
   },
-  resultScore: { fontSize: 52, fontWeight: "900", color: TEAL, lineHeight: 60 },
-  resultPct: { fontSize: 20, color: "#64748b", marginBottom: 24 },
+  resultScore: { fontSize: 52, fontWeight: "900", lineHeight: 60 },
+  resultPct: { fontSize: 20, marginBottom: 24 },
   retryBtn: {
-    backgroundColor: TEAL,
     borderRadius: 14,
     paddingVertical: 13,
     paddingHorizontal: 40,
   },
-  retryBtnText: { color: "#fff", fontWeight: "700", fontSize: 16 },
+  retryBtnText: { fontWeight: "700", fontSize: 16 },
   writeCard: {
-    backgroundColor: "#fff",
     borderRadius: 20,
     padding: 24,
     alignItems: "center",
@@ -957,28 +947,24 @@ const s = StyleSheet.create({
   writeKanji: {
     fontSize: 52,
     fontWeight: "700",
-    color: TEAL_DARK,
     lineHeight: 62,
   },
   writeHanViet: {
     fontSize: 16,
-    color: TEXT_COLOR,
     fontWeight: "700",
     letterSpacing: 1,
     marginBottom: 4,
   },
-  writeReading: { fontSize: 16, color: TEAL, marginBottom: 2 },
+  writeReading: { fontSize: 16, marginBottom: 2 },
   writeMeaning: {
     fontSize: 16,
     fontWeight: "700",
-    color: TEAL_DARK,
     marginBottom: 16,
     textAlign: "center",
   },
   strokeWrap: { alignItems: "center", marginVertical: 8, width: "100%" },
   strokeHint: {
     fontSize: 12,
-    color: TEXT_COLOR,
     textAlign: "center",
     marginTop: 8,
   },
@@ -986,25 +972,21 @@ const s = StyleSheet.create({
   navBtn: {
     flex: 1,
     paddingVertical: 12,
-    backgroundColor: "#fff",
     borderRadius: 12,
     alignItems: "center",
     borderWidth: 1.5,
-    borderColor: "#e2e8f0",
   },
-  navBtnText: { fontSize: 15, fontWeight: "700", color: TEAL_DARK },
+  navBtnText: { fontSize: 15, fontWeight: "700" },
   empty: { padding: 30, alignItems: "center" },
-  emptyText: { color: TEAL_DARK, fontSize: 16, fontWeight: "600" },
+  emptyText: { fontSize: 16, fontWeight: "600" },
 });
 
 const ms = StyleSheet.create({
   overlay: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.45)",
     justifyContent: "flex-end",
   },
   sheet: {
-    backgroundColor: "#fff",
     borderTopLeftRadius: 24,
     borderTopRightRadius: 24,
     paddingHorizontal: 20,
@@ -1016,7 +998,6 @@ const ms = StyleSheet.create({
     width: 40,
     height: 4,
     borderRadius: 2,
-    backgroundColor: "#e2e8f0",
     marginBottom: 16,
   },
   sheetHeader: {
@@ -1025,17 +1006,15 @@ const ms = StyleSheet.create({
     alignItems: "center",
     marginBottom: 18,
   },
-  sheetTitle: { fontSize: 17, fontWeight: "800", color: "#0f172a" },
-  sheetClose: { fontSize: 15, color: TEAL, fontWeight: "600" },
+  sheetTitle: { fontSize: 17, fontWeight: "800" },
+  sheetClose: { fontSize: 15, fontWeight: "600" },
   title: {
     fontSize: 18,
     fontWeight: "800",
-    color: "#0f172a",
     marginBottom: 16,
     textAlign: "center",
   },
   card: {
-    backgroundColor: "#f1f5f9",
     borderRadius: 14,
     padding: 16,
     alignItems: "center",
@@ -1043,17 +1022,14 @@ const ms = StyleSheet.create({
   },
   cardTap: {
     borderWidth: 1.5,
-    borderColor: "#fde047",
-    backgroundColor: "#fefce8",
   },
-  cardValue: { fontSize: 28, fontWeight: "900", color: "#0f172a" },
-  cardLabel: { fontSize: 13, color: "#64748b", marginTop: 4 },
-  cardLabelHint: { color: "#854d0e" },
-  divider: { height: 1, backgroundColor: "#e2e8f0", marginVertical: 14 },
+  cardValue: { fontSize: 28, fontWeight: "900" },
+  cardLabel: { fontSize: 13, marginTop: 4 },
+  cardLabelHint: {},
+  divider: { height: 1, marginVertical: 14 },
   sectionTitle: {
     fontSize: 15,
     fontWeight: "700",
-    color: "#0f172a",
     marginBottom: 10,
   },
   row: {
@@ -1061,28 +1037,24 @@ const ms = StyleSheet.create({
     justifyContent: "space-between",
     paddingVertical: 6,
   },
-  rowLabel: { fontSize: 14, color: "#475569" },
-  rowVal: { fontSize: 14, fontWeight: "700", color: "#0f172a" },
+  rowLabel: { fontSize: 14 },
+  rowVal: { fontSize: 14, fontWeight: "700" },
   closeBtn: {
-    backgroundColor: TEAL,
     borderRadius: 14,
     paddingVertical: 13,
     alignItems: "center",
     marginTop: 18,
   },
-  closeBtnText: { color: "#fff", fontWeight: "700", fontSize: 16 },
+  closeBtnText: { fontWeight: "700", fontSize: 16 },
   menuItem: {
     flexDirection: "row",
     alignItems: "center",
     paddingVertical: 14,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#e2e8f0",
   },
   menuItemIcon: { fontSize: 20, marginRight: 12 },
-  menuItemText: { flex: 1, fontSize: 15, color: "#0f172a", fontWeight: "500" },
+  menuItemText: { flex: 1, fontSize: 15, fontWeight: "500" },
   menuItemBadge: {
-    backgroundColor: TEAL,
-    color: "#fff",
     fontSize: 12,
     fontWeight: "700",
     borderRadius: 10,
