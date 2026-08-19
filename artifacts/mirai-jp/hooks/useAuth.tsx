@@ -78,6 +78,14 @@ async function ensureUserDocument(uid: string): Promise<string> {
   return promise;
 }
 
+async function syncUsername(uid: string, username: string) {
+  try {
+    await firestore().collection("users").doc(uid).set({ username }, { merge: true });
+  } catch (err) {
+    console.error("Lỗi đồng bộ tên người dùng:", err);
+  }
+}
+
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [currentUser, setCurrentUser] = useState<string | null>(null);
   const [ready, setReady] = useState(false);
@@ -104,6 +112,11 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     });
     return unsubscribe;
   }, []);
+
+  useEffect(() => {
+    if (!currentUser || !firebaseUid || !referralCode) return;
+    syncUsername(firebaseUid, currentUser);
+  }, [currentUser, firebaseUid, referralCode]);
 
   useEffect(() => {
     (async () => {

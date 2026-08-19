@@ -24,6 +24,7 @@ export function useForceUpdate() {
   useEffect(() => {
     (async () => {
       try {
+        await remoteConfig().setConfigSettings({ minimumFetchIntervalMillis: 0 });
         await remoteConfig().setDefaults({ min_supported_version: "0.0.0" });
         await remoteConfig().fetchAndActivate();
 
