@@ -31,8 +31,8 @@ const queryClient = new QueryClient();
 
 // ─── Cấu hình màn hình chào ─────────────────────────────────────────────────
 const GREETINGS = ["Welcome", "ようこそ", "Xin chào"];
-const GREETING_HOLD_MS = 1100; // thời gian mỗi câu hiển thị đứng yên
-const FADE_MS = 280; // thời gian fade in / fade out
+const GREETING_HOLD_MS = 600; // thời gian mỗi câu hiển thị đứng yên
+const FADE_MS = 260; // thời gian fade in / fade out
 const GREETING_BG = "#004370"; // nên trùng backgroundColor trong app.json
 
 function GreetingSplash({ text, opacity }: { text: string; opacity: Animated.Value }) {
