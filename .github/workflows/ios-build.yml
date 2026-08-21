@@ -1,4 +1,4 @@
-name: iOS Development Local Build
+name: iOS Production Build & Submit
 on:
   workflow_dispatch:
 
@@ -26,14 +26,19 @@ jobs:
       - name: Setup EAS CLI
         run: pnpm add -g eas-cli
 
-      - name: Chạy lệnh Build Local iOS Development
+      - name: Chạy lệnh Build Production iOS
         env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }} # Truyền token trực tiếp vào bước chạy lệnh này
-        run: eas build --profile development --platform ios --local --non-interactive
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: eas build --profile production --platform ios --local --non-interactive
 
       - name: Upload file .ipa thành phẩm
         uses: actions/upload-artifact@v4
         with:
-          name: ios-development-build
+          name: ios-production-build
           path: "*.ipa"
           if-no-files-found: error
+
+      - name: Submit to App Store
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: eas submit --platform ios --path $(find . -maxdepth 1 -name "*.ipa" | head -n 1) --non-interactive
