@@ -127,13 +127,10 @@ function resolveWordType(
   kanji: string,
   nghia: string = "",
 ): WordType {
-  // Ưu tiên tuyệt đối: field isNaAdjective từ JSON (đáng tin hơn wordType text)
   if (entry.isNaAdjective) return "na-adjective";
-  // Ưu tiên 2: đọc thẳng wordType đã tính sẵn trong JSON
   if (entry.wordType && VALID_WORD_TYPES.includes(entry.wordType as WordType)) {
     return entry.wordType as WordType;
   }
-  // Fallback: chỉ đoán khi entry cũ chưa có field này
   return detectWordType(kanji, nghia);
 }
 
@@ -555,8 +552,8 @@ export default function VocabDetailScreen() {
     conjugatedForm?: string;
   }>();
 
+    
   const [isBookmarked, setIsBookmarked] = useState(false);
-  const [showFullMeaning, setShowFullMeaning] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
   const [showAllExamples, setShowAllExamples] = useState(false);
 
@@ -817,42 +814,28 @@ export default function VocabDetailScreen() {
               </View>
             </View>
 
-            {/* Từ loại */}
-            <View style={[styles.wordTypeRow, { backgroundColor: c.muted }]}>
-              <Text style={[styles.wordTypeText, { color: c.text }]}>{getWordTypeText()}</Text>
-              <TouchableOpacity
-                onPress={() => setShowFullMeaning(!showFullMeaning)}
-              >
-                <Text style={[styles.wordTypeMore, { color: c.primary }]}>
-                  {showFullMeaning ? "Thu gọn" : "⇒ Đầy đủ"}
+            {/* Loại từ + Đầy đủ nghĩa — gộp chung 1 khối, luôn hiển thị mặc định mở */}
+            <View style={[styles.fullMeaningBox, { backgroundColor: c.primary + "14" }]}>
+              <Text style={[styles.fullMeaningTitle, { color: c.primary }]}>
+                📖 Đầy đủ nghĩa và cách dùng:
+              </Text>
+              <Text style={[styles.fullMeaningText, { color: c.text }]}>
+                • {vocabData.kanji} ({vocabData.hiragana}): {vocabData.nghia}
+              </Text>
+              <Text style={[styles.fullMeaningText, { color: c.text }]}>
+                • Loại từ: {getWordTypeText()}
+              </Text>
+              {wordType === "noun-suru" && (
+                <Text style={[styles.fullMeaningText, { color: c.text }]}>
+                  • Có thể thêm する để tạo động từ: {vocabData.kanji}する
                 </Text>
-              </TouchableOpacity>
+              )}
+              {wordType === "noun-only" && (
+                <Text style={[styles.fullMeaningText, { color: c.text }]}>
+                  • Danh từ thuần túy, không thêm する
+                </Text>
+              )}
             </View>
-
-            {/* Nội dung Đầy đủ */}
-            {showFullMeaning && (
-              <View style={[styles.fullMeaningBox, { backgroundColor: c.primary + "14" }]}>
-                <Text style={[styles.fullMeaningTitle, { color: c.primary }]}>
-                  📖 Đầy đủ nghĩa và cách dùng:
-                </Text>
-                <Text style={[styles.fullMeaningText, { color: c.text }]}>
-                  • {vocabData.kanji} ({vocabData.hiragana}): {vocabData.nghia}
-                </Text>
-                <Text style={[styles.fullMeaningText, { color: c.text }]}>
-                  • Loại từ: {getWordTypeText()}
-                </Text>
-                {wordType === "noun-suru" && (
-                  <Text style={[styles.fullMeaningText, { color: c.text }]}>
-                    • Có thể thêm する để tạo động từ: {vocabData.kanji}する
-                  </Text>
-                )}
-                {wordType === "noun-only" && (
-                  <Text style={[styles.fullMeaningText, { color: c.text }]}>
-                    • Danh từ thuần túy, không thêm する
-                  </Text>
-                )}
-              </View>
-            )}
 
             {/* Nghĩa số 1 */}
             <View style={styles.meaningSection}>

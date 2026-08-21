@@ -461,8 +461,6 @@ const styles = StyleSheet.create({
   flatExamDesc: {
     fontSize: 12,
   },
-  // Nút "VÀO THI" — giữ màu cam CTA cố định (giống các nút CTA banner khác
-  // trong app), không đổi theo theme để luôn là điểm nhấn hành động rõ ràng.
   startBadge: {
     backgroundColor: "#F59E0B",
     paddingHorizontal: 10,

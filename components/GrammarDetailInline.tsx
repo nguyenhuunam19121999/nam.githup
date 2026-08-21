@@ -1,13 +1,13 @@
 // components/GrammarDetailInline.tsx
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-} from 'react-native';
-import { useColors } from '../artifacts/mirai-jp/hooks/useColors';
+} from "react-native";
+import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 interface GrammarDetailInlineProps {
   id?: string;
@@ -17,7 +17,12 @@ interface GrammarDetailInlineProps {
   structure?: string;
   note?: string;
   level?: string;
-  examples?: Array<{ jp?: string; sentence?: string; vi?: string; translation?: string }>;
+  examples?: Array<{
+    jp?: string;
+    sentence?: string;
+    vi?: string;
+    translation?: string;
+  }>;
   onClose: () => void;
 }
 
@@ -37,12 +42,18 @@ export default function GrammarDetailInline({
   // Màu badge cấp độ JLPT — cố định theo cấp, không đổi theo theme
   const getLevelColor = (lv: string) => {
     switch (lv) {
-      case 'N5': return '#22C55E';
-      case 'N4': return '#3B82F6';
-      case 'N3': return '#F59E0B';
-      case 'N2': return '#EA580C';
-      case 'N1': return '#C0392B';
-      default: return '#94A3B8';
+      case "N5":
+        return "#22C55E";
+      case "N4":
+        return "#3B82F6";
+      case "N3":
+        return "#F59E0B";
+      case "N2":
+        return "#EA580C";
+      case "N1":
+        return "#C0392B";
+      default:
+        return "#94A3B8";
     }
   };
 
@@ -57,82 +68,129 @@ export default function GrammarDetailInline({
     //     <View style={styles.headerPlaceholder} />
     //   </View>
 
-      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-        {/* Pattern card */}
-        <View style={[styles.patternCard, { backgroundColor: c.card, borderColor: c.border }]}>
-          <View style={styles.patternRow}>
-            <Text style={[styles.patternText, { color: c.primary }]}>{pattern}</Text>
-          </View>
-          {reading ? (
-            <Text style={[styles.readingText, { color: c.mutedForeground }]}>{reading}</Text>
-          ) : null}
-          {level ? (
-            <View style={[styles.levelBadge, { backgroundColor: getLevelColor(level) + '20' }]}>
-              <Text style={[styles.levelText, { color: getLevelColor(level) }]}>JLPT {level}</Text>
-            </View>
-          ) : null}
+    <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+      {/* Pattern card */}
+      <View
+        style={[
+          styles.patternCard,
+          { backgroundColor: c.card, borderColor: c.border },
+        ]}
+      >
+        <View style={styles.patternRow}>
+          <Text style={[styles.patternText, { color: c.primary }]}>
+            {pattern}
+          </Text>
         </View>
+        {reading ? (
+          <Text style={[styles.readingText, { color: c.mutedForeground }]}>
+            {reading}
+          </Text>
+        ) : null}
+        {level ? (
+          <View
+            style={[
+              styles.levelBadge,
+              { backgroundColor: getLevelColor(level) + "20" },
+            ]}
+          >
+            <Text style={[styles.levelText, { color: getLevelColor(level) }]}>
+              JLPT {level}
+            </Text>
+          </View>
+        ) : null}
+      </View>
 
-        {/* Meaning */}
+      {/* Meaning */}
+      <View style={styles.section}>
+        <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>
+          📖 Ý nghĩa
+        </Text>
+        <View
+          style={[
+            styles.meaningBox,
+            { backgroundColor: c.card, borderColor: c.border },
+          ]}
+        >
+          <Text style={[styles.meaningText, { color: c.text }]}>{meaning}</Text>
+        </View>
+      </View>
+
+      {/* Structure (optional) — giữ tông xanh lá nhạt cố định, khối highlight */}
+      {structure ? (
         <View style={styles.section}>
-          <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>📖 Ý nghĩa</Text>
-          <View style={[styles.meaningBox, { backgroundColor: c.card, borderColor: c.border }]}>
-            <Text style={[styles.meaningText, { color: c.text }]}>{meaning}</Text>
+          <TouchableOpacity
+            style={styles.structureHeader}
+            onPress={() => setShowStructure(!showStructure)}
+          >
+            <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>
+              🔧 Cấu trúc
+            </Text>
+            <Text style={[styles.toggleBtn, { color: c.primary }]}>
+              {showStructure ? "Thu gọn ▲" : "Xem ▼"}
+            </Text>
+          </TouchableOpacity>
+          {showStructure && (
+            <View style={styles.structureBox}>
+              <Text style={styles.structureText}>{structure}</Text>
+            </View>
+          )}
+        </View>
+      ) : null}
+
+      {/* Note — giữ tông vàng nhạt cố định, khối highlight */}
+      {note ? (
+        <View style={styles.section}>
+          <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>
+            💡 Ghi chú
+          </Text>
+          <View style={styles.noteBox}>
+            <Text style={styles.noteText}>{note}</Text>
           </View>
         </View>
+      ) : null}
 
-        {/* Structure (optional) — giữ tông xanh lá nhạt cố định, khối highlight */}
-        {structure ? (
-          <View style={styles.section}>
-            <TouchableOpacity
-              style={styles.structureHeader}
-              onPress={() => setShowStructure(!showStructure)}
-            >
-              <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>🔧 Cấu trúc</Text>
-              <Text style={[styles.toggleBtn, { color: c.primary }]}>{showStructure ? 'Thu gọn ▲' : 'Xem ▼'}</Text>
-            </TouchableOpacity>
-            {showStructure && (
-              <View style={styles.structureBox}>
-                <Text style={styles.structureText}>{structure}</Text>
-              </View>
-            )}
-          </View>
-        ) : null}
-
-        {/* Note — giữ tông vàng nhạt cố định, khối highlight */}
-        {note ? (
-          <View style={styles.section}>
-            <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>💡 Ghi chú</Text>
-            <View style={styles.noteBox}>
-              <Text style={styles.noteText}>{note}</Text>
-            </View>
-          </View>
-        ) : null}
-
-        {/* Examples */}
-        {examples.length > 0 && (
-          <View style={styles.section}>
-            <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>✏️ Ví dụ ({examples.length})</Text>
-            {examples.map((ex, idx) => {
-              const jp = ex.jp || ex.sentence || '';
-              const vi = ex.vi || ex.translation || '';
-              return (
-                <View key={idx} style={[styles.exampleCard, { backgroundColor: c.card, borderColor: c.border }]}>
-                  <View style={[styles.exNumBadge, { backgroundColor: c.primary }]}>
-                    <Text style={[styles.exNumText, { color: c.primaryForeground }]}>{idx + 1}</Text>
-                  </View>
-                  <View style={styles.exContent}>
-                    <Text style={[styles.exJp, { color: c.primary }]}>{jp}</Text>
-                    {vi ? <Text style={[styles.exVi, { color: c.mutedForeground }]}>{vi}</Text> : null}
-                  </View>
+      {/* Examples */}
+      {examples.length > 0 && (
+        <View style={styles.section}>
+          <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>
+            ✏️ Ví dụ ({examples.length})
+          </Text>
+          {examples.map((ex, idx) => {
+            const jp = ex.jp || ex.sentence || "";
+            const vi = ex.vi || ex.translation || "";
+            return (
+              <View
+                key={idx}
+                style={[
+                  styles.exampleCard,
+                  { backgroundColor: c.card, borderColor: c.border },
+                ]}
+              >
+                <View
+                  style={[styles.exNumBadge, { backgroundColor: c.primary }]}
+                >
+                  <Text
+                    style={[styles.exNumText, { color: c.primaryForeground }]}
+                  >
+                    {idx + 1}
+                  </Text>
                 </View>
-              );
-            })}
-          </View>
-        )}
+                <View style={styles.exContent}>
+                  <Text style={[styles.exJp, { color: c.primary }]}>{jp}</Text>
+                  {vi ? (
+                    <Text style={[styles.exVi, { color: c.mutedForeground }]}>
+                      {vi}
+                    </Text>
+                  ) : null}
+                </View>
+              </View>
+            );
+          })}
+        </View>
+      )}
 
-        <View style={{ height: 24 }} />
-      </ScrollView>
+      <View style={{ height: 24 }} />
+    </ScrollView>
     // </View>
   );
 }
@@ -143,21 +201,23 @@ export default function GrammarDetailInline({
 const styles = StyleSheet.create({
   container: { flex: 1 },
   header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderBottomWidth: 1,
   },
   backBtn: {
-    width: 42, height: 42,
+    width: 42,
+    height: 42,
     borderRadius: 12,
-    alignItems: 'center', justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     borderWidth: 1.5,
   },
-  backIcon: { fontSize: 28, fontWeight: '300', marginTop: -4 },
-  headerTitle: { fontSize: 18, fontWeight: '700' },
+  backIcon: { fontSize: 28, fontWeight: "300", marginTop: -4 },
+  headerTitle: { fontSize: 18, fontWeight: "700" },
   headerPlaceholder: { width: 42 },
   content: { flex: 1, paddingHorizontal: 16 },
   patternCard: {
@@ -165,9 +225,9 @@ const styles = StyleSheet.create({
     padding: 20,
     marginTop: 16,
     marginBottom: 4,
-    alignItems: 'center',
+    alignItems: "center",
     borderWidth: 1,
-    shadowColor: '#000',
+    shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.05,
     shadowRadius: 8,
@@ -176,53 +236,64 @@ const styles = StyleSheet.create({
   patternRow: { marginBottom: 8 },
   patternText: {
     fontSize: 26,
-    fontWeight: '800',
-    textAlign: 'center',
+    fontWeight: "800",
+    textAlign: "center",
   },
   readingText: {
     fontSize: 15,
-    fontWeight: '500',
+    fontWeight: "500",
     marginBottom: 10,
   },
   levelBadge: {
-    paddingHorizontal: 14, paddingVertical: 4,
+    paddingHorizontal: 14,
+    paddingVertical: 4,
     borderRadius: 16,
   },
-  levelText: { fontSize: 12, fontWeight: '700' },
+  levelText: { fontSize: 12, fontWeight: "700" },
   section: { marginTop: 16 },
   sectionLabel: {
     fontSize: 13,
-    fontWeight: '700',
+    fontWeight: "700",
     marginBottom: 8,
-    textTransform: 'uppercase',
+    textTransform: "uppercase",
     letterSpacing: 0.5,
   },
   structureHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
     marginBottom: 8,
   },
-  toggleBtn: { fontSize: 12, fontWeight: '600' },
+  toggleBtn: { fontSize: 12, fontWeight: "600" },
   meaningBox: {
-    padding: 16, borderRadius: 12,
+    padding: 16,
+    borderRadius: 12,
     borderWidth: 1,
   },
   meaningText: { fontSize: 16, lineHeight: 26 },
   structureBox: {
-    backgroundColor: '#f0fdf4',
-    padding: 14, borderRadius: 12,
-    borderWidth: 1, borderColor: '#bbf7d0',
+    backgroundColor: "#f0fdf4",
+    padding: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#bbf7d0",
   },
-  structureText: { fontSize: 14, color: '#166534', lineHeight: 22, fontFamily: 'monospace' },
+  structureText: {
+    fontSize: 14,
+    color: "#166534",
+    lineHeight: 22,
+    fontFamily: "monospace",
+  },
   noteBox: {
-    backgroundColor: '#fefce8',
-    padding: 14, borderRadius: 12,
-    borderWidth: 1, borderColor: '#fde68a',
+    backgroundColor: "#fefce8",
+    padding: 14,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: "#fde68a",
   },
-  noteText: { fontSize: 14, color: '#713f12', lineHeight: 22 },
+  noteText: { fontSize: 14, color: "#713f12", lineHeight: 22 },
   exampleCard: {
-    flexDirection: 'row',
+    flexDirection: "row",
     borderRadius: 12,
     padding: 14,
     marginBottom: 10,
@@ -230,14 +301,16 @@ const styles = StyleSheet.create({
     gap: 12,
   },
   exNumBadge: {
-    width: 24, height: 24,
+    width: 24,
+    height: 24,
     borderRadius: 12,
-    alignItems: 'center', justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
     marginTop: 2,
     flexShrink: 0,
   },
-  exNumText: { fontSize: 11, fontWeight: '700' },
+  exNumText: { fontSize: 11, fontWeight: "700" },
   exContent: { flex: 1 },
-  exJp: { fontSize: 16, fontWeight: '700', marginBottom: 6, lineHeight: 24 },
+  exJp: { fontSize: 16, fontWeight: "700", marginBottom: 6, lineHeight: 24 },
   exVi: { fontSize: 13, lineHeight: 20 },
 });

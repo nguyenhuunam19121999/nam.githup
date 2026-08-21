@@ -21,6 +21,7 @@ import {
 import Svg, { Line, Path } from "react-native-svg";
 import { getKanji, type KanjiItem } from "../assets/data_JLPT_kanji";
 import { AdBanner } from "../components/AdBanner";
+import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 const strokesMap: Record<string, string[]> = {};
 
@@ -30,7 +31,6 @@ const strokesMap: Record<string, string[]> = {};
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const CANVAS_SIZE = Math.min(SCREEN_WIDTH - 40, 500);
 const STROKE_WIDTH = 6;
-const textcolor = "#1d4ed8";
 const SEARCH_DEBOUNCE_MS = 320;
 const TOP_K_CANDIDATES = 15;
 
@@ -75,18 +75,6 @@ interface Props {
 // ═══════════════════════════════════════════════════════════════════
 // 🛠️ HÀM TIỆN ÍCH VẼ
 // ═══════════════════════════════════════════════════════════════════
-// function pointsToPath(points: StrokePoint[]): string {
-//   if (points.length === 0) return "";
-//   if (points.length === 1) {
-//     // Chấm đơn: vẽ một đoạn rất ngắn để SVG hiển thị
-//     return `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)} L ${(points[0].x + 0.5).toFixed(1)} ${points[0].y.toFixed(1)}`;
-//   }
-//   let d = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
-//   for (let i = 1; i < points.length; i++) {
-//     d += ` L ${points[i].x.toFixed(1)} ${points[i].y.toFixed(1)}`;
-//   }
-//   return d;
-// }
 function pointsToPath(points: StrokePoint[]): string {
   if (points.length === 0) return "";
   if (points.length === 1) {
@@ -95,7 +83,6 @@ function pointsToPath(points: StrokePoint[]): string {
   if (points.length === 2) {
     return `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)} L ${points[1].x.toFixed(1)} ${points[1].y.toFixed(1)}`;
   }
-  // Dùng quadratic bezier — đi qua midpoint giữa các điểm liên tiếp
   let d = `M ${points[0].x.toFixed(1)} ${points[0].y.toFixed(1)}`;
   for (let i = 1; i < points.length - 1; i++) {
     const midX = ((points[i].x + points[i + 1].x) / 2).toFixed(1);
@@ -290,14 +277,12 @@ function buildKanjiFeatureFromSVG(kanji: KanjiItem): FeatureVector | null {
   const allPoints: StrokePoint[] = [];
   for (const p of svgPaths) allPoints.push(...parseSvgPathToPoints(p));
   if (allPoints.length === 0) return null;
-  return buildFeatureVector(allPoints, kanji.strokes ?? 0); 
-  // return buildFeatureVector(allPoints, kanji.strokes);
+  return buildFeatureVector(allPoints, kanji.strokes ?? 0);
 }
 
 function buildKanjiFeatureHeuristic(kanji: KanjiItem): FeatureVector {
   const code = kanji.kanji.charCodeAt(0);
   const n = kanji.strokes ?? 0;
-  // const n = kanji.strokes;
   const aspectRatio = Math.sin(code * 0.017) * 0.3;
   const gravityX = 0.5 + Math.sin(code * 0.023) * 0.12;
   const gravityY = 0.5 + Math.cos(code * 0.019) * 0.12;
@@ -362,7 +347,6 @@ function computeLocalScore(
   const gravDist   = Math.sqrt((userVec[2]-refVec[2])**2 + (userVec[3]-refVec[3])**2);
   const gravSim    = Math.max(0, 1 - gravDist * 2.5);
 
-  // Weighted shape: chi tiết quan trọng hơn tổng thể
   const shapeSim =
     density4Sim * 0.18 +
     density8Sim * 0.37 +
@@ -412,7 +396,7 @@ async function searchViaGoogleAPI(
     }
     return null;
   } catch {
-    return null; // Network error → fallback to local
+    return null;
   }
 }
 
@@ -421,6 +405,15 @@ async function searchViaGoogleAPI(
 // ═══════════════════════════════════════════════════════════════════
 const KanjiDrawSearchModal = forwardRef<any, Props>(
   ({ visible, onClose, onSelectKanji, isInline = false, onSearchPress }, ref) => {
+    const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+
+    // Giấy viết + mực + lưới: dùng tông cố định riêng sáng/tối (giống
+    // WritingPracticeModal) thay vì bám theo primary/accent của theme, để
+    // cảm giác "viết tay" luôn nhất quán bất kể giờ trong ngày.
+    const isDarkPaper = c.background === "#0b0f19"; // night palette
+    const paperColor = isDarkPaper ? "#1a2130" : "#fafafa";
+    const gridLineColor = isDarkPaper ? "#3a445c" : "#eff0f3";
+    const inkColor = isDarkPaper ? "#e5e7eb" : "#1d4ed8";
 
     // ─── Dữ liệu từ điển ───────────────────────────────────────────
     const allKanji = useMemo<KanjiItem[]>(() => getKanji(), []);
@@ -431,7 +424,6 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
       return m;
     }, [allKanji]);
 
-    // Pre-compute feature DB cho fallback local
     const kanjiFeatureDB = useMemo<Map<string, FeatureVector>>(() => {
       const db = new Map<string, FeatureVector>();
       for (const item of allKanji) {
@@ -522,10 +514,9 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           if (!refVec) continue;
           const lb = LEVEL_BONUS[item.jlpt] ?? 0;
           const { total, strokeSim, shapeSim } = computeLocalScore(
-            userVec, refVec, drawnCount, item.strokes ?? 0, lb   
+            userVec, refVec, drawnCount, item.strokes ?? 0, lb
           );
-          // const { total, strokeSim, shapeSim } = computeLocalScore(userVec, refVec, drawnCount, item.strokes, lb);
-          if (total < 0.25) continue; // 👈 bỏ kết quả quá thấp
+          if (total < 0.25) continue;
           results.push({ item, score: total, strokeSimilarity: strokeSim, shapeSimilarity: shapeSim });
         }
 
@@ -535,7 +526,7 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
       },
       [allKanji, kanjiFeatureDB]
     );
-    // ─── Thuật toán tìm kiếm chính (Tầng 1: Google + Tầng 2: Local) ─
+
     const performSearch = useCallback(
       async (targetStrokes: Stroke[]) => {
         if (targetStrokes.length === 0) {
@@ -545,7 +536,6 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
         }
         setSearching(true);
 
-        // ── Tầng 1: Google Handwriting API ──────────────────────────
         const googleResults = await searchViaGoogleAPI(targetStrokes, CANVAS_SIZE);
 
         if (googleResults && googleResults.length > 0) {
@@ -555,8 +545,8 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           for (let i = 0; i < googleResults.length; i++) {
             const char = googleResults[i];
             if (!JAPANESE_REGEX.test(char)) continue;
-            if (seenKanji.has(char)) continue;  // 👈 thêm dòng này
-                seenKanji.add(char);   
+            if (seenKanji.has(char)) continue;
+            seenKanji.add(char);
 
             const foundItem = kanjiMap.get(char);
             const googleRankScore = (1 - i / googleResults.length) * 100;
@@ -574,7 +564,7 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
 
             results.push({
               item: foundItem ?? fallbackItem,
-              score: googleRankScore ,
+              score: googleRankScore,
               strokeSimilarity: 100,
               shapeSimilarity: 100,
             });
@@ -586,7 +576,6 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           return;
         }
 
-        // ── Tầng 2: Local Feature Vector (fallback khi mất mạng) ────
         const localResults = performLocalSearch(targetStrokes);
         setCandidates(localResults);
         setSearchMode("local");
@@ -612,12 +601,11 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           if (!isDrawing.current) return;
           const { locationX, locationY } = e.nativeEvent;
           const pts = currentPoints.current;
-          // Bỏ qua điểm quá gần điểm trước — giảm noise, nét mượt hơn
           if (pts.length > 0) {
             const last = pts[pts.length - 1];
             const dx = locationX - last.x;
             const dy = locationY - last.y;
-            if (dx * dx + dy * dy < 9) return; // < 3px thì bỏ
+            if (dx * dx + dy * dy < 9) return;
           }
           pts.push({ x: locationX, y: locationY });
           forceRender(n => n + 1);
@@ -698,22 +686,22 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
       : hasResults
       ? `📝 ${candidates.length} kết quả  ${searchMode === "local" ? "📴" : "🌐"}`
       : "⏳ Hãy vẽ thêm nét...";
-      
 
     return (
       <Animated.View
         style={[
           isInline ? styles.inlineContainer : styles.container,
+          { backgroundColor: c.card, borderColor: c.border },
           !isInline && { transform: [{ translateY }], opacity: fadeAnim },
         ]}
       >
         {/* ── KẾT QUẢ GỢI Ý ─────────────────────────────────────── */}
-        <View style={[styles.resultsWrapper, isInline && styles.resultsWrapperInline]}>
-          <Text style={styles.resultsTitle}>{statusText}</Text>
+        <View style={[styles.resultsWrapper, { borderBottomColor: c.border }, isInline && styles.resultsWrapperInline]}>
+          <Text style={[styles.resultsTitle, { color: c.mutedForeground }]}>{statusText}</Text>
 
           {searching && (
             <View style={styles.loaderContainer}>
-              <ActivityIndicator size="small" color={textcolor} />
+              <ActivityIndicator size="small" color={c.primary} />
             </View>
           )}
 
@@ -727,13 +715,13 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
               {candidates.map((cand) => (
                 <TouchableOpacity
                   key={`${cand.item.kanji}_${cand.item.id ?? ''}`}
-                  style={styles.resultChip}
+                  style={[styles.resultChip, { backgroundColor: c.muted }]}
                   onPress={() => handleKanjiPress(cand.item)}
                   activeOpacity={0.7}
                 >
-                  <Text style={styles.resultChipKanji}>{cand.item.kanji}</Text>
+                  <Text style={[styles.resultChipKanji, { color: c.text }]}>{cand.item.kanji}</Text>
                   {cand.item.hanviet && cand.item.hanviet.length > 0 && (
-                    <Text style={styles.resultChipHanViet}>{cand.item.hanviet[0]}</Text>
+                    <Text style={[styles.resultChipHanViet, { color: c.mutedForeground }]}>{cand.item.hanviet[0]}</Text>
                   )}
                 </TouchableOpacity>
               ))}
@@ -744,13 +732,15 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
         {/* ── Ô VẼ ─────────────────────────────────────────────── */}
         <View style={styles.canvasWrapper}>
           <View style={styles.canvasSection}>
-            <View style={styles.canvas} {...panResponder.panHandlers}>
+            <View style={[styles.canvas, { backgroundColor: paperColor }]} {...panResponder.panHandlers}>
               <Svg width={CANVAS_SIZE} height={CANVAS_SIZE} style={StyleSheet.absoluteFillObject}>
                 {/* Lưới hướng dẫn — chỉ ngang/dọc giữa */}
-                <Line x1={CANVAS_SIZE/2} y1={0}           x2={CANVAS_SIZE/2} y2={CANVAS_SIZE} stroke="#eff0f3" strokeWidth={2} strokeDasharray="8,4" />
-                <Line x1={0}            y1={CANVAS_SIZE/2} x2={CANVAS_SIZE}   y2={CANVAS_SIZE/2} stroke="#eff0f3" strokeWidth={2} strokeDasharray="8,4" />
+                <Line x1={CANVAS_SIZE/2} y1={0}           x2={CANVAS_SIZE/2} y2={CANVAS_SIZE} stroke={gridLineColor} strokeWidth={2} strokeDasharray="8,4" />
+                <Line x1={0}            y1={CANVAS_SIZE/2} x2={CANVAS_SIZE}   y2={CANVAS_SIZE/2} stroke={gridLineColor} strokeWidth={2} strokeDasharray="8,4" />
 
-                {/* Các nét đã hoàn tất — màu gradient theo thứ tự */}
+                {/* Các nét đã hoàn tất — màu gradient theo thứ tự, giữ
+                    nguyên vì đây là màu chức năng phân biệt từng nét,
+                    không liên quan tới theme */}
                 {strokes.map((s, i) => (
                   <Path
                     key={s.id}
@@ -767,7 +757,7 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
                 {currentPath !== "" && (
                   <Path
                     d={currentPath}
-                    stroke={textcolor}
+                    stroke={inkColor}
                     strokeWidth={STROKE_WIDTH}
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -779,7 +769,7 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
               {strokeCount === 0 && currentPoints.current.length === 0 && (
                 <View style={styles.placeholder} pointerEvents="none">
                   <Text style={styles.placeholderIcon}>✍️</Text>
-                  <Text style={styles.placeholderText}>Vẽ Kanji để tra từ</Text>
+                  <Text style={[styles.placeholderText, { color: c.mutedForeground }]}>Vẽ Kanji để tra từ</Text>
                 </View>
               )}
             </View>
@@ -789,39 +779,39 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
           <View style={styles.controlRow}>
             <View style={styles.controlLeftGroup}>
               <TouchableOpacity
-                style={styles.controlBtn}
+                style={[styles.controlBtn, { backgroundColor: c.muted }]}
                 onPress={undoStroke}
                 disabled={strokeCount === 0}
                 activeOpacity={0.75}
               >
-                <Text style={[styles.controlBtnText, strokeCount === 0 && styles.controlBtnDisabled]}>
+                <Text style={[styles.controlBtnText, { color: c.text }, strokeCount === 0 && styles.controlBtnDisabled]}>
                   ↩
                 </Text>
               </TouchableOpacity>
 
-              <View style={styles.strokeInfo}>
-                <Text style={styles.strokeCountText}>{strokeCount}</Text>
-                <Text style={styles.strokeInfoText}> nét</Text>
+              <View style={[styles.strokeInfo, { backgroundColor: c.muted }]}>
+                <Text style={[styles.strokeCountText, { color: c.primary }]}>{strokeCount}</Text>
+                <Text style={[styles.strokeInfoText, { color: c.mutedForeground }]}> nét</Text>
               </View>
 
               <TouchableOpacity
-                style={styles.controlBtn}
+                style={[styles.controlBtn, { backgroundColor: c.muted }]}
                 onPress={clearCanvas}
                 disabled={strokeCount === 0}
                 activeOpacity={0.75}
               >
-                <Text style={[styles.controlBtnText, strokeCount === 0 && styles.controlBtnDisabled]}>
+                <Text style={[styles.controlBtnText, { color: c.text }, strokeCount === 0 && styles.controlBtnDisabled]}>
                   🗑
                 </Text>
               </TouchableOpacity>
             </View>
 
             <TouchableOpacity
-              style={styles.searchBtn}
+              style={[styles.searchBtn, { backgroundColor: c.muted }]}
               onPress={handleSearchPress}
               activeOpacity={0.85}
             >
-              <Text style={styles.searchBtnText}>🔍 Tìm kiếm</Text>
+              <Text style={[styles.searchBtnText, { color: c.text }]}>🔍 Tìm kiếm</Text>
             </TouchableOpacity>
           </View>
         </View>
@@ -834,16 +824,14 @@ const KanjiDrawSearchModal = forwardRef<any, Props>(
 KanjiDrawSearchModal.displayName = "KanjiDrawSearchModal";
 
 // ═══════════════════════════════════════════════════════════════════
-// 🎨 STYLES
+// 🎨 STYLES (chỉ layout — màu gán inline theo theme ở trên)
 // ═══════════════════════════════════════════════════════════════════
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#fff",
     borderRadius: 20,
     marginTop: 12,
     overflow: "hidden",
     borderWidth: 1,
-    borderColor: "#e2e8f0",
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.1,
@@ -857,17 +845,14 @@ const styles = StyleSheet.create({
     zIndex: 999,
   },
   inlineContainer: {
-    backgroundColor: "#fff",
     width: "100%",
     borderTopWidth: 1,
     borderBottomWidth: 1,
-    borderColor: "#e2e8f0",
   },
   resultsWrapper: {
     paddingHorizontal: 16,
     paddingVertical: 10,
     borderBottomWidth: 1,
-    borderBottomColor: "#f0f4f8",
     minHeight: 75,
   },
   resultsWrapperInline: {
@@ -876,7 +861,6 @@ const styles = StyleSheet.create({
   resultsTitle: {
     fontSize: 12,
     fontWeight: "600",
-    color: "#64748b",
     marginBottom: 6,
   },
   resultsScroll: {
@@ -889,7 +873,6 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
   },
   resultChip: {
-    backgroundColor: "#f1f5f9",
     borderRadius: 12,
     paddingHorizontal: 14,
     marginRight: 10,
@@ -901,13 +884,11 @@ const styles = StyleSheet.create({
   resultChipKanji: {
     fontSize: 24,
     fontWeight: "700",
-    color: "#1e293b",
     lineHeight: 28,
   },
   resultChipHanViet: {
     fontSize: 9,
     fontWeight: "600",
-    color: "#64748b",
     textTransform: "uppercase",
     marginTop: 1,
     letterSpacing: 0.3,
@@ -916,8 +897,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
     paddingTop: 12,
     paddingBottom: 16,
-    maxWidth: CANVAS_SIZE + 32,    
-    alignSelf: "center",           
+    maxWidth: CANVAS_SIZE + 32,
+    alignSelf: "center",
     width: "100%",
   },
   canvasSection: {
@@ -926,11 +907,9 @@ const styles = StyleSheet.create({
   canvas: {
     width: CANVAS_SIZE,
     height: CANVAS_SIZE,
-    backgroundColor: "#fafafa",
     borderRadius: 20,
     borderWidth: 2,
     borderColor: "transparent",
-    // borderColor: "#e2e8f0",
     overflow: "hidden",
   },
   placeholder: {
@@ -944,7 +923,6 @@ const styles = StyleSheet.create({
   },
   placeholderText: {
     fontSize: 13,
-    color: "#94a3b8",
     fontWeight: "500",
     marginTop: 4,
   },
@@ -963,22 +941,18 @@ const styles = StyleSheet.create({
   strokeInfo: {
     flexDirection: "row",
     alignItems: "baseline",
-    backgroundColor: "#f1f5f9",
     paddingHorizontal: 14,
     paddingVertical: 6,
     borderRadius: 24,
   },
   strokeCountText: {
     fontWeight: "800",
-    color: textcolor,
     fontSize: 18,
   },
   strokeInfoText: {
     fontSize: 12,
-    color: "#64748b",
   },
   controlBtn: {
-    backgroundColor: "#f1f5f9",
     width: 44,
     height: 44,
     borderRadius: 22,
@@ -987,13 +961,11 @@ const styles = StyleSheet.create({
   },
   controlBtnText: {
     fontSize: 20,
-    color: "#475569",
   },
   controlBtnDisabled: {
     opacity: 0.4,
   },
   searchBtn: {
-    backgroundColor: "#f1f5f9",
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 22,
@@ -1003,7 +975,6 @@ const styles = StyleSheet.create({
   searchBtnText: {
     fontSize: 14,
     fontWeight: "500",
-    color: "#818080",
   },
 });
 export default KanjiDrawSearchModal;

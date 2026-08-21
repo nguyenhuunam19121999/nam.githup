@@ -14,12 +14,16 @@ import {
   StyleSheet,
   TextInput,
   TouchableOpacity,
+  TouchableWithoutFeedback,
   FlatList,
   Keyboard,
   ActivityIndicator,
   Alert,
   InteractionManager,
   Animated,
+  LayoutAnimation,   
+  Platform,          
+  UIManager,   
 } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -44,6 +48,12 @@ import SearchSuggestions from './SearchSuggestions';
 import { preloader } from '../services/KanjiPreloader';
 import { searchKanji } from '../assets/data_JLPT_kanji';
 import { AdBanner } from "../components/AdBanner";
+const MemoAdBanner = React.memo(AdBanner);
+
+// Bật LayoutAnimation trên Android (mặc định chỉ có sẵn trên iOS)
+if (Platform.OS === 'android' && UIManager.setLayoutAnimationEnabledExperimental) {
+  UIManager.setLayoutAnimationEnabledExperimental(true);
+}
 
 // Giả định kiểu dữ liệu cho KanjiItem nếu chưa được import từ file gốc
 interface KanjiItem {
@@ -69,6 +79,14 @@ const SEARCH_PLACEHOLDERS = [
   'Ví dụ: 水を飲む, uống nước...',
   'Ví dụ: 日本語を勉強する, học tiếng Nhật...',
 ];
+
+const TAB_LIST = [
+  { id: 'all',      label: 'Tất cả',  icon: '🌐' },
+  { id: 'vocab',    label: 'Từ vựng', icon: '📖' },
+  { id: 'kanji',    label: 'Hán tự',  icon: '🈳' },
+  { id: 'sentence', label: 'Mẫu câu', icon: '📚' },
+  { id: 'grammar',  label: 'Ngữ pháp', icon: '📝' },
+] as const;
 
 type SearchType = 'vocab' | 'kanji' | 'sentence' | 'grammar' | 'all';
 
@@ -177,9 +195,6 @@ interface JishoEntry {
   senses?: { english_definitions?: string[]; parts_of_speech?: string[] }[];
 }
 
-// ─── DỊCH (dùng endpoint free "gtx" của Google, không cần API key — React Native
-// không dùng được thư viện "google-translate-api-x" vì nó là package Node.js thuần,
-// nên chỉ dùng nhánh fallback fetch giống indexconver.js) ─────────────────────────
 async function translateText(text: string, from: string, to: string): Promise<string | null> {
   const t = text?.trim();
   if (!t) return null;
@@ -195,11 +210,77 @@ async function translateText(text: string, from: string, to: string): Promise<st
   }
 }
 
+async function translateBatch(texts: string[], from: string, to: string): Promise<(string | null)[]> {
+  const items = texts.map(t => (t || '').trim());
+  const validIdx = items.reduce<number[]>((acc, t, i) => { if (t) acc.push(i); return acc; }, []);
+  if (validIdx.length === 0) return items.map(() => null);
+
+  const DELIM = ' ||| ';
+  const joined = validIdx.map(i => items[i]).join(DELIM);
+
+  try {
+    const url = `https://translate.googleapis.com/translate_a/single?client=gtx&sl=${from}&tl=${to}&dt=t&q=${encodeURIComponent(joined)}`;
+    const res = await fetch(url);
+    if (!res.ok) throw new Error('bad status');
+    const data = await res.json();
+    const translatedJoined = (data?.[0] || []).map((chunk: any) => chunk?.[0]).join('');
+
+    const parts = translatedJoined.split(/\s*\|\|\|\s*/).map((p: string) => p.trim());
+    if (parts.length !== validIdx.length) throw new Error('mismatch');
+
+    const result: (string | null)[] = items.map(() => null);
+    validIdx.forEach((idx, k) => { result[idx] = parts[k] || null; });
+    return result;
+  } catch (_) {
+    const fallback = await Promise.all(
+      validIdx.map(i => translateText(items[i], from, to))
+    );
+    const result: (string | null)[] = items.map(() => null);
+    validIdx.forEach((idx, k) => { result[idx] = fallback[k]; });
+    return result;
+  }
+}
+
+// ─── CACHE kết quả Jisho vào AsyncStorage ───────────────────────────────
+const JISHO_CACHE_PREFIX = 'jisho_cache_v1:';
+const JISHO_CACHE_TTL_MS = 30 * 24 * 60 * 60 * 1000; // 30 ngày
+
+function buildJishoCacheKey(query: string): string {
+  return JISHO_CACHE_PREFIX + query.trim().toLowerCase();
+}
+
+async function getCachedJishoResults(cacheKey: string): Promise<SearchResult[] | null> {
+  try {
+    const raw = await AsyncStorage.getItem(cacheKey);
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || !Array.isArray(parsed.results)) return null;
+    if (Date.now() - parsed.savedAt > JISHO_CACHE_TTL_MS) {
+      AsyncStorage.removeItem(cacheKey).catch(() => {});
+      return null;
+    }
+    return parsed.results as SearchResult[];
+  } catch (_) {
+    return null;
+  }
+}
+
+async function setCachedJishoResults(cacheKey: string, results: SearchResult[]): Promise<void> {
+  if (results.length === 0) return; 
+  try {
+    await AsyncStorage.setItem(
+      cacheKey,
+      JSON.stringify({ savedAt: Date.now(), results })
+    );
+  } catch (_) {}
+}
+
 async function searchJisho(query: string, isVietnameseQuery: boolean): Promise<SearchResult[]> {
   const q = query.trim();
   if (!q) return [];
-
-  // ── IN: query tiếng Việt -> dịch sang tiếng Anh trước khi tra Jisho ──────────
+  const cacheKey = buildJishoCacheKey(q);
+  const cached = await getCachedJishoResults(cacheKey);
+  if (cached) return cached;
   let jishoKeyword = q;
   if (isVietnameseQuery) {
     const translatedQuery = await translateText(q, 'vi', 'en');
@@ -212,42 +293,40 @@ async function searchJisho(query: string, isVietnameseQuery: boolean): Promise<S
     if (!res.ok) return [];
     const json = await res.json();
     const data: JishoEntry[] = Array.isArray(json?.data) ? json.data : [];
-    const sliced = data.slice(0, 12); // giới hạn thấp hơn vì mỗi item giờ tốn thêm 1 lượt dịch
+    const sliced = data.slice(0, 12);
+    const prepared = sliced.map(entry => {
+      const jp = entry.japanese?.[0] || {};
+      const title = jp.word || jp.reading || '';
+      const subtitle = jp.reading || '';
+      const sense = entry.senses?.[0];
+      const meaningEn = sense?.english_definitions?.join(', ') || '';
+      const pos = sense?.parts_of_speech?.join(', ') || '';
+      return { title, subtitle, meaningEn, pos };
+    }).filter(p => !!p.title);
 
-    // ── OUT: dịch song song nghĩa EN -> VI cho từng kết quả ──────────────────
-    const mapped = await Promise.all(
-      sliced.map(async (entry, idx) => {
-        const jp = entry.japanese?.[0] || {};
-        const title = jp.word || jp.reading || '';
-        const subtitle = jp.reading || '';
-        const sense = entry.senses?.[0];
-        const meaningEn = sense?.english_definitions?.join(', ') || '';
-        const pos = sense?.parts_of_speech?.join(', ') || '';
-        if (!title) return null;
-
-        const meaningVi = meaningEn ? await translateText(meaningEn, 'en', 'vi') : null;
-        const displayMeaning = meaningVi || meaningEn;
-
-        return {
-          id: `jisho_${idx}_${title}`,
-          type: 'vocab',
-          title,
-          subtitle,
-          description: displayMeaning,
-          data: {
-            kanji: title,
-            hiragana: subtitle,
-            nghia: displayMeaning,
-            jisho_meaning_en: meaningEn,
-            wordType: pos,
-            level: '',
-          },
-          sourceLabel: meaningVi ? '🌍' : '🌍',
-        } as SearchResult;
-      })
-    );
-
-    return mapped.filter((r): r is SearchResult => r !== null);
+    const translated = await translateBatch(prepared.map(p => p.meaningEn), 'en', 'vi');
+    const mapped: SearchResult[] = prepared.map((p, idx) => {
+      const meaningVi = translated[idx];
+      const displayMeaning = meaningVi || p.meaningEn;
+      return {
+        id: `jisho_${idx}_${p.title}`,
+        type: 'vocab',
+        title: p.title,
+        subtitle: p.subtitle,
+        description: displayMeaning,
+        data: {
+          kanji: p.title,
+          hiragana: p.subtitle,
+          nghia: displayMeaning,
+          jisho_meaning_en: p.meaningEn,
+          wordType: p.pos,
+          level: '',
+        },
+        sourceLabel: '🌍',
+      };
+    });
+    setCachedJishoResults(cacheKey, mapped);
+    return mapped;
   } catch (_) {
     return [];
   }
@@ -261,15 +340,15 @@ export default function SearchInline({
   initialQuery = '',
   active = true,
 }: SearchInlineProps) {
-  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const c = useColors(); 
 
-  // ── Chữ mẫu chạy tự động trong ô tìm kiếm (chỉ hiện khi trống & chưa focus) ──
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
   const [inputFocused, setInputFocused] = useState(false);
   const placeholderOpacity = useRef(new Animated.Value(1)).current;
-
-  useEffect(() => {
+  const [query, setQuery] = useState(initialQuery);
+    useEffect(() => {
     const id = setInterval(() => {
+      if (inputFocused || query.length > 0) return;
       Animated.timing(placeholderOpacity, {
         toValue: 0,
         duration: 220,
@@ -284,9 +363,7 @@ export default function SearchInline({
       });
     }, 2600);
     return () => clearInterval(id);
-  }, []);
-
-  const [query, setQuery] = useState(initialQuery);
+  }, [inputFocused, query.length]);
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<SearchType>(initialTab ?? 'vocab');
@@ -481,10 +558,25 @@ export default function SearchInline({
 
         const runVocabStream = async () => {
           if (targetTab !== 'vocab') return;
+
+          const jishoStream = (async () => {
+            const jishoResults = await searchJisho(targetQuery, isVietnamese);
+            if (token !== searchTokenRef.current || jishoResults.length === 0) return;
+            LayoutAnimation.configureNext(
+              LayoutAnimation.create(
+                280,
+                LayoutAnimation.Types.easeInEaseOut,
+                LayoutAnimation.Properties.opacity
+              )
+            );
+            startTransition(() => setResults(prev => [...jishoResults, ...prev]));
+          })();
+
           await Promise.all([
             runJLPTVocabStream(),
             runIndustryVocabStream(),
-            runKanjiEntryStream(), 
+            runKanjiEntryStream(),
+            jishoStream,
           ]);
           if (token === searchTokenRef.current) setLoading(false);
         };
@@ -495,9 +587,18 @@ export default function SearchInline({
 
           const seenKanji = new Map<string, boolean>();
           const allFoundKanji: KanjiItem[] = [];
+          const queryChars = targetQuery.split('').filter(c => /[\u3000-\u9fff]/.test(c));
 
           const updateUI = () => {
-          const chars = allFoundKanji.map(k => k.kanji);
+          const sorted = [...allFoundKanji].sort((a, b) => {
+            const aIdx = queryChars.indexOf(a.kanji);
+            const bIdx = queryChars.indexOf(b.kanji);
+            if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx;
+            if (aIdx !== -1) return -1;
+            if (bIdx !== -1) return 1;
+            return 0;
+          });
+          const chars = sorted.map(k => k.kanji);
           startTransition(() => {
             setCurrentKanjiResults(chars);
             setFoundKanjiChars(chars);
@@ -898,7 +999,14 @@ export default function SearchInline({
           const jishoStream = (async () => {
             const jishoResults = await searchJisho(targetQuery, isVietnamese);
             if (token !== searchTokenRef.current || jishoResults.length === 0) return;
-            startTransition(() => setResults(prev => [...prev, ...jishoResults]));
+            LayoutAnimation.configureNext(
+              LayoutAnimation.create(
+                280,
+                LayoutAnimation.Types.easeInEaseOut,
+                LayoutAnimation.Properties.opacity
+              )
+            );
+            startTransition(() => setResults(prev => [...jishoResults, ...prev]));
           })();
 
           await Promise.all([localVocab, localIndustry, localKanjiDict, localSentence, localGrammar, jishoStream]);
@@ -1182,13 +1290,7 @@ export default function SearchInline({
       </LinearGradient>
 
       <View style={[styles.tabBar, { backgroundColor: c.card, borderBottomColor: c.border }]}>
-        {[
-          { id: 'all',      label: 'Tất cả',  icon: '🌐' },
-          { id: 'vocab',    label: 'Từ vựng', icon: '📖' },
-          { id: 'kanji',   label: 'Hán tự',  icon: '🈳' },
-          { id: 'sentence', label: 'Mẫu câu', icon: '📚' },
-          { id: 'grammar',  label: 'Ngữ pháp', icon: '📝' },
-        ].map(tab => (
+        {TAB_LIST.map(tab => (
           <TouchableOpacity
             key={tab.id}
             style={[
@@ -1321,7 +1423,7 @@ export default function SearchInline({
                 windowSize={5}
                 maxToRenderPerBatch={8}
                 initialNumToRender={10}
-                removeClippedSubviews={true}
+                removeClippedSubviews={Platform.OS !== 'android'}
                 keyboardShouldPersistTaps="handled"
                 contentContainerStyle={{
                   paddingTop: 8,
@@ -1336,6 +1438,12 @@ export default function SearchInline({
         ))}
       </View>
 
+      {drawModalVisible && (
+        <TouchableWithoutFeedback onPress={() => setDrawModalVisible(false)}>
+          <View style={styles.drawBackdrop} />
+        </TouchableWithoutFeedback>
+      )}
+
       <KanjiDrawSearchModal
         visible={drawModalVisible}
         onClose={() => setDrawModalVisible(false)}
@@ -1344,7 +1452,7 @@ export default function SearchInline({
         onSelectKanji={handleSelectKanji}
         isInline={false}
       />
-      <AdBanner />
+      <MemoAdBanner />
     </View>
   );
 }
@@ -1407,11 +1515,14 @@ const styles = StyleSheet.create({
     marginHorizontal: 4,
   },
   searchInput: {
-    fontSize: 15,
-    paddingVertical: 8,
+    fontSize: 16,
+    fontWeight: '500',
+    paddingVertical: Platform.OS === 'ios' ? 10 : 6,
     paddingHorizontal: 4,
+    height: 54,
+    lineHeight: 26,
+    ...(Platform.OS === 'android' && { textAlignVertical: 'center' }),
   },
-  // Chữ mẫu chạy tự động, đè lên trên input khi đang trống/chưa focus
   animatedPlaceholder: {
     position: 'absolute',
     left: 4,
@@ -1510,5 +1621,13 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     textAlign: 'center',
   },
-  emptySub: { fontSize: 13, marginTop: 6 },
+  emptySub: { 
+    fontSize: 13, 
+    marginTop: 6 
+  },
+  drawBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 998,
+    backgroundColor: 'transparent', 
+  },
 });

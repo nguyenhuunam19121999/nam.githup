@@ -3,7 +3,7 @@
  * 
  * QUÉT TẤT CẢ NGUỒN -> TÌM KANJI MỚI -> TỰ ĐỘNG FETCH CDN -> CẬP NHẬT FILE JSON
  * 
- * CÁCH DÙNG: node scripts/update_kanji_strokes.js
+ * CÁCH DÙNG: node scripts/update_kanji_strokes.cjs
  */
 
 const fs = require('fs');

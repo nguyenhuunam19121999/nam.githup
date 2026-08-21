@@ -18,20 +18,19 @@ import {
   View,
 } from "react-native";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
+import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 interface Feedback {
   id: string;
-  user: string; 
+  user: string;
   text: string;
-  likes: string[]; 
-  dislikes: string[]; 
+  likes: string[];
+  dislikes: string[];
   createdAt: number;
 }
 
-const PRIMARY = "#004370";
-
 interface Props {
-  pageKey: string; 
+  pageKey: string;
 }
 
 // Chuẩn hoá text để so khớp không phân biệt hoa/thường, dấu tiếng Việt
@@ -47,7 +46,6 @@ function normalizeForFilter(text: string): string {
 const BANNED_WORDS = [
   "đm", "vcl", "vl", "clm", "djt", "địt mẹ", "cc", "loz","lồn",
   "ngu", "chó chết", "đồ ngu", "sex",
-  // 👈 thêm từ khác vào đây nếu cần, viết thường, không dấu
 ];
 
 function containsBannedWord(text: string): boolean {
@@ -56,6 +54,7 @@ function containsBannedWord(text: string): boolean {
 }
 
 export function FeedbackSection({ pageKey }: Props) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const { currentUser } = useAuth();
 
   const [items, setItems] = useState<Feedback[]>([]);
@@ -159,18 +158,18 @@ export function FeedbackSection({ pageKey }: Props) {
   const visible = showAll ? items : items.slice(0, 3);
 
   return (
-    <View style={s.box}>
+    <View style={[s.box, { backgroundColor: c.card, borderColor: c.border }]}>
       <View style={s.header}>
         <View style={s.headerLeftRow}>
-          <View style={s.headerBar} />
-          <Text style={s.headerTitle}>Có {items.length} góp ý</Text>
+          <View style={[s.headerBar, { backgroundColor: c.primary }]} />
+          <Text style={[s.headerTitle, { color: c.text }]}>Có {items.length} góp ý</Text>
         </View>
         {items.length > 3 && (
           <TouchableOpacity
             onPress={() => setShowAll((v) => !v)}
             hitSlop={8}
           >
-            <Text style={s.headerMore}>
+            <Text style={[s.headerMore, { color: c.primary }]}>
               {showAll ? "Thu gọn" : "Xem thêm"}
             </Text>
           </TouchableOpacity>
@@ -179,7 +178,7 @@ export function FeedbackSection({ pageKey }: Props) {
 
       {/* Danh sách góp ý */}
       {visible.length === 0 ? (
-        <Text style={s.empty}>
+        <Text style={[s.empty, { color: c.mutedForeground }]}>
           Chưa có góp ý nào. Hãy là người đầu tiên!
         </Text>
       ) : (
@@ -191,9 +190,13 @@ export function FeedbackSection({ pageKey }: Props) {
           return (
             <View
               key={it.id}
-              style={[s.item, i === visible.length - 1 && { borderBottomWidth: 0 }]}
+              style={[
+                s.item,
+                { borderBottomColor: c.border },
+                i === visible.length - 1 && { borderBottomWidth: 0 },
+              ]}
             >
-              <Text style={s.itemText}>{it.text}</Text>
+              <Text style={[s.itemText, { color: c.text }]}>{it.text}</Text>
               <View style={s.itemFooter}>
                 <View style={s.voteRow}>
                   <TouchableOpacity
@@ -201,29 +204,29 @@ export function FeedbackSection({ pageKey }: Props) {
                     hitSlop={8}
                     style={s.voteBtn}
                   >
-                    <Text style={[s.voteIcon, liked && s.voteIconActive]}>
+                    <Text style={[s.voteIcon, { color: c.mutedForeground }, liked && { color: c.primary }]}>
                       👍
                     </Text>
-                    <Text style={s.voteCount}>{it.likes.length}</Text>
+                    <Text style={[s.voteCount, { color: c.mutedForeground }]}>{it.likes.length}</Text>
                   </TouchableOpacity>
                   <TouchableOpacity
                     onPress={() => handleVote(it.id, "dislike")}
                     hitSlop={8}
                     style={s.voteBtn}
                   >
-                    <Text style={[s.voteIcon, disliked && s.voteIconActive]}>
+                    <Text style={[s.voteIcon, { color: c.mutedForeground }, disliked && { color: c.primary }]}>
                       👎
                     </Text>
-                    <Text style={s.voteCount}>{it.dislikes.length}</Text>
+                    <Text style={[s.voteCount, { color: c.mutedForeground }]}>{it.dislikes.length}</Text>
                   </TouchableOpacity>
                 </View>
                 <View style={s.userRow}>
-                  <View style={s.avatar}>
-                    <Text style={s.avatarText}>
+                  <View style={[s.avatar, { backgroundColor: c.border }]}>
+                    <Text style={[s.avatarText, { color: c.card }]}>
                       {it.user.charAt(0).toUpperCase()}
                     </Text>
                   </View>
-                  <Text style={s.userName} numberOfLines={1}>
+                  <Text style={[s.userName, { color: c.mutedForeground }]} numberOfLines={1}>
                     {it.user}
                   </Text>
                 </View>
@@ -237,26 +240,26 @@ export function FeedbackSection({ pageKey }: Props) {
       {currentUser ? (
         <View style={s.inputRow}>
           <TextInput
-            style={s.input}
+            style={[s.input, { borderColor: c.border, color: c.text }]}
             value={text}
             onChangeText={setText}
             placeholder="Viết góp ý của bạn..."
-            placeholderTextColor="#94a3b8"
+            placeholderTextColor={c.mutedForeground}
             multiline
             maxLength={500}
           />
           <TouchableOpacity
-            style={[s.sendBtn, !text.trim() && s.sendBtnDisabled]}
+            style={[s.sendBtn, { backgroundColor: c.primary }, !text.trim() && s.sendBtnDisabled]}
             onPress={handleSubmit}
             disabled={!text.trim() || submitting}
             activeOpacity={0.8}
           >
-            <Text style={s.sendBtnText}>Gửi</Text>
+            <Text style={[s.sendBtnText, { color: c.primaryForeground }]}>Gửi</Text>
           </TouchableOpacity>
         </View>
       ) : (
         <TouchableOpacity
-          style={s.loginBtn}
+          style={[s.loginBtn, { backgroundColor: c.primary }]}
           onPress={() =>
             Alert.alert(
               "Đăng nhập để góp ý",
@@ -265,7 +268,7 @@ export function FeedbackSection({ pageKey }: Props) {
           }
           activeOpacity={0.85}
         >
-          <Text style={s.loginBtnText}>Đăng nhập để góp ý</Text>
+          <Text style={[s.loginBtnText, { color: c.primaryForeground }]}>Đăng nhập để góp ý</Text>
         </TouchableOpacity>
       )}
     </View>
@@ -274,12 +277,10 @@ export function FeedbackSection({ pageKey }: Props) {
 
 const s = StyleSheet.create({
   box: {
-    backgroundColor: "#fff",
     borderRadius: 14,
     padding: 14,
     marginTop: 16,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
   },
   header: {
     flexDirection: "row",
@@ -291,30 +292,26 @@ const s = StyleSheet.create({
   headerBar: {
     width: 3,
     height: 18,
-    backgroundColor: "#0f172a",
     marginRight: 8,
     borderRadius: 2,
   },
-  headerTitle: { fontSize: 16, fontWeight: "800", color: "#0f172a" },
+  headerTitle: { fontSize: 16, fontWeight: "800" },
   headerMore: {
     fontSize: 14,
-    color: "#0f172a",
     textDecorationLine: "underline",
   },
 
   empty: {
     paddingVertical: 18,
     textAlign: "center",
-    color: "#64748b",
     fontSize: 14,
   },
 
   item: {
     paddingVertical: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#e2e8f0",
   },
-  itemText: { fontSize: 15, color: "#0f172a", lineHeight: 22 },
+  itemText: { fontSize: 15, lineHeight: 22 },
   itemFooter: {
     flexDirection: "row",
     alignItems: "center",
@@ -323,22 +320,20 @@ const s = StyleSheet.create({
   },
   voteRow: { flexDirection: "row", alignItems: "center", gap: 14 },
   voteBtn: { flexDirection: "row", alignItems: "center" },
-  voteIcon: { fontSize: 16, color: "#94a3b8", marginRight: 4 },
-  voteIconActive: { color: PRIMARY },
-  voteCount: { fontSize: 13, color: "#64748b" },
+  voteIcon: { fontSize: 16, marginRight: 4 },
+  voteCount: { fontSize: 13 },
 
   userRow: { flexDirection: "row", alignItems: "center", maxWidth: "55%" },
   avatar: {
     width: 22,
     height: 22,
     borderRadius: 11,
-    backgroundColor: "#cbd5e1",
     alignItems: "center",
     justifyContent: "center",
     marginRight: 6,
   },
-  avatarText: { color: "#fff", fontSize: 11, fontWeight: "800" },
-  userName: { fontSize: 13, color: "#475569", fontStyle: "italic" },
+  avatarText: { fontSize: 11, fontWeight: "800" },
+  userName: { fontSize: 13, fontStyle: "italic" },
 
   inputRow: { flexDirection: "row", alignItems: "flex-end", marginTop: 10 },
   input: {
@@ -348,29 +343,25 @@ const s = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     borderWidth: 1,
-    borderColor: "#cbd5e1",
     borderRadius: 10,
     fontSize: 14,
-    color: "#0f172a",
   },
   sendBtn: {
     marginLeft: 8,
     paddingHorizontal: 16,
     height: 42,
     borderRadius: 10,
-    backgroundColor: PRIMARY,
     alignItems: "center",
     justifyContent: "center",
   },
   sendBtnDisabled: { opacity: 0.45 },
-  sendBtnText: { color: "#fff", fontWeight: "700" },
+  sendBtnText: { fontWeight: "700" },
 
   loginBtn: {
-    backgroundColor: PRIMARY,
     borderRadius: 10,
     paddingVertical: 14,
     marginTop: 12,
     alignItems: "center",
   },
-  loginBtnText: { color: "#fff", fontWeight: "700", fontSize: 15 },
+  loginBtnText: { fontWeight: "700", fontSize: 15 },
 });
