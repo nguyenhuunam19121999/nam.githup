@@ -29,6 +29,7 @@ import {
   getKunyomiFromFull,
 } from "../assets/data_JLPT_kanji";
 import { FeedbackSection } from "../components/FeedbackSection";
+import { KeyboardAwareScrollViewCompat } from "../components/KeyboardAwareScrollViewCompat";
 import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
 import { WritingPracticeModal } from "../components/WritingPracticeModal";
 import { AdBanner } from "../components/AdBanner";
@@ -423,7 +424,7 @@ export default function KanjiListScreen() {
 
       {/* ── DANH SÁCH ── */}
       {mode === "list" && (
-        <ScrollView
+        <KeyboardAwareScrollViewCompat
           style={s.scroll}
           contentContainerStyle={s.scrollContent}
           keyboardShouldPersistTaps="handled"
@@ -446,6 +447,18 @@ export default function KanjiListScreen() {
                       id: it.kanji,
                       kanji: it.kanji,
                       kanjiChars: JSON.stringify([it.kanji]),
+                      hiragana: it.readings.onyomi[0] || it.readings.kunyomi[0] || "",
+                      han: it.hanviet.join(" • "),
+                      nghia: it.meanings_vi[0] || "",
+                      jisho_meaning_en: (it as any).jisho_meaning_en || "",
+                      level: it.jlpt,
+                      wordType: (it as any).wordType || "",
+                      typeLabel: (it as any).typeLabel || "",
+                      isNaAdjective: (it as any).isNaAdjective ? "true" : "false",
+                      isExtractedVerb: (it as any).isExtractedVerb ? "true" : "false",
+                      extractedVerb: (it as any).extractedVerb || "",
+                      isConjugatedForm: (it as any).isConjugatedForm ? "true" : "false",
+                      conjugatedForm: (it as any).conjugatedForm || "",
                       fromSearch: "lesson-list",
                     },
                   })
@@ -482,7 +495,7 @@ export default function KanjiListScreen() {
             <FeedbackSection pageKey={`kanji::${level}`} />
           </View>
           <View style={{ height: 40 }} />
-        </ScrollView>
+        </KeyboardAwareScrollViewCompat>
       )}
 
       {/* ── QUIZ ── */}
@@ -648,9 +661,9 @@ export default function KanjiListScreen() {
           <View style={{ height: 40 }} />
         </ScrollView>
       )}
-
       <WritingPracticeModal
-        item={writingItem}
+        chars={writingItem ? [writingItem.kanji] : null}
+        initialIndex={0}
         onClose={() => setWritingItem(null)}
       />
       <StatsModal

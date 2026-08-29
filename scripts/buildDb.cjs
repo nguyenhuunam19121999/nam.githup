@@ -1,4 +1,4 @@
-// ─────────────────────────────────────────────────────────────────────────────
+// // ─────────────────────────────────────────────────────────────────────────────
 // node scripts/buildDb.cjs
 // Build multiple SQLite asset files from the JSON source data.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -185,6 +185,23 @@ const TARGETS = [
       );
       CREATE INDEX IF NOT EXISTS idx_exams_level ON exams(level);
       CREATE INDEX IF NOT EXISTS idx_exams_exam_id ON exams(exam_id);
+    `,
+  },
+  {
+    name: 'ai_cache',
+    output: path.join(ASSETS, 'ai_cache.db'),
+    schema: `
+      CREATE TABLE IF NOT EXISTS ai_cache (
+        cache_key TEXT PRIMARY KEY,
+        type TEXT,
+        meaning TEXT,
+        usage TEXT,
+        examples TEXT DEFAULT '[]',
+        synonyms_distinction TEXT,
+        notes TEXT,
+        cached_at TEXT
+      );
+      CREATE INDEX IF NOT EXISTS idx_ai_cache_type ON ai_cache(type);
     `,
   },
 ];
@@ -541,6 +558,45 @@ function insertExamFile(db, filePath, level) {
   return 1;
 }
 
+function insertAiCacheFile(db, filePath) {
+  const data = readJson(filePath);
+  if (!data || typeof data !== 'object') {
+    console.warn('  ⚠️  ai_cache_master.json không tồn tại hoặc rỗng, bỏ qua.');
+    return 0;
+  }
+
+  const stmt = db.prepare(`
+    INSERT OR REPLACE INTO ai_cache
+      (cache_key, type, meaning, usage, examples, synonyms_distinction, notes, cached_at)
+    VALUES (@cache_key, @type, @meaning, @usage, @examples, @synonyms_distinction, @notes, @cached_at)
+  `);
+
+  const insertBatch = db.transaction((entries) => {
+    let count = 0;
+    for (const [cacheKey, item] of entries) {
+      if (!cacheKey || !item) continue;
+      // cacheKey dạng "vocab_勉強" — tách phần "type" trước dấu "_"
+      const type = cacheKey.split('_')[0] || null;
+      stmt.run({
+        cache_key: cacheKey,
+        type,
+        meaning: item.meaning || '',
+        usage: item.usage || '',
+        examples: toJson(item.examples),
+        synonyms_distinction: item.synonyms_distinction || '',
+        notes: item.notes || '',
+        cached_at: item.cachedAt || null,
+      });
+      count++;
+    }
+    return count;
+  });
+
+  const count = insertBatch(Object.entries(data));
+  console.log(`  ✓ ai_cache_master.json: ${count} mục AI cache`);
+  return count;
+}
+
 console.log('📦 Đang insert kanjifull.json...');
 insertKanjiFull(dbs.kanji, path.join(ASSETS, 'data_JLPT_kanji', 'kanjifull.json'));
 
@@ -636,6 +692,10 @@ for (const level of ['n1', 'n2', 'n3', 'n4', 'n5']) {
   }
   console.log(`  📁 ${level.toUpperCase()}: ${count} đề thi`);
 }
+
+console.log('\n📦 Đang insert AI cache (ai_cache_master.json)...');
+const aiCachePath = path.join(ASSETS, 'data_ai_cache', 'ai_cache_master.json');
+if (fs.existsSync(aiCachePath)) insertAiCacheFile(dbs.ai_cache, aiCachePath);
 
 for (const db of Object.values(dbs)) db.close();
 

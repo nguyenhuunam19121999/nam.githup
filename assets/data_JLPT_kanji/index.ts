@@ -34,6 +34,8 @@ export interface KanjiItem {
   components?: KanjiComponent[];
   meanings_vi: string[];
   meanings_en?: string[];
+  jisho_meaning_en?: string;
+  jisho_is_common?: boolean;
   book?: string;
   lesson?: number;
   week?: number;
@@ -253,6 +255,19 @@ function normalizeDbKanjiRow(row: any): KanjiItem | null {
     book: row.book ?? undefined,
     lesson: row.lesson ?? undefined,
     week: row.week ?? undefined,
+    jisho_meaning_en: row.jisho_meaning_en ?? undefined,
+    jisho_is_common: row.jisho_is_common != null ? !!row.jisho_is_common : undefined,
+    wordType: row.wordType ?? undefined,
+    typeLabel: row.typeLabel ?? undefined,
+    isExpression: row.isExpression != null ? !!row.isExpression : undefined,
+    isSuffix: row.isSuffix != null ? !!row.isSuffix : undefined,
+    isConjugatedForm: row.isConjugatedForm != null ? !!row.isConjugatedForm : undefined,
+    conjugatedForm: row.conjugatedForm ?? undefined,
+    isExtractedVerb: row.isExtractedVerb != null ? !!row.isExtractedVerb : undefined,
+    extractedVerb: row.extractedVerb ?? undefined,
+    isNaAdjective: row.isNaAdjective != null ? !!row.isNaAdjective : undefined,
+    naBaseWord: row.naBaseWord ?? undefined,
+    displayForm: row.displayForm ?? undefined,
   };
 }
 

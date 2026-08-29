@@ -24,6 +24,9 @@ import {
 } from '../assets/data_JLPT_kanji';
 import { preloader } from '../services/KanjiPreloader';
 import VocabDetailInline from './VocabDetailInline';
+import { KeyboardAwareScrollViewCompat } from './KeyboardAwareScrollViewCompat';
+import { FeedbackSection } from './FeedbackSection';
+import AIExplainPanel from './AIExplainPanel';
 import { useColors } from '../artifacts/mirai-jp/hooks/useColors';
 
 // Giữ cố định — màu cam của viên kim cương "◆" trước Kunyomi/Onyomi là điểm
@@ -232,7 +235,7 @@ export default function KanjiDetailInline({
           <NoDataBanner char={currentKanji} accentColor={c.primary} />
         </View>
       ) : (
-        <ScrollView
+        <KeyboardAwareScrollViewCompat
           style={styles.content}
           showsVerticalScrollIndicator={false}
           removeClippedSubviews={true}
@@ -332,6 +335,12 @@ export default function KanjiDetailInline({
                 ))}
               </View>
 
+              {/* Tra cứu từ AI */}
+              <AIExplainPanel
+                type="kanji"
+                word={kanjiData.kanji}
+                context={kanjiData.meanings_vi.join(', ')}
+              />
               {examples.length > 0 && (
                 <View style={styles.section}>
                   <Text style={[styles.sectionTitle, { color: c.primary }]}>
@@ -354,10 +363,11 @@ export default function KanjiDetailInline({
                   ))}
                 </View>
               )}
+              <FeedbackSection pageKey={`kanji-detail::${kanjiData.kanji}`} />
             </>
           )}
           <View style={{ height: 30 }} />
-        </ScrollView>
+        </KeyboardAwareScrollViewCompat>
       )}
       {selectedExample && (
       <View style={StyleSheet.absoluteFill}>

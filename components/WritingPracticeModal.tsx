@@ -1,14 +1,15 @@
-// WritingPracticeModal.tsx — Modal luyện viết Kanji
+// WritingPracticeModal.tsx — Modal luyện viết Kanji (hỗ trợ nhiều chữ, có tab)
 //
 // Cấu trúc layout (từ trên xuống):
 //   [Handle + Header]              ← cố định, không cuộn
+//   [Tab chuyển chữ]               ← cố định, chỉ hiện khi có >1 chữ
 //   [ScrollView]                   ← cuộn: thông tin chữ + tham khảo nét
 //   [Nhãn "Vùng luyện viết"]       ← cố định
 //   [Canvas 田字格 — DrawingCanvas] ← cố định, KHÔNG cuộn, nét lưu đúng
 //   [Nút Hoàn tác / Xoá hết]       ← cố định
 // ─────────────────────────────────────────────────────────────────────────────
 
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Dimensions,
   Modal,
@@ -21,7 +22,11 @@ import {
 } from "react-native";
 import { AdBanner } from "../components/AdBanner";
 import Svg, { Line, Path, Rect } from "react-native-svg";
-import { type KanjiItem, getKunyomiFromFull } from "../assets/data_JLPT_kanji";
+import {
+  type KanjiItem,
+  getKanjiByCharFull,
+  getKunyomiFromFull,
+} from "../assets/data_JLPT_kanji";
 import { KanjiStrokeOrder } from "./KanjiStrokeOrder";
 import { loadStrokePaths } from "../services/KanjiPreloader";
 import { useColors, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
@@ -32,9 +37,6 @@ const CANVAS_WIDTH   = CANVAS_SIZE;
 const CANVAS_HEIGHT  = CANVAS_SIZE * 0.8;
 
 // ─── Lưới 5 ô ly giống vở học sinh ──────────────────────────────────────────
-// Giấy viết giữ tông riêng (giống giấy thật), chỉ đổi nhẹ giữa sáng/tối
-// thay vì bám theo toàn bộ bảng màu theme — để cảm giác "viết trên giấy"
-// không bị phá vỡ khi đổi theme.
 function KanjiGrid({ width, height, paperColor, lineColor }: { width: number; height: number; paperColor: string; lineColor: string }) {
   const cellSize = width / 5;
 
@@ -230,21 +232,39 @@ const dc = StyleSheet.create({
 });
 
 // ─────────────────────────────────────────────────────────────────────────────
+// chars: danh sách chữ Hán có thể chuyển qua lại (giống modal "Cách viết").
+// initialIndex: tab nào được mở đầu tiên (mặc định 0).
 export function WritingPracticeModal({
-  item,
+  chars,
+  initialIndex = 0,
   onClose,
 }: {
-  item: KanjiItem | null;
+  chars: string[] | null;
+  initialIndex?: number;
   onClose: () => void;
 }) {
   const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
 
-  // Giấy viết + mực: dùng tông cố định sáng/tối riêng (không bám theo
-  // primary/accent của theme) để cảm giác "viết tay trên giấy" luôn nhất quán.
   const isDarkPaper = c.background === "#0b0f19"; // night palette
   const paperColor = isDarkPaper ? "#1a2130" : "#fcfbf9";
   const gridLineColor = isDarkPaper ? "#3a445c" : "#cbd5e1";
   const inkColor = isDarkPaper ? "#e5e7eb" : "#1e293b";
+
+  // ── Tab chuyển chữ ───────────────────────────────────────────────────────
+  const [tabIndex, setTabIndex] = useState(initialIndex);
+  const charsKey = (chars ?? []).join(",");
+  useEffect(() => {
+    if (chars && chars.length > 0) {
+      setTabIndex(initialIndex >= 0 && initialIndex < chars.length ? initialIndex : 0);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [charsKey, initialIndex]);
+
+  const activeChar = chars && chars.length > 0 ? (chars[tabIndex] ?? chars[0]) : "";
+  const activeItem = useMemo(
+    () => (activeChar ? getKanjiByCharFull(activeChar) || null : null),
+    [activeChar],
+  );
 
   const [strokes, setStrokes] = useState<string[]>([]);
   const livePathRef = useRef<string>("");
@@ -269,10 +289,11 @@ export function WritingPracticeModal({
     setReloadTrigger(prev => prev + 1);
   }, []);
 
+  // Đổi chữ (tab) → xoá nét đang vẽ của chữ trước, tải lại nét tham khảo
   useEffect(() => {
     clearCanvas();
     setReloadTrigger(0);
-  }, [item?.id]);
+  }, [activeChar, clearCanvas]);
 
   // PanResponder
   const panResponder = useRef(
@@ -309,12 +330,14 @@ export function WritingPracticeModal({
     }),
   ).current;
 
-  if (!item) return null;
+  const visible = !!chars && chars.length > 0;
+  if (!visible) return null;
+
   const noStrokes = strokes.length === 0;
 
   return (
     <Modal
-      visible={!!item}
+      visible={visible}
       animationType="slide"
       transparent
       onRequestClose={onClose}
@@ -324,83 +347,124 @@ export function WritingPracticeModal({
 
           <View style={[ws.handle, { backgroundColor: c.border }]} />
           <View style={ws.sheetHeader}>
-            <Text style={[ws.sheetTitle, { color: c.text }]}>✍️ Luyện viết — {item.kanji}</Text>
+            <Text style={[ws.sheetTitle, { color: c.text }]}>✍️ Luyện viết — {activeChar}</Text>
             <TouchableOpacity onPress={onClose} hitSlop={10}>
               <Text style={[ws.closeText, { color: c.primary }]}>Đóng</Text>
             </TouchableOpacity>
           </View>
 
-          <ScrollView
-            showsVerticalScrollIndicator={false}
-            showsHorizontalScrollIndicator={false}
-            keyboardShouldPersistTaps="handled"
-            style={ws.scrollArea}
-            contentContainerStyle={ws.scrollContent}
-          >
-            <View style={[ws.infoRow, { backgroundColor: c.muted }]}>
-              <Text style={[ws.kanjiLarge, { color: c.primary }]}>{item.kanji}</Text>
-              <View style={ws.infoText}>
-                <Text style={[ws.hanViet, { color: c.mutedForeground }]}>{item.hanviet?.[0] ?? ""}</Text>
-                {(() => {
-                  const kun = getKunyomiFromFull(item.kanji);
-                  return kun.length > 0
-                    ? <Text style={[ws.reading, { color: c.text }]}>訓 {kun.join("、")}</Text>
-                    : null;
-                })()}
-                {(item.readings?.onyomi?.length ?? 0) > 0 && (
-                  <Text style={[ws.reading, { color: c.text }]}>音 {item.readings.onyomi.join("、")}</Text>
-                )}
-                <Text style={[ws.meaning, { color: c.text }]} numberOfLines={2}>
-                  {item.meanings_vi?.[0] ?? ""}
-                </Text>
+          {/* Tab chuyển qua lại từng chữ trong từ — giống modal "Cách viết" */}
+          {chars.length > 1 && (
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              style={[ws.tabBar, { borderBottomColor: c.border }]}
+            >
+              <View style={{ flexDirection: "row" }}>
+                {chars.map((char, idx) => (
+                  <TouchableOpacity
+                    key={`${char}_${idx}`}
+                    onPress={() => setTabIndex(idx)}
+                    style={[
+                      ws.tabItem,
+                      { borderBottomColor: tabIndex === idx ? c.primary : "transparent" },
+                    ]}
+                  >
+                    <Text
+                      style={[
+                        ws.tabText,
+                        { color: tabIndex === idx ? c.primary : c.mutedForeground },
+                      ]}
+                    >
+                      {char}
+                    </Text>
+                  </TouchableOpacity>
+                ))}
               </View>
-            </View>
+            </ScrollView>
+          )}
 
-            <Text style={[ws.sectionLabel, { color: c.mutedForeground }]}>📖 Thứ tự nét tham khảo</Text>
-            <View style={ws.strokeRef}>
-              <KanjiStrokeOrder
-                kanji={item.kanji}
-                size={180}
-                onReload={handleReloadStrokes}
+          {!activeItem ? (
+            <View style={{ paddingVertical: 40, alignItems: "center" }}>
+              <Text style={{ color: c.mutedForeground, textAlign: "center" }}>
+                Không tìm thấy chữ &quot;{activeChar}&quot; trong cơ sở dữ liệu.
+              </Text>
+            </View>
+          ) : (
+            <>
+              <ScrollView
+                showsVerticalScrollIndicator={false}
+                showsHorizontalScrollIndicator={false}
+                keyboardShouldPersistTaps="handled"
+                style={ws.scrollArea}
+                contentContainerStyle={ws.scrollContent}
+              >
+                <View style={[ws.infoRow, { backgroundColor: c.muted }]}>
+                  <Text style={[ws.kanjiLarge, { color: c.primary }]}>{activeItem.kanji}</Text>
+                  <View style={ws.infoText}>
+                    <Text style={[ws.hanViet, { color: c.mutedForeground }]}>{activeItem.hanviet?.[0] ?? ""}</Text>
+                    {(() => {
+                      const kun = getKunyomiFromFull(activeItem.kanji);
+                      return kun.length > 0
+                        ? <Text style={[ws.reading, { color: c.text }]}>訓 {kun.join("、")}</Text>
+                        : null;
+                    })()}
+                    {(activeItem.readings?.onyomi?.length ?? 0) > 0 && (
+                      <Text style={[ws.reading, { color: c.text }]}>音 {activeItem.readings.onyomi.join("、")}</Text>
+                    )}
+                    <Text style={[ws.meaning, { color: c.text }]} numberOfLines={2}>
+                      {activeItem.meanings_vi?.[0] ?? ""}
+                    </Text>
+                  </View>
+                </View>
+
+                <Text style={[ws.sectionLabel, { color: c.mutedForeground }]}>📖 Thứ tự nét tham khảo</Text>
+                <View style={ws.strokeRef}>
+                  <KanjiStrokeOrder
+                    kanji={activeItem.kanji}
+                    size={180}
+                    onReload={handleReloadStrokes}
+                  />
+                </View>
+              </ScrollView>
+
+              <Text style={[ws.sectionLabel, ws.canvasLabel, { color: c.mutedForeground }]}>✏️ Vùng luyện viết</Text>
+              <DrawingCanvas
+                kanjiChar={activeItem.kanji}
+                strokes={strokes}
+                livePathRef={livePathRef}
+                panHandlers={panResponder.panHandlers}
+                onRegisterTick={handleRegisterTick}
+                reloadTrigger={reloadTrigger}
+                paperColor={paperColor}
+                gridLineColor={gridLineColor}
+                inkColor={inkColor}
               />
-            </View>
-          </ScrollView>
 
-          <Text style={[ws.sectionLabel, ws.canvasLabel, { color: c.mutedForeground }]}>✏️ Vùng luyện viết</Text>
-          <DrawingCanvas
-            kanjiChar={item.kanji}
-            strokes={strokes}
-            livePathRef={livePathRef}
-            panHandlers={panResponder.panHandlers}
-            onRegisterTick={handleRegisterTick}
-            reloadTrigger={reloadTrigger}
-            paperColor={paperColor}
-            gridLineColor={gridLineColor}
-            inkColor={inkColor}
-          />
-
-          <View style={ws.btnRow}>
-            <TouchableOpacity
-              style={[ws.undoBtn, { backgroundColor: c.primary + "1a" }, noStrokes && { backgroundColor: c.muted }]}
-              onPress={undoStroke}
-              activeOpacity={0.8}
-              disabled={noStrokes}
-            >
-              <Text style={[ws.undoBtnText, { color: c.primary }, noStrokes && { color: c.mutedForeground }]}>
-                ↩ Hoàn tác
-              </Text>
-            </TouchableOpacity>
-            <TouchableOpacity
-              style={[ws.clearBtn, { backgroundColor: c.destructive + "1a" }, noStrokes && { backgroundColor: c.muted }]}
-              onPress={clearCanvas}
-              activeOpacity={0.8}
-              disabled={noStrokes}
-            >
-              <Text style={[ws.clearBtnText, { color: c.destructive }, noStrokes && { color: c.mutedForeground }]}>
-                🗑 Xoá hết
-              </Text>
-            </TouchableOpacity>
-          </View>
+              <View style={ws.btnRow}>
+                <TouchableOpacity
+                  style={[ws.undoBtn, { backgroundColor: c.primary + "1a" }, noStrokes && { backgroundColor: c.muted }]}
+                  onPress={undoStroke}
+                  activeOpacity={0.8}
+                  disabled={noStrokes}
+                >
+                  <Text style={[ws.undoBtnText, { color: c.primary }, noStrokes && { color: c.mutedForeground }]}>
+                    ↩ Hoàn tác
+                  </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                  style={[ws.clearBtn, { backgroundColor: c.destructive + "1a" }, noStrokes && { backgroundColor: c.muted }]}
+                  onPress={clearCanvas}
+                  activeOpacity={0.8}
+                  disabled={noStrokes}
+                >
+                  <Text style={[ws.clearBtnText, { color: c.destructive }, noStrokes && { color: c.mutedForeground }]}>
+                    🗑 Xoá hết
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </>
+          )}
 
           <View style={ws.bottomPad} />
         </View>
@@ -441,6 +505,24 @@ const ws = StyleSheet.create({
   },
   sheetTitle: { fontSize: 17, fontWeight: "800" },
   closeText:  { fontSize: 15, fontWeight: "600" },
+
+  // Tab chuyển chữ
+  tabBar: {
+    maxHeight: 48,
+    borderBottomWidth: 1,
+    marginBottom: 12,
+  },
+  tabItem: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderBottomWidth: 2,
+    minHeight: 36,
+    justifyContent: "center",
+  },
+  tabText: {
+    fontSize: 18,
+    fontWeight: "700",
+  },
 
   scrollArea:    { flexShrink: 1, flexGrow: 0 },
   scrollContent: { paddingBottom: 2 },

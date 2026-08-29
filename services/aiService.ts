@@ -1,74 +1,190 @@
-// services/aiService.ts
-// Gọi Cloud Function "explainWithAI" từ app React Native/Expo.
-// Yêu cầu: đã cài "firebase" và app đã init Firebase (giống cách useAuth đang dùng).
+// scripts/services/aiService.ts
+//
+// Kiến trúc: App --(Firebase ID token)--> Cloudflare Worker --(Groq key chung)--> Groq API
+// Worker chịu trách nhiệm TOÀN BỘ:
+//   - Verify Firebase ID token
+//   - Kiểm tra "cầu chì chung" (status/ai.blocked) — nếu bật, trả lỗi bảo trì ngay
+//   - Kiểm tra cache Firestore (ai_cache) trước — có rồi thì trả luôn, không tốn quota/AI
+//   - Kiểm tra quota cá nhân (config/ai.dailyLimit vs users/{uid}.aiUsageToday)
+//   - Gọi Groq, trả về JSON có cấu trúc: { meaning, usage, examples, synonyms_distinction, notes }
+//
+// File này CHỈ là phần client — không tự đếm quota, không tự cache gì ở đây.
 
-import { getApp } from "firebase/app";
-import { getFunctions, httpsCallable } from "firebase/functions";
+import auth from '@react-native-firebase/auth';
 
-// Đổi "asia-southeast1" nếu bạn deploy function ở region khác trong file functions/explainWithAI.js
-const functions = getFunctions(getApp(), "asia-southeast1");
+const AI_WORKER_URL = 'https://mirai-jp-ai.miraiai.workers.dev';
 
-type ExplainType = "vocab" | "grammar" | "dialogue";
-
-interface VocabInput {
-  word: string;
-  reading?: string;
-  meaning?: string;
-  example?: string;
-  level?: string;
+export interface AIExample {
+  jp: string;
+  vi: string;
 }
 
-interface GrammarInput {
-  pattern: string;
-  explanation?: string;
-  example?: string;
-  level?: string;
+export interface AIResult {
+  meaning: string;
+  usage: string;
+  examples: AIExample[];
+  synonyms_distinction: string;
+  notes: string;
+
+  // Chỉ có khi type === 'grammar'
+  structure?: string;
+  conjugation?: string;
+  jlpt_level?: string;
+
+  // Chỉ có khi type === 'vocab'
+  part_of_speech?: string;
+  collocations?: string;
+  kanji_breakdown?: string;
+
+  // Chỉ có khi type === 'kanji'
+  component_analysis?: string;
+  stroke_count_note?: string;
+  similar_kanji?: string;
+
+  parseFailed?: boolean;
 }
 
-interface DialogueInput {
-  topic?: string;
-  level?: string;
-}
+// export interface AIResult {
+//   meaning: string;
+//   usage: string;
+//   examples: AIExample[];
+//   synonyms_distinction: string;
+//   notes: string;
+//   parseFailed?: boolean; // true nếu AI trả lỗi format, nội dung nằm hết trong `meaning`
+// }
 
-export async function explainVocab(data: VocabInput): Promise<string> {
-  return callExplain("vocab", data);
-}
+export type AILookupType = 'vocab' | 'grammar' | 'kanji';
 
-export async function explainGrammar(data: GrammarInput): Promise<string> {
-  return callExplain("grammar", data);
-}
-
-export async function generateDialogue(data: DialogueInput): Promise<string> {
-  return callExplain("dialogue", data);
-}
-
-async function callExplain(type: ExplainType, data: Record<string, any>): Promise<string> {
-  const callable = httpsCallable(functions, "explainWithAI");
-  const result = await callable({ type, data });
-  return (result.data as { text: string }).text;
-}
-
-/* ── VÍ DỤ DÙNG TRONG COMPONENT ──────────────────────────────────────────
-import { explainVocab } from "../services/aiService";
-
-const [loading, setLoading] = useState(false);
-const [answer, setAnswer] = useState("");
-
-async function handleExplain() {
-  setLoading(true);
-  try {
-    const text = await explainVocab({
-      word: "食べる",
-      reading: "たべる",
-      meaning: "ăn",
-      example: "朝ごはんを食べます。",
-      level: "N5",
-    });
-    setAnswer(text);
-  } catch (e) {
-    setAnswer("Không lấy được giải thích lúc này, thử lại sau nhé.");
-  } finally {
-    setLoading(false);
+export class NotAuthenticatedError extends Error {
+  constructor() {
+    super('NOT_AUTHENTICATED');
+    this.name = 'NotAuthenticatedError';
   }
 }
-──────────────────────────────────────────────────────────────────────── */
+
+export class AIQuotaExceededError extends Error {
+  limit?: number;
+  used?: number;
+  resetAt?: string;
+  constructor(info?: { limit?: number; used?: number; resetAt?: string }) {
+    super('AI_QUOTA_EXCEEDED');
+    this.name = 'AIQuotaExceededError';
+    this.limit = info?.limit;
+    this.used = info?.used;
+    this.resetAt = info?.resetAt;
+  }
+}
+
+// Cầu chì chung đang bật — Groq/hệ thống đang gặp sự cố, KHÔNG phải lỗi của riêng user này
+export class AIMaintenanceError extends Error {
+  constructor() {
+    super('AI_MAINTENANCE');
+    this.name = 'AIMaintenanceError';
+  }
+}
+
+export class AINetworkError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'AINetworkError';
+  }
+}
+
+interface WorkerResponse {
+  result?: AIResult;
+  fromCache?: boolean;
+  usage?: { used: number; limit: number };
+}
+
+/**
+ * Tra cứu AI cho 1 từ vựng / ngữ pháp / kanji cụ thể.
+ * `word` LUÔN LÀ từ đang hiển thị trên trang (không phải nội dung tự do user gõ).
+ *
+ * Ném lỗi cụ thể để UI xử lý riêng từng trường hợp — xem các class lỗi ở trên.
+ */
+export async function lookupAI(
+  type: AILookupType,
+  word: string,
+  context?: string
+): Promise<AIResult> {
+  const currentUser = auth().currentUser;
+  if (!currentUser) {
+    throw new NotAuthenticatedError();
+  }
+
+  let idToken: string;
+  try {
+    idToken = await currentUser.getIdToken();
+  } catch {
+    throw new NotAuthenticatedError();
+  }
+
+  let response: Response;
+  try {
+    response = await fetch(AI_WORKER_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${idToken}`,
+      },
+      body: JSON.stringify({ type, word, context }),
+    });
+  } catch (err: any) {
+    throw new AINetworkError(err?.message ?? 'Không thể kết nối tới máy chủ AI.');
+  }
+
+  if (response.status === 401) {
+    throw new NotAuthenticatedError();
+  }
+
+  if (response.status === 503) {
+    throw new AIMaintenanceError();
+  }
+
+  if (response.status === 429) {
+    let body: any = null;
+    try {
+      body = await response.json();
+    } catch {
+      // không parse được, vẫn coi là hết quota
+    }
+    throw new AIQuotaExceededError({
+      limit: body?.limit,
+      used: body?.used,
+      resetAt: body?.resetAt,
+    });
+  }
+
+  if (!response.ok) {
+    const errText = await response.text().catch(() => '');
+    throw new AINetworkError(`Lỗi máy chủ AI (${response.status}): ${errText || 'không rõ nguyên nhân'}`);
+  }
+
+  let data: WorkerResponse;
+  try {
+    data = await response.json();
+  } catch {
+    throw new AINetworkError('Phản hồi từ máy chủ AI không hợp lệ.');
+  }
+
+  if (!data?.result) {
+    throw new AINetworkError('AI không trả về nội dung.');
+  }
+
+  return data.result;
+}
+
+/** Tra cứu từ vựng — tiện dụng cho VocabDetailInline / vocab-detail.tsx */
+export function explainVocab(word: string, context?: string): Promise<AIResult> {
+  return lookupAI('vocab', word, context);
+}
+
+/** Tra cứu ngữ pháp — tiện dụng cho GrammarDetailInline / grammar-detail.tsx */
+export function explainGrammar(pattern: string, context?: string): Promise<AIResult> {
+  return lookupAI('grammar', pattern, context);
+}
+
+/** Tra cứu kanji — tiện dụng cho KanjiDetailInline / kanji-detail.tsx */
+export function explainKanji(char: string, context?: string): Promise<AIResult> {
+  return lookupAI('kanji', char, context);
+}

@@ -3,7 +3,7 @@
 // Trang chi tiết từ vựng - Giao diện giống ảnh + Bảng chia từ chuẩn
 // ─────────────────────────────────────────────────────────────────────────────
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   View,
   Text,
@@ -18,11 +18,43 @@ import { useLocalSearchParams, useRouter, Stack } from "expo-router";
 import { BottomTabBar } from "../components/BottomTabBar";
 import { AdBanner } from "../components/AdBanner";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
-import { useColors, useThemeMode, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
+import {
+  useColors,
+  useThemeMode,
+  ThemeFadeOverlay,
+} from "../artifacts/mirai-jp/hooks/useColors";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Speech from "expo-speech";
 import VocabImagePicker from "../components/VocabImagePicker";
+import { KanjiStrokeOrder } from "../components/KanjiStrokeOrder";
+import { WritingPracticeModal } from "../components/WritingPracticeModal";
+import {
+  getKanjiByCharFull,
+  getExamplesByKanjiChar,
+  type KanjiItem,
+  type KanjiExample,
+} from "../assets/data_JLPT_kanji";
 import { findExamplesByVocab, ExampleSentence } from "../assets/sentences";
+import { FeedbackSection } from "../components/FeedbackSection";
+import AIExplainPanel from "../components/AIExplainPanel";
+import { KeyboardAwareScrollViewCompat } from "../components/KeyboardAwareScrollViewCompat";
+
+// ============================================
+// 🈳 TÁCH CÁC KÝ TỰ KANJI TRONG TỪ (để hiển thị cách viết từng chữ)
+// ============================================
+function extractKanjiChars(text: string): string[] {
+  const chars: string[] = [];
+  const seen = new Set<string>();
+  for (const c of text) {
+    if (/[\u3400-\u9fff\uf900-\ufaff]/.test(c) && !seen.has(c)) {
+      seen.add(c);
+      chars.push(c);
+    }
+  }
+  return chars;
+}
+
+const MODAL_KANJI_MAX_EXAMPLES = 15;
 
 // ============================================
 // 📖 XÁC ĐỊNH LOẠI TỪ CHI TIẾT
@@ -471,13 +503,43 @@ function ConjugationTable({
   if (conjugations.length === 0) return null;
 
   return (
-    <View style={[styles.tableContainer, { backgroundColor: c.card, borderColor: c.border }]}>
-      <Text style={[styles.tableTitle, { backgroundColor: c.muted, color: c.text, borderBottomColor: c.border }]}>
+    <View
+      style={[
+        styles.tableContainer,
+        { backgroundColor: c.card, borderColor: c.border },
+      ]}
+    >
+      <Text
+        style={[
+          styles.tableTitle,
+          {
+            backgroundColor: c.muted,
+            color: c.text,
+            borderBottomColor: c.border,
+          },
+        ]}
+      >
         {displayTitle}
       </Text>
       <View style={[styles.tableHeader, { backgroundColor: c.primary }]}>
-        <Text style={[styles.headerCell, styles.headerName, { color: c.primaryForeground }]}>Tên thể</Text>
-        <Text style={[styles.headerCell, styles.headerValue, { color: c.primaryForeground }]}>Từ vựng</Text>
+        <Text
+          style={[
+            styles.headerCell,
+            styles.headerName,
+            { color: c.primaryForeground },
+          ]}
+        >
+          Tên thể
+        </Text>
+        <Text
+          style={[
+            styles.headerCell,
+            styles.headerValue,
+            { color: c.primaryForeground },
+          ]}
+        >
+          Từ vựng
+        </Text>
       </View>
       <ScrollView nestedScrollEnabled={true} style={styles.tableScroll}>
         {conjugations.map((item, index) => (
@@ -489,7 +551,9 @@ function ConjugationTable({
               index % 2 === 0 && { backgroundColor: c.muted },
             ]}
           >
-            <Text style={[styles.rowCell, styles.rowName, { color: c.text }]}>{item.name}</Text>
+            <Text style={[styles.rowCell, styles.rowName, { color: c.text }]}>
+              {item.name}
+            </Text>
             <Text style={[styles.rowCell, styles.rowValue, { color: c.text }]}>
               {item.japanese}
             </Text>
@@ -529,7 +593,8 @@ function resolveConjugationTarget(
 export default function VocabDetailScreen() {
   const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
   const { themeMode, timeOfDay } = useThemeMode();
-  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+  const isDark =
+    themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
 
   const router = useRouter();
   const { scopedKey } = useAuth();
@@ -552,10 +617,17 @@ export default function VocabDetailScreen() {
     conjugatedForm?: string;
   }>();
 
-    
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [showImageModal, setShowImageModal] = useState(false);
   const [showAllExamples, setShowAllExamples] = useState(false);
+  const [showStrokeModal, setShowStrokeModal] = useState(false);
+  const [strokeTabIndex, setStrokeTabIndex] = useState(0);
+  const [modalKanjiData, setModalKanjiData] = useState<KanjiItem | null>(null);
+  const [modalKanjiExamples, setModalKanjiExamples] = useState<KanjiExample[]>([]);
+  const [modalKanjiLoading, setModalKanjiLoading] = useState(false);
+// const [writingItem, setWritingItem] = useState<KanjiItem | null>(null);
+const [writingModalOpen, setWritingModalOpen] = useState(false);
+const [writingInitialIndex, setWritingInitialIndex] = useState(0);
 
   const vocabData = {
     id: params.id || "",
@@ -575,6 +647,57 @@ export default function VocabDetailScreen() {
     isConjugatedForm: params.isConjugatedForm === "true",
     conjugatedForm: params.conjugatedForm || null,
   };
+
+  const wordKanjiChars = useMemo(
+    () => extractKanjiChars(vocabData.kanji),
+    [vocabData.kanji],
+  );
+
+  // Tải đầy đủ thông tin chữ Hán (giống kanji-detail.tsx) mỗi khi modal mở
+  // hoặc chuyển tab sang chữ khác.
+  useEffect(() => {
+    if (!showStrokeModal) return;
+    const activeChar =
+      wordKanjiChars[strokeTabIndex] || wordKanjiChars[0] || "";
+    if (!activeChar) {
+      setModalKanjiData(null);
+      setModalKanjiExamples([]);
+      setModalKanjiLoading(false);
+      return;
+    }
+
+    setModalKanjiLoading(true);
+    setModalKanjiData(null);
+    setModalKanjiExamples([]);
+
+    const rafId = requestAnimationFrame(() => {
+      const data = getKanjiByCharFull(activeChar) || null;
+      setModalKanjiData(data);
+
+      const inlineExamples = (data as any)?.examples || [];
+      const vocabExamples = getExamplesByKanjiChar(
+        activeChar,
+        MODAL_KANJI_MAX_EXAMPLES,
+      );
+      const combined = [...inlineExamples];
+      for (const ex of vocabExamples) {
+        if (combined.length >= MODAL_KANJI_MAX_EXAMPLES) break;
+        if (!combined.some((existing: any) => existing.jp === ex.jp)) {
+          combined.push(ex);
+        }
+      }
+      setModalKanjiExamples(combined);
+      setModalKanjiLoading(false);
+    });
+    return () => cancelAnimationFrame(rafId);
+  }, [showStrokeModal, strokeTabIndex, wordKanjiChars]);
+
+const handleOpenWritingPractice = () => {
+  if (wordKanjiChars.length === 0) return;
+  const idx = strokeTabIndex < wordKanjiChars.length ? strokeTabIndex : 0;
+  setWritingInitialIndex(idx);
+  setWritingModalOpen(true);
+};
 
   const [relatedExamples, setRelatedExamples] = useState<ExampleSentence[]>([]);
 
@@ -700,7 +823,9 @@ export default function VocabDetailScreen() {
           onPress={() => router.back()}
           style={[styles.backBtn, { backgroundColor: c.primary }]}
         >
-          <Text style={[styles.backBtnText, { color: c.primaryForeground }]}>← Quay lại</Text>
+          <Text style={[styles.backBtnText, { color: c.primaryForeground }]}>
+            ← Quay lại
+          </Text>
         </TouchableOpacity>
       </View>
     );
@@ -709,34 +834,61 @@ export default function VocabDetailScreen() {
   return (
     <>
       <Stack.Screen options={{ headerShown: false }} />
-      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
+      <StatusBar
+        barStyle={isDark ? "light-content" : "dark-content"}
+        backgroundColor={c.background}
+      />
 
       <View style={[styles.container, { backgroundColor: c.background }]}>
         {/* Header */}
         <View style={[styles.header, { backgroundColor: c.background }]}>
           <TouchableOpacity
             onPress={() => router.back()}
-            style={[styles.backBtnHeader, { backgroundColor: c.card, borderColor: c.border }]}
+            style={[
+              styles.backBtnHeader,
+              { backgroundColor: c.card, borderColor: c.border },
+            ]}
           >
             <Text style={[styles.backIcon, { color: c.primary }]}>‹</Text>
           </TouchableOpacity>
-          <Text style={[styles.headerTitle, { color: c.primary }]}>Chi tiết từ vựng</Text>
+          <Text style={[styles.headerTitle, { color: c.primary }]}>
+            Chi tiết từ vựng
+          </Text>
           <View style={{ width: 42 }} />
         </View>
 
-        <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
-          <View style={[styles.card, { backgroundColor: c.card, borderColor: c.border }]}>
+        <KeyboardAwareScrollViewCompat
+          style={styles.content}
+          showsVerticalScrollIndicator={false}
+        >
+          <View
+            style={[
+              styles.card,
+              { backgroundColor: c.card, borderColor: c.border },
+            ]}
+          >
             <View style={styles.headerRow}>
               <View style={{ flex: 1 }}>
-                <Text style={[styles.bigKanji, { color: c.text }]}>{vocabData.kanji}</Text>
-                <Text style={[styles.bigHanViet, { color: c.primary }]}>{vocabData.han}</Text>
-                <Text style={[styles.bigHiragana, { color: c.text }]}>{vocabData.hiragana}</Text>
-                <Text style={[styles.bigNghia, { color: c.mutedForeground }]}>{vocabData.nghia}</Text>
+                <Text style={[styles.bigKanji, { color: c.text }]}>
+                  {vocabData.kanji}
+                </Text>
+                <Text style={[styles.bigHanViet, { color: c.primary }]}>
+                  {vocabData.han}
+                </Text>
+                <Text style={[styles.bigHiragana, { color: c.text }]}>
+                  {vocabData.hiragana}
+                </Text>
+                <Text style={[styles.bigNghia, { color: c.mutedForeground }]}>
+                  {vocabData.nghia}
+                </Text>
               </View>
               <View style={styles.headerActions}>
                 <TouchableOpacity
                   onPress={toggleBookmark}
-                  style={[styles.iconBtn, { backgroundColor: c.card, borderColor: c.border }]}
+                  style={[
+                    styles.iconBtn,
+                    { backgroundColor: c.card, borderColor: c.border },
+                  ]}
                 >
                   <Text style={styles.iconText}>
                     {isBookmarked ? "⭐" : "☆"}
@@ -744,21 +896,48 @@ export default function VocabDetailScreen() {
                 </TouchableOpacity>
                 <TouchableOpacity
                   onPress={speakWord}
-                  style={[styles.iconBtn, { backgroundColor: c.card, borderColor: c.border }]}
+                  style={[
+                    styles.iconBtn,
+                    { backgroundColor: c.card, borderColor: c.border },
+                  ]}
                 >
                   <Text style={styles.iconText}>🔊</Text>
                 </TouchableOpacity>
               </View>
             </View>
             <View style={[styles.divider, { backgroundColor: c.border }]} />
-            {/* 3 nút chức năng */}
             <View style={styles.funcRow}>
               <TouchableOpacity
                 style={[styles.funcBtn, { backgroundColor: c.muted }]}
                 onPress={() => setShowImageModal(true)}
               >
-                <Text style={[styles.funcBtnText, { color: c.mutedForeground }]}>🖼️ Ảnh minh họa</Text>
+                <Text style={[styles.funcBtnText, { color: c.mutedForeground }]} numberOfLines={1} adjustsFontSizeToFit>
+                  🖼️ Ảnh minh họa
+                </Text>
               </TouchableOpacity>
+              {wordKanjiChars.length > 0 && (
+                <TouchableOpacity
+                  style={[styles.funcBtn, { backgroundColor: c.muted }]}
+                  onPress={() => {
+                    setStrokeTabIndex(0);
+                    setShowStrokeModal(true);
+                  }}
+                >
+                  <Text style={[styles.funcBtnText, { color: c.mutedForeground }]} numberOfLines={1} adjustsFontSizeToFit>
+                    ✎ Cách viết
+                  </Text>
+                </TouchableOpacity>
+              )}
+              {wordKanjiChars.length > 0 && (
+                <TouchableOpacity
+                  style={[styles.funcBtn, { backgroundColor: c.muted }]}
+                  onPress={handleOpenWritingPractice}
+                >
+                  <Text style={[styles.funcBtnText, { color: c.mutedForeground }]} numberOfLines={1} adjustsFontSizeToFit>
+                    ✍️ Luyện viết
+                  </Text>
+                </TouchableOpacity>
+              )}
             </View>
 
             {/* Modal Ảnh minh họa */}
@@ -769,13 +948,30 @@ export default function VocabDetailScreen() {
               onRequestClose={() => setShowImageModal(false)}
             >
               <View style={styles.modalOverlay}>
-                <View style={[styles.imageModalContainer, { backgroundColor: c.card }]}>
-                  <View style={[styles.imageModalHeader, { borderBottomColor: c.border }]}>
+                <View
+                  style={[
+                    styles.imageModalContainer,
+                    { backgroundColor: c.card },
+                  ]}
+                >
+                  <View
+                    style={[
+                      styles.imageModalHeader,
+                      { borderBottomColor: c.border },
+                    ]}
+                  >
                     <Text style={[styles.imageModalTitle, { color: c.text }]}>
                       📸 Đóng góp hình ảnh
                     </Text>
                     <TouchableOpacity onPress={() => setShowImageModal(false)}>
-                      <Text style={[styles.imageModalClose, { color: c.mutedForeground }]}>✕</Text>
+                      <Text
+                        style={[
+                          styles.imageModalClose,
+                          { color: c.mutedForeground },
+                        ]}
+                      >
+                        ✕
+                      </Text>
                     </TouchableOpacity>
                   </View>
                   <ScrollView style={styles.imageModalContent}>
@@ -794,9 +990,404 @@ export default function VocabDetailScreen() {
               </View>
             </Modal>
 
+            {/* Modal Cách viết — thứ tự nét từng chữ Hán trong từ */}
+            <Modal
+              visible={showStrokeModal}
+              transparent={true}
+              animationType="slide"
+              onRequestClose={() => setShowStrokeModal(false)}
+            >
+              <View style={styles.modalOverlay}>
+                <View
+                  style={[
+                    styles.imageModalContainer,
+                    { backgroundColor: c.card },
+                  ]}
+                >
+                  <View style={[styles.imageModalHeader, { borderBottomColor: c.border }]}>
+                    <Text style={[styles.imageModalTitle, { color: c.text }]}>
+                      ✎ Cách viết: {vocabData.kanji}
+                    </Text>
+                    <TouchableOpacity onPress={() => setShowStrokeModal(false)}>
+                      <Text style={[styles.imageModalClose, { color: c.mutedForeground }]}>✕</Text>
+                    </TouchableOpacity>
+                  </View>
+
+                  {wordKanjiChars.length > 1 && (
+                    <ScrollView
+                      horizontal
+                      showsHorizontalScrollIndicator={false}
+                      style={[
+                        styles.strokeTabBar,
+                        { borderBottomColor: c.border },
+                      ]}
+                    >
+                      <View style={{ flexDirection: "row" }}>
+                        {wordKanjiChars.map((char, idx) => (
+                          <TouchableOpacity
+                            key={`${char}_${idx}`}
+                            onPress={() => setStrokeTabIndex(idx)}
+                            style={[
+                              styles.strokeTabItem,
+                              {
+                                borderBottomColor:
+                                  strokeTabIndex === idx
+                                    ? c.primary
+                                    : "transparent",
+                              },
+                            ]}
+                          >
+                            <Text
+                              style={[
+                                styles.strokeTabText,
+                                {
+                                  color:
+                                    strokeTabIndex === idx
+                                      ? c.primary
+                                      : c.mutedForeground,
+                                },
+                              ]}
+                            >
+                              {char}
+                            </Text>
+                          </TouchableOpacity>
+                        ))}
+                      </View>
+                    </ScrollView>
+                  )}
+
+                  <ScrollView
+                    style={styles.imageModalContent}
+                    contentContainerStyle={{
+                      paddingVertical: 12,
+                      paddingHorizontal: 4,
+                    }}
+                  >
+                    {modalKanjiLoading ? (
+                      <View
+                        style={{ paddingVertical: 40, alignItems: "center" }}
+                      >
+                        <Text style={{ color: c.mutedForeground }}>
+                          Đang tải...
+                        </Text>
+                      </View>
+                    ) : !modalKanjiData ? (
+                      <View
+                        style={{ paddingVertical: 40, alignItems: "center" }}
+                      >
+                        <Text
+                          style={{
+                            color: c.mutedForeground,
+                            textAlign: "center",
+                          }}
+                        >
+                          Không tìm thấy chữ &quot;
+                          {wordKanjiChars[strokeTabIndex] || wordKanjiChars[0]}
+                          &quot; trong cơ sở dữ liệu.
+                        </Text>
+                      </View>
+                    ) : (
+                      <>
+                        {/* Header: chữ + hán việt */}
+                        <View style={styles.kdHeaderRow}>
+                          <Text style={[styles.kdBigKanji, { color: c.text }]}>
+                            {modalKanjiData.kanji}
+                          </Text>
+                          <Text
+                            style={[
+                              styles.kdBigHanViet,
+                              { color: c.mutedForeground },
+                            ]}
+                          >
+                            {modalKanjiData.hanviet?.join(" • ") || ""}
+                          </Text>
+                        </View>
+
+                        <View
+                          style={[
+                            styles.kdDivider,
+                            { backgroundColor: c.border },
+                          ]}
+                        />
+
+                        {/* Phát âm */}
+                        <Text
+                          style={[styles.kdSectionTitle, { color: c.text }]}
+                        >
+                          Phát âm
+                        </Text>
+                        {modalKanjiData.readings?.kunyomi?.length > 0 && (
+                          <View style={styles.kdPronRow}>
+                            <Text
+                              style={[styles.kdDiamond, { color: c.accent }]}
+                            >
+                              ◆
+                            </Text>
+                            <View style={{ flex: 1 }}>
+                              <Text
+                                style={[
+                                  styles.kdPronLabel,
+                                  { color: c.primary },
+                                ]}
+                              >
+                                Kunyomi
+                              </Text>
+                              <Text
+                                style={[styles.kdPronValue, { color: c.text }]}
+                              >
+                                {modalKanjiData.readings.kunyomi.join("、")}
+                              </Text>
+                            </View>
+                          </View>
+                        )}
+                        {modalKanjiData.readings?.onyomi?.length > 0 && (
+                          <View style={styles.kdPronRow}>
+                            <Text
+                              style={[styles.kdDiamond, { color: c.accent }]}
+                            >
+                              ◆
+                            </Text>
+                            <View style={{ flex: 1 }}>
+                              <Text
+                                style={[
+                                  styles.kdPronLabel,
+                                  { color: c.primary },
+                                ]}
+                              >
+                                Onyomi
+                              </Text>
+                              <Text
+                                style={[styles.kdPronValue, { color: c.text }]}
+                              >
+                                {modalKanjiData.readings.onyomi.join("、")}
+                              </Text>
+                            </View>
+                          </View>
+                        )}
+
+                        {/* Thứ tự nét */}
+                        <View
+                          style={{ alignItems: "center", marginVertical: 12 }}
+                        >
+                          <KanjiStrokeOrder
+                            kanji={modalKanjiData.kanji}
+                            size={200}
+                          />
+                        </View>
+
+                        {/* Thống kê */}
+                        <View style={styles.kdStatsRow}>
+                          <View style={styles.kdStatCol}>
+                            <View
+                              style={[
+                                styles.kdStatChip,
+                                {
+                                  backgroundColor: c.muted,
+                                  borderColor: c.border,
+                                },
+                              ]}
+                            >
+                              <Text
+                                style={[
+                                  styles.kdStatChipText,
+                                  { color: c.mutedForeground },
+                                ]}
+                              >
+                                JLPT
+                              </Text>
+                            </View>
+                            <Text
+                              style={[styles.kdStatValue, { color: c.primary }]}
+                            >
+                              {modalKanjiData.jlpt || "—"}
+                            </Text>
+                          </View>
+                          <View style={styles.kdStatCol}>
+                            <View
+                              style={[
+                                styles.kdStatChip,
+                                {
+                                  backgroundColor: c.muted,
+                                  borderColor: c.border,
+                                },
+                              ]}
+                            >
+                              <Text
+                                style={[
+                                  styles.kdStatChipText,
+                                  { color: c.mutedForeground },
+                                ]}
+                              >
+                                Tần suất
+                              </Text>
+                            </View>
+                            <Text
+                              style={[styles.kdStatValue, { color: c.primary }]}
+                            >
+                              {modalKanjiData.freq
+                                ? `#${modalKanjiData.freq}/2500`
+                                : "—"}
+                            </Text>
+                          </View>
+                          <View style={styles.kdStatCol}>
+                            <View
+                              style={[
+                                styles.kdStatChip,
+                                {
+                                  backgroundColor: c.muted,
+                                  borderColor: c.border,
+                                },
+                              ]}
+                            >
+                              <Text
+                                style={[
+                                  styles.kdStatChipText,
+                                  { color: c.mutedForeground },
+                                ]}
+                              >
+                                Số nét
+                              </Text>
+                            </View>
+                            <Text
+                              style={[styles.kdStatValue, { color: c.primary }]}
+                            >
+                              {modalKanjiData.strokes || "—"}
+                            </Text>
+                          </View>
+                        </View>
+
+                        <View
+                          style={[
+                            styles.kdDivider,
+                            { backgroundColor: c.border },
+                          ]}
+                        />
+
+                        {/* Bộ thủ & Phân tích */}
+                        {(modalKanjiData.components ?? []).length > 0 && (
+                          <>
+                            <Text
+                              style={[styles.kdSectionTitle, { color: c.text }]}
+                            >
+                              Bộ & Phân tích
+                            </Text>
+                            {(modalKanjiData.components ?? []).map(
+                              (comp, i) => (
+                                <View key={i} style={styles.kdBushuRow}>
+                                  <View
+                                    style={[
+                                      styles.kdBushuBar,
+                                      { backgroundColor: c.accent },
+                                    ]}
+                                  />
+                                  <Text
+                                    style={[
+                                      styles.kdBushuKanji,
+                                      { color: c.text },
+                                    ]}
+                                  >
+                                    {comp.kanji}
+                                  </Text>
+                                  {comp.hanViet ? (
+                                    <Text
+                                      style={[
+                                        styles.kdBushuHanViet,
+                                        { color: c.mutedForeground },
+                                      ]}
+                                    >
+                                      {comp.hanViet}
+                                    </Text>
+                                  ) : null}
+                                </View>
+                              ),
+                            )}
+                            <View
+                              style={[
+                                styles.kdDivider,
+                                { backgroundColor: c.border },
+                              ]}
+                            />
+                          </>
+                        )}
+
+                        {/* Nghĩa */}
+                        <Text
+                          style={[styles.kdSectionTitle, { color: c.text }]}
+                        >
+                          Nghĩa
+                        </Text>
+                        {modalKanjiData.meanings_vi?.map((m, i) => (
+                          <View key={i} style={styles.kdMeaningRow}>
+                            <Text
+                              style={[styles.kdMeaningDot, { color: c.accent }]}
+                            >
+                              •
+                            </Text>
+                            <Text
+                              style={[styles.kdMeaningText, { color: c.text }]}
+                            >
+                              {m}
+                            </Text>
+                          </View>
+                        ))}
+
+                        {/* Ví dụ */}
+                        {modalKanjiExamples.length > 0 && (
+                          <>
+                            <View
+                              style={[
+                                styles.kdDivider,
+                                { backgroundColor: c.border },
+                              ]}
+                            />
+                            <Text
+                              style={[styles.kdSectionTitle, { color: c.text }]}
+                            >
+                              Ví dụ {modalKanjiExamples.length}
+                            </Text>
+                            {modalKanjiExamples.map((ex, i) => (
+                              <View key={i} style={styles.kdExampleRow}>
+                                <Text
+                                  style={[
+                                    styles.kdExampleJp,
+                                    { color: c.text },
+                                  ]}
+                                >
+                                  {ex.jp}
+                                </Text>
+                                <Text
+                                  style={[
+                                    styles.kdExampleReading,
+                                    { color: c.primary },
+                                  ]}
+                                >
+                                  {ex.reading}
+                                </Text>
+                                <Text
+                                  style={[
+                                    styles.kdExampleVi,
+                                    { color: c.mutedForeground },
+                                  ]}
+                                >
+                                  → {ex.vi}
+                                </Text>
+                              </View>
+                            ))}
+                          </>
+                        )}
+                      </>
+                    )}
+                  </ScrollView>
+                </View>
+                <ThemeFadeOverlay />
+              </View>
+            </Modal>
+
             {/* Trình độ */}
             <View style={styles.levelRow}>
-              <Text style={[styles.levelLabel, { color: c.mutedForeground }]}>Trình độ:</Text>
+              <Text style={[styles.levelLabel, { color: c.mutedForeground }]}>
+                Trình độ:
+              </Text>
               <View
                 style={[
                   styles.levelBadge,
@@ -815,7 +1406,12 @@ export default function VocabDetailScreen() {
             </View>
 
             {/* Loại từ + Đầy đủ nghĩa — gộp chung 1 khối, luôn hiển thị mặc định mở */}
-            <View style={[styles.fullMeaningBox, { backgroundColor: c.primary + "14" }]}>
+            <View
+              style={[
+                styles.fullMeaningBox,
+                { backgroundColor: c.primary + "14" },
+              ]}
+            >
               <Text style={[styles.fullMeaningTitle, { color: c.primary }]}>
                 📖 Đầy đủ nghĩa và cách dùng:
               </Text>
@@ -837,16 +1433,32 @@ export default function VocabDetailScreen() {
               )}
             </View>
 
-            {/* Nghĩa số 1 */}
+                        {/* Nghĩa số 1 */}
             <View style={styles.meaningSection}>
-              <Text style={[styles.meaningNumber, { color: c.primary }]}>1.</Text>
-              <Text style={[styles.meaningText, { color: c.text }]}>{vocabData.nghia}</Text>
+              <Text style={[styles.meaningNumber, { color: c.primary }]}>
+                1.
+              </Text>
+              <Text style={[styles.meaningText, { color: c.text }]}>
+                {vocabData.nghia}
+              </Text>
             </View>
+
+            {/* Tra cứu từ AI */}
+            <AIExplainPanel type="vocab" word={vocabData.kanji} context={vocabData.nghia} />
+
+            {/* Ví dụ */}
 
             {/* Ví dụ */}
             {vocabData.example && (
-              <View style={[styles.exampleBox, { backgroundColor: c.primary + "14" }]}>
-                <Text style={[styles.exampleJp, { color: c.primary }]}>{vocabData.example}</Text>
+              <View
+                style={[
+                  styles.exampleBox,
+                  { backgroundColor: c.primary + "14" },
+                ]}
+              >
+                <Text style={[styles.exampleJp, { color: c.primary }]}>
+                  {vocabData.example}
+                </Text>
                 {vocabData.exampleMeaning && (
                   <Text style={[styles.exampleVi, { color: c.text }]}>
                     {vocabData.exampleMeaning}
@@ -859,8 +1471,12 @@ export default function VocabDetailScreen() {
             {relatedExamples.length > 0 && (
               <View style={styles.examplesSection}>
                 <View style={styles.sectionHeader}>
-                  <Text style={[styles.sectionTitle, { color: c.text }]}>📖 Mẫu câu ví dụ</Text>
-                  <Text style={[styles.sectionCount, { color: c.mutedForeground }]}>
+                  <Text style={[styles.sectionTitle, { color: c.text }]}>
+                    📖 Mẫu câu ví dụ
+                  </Text>
+                  <Text
+                    style={[styles.sectionCount, { color: c.mutedForeground }]}
+                  >
                     {relatedExamples.length} câu
                   </Text>
                 </View>
@@ -872,10 +1488,19 @@ export default function VocabDetailScreen() {
                 ).map((item) => (
                   <View
                     key={item.id}
-                    style={[styles.exampleCard, { backgroundColor: c.muted, borderColor: c.border }]}
+                    style={[
+                      styles.exampleCard,
+                      { backgroundColor: c.muted, borderColor: c.border },
+                    ]}
                   >
-                    <Text style={[styles.exampleJp, { color: c.primary }]}>{item.jp}</Text>
-                    <Text style={[styles.exampleVi, { color: c.mutedForeground }]}>{item.vi}</Text>
+                    <Text style={[styles.exampleJp, { color: c.primary }]}>
+                      {item.jp}
+                    </Text>
+                    <Text
+                      style={[styles.exampleVi, { color: c.mutedForeground }]}
+                    >
+                      {item.vi}
+                    </Text>
                   </View>
                 ))}
 
@@ -912,14 +1537,27 @@ export default function VocabDetailScreen() {
             )}
 
             {/* Xem thêm */}
-            <TouchableOpacity style={[styles.viewMoreBtn, { borderTopColor: c.border }]}>
-              <Text style={[styles.viewMoreText, { color: c.primary }]}>Xem thêm</Text>
+            <TouchableOpacity
+              style={[styles.viewMoreBtn, { borderTopColor: c.border }]}
+            >
+              <Text style={[styles.viewMoreText, { color: c.primary }]}>
+                Xem thêm
+              </Text>
             </TouchableOpacity>
           </View>
-        </ScrollView>
+          <View style={{ paddingHorizontal: 12 }}>
+            <FeedbackSection pageKey={`Vocad-detail::${vocabData.id}`} />
+          </View>
+          <View style={{ height: 40 }} />
+        </KeyboardAwareScrollViewCompat>
         <BottomTabBar />
         <AdBanner />
       </View>
+      <WritingPracticeModal
+        chars={writingModalOpen ? wordKanjiChars : null}
+        initialIndex={writingInitialIndex}
+        onClose={() => setWritingModalOpen(false)}
+      />
     </>
   );
 }
@@ -1037,21 +1675,25 @@ const styles = StyleSheet.create({
     textAlign: "center",
     marginBottom: 4,
   },
-  funcRow: {
+    funcRow: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginBottom: 24,
+    marginBottom: 12,
   },
   funcBtn: {
     flex: 1,
     alignItems: "center",
+    justifyContent: "center",
     paddingVertical: 10,
+    paddingHorizontal: 4,
     marginHorizontal: 4,
     borderRadius: 20,
+    minHeight: 40,
   },
   funcBtnText: {
-    fontSize: 12,
+    fontSize: 11,
     fontWeight: "600",
+    textAlign: "center",
   },
   levelRow: {
     flexDirection: "row",
@@ -1277,4 +1919,92 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: "600",
   },
+  strokeTabBar: {
+    maxHeight: 48,
+    borderBottomWidth: 1,
+    marginBottom: 4,
+  },
+  strokeTabItem: {
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderBottomWidth: 2,
+    minHeight: 36,
+    justifyContent: "center",
+  },
+    strokeTabText: {
+    fontSize: 18,
+    fontWeight: "700",
+  },
+  charChipRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginBottom: 16,
+  },
+  charChip: {
+    paddingHorizontal: 14,
+    paddingVertical: 6,
+    borderRadius: 16,
+    borderWidth: 1.5,
+  },
+  charChipText: {
+    fontSize: 18,
+    fontWeight: "700",
+  },
+  kdHeaderRow: { alignItems: "center", marginBottom: 4 },
+  kdBigKanji: { fontSize: 32, fontWeight: "800", lineHeight: 40 },
+  kdBigHanViet: {
+    fontSize: 16,
+    fontWeight: "700",
+    letterSpacing: 1,
+    marginTop: 2,
+  },
+  kdDivider: { height: StyleSheet.hairlineWidth, marginVertical: 14 },
+  kdSectionTitle: { fontSize: 15, fontWeight: "800", marginBottom: 10 },
+  kdPronRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    marginBottom: 10,
+    flexWrap: "wrap",
+  },
+  kdDiamond: { fontSize: 16, marginRight: 8, marginTop: 4 },
+  kdPronLabel: { fontSize: 13, fontWeight: "700" },
+  kdPronValue: {
+    fontSize: 18,
+    marginTop: 2,
+    flex: 1,
+    flexWrap: "wrap",
+    paddingRight: 8,
+  },
+  kdStatsRow: { flexDirection: "row", marginTop: 4, paddingHorizontal: 4 },
+  kdStatCol: { flex: 1, alignItems: "center" },
+  kdStatChip: {
+    paddingHorizontal: 12,
+    paddingVertical: 4,
+    borderRadius: 14,
+    borderWidth: 1,
+  },
+  kdStatChipText: { fontSize: 11, fontWeight: "600" },
+  kdStatValue: { fontSize: 16, fontWeight: "800", marginTop: 6 },
+  kdBushuHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 6,
+  },
+  kdBushuRow: { flexDirection: "row", alignItems: "center", marginTop: 8 },
+  kdBushuBar: { width: 3, height: 18, marginRight: 8, borderRadius: 2 },
+  kdBushuKanji: { fontSize: 26, fontWeight: "700", marginRight: 6 },
+  kdBushuHanViet: { fontSize: 13 },
+  kdMeaningRow: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    marginBottom: 6,
+  },
+  kdMeaningDot: { fontSize: 16, marginRight: 8 },
+  kdMeaningText: { flex: 1, fontSize: 16, lineHeight: 22 },
+  kdExampleRow: { marginBottom: 12, paddingLeft: 4 },
+  kdExampleJp: { fontSize: 18, fontWeight: "700" },
+  kdExampleReading: { fontSize: 14, marginTop: 2 },
+  kdExampleVi: { fontSize: 14, marginTop: 2 },
 });

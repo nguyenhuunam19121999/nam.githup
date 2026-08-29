@@ -28,6 +28,7 @@ import {
   type GrammarItem,
 } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
+import { KeyboardAwareScrollViewCompat } from "../components/KeyboardAwareScrollViewCompat";
 import { useColors, useThemeMode, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
 
 // ─── Modal thống kê ngữ pháp ─────────────────────────────────────────────────
@@ -264,7 +265,7 @@ export default function GrammarScreen() {
       </View>
 
       {/* ── Danh sách ngữ pháp ─────────────────────────────────────────── */}
-      <ScrollView
+      <KeyboardAwareScrollViewCompat
         style={s.scroll}
         contentContainerStyle={s.scrollContent}
         showsVerticalScrollIndicator={false}
@@ -311,9 +312,8 @@ export default function GrammarScreen() {
         <View style={{ paddingHorizontal: 14, paddingTop: 4 }}>
           <FeedbackSection pageKey={`grammar::${level}`} />
         </View>
-
         <View style={{ height: 40 }} />
-      </ScrollView>
+      </KeyboardAwareScrollViewCompat>
 
       {/* ── Bottom sheets ──────────────────────────────────────────────── */}
       <BottomSheetPicker

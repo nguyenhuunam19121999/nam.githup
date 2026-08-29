@@ -1,0 +1,319 @@
+{
+  "grammar_〜が早いか": {
+    "meaning": "Biểu thị hành động xảy ra ngay sau một hành động khác, tương đương 'vừa... thì ngay lập tức'",
+    "usage": "Được dùng sau dạng động từ (v-辞書形) hoặc danh từ + が, nối với 'が早いか' để chỉ thời điểm ngay khi hành động trước kết thúc, thường kết hợp với câu tiếp theo ở dạng すぐに、たちまち... để diễn tả sự liên tiếp nhanh chóng",
+    "examples": [
+      {
+        "jp": "雨が降り出すが早いか、彼は傘をさした。",
+        "vi": "Mưa vừa rơi xuống, anh ấy lập tức mở dù."
+      },
+      {
+        "jp": "授業が終わるが早いか、生徒たちは教室を出た。",
+        "vi": "Khi lớp học vừa kết thúc, học sinh ngay lập tức ra khỏi lớp."
+      }
+    ],
+    "synonyms_distinction": "Tương tự '〜とすぐに', '〜や否や' nhưng 'が早いか' nhấn mạnh tính nhanh chóng ngay sau hành động đầu, thường dùng trong văn viết trang trọng",
+    "notes": "Cấu trúc thường xuất hiện trong văn viết, ít dùng trong hội thoại thông thường",
+    "cachedAt": "2026-08-28T12:32:38.057Z"
+  },
+  "grammar_〜とあれば": {
+    "meaning": "「〜とあれば」 là một cấu trúc ngữ pháp dùng để diễn tả điều kiện giả định, có nghĩa là “nếu (điều đó) là …” hoặc “trong trường hợp …”. Thường dùng để đưa ra giả thuyết, suy đoán dựa trên một tiền đề đã cho.",
+    "usage": "Dùng sau danh từ hoặc cụm danh từ, thường kết hợp với các trạng từ, động từ thể hiện giả định. Cấu trúc: [danh từ/ cụm danh từ] + とあれば + [câu chính]. Ngữ cảnh: khi người nói muốn đưa ra quan điểm, lời khuyên hoặc dự đoán dựa trên giả thiết rằng một điều gì đó là đúng.",
+    "examples": [
+      {
+        "jp": "彼が来るとあれば、計画を変更しないでいい。",
+        "vi": "Nếu anh ấy sẽ đến, thì không cần thay đổi kế hoạch."
+      },
+      {
+        "jp": "時間が足りないとあれば、先に結論を出すべきだ。",
+        "vi": "Nếu thời gian không đủ, chúng ta nên đưa ra kết luận ngay lập tức."
+      },
+      {
+        "jp": "この商品が人気だとあれば、在庫を増やす必要があります。",
+        "vi": "Nếu sản phẩm này đang được ưa chuộng, cần tăng số lượng tồn kho."
+      }
+    ],
+    "synonyms_distinction": "Tương đồng với 「〜なら」, 「〜としたら」, nhưng 「〜とあれば」 nhấn mạnh tính giả định dựa trên một tiền đề đã biết, thường mang tính khẳng định mạnh hơn so với 「〜なら」 (điều kiện chung) và ít dùng trong câu hỏi so với 「〜としたら」 (giả thiết).",
+    "notes": "Cấu trúc này thường xuất hiện trong văn viết hoặc lời nói trang trọng, không phổ biến trong hội thoại hàng ngày. Cần lưu ý không dùng sau động từ; chỉ dùng sau danh từ hoặc cụm danh từ.",
+    "cachedAt": "2026-08-28T11:40:10.327Z"
+  },
+  "kanji_会う": {
+    "meaning": "会う（あう） là động từ nhóm 1 (五段) có nghĩa là “gặp”, “gặp mặt”, “gặp nhau”. Thường dùng để chỉ việc gặp một người hoặc một nhóm người, có thể là gặp lần đầu hoặc gặp lại người đã biết.",
+    "usage": "Dùng khi nói về việc gặp ai đó trực tiếp, thường kèm theo các danh từ chỉ người hoặc các trạng từ chỉ thời gian, địa điểm. Có thể dùng ở dạng lịch sự (会います) hoặc thể thường (会う).",
+    "examples": [
+      {
+        "jp": "明日、友達に会う予定です。",
+        "vi": "Ngày mai tôi dự định sẽ gặp bạn."
+      },
+      {
+        "jp": "駅で彼と会いました。",
+        "vi": "Tôi đã gặp anh ấy ở ga."
+      },
+      {
+        "jp": "久しぶりに家族に会うと、嬉しかったです。",
+        "vi": "Khi gặp lại gia đình sau thời gian dài, tôi rất vui."
+      }
+    ],
+    "synonyms_distinction": "Đồng nghĩa gần: 逢う（あう）cũng có nghĩa “gặp”, nhưng 逢う thường dùng cho những cuộc gặp mang tính chất tình cảm, sâu sắc hoặc không thường xuyên, ví dụ: 旧友と逢う。会う mang tính chung chung và thường dùng trong giao tiếp hàng ngày.",
+    "notes": "会う là động từ tự động, không cần bổ ngữ trực tiếp, nhưng thường đi kèm với trợ từ に để chỉ người gặp. Khi muốn nhấn mạnh việc sắp xếp gặp gỡ, có thể dùng 会う約束（あうやくそく）hoặc 会う予定.",
+    "cachedAt": "2026-08-28T12:48:35.872Z"
+  },
+  "kanji_俊足": {
+    "meaning": "Đôi chân nhanh nhẹn, người có khả năng chạy nhanh, tài năng về tốc độ",
+    "usage": "Dùng để mô tả người có bước chân nhanh, vận động viên hoặc người di chuyển linh hoạt",
+    "examples": [
+      {
+        "jp": "彼は俊足の選手だ。",
+        "vi": "Anh ấy là vận động viên có đôi chân nhanh nhẹn."
+      },
+      {
+        "jp": "俊足で山道を駆け上がった。",
+        "vi": "Anh ấy đã chạy lên đường núi một cách nhanh nhẹn."
+      }
+    ],
+    "synonyms_distinction": "Tương đồng với 速足 (soku‑soku) nhưng 俊足 nhấn mạnh tài năng, khéo léo, còn 速足 chỉ tốc độ thuần túy.",
+    "notes": "Không phổ biến trong giao tiếp hằng ngày, thường xuất hiện trong văn xuôi hoặc mô tả thể thao.",
+    "cachedAt": "2026-08-28T12:15:11.111Z"
+  },
+  "kanji_呂": {
+    "meaning": "\"呂\" (ろ) có nghĩa là \"cột sống\", \"xương sống\"; trong tiếng Nhật cổ nghĩa này dùng để chỉ phần trung tâm của sống lưng, thường xuất hiện trong các từ cổ điển hoặc như bộ thủ trong các kanji khác",
+    "usage": "Được dùng ít gặp trong tiếng hiện đại, thường xuất hiện trong các từ ngữ cổ, tên riêng (ví dụ: 呂布) hoặc trong các thành ngữ, đồng thời là bộ thủ (部首) của một số kanji",
+    "examples": [
+      {
+        "jp": "背中の呂が痛む",
+        "vi": "Cột sống ở lưng bị đau"
+      },
+      {
+        "jp": "呂を伸ばす運動をする",
+        "vi": "Thực hiện bài tập duỗi cột sống"
+      }
+    ],
+    "synonyms_distinction": "Tương đồng với \"背骨\" (せぼね) và \"脊椎\" (せきつい) – đều chỉ xương sống, nhưng \"呂\" mang tính cổ điển, thường xuất hiện trong văn bản cổ hoặc như bộ thủ, trong khi \"背骨\" và \"脊椎\" là từ thông dụng hiện đại",
+    "notes": "\"呂\" là bộ thủ số 34, thường xuất hiện trong các kanji như \"聾\", \"魯\"; không thường dùng độc lập trong giao tiếp hàng ngày",
+    "cachedAt": "2026-08-28T12:00:01.804Z"
+  },
+  "vocab_あたかも": {
+    "meaning": "“あたかも” là trạng từ chỉ sự so sánh, mang nghĩa “cứ như”, “như thể”, “giống như”, dùng để nhấn mạnh rằng một hiện tượng, hành động, trạng thái giống hệt hoặc gần giống với một điều khác đã nêu ra.",
+    "usage": "Dùng ở đầu câu hoặc trước một mệnh đề để nhấn mạnh sự tương đồng; thường kết hợp với “かのように”, “のように”. Thường xuất hiện trong văn viết hoặc ngữ cảnh trang trọng, có thể dùng trong câu khẳng định hoặc phủ định.",
+    "examples": [
+      {
+        "jp": "あたかも彼が犯人であるかのように、警察は彼を追いかけた。",
+        "vi": "Cảnh sát đuổi theo anh ấy như thể anh ta là kẻ phạm tội."
+      },
+      {
+        "jp": "彼はあたかも無事に帰って来たかのように笑った。",
+        "vi": "Anh ấy cười như thể đã trở về an toàn."
+      },
+      {
+        "jp": "あたかも何も起こらなかったかのように、彼は仕事に戻った。",
+        "vi": "Anh ta trở lại công việc như thể không có gì xảy ra."
+      }
+    ],
+    "synonyms_distinction": "Tương đồng với “まるで” (giống như) và “まるで…かのように”, nhưng “あたかも” thường trang trọng hơn, thường đi kèm với “かのように” để tạo cấu trúc so sánh mạnh mẽ. “まるで” thường dùng trong giao tiếp thường ngày, có thể đứng độc lập mà không cần “かのように”.",
+    "notes": "“あたかも” thường xuất hiện trong câu văn mô tả, không dùng trong câu mệnh lệnh hoặc câu hỏi ngắn gọn. Có thể kết hợp với “かのように” hoặc “のように” để tăng tính biểu cảm.",
+    "cachedAt": "2026-08-28T11:37:28.564Z"
+  },
+  "vocab_に際して": {
+    "meaning": "‘に際して’ là một cụm từ dùng để chỉ thời điểm, dịp hoặc hoàn cảnh nào đó đang diễn ra, mang nghĩa “khi…, nhân dịp…, trong lúc…”. Thường dùng trong văn viết, ngôn ngữ trang trọng.",
+    "usage": "Đặt sau danh từ (thường là danh từ chỉ thời gian, sự kiện, hoặc tình huống) để diễn tả hành động hoặc lời nói xảy ra trong thời điểm đó. Thường xuất hiện trong các bài phát biểu, thông cáo báo chí, văn bản chính thức.",
+    "examples": [
+      {
+        "jp": "新製品の発売に際して、記者会見を開くことになった。",
+        "vi": "Nhân dịp ra mắt sản phẩm mới, chúng tôi sẽ tổ chức một buổi họp báo."
+      },
+      {
+        "jp": "卒業式に際して、校長が挨拶した。",
+        "vi": "Trong buổi lễ tốt nghiệp, hiệu trưởng đã lên lời chào."
+      },
+      {
+        "jp": "災害に際して、住民は迅速に避難した。",
+        "vi": "Khi xảy ra thảm họa, người dân đã nhanh chóng di tản."
+      }
+    ],
+    "synonyms_distinction": "Tương tự ‘とき’, ‘際に’, ‘時に’ nhưng ‘に際して’ mang tính trang trọng, dùng trong bối cảnh chính thức hơn. ‘とき’ thường dùng trong giao tiếp thông thường, còn ‘際に’ ít trang trọng hơn và có thể dùng cho cả tình huống không chính thức.",
+    "notes": "‘に際して’ không dùng cho các hành động đã hoàn thành; nó chỉ mô tả thời điểm hiện tại hoặc tương lai gần. Thường không đi kèm với các trạng từ chỉ tần suất như ‘いつも’, ‘よく’. ",
+    "cachedAt": "2026-08-28T11:32:10.230Z"
+  },
+  "vocab_反論": {
+    "meaning": "phản bác, bác lại; đưa ra lập luận hoặc bằng chứng để bác bỏ quan điểm của người khác",
+    "usage": "Được dùng khi muốn chỉ việc đưa ra ý kiến trái ngược, phản đối lại lập luận của người khác trong tranh luận, cuộc họp, hoặc viết luận.",
+    "examples": [
+      {
+        "jp": "彼の意見に対して、彼女は強く反論した。",
+        "vi": "Cô ấy đã phản bác mạnh mẽ lại quan điểm của anh ấy."
+      },
+      {
+        "jp": "この証拠は彼の主張を反論できる。",
+        "vi": "Bằng chứng này có thể bác lại lập luận của anh ấy."
+      }
+    ],
+    "synonyms_distinction": "同義語: 反対（はんたい）– chỉ sự phản đối chung, không nhất thiết có lập luận; 異議（いぎ）– chỉ sự bất đồng, thường dùng trong ngữ cảnh trang trọng. 反論 nhấn mạnh việc đưa ra lập luận, bằng chứng để bác bỏ.",
+    "notes": "Trong văn viết, 反論 thường đi kèm với する (反論する) để chỉ hành động phản bác.",
+    "cachedAt": "2026-08-28T11:36:36.425Z"
+  },
+  "vocab_発端": {
+    "meaning": "khởi điểm, nguồn gốc, nguyên nhân ban đầu của một sự việc",
+    "usage": "dùng như danh từ, thường đi kèm với trợ từ が, は, の; thường xuất hiện trong cấu trúc \"～の発端\" hoặc \"事件の発端は～\" để chỉ nguyên nhân khởi sinh của một sự kiện",
+    "examples": [
+      {
+        "jp": "事件の発端は彼の不注意だった。",
+        "vi": "Nguyên nhân của vụ việc là do sự bất cẩn của anh ấy."
+      },
+      {
+        "jp": "この争いの発端は小さな誤解に過ぎない。",
+        "vi": "Nguyên nhân của cuộc tranh chấp này chỉ là một hiểu lầm nhỏ."
+      }
+    ],
+    "synonyms_distinction": "「起点」 chỉ điểm khởi đầu về vị trí hoặc thời gian, mang tính trung lập; 「起源」 nhấn mạnh nguồn gốc sâu xa, lịch sử; 「始まり」 là cách nói chung cho \"bắt đầu\"; trong khi \"発端\" nhấn mạnh yếu tố gây ra, là mồi lửa khởi sinh của một sự việc cụ thể.",
+    "notes": "",
+    "cachedAt": "2026-08-28T11:35:32.043Z"
+  },
+  "kanji_俊才": {
+    "meaning": "俊才 là một danh từ chỉ người tài năng, xuất chúng, người có trí tuệ và năng lực vượt trội.",
+    "usage": "Thường dùng để khen ngợi người có khả năng xuất sắc trong học tập, công việc hoặc nghệ thuật; thường đi kèm với các danh từ như 彼は, 彼女は...",
+    "examples": [
+      {
+        "jp": "彼は若くして俊才で、会社の重要なプロジェクトを任された。",
+        "vi": "Anh ấy còn trẻ nhưng tài năng xuất chúng, được giao dự án quan trọng của công ty."
+      },
+      {
+        "jp": "その学生は数学の俊才だ。",
+        "vi": "Học sinh đó là thiên tài về toán học."
+      }
+    ],
+    "synonyms_distinction": "俊才 tương tự 天才 (thiên tài) nhưng 俊才 nhấn mạnh vào tài năng và sự xuất sắc trong một lĩnh vực cụ thể, còn 天才 thường chỉ tài năng thiên bẩm rộng hơn.",
+    "notes": "俊 (しゅん) nghĩa 'tài hoa, xuất sắc', 才 (さい) nghĩa 'tài năng, khả năng'.",
+    "cachedAt": "2026-08-29T12:16:30.155Z"
+  },
+  "kanji_抑制": {
+    "meaning": "động từ danh từ, chỉ hành động hoặc quá trình kiềm chế, hạn chế sự phát triển, lan truyền hoặc tác động của một hiện tượng, cảm xúc, hành vi",
+    "usage": "thường dùng trong các ngữ cảnh y học, xã hội, tâm lý học để diễn tả việc kiểm soát hoặc ngăn chặn một yếu tố không mong muốn",
+    "examples": [
+      {
+        "jp": "感染の拡大を抑制するために、政府は外出自粛を要請した。",
+        "vi": "Chính phủ yêu cầu kiềm chế việc ra ngoài nhằm hạn chế sự lây lan của dịch bệnh."
+      },
+      {
+        "jp": "感情を抑制できずに泣き出した。",
+        "vi": "Không thể kiềm chế cảm xúc nên đã bật khóc ra."
+      },
+      {
+        "jp": "この薬は血圧の上昇を抑制する効果がある。",
+        "vi": "Thuốc này có tác dụng hạn chế sự tăng huyết áp."
+      }
+    ],
+    "synonyms_distinction": "「抑える」(よくえる) cũng có nghĩa 'kiềm chế, ngăn lại' nhưng thường dùng cho hành động cá nhân hoặc cảm xúc; \"抑制\" nhấn mạnh quá trình, biện pháp kiềm chế, thường xuất hiện trong ngữ cảnh chính sách, y học, khoa học.",
+    "notes": "Kanji: 抑 (kiềm) + 制 (kiểm, chế) = kiềm chế; trong tiếng Nhật thường xuất hiện dưới dạng danh từ hoặc kết hợp với các hậu tố như \"抑制する\" (động từ) hoặc \"抑制力\" (năng lực kiềm chế).",
+    "cachedAt": "2026-08-29T12:18:13.774Z"
+  },
+  "kanji_精錬する": {
+    "meaning": "'精錬する' có nghĩa là quá trình tinh luyện, loại bỏ tạp chất để làm cho vật chất, đặc biệt là kim loại, trở nên tinh khiết hơn; cũng có thể dùng để chỉ việc rèn luyện, cải thiện kỹ năng một cách tỉ mỉ.",
+    "usage": "Thường dùng trong ngữ cảnh công nghiệp, hóa học hoặc khi nói về việc rèn luyện, cải thiện một kỹ năng một cách chi tiết và tỉ mỉ.",
+    "examples": [
+      {
+        "jp": "精錬することで金属の純度が上がります。",
+        "vi": "Bằng việc tinh luyện, độ tinh khiết của kim loại tăng lên."
+      },
+      {
+        "jp": "彼は精錬された技術で作品を作る。",
+        "vi": "Anh ấy tạo ra tác phẩm bằng kỹ thuật đã được tinh luyện."
+      }
+    ],
+    "synonyms_distinction": "精錬は主に金属や素材の不純物を取り除き純度を上げる意味。一方、鍛錬は身体や精神を鍛える意味で、目的が異なる。",
+    "notes": "精錬するは主に工業・化学分野で使われ、比喩的に「技術や能力を精錬する」と言うこともある。",
+    "cachedAt": "2026-08-29T12:20:46.905Z"
+  },
+  "kanji_錬金術": {
+    "meaning": "thuật giả kim (alchemy)",
+    "usage": "được dùng để chỉ nghệ thuật hoặc khoa học biến đổi kim loại thường thành vàng, hoặc trong ngữ cảnh huyền ảo để chỉ phép thuật liên quan tới chuyển đổi vật chất",
+    "examples": [
+      {
+        "jp": "錬金術は古代から多くの伝説に登場する。",
+        "vi": "Thuật giả kim xuất hiện trong nhiều truyền thuyết từ thời cổ đại."
+      },
+      {
+        "jp": "彼は錬金術師として、鉛を金に変える研究をしている。",
+        "vi": "Anh ấy nghiên cứu như một giả kim gia, biến chì thành vàng."
+      }
+    ],
+    "synonyms_distinction": "Khác với 鍛冶（かじ） chỉ liên quan tới việc rèn, gia công kim loại, trong khi 錬金術 nhấn mạnh vào việc biến đổi chất liệu và mang tính huyền bí; cũng có thể so sánh với 錬金（れんきん） là hành động luyện kim, nhưng 錬金術 là môn học đầy đủ.",
+    "notes": "Phát âm: れんきんじゅつ (renkinjutsu).",
+    "cachedAt": "2026-08-29T12:21:19.752Z"
+  },
+  "kanji_歓声": {
+    "meaning": "Tiếng hò reo, tiếng la hét hào hứng, âm thanh của đám đông khi vui mừng hoặc phấn khích.",
+    "usage": "Dùng để chỉ tiếng hò reo, tiếng cổ vũ trong các sự kiện, buổi biểu diễn, thể thao, hoặc khi mọi người cảm thấy hưng phấn.",
+    "examples": [
+      {
+        "jp": "観客が歓声を上げた。",
+        "vi": "Khán giả đã hét lên tiếng hò reo."
+      },
+      {
+        "jp": "試合が決まった瞬間、歓声が沸き起こった。",
+        "vi": "Khoảnh khắc quyết định trận đấu, tiếng hò reo tràn ngập."
+      },
+      {
+        "jp": "彼の演奏に歓声が続いた。",
+        "vi": "Tiếng hò reo liên tục vang lên sau màn biểu diễn của anh ấy."
+      }
+    ],
+    "synonyms_distinction": "同義詞:『喝采』(かっさい) chỉ tiếng vỗ tay và hò reo, nhưng thường nhấn mạnh vào sự khen ngợi; 『歓呼』(かんこ) là tiếng hò reo mạnh mẽ, thường dùng trong thể thao. '歓声' nhấn mạnh vào âm thanh của tiếng la hét hưng phấn hơn là tiếng vỗ tay.",
+    "notes": "Kanji '歓' có nghĩa là vui mừng, hân hoan, '声' nghĩa là tiếng. Khi dùng trong tiếng Nhật hiện đại, thường xuất hiện trong các cụm như '歓声が上がる', '歓声を上げる'...",
+    "cachedAt": "2026-08-29T12:28:02.851Z"
+  },
+  "kanji_歓迎会": {
+    "meaning": "Buổi tiệc chào mừng, lễ hội đón tiếp ai đó (nhân viên mới, khách, thành viên mới,...).",
+    "usage": "Dùng để chỉ sự kiện được tổ chức nhằm chào đón, chúc mừng người mới gia nhập một nhóm, công ty, trường học hoặc để kỷ niệm một cột mốc quan trọng.",
+    "examples": [
+      {
+        "jp": "新入社員を歓迎するために歓迎会を開きました。",
+        "vi": "Chúng tôi đã tổ chức buổi tiệc chào mừng để đón nhận nhân viên mới."
+      },
+      {
+        "jp": "卒業後に友人たちと歓迎会をしました。",
+        "vi": "Sau khi tốt nghiệp, tôi đã có buổi tiệc chào mừng với bạn bè."
+      }
+    ],
+    "synonyms_distinction": "Có thể thay bằng 歓迎パーティー, nhưng 歓迎会 thường mang tính chất trang trọng hơn, thường dùng trong môi trường công sở hoặc các tổ chức formal, trong khi パーティー mang cảm giác nhẹ nhàng, không quá nghiêm trọng.",
+    "notes": "歓迎 = chào đón; 会 = cuộc họp, buổi họp, tiệc.",
+    "cachedAt": "2026-08-29T12:27:15.149Z"
+  },
+  "kanji_炊く": {
+    "meaning": "động từ たく (炊く) có nghĩa là “nấu, nấu ăn, nấu cơm”, mô tả hành động nấu thực phẩm bằng cách đun nóng",
+    "usage": "dùng khi nói về việc nấu cơm, nấu cháo, nấu súp… thường đi kèm với đối tượng thực phẩm hoặc nơi nấu",
+    "examples": [
+      {
+        "jp": "毎朝ご飯を炊く。",
+        "vi": "Mỗi sáng tôi nấu cơm."
+      },
+      {
+        "jp": "炊飯器でご飯を炊くのが簡単です。",
+        "vi": "Nấu cơm bằng nồi cơm điện rất dễ dàng."
+      },
+      {
+        "jp": "野菜を炊くと甘みが出ます。",
+        "vi": "Khi nấu rau thì vị ngọt sẽ xuất hiện."
+      }
+    ],
+    "synonyms_distinction": "từ đồng nghĩa: 煮る (にる) cũng có nghĩa “đun, hầm”, nhưng 煮る thường dùng cho súp, hầm; trong khi 炊く chủ yếu dùng cho việc nấu cơm và thực phẩm dạng hạt",
+    "notes": "Kanji 炊 gồm radical 火 (lửa) và thành phần 米 (gạo), thể hiện ý nghĩa liên quan đến việc nấu gạo",
+    "cachedAt": "2026-08-29T12:25:32.105Z"
+  },
+  "kanji_炊飯器": {
+    "meaning": "炊飯器（すいはんき） là danh từ chỉ \"nồi cơm điện\", thiết bị dùng để nấu và giữ ấm gạo một cách tự động",
+    "usage": "Thường được dùng trong bối cảnh nấu cơm tại nhà, văn phòng, hoặc trong các bữa tiệc; có thể kết hợp với các tính năng hẹn giờ, nấu các loại ngũ cốc khác",
+    "examples": [
+      {
+        "jp": "炊飯器でご飯を炊くと、いつもふっくらです。",
+        "vi": "Nấu cơm bằng nồi cơm điện luôn cho cơm dẻo và thơm ngon."
+      },
+      {
+        "jp": "旅行先のホテルの部屋に炊飯器が備わっていた。",
+        "vi": "Phòng khách sạn ở nơi du lịch đã có nồi cơm điện."
+      }
+    ],
+    "synonyms_distinction": "Có thể so sánh với \"炊飯機\" (cũng có nghĩa là nồi cơm điện) nhưng \"炊飯器\" là từ thông dụng hơn; \"炊飯機\" thường xuất hiện trong tài liệu kỹ thuật hoặc thương hiệu.",
+    "notes": "Kanji: 炊 (nấu, hấp), 飯 (cơm), 器 (đồ dùng, thiết bị).",
+    "cachedAt": "2026-08-29T12:26:11.522Z"
+  }
+}

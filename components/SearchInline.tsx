@@ -259,18 +259,26 @@ async function getCachedJishoResults(cacheKey: string): Promise<SearchResult[] |
       AsyncStorage.removeItem(cacheKey).catch(() => {});
       return null;
     }
+    if (!parsed.translated) {
+      AsyncStorage.removeItem(cacheKey).catch(() => {});
+      return null;
+    }
     return parsed.results as SearchResult[];
   } catch (_) {
     return null;
   }
 }
 
-async function setCachedJishoResults(cacheKey: string, results: SearchResult[]): Promise<void> {
-  if (results.length === 0) return; 
+async function setCachedJishoResults(
+  cacheKey: string,
+  results: SearchResult[],
+  translated: boolean
+): Promise<void> {
+  if (results.length === 0) return;
   try {
     await AsyncStorage.setItem(
       cacheKey,
-      JSON.stringify({ savedAt: Date.now(), results })
+      JSON.stringify({ savedAt: Date.now(), results, translated })
     );
   } catch (_) {}
 }
@@ -304,9 +312,13 @@ async function searchJisho(query: string, isVietnameseQuery: boolean): Promise<S
       return { title, subtitle, meaningEn, pos };
     }).filter(p => !!p.title);
 
-    const translated = await translateBatch(prepared.map(p => p.meaningEn), 'en', 'vi');
+    const translatedList = await translateBatch(prepared.map(p => p.meaningEn), 'en', 'vi');
+    const allTranslated = prepared.every(
+      (p, idx) => !p.meaningEn || !!translatedList[idx]
+    );
+
     const mapped: SearchResult[] = prepared.map((p, idx) => {
-      const meaningVi = translated[idx];
+      const meaningVi = translatedList[idx];
       const displayMeaning = meaningVi || p.meaningEn;
       return {
         id: `jisho_${idx}_${p.title}`,
@@ -325,7 +337,8 @@ async function searchJisho(query: string, isVietnameseQuery: boolean): Promise<S
         sourceLabel: '🌍',
       };
     });
-    setCachedJishoResults(cacheKey, mapped);
+
+    setCachedJishoResults(cacheKey, mapped, allTranslated);
     return mapped;
   } catch (_) {
     return [];

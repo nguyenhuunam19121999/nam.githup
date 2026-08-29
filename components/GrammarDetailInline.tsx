@@ -7,6 +7,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from "react-native";
+import AIExplainPanel from "./AIExplainPanel";
 import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
 
 interface GrammarDetailInlineProps {
@@ -100,7 +101,7 @@ export default function GrammarDetailInline({
         ) : null}
       </View>
 
-      {/* Meaning */}
+            {/* Meaning */}
       <View style={styles.section}>
         <Text style={[styles.sectionLabel, { color: c.mutedForeground }]}>
           📖 Ý nghĩa
@@ -113,6 +114,11 @@ export default function GrammarDetailInline({
         >
           <Text style={[styles.meaningText, { color: c.text }]}>{meaning}</Text>
         </View>
+      </View>
+
+      {/* Tra cứu từ AI */}
+      <View style={{ marginTop: 4 }}>
+        <AIExplainPanel type="grammar" word={pattern} context={meaning} />
       </View>
 
       {/* Structure (optional) — giữ tông xanh lá nhạt cố định, khối highlight */}

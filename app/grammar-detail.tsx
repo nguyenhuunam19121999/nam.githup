@@ -22,6 +22,8 @@ import {
 } from "react-native";
 import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
+import AIExplainPanel from "../components/AIExplainPanel";
+import { KeyboardAwareScrollViewCompat } from "../components/KeyboardAwareScrollViewCompat";
 import { useColors, useThemeMode } from "../artifacts/mirai-jp/hooks/useColors";
 
 export default function GrammarDetailScreen() {
@@ -75,7 +77,7 @@ export default function GrammarDetailScreen() {
           <View style={{ width: 42 }} />
         </View>
 
-        <ScrollView
+        <KeyboardAwareScrollViewCompat
           style={s.scroll}
           contentContainerStyle={s.scrollContent}
           showsVerticalScrollIndicator={false}
@@ -122,13 +124,16 @@ export default function GrammarDetailScreen() {
             </View>
 
             <View style={[s.divider, { backgroundColor: c.border }]} />
-
             <Text style={[s.sectionTitle, { color: c.text }]}>Giải thích</Text>
             <View style={s.sectionContent}>
               <Text style={[s.bulletDot, { color: c.accent }]}>◆</Text>
               <Text style={[s.sectionBody, { color: c.text }]}>{grammar.explanation}</Text>
             </View>
 
+            {/* Tra cứu từ AI */}
+            <View style={{ marginTop: 18 }}>
+              <AIExplainPanel type="grammar" word={grammar.pattern} context={grammar.meaning} />
+            </View>
             {grammar.notes && (
               <>
                 <View style={[s.divider, { backgroundColor: c.border }]} />
@@ -144,9 +149,6 @@ export default function GrammarDetailScreen() {
               <>
                 <View style={[s.divider, { backgroundColor: c.border }]} />
                 <Text style={[s.sectionTitle, { color: c.text }]}>⚠️ Chú ý</Text>
-                {/* Hộp cảnh báo giữ tông màu cam/vàng cố định — không đổi theo
-                    theme để luôn dễ nhận biết là cảnh báo, giống cách xử lý
-                    màu đúng/sai trong Quiz. */}
                 <View style={s.cautionBox}>
                   <Text style={s.cautionText}>{grammar.caution}</Text>
                 </View>
@@ -190,12 +192,9 @@ export default function GrammarDetailScreen() {
               </>
             )}
           </View>
-
-          {/* ── Đóng góp ý kiến ── */}
           <FeedbackSection pageKey={`grammar-detail::${grammar.id}`} />
-
           <View style={{ height: 40 }} />
-        </ScrollView>
+        </KeyboardAwareScrollViewCompat>
         <BottomTabBar />
         <AdBanner />
       </View>

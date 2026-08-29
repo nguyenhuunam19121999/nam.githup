@@ -15,6 +15,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Keychain from "react-native-keychain";
 import firestore from "@react-native-firebase/firestore";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
+import { useColors, useThemeMode, ThemeFadeOverlay } from "../artifacts/mirai-jp/hooks/useColors";
 
 interface ReferralScreenProps {
   currentUser: string;
@@ -27,6 +28,10 @@ export default function ReferralScreen({
   scopedKey,
   onClose,
 }: ReferralScreenProps) {
+  const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
+  const { themeMode, timeOfDay } = useThemeMode();
+  const isDark = themeMode === "dark" || (themeMode === "auto" && timeOfDay === "night");
+
   const { referralCode: myOwnCode } = useAuth();
   const [loading, setLoading] = useState(false);
   const [localPoints, setLocalPoints] = useState(0);
@@ -157,32 +162,32 @@ export default function ReferralScreen({
   };
 
   return (
-    <SafeAreaView style={styles.container}>
-      <StatusBar barStyle="dark-content" backgroundColor="#f0f4f8" />
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>Hệ Thống Nhận Điểm Thưởng</Text>
-        <TouchableOpacity style={styles.closeButton} onPress={onClose}>
-          <Text style={styles.closeText}>Đóng ✕</Text>
+    <SafeAreaView style={[styles.container, { backgroundColor: c.background }]}>
+      <StatusBar barStyle={isDark ? "light-content" : "dark-content"} backgroundColor={c.background} />
+      <View style={[styles.header, { backgroundColor: c.card, borderColor: c.accent }]}>
+        <Text style={[styles.headerTitle, { color: c.text }]}>Hệ Thống Nhận Điểm Thưởng</Text>
+        <TouchableOpacity style={[styles.closeButton, { backgroundColor: c.destructive }]} onPress={onClose}>
+          <Text style={[styles.closeText, { color: c.destructiveForeground }]}>Đóng ✕</Text>
         </TouchableOpacity>
       </View>
 
-      <View style={styles.infoBox}>
-        <Text style={styles.userText}>
-          Tài khoản: <Text style={{ fontWeight: "bold" }}>{currentUser}</Text>
+      <View style={[styles.infoBox, { backgroundColor: c.card }]}>
+        <Text style={[styles.userText, { color: c.mutedForeground }]}>
+          Tài khoản: <Text style={{ fontWeight: "bold", color: c.text }}>{currentUser}</Text>
         </Text>
-        <Text style={styles.pointsText}>
-          Điểm tích lũy: <Text style={styles.pointNum}>{localPoints}</Text>
+        <Text style={[styles.pointsText, { color: c.text }]}>
+          Điểm tích lũy: <Text style={[styles.pointNum, { color: c.accent }]}>{localPoints}</Text>
         </Text>
       </View>
 
       <View style={styles.content}>
-        <Text style={styles.hintText}>Nhập mã giới thiệu của người khác</Text>
+        <Text style={[styles.hintText, { color: c.text }]}>Nhập mã giới thiệu của người khác</Text>
 
-        <View style={styles.manualCard}>
+        <View style={[styles.manualCard, { backgroundColor: c.card }]}>
           <TextInput
-            style={styles.manualInput}
+            style={[styles.manualInput, { backgroundColor: c.muted, borderColor: c.border, color: c.text }]}
             placeholder="Nhập mã giới thiệu (VD: A1B2C3)"
-            placeholderTextColor="#94a3b8"
+            placeholderTextColor={c.mutedForeground}
             autoCapitalize="characters"
             autoCorrect={false}
             maxLength={6}
@@ -191,46 +196,44 @@ export default function ReferralScreen({
             editable={!loading}
           />
           <TouchableOpacity
-            style={styles.manualSubmitBtn}
+            style={[styles.manualSubmitBtn, { backgroundColor: c.primary }]}
             disabled={loading}
             onPress={() => processReferralCode(manualCode)}
           >
             {loading ? (
-              <ActivityIndicator size="small" color="#fff" />
+              <ActivityIndicator size="small" color={c.primaryForeground} />
             ) : (
-              <Text style={styles.manualSubmitText}>Xác nhận</Text>
+              <Text style={[styles.manualSubmitText, { color: c.primaryForeground }]}>Xác nhận</Text>
             )}
           </TouchableOpacity>
         </View>
       </View>
+      <ThemeFadeOverlay />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#f5f6fa" },
+  container: { flex: 1 },
   header: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
     padding: 16,
-    backgroundColor: "#fff",
     borderBottomWidth: 1,
-    borderColor: "#e1b12c",
   },
-  headerTitle: { fontSize: 16, fontWeight: "bold", color: "#2f3640" },
-  closeButton: { padding: 6, backgroundColor: "#e74c3c", borderRadius: 4 },
-  closeText: { color: "#fff", fontWeight: "bold", fontSize: 12 },
+  headerTitle: { fontSize: 16, fontWeight: "bold" },
+  closeButton: { padding: 6, borderRadius: 4 },
+  closeText: { fontWeight: "bold", fontSize: 12 },
   infoBox: {
     padding: 16,
-    backgroundColor: "#fff",
     margin: 16,
     borderRadius: 8,
     elevation: 2,
   },
-  userText: { fontSize: 14, color: "#7f8c8d" },
-  pointsText: { fontSize: 16, marginTop: 4, color: "#2c3e50" },
-  pointNum: { fontSize: 24, fontWeight: "bold", color: "#EA580C" },
+  userText: { fontSize: 14 },
+  pointsText: { fontSize: 16, marginTop: 4 },
+  pointNum: { fontSize: 24, fontWeight: "bold" },
   content: {
     flex: 1,
     alignItems: "center",
@@ -240,7 +243,6 @@ const styles = StyleSheet.create({
   hintText: {
     textAlign: "center",
     marginBottom: 20,
-    color: "#353b48",
     fontSize: 15,
     fontWeight: "500",
   },
@@ -248,31 +250,26 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 420,
     alignSelf: "center",
-    backgroundColor: "#fff",
     borderRadius: 16,
     padding: 20,
     elevation: 2,
   },
   manualInput: {
     height: 52,
-    backgroundColor: "#f8fafc",
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
     paddingHorizontal: 14,
     fontSize: 18,
     fontWeight: "700",
     letterSpacing: 3,
-    color: "#0f172a",
     textAlign: "center",
     marginBottom: 14,
   },
   manualSubmitBtn: {
-    backgroundColor: "#004370",
     borderRadius: 10,
     height: 48,
     alignItems: "center",
     justifyContent: "center",
   },
-  manualSubmitText: { color: "#fff", fontWeight: "800", fontSize: 15 },
+  manualSubmitText: { fontWeight: "800", fontSize: 15 },
 });
