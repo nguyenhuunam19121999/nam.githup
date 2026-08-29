@@ -315,5 +315,161 @@
     "synonyms_distinction": "Có thể so sánh với \"炊飯機\" (cũng có nghĩa là nồi cơm điện) nhưng \"炊飯器\" là từ thông dụng hơn; \"炊飯機\" thường xuất hiện trong tài liệu kỹ thuật hoặc thương hiệu.",
     "notes": "Kanji: 炊 (nấu, hấp), 飯 (cơm), 器 (đồ dùng, thiết bị).",
     "cachedAt": "2026-08-29T12:26:11.522Z"
+  },
+  "grammar_〜ことができる": {
+    "meaning": "Biểu thị khả năng, khả năng làm một hành động nào đó; tương đương với “có thể …” trong tiếng Việt.",
+    "usage": "Cấu trúc: V‑る (hoặc V‑た) + ことができる. Thường dùng để nói rằng người nói hoặc người khác có khả năng thực hiện hành động, hoặc một việc nào đó khả thi. Được dùng trong cả câu khẳng định, phủ định và câu hỏi.",
+    "examples": [
+      {
+        "jp": "日本語を話すことができる。",
+        "vi": "Tôi có thể nói tiếng Nhật."
+      },
+      {
+        "jp": "このボタンを押すことができません。",
+        "vi": "Không thể nhấn nút này."
+      },
+      {
+        "jp": "明日までにレポートを書き終えることができましたか？",
+        "vi": "Bạn đã có thể hoàn thành viết báo cáo trước ngày mai chưa?"
+      }
+    ],
+    "synonyms_distinction": "Có thể so sánh với khả năng dạng られる (例: 食べられる) hoặc dạng 可能形 (例: 書ける). ことができる nhấn mạnh vào khả năng thực hiện một hành động chung hoặc hành động toàn diện, trong khi られる thường dùng cho động từ nhóm I và II, và 可能形 chỉ khả năng của động từ nhóm I.",
+    "notes": "Cấu trúc này thường được dùng trong ngữ cảnh trang trọng hoặc viết; trong giao tiếp thông thường người Nhật có thể dùng できる (động từ) thay cho ことができる.",
+    "cachedAt": "2026-08-29T12:46:38.893Z"
+  },
+  "grammar_〜れている%2F〜られている": {
+    "meaning": "Hình thức 〜れている / 〜られている dùng để diễn tả trạng thái kết quả của một hành động bị động, nghĩa là “được …” hoặc “bị …” trong thời gian hiện tại (hoặc kéo dài), thể hiện rằng hành động đã được thực hiện và kết quả vẫn còn tồn tại",
+    "usage": "Sau động từ nhóm I (ichidan) thêm られる, sau động từ nhóm II (godan) đổi âm cuối thành dạng e‑row rồi thêm る, rồi tiếp theo là ている. Thể hiện trạng thái hiện tại hoặc tiếp diễn của hành động bị thực hiện bởi người khác; thường dùng để nói về một hiện tượng đang kéo dài hoặc kết quả còn tồn tại",
+    "examples": [
+      {
+        "jp": "ドアが壊れている。",
+        "vi": "Cửa đang bị hỏng."
+      },
+      {
+        "jp": "彼は先生に褒められている。",
+        "vi": "Anh ấy đang được giáo viên khen ngợi."
+      },
+      {
+        "jp": "窓が開けられている。",
+        "vi": "Cửa sổ đang được mở."
+      }
+    ],
+    "synonyms_distinction": "So với 〜ている (dạng chủ động) thì 〜れている/〜られている mang nghĩa bị động; so với 〜されている (dạng lịch sự hơn) nghĩa tương tự nhưng 〜られる/〜れる thường dùng trong tiếng nói thông thường",
+    "notes": "〜られる cũng có chức năng biểu thị khả năng (potential), vì vậy cần dựa vào ngữ cảnh để phân biệt; trong một số trường hợp 〜られる có thể là kính ngữ (honorific) chứ không phải bị động",
+    "cachedAt": "2026-08-29T13:10:58.901Z"
+  },
+  "kanji_称": {
+    "meaning": "'称' là kanji có nghĩa là 'gọi, xưng là, danh xưng' dùng để chỉ việc đặt tên hoặc gọi một người, vật, sự việc bằng một danh xưng nhất định",
+    "usage": "Thường xuất hiện trong các từ ghép như '称号' (chương hương, danh hiệu), '称賛' (khen ngợi), '称呼' (cách xưng hô), và trong câu mô tả việc gọi một ai đó hoặc một vật bằng một tên gọi cụ thể",
+    "examples": [
+      {
+        "jp": "彼は自分を『天才』と称した。",
+        "vi": "Anh ấy tự xưng mình là 'thiên tài'."
+      },
+      {
+        "jp": "この作品は『現代の傑作』と称えられている。",
+        "vi": "Tác phẩm này được gọi là 'tác phẩm xuất sắc của thời hiện đại'."
+      },
+      {
+        "jp": "彼女は『ママ』と称している。",
+        "vi": "Cô ấy được gọi là 'Mẹ'."
+      }
+    ],
+    "synonyms_distinction": "Có thể gần nghĩa với '呼ぶ' (gọi) nhưng '称' nhấn mạnh vào việc đặt danh xưng, danh hiệu; '呼ぶ' chỉ hành động gọi tên mà không nhất thiết là danh hiệu. '名付ける' (đặt tên) cũng tương tự nhưng thường dùng khi đặt tên mới, còn '称' thường dùng cho danh xưng đã có hoặc khi tự xưng",
+    "notes": "On‑yomi: ショウ (shō); Kun‑yomi: あが.3る (agaru), あげる (ageru) trong một số từ. Thành phần radical là '言' (ngôn) và '尚' (sưởng).",
+    "cachedAt": "2026-08-29T13:08:17.682Z"
+  },
+  "kanji_総": {
+    "meaning": "tổng, chung, toàn bộ; liên quan đến việc tổng hợp, tóm lược, bao quát",
+    "usage": "Dùng làm tiền tố trong các từ ghép để chỉ sự tổng quát, tổng hợp, toàn diện như 総合 (tổng hợp), 総理 (thủ tướng), 総額 (tổng số tiền), 総務 (công tác chung)",
+    "examples": [
+      {
+        "jp": "総合的に考えると、この計画は成功するでしょう。",
+        "vi": "Xét một cách tổng hợp, kế hoạch này sẽ thành công."
+      },
+      {
+        "jp": "総理が記者会見を開いた。",
+        "vi": "Thủ tướng đã tổ chức họp báo."
+      },
+      {
+        "jp": "総額は一億円です。",
+        "vi": "Tổng số là 100 triệu yên."
+      }
+    ],
+    "synonyms_distinction": "So sánh với 全 (toàn) – ‘全’ nhấn mạnh mọi phần riêng lẻ, còn ‘総’ nhấn mạnh việc tổng hợp, tổng quát lại thành một thể thống nhất. ‘合計’ (tổng cộng) chỉ tính tổng số lượng, không mang ý nghĩa bao quát, chung chung như ‘総’ trong các từ ghép.",
+    "notes": "Âm đọc onyomi: そう (sou). Kanji này hiếm khi có đọc kunyomi riêng; thường xuất hiện dưới dạng tiền tố hoặc trong các từ ghép có âm Hán.",
+    "cachedAt": "2026-08-29T12:49:21.347Z"
+  },
+  "kanji_駐車": {
+    "meaning": "Đậu xe, hành động đặt xe ô tô, xe máy... vào vị trí cố định (thường là bãi đỗ xe)",
+    "usage": "Dùng như danh từ hoặc kết hợp với động từ \"する\" để tạo thành \"駐車する\" (đậu xe). Thường đi kèm với \"場\" (駐車場) để chỉ nơi đậu xe.",
+    "examples": [
+      {
+        "jp": "駐車場に車を駐車した。",
+        "vi": "Tôi đã đậu xe ô tô vào bãi đỗ xe."
+      },
+      {
+        "jp": "ここに駐車しないでください。",
+        "vi": "Xin đừng đậu xe ở đây."
+      },
+      {
+        "jp": "駐車の許可が必要です。",
+        "vi": "Cần có giấy phép đậu xe."
+      }
+    ],
+    "synonyms_distinction": "駐車 (noun) vs. 駐める/停める (verb ‘đặt, đỗ’). \"駐車\" nhấn mạnh hành động đậu xe ở một nơi cố định, thường dùng trong ngữ cảnh pháp lý hoặc chỉ dẫn, trong khi \"停める\" là động từ thông thường hơn, dùng cho mọi loại phương tiện.",
+    "notes": "",
+    "cachedAt": "2026-08-29T13:11:57.351Z"
+  },
+  "vocab_キッチン": {
+    "meaning": "‘キッチン’ là danh từ chỉ ‘nhà bếp’, khu vực nấu nướng trong nhà hoặc trong nhà hàng.",
+    "usage": "Dùng để chỉ không gian hoặc thiết bị nấu ăn; thường xuất hiện trong các câu nói về việc chuẩn bị bữa ăn hoặc thiết kế nội thất.",
+    "examples": [
+      {
+        "jp": "キッチンで料理を作ります。",
+        "vi": "Tôi nấu ăn trong bếp."
+      },
+      {
+        "jp": "新しいキッチンを買いました。",
+        "vi": "Tôi đã mua một nhà bếp mới."
+      }
+    ],
+    "synonyms_distinction": "Từ đồng nghĩa là ‘台所’ (だいどころ), nhưng ‘キッチン’ thường dùng trong ngữ cảnh hiện đại, thiết kế nội thất, trong khi ‘台所’ mang tính truyền thống hơn.",
+    "notes": "‘キッチン’ là từ mượn từ tiếng Anh ‘kitchen’, được dùng rộng rãi trong tiếng Nhật hiện đại.",
+    "cachedAt": "2026-08-29T13:12:32.454Z"
+  },
+  "vocab_総称": {
+    "meaning": "tổng danh, thuật ngữ chung dùng để chỉ một nhóm các đối tượng, khái niệm có chung đặc điểm",
+    "usage": "Dùng khi muốn đặt một từ chung cho nhiều đối tượng hoặc khi nói đến cách gọi chung của một nhóm trong ngôn ngữ học, khoa học, hay đời sống hàng ngày",
+    "examples": [
+      {
+        "jp": "この動物は哺乳類という総称で呼ばれる。",
+        "vi": "Loài động vật này được gọi chung là động vật có vú."
+      },
+      {
+        "jp": "「スマートフォン」は携帯電話の総称です。",
+        "vi": "\"Smartphone\" là tên chung cho các loại điện thoại di động."
+      }
+    ],
+    "synonyms_distinction": "Có thể nhầm lẫn với 「総称語」(từ chung) hoặc 「総称的」(có tính chất chung). \"総称\" nhấn mạnh việc đặt tên chung, trong khi \"総称語\" nhấn mạnh từ ngữ dùng làm tên chung.",
+    "notes": "",
+    "cachedAt": "2026-08-29T12:53:44.093Z"
+  },
+  "vocab_総称識別子": {
+    "meaning": "総称識別子（そうしょうしきべつし） là một danh từ tiếng Nhật chỉ ‘định danh chung’, tức là một mã hoặc tên dùng để nhận dạng một nhóm, lớp hay loại chung của các đối tượng thay vì một đối tượng cụ thể.",
+    "usage": "Thường được dùng trong lĩnh vực công nghệ thông tin, cơ sở dữ liệu, hoặc các hệ thống quản lý để chỉ một định danh bao trùm nhiều mục tiêu có chung tính chất, giúp việc phân loại và truy xuất dữ liệu trở nên linh hoạt hơn.",
+    "examples": [
+      {
+        "jp": "このシステムでは、総称識別子を用いてユーザーの権限レベルを一括管理します。",
+        "vi": "Trong hệ thống này, chúng tôi sử dụng tổng称識別子 để quản lý cấp quyền của người dùng một cách tổng hợp."
+      },
+      {
+        "jp": "製品コードは総称識別子として機能し、各モデルを区別する基礎となる。",
+        "vi": "Mã sản phẩm hoạt động như một tổng称識別子, là nền tảng để phân biệt các mẫu khác nhau."
+      }
+    ],
+    "synonyms_distinction": "Có thể nhầm lẫn với “識別子”（shikibetsushi – bộ nhận dạng), nhưng ‘総称識別子’ nhấn mạnh tính bao trùm, dùng cho nhóm chung, trong khi ‘識別子’ thường chỉ một đối tượng duy nhất.",
+    "notes": "Trong lập trình, tổng称識別子 thường được triển khai dưới dạng biến, thẻ hoặc khóa chung (e.g., một prefix chung cho các ID).",
+    "cachedAt": "2026-08-29T13:09:01.252Z"
   }
 }

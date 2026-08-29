@@ -336,10 +336,24 @@ export default function KanjiDetailInline({
               </View>
 
               {/* Tra cứu từ AI */}
-              <AIExplainPanel
+              {/* <AIExplainPanel
                 type="kanji"
                 word={kanjiData.kanji}
                 context={kanjiData.meanings_vi.join(', ')}
+              /> */}
+              <AIExplainPanel
+                type="kanji"
+                word={kanjiData.kanji}
+                context={[
+                  `Nghĩa: ${kanjiData.meanings_vi.join(', ')}`,
+                  kanjiData.components?.length
+                    ? `Bộ thủ cấu thành: ${kanjiData.components
+                        .map((comp) => `${comp.kanji}${comp.hanViet ? `(${comp.hanViet})` : ''}`)
+                        .join(', ')}`
+                    : '',
+                ]
+                  .filter(Boolean)
+                  .join(' | ')}
               />
               {examples.length > 0 && (
                 <View style={styles.section}>
