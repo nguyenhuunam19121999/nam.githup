@@ -1,4 +1,4 @@
-// // ─────────────────────────────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────────────────────────
 // node scripts/buildDb.cjs
 // Build multiple SQLite asset files from the JSON source data.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -162,12 +162,13 @@ const TARGETS = [
       CREATE TABLE IF NOT EXISTS sentences (
         id TEXT PRIMARY KEY,
         jp TEXT,
-        vi TEXT
+        vi TEXT,
+        reading TEXT DEFAULT '[]'
       );
     `,
   },
   {
-  name: 'exams',
+    name: 'exams',
     output: path.join(ASSETS, 'exams.db'),
     schema: `
       CREATE TABLE IF NOT EXISTS exams (
@@ -187,6 +188,7 @@ const TARGETS = [
       CREATE INDEX IF NOT EXISTS idx_exams_exam_id ON exams(exam_id);
     `,
   },
+  // ── AI cache — ĐÃ CẬP NHẬT: thêm 9 cột mới theo AIResult mở rộng ──
   {
     name: 'ai_cache',
     output: path.join(ASSETS, 'ai_cache.db'),
@@ -199,6 +201,15 @@ const TARGETS = [
         examples TEXT DEFAULT '[]',
         synonyms_distinction TEXT,
         notes TEXT,
+        part_of_speech TEXT,
+        kanji_breakdown TEXT,
+        collocations TEXT,
+        structure TEXT,
+        conjugation TEXT,
+        jlpt_level TEXT,
+        component_analysis TEXT,
+        similar_kanji TEXT,
+        stroke_count_note TEXT,
         cached_at TEXT
       );
       CREATE INDEX IF NOT EXISTS idx_ai_cache_type ON ai_cache(type);
@@ -285,16 +296,16 @@ function insertKanjiFull(db, filePath) {
     let count = 0;
     for (const [kanjiChar, item] of list) {
       if (!kanjiChar || !item) continue;
-      const normalizedKanji = kanjiChar.normalize('NFC');   
+      const normalizedKanji = kanjiChar.normalize('NFC');
       if (normalizedKanji !== kanjiChar) {
         console.warn(`  🔧 NFC normalize kanji: "${kanjiChar}" (${[...kanjiChar].map(c=>c.codePointAt(0).toString(16)).join(',')}) → "${normalizedKanji}"`);
       }
-      const unicode = item.metadata?.Unicode || charToUnicode(normalizedKanji);   
+      const unicode = item.metadata?.Unicode || charToUnicode(normalizedKanji);
       const kunyomi = Array.isArray(item.readings?.kunyomi) ? item.readings.kunyomi : [];
       const onyomi = Array.isArray(item.readings?.onyomi) ? item.readings.onyomi : [];
       stmt.run({
         id: unicode || normalizedKanji,
-        kanji: normalizedKanji,   
+        kanji: normalizedKanji,
         strokes: typeof item.strokes === 'number' ? item.strokes : null,
         freq: item.freq !== undefined ? String(item.freq) : null,
         jlpt: item.jlpt || 'N/A',
@@ -331,7 +342,7 @@ function insertKanjiStrokes(db, filePath) {
     let count = 0;
     for (const [char, paths] of entries) {
       if (!char || !Array.isArray(paths) || paths.length === 0) continue;
-      const normalizedChar = char.normalize('NFC');   
+      const normalizedChar = char.normalize('NFC');
       stmt.run({ kanji: normalizedChar, paths: JSON.stringify(paths) });
       count++;
     }
@@ -490,8 +501,8 @@ function insertSentencesFile(db, filePath) {
   const raw = readJson(filePath);
   const items = Array.isArray(raw?.sentences) ? raw.sentences : Array.isArray(raw) ? raw : [];
   const stmt = db.prepare(`
-    INSERT OR REPLACE INTO sentences (id, jp, vi)
-    VALUES (@id, @jp, @vi)
+    INSERT OR REPLACE INTO sentences (id, jp, vi, reading)
+    VALUES (@id, @jp, @vi, @reading)
   `);
 
   const insertBatch = db.transaction((list) => {
@@ -502,6 +513,7 @@ function insertSentencesFile(db, filePath) {
         id: item.id || `sentence_${idx}`,
         jp: item.jp,
         vi: item.vi || '',
+        reading: toJson(item.reading, '[]'),  
       });
       count++;
     });
@@ -558,6 +570,7 @@ function insertExamFile(db, filePath, level) {
   return 1;
 }
 
+// ── AI cache — ĐÃ CẬP NHẬT: insert đủ 9 cột mới ──
 function insertAiCacheFile(db, filePath) {
   const data = readJson(filePath);
   if (!data || typeof data !== 'object') {
@@ -567,24 +580,38 @@ function insertAiCacheFile(db, filePath) {
 
   const stmt = db.prepare(`
     INSERT OR REPLACE INTO ai_cache
-      (cache_key, type, meaning, usage, examples, synonyms_distinction, notes, cached_at)
-    VALUES (@cache_key, @type, @meaning, @usage, @examples, @synonyms_distinction, @notes, @cached_at)
+      (cache_key, type, meaning, usage, examples, synonyms_distinction, notes,
+       part_of_speech, kanji_breakdown, collocations,
+       structure, conjugation, jlpt_level,
+       component_analysis, similar_kanji, stroke_count_note, cached_at)
+    VALUES (@cache_key, @type, @meaning, @usage, @examples, @synonyms_distinction, @notes,
+       @part_of_speech, @kanji_breakdown, @collocations,
+       @structure, @conjugation, @jlpt_level,
+       @component_analysis, @similar_kanji, @stroke_count_note, @cached_at)
   `);
 
   const insertBatch = db.transaction((entries) => {
     let count = 0;
     for (const [cacheKey, item] of entries) {
       if (!cacheKey || !item) continue;
-      // cacheKey dạng "vocab_勉強" — tách phần "type" trước dấu "_"
       const type = cacheKey.split('_')[0] || null;
       stmt.run({
         cache_key: cacheKey,
         type,
-        meaning: item.meaning || '',
-        usage: item.usage || '',
+        meaning: toJson(item.meaning, '[]'),
+        usage: toJson(item.usage, '[]'),
         examples: toJson(item.examples),
-        synonyms_distinction: item.synonyms_distinction || '',
-        notes: item.notes || '',
+        synonyms_distinction: toJson(item.synonyms_distinction, '[]'),
+        notes: toJson(item.notes, '[]'),
+        part_of_speech: item.part_of_speech || '',        
+        kanji_breakdown: toJson(item.kanji_breakdown, '[]'),
+        collocations: toJson(item.collocations, '[]'),
+        structure: toJson(item.structure, '[]'),
+        conjugation: toJson(item.conjugation, '[]'),
+        jlpt_level: item.jlpt_level || '',                 
+        component_analysis: toJson(item.component_analysis, '[]'),
+        similar_kanji: toJson(item.similar_kanji, '[]'),
+        stroke_count_note: toJson(item.stroke_count_note, '[]'),
         cached_at: item.cachedAt || null,
       });
       count++;
@@ -695,7 +722,11 @@ for (const level of ['n1', 'n2', 'n3', 'n4', 'n5']) {
 
 console.log('\n📦 Đang insert AI cache (ai_cache_master.json)...');
 const aiCachePath = path.join(ASSETS, 'data_ai_cache', 'ai_cache_master.json');
-if (fs.existsSync(aiCachePath)) insertAiCacheFile(dbs.ai_cache, aiCachePath);
+if (fs.existsSync(aiCachePath)) {
+  insertAiCacheFile(dbs.ai_cache, aiCachePath);
+} else {
+  console.log('  ⏭  Chưa có ai_cache_master.json, bỏ qua.');
+}
 
 for (const db of Object.values(dbs)) db.close();
 

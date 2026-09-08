@@ -471,5 +471,379 @@
     "synonyms_distinction": "Có thể nhầm lẫn với “識別子”（shikibetsushi – bộ nhận dạng), nhưng ‘総称識別子’ nhấn mạnh tính bao trùm, dùng cho nhóm chung, trong khi ‘識別子’ thường chỉ một đối tượng duy nhất.",
     "notes": "Trong lập trình, tổng称識別子 thường được triển khai dưới dạng biến, thẻ hoặc khóa chung (e.g., một prefix chung cho các ID).",
     "cachedAt": "2026-08-29T13:09:01.252Z"
+  },
+  "kanji_バス停": {
+    "meaning": "địa điểm nơi xe buýt dừng để hành khách lên xuống, nghĩa là \"trạm xe buýt\", \"bến xe buýt\"",
+    "usage": "Dùng như danh từ chỉ nơi dừng xe buýt; thường đi kèm với các từ chỉ vị trí như 近く, 前, の近くなど。",
+    "examples": [
+      {
+        "jp": "バス停は駅の前にあります。",
+        "vi": "Trạm xe buýt nằm trước ga."
+      },
+      {
+        "jp": "バス停で待っていると、バスが来ました。",
+        "vi": "Khi đang chờ ở trạm xe buýt, xe buýt đã đến."
+      },
+      {
+        "jp": "このバス停は混んでいます。",
+        "vi": "Trạm xe buýt này rất đông."
+      }
+    ],
+    "synonyms_distinction": "Từ đồng nghĩa là \"バス停留所\" (バスていりゅうじょ), nhưng \"バス停\" là dạng viết tắt, thường dùng trong giao tiếp hàng ngày; \"バス停留所\" mang tính chính thức hơn và xuất hiện trong biển hiệu.",
+    "notes": "Kanji \"停\" có nghĩa là dừng lại; \"バス\" là từ mượn từ tiếng Anh \"bus\".",
+    "cachedAt": "2026-08-31T01:02:37.254Z"
+  },
+  "kanji_両替": {
+    "meaning": "hoạt động đổi tiền; việc chuyển đổi tiền tệ từ một loại sang loại khác",
+    "usage": "dùng khi muốn đổi tiền mặt sang tiền tệ khác hoặc đổi tiền từ mệnh giá lớn sang mệnh giá nhỏ",
+    "examples": [
+      {
+        "jp": "空港で両替をした。",
+        "vi": "Tôi đã đổi tiền ở sân bay."
+      },
+      {
+        "jp": "銀行で円をドルに両替する。",
+        "vi": "Đổi Yên sang Đô la tại ngân hàng."
+      }
+    ],
+    "synonyms_distinction": "trùng với \"交換\" nhưng \"交換\" rộng hơn, có thể đổi vật phẩm, trong khi \"両替\" chỉ đổi tiền.",
+    "notes": "",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "両: nghĩa là \"hai\" hoặc \"cả hai\", có bộ \"八\" và \"羊\"; 替: nghĩa là \"thay thế\", bao gồm bộ \"言\" và \"曰\".",
+    "collocations": "両替所, 両替機, 両替レート, 両替手数料",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "",
+    "cachedAt": "2026-09-01T01:02:16.434Z"
+  },
+  "kanji_両親": {
+    "meaning": "Cha mẹ; cả bố và mẹ",
+    "usage": "Dùng để chỉ cả hai người bố và mẹ, thường xuất hiện trong các câu nói về gia đình, trách nhiệm, cảm xúc liên quan tới hai người cha mẹ.",
+    "examples": [
+      {
+        "jp": "両親は旅行に行きました。",
+        "vi": "Cha mẹ đã đi du lịch."
+      },
+      {
+        "jp": "私は両親にプレゼントをあげた。",
+        "vi": "Tôi đã tặng quà cho cha mẹ."
+      }
+    ],
+    "synonyms_distinction": "'親' chỉ một hoặc cả cha mẹ chung chung, trong khi '父母' (ちちぼ) cũng có nghĩa là bố mẹ nhưng ít dùng hơn; '両親' nhấn mạnh cả hai người cùng lúc.",
+    "notes": "Đọc là りょうしん; 両 nghĩa là cả hai, 親 nghĩa là cha mẹ.",
+    "cachedAt": "2026-08-31T01:08:53.770Z"
+  },
+  "kanji_乗車券": {
+    "meaning": "乗車券 (じょうしゃけん) là danh từ chỉ \"vé xe\" dùng để lên xe buýt, tàu điện ngầm, tàu hỏa, xe điện, v.v. – chứng từ xác nhận người mua đã trả tiền và được phép ngồi trên phương tiện giao thông công cộng.",
+    "usage": "Thường dùng trong các tình huống mua vé tại ga, trạm, máy bán vé tự động hoặc khi nhân viên yêu cầu xuất vé để kiểm tra. Được dùng kèm các từ chỉ loại phương tiện như 電車乗車券 (vé tàu điện), バス乗車券 (vé xe buýt).",
+    "examples": [
+      {
+        "jp": "駅で乗車券を買いました。",
+        "vi": "Tôi đã mua vé xe tại ga."
+      },
+      {
+        "jp": "乗車券を見せてください。",
+        "vi": "Xin hãy xuất vé để kiểm tra."
+      },
+      {
+        "jp": "この乗車券は1日乗り放題です。",
+        "vi": "Vé này cho phép đi không giới hạn trong một ngày."
+      }
+    ],
+    "synonyms_distinction": "Từ đồng nghĩa thường gặp là 切符 (きっぷ). 切符 là vé chung, có thể dùng cho cả tàu, xe buýt, hoặc các phương tiện khác, còn 乗車券 nhấn mạnh quyền lên (乗) và ngồi (車) trên phương tiện, thường dùng cho vé có tính chất xác nhận quyền lên xe cụ thể như vé tàu, vé xe điện. Một số trường hợp 乗車券 có thể bao gồm phí nhập cảnh (乗車券+特急券).",
+    "notes": "- 乗 (乗る) nghĩa là lên, ngồi trên; 車 (車両) nghĩa là xe, phương tiện; 券 (けん) nghĩa là chứng từ, vé.\\n- Phát âm: jōsha‑ken.\\n- Trong các hệ thống giao thông hiện đại, 乗車券 có thể là vé giấy hoặc vé điện tử (ICカード).",
+    "cachedAt": "2026-08-31T01:05:15.312Z"
+  },
+  "kanji_優しい": {
+    "meaning": "được dùng để chỉ tính cách hoặc cảm giác mềm mại, dịu dàng, thân thiện, trìu mến; mô tả người, hành động, âm thanh, môi trường,...",
+    "usage": "thường đi kèm với danh từ hoặc làm vị từ tính từ (i‑adj) để miêu tả tính chất nhẹ nhàng, âu y; dùng trong các tình huống thân mật, nói về cảm xúc hoặc tính cách tốt",
+    "examples": [
+      {
+        "jp": "彼はとても優しい人です。",
+        "vi": "Anh ấy là một người rất dịu dàng."
+      },
+      {
+        "jp": "優しい笑顔が彼女の魅力だ。",
+        "vi": "Nụ cười dịu dàng là sức hút của cô ấy."
+      },
+      {
+        "jp": "この毛布は優しくて暖かい。",
+        "vi": "Chiếc chăn này mềm mại và ấm áp."
+      }
+    ],
+    "synonyms_distinction": "tương đồng với やさしい (cùng cách viết), nhưng có thể phân biệt với 親切 (tốt bụng, giúp đỡ) và 温和 (êm đềm, không gây xung đột)",
+    "notes": "",
+    "part_of_speech": "tính từ i",
+    "kanji_breakdown": "優: ⿱⺅⿱⿱⿰⺈⿱⿱⿰⺍⿱⿱⿰⿱⿱⿰⺈⿰⿱⿱⿰⿱⿱⿰⺈⿱⿱⿰⿱⿱⿰⺈⿱⿱⿰⿱⿱⿰⺈⿱⿱⿰⿱⿱⿰⺈⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰⿱⿱⿰",
+    "collocations": "優しい心, 優しい言葉, 優しい眼差し, 優しい笑顔, 優しい手触り, 優しい声, 優しい天気",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "",
+    "cachedAt": "2026-09-01T01:03:16.163Z"
+  },
+  "kanji_優先席": {
+    "meaning": "Ghế ưu tiên, chỗ ngồi dành cho người khuyết tật, trẻ em, người cao tuổi, phụ nữ mang thai, v.v.",
+    "usage": "Dùng để chỉ các chỗ ngồi được đánh dấu trên tàu, xe buýt, máy bay,… dành cho những người cần hỗ trợ; người khác thường phải nhường chỗ.",
+    "examples": [
+      {
+        "jp": "優先席は、妊婦や身体の不自由な方のために確保されています。",
+        "vi": "Ghế ưu tiên được dành riêng cho phụ nữ mang thai và người khuyết tật."
+      }
+    ],
+    "synonyms_distinction": "Có thể thay bằng 「優先座席」, nhưng 「優先席」 thường dùng trong phương tiện công cộng; 「特別席」 chỉ chỗ ngồi đặc biệt nhưng không nhất thiết dành cho các nhóm trên.",
+    "notes": "Không được ngồi nếu không thuộc đối tượng; vi phạm có thể bị phạt. Khi gặp người cần chỗ, nên nhường ngay.",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "優: \"ưu việt, tốt\" (yū), 先: \"trước, đầu tiên\" (sen), 席: \"chỗ ngồi\" (seki)",
+    "collocations": "優先席を譲る, 優先席の表示, 優先席に座る, 優先席を確保する",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "",
+    "cachedAt": "2026-09-01T01:02:39.592Z"
+  },
+  "kanji_取り替える": {
+    "meaning": "(取り替える, とりかえる) có nghĩa là đổi chỗ, thay thế, trao đổi một vật này lấy vật khác; dùng để mô tả việc đổi, thay hoặc trao đổi hàng hoá, vật dụng giữa các bên",
+    "usage": "Thường dùng khi muốn nói việc đổi một thứ sang thứ khác, ví dụ đổi đồ dùng, thay đồ, hoặc trao đổi hàng hoá trong buôn bán. Thường đi kèm với đối tượng cần đổi (もの) và đối tượng nhận thay (に)",
+    "examples": [
+      {
+        "jp": "古い電池を新しいものに取り替える。",
+        "vi": "Thay pin cũ bằng cái mới."
+      },
+      {
+        "jp": "商品を別のサイズに取り替えてください。",
+        "vi": "Xin vui lòng đổi sản phẩm sang kích thước khác."
+      },
+      {
+        "jp": "二つの商品の代金を取り替えて支払う。",
+        "vi": "Thanh toán bằng cách trao đổi tiền cho hai mặt hàng."
+      }
+    ],
+    "synonyms_distinction": "Có thể thay thế bằng 交換する (こうかんする) – nhấn mạnh việc trao đổi hai phía; または 取り換える – tương tự nhưng ít dùng hơn. 取り替える thường nhấn mạnh việc thay thế, đổi chỗ một cách trực tiếp.",
+    "notes": "Trong một số trường hợp, 取り替える có thể được viết là 取り換える, nhưng 取り換える thường dùng cho việc thay đổi vị trí hoặc thay thế một phần cụ thể, trong khi 取り替える rộng hơn, bao gồm cả việc trao đổi vật phẩm.",
+    "cachedAt": "2026-08-31T06:08:30.249Z"
+  },
+  "kanji_向かう": {
+    "meaning": "đối mặt; hướng tới; tiến về phía...",
+    "usage": "được dùng để chỉ hành động di chuyển tới một hướng, hoặc đối diện, đối mặt với vấn đề",
+    "examples": [
+      {
+        "jp": "彼は困難に向かって歩き出した。",
+        "vi": "Anh ấy đã bước đi để đối mặt với khó khăn."
+      },
+      {
+        "jp": "問題に向かう勇気が必要だ。",
+        "vi": "Cần có dũng khí để đối mặt với vấn đề."
+      }
+    ],
+    "synonyms_distinction": "向かう khác với 向く（むく）—向く thường chỉ trạng thái hướng mặt, còn 向かう nhấn mạnh hành động di chuyển hoặc tiến tới, có thể mang nghĩa ‘đối mặt’.",
+    "notes": "Có thể kết hợp với 前に、方向へ... để nhấn mạnh hướng đi.",
+    "cachedAt": "2026-08-31T01:01:58.811Z"
+  },
+  "kanji_向こう": {
+    "meaning": "phía đối diện; phía bên kia; nơi ở xa; người ở phía đó",
+    "usage": "dùng như danh từ hoặc trạng từ chỉ vị trí, thường đi kèm với các từ chỉ hướng như '向こうへ', '向こう側' để chỉ nơi ở phía bên kia của đối tượng đang nói",
+    "examples": [
+      {
+        "jp": "向こうに行きます。",
+        "vi": "Tôi sẽ đi tới phía bên kia."
+      },
+      {
+        "jp": "向こうの家は大きいです。",
+        "vi": "Ngôi nhà phía bên kia (đối diện) to."
+      },
+      {
+        "jp": "駅の向こうに公園があります。",
+        "vi": "Có công viên ở phía bên kia của ga."
+      }
+    ],
+    "synonyms_distinction": "tương đồng với あちら、反対側, nhưng '向こう' thường nhấn mạnh khoảng cách hoặc vị trí ở phía xa hơn, còn 'あちら' ít nhấn mạnh khoảng cách.",
+    "notes": "có thể kết hợp thành '向こう側' để nhấn mạnh phía bên kia của một vật, và dùng trong các biểu đạt như '向こう側の人' (người ở phía bên kia)",
+    "cachedAt": "2026-08-31T01:07:48.053Z"
+  },
+  "kanji_回数券": {
+    "meaning": "Phiếu mua nhiều lần, vé trả trước cho phép sử dụng một số lần nhất định với giá ưu đãi",
+    "usage": "Dùng để mua các loại vé hoặc thẻ dịch vụ có thể sử dụng nhiều lần (ví dụ: vé tàu, vé vào công viên, thẻ rửa xe) với mức giảm giá so với mua lẻ mỗi lần",
+    "examples": [
+      {
+        "jp": "この回数券は5回分の乗車が可能です。",
+        "vi": "Phiếu này cho phép đi 5 lần."
+      },
+      {
+        "jp": "回数券を購入すると、1回あたりの料金が割安になる。",
+        "vi": "Mua phiếu trả trước sẽ giảm giá mỗi lần."
+      },
+      {
+        "jp": "水族館の回数券は10回分で通常チケットより安くなる。",
+        "vi": "Phiếu 10 lần của thủy cung rẻ hơn vé lẻ thông thường."
+      }
+    ],
+    "synonyms_distinction": "Khác với チケット (vé một lần) và 定期券 (vé định kỳ dùng vô hạn trong khoảng thời gian), 回数券 là vé có số lần sử dụng cố định và thường có mức giảm giá; còn 割引券 là phiếu giảm giá cho một lần mua, không xác định số lần sử dụng.",
+    "notes": "",
+    "cachedAt": "2026-08-31T01:04:42.838Z"
+  },
+  "kanji_女優": {
+    "meaning": "Nghĩa: người phụ nữ làm diễn viên (actress), người diễn xuất nữ.",
+    "usage": "Dùng để chỉ người phụ nữ làm nghề diễn viên, thường xuất hiện trong ngữ cảnh giải trí, phim ảnh, kịch.",
+    "examples": [
+      {
+        "jp": "彼女は有名な女優です。",
+        "vi": "Cô ấy là một diễn viên nữ nổi tiếng."
+      }
+    ],
+    "synonyms_distinction": "So sánh với 俳優 (haiyū) nghĩa chung là diễn viên (không phân biệt giới tính); 女優 chỉ nữ, còn 俳優 có thể là nam hoặc nữ.",
+    "notes": "Trong tiếng Nhật, 女優 thường chỉ nữ, còn nam diễn viên gọi là 俳優 hoặc 男優 (đôi khi dùng).",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "女 (nữ, phụ nữ) + 優 (ưu, xuất sắc, tài năng) → nghĩa là ‘phụ nữ xuất sắc trong diễn xuất’.",
+    "collocations": "新人女優, 女優業, 人気女優, 女優賞, 主演女優",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "",
+    "cachedAt": "2026-09-01T01:03:45.127Z"
+  },
+  "kanji_整理": {
+    "meaning": "Sắp xếp, tổ chức, điều chỉnh, quy định một cách có trật tự; làm cho gọn gàng, ngăn nắp.",
+    "usage": "Thường dùng để chỉ việc sắp xếp, tổ chức thông tin, tài liệu, vật dụng hoặc hệ thống, quy trình sao cho gọn gàng, logic. Có thể đi kèm với các danh từ như データ, 書類, 部屋, スケジュール, 体制, 法律...",
+    "examples": [
+      {
+        "jp": "書類を整理してから会議に臨みます。",
+        "vi": "Tôi sẽ sắp xếp tài liệu trước khi tham gia cuộc họp."
+      },
+      {
+        "jp": "部屋の中を整理したら、すっきりした。",
+        "vi": "Sau khi dọn dẹp phòng, nó trông thật gọn gàng."
+      },
+      {
+        "jp": "この会社は組織を整理する必要がある。",
+        "vi": "Công ty này cần tổ chức lại cấu trúc của mình."
+      }
+    ],
+    "synonyms_distinction": "整理と似た語に『整頓』『整備』『整理整頓』があるが、整理は情報や内容の整理・統合に重点があり、整頓は物品の位置や順序を整えること、整備は機械・設備などの点検・修理を含む広い意味になる。",
+    "notes": "読み方は「せいり」。漢字は「整」＝「điều chỉnh, gọn gàng」+「理」＝「lý luận, nguyên tắc」。",
+    "cachedAt": "2026-08-31T01:03:11.190Z"
+  },
+  "kanji_整理券": {
+    "meaning": "Phiếu sắp xếp, phiếu đánh số dùng để xác định thứ tự chờ dịch vụ trong các địa điểm công cộng như cửa hàng, bệnh viện, bến xe,...",
+    "usage": "Được phát cho khách khi đến nơi và chưa được phục vụ; khách giữ lại cho đến khi gọi số hoặc tên. Thường dùng ở các nơi có số lượng khách lớn cần quản lý thứ tự.",
+    "examples": [
+      {
+        "jp": "整理券を受け取って、呼び出しまで待ってください。",
+        "vi": "Hãy nhận phiếu sắp xếp và chờ đến khi được gọi."
+      },
+      {
+        "jp": "この店は整理券制です。先に整理券を取ってください。",
+        "vi": "Cửa hàng này dùng hệ thống phiếu sắp xếp. Vui lòng lấy phiếu trước."
+      }
+    ],
+    "synonyms_distinction": "Tương đồng với チケット (ticket) hay 番号札 (phiếu số), nhưng 整理券 nhấn mạnh việc sắp xếp thứ tự chờ, thường không dùng cho vé vào sự kiện.",
+    "notes": "",
+    "cachedAt": "2026-08-31T01:03:45.195Z"
+  },
+  "kanji_現れる": {
+    "meaning": "Xuất hiện; hiện ra; trở nên hữu hình, hiện diện trong mắt người",
+    "usage": "Dùng để chỉ người, vật, hiện tượng bất ngờ hoặc từ đâu đó xuất hiện, thường đi kèm với các trạng từ chỉ thời gian, địa điểm",
+    "examples": [
+      {
+        "jp": "彼は突然現れた。",
+        "vi": "Anh ấy xuất hiện bất ngờ."
+      },
+      {
+        "jp": "桜の花が春に現れる。",
+        "vi": "Hoa anh đào xuất hiện vào mùa xuân."
+      }
+    ],
+    "synonyms_distinction": "Tương đồng với 出る (đi ra), 現す (hiện ra), nhưng 現れる nhấn mạnh sự xuất hiện một cách bất ngờ hoặc xuất hiện trong mắt người, còn 出る chỉ di chuyển ra ngoài.",
+    "notes": "Kanji 現 bao gồm 意 (ý nghĩa) và 亙 (trải rộng); nghĩa gốc là 'hiện hữu', 'có mặt'. Khi chia ở dạng hiện tại: 現れる; quá khứ: 現れた; thể lịch sự: 現れます.",
+    "cachedAt": "2026-08-31T01:06:38.557Z"
+  },
+  "kanji_現金": {
+    "meaning": "Tiền mặt, tiền sẵn sàng, tiền trong tay, tiền tệ",
+    "usage": "Dùng để chỉ số tiền có sẵn, không phải tiền gửi hay thẻ tín dụng, thường xuất hiện trong giao dịch mua bán, báo cáo tài chính, hoặc khi yêu cầu thanh toán bằng tiền mặt.",
+    "examples": [
+      {
+        "jp": "現金で支払います。",
+        "vi": "Tôi sẽ thanh toán bằng tiền mặt."
+      },
+      {
+        "jp": "会社の現金残高は100万円です。",
+        "vi": "Số dư tiền mặt của công ty là 1 triệu yên."
+      },
+      {
+        "jp": "現金が足りないので、銀行から借りる必要があります。",
+        "vi": "Vì không đủ tiền mặt, tôi cần vay từ ngân hàng."
+      }
+    ],
+    "synonyms_distinction": "同義詞: キャッシュ (cash), 現金取引 (giao dịch tiền mặt). Tuy nhiên, キャッシュ thường dùng trong ngữ cảnh hiện đại, công nghệ, trong khi 現金 là từ truyền thống, chính thống trong văn bản và pháp luật.",
+    "notes": "Kanji 現 (hiện, hiện tại) + 金 (tiền, kim loại). Khi đọc, thường là げんきん (genkin).",
+    "cachedAt": "2026-08-31T01:06:03.154Z"
+  },
+  "kanji_着替える": {
+    "meaning": "đổi trang phục, thay quần áo (của một người)",
+    "usage": "dùng khi nói người nào đó thay quần áo, thường đi kèm với chủ ngữ là người thực hiện hành động",
+    "examples": [
+      {
+        "jp": "彼はすぐに着替える。",
+        "vi": "Anh ấy ngay lập tức thay quần áo."
+      },
+      {
+        "jp": "子どもは外で遊んだ後、着替えて部屋に入った。",
+        "vi": "Đứa trẻ sau khi chơi ngoài trời, thay đồ rồi vào phòng."
+      }
+    ],
+    "synonyms_distinction": "同義語は「換える」だが「換える」は物や状態全体を変える意味で、服に限らず広い範囲で使う。\"着替える\"は特に服装を変えることに限定される。",
+    "notes": "\"着替える\"は自動詞的に使われることは少なく、必ず他動詞として目的語（服）を伴うことが多い。",
+    "cachedAt": "2026-08-31T06:09:12.331Z"
+  },
+  "kanji_表現": {
+    "meaning": "Biểu hiện, cách thể hiện một ý tưởng, cảm xúc hoặc thông tin thông qua lời nói, hành động, nghệ thuật; sự miêu tả; đại diện",
+    "usage": "Dùng khi nói về việc truyền đạt hoặc thể hiện một nội dung nào đó bằng ngôn ngữ, hình ảnh, hành động… Thường đi kèm với động từ 「する」 (表現する) hoặc các danh từ như 「表現力」",
+    "examples": [
+      {
+        "jp": "彼は感情を言葉で表現するのが苦手だ。",
+        "vi": "Anh ấy không giỏi biểu đạt cảm xúc bằng lời."
+      },
+      {
+        "jp": "この絵は自然の美しさを見事に表現している。",
+        "vi": "Bức tranh này đã thể hiện vẻ đẹp của thiên nhiên một cách tuyệt vời."
+      },
+      {
+        "jp": "広告は商品の特徴を簡潔に表現する必要がある。",
+        "vi": "Quảng cáo cần phải diễn đạt đặc điểm của sản phẩm một cách ngắn gọn."
+      }
+    ],
+    "synonyms_distinction": "同義詞: 「描写」(miêu tả chi tiết), 「表す」(bày tỏ, biểu thị); 「表現」 nhấn mạnh quá trình hoặc khả năng truyền đạt, trong khi 「描写」 tập trung vào mô tả chi tiết, 「表す」 thường dùng cho một hành động đơn giản hơn.",
+    "notes": "Khi dùng làm danh từ, thường kết hợp với 「する」 để tạo động từ 「表現する」. Ngoài ra, 「表現」có thể chỉ cả nghệ thuật (ví dụ: 芸術的表現).",
+    "cachedAt": "2026-08-31T01:07:08.556Z"
+  },
+  "kanji_駐車券": {
+    "meaning": "vé đậu xe, giấy chứng nhận đã trả tiền để đậu xe tại bãi hoặc bãi đỗ",
+    "usage": "Dùng khi mua hoặc nhận chứng nhận đỗ xe tại các bãi đỗ, thường được dán lên cửa kính hoặc giữ làm bằng chứng thanh toán",
+    "examples": [
+      {
+        "jp": "駐車券を購入してください。",
+        "vi": "Vui lòng mua vé đậu xe."
+      },
+      {
+        "jp": "駐車券を失くしたので、再発行をお願いします。",
+        "vi": "Do tôi đã làm mất vé đậu xe, xin vui lòng cấp lại."
+      },
+      {
+        "jp": "駐車券がないと駐車できません。",
+        "vi": "Nếu không có vé đậu xe, không được phép đậu xe."
+      }
+    ],
+    "synonyms_distinction": "Giống với 駐車証 (chủ đậu xe), nhưng 駐車券 thường là vé dùng một lần, còn 駐車証 là thẻ hoặc giấy phép dài hạn.",
+    "notes": "Đọc là ちゅうしゃけん.",
+    "cachedAt": "2026-08-31T01:04:15.887Z"
   }
 }

@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "firebase-admin": "^13.10.0"
+  },
+  "dependencies": {
+    "kuroshiro": "^1.2.0",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0"
   }
 }

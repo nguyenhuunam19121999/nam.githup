@@ -27,10 +27,9 @@ import VocabDetailInline from './VocabDetailInline';
 import { KeyboardAwareScrollViewCompat } from './KeyboardAwareScrollViewCompat';
 import { FeedbackSection } from './FeedbackSection';
 import AIExplainPanel from './AIExplainPanel';
+import FuriganaText from './FuriganaText';
 import { useColors } from '../artifacts/mirai-jp/hooks/useColors';
 
-// Giữ cố định — màu cam của viên kim cương "◆" trước Kunyomi/Onyomi là điểm
-// nhấn trang trí riêng, không phải màu giao diện chính, nên không đổi theo theme.
 const icon_line_COLOR = '#e47b0b';
 
 interface KanjiDetailInlineProps {
@@ -336,11 +335,6 @@ export default function KanjiDetailInline({
               </View>
 
               {/* Tra cứu từ AI */}
-              {/* <AIExplainPanel
-                type="kanji"
-                word={kanjiData.kanji}
-                context={kanjiData.meanings_vi.join(', ')}
-              /> */}
               <AIExplainPanel
                 type="kanji"
                 word={kanjiData.kanji}
@@ -367,9 +361,13 @@ export default function KanjiDetailInline({
                       onPress={() => setSelectedExample(ex)}
                       activeOpacity={0.7}
                     >
-                      <Text style={[styles.exampleJp, { color: c.text }]}>{ex.jp}</Text>
-                      <Text style={[styles.exampleReading, { color: c.mutedForeground }]}>{ex.reading}</Text>
-                      <Text style={[styles.exampleVi, { color: c.mutedForeground }]}>→ {ex.vi}</Text>
+                      <FuriganaText
+                        segments={[{ text: ex.jp, furigana: ex.reading }]}
+                        color={c.text}
+                        fontSize={16}
+                        furiganaFontSize={10}
+                      />
+                      <Text style={[styles.exampleVi, { color: c.mutedForeground, marginTop: 4 }]}>→ {ex.vi}</Text>
                       <Text style={{ fontSize: 48, marginTop: 16, right: 8, opacity: 0.06, position: 'absolute', zIndex: -1 }}>
                         🔍 
                       </Text>

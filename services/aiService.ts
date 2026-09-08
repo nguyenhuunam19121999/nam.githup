@@ -1,4 +1,4 @@
-// scripts/services/aiService.ts
+// services/aiService.ts
 //
 // Kiến trúc: App --(Firebase ID token)--> Cloudflare Worker --(Groq key chung)--> Groq API
 // Worker chịu trách nhiệm TOÀN BỘ:
@@ -14,44 +14,41 @@ import auth from '@react-native-firebase/auth';
 
 const AI_WORKER_URL = 'https://mirai-jp-ai.miraiai.workers.dev';
 
+export interface ContentSegment {
+  text: string;
+  furigana?: string;
+}
+
 export interface AIExample {
-  jp: string;
+  jp_segments: ContentSegment[];
   vi: string;
 }
 
 export interface AIResult {
-  meaning: string;
-  usage: string;
+  meaning: ContentSegment[];
+  usage: ContentSegment[];
   examples: AIExample[];
-  synonyms_distinction: string;
-  notes: string;
+  synonyms_distinction: ContentSegment[];
+  notes: ContentSegment[];
 
   // Chỉ có khi type === 'grammar'
-  structure?: string;
-  conjugation?: string;
+  structure?: ContentSegment[];
+  conjugation?: ContentSegment[];
   jlpt_level?: string;
 
   // Chỉ có khi type === 'vocab'
   part_of_speech?: string;
-  collocations?: string;
-  kanji_breakdown?: string;
+  collocations?: ContentSegment[];
+  kanji_breakdown?: ContentSegment[];
 
   // Chỉ có khi type === 'kanji'
-  component_analysis?: string;
-  stroke_count_note?: string;
-  similar_kanji?: string;
+  component_analysis?: ContentSegment[];
+  stroke_count_note?: ContentSegment[];
+  similar_kanji?: ContentSegment[];
 
   parseFailed?: boolean;
+  meaningRaw?: string; // dùng khi parseFailed = true, xem AIExplainPanel
 }
-
-// export interface AIResult {
-//   meaning: string;
-//   usage: string;
-//   examples: AIExample[];
-//   synonyms_distinction: string;
-//   notes: string;
-//   parseFailed?: boolean; // true nếu AI trả lỗi format, nội dung nằm hết trong `meaning`
-// }
 
 export type AILookupType = 'vocab' | 'grammar' | 'kanji';
 

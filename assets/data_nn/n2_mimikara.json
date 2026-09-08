@@ -10,11 +10,64 @@
     "examples": [
       {
         "jp": "一言言ってくれればよかったものを、なぜ黙っていたんですか。",
-        "vi": "Phải chi nói một câu thôi, sao lại im lặng vậy?"
+        "vi": "Phải chi nói một câu thôi, sao lại im lặng vậy?",
+        "reading": [
+          {
+            "text": "一言",
+            "furigana": "ひとこと"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "ってくれればよかったものを、なぜ"
+          },
+          {
+            "text": "黙",
+            "furigana": "だま"
+          },
+          {
+            "text": "っていたんですか。"
+          }
+        ]
       },
       {
         "jp": "もっと早く来れば間に合ったものを。",
-        "vi": "Giá mà đến sớm hơn thì đã kịp rồi."
+        "vi": "Giá mà đến sớm hơn thì đã kịp rồi.",
+        "reading": [
+          {
+            "text": "もっと"
+          },
+          {
+            "text": "早",
+            "furigana": "はや"
+          },
+          {
+            "text": "く"
+          },
+          {
+            "text": "来",
+            "furigana": "く"
+          },
+          {
+            "text": "れば"
+          },
+          {
+            "text": "間",
+            "furigana": "ま"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "合",
+            "furigana": "あ"
+          },
+          {
+            "text": "ったものを。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -31,11 +84,78 @@
     "examples": [
       {
         "jp": "彼は席に座るなり、すぐに眠り始めた。",
-        "vi": "Anh ấy vừa ngồi xuống ghế là ngủ ngay lập tức."
+        "vi": "Anh ấy vừa ngồi xuống ghế là ngủ ngay lập tức.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "席",
+            "furigana": "せき"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "座",
+            "furigana": "すわ"
+          },
+          {
+            "text": "るなり、すぐに"
+          },
+          {
+            "text": "眠",
+            "furigana": "ねむ"
+          },
+          {
+            "text": "り"
+          },
+          {
+            "text": "始",
+            "furigana": "はじ"
+          },
+          {
+            "text": "めた。"
+          }
+        ]
       },
       {
         "jp": "家に帰ったなり、一言も話さない。",
-        "vi": "Vừa về nhà là không nói một lời nào."
+        "vi": "Vừa về nhà là không nói một lời nào.",
+        "reading": [
+          {
+            "text": "家",
+            "furigana": "いえ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "帰",
+            "furigana": "かえ"
+          },
+          {
+            "text": "ったなり、"
+          },
+          {
+            "text": "一言",
+            "furigana": "ひとこと"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "さない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -52,11 +172,67 @@
     "examples": [
       {
         "jp": "お客様あっての商売だ。お客様を大切にしなければならない。",
-        "vi": "Kinh doanh là nhờ có khách hàng. Phải trân trọng khách hàng."
+        "vi": "Kinh doanh là nhờ có khách hàng. Phải trân trọng khách hàng.",
+        "reading": [
+          {
+            "text": "お"
+          },
+          {
+            "text": "客様",
+            "furigana": "きゃくさま"
+          },
+          {
+            "text": "あっての"
+          },
+          {
+            "text": "商売",
+            "furigana": "しょうばい"
+          },
+          {
+            "text": "だ。お"
+          },
+          {
+            "text": "客様",
+            "furigana": "きゃくさま"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "大切",
+            "furigana": "たいせつ"
+          },
+          {
+            "text": "にしなければならない。"
+          }
+        ]
       },
       {
         "jp": "健康あっての仕事だから、無理しないでください。",
-        "vi": "Có sức khỏe mới có thể làm việc, nên đừng cố quá sức nhé."
+        "vi": "Có sức khỏe mới có thể làm việc, nên đừng cố quá sức nhé.",
+        "reading": [
+          {
+            "text": "健康",
+            "furigana": "けんこう"
+          },
+          {
+            "text": "あっての"
+          },
+          {
+            "text": "仕事",
+            "furigana": "しごと"
+          },
+          {
+            "text": "だから、"
+          },
+          {
+            "text": "無理",
+            "furigana": "むり"
+          },
+          {
+            "text": "しないでください。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -73,11 +249,60 @@
     "examples": [
       {
         "jp": "上司に反論しようものなら、ひどい目にあう。",
-        "vi": "Lỡ mà cãi lại sếp thì sẽ khốn đấy."
+        "vi": "Lỡ mà cãi lại sếp thì sẽ khốn đấy.",
+        "reading": [
+          {
+            "text": "上司",
+            "furigana": "じょうし"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "反論",
+            "furigana": "はんろん"
+          },
+          {
+            "text": "しようものなら、ひどい"
+          },
+          {
+            "text": "目",
+            "furigana": "め"
+          },
+          {
+            "text": "にあう。"
+          }
+        ]
       },
       {
         "jp": "その話を家族にしようものなら、大変なことになる。",
-        "vi": "Nếu dại mà nói chuyện đó với gia đình thì sẽ gay to."
+        "vi": "Nếu dại mà nói chuyện đó với gia đình thì sẽ gay to.",
+        "reading": [
+          {
+            "text": "その"
+          },
+          {
+            "text": "話",
+            "furigana": "はなし"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "家族",
+            "furigana": "かぞく"
+          },
+          {
+            "text": "にしようものなら、"
+          },
+          {
+            "text": "大変",
+            "furigana": "たいへん"
+          },
+          {
+            "text": "なことになる。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -94,11 +319,88 @@
     "examples": [
       {
         "jp": "子供が生まれてからというもの、夫婦でゆっくり話す時間がなくなった。",
-        "vi": "Kể từ khi có con, vợ chồng không còn thời gian nói chuyện thoải mái nữa."
+        "vi": "Kể từ khi có con, vợ chồng không còn thời gian nói chuyện thoải mái nữa.",
+        "reading": [
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "生",
+            "furigana": "う"
+          },
+          {
+            "text": "まれてからというもの、"
+          },
+          {
+            "text": "夫婦",
+            "furigana": "ふうふ"
+          },
+          {
+            "text": "でゆっくり"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "す"
+          },
+          {
+            "text": "時間",
+            "furigana": "じかん"
+          },
+          {
+            "text": "がなくなった。"
+          }
+        ]
       },
       {
         "jp": "この街に引っ越してからというもの、毎日が楽しい。",
-        "vi": "Từ khi chuyển đến thành phố này, ngày nào cũng vui."
+        "vi": "Từ khi chuyển đến thành phố này, ngày nào cũng vui.",
+        "reading": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "街",
+            "furigana": "まち"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "引",
+            "furigana": "ひ"
+          },
+          {
+            "text": "っ"
+          },
+          {
+            "text": "越",
+            "furigana": "こ"
+          },
+          {
+            "text": "してからというもの、"
+          },
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "楽",
+            "furigana": "たの"
+          },
+          {
+            "text": "しい。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -115,11 +417,81 @@
     "examples": [
       {
         "jp": "自分で「できる」と言った手前、失敗するわけにはいかない。",
-        "vi": "Vì đã tự nói 'tôi làm được' rồi, không thể thất bại được."
+        "vi": "Vì đã tự nói 'tôi làm được' rồi, không thể thất bại được.",
+        "reading": [
+          {
+            "text": "自分",
+            "furigana": "じぶん"
+          },
+          {
+            "text": "で「できる」と"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "った"
+          },
+          {
+            "text": "手前",
+            "furigana": "てまえ"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "失敗",
+            "furigana": "しっぱい"
+          },
+          {
+            "text": "するわけにはいかない。"
+          }
+        ]
       },
       {
         "jp": "みんなの前で約束した手前、今さら断れない。",
-        "vi": "Vì đã hứa trước mặt mọi người rồi, giờ không thể từ chối nữa."
+        "vi": "Vì đã hứa trước mặt mọi người rồi, giờ không thể từ chối nữa.",
+        "reading": [
+          {
+            "text": "みんなの"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "約束",
+            "furigana": "やくそく"
+          },
+          {
+            "text": "した"
+          },
+          {
+            "text": "手前",
+            "furigana": "てまえ"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "今",
+            "furigana": "いま"
+          },
+          {
+            "text": "さら"
+          },
+          {
+            "text": "断",
+            "furigana": "ことわ"
+          },
+          {
+            "text": "れない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -136,11 +508,64 @@
     "examples": [
       {
         "jp": "会議中に居眠りするとは、失礼きわまりない行動だ。",
-        "vi": "Ngủ gật trong cuộc họp là hành động vô lễ cực kì."
+        "vi": "Ngủ gật trong cuộc họp là hành động vô lễ cực kì.",
+        "reading": [
+          {
+            "text": "会議",
+            "furigana": "かいぎ"
+          },
+          {
+            "text": "中",
+            "furigana": "ちゅう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "居眠",
+            "furigana": "いねむ"
+          },
+          {
+            "text": "りするとは、"
+          },
+          {
+            "text": "失礼",
+            "furigana": "しつれい"
+          },
+          {
+            "text": "きわまりない"
+          },
+          {
+            "text": "行動",
+            "furigana": "こうどう"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "そのような発言は不謹慎きわまる。",
-        "vi": "Phát ngôn như vậy là hết sức bất cẩn."
+        "vi": "Phát ngôn như vậy là hết sức bất cẩn.",
+        "reading": [
+          {
+            "text": "そのような"
+          },
+          {
+            "text": "発言",
+            "furigana": "はつげん"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "不謹慎",
+            "furigana": "ふきんしん"
+          },
+          {
+            "text": "きわまる。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -157,11 +582,53 @@
     "examples": [
       {
         "jp": "これは職人ならではの技だ。",
-        "vi": "Đây là kỹ thuật chỉ có thợ thủ công mới có."
+        "vi": "Đây là kỹ thuật chỉ có thợ thủ công mới có.",
+        "reading": [
+          {
+            "text": "これは"
+          },
+          {
+            "text": "職人",
+            "furigana": "しょくにん"
+          },
+          {
+            "text": "ならではの"
+          },
+          {
+            "text": "技",
+            "furigana": "わざ"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "京都ならではの風景に感動した。",
-        "vi": "Tôi cảm động trước phong cảnh chỉ có ở Kyoto mới có."
+        "vi": "Tôi cảm động trước phong cảnh chỉ có ở Kyoto mới có.",
+        "reading": [
+          {
+            "text": "京都",
+            "furigana": "きょうと"
+          },
+          {
+            "text": "ならではの"
+          },
+          {
+            "text": "風景",
+            "furigana": "ふうけい"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "感動",
+            "furigana": "かんどう"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -178,11 +645,93 @@
     "examples": [
       {
         "jp": "長い交渉を経て、ようやく合意に達した。",
-        "vi": "Sau khi trải qua cuộc đàm phán dài, cuối cùng đã đạt được thỏa thuận."
+        "vi": "Sau khi trải qua cuộc đàm phán dài, cuối cùng đã đạt được thỏa thuận.",
+        "reading": [
+          {
+            "text": "長",
+            "furigana": "なが"
+          },
+          {
+            "text": "い"
+          },
+          {
+            "text": "交渉",
+            "furigana": "こうしょう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "経",
+            "furigana": "へ"
+          },
+          {
+            "text": "て、ようやく"
+          },
+          {
+            "text": "合意",
+            "furigana": "ごうい"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "達",
+            "furigana": "たっ"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       },
       {
         "jp": "数年間の修業を経て、一人前の職人になった。",
-        "vi": "Sau nhiều năm tu nghiệp, anh ấy đã trở thành thợ thủ công lành nghề."
+        "vi": "Sau nhiều năm tu nghiệp, anh ấy đã trở thành thợ thủ công lành nghề.",
+        "reading": [
+          {
+            "text": "数",
+            "furigana": "すう"
+          },
+          {
+            "text": "年間",
+            "furigana": "ねんかん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "修業",
+            "furigana": "しゅうぎょう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "経",
+            "furigana": "へ"
+          },
+          {
+            "text": "て、"
+          },
+          {
+            "text": "一",
+            "furigana": "いち"
+          },
+          {
+            "text": "人前",
+            "furigana": "にんまえ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "職人",
+            "furigana": "しょくにん"
+          },
+          {
+            "text": "になった。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -199,11 +748,71 @@
     "examples": [
       {
         "jp": "現実に即した計画を立てることが重要だ。",
-        "vi": "Điều quan trọng là lập kế hoạch bám sát thực tế."
+        "vi": "Điều quan trọng là lập kế hoạch bám sát thực tế.",
+        "reading": [
+          {
+            "text": "現実",
+            "furigana": "げんじつ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "即",
+            "furigana": "そく"
+          },
+          {
+            "text": "した"
+          },
+          {
+            "text": "計画",
+            "furigana": "けいかく"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "立",
+            "furigana": "た"
+          },
+          {
+            "text": "てることが"
+          },
+          {
+            "text": "重要",
+            "furigana": "じゅうよう"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "法律に即して判断しなければならない。",
-        "vi": "Phải phán xét dựa theo pháp luật."
+        "vi": "Phải phán xét dựa theo pháp luật.",
+        "reading": [
+          {
+            "text": "法律",
+            "furigana": "ほうりつ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "即",
+            "furigana": "そく"
+          },
+          {
+            "text": "して"
+          },
+          {
+            "text": "判断",
+            "furigana": "はんだん"
+          },
+          {
+            "text": "しなければならない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -220,11 +829,79 @@
     "examples": [
       {
         "jp": "夢を実現すべく、毎日努力を続けている。",
-        "vi": "Để thực hiện ước mơ, tôi tiếp tục cố gắng mỗi ngày."
+        "vi": "Để thực hiện ước mơ, tôi tiếp tục cố gắng mỗi ngày.",
+        "reading": [
+          {
+            "text": "夢",
+            "furigana": "ゆめ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "実現",
+            "furigana": "じつげん"
+          },
+          {
+            "text": "すべく、"
+          },
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "努力",
+            "furigana": "どりょく"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "続",
+            "furigana": "つづ"
+          },
+          {
+            "text": "けている。"
+          }
+        ]
       },
       {
         "jp": "問題を解決すべく、専門家に相談した。",
-        "vi": "Nhằm giải quyết vấn đề, tôi đã tham khảo ý kiến chuyên gia."
+        "vi": "Nhằm giải quyết vấn đề, tôi đã tham khảo ý kiến chuyên gia.",
+        "reading": [
+          {
+            "text": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "解決",
+            "furigana": "かいけつ"
+          },
+          {
+            "text": "すべく、"
+          },
+          {
+            "text": "専門",
+            "furigana": "せんもん"
+          },
+          {
+            "text": "家",
+            "furigana": "か"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "相談",
+            "furigana": "そうだん"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -241,11 +918,71 @@
     "examples": [
       {
         "jp": "彼女は泣かんばかりの顔で話していた。",
-        "vi": "Cô ấy nói với vẻ mặt như sắp khóc vậy."
+        "vi": "Cô ấy nói với vẻ mặt như sắp khóc vậy.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "泣",
+            "furigana": "な"
+          },
+          {
+            "text": "かんばかりの"
+          },
+          {
+            "text": "顔",
+            "furigana": "かお"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "していた。"
+          }
+        ]
       },
       {
         "jp": "観客は飛び上がらんばかりに喜んでいた。",
-        "vi": "Khán giả vui mừng như muốn nhảy lên ấy."
+        "vi": "Khán giả vui mừng như muốn nhảy lên ấy.",
+        "reading": [
+          {
+            "text": "観客",
+            "furigana": "かんきゃく"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "飛",
+            "furigana": "と"
+          },
+          {
+            "text": "び"
+          },
+          {
+            "text": "上",
+            "furigana": "あ"
+          },
+          {
+            "text": "がらんばかりに"
+          },
+          {
+            "text": "喜",
+            "furigana": "よろこ"
+          },
+          {
+            "text": "んでいた。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -262,11 +999,72 @@
     "examples": [
       {
         "jp": "今日は連休の初日とあって、高速道路が大渋滞だ。",
-        "vi": "Vì hôm nay là ngày đầu kỳ nghỉ dài nên đường cao tốc kẹt xe rất nặng."
+        "vi": "Vì hôm nay là ngày đầu kỳ nghỉ dài nên đường cao tốc kẹt xe rất nặng.",
+        "reading": [
+          {
+            "text": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "連休",
+            "furigana": "れんきゅう"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "初日",
+            "furigana": "しょにち"
+          },
+          {
+            "text": "とあって、"
+          },
+          {
+            "text": "高速",
+            "furigana": "こうそく"
+          },
+          {
+            "text": "道路",
+            "furigana": "どうろ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "大",
+            "furigana": "だい"
+          },
+          {
+            "text": "渋滞",
+            "furigana": "じゅうたい"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "人気アーティストのコンサートとあって、チケットはすぐ完売した。",
-        "vi": "Vì là buổi hòa nhạc của nghệ sĩ nổi tiếng nên vé bán hết ngay."
+        "vi": "Vì là buổi hòa nhạc của nghệ sĩ nổi tiếng nên vé bán hết ngay.",
+        "reading": [
+          {
+            "text": "人気",
+            "furigana": "にんき"
+          },
+          {
+            "text": "アーティストのコンサートとあって、チケットはすぐ"
+          },
+          {
+            "text": "完売",
+            "furigana": "かんばい"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -283,11 +1081,43 @@
     "examples": [
       {
         "jp": "子供のためとあれば、どんな苦労もいとわない。",
-        "vi": "Nếu là vì con thì dù khổ cỡ nào cũng không ngại."
+        "vi": "Nếu là vì con thì dù khổ cỡ nào cũng không ngại.",
+        "reading": [
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "のためとあれば、どんな"
+          },
+          {
+            "text": "苦労",
+            "furigana": "くろう"
+          },
+          {
+            "text": "もいとわない。"
+          }
+        ]
       },
       {
         "jp": "必要とあれば、すぐに駆けつけます。",
-        "vi": "Nếu cần thì tôi sẽ lập tức chạy đến ngay."
+        "vi": "Nếu cần thì tôi sẽ lập tức chạy đến ngay.",
+        "reading": [
+          {
+            "text": "必要",
+            "furigana": "ひつよう"
+          },
+          {
+            "text": "とあれば、すぐに"
+          },
+          {
+            "text": "駆",
+            "furigana": "か"
+          },
+          {
+            "text": "けつけます。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -304,11 +1134,57 @@
     "examples": [
       {
         "jp": "毎日とはいわないまでも、週に3回は運動したほうがいい。",
-        "vi": "Không cần phải mỗi ngày, nhưng ít nhất tuần 3 lần nên tập thể dục."
+        "vi": "Không cần phải mỗi ngày, nhưng ít nhất tuần 3 lần nên tập thể dục.",
+        "reading": [
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "とはいわないまでも、"
+          },
+          {
+            "text": "週",
+            "furigana": "しゅう"
+          },
+          {
+            "text": "に3"
+          },
+          {
+            "text": "回",
+            "furigana": "かい"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "運動",
+            "furigana": "うんどう"
+          },
+          {
+            "text": "したほうがいい。"
+          }
+        ]
       },
       {
         "jp": "優勝とはいかないまでも、せめて入賞はしたい。",
-        "vi": "Dù không thể vô địch thì ít nhất cũng muốn vào vòng giải thưởng."
+        "vi": "Dù không thể vô địch thì ít nhất cũng muốn vào vòng giải thưởng.",
+        "reading": [
+          {
+            "text": "優勝",
+            "furigana": "ゆうしょう"
+          },
+          {
+            "text": "とはいかないまでも、せめて"
+          },
+          {
+            "text": "入賞",
+            "furigana": "にゅうしょう"
+          },
+          {
+            "text": "はしたい。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -325,11 +1201,60 @@
     "examples": [
       {
         "jp": "忙しいからといって、食事を抜くのはよくない。",
-        "vi": "Không phải vì bận mà bỏ bữa là được."
+        "vi": "Không phải vì bận mà bỏ bữa là được.",
+        "reading": [
+          {
+            "text": "忙",
+            "furigana": "いそが"
+          },
+          {
+            "text": "しいからといって、"
+          },
+          {
+            "text": "食事",
+            "furigana": "しょくじ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "抜",
+            "furigana": "ぬ"
+          },
+          {
+            "text": "くのはよくない。"
+          }
+        ]
       },
       {
         "jp": "お金があるからといって、何でも買えるわけではない。",
-        "vi": "Chỉ vì có tiền không có nghĩa là mua được tất cả."
+        "vi": "Chỉ vì có tiền không có nghĩa là mua được tất cả.",
+        "reading": [
+          {
+            "text": "お"
+          },
+          {
+            "text": "金",
+            "furigana": "かね"
+          },
+          {
+            "text": "があるからといって、"
+          },
+          {
+            "text": "何",
+            "furigana": "なに"
+          },
+          {
+            "text": "でも"
+          },
+          {
+            "text": "買",
+            "furigana": "か"
+          },
+          {
+            "text": "えるわけではない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -346,11 +1271,71 @@
     "examples": [
       {
         "jp": "彼の言い分も分からないでもないが、今回は認めるわけにはいかない。",
-        "vi": "Không phải là tôi không hiểu lý do của anh ấy, nhưng lần này không thể chấp nhận."
+        "vi": "Không phải là tôi không hiểu lý do của anh ấy, nhưng lần này không thể chấp nhận.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "い"
+          },
+          {
+            "text": "分",
+            "furigana": "ぶん"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "分",
+            "furigana": "わ"
+          },
+          {
+            "text": "からないでもないが、"
+          },
+          {
+            "text": "今回",
+            "furigana": "こんかい"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "認",
+            "furigana": "みと"
+          },
+          {
+            "text": "めるわけにはいかない。"
+          }
+        ]
       },
       {
         "jp": "行きたくなくもないけど、時間がない。",
-        "vi": "Không phải là không muốn đi, nhưng không có thời gian."
+        "vi": "Không phải là không muốn đi, nhưng không có thời gian.",
+        "reading": [
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きたくなくもないけど、"
+          },
+          {
+            "text": "時間",
+            "furigana": "じかん"
+          },
+          {
+            "text": "がない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -367,11 +1352,61 @@
     "examples": [
       {
         "jp": "入場は招待状を持つ方のみに限らせていただきます。",
-        "vi": "Chỉ những ai có thư mời mới được vào."
+        "vi": "Chỉ những ai có thư mời mới được vào.",
+        "reading": [
+          {
+            "text": "入場",
+            "furigana": "にゅうじょう"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "招待",
+            "furigana": "しょうたい"
+          },
+          {
+            "text": "状",
+            "furigana": "じょう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "持",
+            "furigana": "も"
+          },
+          {
+            "text": "つ"
+          },
+          {
+            "text": "方",
+            "furigana": "ほう"
+          },
+          {
+            "text": "のみに"
+          },
+          {
+            "text": "限",
+            "furigana": "かぎ"
+          },
+          {
+            "text": "らせていただきます。"
+          }
+        ]
       },
       {
         "jp": "今できることをするのみだ。",
-        "vi": "Giờ chỉ có thể làm những gì có thể làm thôi."
+        "vi": "Giờ chỉ có thể làm những gì có thể làm thôi.",
+        "reading": [
+          {
+            "text": "今",
+            "furigana": "いま"
+          },
+          {
+            "text": "できることをするのみだ。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -388,11 +1423,85 @@
     "examples": [
       {
         "jp": "会議の最中に電話が鳴って、みんなに迷惑をかけてしまった。",
-        "vi": "Điện thoại reo đúng giữa lúc họp, làm phiền mọi người rồi."
+        "vi": "Điện thoại reo đúng giữa lúc họp, làm phiền mọi người rồi.",
+        "reading": [
+          {
+            "text": "会議",
+            "furigana": "かいぎ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "最中",
+            "furigana": "さいちゅう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "電話",
+            "furigana": "でんわ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "鳴",
+            "furigana": "な"
+          },
+          {
+            "text": "って、みんなに"
+          },
+          {
+            "text": "迷惑",
+            "furigana": "めいわく"
+          },
+          {
+            "text": "をかけてしまった。"
+          }
+        ]
       },
       {
         "jp": "食事の最中に急用が入り、外出しなければならなかった。",
-        "vi": "Đúng giữa bữa ăn thì có việc gấp, phải ra ngoài."
+        "vi": "Đúng giữa bữa ăn thì có việc gấp, phải ra ngoài.",
+        "reading": [
+          {
+            "text": "食事",
+            "furigana": "しょくじ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "最中",
+            "furigana": "さいちゅう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "急用",
+            "furigana": "きゅうよう"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "入",
+            "furigana": "はい"
+          },
+          {
+            "text": "り、"
+          },
+          {
+            "text": "外出",
+            "furigana": "がいしゅつ"
+          },
+          {
+            "text": "しなければならなかった。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -409,11 +1518,95 @@
     "examples": [
       {
         "jp": "お近くにお越しの折には、ぜひお立ち寄りください。",
-        "vi": "Khi nào đến gần đây, hãy ghé thăm nhé."
+        "vi": "Khi nào đến gần đây, hãy ghé thăm nhé.",
+        "reading": [
+          {
+            "text": "お"
+          },
+          {
+            "text": "近",
+            "furigana": "ちか"
+          },
+          {
+            "text": "くにお"
+          },
+          {
+            "text": "越",
+            "furigana": "こ"
+          },
+          {
+            "text": "しの"
+          },
+          {
+            "text": "折",
+            "furigana": "おり"
+          },
+          {
+            "text": "には、ぜひお"
+          },
+          {
+            "text": "立",
+            "furigana": "た"
+          },
+          {
+            "text": "ち"
+          },
+          {
+            "text": "寄",
+            "furigana": "よ"
+          },
+          {
+            "text": "りください。"
+          }
+        ]
       },
       {
         "jp": "日本を訪問の折に、以前お世話になった先生をたずねた。",
-        "vi": "Nhân dịp đến thăm Nhật Bản, tôi đã ghé thăm người thầy từng giúp đỡ tôi."
+        "vi": "Nhân dịp đến thăm Nhật Bản, tôi đã ghé thăm người thầy từng giúp đỡ tôi.",
+        "reading": [
+          {
+            "text": "日本",
+            "furigana": "にっぽん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "訪問",
+            "furigana": "ほうもん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "折",
+            "furigana": "おり"
+          },
+          {
+            "text": "に、"
+          },
+          {
+            "text": "以前",
+            "furigana": "いぜん"
+          },
+          {
+            "text": "お"
+          },
+          {
+            "text": "世話",
+            "furigana": "せわ"
+          },
+          {
+            "text": "になった"
+          },
+          {
+            "text": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "text": "をたずねた。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -430,11 +1623,67 @@
     "examples": [
       {
         "jp": "お礼かたがたご挨拶に伺いました。",
-        "vi": "Tôi đến thăm vừa để cảm ơn vừa để chào hỏi."
+        "vi": "Tôi đến thăm vừa để cảm ơn vừa để chào hỏi.",
+        "reading": [
+          {
+            "text": "お"
+          },
+          {
+            "text": "礼",
+            "furigana": "れい"
+          },
+          {
+            "text": "かたがたご"
+          },
+          {
+            "text": "挨拶",
+            "furigana": "あいさつ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "伺",
+            "furigana": "うかが"
+          },
+          {
+            "text": "いました。"
+          }
+        ]
       },
       {
         "jp": "近くに来たついで、ご報告かたがたお邪魔しました。",
-        "vi": "Tiện qua gần đây, tôi ghé thăm vừa để báo cáo vừa để thăm hỏi."
+        "vi": "Tiện qua gần đây, tôi ghé thăm vừa để báo cáo vừa để thăm hỏi.",
+        "reading": [
+          {
+            "text": "近",
+            "furigana": "ちか"
+          },
+          {
+            "text": "くに"
+          },
+          {
+            "text": "来",
+            "furigana": "き"
+          },
+          {
+            "text": "たついで、ご"
+          },
+          {
+            "text": "報告",
+            "furigana": "ほうこく"
+          },
+          {
+            "text": "かたがたお"
+          },
+          {
+            "text": "邪魔",
+            "furigana": "じゃま"
+          },
+          {
+            "text": "しました。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -451,11 +1700,85 @@
     "examples": [
       {
         "jp": "彼女は涙ながらに事情を話してくれた。",
-        "vi": "Cô ấy vừa khóc vừa kể cho tôi nghe tình huống."
+        "vi": "Cô ấy vừa khóc vừa kể cho tôi nghe tình huống.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "涙",
+            "furigana": "なみだ"
+          },
+          {
+            "text": "ながらに"
+          },
+          {
+            "text": "事情",
+            "furigana": "じじょう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "してくれた。"
+          }
+        ]
       },
       {
         "jp": "今は家にいながらにして、世界中の情報が手に入る。",
-        "vi": "Bây giờ ngay khi ở nhà cũng có thể lấy thông tin từ khắp thế giới."
+        "vi": "Bây giờ ngay khi ở nhà cũng có thể lấy thông tin từ khắp thế giới.",
+        "reading": [
+          {
+            "text": "今",
+            "furigana": "いま"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "家",
+            "furigana": "いえ"
+          },
+          {
+            "text": "にいながらにして、"
+          },
+          {
+            "text": "世界中",
+            "furigana": "せかいじゅう"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "情報",
+            "furigana": "じょうほう"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "手",
+            "furigana": "て"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "入",
+            "furigana": "はい"
+          },
+          {
+            "text": "る。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -472,11 +1795,78 @@
     "examples": [
       {
         "jp": "男であれ女であれ、差別なく採用します。",
-        "vi": "Dù là nam hay nữ đều được tuyển dụng không phân biệt."
+        "vi": "Dù là nam hay nữ đều được tuyển dụng không phân biệt.",
+        "reading": [
+          {
+            "text": "男",
+            "furigana": "おとこ"
+          },
+          {
+            "text": "であれ"
+          },
+          {
+            "text": "女",
+            "furigana": "おんな"
+          },
+          {
+            "text": "であれ、"
+          },
+          {
+            "text": "差別",
+            "furigana": "さべつ"
+          },
+          {
+            "text": "なく"
+          },
+          {
+            "text": "採用",
+            "furigana": "さいよう"
+          },
+          {
+            "text": "します。"
+          }
+        ]
       },
       {
         "jp": "賛成であれ反対であれ、意見を言う権利がある。",
-        "vi": "Dù đồng ý hay phản đối đều có quyền lên tiếng."
+        "vi": "Dù đồng ý hay phản đối đều có quyền lên tiếng.",
+        "reading": [
+          {
+            "text": "賛成",
+            "furigana": "さんせい"
+          },
+          {
+            "text": "であれ"
+          },
+          {
+            "text": "反対",
+            "furigana": "はんたい"
+          },
+          {
+            "text": "であれ、"
+          },
+          {
+            "text": "意見",
+            "furigana": "いけん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "う"
+          },
+          {
+            "text": "権利",
+            "furigana": "けんり"
+          },
+          {
+            "text": "がある。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -493,11 +1883,102 @@
     "examples": [
       {
         "jp": "彼は飲み始めたが最後、翌朝まで飲み続ける。",
-        "vi": "Một khi anh ấy đã bắt đầu uống thì uống mãi đến sáng hôm sau."
+        "vi": "Một khi anh ấy đã bắt đầu uống thì uống mãi đến sáng hôm sau.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "み"
+          },
+          {
+            "text": "始",
+            "furigana": "はじ"
+          },
+          {
+            "text": "めたが"
+          },
+          {
+            "text": "最後",
+            "furigana": "さいご"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "翌朝",
+            "furigana": "よくあさ"
+          },
+          {
+            "text": "まで"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "み"
+          },
+          {
+            "text": "続",
+            "furigana": "つづ"
+          },
+          {
+            "text": "ける。"
+          }
+        ]
       },
       {
         "jp": "あの人に秘密を話したが最後、すぐに広まってしまう。",
-        "vi": "Một khi đã nói bí mật với người đó thì ngay lập tức bị lộ hết."
+        "vi": "Một khi đã nói bí mật với người đó thì ngay lập tức bị lộ hết.",
+        "reading": [
+          {
+            "text": "あの"
+          },
+          {
+            "text": "人",
+            "furigana": "ひと"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "秘密",
+            "furigana": "ひみつ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "したが"
+          },
+          {
+            "text": "最後",
+            "furigana": "さいご"
+          },
+          {
+            "text": "、すぐに"
+          },
+          {
+            "text": "広",
+            "furigana": "ひろ"
+          },
+          {
+            "text": "まってしまう。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -514,11 +1995,81 @@
     "examples": [
       {
         "jp": "試験を前にして、緊張しないわけにはいかない。",
-        "vi": "Đứng trước kỳ thi, không thể không hồi hộp."
+        "vi": "Đứng trước kỳ thi, không thể không hồi hộp.",
+        "reading": [
+          {
+            "text": "試験",
+            "furigana": "しけん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "にして、"
+          },
+          {
+            "text": "緊張",
+            "furigana": "きんちょう"
+          },
+          {
+            "text": "しないわけにはいかない。"
+          }
+        ]
       },
       {
         "jp": "たくさんの観客を前に、選手たちは一斉に走り出した。",
-        "vi": "Trước đông đảo khán giả, các vận động viên đồng loạt xuất phát."
+        "vi": "Trước đông đảo khán giả, các vận động viên đồng loạt xuất phát.",
+        "reading": [
+          {
+            "text": "たくさんの"
+          },
+          {
+            "text": "観客",
+            "furigana": "かんきゃく"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "に、"
+          },
+          {
+            "text": "選手",
+            "furigana": "せんしゅ"
+          },
+          {
+            "text": "たちは"
+          },
+          {
+            "text": "一斉",
+            "furigana": "いっせい"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "走",
+            "furigana": "はし"
+          },
+          {
+            "text": "り"
+          },
+          {
+            "text": "出",
+            "furigana": "だ"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -535,11 +2086,50 @@
     "examples": [
       {
         "jp": "愛すればこそ、時には厳しくすることもある。",
-        "vi": "Chính vì yêu mới có lúc phải nghiêm khắc."
+        "vi": "Chính vì yêu mới có lúc phải nghiêm khắc.",
+        "reading": [
+          {
+            "text": "愛",
+            "furigana": "あい"
+          },
+          {
+            "text": "すればこそ、"
+          },
+          {
+            "text": "時",
+            "furigana": "とき"
+          },
+          {
+            "text": "には"
+          },
+          {
+            "text": "厳",
+            "furigana": "きび"
+          },
+          {
+            "text": "しくすることもある。"
+          }
+        ]
       },
       {
         "jp": "信頼があればこそ、任せてもらえるのだ。",
-        "vi": "Chính vì có niềm tin mới được giao phó."
+        "vi": "Chính vì có niềm tin mới được giao phó.",
+        "reading": [
+          {
+            "text": "信頼",
+            "furigana": "しんらい"
+          },
+          {
+            "text": "があればこそ、"
+          },
+          {
+            "text": "任",
+            "furigana": "まか"
+          },
+          {
+            "text": "せてもらえるのだ。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -556,11 +2146,109 @@
     "examples": [
       {
         "jp": "その知らせを聞いた彼女の気持ちは、想像するに難くない。",
-        "vi": "Tâm trạng của cô ấy khi nghe tin đó không khó để tưởng tượng."
+        "vi": "Tâm trạng của cô ấy khi nghe tin đó không khó để tưởng tượng.",
+        "reading": [
+          {
+            "text": "その"
+          },
+          {
+            "text": "知",
+            "furigana": "し"
+          },
+          {
+            "text": "らせを"
+          },
+          {
+            "text": "聞",
+            "furigana": "き"
+          },
+          {
+            "text": "いた"
+          },
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "気持",
+            "furigana": "きも"
+          },
+          {
+            "text": "ちは、"
+          },
+          {
+            "text": "想像",
+            "furigana": "そうぞう"
+          },
+          {
+            "text": "するに"
+          },
+          {
+            "text": "難",
+            "furigana": "かた"
+          },
+          {
+            "text": "くない。"
+          }
+        ]
       },
       {
         "jp": "長年の努力の結果がこれだと聞けば、失望したことは理解するに難くない。",
-        "vi": "Nghe nói đây là kết quả của nhiều năm cố gắng thì không khó hiểu khi họ thất vọng."
+        "vi": "Nghe nói đây là kết quả của nhiều năm cố gắng thì không khó hiểu khi họ thất vọng.",
+        "reading": [
+          {
+            "text": "長年",
+            "furigana": "ながねん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "努力",
+            "furigana": "どりょく"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "結果",
+            "furigana": "けっか"
+          },
+          {
+            "text": "がこれだと"
+          },
+          {
+            "text": "聞",
+            "furigana": "き"
+          },
+          {
+            "text": "けば、"
+          },
+          {
+            "text": "失望",
+            "furigana": "しつぼう"
+          },
+          {
+            "text": "したことは"
+          },
+          {
+            "text": "理解",
+            "furigana": "りかい"
+          },
+          {
+            "text": "するに"
+          },
+          {
+            "text": "難",
+            "furigana": "かた"
+          },
+          {
+            "text": "くない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -577,11 +2265,74 @@
     "examples": [
       {
         "jp": "彼は信頼するに足る人物だ。",
-        "vi": "Anh ấy là người đáng tin cậy."
+        "vi": "Anh ấy là người đáng tin cậy.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "信頼",
+            "furigana": "しんらい"
+          },
+          {
+            "text": "するに"
+          },
+          {
+            "text": "足",
+            "furigana": "た"
+          },
+          {
+            "text": "る"
+          },
+          {
+            "text": "人物",
+            "furigana": "じんぶつ"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "そんな話は取り合うに足らない。",
-        "vi": "Câu chuyện như vậy không đáng để quan tâm."
+        "vi": "Câu chuyện như vậy không đáng để quan tâm.",
+        "reading": [
+          {
+            "text": "そんな"
+          },
+          {
+            "text": "話",
+            "furigana": "はなし"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "取",
+            "furigana": "と"
+          },
+          {
+            "text": "り"
+          },
+          {
+            "text": "合",
+            "furigana": "あ"
+          },
+          {
+            "text": "うに"
+          },
+          {
+            "text": "足",
+            "furigana": "た"
+          },
+          {
+            "text": "らない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -598,11 +2349,71 @@
     "examples": [
       {
         "jp": "その映像は目にたえないほどひどいものだった。",
-        "vi": "Hình ảnh đó kinh khủng đến mức không thể nhìn nổi."
+        "vi": "Hình ảnh đó kinh khủng đến mức không thể nhìn nổi.",
+        "reading": [
+          {
+            "text": "その"
+          },
+          {
+            "text": "映像",
+            "furigana": "えいぞう"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "目",
+            "furigana": "め"
+          },
+          {
+            "text": "にたえないほどひどいものだった。"
+          }
+        ]
       },
       {
         "jp": "この作品は何度読んでも読むにたえる名作だ。",
-        "vi": "Tác phẩm này là kiệt tác đáng đọc dù đọc bao nhiêu lần."
+        "vi": "Tác phẩm này là kiệt tác đáng đọc dù đọc bao nhiêu lần.",
+        "reading": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "作品",
+            "furigana": "さくひん"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "何",
+            "furigana": "なん"
+          },
+          {
+            "text": "度",
+            "furigana": "ど"
+          },
+          {
+            "text": "読",
+            "furigana": "よ"
+          },
+          {
+            "text": "んでも"
+          },
+          {
+            "text": "読",
+            "furigana": "よ"
+          },
+          {
+            "text": "むにたえる"
+          },
+          {
+            "text": "名作",
+            "furigana": "めいさく"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -619,11 +2430,67 @@
     "examples": [
       {
         "jp": "迷惑をかけた以上、謝らずにはすまない。",
-        "vi": "Đã gây phiền phức rồi thì buộc phải xin lỗi thôi."
+        "vi": "Đã gây phiền phức rồi thì buộc phải xin lỗi thôi.",
+        "reading": [
+          {
+            "text": "迷惑",
+            "furigana": "めいわく"
+          },
+          {
+            "text": "をかけた"
+          },
+          {
+            "text": "以上",
+            "furigana": "いじょう"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "謝",
+            "furigana": "あやま"
+          },
+          {
+            "text": "らずにはすまない。"
+          }
+        ]
       },
       {
         "jp": "みんなの前で失礼なことを言ったのだから、謝罪しないではすまないだろう。",
-        "vi": "Vì đã nói điều bất lịch sự trước mặt mọi người nên chắc chắn phải xin lỗi."
+        "vi": "Vì đã nói điều bất lịch sự trước mặt mọi người nên chắc chắn phải xin lỗi.",
+        "reading": [
+          {
+            "text": "みんなの"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "失礼",
+            "furigana": "しつれい"
+          },
+          {
+            "text": "なことを"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "ったのだから、"
+          },
+          {
+            "text": "謝罪",
+            "furigana": "しゃざい"
+          },
+          {
+            "text": "しないではすまないだろう。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -640,11 +2507,67 @@
     "examples": [
       {
         "jp": "これは会社の信用にかかわる重大な問題だ。",
-        "vi": "Đây là vấn đề nghiêm trọng liên quan đến uy tín của công ty."
+        "vi": "Đây là vấn đề nghiêm trọng liên quan đến uy tín của công ty.",
+        "reading": [
+          {
+            "text": "これは"
+          },
+          {
+            "text": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "信用",
+            "furigana": "しんよう"
+          },
+          {
+            "text": "にかかわる"
+          },
+          {
+            "text": "重大",
+            "furigana": "じゅうだい"
+          },
+          {
+            "text": "な"
+          },
+          {
+            "text": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "命にかかわるけがをしているので、すぐに病院に行くべきだ。",
-        "vi": "Vì bị thương liên quan đến tính mạng nên phải đến bệnh viện ngay."
+        "vi": "Vì bị thương liên quan đến tính mạng nên phải đến bệnh viện ngay.",
+        "reading": [
+          {
+            "text": "命",
+            "furigana": "いのち"
+          },
+          {
+            "text": "にかかわるけがをしているので、すぐに"
+          },
+          {
+            "text": "病院",
+            "furigana": "びょういん"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "くべきだ。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -661,11 +2584,64 @@
     "examples": [
       {
         "jp": "忙しくて、食事をする時間すらない。",
-        "vi": "Bận đến mức ngay cả thời gian ăn cơm cũng không có."
+        "vi": "Bận đến mức ngay cả thời gian ăn cơm cũng không có.",
+        "reading": [
+          {
+            "text": "忙",
+            "furigana": "いそが"
+          },
+          {
+            "text": "しくて、"
+          },
+          {
+            "text": "食事",
+            "furigana": "しょくじ"
+          },
+          {
+            "text": "をする"
+          },
+          {
+            "text": "時間",
+            "furigana": "じかん"
+          },
+          {
+            "text": "すらない。"
+          }
+        ]
       },
       {
         "jp": "子供でさえ知っていることを、知らないのは恥ずかしい。",
-        "vi": "Ngay cả trẻ em còn biết mà mình không biết thì thật xấu hổ."
+        "vi": "Ngay cả trẻ em còn biết mà mình không biết thì thật xấu hổ.",
+        "reading": [
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "でさえ"
+          },
+          {
+            "text": "知",
+            "furigana": "し"
+          },
+          {
+            "text": "っていることを、"
+          },
+          {
+            "text": "知",
+            "furigana": "し"
+          },
+          {
+            "text": "らないのは"
+          },
+          {
+            "text": "恥",
+            "furigana": "は"
+          },
+          {
+            "text": "ずかしい。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -682,11 +2658,71 @@
     "examples": [
       {
         "jp": "失敗してこそ、成功の喜びが分かる。",
-        "vi": "Phải thất bại thì mới hiểu được niềm vui của thành công."
+        "vi": "Phải thất bại thì mới hiểu được niềm vui của thành công.",
+        "reading": [
+          {
+            "text": "失敗",
+            "furigana": "しっぱい"
+          },
+          {
+            "text": "してこそ、"
+          },
+          {
+            "text": "成功",
+            "furigana": "せいこう"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "喜",
+            "furigana": "よろこ"
+          },
+          {
+            "text": "びが"
+          },
+          {
+            "text": "分",
+            "furigana": "わ"
+          },
+          {
+            "text": "かる。"
+          }
+        ]
       },
       {
         "jp": "実際に体験してこそ、本当のことが分かる。",
-        "vi": "Phải trực tiếp trải nghiệm thì mới hiểu được sự thật."
+        "vi": "Phải trực tiếp trải nghiệm thì mới hiểu được sự thật.",
+        "reading": [
+          {
+            "text": "実際",
+            "furigana": "じっさい"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "体験",
+            "furigana": "たいけん"
+          },
+          {
+            "text": "してこそ、"
+          },
+          {
+            "text": "本当",
+            "furigana": "ほんとう"
+          },
+          {
+            "text": "のことが"
+          },
+          {
+            "text": "分",
+            "furigana": "わ"
+          },
+          {
+            "text": "かる。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -703,11 +2739,50 @@
     "examples": [
       {
         "jp": "窓を開けたまま、外出してしまった。",
-        "vi": "Ra ngoài mà để cửa sổ mở nguyên vậy."
+        "vi": "Ra ngoài mà để cửa sổ mở nguyên vậy.",
+        "reading": [
+          {
+            "text": "窓",
+            "furigana": "まど"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "開",
+            "furigana": "あ"
+          },
+          {
+            "text": "けたまま、"
+          },
+          {
+            "text": "外出",
+            "furigana": "がいしゅつ"
+          },
+          {
+            "text": "してしまった。"
+          }
+        ]
       },
       {
         "jp": "思ったままを話してください。",
-        "vi": "Hãy nói đúng những gì bạn nghĩ."
+        "vi": "Hãy nói đúng những gì bạn nghĩ.",
+        "reading": [
+          {
+            "text": "思",
+            "furigana": "おも"
+          },
+          {
+            "text": "ったままを"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "してください。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -724,11 +2799,96 @@
     "examples": [
       {
         "jp": "大学を卒業して以来、彼とは一度も会っていない。",
-        "vi": "Kể từ khi tốt nghiệp đại học, tôi chưa gặp anh ấy lần nào."
+        "vi": "Kể từ khi tốt nghiệp đại học, tôi chưa gặp anh ấy lần nào.",
+        "reading": [
+          {
+            "text": "大学",
+            "furigana": "だいがく"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "卒業",
+            "furigana": "そつぎょう"
+          },
+          {
+            "text": "して"
+          },
+          {
+            "text": "以来",
+            "furigana": "いらい"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "とは"
+          },
+          {
+            "text": "一",
+            "furigana": "いち"
+          },
+          {
+            "text": "度",
+            "furigana": "ど"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "会",
+            "furigana": "あ"
+          },
+          {
+            "text": "っていない。"
+          }
+        ]
       },
       {
         "jp": "あの事故以来、車の運転が怖くなった。",
-        "vi": "Kể từ vụ tai nạn đó, tôi sợ lái xe."
+        "vi": "Kể từ vụ tai nạn đó, tôi sợ lái xe.",
+        "reading": [
+          {
+            "text": "あの"
+          },
+          {
+            "text": "事故",
+            "furigana": "じこ"
+          },
+          {
+            "text": "以来",
+            "furigana": "いらい"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "車",
+            "furigana": "くるま"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "運転",
+            "furigana": "うんてん"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "怖",
+            "furigana": "こわ"
+          },
+          {
+            "text": "くなった。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -745,11 +2905,71 @@
     "examples": [
       {
         "jp": "今日を限りに、お酒を飲むのをやめます。",
-        "vi": "Sau hôm nay, tôi sẽ dừng uống rượu."
+        "vi": "Sau hôm nay, tôi sẽ dừng uống rượu.",
+        "reading": [
+          {
+            "text": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "限",
+            "furigana": "かぎ"
+          },
+          {
+            "text": "りに、お"
+          },
+          {
+            "text": "酒",
+            "furigana": "さけ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "むのをやめます。"
+          }
+        ]
       },
       {
         "jp": "今シーズンを限りに、引退することを決意した。",
-        "vi": "Tôi quyết định nghỉ hưu sau mùa giải này."
+        "vi": "Tôi quyết định nghỉ hưu sau mùa giải này.",
+        "reading": [
+          {
+            "text": "今",
+            "furigana": "こん"
+          },
+          {
+            "text": "シーズンを"
+          },
+          {
+            "text": "限",
+            "furigana": "かぎ"
+          },
+          {
+            "text": "りに、"
+          },
+          {
+            "text": "引退",
+            "furigana": "いんたい"
+          },
+          {
+            "text": "することを"
+          },
+          {
+            "text": "決意",
+            "furigana": "けつい"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -766,11 +2986,50 @@
     "examples": [
       {
         "jp": "毎日残業させられてはかなわない。",
-        "vi": "Cứ bị bắt tăng ca mỗi ngày thì không chịu được."
+        "vi": "Cứ bị bắt tăng ca mỗi ngày thì không chịu được.",
+        "reading": [
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "残業",
+            "furigana": "ざんぎょう"
+          },
+          {
+            "text": "させられてはかなわない。"
+          }
+        ]
       },
       {
         "jp": "こんなに暑くてはかなわない。早く涼しくなってほしい。",
-        "vi": "Nóng thế này không chịu được. Mong trời mau mát đi."
+        "vi": "Nóng thế này không chịu được. Mong trời mau mát đi.",
+        "reading": [
+          {
+            "text": "こんなに"
+          },
+          {
+            "text": "暑",
+            "furigana": "あつ"
+          },
+          {
+            "text": "くてはかなわない。"
+          },
+          {
+            "text": "早",
+            "furigana": "はや"
+          },
+          {
+            "text": "く"
+          },
+          {
+            "text": "涼",
+            "furigana": "すず"
+          },
+          {
+            "text": "しくなってほしい。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -787,11 +3046,67 @@
     "examples": [
       {
         "jp": "このような賞をいただけるとは、光栄の至りです。",
-        "vi": "Được nhận giải thưởng như thế này, tôi vô cùng vinh dự."
+        "vi": "Được nhận giải thưởng như thế này, tôi vô cùng vinh dự.",
+        "reading": [
+          {
+            "text": "このような"
+          },
+          {
+            "text": "賞",
+            "furigana": "しょう"
+          },
+          {
+            "text": "をいただけるとは、"
+          },
+          {
+            "text": "光栄",
+            "furigana": "こうえい"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "至",
+            "furigana": "いた"
+          },
+          {
+            "text": "りです。"
+          }
+        ]
       },
       {
         "jp": "若気の至りで、失礼なことを言ってしまいました。",
-        "vi": "Vì sự bồng bột của tuổi trẻ, tôi đã lỡ nói điều bất lịch sự."
+        "vi": "Vì sự bồng bột của tuổi trẻ, tôi đã lỡ nói điều bất lịch sự.",
+        "reading": [
+          {
+            "text": "若気",
+            "furigana": "わかげ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "至",
+            "furigana": "いた"
+          },
+          {
+            "text": "りで、"
+          },
+          {
+            "text": "失礼",
+            "furigana": "しつれい"
+          },
+          {
+            "text": "なことを"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "ってしまいました。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -808,11 +3123,57 @@
     "examples": [
       {
         "jp": "健康ほど大切なものはない。",
-        "vi": "Không có gì quý bằng sức khỏe."
+        "vi": "Không có gì quý bằng sức khỏe.",
+        "reading": [
+          {
+            "text": "健康",
+            "furigana": "けんこう"
+          },
+          {
+            "text": "ほど"
+          },
+          {
+            "text": "大切",
+            "furigana": "たいせつ"
+          },
+          {
+            "text": "なものはない。"
+          }
+        ]
       },
       {
         "jp": "親しい友人と話すほど楽しいことはない。",
-        "vi": "Không có gì vui bằng nói chuyện với bạn thân."
+        "vi": "Không có gì vui bằng nói chuyện với bạn thân.",
+        "reading": [
+          {
+            "text": "親",
+            "furigana": "した"
+          },
+          {
+            "text": "しい"
+          },
+          {
+            "text": "友人",
+            "furigana": "ゆうじん"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "すほど"
+          },
+          {
+            "text": "楽",
+            "furigana": "たの"
+          },
+          {
+            "text": "しいことはない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -829,11 +3190,74 @@
     "examples": [
       {
         "jp": "遅刻にも程がある。2時間も待たせるなんて。",
-        "vi": "Đến trễ cũng phải có giới hạn chứ. Để người ta chờ tới 2 tiếng."
+        "vi": "Đến trễ cũng phải có giới hạn chứ. Để người ta chờ tới 2 tiếng.",
+        "reading": [
+          {
+            "text": "遅刻",
+            "furigana": "ちこく"
+          },
+          {
+            "text": "にも"
+          },
+          {
+            "text": "程",
+            "furigana": "ほど"
+          },
+          {
+            "text": "がある。2"
+          },
+          {
+            "text": "時間",
+            "furigana": "じかん"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "待",
+            "furigana": "ま"
+          },
+          {
+            "text": "たせるなんて。"
+          }
+        ]
       },
       {
         "jp": "うそにも程がある。そんな言い訳は通らない。",
-        "vi": "Nói dối cũng phải có chừng mực. Cái lý do đó không thể chấp nhận được."
+        "vi": "Nói dối cũng phải có chừng mực. Cái lý do đó không thể chấp nhận được.",
+        "reading": [
+          {
+            "text": "うそにも"
+          },
+          {
+            "text": "程",
+            "furigana": "ほど"
+          },
+          {
+            "text": "がある。そんな"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "い"
+          },
+          {
+            "text": "訳",
+            "furigana": "わけ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "通",
+            "furigana": "とお"
+          },
+          {
+            "text": "らない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -850,11 +3274,57 @@
     "examples": [
       {
         "jp": "子供ではあるまいし、そんなことも自分でできないの？",
-        "vi": "Đâu phải trẻ con đâu mà việc như vậy cũng không tự làm được sao?"
+        "vi": "Đâu phải trẻ con đâu mà việc như vậy cũng không tự làm được sao?",
+        "reading": [
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "ではあるまいし、そんなことも"
+          },
+          {
+            "text": "自分",
+            "furigana": "じぶん"
+          },
+          {
+            "text": "でできないの？"
+          }
+        ]
       },
       {
         "jp": "ロボットでもあるまいし、毎日休まず働くなんて無理だ。",
-        "vi": "Đâu phải robot đâu mà làm việc mỗi ngày không nghỉ được."
+        "vi": "Đâu phải robot đâu mà làm việc mỗi ngày không nghỉ được.",
+        "reading": [
+          {
+            "text": "ロボットでもあるまいし、"
+          },
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "休",
+            "furigana": "やす"
+          },
+          {
+            "text": "まず"
+          },
+          {
+            "text": "働",
+            "furigana": "はたら"
+          },
+          {
+            "text": "くなんて"
+          },
+          {
+            "text": "無理",
+            "furigana": "むり"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -871,11 +3341,99 @@
     "examples": [
       {
         "jp": "先生ともあろう人が、学生の前でそんな発言をするとは。",
-        "vi": "Là người thầy có địa vị như vậy mà lại phát ngôn như thế trước mặt học sinh."
+        "vi": "Là người thầy có địa vị như vậy mà lại phát ngôn như thế trước mặt học sinh.",
+        "reading": [
+          {
+            "text": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "text": "ともあろう"
+          },
+          {
+            "text": "人",
+            "furigana": "ひと"
+          },
+          {
+            "text": "が、"
+          },
+          {
+            "text": "学生",
+            "furigana": "がくせい"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "でそんな"
+          },
+          {
+            "text": "発言",
+            "furigana": "はつげん"
+          },
+          {
+            "text": "をするとは。"
+          }
+        ]
       },
       {
         "jp": "あの大会社の社長ともあろう人が、こんな失礼な態度をとるとは信じられない。",
-        "vi": "Không thể tin rằng giám đốc của công ty lớn đó lại có thái độ thô lỗ như vậy."
+        "vi": "Không thể tin rằng giám đốc của công ty lớn đó lại có thái độ thô lỗ như vậy.",
+        "reading": [
+          {
+            "text": "あの"
+          },
+          {
+            "text": "大会",
+            "furigana": "たいかい"
+          },
+          {
+            "text": "社",
+            "furigana": "しゃ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "社長",
+            "furigana": "しゃちょう"
+          },
+          {
+            "text": "ともあろう"
+          },
+          {
+            "text": "人",
+            "furigana": "ひと"
+          },
+          {
+            "text": "が、こんな"
+          },
+          {
+            "text": "失礼",
+            "furigana": "しつれい"
+          },
+          {
+            "text": "な"
+          },
+          {
+            "text": "態度",
+            "furigana": "たいど"
+          },
+          {
+            "text": "をとるとは"
+          },
+          {
+            "text": "信",
+            "furigana": "しん"
+          },
+          {
+            "text": "じられない。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -892,11 +3450,64 @@
     "examples": [
       {
         "jp": "勉強すればするほど、日本語が上手になる。",
-        "vi": "Càng học thì tiếng Nhật càng giỏi."
+        "vi": "Càng học thì tiếng Nhật càng giỏi.",
+        "reading": [
+          {
+            "text": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "text": "すればするほど、"
+          },
+          {
+            "text": "日本語",
+            "furigana": "にほんご"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "上手",
+            "furigana": "じょうず"
+          },
+          {
+            "text": "になる。"
+          }
+        ]
       },
       {
         "jp": "考えれば考えるほど、答えが分からなくなる。",
-        "vi": "Càng suy nghĩ càng không biết câu trả lời."
+        "vi": "Càng suy nghĩ càng không biết câu trả lời.",
+        "reading": [
+          {
+            "text": "考",
+            "furigana": "かんが"
+          },
+          {
+            "text": "えれば"
+          },
+          {
+            "text": "考",
+            "furigana": "かんが"
+          },
+          {
+            "text": "えるほど、"
+          },
+          {
+            "text": "答",
+            "furigana": "こた"
+          },
+          {
+            "text": "えが"
+          },
+          {
+            "text": "分",
+            "furigana": "わ"
+          },
+          {
+            "text": "からなくなる。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -913,11 +3524,63 @@
     "examples": [
       {
         "jp": "あんな人にまた会うものか。二度と会いたくない。",
-        "vi": "Đời nào gặp lại người như thế nữa. Không muốn gặp lần nào nữa."
+        "vi": "Đời nào gặp lại người như thế nữa. Không muốn gặp lần nào nữa.",
+        "reading": [
+          {
+            "text": "あんな"
+          },
+          {
+            "text": "人",
+            "furigana": "ひと"
+          },
+          {
+            "text": "にまた"
+          },
+          {
+            "text": "会",
+            "furigana": "あ"
+          },
+          {
+            "text": "うものか。"
+          },
+          {
+            "text": "二度",
+            "furigana": "にど"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "会",
+            "furigana": "あ"
+          },
+          {
+            "text": "いたくない。"
+          }
+        ]
       },
       {
         "jp": "これだけ頑張ったんだ。負けるもんか！",
-        "vi": "Mình đã cố gắng đến thế này. Không bao giờ chịu thua!"
+        "vi": "Mình đã cố gắng đến thế này. Không bao giờ chịu thua!",
+        "reading": [
+          {
+            "text": "これだけ"
+          },
+          {
+            "text": "頑張",
+            "furigana": "がんば"
+          },
+          {
+            "text": "ったんだ。"
+          },
+          {
+            "text": "負",
+            "furigana": "ま"
+          },
+          {
+            "text": "けるもんか！"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -934,11 +3597,53 @@
     "examples": [
       {
         "jp": "もし必要でなければ、処分してもさしつかえありません。",
-        "vi": "Nếu không cần thiết thì xử lý đi cũng không vấn đề gì."
+        "vi": "Nếu không cần thiết thì xử lý đi cũng không vấn đề gì.",
+        "reading": [
+          {
+            "text": "もし"
+          },
+          {
+            "text": "必要",
+            "furigana": "ひつよう"
+          },
+          {
+            "text": "でなければ、"
+          },
+          {
+            "text": "処分",
+            "furigana": "しょぶん"
+          },
+          {
+            "text": "してもさしつかえありません。"
+          }
+        ]
       },
       {
         "jp": "資料は持ち帰ってもさしつかえないですよ。",
-        "vi": "Tài liệu mang về cũng được nhé."
+        "vi": "Tài liệu mang về cũng được nhé.",
+        "reading": [
+          {
+            "text": "資料",
+            "furigana": "しりょう"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "持",
+            "furigana": "も"
+          },
+          {
+            "text": "ち"
+          },
+          {
+            "text": "帰",
+            "furigana": "かえ"
+          },
+          {
+            "text": "ってもさしつかえないですよ。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -955,11 +3660,71 @@
     "examples": [
       {
         "jp": "さすが10年修業しただけのことはある、料理が本当においしい。",
-        "vi": "Đúng là tu nghiệp 10 năm không uổng, đồ ăn ngon thật sự."
+        "vi": "Đúng là tu nghiệp 10 năm không uổng, đồ ăn ngon thật sự.",
+        "reading": [
+          {
+            "text": "さすが10"
+          },
+          {
+            "text": "年",
+            "furigana": "ねん"
+          },
+          {
+            "text": "修業",
+            "furigana": "しゅうぎょう"
+          },
+          {
+            "text": "しただけのことはある、"
+          },
+          {
+            "text": "料理",
+            "furigana": "りょうり"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "本当",
+            "furigana": "ほんとう"
+          },
+          {
+            "text": "においしい。"
+          }
+        ]
       },
       {
         "jp": "値段が高いだけのことはある、品質が素晴らしい。",
-        "vi": "Đắt tiền có lý do của nó, chất lượng thật tuyệt vời."
+        "vi": "Đắt tiền có lý do của nó, chất lượng thật tuyệt vời.",
+        "reading": [
+          {
+            "text": "値段",
+            "furigana": "ねだん"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "高",
+            "furigana": "たか"
+          },
+          {
+            "text": "いだけのことはある、"
+          },
+          {
+            "text": "品質",
+            "furigana": "ひんしつ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "素晴",
+            "furigana": "すば"
+          },
+          {
+            "text": "らしい。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -976,11 +3741,68 @@
     "examples": [
       {
         "jp": "見た目もさることながら、味も一流だ。",
-        "vi": "Không chỉ hình thức mà hương vị cũng hàng đầu."
+        "vi": "Không chỉ hình thức mà hương vị cũng hàng đầu.",
+        "reading": [
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "た"
+          },
+          {
+            "text": "目",
+            "furigana": "め"
+          },
+          {
+            "text": "もさることながら、"
+          },
+          {
+            "text": "味",
+            "furigana": "あじ"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "一流",
+            "furigana": "いちりゅう"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "英語力もさることながら、コミュニケーション能力が大切だ。",
-        "vi": "Không chỉ năng lực tiếng Anh, mà khả năng giao tiếp còn quan trọng hơn."
+        "vi": "Không chỉ năng lực tiếng Anh, mà khả năng giao tiếp còn quan trọng hơn.",
+        "reading": [
+          {
+            "text": "英語",
+            "furigana": "えいご"
+          },
+          {
+            "text": "力",
+            "furigana": "りょく"
+          },
+          {
+            "text": "もさることながら、コミュニケーション"
+          },
+          {
+            "text": "能力",
+            "furigana": "のうりょく"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "大切",
+            "furigana": "たいせつ"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -997,11 +3819,61 @@
     "examples": [
       {
         "jp": "毎日練習したかいがあって、試合で優勝できた。",
-        "vi": "Nhờ luyện tập mỗi ngày nên đã vô địch trong trận đấu, xứng công rồi."
+        "vi": "Nhờ luyện tập mỗi ngày nên đã vô địch trong trận đấu, xứng công rồi.",
+        "reading": [
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "練習",
+            "furigana": "れんしゅう"
+          },
+          {
+            "text": "したかいがあって、"
+          },
+          {
+            "text": "試合",
+            "furigana": "しあい"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "優勝",
+            "furigana": "ゆうしょう"
+          },
+          {
+            "text": "できた。"
+          }
+        ]
       },
       {
         "jp": "頑張ったかいがなく、結果は最悪だった。",
-        "vi": "Cố gắng mà không đáng công, kết quả tệ nhất rồi."
+        "vi": "Cố gắng mà không đáng công, kết quả tệ nhất rồi.",
+        "reading": [
+          {
+            "text": "頑張",
+            "furigana": "がんば"
+          },
+          {
+            "text": "ったかいがなく、"
+          },
+          {
+            "text": "結果",
+            "furigana": "けっか"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "最悪",
+            "furigana": "さいあく"
+          },
+          {
+            "text": "だった。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1018,11 +3890,60 @@
     "examples": [
       {
         "jp": "彼は医師にして詩人でもある。",
-        "vi": "Anh ấy vừa là bác sĩ vừa là nhà thơ."
+        "vi": "Anh ấy vừa là bác sĩ vừa là nhà thơ.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "医師",
+            "furigana": "いし"
+          },
+          {
+            "text": "にして"
+          },
+          {
+            "text": "詩人",
+            "furigana": "しじん"
+          },
+          {
+            "text": "でもある。"
+          }
+        ]
       },
       {
         "jp": "30歳にして、ようやく自分のやりたいことが見つかった。",
-        "vi": "Đến tận 30 tuổi mới tìm được điều mình thật sự muốn làm."
+        "vi": "Đến tận 30 tuổi mới tìm được điều mình thật sự muốn làm.",
+        "reading": [
+          {
+            "text": "30"
+          },
+          {
+            "text": "歳",
+            "furigana": "さい"
+          },
+          {
+            "text": "にして、ようやく"
+          },
+          {
+            "text": "自分",
+            "furigana": "じぶん"
+          },
+          {
+            "text": "のやりたいことが"
+          },
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "つかった。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1039,11 +3960,64 @@
     "examples": [
       {
         "jp": "仕事は思っていた以上に大変だった。",
-        "vi": "Công việc vất vả hơn những gì tôi nghĩ."
+        "vi": "Công việc vất vả hơn những gì tôi nghĩ.",
+        "reading": [
+          {
+            "text": "仕事",
+            "furigana": "しごと"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "思",
+            "furigana": "おも"
+          },
+          {
+            "text": "っていた"
+          },
+          {
+            "text": "以上",
+            "furigana": "いじょう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "大変",
+            "furigana": "たいへん"
+          },
+          {
+            "text": "だった。"
+          }
+        ]
       },
       {
         "jp": "彼女はプロ以上に歌がうまい。",
-        "vi": "Cô ấy hát hay hơn cả ca sĩ chuyên nghiệp."
+        "vi": "Cô ấy hát hay hơn cả ca sĩ chuyên nghiệp.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "はプロ"
+          },
+          {
+            "text": "以上",
+            "furigana": "いじょう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "歌",
+            "furigana": "うた"
+          },
+          {
+            "text": "がうまい。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1060,11 +4034,100 @@
     "examples": [
       {
         "jp": "毎日日記を書くことで、文章力が上がった。",
-        "vi": "Nhờ việc viết nhật ký mỗi ngày mà năng lực viết văn tăng lên."
+        "vi": "Nhờ việc viết nhật ký mỗi ngày mà năng lực viết văn tăng lên.",
+        "reading": [
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "日記",
+            "furigana": "にっき"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "書",
+            "furigana": "か"
+          },
+          {
+            "text": "くことで、"
+          },
+          {
+            "text": "文章",
+            "furigana": "ぶんしょう"
+          },
+          {
+            "text": "力",
+            "furigana": "りょく"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "上",
+            "furigana": "あ"
+          },
+          {
+            "text": "がった。"
+          }
+        ]
       },
       {
         "jp": "みんなで意見を出し合うことで、より良い解決策が見つかる。",
-        "vi": "Bằng cách mọi người cùng đưa ra ý kiến thì sẽ tìm được giải pháp tốt hơn."
+        "vi": "Bằng cách mọi người cùng đưa ra ý kiến thì sẽ tìm được giải pháp tốt hơn.",
+        "reading": [
+          {
+            "text": "みんなで"
+          },
+          {
+            "text": "意見",
+            "furigana": "いけん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "出",
+            "furigana": "だ"
+          },
+          {
+            "text": "し"
+          },
+          {
+            "text": "合",
+            "furigana": "あ"
+          },
+          {
+            "text": "うことで、より"
+          },
+          {
+            "text": "良",
+            "furigana": "よ"
+          },
+          {
+            "text": "い"
+          },
+          {
+            "text": "解決",
+            "furigana": "かいけつ"
+          },
+          {
+            "text": "策",
+            "furigana": "さく"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "つかる。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1081,11 +4144,56 @@
     "examples": [
       {
         "jp": "「どうして来なかったの？」「だって、熱があったんだもの。」",
-        "vi": "Sao không đến vậy? Vì tôi bị sốt mà."
+        "vi": "Sao không đến vậy? Vì tôi bị sốt mà.",
+        "reading": [
+          {
+            "text": "「どうして"
+          },
+          {
+            "text": "来",
+            "furigana": "こ"
+          },
+          {
+            "text": "なかったの？」「だって、"
+          },
+          {
+            "text": "熱",
+            "furigana": "ねつ"
+          },
+          {
+            "text": "があったんだもの。」"
+          }
+        ]
       },
       {
         "jp": "そんなこと言われても困るわ。知らなかったんだもの。",
-        "vi": "Nói thế tôi cũng bí thôi. Vì tôi không biết mà."
+        "vi": "Nói thế tôi cũng bí thôi. Vì tôi không biết mà.",
+        "reading": [
+          {
+            "text": "そんなこと"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "われても"
+          },
+          {
+            "text": "困",
+            "furigana": "こま"
+          },
+          {
+            "text": "るわ。"
+          },
+          {
+            "text": "知",
+            "furigana": "し"
+          },
+          {
+            "text": "らなかったんだもの。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1102,11 +4210,113 @@
     "examples": [
       {
         "jp": "彼の努力は才能と相まって、素晴らしい結果を生み出した。",
-        "vi": "Sự nỗ lực kết hợp với tài năng của anh ấy đã tạo ra kết quả tuyệt vời."
+        "vi": "Sự nỗ lực kết hợp với tài năng của anh ấy đã tạo ra kết quả tuyệt vời.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "努力",
+            "furigana": "どりょく"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "才能",
+            "furigana": "さいのう"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "相",
+            "furigana": "あい"
+          },
+          {
+            "text": "まって、"
+          },
+          {
+            "text": "素晴",
+            "furigana": "すば"
+          },
+          {
+            "text": "らしい"
+          },
+          {
+            "text": "結果",
+            "furigana": "けっか"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "生",
+            "furigana": "う"
+          },
+          {
+            "text": "み"
+          },
+          {
+            "text": "出",
+            "furigana": "だ"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       },
       {
         "jp": "台風に相まって大雨も続き、被害が広がった。",
-        "vi": "Kết hợp với bão, mưa lớn tiếp diễn khiến thiệt hại lan rộng."
+        "vi": "Kết hợp với bão, mưa lớn tiếp diễn khiến thiệt hại lan rộng.",
+        "reading": [
+          {
+            "text": "台風",
+            "furigana": "たいふう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "相",
+            "furigana": "あい"
+          },
+          {
+            "text": "まって"
+          },
+          {
+            "text": "大雨",
+            "furigana": "おおあめ"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "続",
+            "furigana": "つづ"
+          },
+          {
+            "text": "き、"
+          },
+          {
+            "text": "被害",
+            "furigana": "ひがい"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "広",
+            "furigana": "ひろ"
+          },
+          {
+            "text": "がった。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1123,11 +4333,85 @@
     "examples": [
       {
         "jp": "彼女は厳しい批判をものともせず、自分の夢を追い続けた。",
-        "vi": "Bất chấp những lời phê phán khắc nghiệt, cô ấy tiếp tục theo đuổi ước mơ."
+        "vi": "Bất chấp những lời phê phán khắc nghiệt, cô ấy tiếp tục theo đuổi ước mơ.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "厳",
+            "furigana": "きび"
+          },
+          {
+            "text": "しい"
+          },
+          {
+            "text": "批判",
+            "furigana": "ひはん"
+          },
+          {
+            "text": "をものともせず、"
+          },
+          {
+            "text": "自分",
+            "furigana": "じぶん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "夢",
+            "furigana": "ゆめ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "追",
+            "furigana": "お"
+          },
+          {
+            "text": "い"
+          },
+          {
+            "text": "続",
+            "furigana": "つづ"
+          },
+          {
+            "text": "けた。"
+          }
+        ]
       },
       {
         "jp": "悪天候をものともせず、登山を続けた。",
-        "vi": "Không ngại thời tiết xấu, họ tiếp tục leo núi."
+        "vi": "Không ngại thời tiết xấu, họ tiếp tục leo núi.",
+        "reading": [
+          {
+            "text": "悪天候",
+            "furigana": "あくてんこう"
+          },
+          {
+            "text": "をものともせず、"
+          },
+          {
+            "text": "登山",
+            "furigana": "とざん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "続",
+            "furigana": "つづ"
+          },
+          {
+            "text": "けた。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1144,11 +4428,71 @@
     "examples": [
       {
         "jp": "彼女は顔といわず首といわず、日焼けしてしまった。",
-        "vi": "Dù là mặt hay cổ, cô ấy đều bị cháy nắng hết."
+        "vi": "Dù là mặt hay cổ, cô ấy đều bị cháy nắng hết.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "顔",
+            "furigana": "かお"
+          },
+          {
+            "text": "といわず"
+          },
+          {
+            "text": "首",
+            "furigana": "くび"
+          },
+          {
+            "text": "といわず、"
+          },
+          {
+            "text": "日焼",
+            "furigana": "ひや"
+          },
+          {
+            "text": "けしてしまった。"
+          }
+        ]
       },
       {
         "jp": "平日といわず休日といわず、仕事の電話がかかってくる。",
-        "vi": "Dù là ngày thường hay ngày nghỉ, điện thoại công việc vẫn gọi đến."
+        "vi": "Dù là ngày thường hay ngày nghỉ, điện thoại công việc vẫn gọi đến.",
+        "reading": [
+          {
+            "text": "平日",
+            "furigana": "へいじつ"
+          },
+          {
+            "text": "といわず"
+          },
+          {
+            "text": "休日",
+            "furigana": "きゅうじつ"
+          },
+          {
+            "text": "といわず、"
+          },
+          {
+            "text": "仕事",
+            "furigana": "しごと"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "電話",
+            "furigana": "でんわ"
+          },
+          {
+            "text": "がかかってくる。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1165,11 +4509,79 @@
     "examples": [
       {
         "jp": "先輩にならって、私も毎朝早起きするようにした。",
-        "vi": "Noi gương đàn anh, tôi cũng tập thói quen dậy sớm mỗi sáng."
+        "vi": "Noi gương đàn anh, tôi cũng tập thói quen dậy sớm mỗi sáng.",
+        "reading": [
+          {
+            "text": "先輩",
+            "furigana": "せんぱい"
+          },
+          {
+            "text": "にならって、"
+          },
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "毎朝",
+            "furigana": "まいあさ"
+          },
+          {
+            "text": "早起",
+            "furigana": "はやお"
+          },
+          {
+            "text": "きするようにした。"
+          }
+        ]
       },
       {
         "jp": "海外の成功例にならって、新しい制度を導入した。",
-        "vi": "Học hỏi theo các ví dụ thành công ở nước ngoài, họ đưa vào chế độ mới."
+        "vi": "Học hỏi theo các ví dụ thành công ở nước ngoài, họ đưa vào chế độ mới.",
+        "reading": [
+          {
+            "text": "海外",
+            "furigana": "かいがい"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "成功",
+            "furigana": "せいこう"
+          },
+          {
+            "text": "例",
+            "furigana": "れい"
+          },
+          {
+            "text": "にならって、"
+          },
+          {
+            "text": "新",
+            "furigana": "あたら"
+          },
+          {
+            "text": "しい"
+          },
+          {
+            "text": "制度",
+            "furigana": "せいど"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "導入",
+            "furigana": "どうにゅう"
+          },
+          {
+            "text": "した。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1186,11 +4598,68 @@
     "examples": [
       {
         "jp": "光陰矢のごとし。時間を大切に使いましょう。",
-        "vi": "Thời gian như tên bắn. Hãy sử dụng thời gian quý báu."
+        "vi": "Thời gian như tên bắn. Hãy sử dụng thời gian quý báu.",
+        "reading": [
+          {
+            "text": "光陰",
+            "furigana": "こういん"
+          },
+          {
+            "text": "矢",
+            "furigana": "や"
+          },
+          {
+            "text": "のごとし。"
+          },
+          {
+            "text": "時間",
+            "furigana": "じかん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "大切",
+            "furigana": "たいせつ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "使",
+            "furigana": "つか"
+          },
+          {
+            "text": "いましょう。"
+          }
+        ]
       },
       {
         "jp": "見てきたのごとく詳しく話してくれた。",
-        "vi": "Anh ấy kể chi tiết như thể đã tận mắt nhìn thấy vậy."
+        "vi": "Anh ấy kể chi tiết như thể đã tận mắt nhìn thấy vậy.",
+        "reading": [
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "てきたのごとく"
+          },
+          {
+            "text": "詳",
+            "furigana": "くわ"
+          },
+          {
+            "text": "しく"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "してくれた。"
+          }
+        ]
       }
     ],
     "book": "mimikara",
@@ -1207,11 +4676,60 @@
     "examples": [
       {
         "jp": "知っていても、あえて言わないでおくことも大切だ。",
-        "vi": "Biết nhưng cố ý không nói đôi khi cũng quan trọng."
+        "vi": "Biết nhưng cố ý không nói đôi khi cũng quan trọng.",
+        "reading": [
+          {
+            "text": "知",
+            "furigana": "し"
+          },
+          {
+            "text": "っていても、あえて"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "わないでおくことも"
+          },
+          {
+            "text": "大切",
+            "furigana": "たいせつ"
+          },
+          {
+            "text": "だ。"
+          }
+        ]
       },
       {
         "jp": "これは後で使うから、捨てないでおいてください。",
-        "vi": "Cái này dùng sau nên đừng vứt đi nhé."
+        "vi": "Cái này dùng sau nên đừng vứt đi nhé.",
+        "reading": [
+          {
+            "text": "これは"
+          },
+          {
+            "text": "後",
+            "furigana": "あと"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "使",
+            "furigana": "つか"
+          },
+          {
+            "text": "うから、"
+          },
+          {
+            "text": "捨",
+            "furigana": "す"
+          },
+          {
+            "text": "てないでおいてください。"
+          }
+        ]
       }
     ],
     "book": "mimikara",

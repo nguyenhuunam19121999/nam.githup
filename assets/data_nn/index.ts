@@ -1,5 +1,7 @@
 import { getDb } from "../../services/db";
 
+import type { ContentSegment } from "../../services/aiService";
+
 export interface GrammarItem {
   id: string;
   pattern: string;
@@ -16,7 +18,7 @@ export interface GrammarItem {
   week_theme?: string;
   day?: number;
   day_title?: string;
-  examples?: { jp: string; paraphrase?: string; vi: string }[];
+  examples?: { jp: string; paraphrase?: string; vi: string; reading?: ContentSegment[] }[];
 }
 
 export const GRAMMAR_BY_BOOK: Record<string, GrammarItem[]> = {};
@@ -121,79 +123,6 @@ export const GRAMMAR_BOOK_CONFIG: Record<string, LessonConfig> = {
 };
 
 const DEFAULT_GRAMMAR_CONFIG: LessonConfig = { weeks: 6, daysPerWeek: 6 };
-
-// export function getGrammarByBook(bookId: string): GrammarItem[] {
-//   const db = getGrammarDbHandle();
-//   if (!db) return [];
-
-//   const rows = db.getAllSync(`SELECT * FROM grammar WHERE book = ? ORDER BY id ASC`, [bookId]);
-//   const data = rows.map(normalizeRow);
-//   if (data.length === 0) return [];
-
-//   const hasWeekInJson = data.some((item: GrammarItem) => item.week != null);
-//   const allHaveDay = data.every((item: GrammarItem) => item.day != null);
-
-//   if (allHaveDay) {
-//     // Mọi mục đã có sẵn day từ DB → dùng nguyên, không đụng vào
-//     return data;
-//   }
-
-//   const config = GRAMMAR_BOOK_CONFIG[bookId] ?? DEFAULT_GRAMMAR_CONFIG;
-
-//   if (!hasWeekInJson) {
-//     // JSON gốc KHÔNG có week/day — chia đều CHÍNH XÁC theo config,
-//     // dùng remainder distribution để không thiếu slot cuối (giống kanji/vocab).
-//     const totalSlots = config.weeks * config.daysPerWeek;
-//     const total = data.length;
-//     const base = Math.floor(total / totalSlots);
-//     const remainder = total % totalSlots;
-
-//     const result: GrammarItem[] = [];
-//     let idx = 0;
-//     for (let slot = 0; slot < totalSlots; slot++) {
-//       const countForThisSlot = base + (slot < remainder ? 1 : 0);
-//       const week = Math.floor(slot / config.daysPerWeek) + 1;
-//       const day = (slot % config.daysPerWeek) + 1;
-//       for (let k = 0; k < countForThisSlot && idx < total; k++, idx++) {
-//         result.push({ ...data[idx], week, day });
-//       }
-//     }
-//     return result;
-//   } 
-
-//   // Có week sẵn, chỉ thiếu day ở một số mục — tính lại theo từng tuần,
-//   // cũng dùng remainder distribution thay vì Math.ceil (tránh bug thiếu ngày cuối).
-//   const byWeek: Record<number, GrammarItem[]> = {};
-//   data.forEach((item: GrammarItem) => {
-//     const w = typeof item.week === 'number' ? item.week : 1;
-//     if (!byWeek[w]) byWeek[w] = [];
-//     byWeek[w].push(item);
-//   });
-
-//   const result: GrammarItem[] = [];
-//   Object.keys(byWeek).map(Number).sort((a, b) => a - b).forEach((w) => {
-//     const weekItems = byWeek[w];
-//     const withDay = weekItems.filter((item) => item.day != null);
-//     const withoutDay = weekItems.filter((item) => item.day == null);
-
-//     result.push(...withDay.map((item) => ({ ...item, week: w })));
-
-//     if (withoutDay.length > 0) {
-//       const totalInWeek = withoutDay.length;
-//       const base = Math.floor(totalInWeek / config.daysPerWeek);
-//       const remainder = totalInWeek % config.daysPerWeek;
-//       let idx = 0;
-//       for (let d = 0; d < config.daysPerWeek; d++) {
-//         const countForThisDay = base + (d < remainder ? 1 : 0);
-//         for (let k = 0; k < countForThisDay && idx < totalInWeek; k++, idx++) {
-//           result.push({ ...withoutDay[idx], week: w, day: d + 1 });
-//         }
-//       }
-//     }
-//   });
-
-//   return result;
-// }
 
 export function getGrammarByBook(bookId: string): GrammarItem[] {
   const LOG = (...args: any[]) => console.log('[grammar]', `[${bookId}]`, ...args);

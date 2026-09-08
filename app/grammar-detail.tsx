@@ -23,6 +23,7 @@ import {
 import { getGrammarById } from "../assets/data_nn";
 import { FeedbackSection } from "../components/FeedbackSection";
 import AIExplainPanel from "../components/AIExplainPanel";
+import FuriganaText from "../components/FuriganaText";
 import { KeyboardAwareScrollViewCompat } from "../components/KeyboardAwareScrollViewCompat";
 import { useColors, useThemeMode } from "../artifacts/mirai-jp/hooks/useColors";
 
@@ -178,9 +179,14 @@ export default function GrammarDetailScreen() {
                 <Text style={[s.sectionTitle, { color: c.text }]}>Ví dụ</Text>
                 {grammar.examples.map((ex, i) => (
                   <View key={i} style={s.exampleBlock}>
-                    <Text style={[s.exampleJp, { color: c.primary }]}>
-                      {i + 1}. {ex.jp}
-                    </Text>
+                    <View style={{ flexDirection: "row", alignItems: "flex-start" }}>
+                      <Text style={[s.exampleJp, { color: c.primary, marginRight: 4 }]}>{i + 1}.</Text>
+                      {ex.reading && ex.reading.length > 0 ? (
+                        <FuriganaText segments={ex.reading} color={c.primary} fontSize={15} furiganaFontSize={10} />
+                      ) : (
+                        <Text style={[s.exampleJp, { color: c.primary }]}>{ex.jp}</Text>
+                      )}
+                    </View>
                     {(ex as any).paraphrase ? (
                       <Text style={[s.exampleParaphrase, { color: c.mutedForeground }]}>
                         {(ex as any).paraphrase}

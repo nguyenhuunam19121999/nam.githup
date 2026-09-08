@@ -37,6 +37,7 @@ import {
 import { findExamplesByVocab, ExampleSentence } from "../assets/sentences";
 import { FeedbackSection } from "../components/FeedbackSection";
 import AIExplainPanel from "../components/AIExplainPanel";
+import FuriganaText from "../components/FuriganaText"; 
 import { KeyboardAwareScrollViewCompat } from "../components/KeyboardAwareScrollViewCompat";
 
 // ============================================
@@ -1347,28 +1348,13 @@ const handleOpenWritingPractice = () => {
                             </Text>
                             {modalKanjiExamples.map((ex, i) => (
                               <View key={i} style={styles.kdExampleRow}>
-                                <Text
-                                  style={[
-                                    styles.kdExampleJp,
-                                    { color: c.text },
-                                  ]}
-                                >
-                                  {ex.jp}
-                                </Text>
-                                <Text
-                                  style={[
-                                    styles.kdExampleReading,
-                                    { color: c.primary },
-                                  ]}
-                                >
-                                  {ex.reading}
-                                </Text>
-                                <Text
-                                  style={[
-                                    styles.kdExampleVi,
-                                    { color: c.mutedForeground },
-                                  ]}
-                                >
+                                <FuriganaText
+                                  segments={[{ text: ex.jp, furigana: ex.reading }]}
+                                  color={c.text}
+                                  fontSize={18}
+                                  furiganaFontSize={11}
+                                />
+                                <Text style={[styles.kdExampleVi, { color: c.mutedForeground }]}>
                                   → {ex.vi}
                                 </Text>
                               </View>
@@ -1493,9 +1479,18 @@ const handleOpenWritingPractice = () => {
                       { backgroundColor: c.muted, borderColor: c.border },
                     ]}
                   >
-                    <Text style={[styles.exampleJp, { color: c.primary }]}>
-                      {item.jp}
-                    </Text>
+                    {item.reading && item.reading.length > 0 ? (
+                      <FuriganaText
+                        segments={item.reading}
+                        color={c.primary}
+                        fontSize={16}
+                        furiganaFontSize={11}
+                      />
+                    ) : (
+                      <Text style={[styles.exampleJp, { color: c.primary }]}>
+                        {item.jp}
+                      </Text>
+                    )}
                     <Text
                       style={[styles.exampleVi, { color: c.mutedForeground }]}
                     >

@@ -1371,6 +1371,7 @@ export default function SearchInline({
               pattern={selectedResult.data?.pattern}
               level={selectedResult.data?.level}
               note={selectedResult.data?.note}
+              reading={selectedResult.data?.reading}
               onClose={() => setSelectedResult(null)}
             />
           ) : (

@@ -10,11 +10,32 @@
     "examples": [
       {
         "jp": "私は学生です。",
-        "vi": "Tôi là học sinh."
+        "vi": "Tôi là học sinh.",
+        "reading": [
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "学生",
+            "furigana": "がくせい"
+          },
+          {
+            "text": "です。"
+          }
+        ]
       },
       {
         "jp": "これはペンです。",
-        "vi": "Đây là bút."
+        "vi": "Đây là bút.",
+        "reading": [
+          {
+            "text": "これはペンです。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -30,11 +51,51 @@
     "examples": [
       {
         "jp": "毎日学校へ行きます。",
-        "vi": "Hàng ngày tôi đi học."
+        "vi": "Hàng ngày tôi đi học.",
+        "reading": [
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "学校",
+            "furigana": "がっこう"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       },
       {
         "jp": "昨日映画を見ました。",
-        "vi": "Hôm qua tôi đã xem phim."
+        "vi": "Hôm qua tôi đã xem phim.",
+        "reading": [
+          {
+            "text": "昨日",
+            "furigana": "きのう"
+          },
+          {
+            "text": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "ました。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -50,11 +111,50 @@
     "examples": [
       {
         "jp": "象は鼻が長い。",
-        "vi": "Con voi thì cái vòi dài."
+        "vi": "Con voi thì cái vòi dài.",
+        "reading": [
+          {
+            "text": "象",
+            "furigana": "ぞう"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "鼻",
+            "furigana": "はな"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "長",
+            "furigana": "なが"
+          },
+          {
+            "text": "い。"
+          }
+        ]
       },
       {
         "jp": "私はすしが好きです。",
-        "vi": "Tôi thích sushi."
+        "vi": "Tôi thích sushi.",
+        "reading": [
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "はすしが"
+          },
+          {
+            "text": "好",
+            "furigana": "す"
+          },
+          {
+            "text": "きです。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -70,11 +170,39 @@
     "examples": [
       {
         "jp": "りんごを食べます。",
-        "vi": "Tôi ăn táo."
+        "vi": "Tôi ăn táo.",
+        "reading": [
+          {
+            "text": "りんごを"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べます。"
+          }
+        ]
       },
       {
         "jp": "本を読みます。",
-        "vi": "Tôi đọc sách."
+        "vi": "Tôi đọc sách.",
+        "reading": [
+          {
+            "text": "本",
+            "furigana": "ほん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "読",
+            "furigana": "よ"
+          },
+          {
+            "text": "みます。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -90,11 +218,47 @@
     "examples": [
       {
         "jp": "東京に行きます。",
-        "vi": "Tôi đi đến Tokyo."
+        "vi": "Tôi đi đến Tokyo.",
+        "reading": [
+          {
+            "text": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       },
       {
         "jp": "三時に会いましょう。",
-        "vi": "Hãy gặp nhau lúc 3 giờ."
+        "vi": "Hãy gặp nhau lúc 3 giờ.",
+        "reading": [
+          {
+            "text": "三",
+            "furigana": "さん"
+          },
+          {
+            "text": "時",
+            "furigana": "じ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "会",
+            "furigana": "あ"
+          },
+          {
+            "text": "いましょう。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -110,11 +274,46 @@
     "examples": [
       {
         "jp": "図書館で勉強します。",
-        "vi": "Tôi học ở thư viện."
+        "vi": "Tôi học ở thư viện.",
+        "reading": [
+          {
+            "text": "図書館",
+            "furigana": "としょかん"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "text": "します。"
+          }
+        ]
       },
       {
         "jp": "バスで学校へ行きます。",
-        "vi": "Tôi đi học bằng xe buýt."
+        "vi": "Tôi đi học bằng xe buýt.",
+        "reading": [
+          {
+            "text": "バスで"
+          },
+          {
+            "text": "学校",
+            "furigana": "がっこう"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -130,11 +329,46 @@
     "examples": [
       {
         "jp": "りんごとみかんを買います。",
-        "vi": "Tôi mua táo và quýt."
+        "vi": "Tôi mua táo và quýt.",
+        "reading": [
+          {
+            "text": "りんごとみかんを"
+          },
+          {
+            "text": "買",
+            "furigana": "か"
+          },
+          {
+            "text": "います。"
+          }
+        ]
       },
       {
         "jp": "友達と映画を見ます。",
-        "vi": "Tôi xem phim cùng bạn."
+        "vi": "Tôi xem phim cùng bạn.",
+        "reading": [
+          {
+            "text": "友達",
+            "furigana": "ともだち"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "ます。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -150,11 +384,43 @@
     "examples": [
       {
         "jp": "私も学生です。",
-        "vi": "Tôi cũng là học sinh."
+        "vi": "Tôi cũng là học sinh.",
+        "reading": [
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "学生",
+            "furigana": "がくせい"
+          },
+          {
+            "text": "です。"
+          }
+        ]
       },
       {
         "jp": "田中さんも来ました。",
-        "vi": "Bạn Tanaka cũng đã đến."
+        "vi": "Bạn Tanaka cũng đã đến.",
+        "reading": [
+          {
+            "text": "田中",
+            "furigana": "たなか"
+          },
+          {
+            "text": "さんも"
+          },
+          {
+            "text": "来",
+            "furigana": "き"
+          },
+          {
+            "text": "ました。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -170,11 +436,43 @@
     "examples": [
       {
         "jp": "私の本です。",
-        "vi": "Đây là sách của tôi."
+        "vi": "Đây là sách của tôi.",
+        "reading": [
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "本",
+            "furigana": "ほん"
+          },
+          {
+            "text": "です。"
+          }
+        ]
       },
       {
         "jp": "日本語の先生です。",
-        "vi": "Đây là giáo viên tiếng Nhật."
+        "vi": "Đây là giáo viên tiếng Nhật.",
+        "reading": [
+          {
+            "text": "日本語",
+            "furigana": "にほんご"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "text": "です。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -190,11 +488,43 @@
     "examples": [
       {
         "jp": "学校へ行きます。",
-        "vi": "Tôi đi về phía trường."
+        "vi": "Tôi đi về phía trường.",
+        "reading": [
+          {
+            "text": "学校",
+            "furigana": "がっこう"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       },
       {
         "jp": "日本へ来ました。",
-        "vi": "Tôi đã đến Nhật."
+        "vi": "Tôi đã đến Nhật.",
+        "reading": [
+          {
+            "text": "日本",
+            "furigana": "にっぽん"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "来",
+            "furigana": "き"
+          },
+          {
+            "text": "ました。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -210,11 +540,61 @@
     "examples": [
       {
         "jp": "九時から授業が始まります。",
-        "vi": "Giờ học bắt đầu từ 9 giờ."
+        "vi": "Giờ học bắt đầu từ 9 giờ.",
+        "reading": [
+          {
+            "text": "九",
+            "furigana": "きゅう"
+          },
+          {
+            "text": "時",
+            "furigana": "じ"
+          },
+          {
+            "text": "から"
+          },
+          {
+            "text": "授業",
+            "furigana": "じゅぎょう"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "始",
+            "furigana": "はじ"
+          },
+          {
+            "text": "まります。"
+          }
+        ]
       },
       {
         "jp": "東京から大阪まで行きます。",
-        "vi": "Tôi đi từ Tokyo đến Osaka."
+        "vi": "Tôi đi từ Tokyo đến Osaka.",
+        "reading": [
+          {
+            "text": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "text": "から"
+          },
+          {
+            "text": "大阪",
+            "furigana": "おおさか"
+          },
+          {
+            "text": "まで"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -230,11 +610,47 @@
     "examples": [
       {
         "jp": "六時まで働きます。",
-        "vi": "Tôi làm việc đến 6 giờ."
+        "vi": "Tôi làm việc đến 6 giờ.",
+        "reading": [
+          {
+            "text": "六",
+            "furigana": "ろく"
+          },
+          {
+            "text": "時",
+            "furigana": "じ"
+          },
+          {
+            "text": "まで"
+          },
+          {
+            "text": "働",
+            "furigana": "はたら"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       },
       {
         "jp": "駅まで歩きます。",
-        "vi": "Tôi đi bộ đến ga."
+        "vi": "Tôi đi bộ đến ga.",
+        "reading": [
+          {
+            "text": "駅",
+            "furigana": "えき"
+          },
+          {
+            "text": "まで"
+          },
+          {
+            "text": "歩",
+            "furigana": "ある"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -250,11 +666,57 @@
     "examples": [
       {
         "jp": "机の上に本やノートなどがあります。",
-        "vi": "Trên bàn có sách, vở, v.v."
+        "vi": "Trên bàn có sách, vở, v.v.",
+        "reading": [
+          {
+            "text": "机",
+            "furigana": "つくえ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "上",
+            "furigana": "うえ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "本",
+            "furigana": "ほん"
+          },
+          {
+            "text": "やノートなどがあります。"
+          }
+        ]
       },
       {
         "jp": "果物やお菓子などを買いました。",
-        "vi": "Tôi đã mua trái cây, bánh kẹo, v.v."
+        "vi": "Tôi đã mua trái cây, bánh kẹo, v.v.",
+        "reading": [
+          {
+            "text": "果物",
+            "furigana": "くだもの"
+          },
+          {
+            "text": "やお"
+          },
+          {
+            "text": "菓子",
+            "furigana": "かし"
+          },
+          {
+            "text": "などを"
+          },
+          {
+            "text": "買",
+            "furigana": "か"
+          },
+          {
+            "text": "いました。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -270,11 +732,35 @@
     "examples": [
       {
         "jp": "いい天気ですね。",
-        "vi": "Trời đẹp nhỉ."
+        "vi": "Trời đẹp nhỉ.",
+        "reading": [
+          {
+            "text": "いい"
+          },
+          {
+            "text": "天気",
+            "furigana": "てんき"
+          },
+          {
+            "text": "ですね。"
+          }
+        ]
       },
       {
         "jp": "あの映画はおもしろいですよ。",
-        "vi": "Phim đó hay đấy (tôi bảo bạn nhé)."
+        "vi": "Phim đó hay đấy (tôi bảo bạn nhé).",
+        "reading": [
+          {
+            "text": "あの"
+          },
+          {
+            "text": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "text": "はおもしろいですよ。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -290,11 +776,50 @@
     "examples": [
       {
         "jp": "今、ご飯を食べています。",
-        "vi": "Bây giờ tôi đang ăn cơm."
+        "vi": "Bây giờ tôi đang ăn cơm.",
+        "reading": [
+          {
+            "text": "今",
+            "furigana": "いま"
+          },
+          {
+            "text": "、ご"
+          },
+          {
+            "text": "飯",
+            "furigana": "はん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べています。"
+          }
+        ]
       },
       {
         "jp": "窓が開いています。",
-        "vi": "Cửa sổ đang mở (trạng thái mở)."
+        "vi": "Cửa sổ đang mở (trạng thái mở).",
+        "reading": [
+          {
+            "text": "窓",
+            "furigana": "まど"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "開",
+            "furigana": "ひら"
+          },
+          {
+            "text": "いています。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -310,11 +835,39 @@
     "examples": [
       {
         "jp": "ここに名前を書いてください。",
-        "vi": "Hãy viết tên vào đây."
+        "vi": "Hãy viết tên vào đây.",
+        "reading": [
+          {
+            "text": "ここに"
+          },
+          {
+            "text": "名前",
+            "furigana": "なまえ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "書",
+            "furigana": "か"
+          },
+          {
+            "text": "いてください。"
+          }
+        ]
       },
       {
         "jp": "静かにしてください。",
-        "vi": "Xin hãy giữ yên lặng."
+        "vi": "Xin hãy giữ yên lặng.",
+        "reading": [
+          {
+            "text": "静",
+            "furigana": "しず"
+          },
+          {
+            "text": "かにしてください。"
+          }
+        ]
       }
     ],
     "week": 1
@@ -330,11 +883,39 @@
     "examples": [
       {
         "jp": "ここに座ってもいいですか。",
-        "vi": "Tôi có thể ngồi ở đây không?"
+        "vi": "Tôi có thể ngồi ở đây không?",
+        "reading": [
+          {
+            "text": "ここに"
+          },
+          {
+            "text": "座",
+            "furigana": "すわ"
+          },
+          {
+            "text": "ってもいいですか。"
+          }
+        ]
       },
       {
         "jp": "写真を撮ってもいいですか。",
-        "vi": "Tôi có thể chụp ảnh không?"
+        "vi": "Tôi có thể chụp ảnh không?",
+        "reading": [
+          {
+            "text": "写真",
+            "furigana": "しゃしん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "撮",
+            "furigana": "と"
+          },
+          {
+            "text": "ってもいいですか。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -350,11 +931,43 @@
     "examples": [
       {
         "jp": "ここでタバコを吸ってはいけません。",
-        "vi": "Ở đây không được hút thuốc."
+        "vi": "Ở đây không được hút thuốc.",
+        "reading": [
+          {
+            "text": "ここでタバコを"
+          },
+          {
+            "text": "吸",
+            "furigana": "す"
+          },
+          {
+            "text": "ってはいけません。"
+          }
+        ]
       },
       {
         "jp": "授業中に話してはいけません。",
-        "vi": "Không được nói chuyện trong giờ học."
+        "vi": "Không được nói chuyện trong giờ học.",
+        "reading": [
+          {
+            "text": "授業",
+            "furigana": "じゅぎょう"
+          },
+          {
+            "text": "中",
+            "furigana": "ちゅう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "話",
+            "furigana": "はな"
+          },
+          {
+            "text": "してはいけません。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -370,11 +983,36 @@
     "examples": [
       {
         "jp": "宿題をしなければなりません。",
-        "vi": "Tôi phải làm bài tập về nhà."
+        "vi": "Tôi phải làm bài tập về nhà.",
+        "reading": [
+          {
+            "text": "宿題",
+            "furigana": "しゅくだい"
+          },
+          {
+            "text": "をしなければなりません。"
+          }
+        ]
       },
       {
         "jp": "薬を飲まなければなりません。",
-        "vi": "Tôi phải uống thuốc."
+        "vi": "Tôi phải uống thuốc.",
+        "reading": [
+          {
+            "text": "薬",
+            "furigana": "くすり"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "まなければなりません。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -390,11 +1028,39 @@
     "examples": [
       {
         "jp": "ここに入らないでください。",
-        "vi": "Xin đừng vào đây."
+        "vi": "Xin đừng vào đây.",
+        "reading": [
+          {
+            "text": "ここに"
+          },
+          {
+            "text": "入",
+            "furigana": "はい"
+          },
+          {
+            "text": "らないでください。"
+          }
+        ]
       },
       {
         "jp": "写真を撮らないでください。",
-        "vi": "Xin đừng chụp ảnh."
+        "vi": "Xin đừng chụp ảnh.",
+        "reading": [
+          {
+            "text": "写真",
+            "furigana": "しゃしん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "撮",
+            "furigana": "と"
+          },
+          {
+            "text": "らないでください。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -410,11 +1076,43 @@
     "examples": [
       {
         "jp": "日本へ行きたいです。",
-        "vi": "Tôi muốn đi Nhật."
+        "vi": "Tôi muốn đi Nhật.",
+        "reading": [
+          {
+            "text": "日本",
+            "furigana": "にっぽん"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きたいです。"
+          }
+        ]
       },
       {
         "jp": "水が飲みたいです。",
-        "vi": "Tôi muốn uống nước."
+        "vi": "Tôi muốn uống nước.",
+        "reading": [
+          {
+            "text": "水",
+            "furigana": "みず"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "みたいです。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -430,11 +1128,57 @@
     "examples": [
       {
         "jp": "雨が降っているから、傘を持っていきます。",
-        "vi": "Vì trời đang mưa nên tôi mang ô theo."
+        "vi": "Vì trời đang mưa nên tôi mang ô theo.",
+        "reading": [
+          {
+            "text": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "降",
+            "furigana": "ふ"
+          },
+          {
+            "text": "っているから、"
+          },
+          {
+            "text": "傘",
+            "furigana": "かさ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "持",
+            "furigana": "も"
+          },
+          {
+            "text": "っていきます。"
+          }
+        ]
       },
       {
         "jp": "眠いから、寝ます。",
-        "vi": "Vì buồn ngủ nên tôi đi ngủ."
+        "vi": "Vì buồn ngủ nên tôi đi ngủ.",
+        "reading": [
+          {
+            "text": "眠",
+            "furigana": "ねむ"
+          },
+          {
+            "text": "いから、"
+          },
+          {
+            "text": "寝",
+            "furigana": "ね"
+          },
+          {
+            "text": "ます。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -450,11 +1194,57 @@
     "examples": [
       {
         "jp": "電車が遅れたので、遅刻しました。",
-        "vi": "Vì tàu đến trễ nên tôi đến muộn."
+        "vi": "Vì tàu đến trễ nên tôi đến muộn.",
+        "reading": [
+          {
+            "text": "電車",
+            "furigana": "でんしゃ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "遅",
+            "furigana": "おく"
+          },
+          {
+            "text": "れたので、"
+          },
+          {
+            "text": "遅刻",
+            "furigana": "ちこく"
+          },
+          {
+            "text": "しました。"
+          }
+        ]
       },
       {
         "jp": "熱があるので、学校を休みます。",
-        "vi": "Vì bị sốt nên tôi nghỉ học."
+        "vi": "Vì bị sốt nên tôi nghỉ học.",
+        "reading": [
+          {
+            "text": "熱",
+            "furigana": "ねつ"
+          },
+          {
+            "text": "があるので、"
+          },
+          {
+            "text": "学校",
+            "furigana": "がっこう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "休",
+            "furigana": "やす"
+          },
+          {
+            "text": "みます。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -470,11 +1260,50 @@
     "examples": [
       {
         "jp": "日本語は難しいですが、面白いです。",
-        "vi": "Tiếng Nhật khó nhưng thú vị."
+        "vi": "Tiếng Nhật khó nhưng thú vị.",
+        "reading": [
+          {
+            "text": "日本語",
+            "furigana": "にほんご"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "難",
+            "furigana": "むずか"
+          },
+          {
+            "text": "しいですが、"
+          },
+          {
+            "text": "面白",
+            "furigana": "おもしろ"
+          },
+          {
+            "text": "いです。"
+          }
+        ]
       },
       {
         "jp": "行きたいですが、時間がありません。",
-        "vi": "Tôi muốn đi nhưng không có thời gian."
+        "vi": "Tôi muốn đi nhưng không có thời gian.",
+        "reading": [
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きたいですが、"
+          },
+          {
+            "text": "時間",
+            "furigana": "じかん"
+          },
+          {
+            "text": "がありません。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -490,11 +1319,39 @@
     "examples": [
       {
         "jp": "おいしいけど、高いですね。",
-        "vi": "Ngon nhưng đắt nhỉ."
+        "vi": "Ngon nhưng đắt nhỉ.",
+        "reading": [
+          {
+            "text": "おいしいけど、"
+          },
+          {
+            "text": "高",
+            "furigana": "たか"
+          },
+          {
+            "text": "いですね。"
+          }
+        ]
       },
       {
         "jp": "行きたいけど、お金がない。",
-        "vi": "Muốn đi nhưng không có tiền."
+        "vi": "Muốn đi nhưng không có tiền.",
+        "reading": [
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きたいけど、お"
+          },
+          {
+            "text": "金",
+            "furigana": "かね"
+          },
+          {
+            "text": "がない。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -510,11 +1367,67 @@
     "examples": [
       {
         "jp": "シャワーを浴びて、朝ご飯を食べます。",
-        "vi": "Tắm xong rồi ăn sáng."
+        "vi": "Tắm xong rồi ăn sáng.",
+        "reading": [
+          {
+            "text": "シャワーを"
+          },
+          {
+            "text": "浴",
+            "furigana": "あ"
+          },
+          {
+            "text": "びて、"
+          },
+          {
+            "text": "朝",
+            "furigana": "あさ"
+          },
+          {
+            "text": "ご"
+          },
+          {
+            "text": "飯",
+            "furigana": "はん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べます。"
+          }
+        ]
       },
       {
         "jp": "歩いて学校へ行きます。",
-        "vi": "Tôi đi bộ đến trường."
+        "vi": "Tôi đi bộ đến trường.",
+        "reading": [
+          {
+            "text": "歩",
+            "furigana": "ある"
+          },
+          {
+            "text": "いて"
+          },
+          {
+            "text": "学校",
+            "furigana": "がっこう"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -530,11 +1443,53 @@
     "examples": [
       {
         "jp": "一緒に昼ご飯を食べましょう。",
-        "vi": "Hãy cùng ăn trưa."
+        "vi": "Hãy cùng ăn trưa.",
+        "reading": [
+          {
+            "text": "一緒",
+            "furigana": "いっしょ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "昼",
+            "furigana": "ひる"
+          },
+          {
+            "text": "ご"
+          },
+          {
+            "text": "飯",
+            "furigana": "はん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べましょう。"
+          }
+        ]
       },
       {
         "jp": "コーヒーでも飲みませんか。",
-        "vi": "Chúng ta cùng uống cà phê nhé?"
+        "vi": "Chúng ta cùng uống cà phê nhé?",
+        "reading": [
+          {
+            "text": "コーヒーでも"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "みませんか。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -550,11 +1505,49 @@
     "examples": [
       {
         "jp": "どんな音楽が好きですか。",
-        "vi": "Bạn thích loại nhạc nào?"
+        "vi": "Bạn thích loại nhạc nào?",
+        "reading": [
+          {
+            "text": "どんな"
+          },
+          {
+            "text": "音楽",
+            "furigana": "おんがく"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "好",
+            "furigana": "す"
+          },
+          {
+            "text": "きですか。"
+          }
+        ]
       },
       {
         "jp": "どの本を読みますか。",
-        "vi": "Bạn đọc quyển sách nào?"
+        "vi": "Bạn đọc quyển sách nào?",
+        "reading": [
+          {
+            "text": "どの"
+          },
+          {
+            "text": "本",
+            "furigana": "ほん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "読",
+            "furigana": "よ"
+          },
+          {
+            "text": "みますか。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -570,11 +1563,60 @@
     "examples": [
       {
         "jp": "この部屋は広くて明るいです。",
-        "vi": "Căn phòng này rộng và sáng."
+        "vi": "Căn phòng này rộng và sáng.",
+        "reading": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "部屋",
+            "furigana": "へや"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "広",
+            "furigana": "ひろ"
+          },
+          {
+            "text": "くて"
+          },
+          {
+            "text": "明",
+            "furigana": "あか"
+          },
+          {
+            "text": "るいです。"
+          }
+        ]
       },
       {
         "jp": "彼女はきれいで優しい人です。",
-        "vi": "Cô ấy là người đẹp và hiền."
+        "vi": "Cô ấy là người đẹp và hiền.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "はきれいで"
+          },
+          {
+            "text": "優",
+            "furigana": "やさ"
+          },
+          {
+            "text": "しい"
+          },
+          {
+            "text": "人",
+            "furigana": "ひと"
+          },
+          {
+            "text": "です。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -590,11 +1632,53 @@
     "examples": [
       {
         "jp": "食べすぎて、お腹が痛い。",
-        "vi": "Ăn quá nhiều nên đau bụng."
+        "vi": "Ăn quá nhiều nên đau bụng.",
+        "reading": [
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べすぎて、お"
+          },
+          {
+            "text": "腹",
+            "furigana": "なか"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "痛",
+            "furigana": "いた"
+          },
+          {
+            "text": "い。"
+          }
+        ]
       },
       {
         "jp": "この映画は長すぎます。",
-        "vi": "Bộ phim này dài quá."
+        "vi": "Bộ phim này dài quá.",
+        "reading": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "長",
+            "furigana": "なが"
+          },
+          {
+            "text": "すぎます。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -610,11 +1694,46 @@
     "examples": [
       {
         "jp": "早く寝たほうがいいですよ。",
-        "vi": "Bạn nên đi ngủ sớm đấy."
+        "vi": "Bạn nên đi ngủ sớm đấy.",
+        "reading": [
+          {
+            "text": "早",
+            "furigana": "はや"
+          },
+          {
+            "text": "く"
+          },
+          {
+            "text": "寝",
+            "furigana": "ね"
+          },
+          {
+            "text": "たほうがいいですよ。"
+          }
+        ]
       },
       {
         "jp": "お酒を飲まないほうがいいです。",
-        "vi": "Bạn không nên uống rượu."
+        "vi": "Bạn không nên uống rượu.",
+        "reading": [
+          {
+            "text": "お"
+          },
+          {
+            "text": "酒",
+            "furigana": "さけ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "まないほうがいいです。"
+          }
+        ]
       }
     ],
     "week": 2
@@ -630,11 +1749,53 @@
     "examples": [
       {
         "jp": "来年、日本へ行くつもりです。",
-        "vi": "Năm sau tôi dự định đi Nhật."
+        "vi": "Năm sau tôi dự định đi Nhật.",
+        "reading": [
+          {
+            "text": "来年",
+            "furigana": "らいねん"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "日本",
+            "furigana": "にっぽん"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "くつもりです。"
+          }
+        ]
       },
       {
         "jp": "お酒は飲まないつもりです。",
-        "vi": "Tôi dự định không uống rượu."
+        "vi": "Tôi dự định không uống rượu.",
+        "reading": [
+          {
+            "text": "お"
+          },
+          {
+            "text": "酒",
+            "furigana": "さけ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "まないつもりです。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -650,11 +1811,71 @@
     "examples": [
       {
         "jp": "週末は映画を見たり、本を読んだりします。",
-        "vi": "Cuối tuần tôi khi thì xem phim, khi thì đọc sách."
+        "vi": "Cuối tuần tôi khi thì xem phim, khi thì đọc sách.",
+        "reading": [
+          {
+            "text": "週末",
+            "furigana": "しゅうまつ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "たり、"
+          },
+          {
+            "text": "本",
+            "furigana": "ほん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "読",
+            "furigana": "よ"
+          },
+          {
+            "text": "んだりします。"
+          }
+        ]
       },
       {
         "jp": "彼は泣いたり笑ったりしている。",
-        "vi": "Anh ta lúc khóc lúc cười."
+        "vi": "Anh ta lúc khóc lúc cười.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "泣",
+            "furigana": "な"
+          },
+          {
+            "text": "いたり"
+          },
+          {
+            "text": "笑",
+            "furigana": "わら"
+          },
+          {
+            "text": "ったりしている。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -670,11 +1891,43 @@
     "examples": [
       {
         "jp": "宿題をしてから、ゲームをします。",
-        "vi": "Làm bài tập xong mới chơi game."
+        "vi": "Làm bài tập xong mới chơi game.",
+        "reading": [
+          {
+            "text": "宿題",
+            "furigana": "しゅくだい"
+          },
+          {
+            "text": "をしてから、ゲームをします。"
+          }
+        ]
       },
       {
         "jp": "手を洗ってから、食べてください。",
-        "vi": "Rửa tay xong mới ăn nhé."
+        "vi": "Rửa tay xong mới ăn nhé.",
+        "reading": [
+          {
+            "text": "手",
+            "furigana": "て"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "洗",
+            "furigana": "あら"
+          },
+          {
+            "text": "ってから、"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べてください。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -690,11 +1943,71 @@
     "examples": [
       {
         "jp": "寝る前に、歯を磨きます。",
-        "vi": "Trước khi ngủ, tôi đánh răng."
+        "vi": "Trước khi ngủ, tôi đánh răng.",
+        "reading": [
+          {
+            "text": "寝",
+            "furigana": "ね"
+          },
+          {
+            "text": "る"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "に、"
+          },
+          {
+            "text": "歯",
+            "furigana": "は"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "磨",
+            "furigana": "みが"
+          },
+          {
+            "text": "きます。"
+          }
+        ]
       },
       {
         "jp": "出発の前に、荷物を確認してください。",
-        "vi": "Trước khi khởi hành, hãy kiểm tra hành lý."
+        "vi": "Trước khi khởi hành, hãy kiểm tra hành lý.",
+        "reading": [
+          {
+            "text": "出発",
+            "furigana": "しゅっぱつ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "に、"
+          },
+          {
+            "text": "荷物",
+            "furigana": "にもつ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "確認",
+            "furigana": "かくにん"
+          },
+          {
+            "text": "してください。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -710,11 +2023,74 @@
     "examples": [
       {
         "jp": "ご飯を食べた後で、散歩します。",
-        "vi": "Sau khi ăn cơm, tôi đi dạo."
+        "vi": "Sau khi ăn cơm, tôi đi dạo.",
+        "reading": [
+          {
+            "text": "ご"
+          },
+          {
+            "text": "飯",
+            "furigana": "はん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べた"
+          },
+          {
+            "text": "後",
+            "furigana": "のち"
+          },
+          {
+            "text": "で、"
+          },
+          {
+            "text": "散歩",
+            "furigana": "さんぽ"
+          },
+          {
+            "text": "します。"
+          }
+        ]
       },
       {
         "jp": "仕事の後で、飲みに行きませんか。",
-        "vi": "Sau giờ làm, chúng ta đi uống không?"
+        "vi": "Sau giờ làm, chúng ta đi uống không?",
+        "reading": [
+          {
+            "text": "仕事",
+            "furigana": "しごと"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "後",
+            "furigana": "のち"
+          },
+          {
+            "text": "で、"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "みに"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "きませんか。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -730,11 +2106,53 @@
     "examples": [
       {
         "jp": "音楽を聞きながら、料理します。",
-        "vi": "Tôi vừa nghe nhạc vừa nấu ăn."
+        "vi": "Tôi vừa nghe nhạc vừa nấu ăn.",
+        "reading": [
+          {
+            "text": "音楽",
+            "furigana": "おんがく"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "聞",
+            "furigana": "き"
+          },
+          {
+            "text": "きながら、"
+          },
+          {
+            "text": "料理",
+            "furigana": "りょうり"
+          },
+          {
+            "text": "します。"
+          }
+        ]
       },
       {
         "jp": "スマホを見ながら歩かないでください。",
-        "vi": "Đừng vừa nhìn điện thoại vừa đi."
+        "vi": "Đừng vừa nhìn điện thoại vừa đi.",
+        "reading": [
+          {
+            "text": "スマホを"
+          },
+          {
+            "text": "見",
+            "furigana": "み"
+          },
+          {
+            "text": "ながら"
+          },
+          {
+            "text": "歩",
+            "furigana": "ある"
+          },
+          {
+            "text": "かないでください。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -750,11 +2168,50 @@
     "examples": [
       {
         "jp": "子供のとき、よく川で泳ぎました。",
-        "vi": "Hồi còn nhỏ, tôi hay bơi ở sông."
+        "vi": "Hồi còn nhỏ, tôi hay bơi ở sông.",
+        "reading": [
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "のとき、よく"
+          },
+          {
+            "text": "川",
+            "furigana": "かわ"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "泳",
+            "furigana": "およ"
+          },
+          {
+            "text": "ぎました。"
+          }
+        ]
       },
       {
         "jp": "困ったとき、相談してください。",
-        "vi": "Khi gặp khó khăn, hãy hỏi tôi."
+        "vi": "Khi gặp khó khăn, hãy hỏi tôi.",
+        "reading": [
+          {
+            "text": "困",
+            "furigana": "こま"
+          },
+          {
+            "text": "ったとき、"
+          },
+          {
+            "text": "相談",
+            "furigana": "そうだん"
+          },
+          {
+            "text": "してください。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -770,11 +2227,42 @@
     "examples": [
       {
         "jp": "もう帰ってもいいですよ。",
-        "vi": "Bạn có thể về rồi đấy."
+        "vi": "Bạn có thể về rồi đấy.",
+        "reading": [
+          {
+            "text": "もう"
+          },
+          {
+            "text": "帰",
+            "furigana": "かえ"
+          },
+          {
+            "text": "ってもいいですよ。"
+          }
+        ]
       },
       {
         "jp": "ここで写真を撮ってもいいです。",
-        "vi": "Bạn được phép chụp ảnh ở đây."
+        "vi": "Bạn được phép chụp ảnh ở đây.",
+        "reading": [
+          {
+            "text": "ここで"
+          },
+          {
+            "text": "写真",
+            "furigana": "しゃしん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "撮",
+            "furigana": "と"
+          },
+          {
+            "text": "ってもいいです。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -790,11 +2278,43 @@
     "examples": [
       {
         "jp": "財布を忘れてしまいました。",
-        "vi": "Tôi đã quên mất ví."
+        "vi": "Tôi đã quên mất ví.",
+        "reading": [
+          {
+            "text": "財布",
+            "furigana": "さいふ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "忘",
+            "furigana": "わす"
+          },
+          {
+            "text": "れてしまいました。"
+          }
+        ]
       },
       {
         "jp": "ケーキを全部食べてしまった。",
-        "vi": "Tôi đã ăn hết cả cái bánh mất rồi."
+        "vi": "Tôi đã ăn hết cả cái bánh mất rồi.",
+        "reading": [
+          {
+            "text": "ケーキを"
+          },
+          {
+            "text": "全部",
+            "furigana": "ぜんぶ"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べてしまった。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -810,11 +2330,53 @@
     "examples": [
       {
         "jp": "この料理を食べてみてください。",
-        "vi": "Hãy thử ăn món ăn này xem."
+        "vi": "Hãy thử ăn món ăn này xem.",
+        "reading": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "料理",
+            "furigana": "りょうり"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べてみてください。"
+          }
+        ]
       },
       {
         "jp": "新しい方法を試してみます。",
-        "vi": "Tôi sẽ thử phương pháp mới xem sao."
+        "vi": "Tôi sẽ thử phương pháp mới xem sao.",
+        "reading": [
+          {
+            "text": "新",
+            "furigana": "あたら"
+          },
+          {
+            "text": "しい"
+          },
+          {
+            "text": "方法",
+            "furigana": "ほうほう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "試",
+            "furigana": "ため"
+          },
+          {
+            "text": "してみます。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -830,11 +2392,50 @@
     "examples": [
       {
         "jp": "旅行の前に、ホテルを予約しておきます。",
-        "vi": "Trước chuyến đi, tôi đặt khách sạn trước."
+        "vi": "Trước chuyến đi, tôi đặt khách sạn trước.",
+        "reading": [
+          {
+            "text": "旅行",
+            "furigana": "りょこう"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "前",
+            "furigana": "まえ"
+          },
+          {
+            "text": "に、ホテルを"
+          },
+          {
+            "text": "予約",
+            "furigana": "よやく"
+          },
+          {
+            "text": "しておきます。"
+          }
+        ]
       },
       {
         "jp": "資料を読んでおいてください。",
-        "vi": "Hãy đọc tài liệu trước nhé."
+        "vi": "Hãy đọc tài liệu trước nhé.",
+        "reading": [
+          {
+            "text": "資料",
+            "furigana": "しりょう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "読",
+            "furigana": "よ"
+          },
+          {
+            "text": "んでおいてください。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -850,11 +2451,50 @@
     "examples": [
       {
         "jp": "黒板に名前が書いてある。",
-        "vi": "Trên bảng đã có tên được viết sẵn."
+        "vi": "Trên bảng đã có tên được viết sẵn.",
+        "reading": [
+          {
+            "text": "黒板",
+            "furigana": "こくばん"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "名前",
+            "furigana": "なまえ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "書",
+            "furigana": "か"
+          },
+          {
+            "text": "いてある。"
+          }
+        ]
       },
       {
         "jp": "冷蔵庫にビールが冷やしてある。",
-        "vi": "Trong tủ lạnh đã có bia được làm lạnh sẵn."
+        "vi": "Trong tủ lạnh đã có bia được làm lạnh sẵn.",
+        "reading": [
+          {
+            "text": "冷蔵庫",
+            "furigana": "れいぞうこ"
+          },
+          {
+            "text": "にビールが"
+          },
+          {
+            "text": "冷",
+            "furigana": "ひ"
+          },
+          {
+            "text": "やしてある。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -870,15 +2510,70 @@
     "examples": [
       {
         "jp": "友達に本を貸してあげました。",
-        "vi": "Tôi đã cho bạn mượn sách."
+        "vi": "Tôi đã cho bạn mượn sách.",
+        "reading": [
+          {
+            "text": "友達",
+            "furigana": "ともだち"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "本",
+            "furigana": "ほん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "貸",
+            "furigana": "か"
+          },
+          {
+            "text": "してあげました。"
+          }
+        ]
       },
       {
         "jp": "先生に教えてもらいました。",
-        "vi": "Tôi đã được thầy dạy cho."
+        "vi": "Tôi đã được thầy dạy cho.",
+        "reading": [
+          {
+            "text": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "教",
+            "furigana": "おし"
+          },
+          {
+            "text": "えてもらいました。"
+          }
+        ]
       },
       {
         "jp": "彼女がケーキを作ってくれました。",
-        "vi": "Cô ấy đã làm bánh cho tôi."
+        "vi": "Cô ấy đã làm bánh cho tôi.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "がケーキを"
+          },
+          {
+            "text": "作",
+            "furigana": "つく"
+          },
+          {
+            "text": "ってくれました。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -894,11 +2589,50 @@
     "examples": [
       {
         "jp": "明日、雨が降るかもしれません。",
-        "vi": "Ngày mai có thể sẽ mưa."
+        "vi": "Ngày mai có thể sẽ mưa.",
+        "reading": [
+          {
+            "text": "明日",
+            "furigana": "あした"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "降",
+            "furigana": "ふ"
+          },
+          {
+            "text": "るかもしれません。"
+          }
+        ]
       },
       {
         "jp": "彼女は知っているかもしれない。",
-        "vi": "Cô ấy có thể đã biết rồi."
+        "vi": "Cô ấy có thể đã biết rồi.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "知",
+            "furigana": "し"
+          },
+          {
+            "text": "っているかもしれない。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -914,11 +2648,43 @@
     "examples": [
       {
         "jp": "明日は晴れるでしょう。",
-        "vi": "Ngày mai có lẽ trời sẽ nắng."
+        "vi": "Ngày mai có lẽ trời sẽ nắng.",
+        "reading": [
+          {
+            "text": "明日",
+            "furigana": "あした"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "晴",
+            "furigana": "は"
+          },
+          {
+            "text": "れるでしょう。"
+          }
+        ]
       },
       {
         "jp": "彼も来るでしょう。",
-        "vi": "Anh ấy chắc cũng sẽ đến nhỉ?"
+        "vi": "Anh ấy chắc cũng sẽ đến nhỉ?",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "来",
+            "furigana": "く"
+          },
+          {
+            "text": "るでしょう。"
+          }
+        ]
       }
     ],
     "week": 3
@@ -934,11 +2700,43 @@
     "examples": [
       {
         "jp": "田中さんは結婚するらしい。",
-        "vi": "Nghe nói bạn Tanaka sắp kết hôn."
+        "vi": "Nghe nói bạn Tanaka sắp kết hôn.",
+        "reading": [
+          {
+            "text": "田中",
+            "furigana": "たなか"
+          },
+          {
+            "text": "さんは"
+          },
+          {
+            "text": "結婚",
+            "furigana": "けっこん"
+          },
+          {
+            "text": "するらしい。"
+          }
+        ]
       },
       {
         "jp": "外は寒いらしいです。",
-        "vi": "Có vẻ ngoài trời lạnh."
+        "vi": "Có vẻ ngoài trời lạnh.",
+        "reading": [
+          {
+            "text": "外",
+            "furigana": "そと"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "寒",
+            "furigana": "さむ"
+          },
+          {
+            "text": "いらしいです。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -954,11 +2752,43 @@
     "examples": [
       {
         "jp": "彼は怒っているようです。",
-        "vi": "Có vẻ như anh ấy đang giận."
+        "vi": "Có vẻ như anh ấy đang giận.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "怒",
+            "furigana": "おこ"
+          },
+          {
+            "text": "っているようです。"
+          }
+        ]
       },
       {
         "jp": "子供みたいな字ですね。",
-        "vi": "Chữ viết trông như của trẻ con nhỉ."
+        "vi": "Chữ viết trông như của trẻ con nhỉ.",
+        "reading": [
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "みたいな"
+          },
+          {
+            "text": "字",
+            "furigana": "じ"
+          },
+          {
+            "text": "ですね。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -974,11 +2804,46 @@
     "examples": [
       {
         "jp": "このケーキはおいしそうです。",
-        "vi": "Cái bánh này trông có vẻ ngon."
+        "vi": "Cái bánh này trông có vẻ ngon.",
+        "reading": [
+          {
+            "text": "このケーキはおいしそうです。"
+          }
+        ]
       },
       {
         "jp": "空が暗くなってきた。雨が降りそうだ。",
-        "vi": "Bầu trời tối dần. Có vẻ sắp mưa."
+        "vi": "Bầu trời tối dần. Có vẻ sắp mưa.",
+        "reading": [
+          {
+            "text": "空",
+            "furigana": "そら"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "暗",
+            "furigana": "くら"
+          },
+          {
+            "text": "くなってきた。"
+          },
+          {
+            "text": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "降",
+            "furigana": "お"
+          },
+          {
+            "text": "りそうだ。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -994,11 +2859,53 @@
     "examples": [
       {
         "jp": "この映画はおもしろいと思います。",
-        "vi": "Tôi nghĩ bộ phim này thú vị."
+        "vi": "Tôi nghĩ bộ phim này thú vị.",
+        "reading": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "映画",
+            "furigana": "えいが"
+          },
+          {
+            "text": "はおもしろいと"
+          },
+          {
+            "text": "思",
+            "furigana": "おも"
+          },
+          {
+            "text": "います。"
+          }
+        ]
       },
       {
         "jp": "彼は来ないと思います。",
-        "vi": "Tôi nghĩ anh ấy sẽ không đến."
+        "vi": "Tôi nghĩ anh ấy sẽ không đến.",
+        "reading": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "来",
+            "furigana": "こ"
+          },
+          {
+            "text": "ないと"
+          },
+          {
+            "text": "思",
+            "furigana": "おも"
+          },
+          {
+            "text": "います。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1014,11 +2921,57 @@
     "examples": [
       {
         "jp": "先生は「明日テストがある」と言いました。",
-        "vi": "Thầy nói rằng 'Ngày mai có bài kiểm tra'."
+        "vi": "Thầy nói rằng 'Ngày mai có bài kiểm tra'.",
+        "reading": [
+          {
+            "text": "先生",
+            "furigana": "せんせい"
+          },
+          {
+            "text": "は「"
+          },
+          {
+            "text": "明日",
+            "furigana": "あした"
+          },
+          {
+            "text": "テストがある」と"
+          },
+          {
+            "text": "言",
+            "furigana": "い"
+          },
+          {
+            "text": "いました。"
+          }
+        ]
       },
       {
         "jp": "東京という都市に住んでいます。",
-        "vi": "Tôi sống ở thành phố tên là Tokyo."
+        "vi": "Tôi sống ở thành phố tên là Tokyo.",
+        "reading": [
+          {
+            "text": "東京",
+            "furigana": "とうきょう"
+          },
+          {
+            "text": "という"
+          },
+          {
+            "text": "都市",
+            "furigana": "とし"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "住",
+            "furigana": "す"
+          },
+          {
+            "text": "んでいます。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1034,11 +2987,53 @@
     "examples": [
       {
         "jp": "バスより電車のほうが速いです。",
-        "vi": "Tàu điện nhanh hơn xe buýt."
+        "vi": "Tàu điện nhanh hơn xe buýt.",
+        "reading": [
+          {
+            "text": "バスより"
+          },
+          {
+            "text": "電車",
+            "furigana": "でんしゃ"
+          },
+          {
+            "text": "のほうが"
+          },
+          {
+            "text": "速",
+            "furigana": "はや"
+          },
+          {
+            "text": "いです。"
+          }
+        ]
       },
       {
         "jp": "昨日より今日のほうが暖かい。",
-        "vi": "Hôm nay ấm hơn hôm qua."
+        "vi": "Hôm nay ấm hơn hôm qua.",
+        "reading": [
+          {
+            "text": "昨日",
+            "furigana": "きのう"
+          },
+          {
+            "text": "より"
+          },
+          {
+            "text": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "text": "のほうが"
+          },
+          {
+            "text": "暖",
+            "furigana": "あたた"
+          },
+          {
+            "text": "かい。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1054,11 +3049,57 @@
     "examples": [
       {
         "jp": "彼女は泣くほど嬉しかった。",
-        "vi": "Cô ấy vui đến mức khóc."
+        "vi": "Cô ấy vui đến mức khóc.",
+        "reading": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "泣",
+            "furigana": "な"
+          },
+          {
+            "text": "くほど"
+          },
+          {
+            "text": "嬉",
+            "furigana": "うれ"
+          },
+          {
+            "text": "しかった。"
+          }
+        ]
       },
       {
         "jp": "日本語は思ったほど難しくない。",
-        "vi": "Tiếng Nhật không khó như tôi nghĩ."
+        "vi": "Tiếng Nhật không khó như tôi nghĩ.",
+        "reading": [
+          {
+            "text": "日本語",
+            "furigana": "にほんご"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "思",
+            "furigana": "おも"
+          },
+          {
+            "text": "ったほど"
+          },
+          {
+            "text": "難",
+            "furigana": "むずか"
+          },
+          {
+            "text": "しくない。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1074,11 +3115,43 @@
     "examples": [
       {
         "jp": "一つだけ買います。",
-        "vi": "Tôi chỉ mua một cái."
+        "vi": "Tôi chỉ mua một cái.",
+        "reading": [
+          {
+            "text": "一",
+            "furigana": "ひと"
+          },
+          {
+            "text": "つだけ"
+          },
+          {
+            "text": "買",
+            "furigana": "か"
+          },
+          {
+            "text": "います。"
+          }
+        ]
       },
       {
         "jp": "水だけ飲んでいます。",
-        "vi": "Tôi chỉ uống nước."
+        "vi": "Tôi chỉ uống nước.",
+        "reading": [
+          {
+            "text": "水",
+            "furigana": "みず"
+          },
+          {
+            "text": "だけ"
+          },
+          {
+            "text": "飲",
+            "furigana": "の"
+          },
+          {
+            "text": "んでいます。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1094,11 +3167,50 @@
     "examples": [
       {
         "jp": "お金が百円しかありません。",
-        "vi": "Tôi chỉ có 100 yên thôi."
+        "vi": "Tôi chỉ có 100 yên thôi.",
+        "reading": [
+          {
+            "text": "お"
+          },
+          {
+            "text": "金",
+            "furigana": "かね"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "百",
+            "furigana": "ひゃく"
+          },
+          {
+            "text": "円",
+            "furigana": "えん"
+          },
+          {
+            "text": "しかありません。"
+          }
+        ]
       },
       {
         "jp": "一つしか食べていない。",
-        "vi": "Tôi chỉ ăn có một cái thôi."
+        "vi": "Tôi chỉ ăn có một cái thôi.",
+        "reading": [
+          {
+            "text": "一",
+            "furigana": "ひと"
+          },
+          {
+            "text": "つしか"
+          },
+          {
+            "text": "食",
+            "furigana": "た"
+          },
+          {
+            "text": "べていない。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1114,11 +3226,61 @@
     "examples": [
       {
         "jp": "日本語を勉強するために、日本へ来ました。",
-        "vi": "Tôi đến Nhật để học tiếng Nhật."
+        "vi": "Tôi đến Nhật để học tiếng Nhật.",
+        "reading": [
+          {
+            "text": "日本語",
+            "furigana": "にほんご"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "text": "するために、"
+          },
+          {
+            "text": "日本",
+            "furigana": "にっぽん"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "来",
+            "furigana": "き"
+          },
+          {
+            "text": "ました。"
+          }
+        ]
       },
       {
         "jp": "健康のために、毎日運動します。",
-        "vi": "Vì sức khoẻ, tôi tập thể dục mỗi ngày."
+        "vi": "Vì sức khoẻ, tôi tập thể dục mỗi ngày.",
+        "reading": [
+          {
+            "text": "健康",
+            "furigana": "けんこう"
+          },
+          {
+            "text": "のために、"
+          },
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "運動",
+            "furigana": "うんどう"
+          },
+          {
+            "text": "します。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1134,11 +3296,50 @@
     "examples": [
       {
         "jp": "雨が降っても、出かけます。",
-        "vi": "Dù trời mưa, tôi vẫn ra ngoài."
+        "vi": "Dù trời mưa, tôi vẫn ra ngoài.",
+        "reading": [
+          {
+            "text": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "降",
+            "furigana": "ふ"
+          },
+          {
+            "text": "っても、"
+          },
+          {
+            "text": "出",
+            "furigana": "で"
+          },
+          {
+            "text": "かけます。"
+          }
+        ]
       },
       {
         "jp": "高くても、買います。",
-        "vi": "Dù đắt, tôi vẫn mua."
+        "vi": "Dù đắt, tôi vẫn mua.",
+        "reading": [
+          {
+            "text": "高",
+            "furigana": "たか"
+          },
+          {
+            "text": "くても、"
+          },
+          {
+            "text": "買",
+            "furigana": "か"
+          },
+          {
+            "text": "います。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1154,11 +3355,46 @@
     "examples": [
       {
         "jp": "もっと練習すれば、上手になります。",
-        "vi": "Nếu luyện tập nhiều hơn sẽ giỏi hơn."
+        "vi": "Nếu luyện tập nhiều hơn sẽ giỏi hơn.",
+        "reading": [
+          {
+            "text": "もっと"
+          },
+          {
+            "text": "練習",
+            "furigana": "れんしゅう"
+          },
+          {
+            "text": "すれば、"
+          },
+          {
+            "text": "上手",
+            "furigana": "じょうず"
+          },
+          {
+            "text": "になります。"
+          }
+        ]
       },
       {
         "jp": "安ければ、買います。",
-        "vi": "Nếu rẻ thì tôi sẽ mua."
+        "vi": "Nếu rẻ thì tôi sẽ mua.",
+        "reading": [
+          {
+            "text": "安",
+            "furigana": "やす"
+          },
+          {
+            "text": "ければ、"
+          },
+          {
+            "text": "買",
+            "furigana": "か"
+          },
+          {
+            "text": "います。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1174,11 +3410,50 @@
     "examples": [
       {
         "jp": "雨が降ったら、家にいます。",
-        "vi": "Nếu trời mưa, tôi ở nhà."
+        "vi": "Nếu trời mưa, tôi ở nhà.",
+        "reading": [
+          {
+            "text": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "降",
+            "furigana": "ふ"
+          },
+          {
+            "text": "ったら、"
+          },
+          {
+            "text": "家",
+            "furigana": "いえ"
+          },
+          {
+            "text": "にいます。"
+          }
+        ]
       },
       {
         "jp": "春になったら、花見をしましょう。",
-        "vi": "Khi đến mùa xuân, hãy cùng ngắm hoa anh đào nhé."
+        "vi": "Khi đến mùa xuân, hãy cùng ngắm hoa anh đào nhé.",
+        "reading": [
+          {
+            "text": "春",
+            "furigana": "はる"
+          },
+          {
+            "text": "になったら、"
+          },
+          {
+            "text": "花見",
+            "furigana": "はなみ"
+          },
+          {
+            "text": "をしましょう。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1194,11 +3469,50 @@
     "examples": [
       {
         "jp": "日本へ行くなら、京都がおすすめです。",
-        "vi": "Nếu bạn đi Nhật, tôi khuyên đến Kyoto."
+        "vi": "Nếu bạn đi Nhật, tôi khuyên đến Kyoto.",
+        "reading": [
+          {
+            "text": "日本",
+            "furigana": "にっぽん"
+          },
+          {
+            "text": "へ"
+          },
+          {
+            "text": "行",
+            "furigana": "い"
+          },
+          {
+            "text": "くなら、"
+          },
+          {
+            "text": "京都",
+            "furigana": "きょうと"
+          },
+          {
+            "text": "がおすすめです。"
+          }
+        ]
       },
       {
         "jp": "学生なら、割引があります。",
-        "vi": "Nếu là sinh viên sẽ có giảm giá."
+        "vi": "Nếu là sinh viên sẽ có giảm giá.",
+        "reading": [
+          {
+            "text": "学生",
+            "furigana": "がくせい"
+          },
+          {
+            "text": "なら、"
+          },
+          {
+            "text": "割引",
+            "furigana": "わりびき"
+          },
+          {
+            "text": "があります。"
+          }
+        ]
       }
     ],
     "week": 4
@@ -1214,11 +3528,54 @@
     "examples": [
       {
         "jp": "一生懸命勉強したのに、試験に落ちた。",
-        "vi": "Mặc dù học rất chăm chỉ vậy mà vẫn thi rớt."
+        "vi": "Mặc dù học rất chăm chỉ vậy mà vẫn thi rớt.",
+        "reading": [
+          {
+            "text": "一生懸命",
+            "furigana": "いっしょうけんめい"
+          },
+          {
+            "text": "勉強",
+            "furigana": "べんきょう"
+          },
+          {
+            "text": "したのに、"
+          },
+          {
+            "text": "試験",
+            "furigana": "しけん"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "落",
+            "furigana": "お"
+          },
+          {
+            "text": "ちた。"
+          }
+        ]
       },
       {
         "jp": "頼んだのに、来なかった。",
-        "vi": "Mặc dù đã mời mà vẫn không đến."
+        "vi": "Mặc dù đã mời mà vẫn không đến.",
+        "reading": [
+          {
+            "text": "頼",
+            "furigana": "たの"
+          },
+          {
+            "text": "んだのに、"
+          },
+          {
+            "text": "来",
+            "furigana": "こ"
+          },
+          {
+            "text": "なかった。"
+          }
+        ]
       }
     ],
     "week": 4

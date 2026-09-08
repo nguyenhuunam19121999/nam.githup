@@ -9,6 +9,7 @@ import {
   ActivityIndicator,
   Dimensions,
 } from "react-native";
+import { InteractionManager } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { getVocab } from "../assets/vocab";
 import { getGrammar } from "../assets/data_nn";
@@ -16,6 +17,9 @@ import { EXAMPLE_SENTENCES } from "../assets/sentences";
 import { ALL_INDUSTRY_VOCAB, INDUSTRY_INFO } from "../assets/data_nghanh_hoc";
 import { useAuth } from "../artifacts/mirai-jp/hooks/useAuth";
 import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
+
+const yieldToUI = (): Promise<void> =>
+  new Promise((resolve) => requestAnimationFrame(() => resolve()));
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
@@ -114,14 +118,16 @@ export default function HomeSuggestions({
   const KEY_LEVEL = scopedKey("user_custom_level");
   const KEY_MAJOR = scopedKey("user_custom_major");
 
-  const buildCards = useCallback(async () => {
+    const buildCards = useCallback(async () => {
     setLoading(true);
     setNeedsPicker(false);
+    await new Promise<void>((resolve) => {
+      InteractionManager.runAfterInteractions(() => resolve());
+    });
+
     try {
       const allVocab = (getVocab() || []) as any[];
       const allGrammar = (getGrammar() || []) as any[];
-
-      // Đọc thông tin đồng bộ
       let savedLevel = await AsyncStorage.getItem(KEY_LEVEL);
       let savedMajor = await AsyncStorage.getItem(KEY_MAJOR);
       let hasHistory = false;
@@ -175,11 +181,13 @@ export default function HomeSuggestions({
       }
 
       // Logic lọc trùng lặp chéo
+            // Logic lọc trùng lặp chéo
       const result: SuggCard[] = [];
       const seenWordKeys = new Set<string>();
       const seenSentenceTexts = new Set<string>();
 
       for (const v of words) {
+        await yieldToUI();
         const kanji = v.kanji || "";
         const hira = v.hiragana || v.hira || "";
         const uniqueWordKey = kanji || hira;

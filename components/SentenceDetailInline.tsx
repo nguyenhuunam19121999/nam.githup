@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import * as Speech from 'expo-speech';
+import FuriganaText from './FuriganaText';
 import { useColors } from '../artifacts/mirai-jp/hooks/useColors';
 
 interface SentenceDetailInlineProps {
@@ -16,6 +17,7 @@ interface SentenceDetailInlineProps {
   pattern?: string;
   level?: string;
   note?: string;
+  reading?: { text: string; furigana?: string }[];
   onClose: () => void;
 }
 
@@ -25,6 +27,7 @@ export default function SentenceDetailInline({
   pattern,
   level,
   note,
+  reading,
   onClose,
 }: SentenceDetailInlineProps) {
   const c = useColors(); // bảng màu hiện tại — tự đổi theo giờ / lựa chọn người dùng
@@ -97,9 +100,12 @@ export default function SentenceDetailInline({
           </View>
 
           <View style={[styles.jpBox, { backgroundColor: c.muted }]}>
-            {renderHighlightedSentence()}
+            {reading && reading.length > 0 ? (
+              <FuriganaText segments={reading} color={c.primary} fontSize={20} furiganaFontSize={12} />
+            ) : (
+              renderHighlightedSentence()
+            )}
           </View>
-
           <TouchableOpacity
             style={styles.listenBtn}
             onPress={speakSentence}

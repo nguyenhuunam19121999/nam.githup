@@ -8,7 +8,9 @@ import {
   TouchableOpacity,
 } from "react-native";
 import AIExplainPanel from "./AIExplainPanel";
+import FuriganaText from "./FuriganaText";
 import { useColors } from "../artifacts/mirai-jp/hooks/useColors";
+import type { ContentSegment } from "../services/aiService";
 
 interface GrammarDetailInlineProps {
   id?: string;
@@ -23,6 +25,7 @@ interface GrammarDetailInlineProps {
     sentence?: string;
     vi?: string;
     translation?: string;
+    reading?: ContentSegment[];
   }>;
   onClose: () => void;
 }
@@ -59,16 +62,6 @@ export default function GrammarDetailInline({
   };
 
   return (
-    // <View style={[styles.container, { backgroundColor: c.background }]}>
-    //   {/* Header */}
-    //   <View style={[styles.header, { backgroundColor: c.background, borderBottomColor: c.border }]}>
-    //     <TouchableOpacity onPress={onClose} style={[styles.backBtn, { backgroundColor: c.card, borderColor: c.border }]}>
-    //       <Text style={[styles.backIcon, { color: c.primary }]}>‹</Text>
-    //     </TouchableOpacity>
-    //     <Text style={[styles.headerTitle, { color: c.primary }]}>Chi tiết ngữ pháp</Text>
-    //     <View style={styles.headerPlaceholder} />
-    //   </View>
-
     <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
       {/* Pattern card */}
       <View
@@ -172,19 +165,19 @@ export default function GrammarDetailInline({
                   { backgroundColor: c.card, borderColor: c.border },
                 ]}
               >
-                <View
-                  style={[styles.exNumBadge, { backgroundColor: c.primary }]}
-                >
-                  <Text
-                    style={[styles.exNumText, { color: c.primaryForeground }]}
-                  >
+                <View style={[styles.exNumBadge, { backgroundColor: c.primary }]}>
+                  <Text style={[styles.exNumText, { color: c.primaryForeground }]}>
                     {idx + 1}
                   </Text>
                 </View>
                 <View style={styles.exContent}>
-                  <Text style={[styles.exJp, { color: c.primary }]}>{jp}</Text>
+                  {ex.reading && ex.reading.length > 0 ? (
+                    <FuriganaText segments={ex.reading} color={c.primary} fontSize={16} furiganaFontSize={10} />
+                  ) : (
+                    <Text style={[styles.exJp, { color: c.primary }]}>{jp}</Text>
+                  )}
                   {vi ? (
-                    <Text style={[styles.exVi, { color: c.mutedForeground }]}>
+                    <Text style={[styles.exVi, { color: c.mutedForeground, marginTop: 4 }]}>
                       {vi}
                     </Text>
                   ) : null}
