@@ -845,5 +845,5858 @@
     "synonyms_distinction": "Giống với 駐車証 (chủ đậu xe), nhưng 駐車券 thường là vé dùng một lần, còn 駐車証 là thẻ hoặc giấy phép dài hạn.",
     "notes": "Đọc là ちゅうしゃけん.",
     "cachedAt": "2026-08-31T01:04:15.887Z"
+  },
+  "grammar_〜にして": {
+    "meaning": [
+      {
+        "text": "Biểu hiện “"
+      },
+      {
+        "text": "にして",
+        "furigana": ""
+      },
+      {
+        "text": "” có ba nghĩa chính:"
+      },
+      {
+        "text": " 1) \"vừa là...vừa là\" (được dùng để liệt kê hai danh tính, trạng thái cùng lúc)."
+      },
+      {
+        "text": " 2) \"ngay cả...cũng\" (nhấn mạnh rằng một trường hợp cực đoan cũng áp dụng)."
+      },
+      {
+        "text": " 3) \"mới đến... mà đã\" (miêu tả một hành động xảy ra ngay sau khi một trạng thái/điều kiện xuất hiện)."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Công thức: "
+      },
+      {
+        "text": "Danh từ",
+        "furigana": ""
+      },
+      {
+        "text": "/Động từ (thể từ điển)"
+      },
+      {
+        "text": " + "
+      },
+      {
+        "text": "にして",
+        "furigana": ""
+      },
+      {
+        "text": " + câu tiếp theo."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "学生",
+            "furigana": "がくせい"
+          },
+          {
+            "text": "にして"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "会社員",
+            "furigana": "かいしゃいん"
+          },
+          {
+            "text": "でも"
+          },
+          {
+            "text": "ある"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Anh ấy vừa là sinh viên, vừa là nhân viên công ty."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "新入社員",
+            "furigana": "しんにゅうしゃいん"
+          },
+          {
+            "text": "にして"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "すでに"
+          },
+          {
+            "text": "プロジェクト",
+            "furigana": ""
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "リーダー",
+            "furigana": ""
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "任された"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Mới là nhân viên mới mà đã được giao làm trưởng dự án."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "雨",
+            "furigana": "あめ"
+          },
+          {
+            "text": "にして"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "外出",
+            "furigana": "がいしゅつ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "できなかった"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Mặc dù trời mưa, tôi đã không thể ra ngoài."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "まだ"
+          },
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "にしては"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "冷静",
+            "furigana": "れいせい"
+          },
+          {
+            "text": "だ"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Mặc dù vẫn còn là trẻ con, anh ấy lại rất bình tĩnh."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "「"
+      },
+      {
+        "text": "さえ",
+        "furigana": ""
+      },
+      {
+        "text": "」"
+      },
+      {
+        "text": " (vẫn) nhấn mạnh \"cũng\" nhưng thường dùng cho trường hợp cực đoan, không có nghĩa \"vừa là...vừa là\". "
+      },
+      {
+        "text": "「"
+      },
+      {
+        "text": "すら",
+        "furigana": ""
+      },
+      {
+        "text": "」"
+      },
+      {
+        "text": " (cũng) tương tự \"さえ\", dùng khi muốn nhấn mạnh mức độ thấp nhất, không thể thay thế cho nghĩa \"vừa là...vừa là\". "
+      },
+      {
+        "text": "「"
+      },
+      {
+        "text": "でも",
+        "furigana": ""
+      },
+      {
+        "text": "」"
+      },
+      {
+        "text": " (cũng) có thể thay thế trong một số trường hợp \"ngay cả...cũng\", nhưng không mang nghĩa \"mới... mà đã\"."
+      }
+    ],
+    "notes": [
+      {
+        "text": "「にして」 là trợ từ viết liền, thường xuất hiện trong văn viết hoặc ngữ cảnh trang trọng hơn. "
+      },
+      {
+        "text": "Không dùng sau danh động từ (suru‑verb) mà chỉ sau danh từ hoặc động từ ở dạng từ điển. "
+      },
+      {
+        "text": "Cấu trúc \"にしては\" dùng để so sánh, mang nghĩa \"đối với\"; đây là một biến thể phổ biến. "
+      },
+      {
+        "text": "Cẩn thận không nhầm lẫn với \"にしても\" (ngay cả khi), vì nghĩa và cách dùng khác nhau."
+      }
+    ],
+    "part_of_speech": "",
+    "kanji_breakdown": [],
+    "collocations": [],
+    "structure": [
+      {
+        "text": "[Danh từ]",
+        "furigana": ""
+      },
+      {
+        "text": "/"
+      },
+      {
+        "text": "[Động từ (thể từ điển)]",
+        "furigana": ""
+      },
+      {
+        "text": " + "
+      },
+      {
+        "text": "にして",
+        "furigana": ""
+      },
+      {
+        "text": " … (câu tiếp theo)"
+      },
+      {
+        "text": "\n"
+      },
+      {
+        "text": "Ví dụ (kèm furigana):"
+      },
+      {
+        "text": "学生",
+        "furigana": "がくせい"
+      },
+      {
+        "text": "にして"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "会社員",
+        "furigana": "かいしゃいん"
+      },
+      {
+        "text": "でも"
+      },
+      {
+        "text": "ある"
+      },
+      {
+        "text": "。"
+      }
+    ],
+    "conjugation": [
+      {
+        "text": "「にして」 là trợ từ cố định, không có dạng chia."
+      }
+    ],
+    "jlpt_level": "n2 - Được xếp ở mức N2 vì là cấu trúc ngữ pháp trung cấp, thường xuất hiện trong văn bản và bài thi JLPT N2.",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "stroke_count_note": [],
+    "cachedAt": "2026-09-05T03:29:57.597Z"
+  },
+  "grammar_〜や〜など": {
+    "meaning": "Diễn đạt việc liệt kê một vài ví dụ trong số nhiều thứ khác, ngụ ý danh sách không đầy đủ",
+    "usage": "Dùng để nối các danh từ (hoặc cụm danh từ) khi muốn đưa ra một vài mục tiêu tiêu biểu, cho biết còn có những mục khác chưa nêu ra",
+    "examples": [
+      {
+        "jp": "りんごやバナナなどを食べました。",
+        "vi": "Tôi đã ăn táo, chuối và những thứ khác."
+      },
+      {
+        "jp": "週末には映画や音楽などを楽しみます。",
+        "vi": "Vào cuối tuần, tôi sẽ thưởng thức phim, âm nhạc và những hoạt động khác."
+      }
+    ],
+    "synonyms_distinction": "So sánh với とか: 〜や〜など nhấn mạnh liệt kê không đầy đủ, còn とか thường dùng trong câu nói không chính thức, có thể mang nghĩa “hoặc”",
+    "notes": "",
+    "part_of_speech": "",
+    "kanji_breakdown": "",
+    "collocations": "",
+    "structure": "Noun1 や Noun2 や ... など",
+    "conjugation": "",
+    "jlpt_level": "N5",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "",
+    "cachedAt": "2026-09-05T01:02:33.666Z"
+  },
+  "kanji_亀裂": {
+    "meaning": [
+      {
+        "text": "亀裂",
+        "furigana": "きれつ"
+      },
+      {
+        "text": " là vết rạn nứt, khe hở trên bề mặt vật liệu như đá, gỗ, da, hoặc các cấu trúc xây dựng. Từ này nhấn mạnh sự chia rẽ, hở ra của một khối nguyên khối."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Đây là danh từ chỉ hiện tượng vật lý của việc bề mặt bị chia rẽ, thường đi kèm với các động từ như "
+      },
+      {
+        "text": "入る",
+        "furigana": "はいる"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "拡大する",
+        "furigana": "かくだいする"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "走る",
+        "furigana": "はしる"
+      },
+      {
+        "text": "... hoặc các trạng từ như "
+      },
+      {
+        "text": "大きく",
+        "furigana": "おおきく"
+      },
+      {
+        "text": "."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "壁に",
+            "furigana": "かべに"
+          },
+          {
+            "text": "亀裂",
+            "furigana": "きれつ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "入っている",
+            "furigana": "はいっている"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Bức tường có vết rạn nứt."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "ガラスの",
+            "furigana": "がらすの"
+          },
+          {
+            "text": "亀裂",
+            "furigana": "きれつ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "拡大した",
+            "furigana": "かくだいした"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Vết nứt trên kính đã lan rộng."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "地震で",
+            "furigana": "じしんで"
+          },
+          {
+            "text": "道路に",
+            "furigana": "どうろに"
+          },
+          {
+            "text": "大きな",
+            "furigana": "おおきな"
+          },
+          {
+            "text": "亀裂",
+            "furigana": "きれつ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "できた",
+            "furigana": "できた"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Động đất đã tạo ra vết rạn lớn trên con đường."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼の",
+            "furigana": "かれの"
+          },
+          {
+            "text": "心に",
+            "furigana": "こころに"
+          },
+          {
+            "text": "亀裂",
+            "furigana": "きれつ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "生じた",
+            "furigana": "しょうじた"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Trong trái tim anh ấy đã xuất hiện một vết rạn nứt."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "古い",
+            "furigana": "ふるい"
+          },
+          {
+            "text": "陶器に",
+            "furigana": "とうきに"
+          },
+          {
+            "text": "細かな",
+            "furigana": "こまかな"
+          },
+          {
+            "text": "亀裂",
+            "furigana": "きれつ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "走っている",
+            "furigana": "はしっている"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Chiếc gốm cổ có những vết nứt mảnh đang lan rộng."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "割れ目",
+        "furigana": "われめ"
+      },
+      {
+        "text": " — dùng để chỉ khe hở, rãnh sâu, thường mang nghĩa vật lý mạnh mẽ hơn, thường xuất hiện trong ngữ cảnh \"vết rách\" hoặc \"đứt\"."
+      },
+      {
+        "text": "裂け目",
+        "furigana": "さけめ"
+      },
+      {
+        "text": " — nhấn mạnh sự rách, tách ra thành hai phần, thường dùng cho vải, giấy, hoặc các vật liệu mềm, không mang tính \"điểm nứt\" như 亀裂."
+      }
+    ],
+    "cachedAt": "2026-09-05T03:28:25.700Z"
+  },
+  "kanji_交換": {
+    "meaning": "交換（こうかん）: danh từ và động từ する (交換する) chỉ hành động trao đổi, đổi chác giữa các bên; dùng cho thông tin, hàng hoá, vị trí, tiền tệ, ý tưởng, …; còn có nghĩa “đổi chác, thay thế lẫn nhau, thanh toán bù trừ”.",
+    "usage": "Dùng như danh từ: 交換（こうかん）は重要（じゅうよう）だ。 Dùng với する: 情報（じょうほう）を交換（こうかん）する。 Dùng ở dạng 交換できる (có thể trao đổi) hoặc 交換したくない (không muốn đổi).",
+    "examples": [
+      {
+        "jp": "私（わたし）は友達（ともだち）と電話（でんわ）で情報（じょうほう）を交換（こうかん）した。",
+        "vi": "Tôi đã trao đổi thông tin với bạn qua điện thoại."
+      },
+      {
+        "jp": "会社（かいしゃ）は海外（かいがい）の企業（きぎょう）と製品（せいひん）を交換（こうかん）している。",
+        "vi": "Công ty đang trao đổi sản phẩm với các doanh nghiệp ở nước ngoài."
+      },
+      {
+        "jp": "図書（としょ）館（かん）で本（ほん）を交換（こうかん）できるコーナーがある。",
+        "vi": "Thư viện có góc cho phép trao đổi sách."
+      },
+      {
+        "jp": "彼（かれ）は古（ふる）い切手（きって）を新（あたら）しい切手（きって）と交換（こうかん）した。",
+        "vi": "Anh ấy đã đổi tem cũ lấy tem mới."
+      },
+      {
+        "jp": "為替（かわせ）レートで通貨（つうか）を交換（こうかん）し、残高（ざんだか）を調整（ちょうせい）した。",
+        "vi": "Đổi tiền tệ theo tỷ giá và điều chỉnh số dư."
+      }
+    ],
+    "synonyms_distinction": "取引（とりひき）: nhấn mạnh quá trình mua‑bán, thương vụ, không nhất thiết phải là trao đổi lẫn nhau. 交換（こうかん）: nhấn mạnh sự đổi chác trực tiếp, có tính tương hỗ. 入れ替え（いれかえ）: chỉ việc thay thế, hoán đổi vị trí, không nhất thiết có giá trị trao đổi. 売買（ばいばい）: tập trung vào việc bán và mua, không nhấn mạnh việc cả hai bên đều nhận được gì.",
+    "notes": "Thường dùng trong ngữ cảnh trang trọng hoặc trung tính; không có dạng lịch sự riêng vì đi kèm với する. Lỗi thường gặp: nhầm “交わす（かわす）” (đối đáp, trao đổi lời nói) với “交換する”. Cấu trúc “交換できる” (có thể trao đổi) thường dùng trong câu khả năng.",
+    "component_analysis": "交（こう）: bộ 手（て） (4 nét) + 亜（あ） (6 nét) tổng 10 nét; ý tượng: hai tay giao nhau, biểu thị việc gặp gỡ, giao lưu. Onyomi こう; Kunyomi まじわる/まじえる; Hán Việt: GIAO. 換（かん）: bộ 木（き） (4 nét) + 奏（そう） (7 nét) tổng 11 nét; ý tượng: gỗ (木) được thay đổi, thể hiện việc đổi mới. Onyomi かん; Kunyomi かえる; Hán Việt: HÒAN.",
+    "similar_kanji": "交（こう）と似（に）ている漢字は港（こう）― có bộ 氵 thay vì 手, nghĩa “cảng”; 降（こう）― có bộ 雨, nghĩa “rơi xuống”; 効（こう）― có bộ 力, nghĩa “hiệu quả”. 換（かん）と似（に）ている漢字は環（かん）― bộ 囗, nghĩa “vòng”; 寒（かん）― bộ 宀, nghĩa “lạnh”; 感（かん）― bộ 心, nghĩa “cảm giác”.",
+    "stroke_count_note": "交（こう）: Hán Việt GIAO, Onyomi こう, Kunyomi まじわる/まじえる, bộ 手 (4 nét), tổng 10 nét. 換（かん）: Hán Việt HÒAN, Onyomi かん, Kunyomi かえる, bộ 木 (4 nét), tổng 11 nét.",
+    "cachedAt": "2026-09-05T02:01:11.832Z"
+  },
+  "kanji_交番": {
+    "meaning": "đồn cảnh sát khu phố; police box (koban); nơi có cảnh sát tuần tra và cung cấp thông tin cho dân cư",
+    "usage": "được dùng để chỉ địa điểm của trạm cảnh sát địa phương; thường xuất hiện trong câu chỉ hành động đến/đi qua trạm cảnh sát; dùng trong các câu hỏi về vị trí hoặc chỉ dẫn",
+    "examples": [
+      {
+        "jp": "交番（こうばん）へ行（い）くと、道（みち）を尋（たず）ねられる。",
+        "vi": "Khi đến đồn cảnh sát, người ta sẽ hỏi đường."
+      },
+      {
+        "jp": "夜（よる）遅（おそ）くに交番（こうばん）で落（お）ちた財布（さいふ）を届け（とど）けた。",
+        "vi": "Tôi đã giao lại ví mất ở đồn cảnh sát vào đêm khuya."
+      },
+      {
+        "jp": "近所（きんじょ）の子供（こども）たちが交番（こうばん）で安全（あんぜん）教室（きょうしつ）を受（う）けた。",
+        "vi": "Các trẻ trong khu phố đã tham gia lớp học an toàn tại đồn cảnh sát."
+      },
+      {
+        "jp": "交番（こうばん）の警官（けいかん）に事故（じこ）の状況（じょうきょう）を説明（せつめい）した。",
+        "vi": "Tôi đã giải thích tình huống tai nạn cho cảnh sát tại đồn."
+      },
+      {
+        "jp": "旅行（りょこう）中に交番（こうばん）の地図（ちず）を借（か）りて、道（みち）を確認（かくにん）した。",
+        "vi": "Trong chuyến đi, tôi mượn bản đồ tại đồn cảnh sát để xác định đường đi."
+      }
+    ],
+    "synonyms_distinction": "警察署（けいさつしょ）: trụ sở lớn, chịu trách nhiệm quản lý nhiều khu vực, ít dùng cho trạm nhỏ; 派出所（はしゅっしょ）: từ Hán Việt 'phái xuất sở', cũng chỉ đồn cảnh sát nhưng ít dùng trong tiếng Nhật hiện đại, thường xuất hiện trong văn bản pháp lý.",
+    "notes": "từ 交番 thường dùng trong giao tiếp hàng ngày, mức độ lịch sự trung bình; không quá trang trọng như 警察署, cũng không quá thân mật. Thường xuất hiện trong chỉ dẫn địa điểm, câu hỏi về vị trí hoặc mô tả hoạt động của cảnh sát địa phương.",
+    "component_analysis": "交（こう）: bộ thủ 亠（とう） (đầu nón) + 口（くち） (miệng) + một nét ngang ở giữa; ý nghĩa tượng trưng cho việc giao nhau, trao đổi; Hán Việt: GIAO, Onyomi: こう, Kunyomi: まじわる. 番（ばん）: bộ thủ 田（た） (cánh đồng) + 半（はん） (một nửa); ý nghĩa tượng trưng cho việc luân chuyển, thay phiên; Hán Việt: BÀN, Onyomi: はん, Kunyomi: つがい. Hai kanji kết hợp lại tạo nghĩa \"đồn cảnh sát luân chuyển, nơi giao tiếp giữa cảnh sát và dân cư\".",
+    "similar_kanji": "交（こう）—光（こう）: cả hai có onyomi こう, nhưng 光（ひかり）có bộ thủ 火 (lửa) và nghĩa \"ánh sáng\"; 行（こう）: có bộ thủ 彳 (đi bộ) và nghĩa \"đi, hành trình\". 番（ばん）—板（いた）: cả hai có thành phần 半, nhưng 板（いた）có bộ thủ 木 (cây) và nghĩa \"bảng, tấm\"; 反（はん）: có bộ thủ 反, nghĩa \"ngược lại, phản\" nhưng không có thành phần 半.",
+    "stroke_count_note": "交（こう）: Hán Việt GIAO, Onyomi こう, Kunyomi まじわる, bộ 亠 (2 nét), tổng 6 nét; 番（ばん）: Hán Việt BÀN, Onyomi はん, Kunyomi つがい, bộ 田 (5 nét), tổng 10 nét",
+    "cachedAt": "2026-09-05T02:00:55.538Z"
+  },
+  "kanji_交通": {
+    "meaning": "giao thông, vận tải; chỉ hệ thống di chuyển người, vật, phương tiện trên các con đường, đường sắt, biển, không gian…; còn dùng để chỉ hoạt động liên quan đến việc di chuyển, lưu thông trong xã hội",
+    "usage": "dùng như danh từ chung cho mọi hình thức di chuyển; thường đi kèm với các danh từ chỉ loại phương tiện, hiện tượng hoặc biện pháp (ví dụ: 公共交通、交通渋滞、交通事故)；có thể làm vị ngữ khi kết hợp với động từ する (交通する) trong tiếng nói hiện đại, nhưng hiếm dùng",
+    "examples": [
+      {
+        "jp": "交（こう）通（つう）の渋滞（じゅうたい）が原因（げんいん）で、会議（かいぎ）に遅（おく）れました。",
+        "vi": "Do tắc nghẽn giao thông, tôi đã trễ cuộc họp."
+      },
+      {
+        "jp": "新（しん）幹線（かんせん）が完成（かんせい）すると、地域（ちいき）の交通（こうつう）が便利（べんり）になります。",
+        "vi": "Khi tuyến đường chính mới hoàn thành, giao thông trong khu vực sẽ trở nên tiện lợi."
+      },
+      {
+        "jp": "子供（こども）たちは安全（あんぜん）な交（こう）通（つう）ルールを学（まな）んでいます。",
+        "vi": "Trẻ em đang học các quy tắc giao thông an toàn."
+      },
+      {
+        "jp": "物流（ぶつりゅう）と交通（こうつう）は密接（みっせつ）に関係（かんけい）しています。",
+        "vi": "Logistics và giao thông có mối quan hệ mật thiết."
+      }
+    ],
+    "synonyms_distinction": "輸送（ゆそう）: tập trung vào việc chuyển hàng hoá, hàng tải từ nơi này sang nơi khác, nhấn mạnh quá trình vận chuyển; vận tải (運搬うんぱん): thường dùng cho việc mang, chuyển vật phẩm trong phạm vi ngắn, thường là tay hoặc xe tải; 通行（つうこう）: chỉ hành động đi lại, qua lại trên đường, nhấn mạnh quyền hoặc hành vi đi qua, không bao gồm toàn bộ hệ thống giao thông",
+    "notes": "từ này trung tính, dùng trong cả văn viết và nói; phổ biến trong báo chí, tài liệu kỹ thuật; không có dạng lịch sự hay suồng sã riêng; lỗi thường gặp là nhầm '交通' với '通行' khi muốn nói quyền đi lại",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "交（こう）(Hán Việt: GIAO): Onyomi こう (例: 交流（こうりゅう）); Kunyomi まじわる/まじえる (例: 交わす（かわす）); Bộ thủ 亠 (2 nét); Tổng 6 nét. 通（つう）(Hán Việt: THONG): Onyomi つう (例: 通信（つうしん）); Kunyomi とおる/とおす (例: 通す（とおす）); Bộ thủ 辶 (3 nét); Tổng 10 nét.",
+    "collocations": "交通事故（こうつうじこ）、公共交通（こうきょうこうつう）、交通渋滞（こうつうじゅうたい）、交通網（こうつうもう）、交通機関（こうつうきかん）、交通安全（こうつうあんぜん）、交通費（こうつうひ）、道路交通（どうろこうつう）、交通規制（こうつうきせい）、交通情報（こうつうじょうほう）",
+    "stroke_count_note": "交（こう）: Hán Việt GIAO, Onyomi こう, Kunyomi まじわる/まじえる, bộ thủ 亠 (2 nét), tổng 6 nét. 通（つう）: Hán Việt THONG, Onyomi つう, Kunyomi とおる/とおす, bộ thủ 辶 (3 nét), tổng 10 nét",
+    "cachedAt": "2026-09-05T02:01:48.870Z"
+  },
+  "kanji_傾向": {
+    "meaning": "sự khuynh hướng, xu hướng, tính chất hay thói quen có xu hướng xuất hiện trong một người, sự việc hoặc hiện tượng nào đó",
+    "usage": "Dùng để chỉ một xu hướng chung, thường đi kèm với cấu trúc 「～の傾向がある」 hoặc 「～の傾向を示す」 để mô tả tính chất hay thói quen của đối tượng",
+    "examples": [
+      {
+        "jp": "かれはちこくするけいこうがある。",
+        "vi": "Anh ấy có khuynh hướng muộn giờ."
+      },
+      {
+        "jp": "さいきんのわかものはすまーとふぉんにいぞんするけいこうがつよい。",
+        "vi": "Giới trẻ hiện nay có xu hướng phụ thuộc vào điện thoại thông minh mạnh mẽ."
+      }
+    ],
+    "synonyms_distinction": "Có thể thay thế bằng 「流れ」「傾向性」「趨勢」, nhưng 「傾向」 nhấn mạnh tính chất, thói quen cá nhân hoặc nhóm, thường dùng với 「がある」; còn 「流れ」 nhấn mạnh sự chảy, diễn biến thời gian; 「趨勢」 thường dùng trong ngữ cảnh trang trọng, báo cáo thống kê.",
+    "notes": "",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "傾: bộ \"人\" (nhân) + 部首 \"京\" (kinh) mang nghĩa \"nghiêng, hướng về phía\"; 向: bộ \"口\" (miệng) + 部首 \"夂\" (trình), nghĩa gốc là \"hướng, phía\" nên kết hợp lại nghĩa là \"hướng nghiêng, xu hướng\".",
+    "collocations": "傾向がある, 傾向を示す, 傾向的に, ～の傾向, 傾向として, 傾向分析",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "傾 có 15 nét, bao gồm bộ \"人\" (2 nét) và bộ \"京\" (13 nét); 向 có 6 nét, gồm bộ \"口\" (3 nét) và bộ \"夂\" (3 nét).",
+    "cachedAt": "2026-09-04T01:00:37.756Z"
+  },
+  "kanji_家内": {
+    "meaning": [
+      {
+        "text": "家内",
+        "furigana": "かない"
+      },
+      {
+        "text": " là danh từ chỉ \"vợ (của tôi)\". Ngoài ra, từ này còn có nghĩa chung là \"người trong gia đình, vợ/chồng\" nhưng trong ngữ cảnh thông thường ở Nhật, nó chủ yếu dùng để nói về vợ của người nói."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Thường được dùng sau các đại từ sở hữu như \"私の\" hoặc \"うちの\" để chỉ vợ của mình, mang tính thân mật, không quá trang trọng."
+      },
+      {
+        "text": "Trong môi trường công sở, người ta thường dùng \"家内\" khi nói về vợ trong các cuộc hội thoại nhẹ nhàng, ví dụ \"家内が...\"."
+      },
+      {
+        "text": "Không nên dùng trong các tài liệu chính thức hay khi nói chuyện với người không quen, nơi cần dùng \"妻\" hoặc \"奥さん\" để lịch sự hơn."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "家内",
+            "furigana": "かない"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "料理",
+            "furigana": "りょうり"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "上手",
+            "furigana": "じょうず"
+          },
+          {
+            "text": "です"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Vợ tôi giỏi nấu ăn."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "家内",
+            "furigana": "かない"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "誕生日",
+            "furigana": "たんじょうび"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "プレゼント"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "あげました"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Tôi đã tặng quà cho vợ nhân ngày sinh nhật của cô ấy."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "家内",
+            "furigana": "かない"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "病院",
+            "furigana": "びょういん"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "行く",
+            "furigana": "いく"
+          },
+          {
+            "text": "ので"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "も"
+          },
+          {
+            "text": "付き添い",
+            "furigana": "つきそい"
+          },
+          {
+            "text": "ます"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Vợ tôi đi bệnh viện, vì vậy tôi cũng sẽ đi kèm."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "飲み会",
+            "furigana": "のみかい"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "家内",
+            "furigana": "かない"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "連れて行った"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Tôi đã đưa vợ đến buổi tiệc uống rượu của công ty."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "家内",
+            "furigana": "かない"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "仕事",
+            "furigana": "しごと"
+          }
+        ]
+      }
+    ],
+    "cachedAt": "2026-09-07T01:06:05.019Z"
+  },
+  "kanji_差し出す": {
+    "meaning": "差し出す（さしだす）は、手や物・意志・感情などを相手に向かって伸ばす・提供するという意味の動詞です。主に「手を差し出す＝握手や助けを求めて手を伸ばす」「書類を差し出す＝相手に渡す」「敬意を差し出す＝尊敬の意を示す」など、物理的・抽象的に「差し出す」対象を提示・提供する場面で使われます。",
+    "usage": "1. 手（て）を差し出す：握手や助けを求めて手を伸ばす。2. 書類（しょるい）を差し出す：公式に書類や証明書を手渡す。3. 敬意（けいい）を差し出す：相手に対して尊敬や感謝の意を示す。4. プレゼント（ぷれぜんと）を差し出す：贈り物を手渡す。5. 申し出（もうしで）を差し出す：提案や申し込みを行う。",
+    "examples": [
+      {
+        "jp": "彼（かれ）は手（て）を差（さ）し出（だ）すと、助（たす）けを求（もと）めた。",
+        "vi": "Anh ấy đưa tay ra và cầu xin giúp đỡ."
+      },
+      {
+        "jp": "上司（じょうし）は部下（ぶか）に書類（しょるい）を差（さ）し出（だ）すように指示（しじ）した。",
+        "vi": "Sếp chỉ đạo cấp dưới giao nộp tài liệu."
+      },
+      {
+        "jp": "子供（こども）は笑顔（えがお）でプレゼント（ぷれぜんと）を差（さ）し出（だ）すと、皆（みな）は喜（よろこ）んだ。",
+        "vi": "Khi đứa trẻ đưa món quà với nụ cười, mọi người đều vui mừng."
+      },
+      {
+        "jp": "彼女（かのじょ）は礼（れい）儀（ぎ）正（ただ）しく、敬（けい）意（い）を差（さ）し出（だ）すためにお辞（じ）儀（ぎ）した。",
+        "vi": "Cô ấy cúi đầu lễ phép để thể hiện sự kính trọng."
+      }
+    ],
+    "cachedAt": "2026-09-05T02:02:44.623Z"
+  },
+  "kanji_是非を問う": {
+    "meaning": [
+      {
+        "text": "Cụm động từ "
+      },
+      {
+        "text": "是非",
+        "furigana": "ぜひ"
+      },
+      {
+        "text": "を"
+      },
+      {
+        "text": "問う",
+        "furigana": "とう"
+      },
+      {
+        "text": " có nghĩa là “hỏi về việc có nên hay không, hỏi về ưu nhược điểm, hỏi xem điều gì đúng sai”."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng để hỏi ý kiến, quyết định về một vấn đề, thường đi kèm với các câu hỏi “có nên…? hay không?”. "
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "是非",
+            "furigana": "ぜひ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "問う",
+            "furigana": "とう"
+          },
+          {
+            "text": "た"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Anh ấy đã hỏi tôi có nên đồng ý hay không."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "その",
+            "furigana": ""
+          },
+          {
+            "text": "計画",
+            "furigana": "けいかく"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "是非",
+            "furigana": "ぜひ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "問う",
+            "furigana": "とう"
+          },
+          {
+            "text": "べき",
+            "furigana": "べき"
+          },
+          {
+            "text": "だ"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Chúng ta nên đặt câu hỏi về tính khả thi của kế hoạch đó."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "社長",
+            "furigana": "しゃちょう"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "新製品",
+            "furigana": "しんせいひん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "導入",
+            "furigana": "どうにゅう"
+          },
+          {
+            "text": "是非",
+            "furigana": "ぜひ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "問う",
+            "furigana": "とう"
+          },
+          {
+            "text": "会議",
+            "furigana": "かいぎ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "開い",
+            "furigana": "ひら"
+          },
+          {
+            "text": "た"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Giám đốc đã tổ chức một cuộc họp để hỏi về việc có nên đưa sản phẩm mới vào thị trường hay không."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "あなた",
+            "furigana": "あなた"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "是非",
+            "furigana": "ぜひ"
+          },
+          {
+            "text": "か"
+          },
+          {
+            "text": "否",
+            "furigana": "ひ"
+          },
+          {
+            "text": "か"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "決め",
+            "furigana": "きめ"
+          },
+          {
+            "text": "て"
+          },
+          {
+            "text": "ください"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Bạn hãy quyết định có hay không."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "友人",
+            "furigana": "ゆうじん"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "是非",
+            "furigana": "ぜひ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "聞く",
+            "furigana": "きく"
+          },
+          {
+            "text": "のは"
+          },
+          {
+            "text": "失礼",
+            "furigana": "しつれい"
+          },
+          {
+            "text": "です"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Việc hỏi ý kiến của bạn bè có thể là không lịch sự."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "尋ねる",
+        "furigana": "たずねる"
+      },
+      {
+        "text": " — Nhấn mạnh việc tìm kiếm thông tin chi tiết, thường dùng cho câu hỏi cụ thể, không nhất thiết là hỏi về đúng sai."
+      },
+      {
+        "text": "聞く",
+        "furigana": "きく"
+      },
+      {
+        "text": " — Chủ yếu là nghe hoặc hỏi ý kiến chung, ít mang ý nghĩa đánh giá đúng sai như “是非”。"
+      },
+      {
+        "text": "問う",
+        "furigana": "とう"
+      },
+      {
+        "text": " — Nhắm vào việc đưa ra câu hỏi có tính đánh giá, quyết định “có nên hay không”."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Cụm này thường xuất hiện trong văn viết trang trọng, báo chí, học thuật."
+      },
+      {
+        "text": "Không dùng trong giao tiếp thân mật; thay vào đó thường dùng “聞く”. "
+      },
+      {
+        "text": "Lỗi thường gặp: thay “是非を聞く” thành “是非を問う” khi muốn diễn đạt “hỏi ý kiến” thông thường, gây nhầm lẫn ngữ cảnh. "
+      }
+    ],
+    "part_of_speech": "động từ",
+    "kanji_breakdown": [
+      {
+        "text": "是",
+        "furigana": "ぜ"
+      },
+      {
+        "text": " — Hán Việt: THỈ."
+      },
+      {
+        "text": "非",
+        "furigana": "ひ"
+      },
+      {
+        "text": " — Hán Việt: PHI."
+      },
+      {
+        "text": "問",
+        "furigana": "もん"
+      },
+      {
+        "text": " — Hán Việt: VẤN."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "是非",
+        "furigana": "ぜひ"
+      },
+      {
+        "text": "とも"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "是非",
+        "furigana": "ぜひ"
+      },
+      {
+        "text": "か否か"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "是非の",
+        "furigana": "ぜひの"
+      },
+      {
+        "text": "意見"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "是非",
+        "furigana": "ぜひ"
+      },
+      {
+        "text": "を問う"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "是非の",
+        "furigana": "ぜひの"
+      },
+      {
+        "text": "判断"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "是非について"
+      }
+    ],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "stroke_count_note": [
+      {
+        "text": "是",
+        "furigana": "ぜ"
+      },
+      {
+        "text": ": Hán Việt THỈ; "
+      },
+      {
+        "text": "非",
+        "furigana": "ひ"
+      },
+      {
+        "text": ": Hán Việt PHI; "
+      },
+      {
+        "text": "問",
+        "furigana": "もん"
+      },
+      {
+        "text": ": Hán Việt VẤN."
+      }
+    ],
+    "cachedAt": "2026-09-05T03:24:23.249Z"
+  },
+  "kanji_神様": {
+    "meaning": [
+      {
+        "text": "神様",
+        "furigana": "かみさま"
+      },
+      {
+        "text": " là danh từ chỉ vị thần, một thực thể thần thánh trong tín ngưỡng Nhật Bản, thường được tôn kính như một đấng tối cao."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Trong tiếng Nhật, "
+      },
+      {
+        "text": "神様",
+        "furigana": "かみさま"
+      },
+      {
+        "text": " thường dùng như một danh từ tôn kính, đi kèm các trợ từ như は, が, に để chỉ đối tượng được thờ phụng hoặc cầu nguyện."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "神様",
+            "furigana": "かみさま"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "私たち"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "見守っ",
+            "furigana": "みまもっ"
+          },
+          {
+            "text": "て"
+          },
+          {
+            "text": "くれる"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Các vị thần luôn dõi theo chúng ta."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "神様",
+            "furigana": "かみさま"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "祈り",
+            "furigana": "いのり"
+          },
+          {
+            "text": "ます"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Tôi cầu nguyện với các vị thần."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "神様",
+            "furigana": "かみさま"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "降臨",
+            "furigana": "こうりん"
+          },
+          {
+            "text": "した"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Các vị thần đã hạ xuống."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "神様",
+            "furigana": "かみさま"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "御加護",
+            "furigana": "ごかご"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "願う"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Mong được sự bảo hộ của các vị thần."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "神様",
+            "furigana": "かみさま"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "自然",
+            "furigana": "しぜん"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "調和",
+            "furigana": "ちょうわ"
+          },
+          {
+            "text": "して"
+          },
+          {
+            "text": "いる"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Các vị thần tồn tại hòa hợp với tự nhiên."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "神",
+        "furigana": "かみ"
+      },
+      {
+        "text": " – Danh từ chỉ một vị thần cụ thể, không có tính lịch sự cao như "
+      },
+      {
+        "text": "神様",
+        "furigana": "かみさま"
+      },
+      {
+        "text": "."
+      },
+      {
+        "text": "神々",
+        "furigana": "かみがみ"
+      },
+      {
+        "text": " – Dạng số nhiều, chỉ nhiều vị thần; thường dùng trong ngữ cảnh truyền thuyết hoặc thần thoại."
+      },
+      {
+        "text": "御神様",
+        "furigana": "おかみさま"
+      },
+      {
+        "text": " – Cách nói rất kính trọng, thường dùng khi đề cập đến thần linh trong các nghi lễ, đền thờ."
+      }
+    ],
+    "notes": [
+      {
+        "text": "「神様」 thường xuất hiện trong ngữ cảnh tôn giáo, truyền thuyết, hoặc trong các câu chuyện thiếu nhi. "
+      },
+      {
+        "text": "Có tính lịch sự, thường dùng khi nói về thần linh một cách trang trọng; không nên dùng trong giao tiếp thông thường để chỉ người có năng lực vượt trội. "
+      },
+      {
+        "text": "Trong tiếng nói trẻ con, \"神様\" có thể dùng như một cách gọi thân thiện cho người lớn hoặc người được ngưỡng mộ."
+      }
+    ],
+    "part_of_speech": "",
+    "kanji_breakdown": [],
+    "collocations": [],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [
+      {
+        "text": "神",
+        "furigana": "かみ"
+      },
+      {
+        "text": " — Thành phần: Radical \"示\" (bộ \"示\", 9 nét) ở bên trái biểu thị ý nghĩa liên quan tới nghi lễ, tôn giáo; phần bên phải là \"申\" (âm Hán Việt: THIỆN, nghĩa gốc: nói, xin). Kết hợp tạo nên ý nghĩa \"thần linh, linh thiêng\"."
+      },
+      {
+        "text": "様",
+        "furigana": "さま"
+      },
+      {
+        "text": " — Thành phần: Radical \"羊\" (bộ \"羊\", 6 nét) ở trên biểu thị “cừu” hoặc “đàn gia súc”, thường liên quan tới sự thanh cao, trang nghiêm; phần dưới là \"𡗗\" (âm Hán Việt: DƯỠNG, nghĩa gốc: nuôi dưỡng). Tổng thể biểu đạt sự trang nghiêm, tôn kính."
+      }
+    ],
+    "similar_kanji": [
+      {
+        "text": "祈",
+        "furigana": "いのむ"
+      },
+      {
+        "text": " – Onyomi: キ, Kunyomi: いのむ. Khác biệt: có radical \"示\" giống \"神\" nhưng thêm bộ \"斤\" ở bên phải, nghĩa là cầu nguyện, không mang nghĩa tổng thể \"thần linh\"."
+      },
+      {
+        "text": "禅",
+        "furigana": "ぜん"
+      },
+      {
+        "text": " – Onyomi: ゼン, Kunyomi: しん. Khác biệt: radical \"示\" ở trái, nhưng bên phải là \"𦰩\" (bộ \"⺾\" cây) mang nghĩa thiền định, không có yếu tố \"申\" như \"神\"; nét số và cấu trúc khác nhau."
+      }
+    ],
+    "stroke_count_note": [
+      {
+        "text": "神",
+        "furigana": "かみ"
+      },
+      {
+        "text": " : Hán Việt: THIÊN, Onyomi: シン, Kunyomi: かみ, bộ 示 (9 nét), tổng 9 nét; "
+      },
+      {
+        "text": "様",
+        "furigana": "さま"
+      },
+      {
+        "text": " : Hán Việt: DƯỠNG, Onyomi: ヨウ, Kunyomi: さま, bộ 羊 (6 nét), tổng 11 nét."
+      }
+    ],
+    "cachedAt": "2026-09-05T02:37:14.388Z"
+  },
+  "kanji_神経": {
+    "meaning": [
+      {
+        "text": "Kanji "
+      },
+      {
+        "text": "神経",
+        "furigana": "しんけい"
+      },
+      {
+        "text": " (Hán Việt: THẦN KINH) mang nghĩa \"hệ thần kinh\"; dùng để chỉ tính nhạy cảm, dễ bị kích động."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Thường xuất hiện trong các cụm như "
+      },
+      {
+        "text": "神経質",
+        "furigana": "しんけいしつ"
+      },
+      {
+        "text": " (tính cách nhạy cảm), "
+      },
+      {
+        "text": "神経痛",
+        "furigana": "しんけいつう"
+      },
+      {
+        "text": " (đau thần kinh), và trong các diễn đạt liên quan tới sức khỏe thần kinh."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "神経",
+            "furigana": "しんけい"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "敏感",
+            "furigana": "びんかん"
+          },
+          {
+            "text": "なので、"
+          },
+          {
+            "text": "光",
+            "furigana": "ひかり"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "少し",
+            "furigana": "すこし"
+          },
+          {
+            "text": "だけ"
+          },
+          {
+            "text": "当たる",
+            "furigana": "あたる"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "目",
+            "furigana": "め"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "痛い",
+            "furigana": "いたい"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Vì thần kinh nhạy cảm, chỉ có chút ánh sáng chiếu vào cũng làm mắt đau."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "神経",
+            "furigana": "しんけい"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "細い",
+            "furigana": "ほそい"
+          },
+          {
+            "text": "ので、"
+          },
+          {
+            "text": "ちょっとしたこと",
+            "furigana": "ちょっとしたこと"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "怒ってしまう",
+            "furigana": "おこってしまう"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Anh ấy có thần kinh yếu, nên chỉ một chuyện nhỏ cũng khiến anh nổi giận."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "神経",
+            "furigana": "しんけい"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "鍛える",
+            "furigana": "きたえる"
+          },
+          {
+            "text": "ために、"
+          },
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "ランニング",
+            "furigana": ""
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "する",
+            "furigana": "する"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Để rèn luyện thần kinh, mỗi ngày chạy bộ."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "敏感",
+        "furigana": "びんかん"
+      },
+      {
+        "text": " (có nghĩa gần giống \"nhạy cảm\" nhưng thường dùng cho cảm giác, không nhấn mạnh tính \"thần kinh\"). "
+      },
+      {
+        "text": "神経質",
+        "furigana": "しんけいしつ"
+      },
+      {
+        "text": " (nghĩa là \"tính cách quá nhạy cảm, lo lắng\"; mức độ mạnh hơn so với \"神経が敏感\")."
+      }
+    ],
+    "notes": [
+      {
+        "text": "\"神経\" là danh từ, có thể dùng trong ngữ cảnh y học hoặc ẩn dụ để chỉ tính nhạy cảm. "
+      },
+      {
+        "text": "Trong giao tiếp hàng ngày, \"神経が...\" thường đi kèm với tính từ \"敏感\" hoặc \"細い\" để mô tả tính cách. "
+      },
+      {
+        "text": "Tránh dùng \"神経\" một mình để chỉ tính cách mà không có bổ ngữ, vì có thể gây nhầm lẫn với nghĩa y học."
+      }
+    ],
+    "part_of_speech": "",
+    "kanji_breakdown": [],
+    "collocations": [],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [
+      {
+        "text": "神",
+        "furigana": "しん"
+      },
+      {
+        "text": " (bộ 示 (しめす) 4 nét + 申 (しん) 4 nét): 示 biểu thị sự truyền đạt, lời cầu nguyện; 申 là hình của người cúi đầu, biểu thị việc truyền tin. Kết hợp tạo nên ý nghĩa \"thần linh, thần thánh\"."
+      },
+      {
+        "text": "経",
+        "furigana": "けい"
+      },
+      {
+        "text": " (bộ 糸 (いと) 6 nét + 𠂉 (cũng gọi là 井) 4 nét): 糸 đại diện cho sợi, dây; 井 biểu thị lỗ, luồng. Tổng hợp mang ý nghĩa \"đường dây truyền tải, dòng chảy\" -> liên quan tới hệ thống thần kinh."
+      }
+    ],
+    "similar_kanji": [
+      {
+        "text": "祈",
+        "furigana": "き"
+      },
+      {
+        "text": " (có cấu trúc giống 神 nhưng không có bộ 示, nghĩa là \"cầu nguyện\"; khác biệt ở nghĩa và cách dùng)."
+      },
+      {
+        "text": "継",
+        "furigana": "けい"
+      },
+      {
+        "text": " (cũng có bộ 糸 nhưng phần trong khác, nghĩa là \"tiếp nối\"; không liên quan tới thần kinh)."
+      }
+    ],
+    "stroke_count_note": [
+      {
+        "text": "神",
+        "furigana": "しん"
+      }
+    ],
+    "cachedAt": "2026-09-05T02:33:48.568Z"
+  },
+  "kanji_窓口": {
+    "meaning": [
+      {
+        "text": "窓口",
+        "furigana": "まどぐち"
+      },
+      {
+        "text": " là "
+      },
+      {
+        "text": "cửa bán vé"
+      },
+      {
+        "text": " hoặc "
+      },
+      {
+        "text": "quầy thông tin"
+      },
+      {
+        "text": " tại "
+      },
+      {
+        "text": "văn phòng"
+      },
+      {
+        "text": "."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng "
+      },
+      {
+        "text": "窓口",
+        "furigana": "まどぐち"
+      },
+      {
+        "text": " để "
+      },
+      {
+        "text": "nhận dịch vụ"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "giải quyết thủ tục"
+      },
+      {
+        "text": " hoặc "
+      },
+      {
+        "text": "mua vé."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "窓口",
+            "furigana": "まどぐち"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "切符",
+            "furigana": "きっぷ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "買えます",
+            "furigana": "かえます"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Bạn có thể mua vé tại quầy này."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "窓口",
+            "furigana": "まどぐち"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "平日",
+            "furigana": "へいじつ"
+          },
+          {
+            "text": "9時",
+            "furigana": "くじ"
+          },
+          {
+            "text": "から"
+          },
+          {
+            "text": "17時",
+            "furigana": "じゅうななじ"
+          },
+          {
+            "text": "まで"
+          },
+          {
+            "text": "開いています",
+            "furigana": "ひらいています"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Quầy mở cửa từ 9 giờ đến 17 giờ các ngày trong tuần."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "窓口",
+            "furigana": "まどぐち"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "相談",
+            "furigana": "そうだん"
+          },
+          {
+            "text": "すると、"
+          },
+          {
+            "text": "担当者",
+            "furigana": "たんとうしゃ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "案内してくれます",
+            "furigana": "あんないしてくれます"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Nếu bạn hỏi tại quầy, người phụ trách sẽ hướng dẫn cho bạn."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "窓口",
+            "furigana": "まどぐち"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "混雑",
+            "furigana": "こんざつ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "心配",
+            "furigana": "しんぱい"
+          },
+          {
+            "text": "なければ、"
+          },
+          {
+            "text": "事前に予約してください",
+            "furigana": "じぜんによやくしてください"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Nếu lo lắng về việc đông đúc, hãy đặt trước."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "受付",
+        "furigana": "うけつけ"
+      },
+      {
+        "text": " (đọc là 'uketsuke') thường dùng cho "
+      },
+      {
+        "text": "đón tiếp, nhận hồ sơ",
+        "furigana": ""
+      },
+      {
+        "text": ", trong khi "
+      },
+      {
+        "text": "窓口",
+        "furigana": "まどぐち"
+      },
+      {
+        "text": " nhấn mạnh vị trí 'cửa sổ' cung cấp dịch vụ cụ thể."
+      },
+      {
+        "text": " "
+      },
+      {
+        "text": "カウンター",
+        "furigana": ""
+      },
+      {
+        "text": " (có nghĩa 'quầy') thường dùng cho "
+      },
+      {
+        "text": "địa điểm bán hàng, khu vực dịch vụ tự phục vụ, ít formal hơn."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Từ "
+      },
+      {
+        "text": "窓口",
+        "furigana": "まどぐち"
+      },
+      {
+        "text": " thường dùng trong ngữ cảnh hành chính, giao thông và dịch vụ công."
+      },
+      {
+        "text": " "
+      },
+      {
+        "text": "Không nhầm lẫn với "
+      }
+    ],
+    "cachedAt": "2026-09-05T02:34:23.340Z"
+  },
+  "kanji_育てる": {
+    "meaning": [
+      {
+        "text": "育てる",
+        "furigana": "そだてる"
+      },
+      {
+        "text": " là động từ chỉ hành động \"nuôi dưỡng\", \"trồng trọt\", \"phát triển\" một đối tượng nào đó. Nghĩa chính bao gồm: "
+      },
+      {
+        "text": "nâng cao",
+        "furigana": ""
+      },
+      {
+        "text": " (tăng cường năng lực, khả năng); "
+      },
+      {
+        "text": "để phía sau",
+        "furigana": ""
+      },
+      {
+        "text": " (đặt trong vị trí hỗ trợ, che chở); "
+      },
+      {
+        "text": "đưa lên",
+        "furigana": ""
+      },
+      {
+        "text": " (khuyến khích, phát triển lên mức cao hơn)."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Đây là động từ chuyển động, thường đi với trợ từ "
+      },
+      {
+        "text": "を",
+        "furigana": ""
+      },
+      {
+        "text": " để chỉ đối tượng được nuôi dưỡng. Có thể dùng trong các ngữ cảnh thực tế (nuôi con, trồng cây) hoặc ẩn dụ (phát triển kỹ năng, môi trường)."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "私",
+            "furigana": "わたし"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "子供",
+            "furigana": "こども"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "育てる",
+            "furigana": "そだてる"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "好き",
+            "furigana": "すき"
+          },
+          {
+            "text": "です"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Tôi thích nuôi dạy con."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "植物",
+            "furigana": "しょくぶつ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "育てて",
+            "furigana": "そだてて"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "水",
+            "furigana": "みず"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "やって",
+            "furigana": "やって"
+          },
+          {
+            "text": "います"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Anh ấy trồng cây và tưới nước mỗi ngày."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "若手",
+            "furigana": "わかて"
+          },
+          {
+            "text": "社員",
+            "furigana": "しゃいん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "育てる",
+            "furigana": "そだてる"
+          },
+          {
+            "text": "ために"
+          },
+          {
+            "text": "研修",
+            "furigana": "けんしゅう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "行う",
+            "furigana": "おこなう"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Công ty tổ chức đào tạo để phát triển nhân viên trẻ."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "自分",
+            "furigana": "じぶん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "才能",
+            "furigana": "さいのう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "育てる",
+            "furigana": "そだてる"
+          },
+          {
+            "text": "ために"
+          },
+          {
+            "text": "毎日",
+            "furigana": "まいにち"
+          },
+          {
+            "text": "練習",
+            "furigana": "れんしゅう"
+          },
+          {
+            "text": "する"
+          },
+          {
+            "text": "。"
+          }
+        ]
+      }
+    ],
+    "cachedAt": "2026-09-08T12:57:55.747Z"
+  },
+  "kanji_襲撃": {
+    "meaning": [
+      {
+        "text": "Danh từ chỉ "
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": " nghĩa \"tập kích\", hành động tấn công bất ngờ, thường dùng trong bối cảnh quân sự hoặc tội phạm."
+      },
+      {
+        "text": "Cũng có thể dùng như "
+      },
+      {
+        "text": "襲撃する",
+        "furigana": "しゅうげきする"
+      },
+      {
+        "text": " (động từ) để diễn tả hành động tấn công."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng để mô tả một cuộc tấn công bất ngờ, thường kèm theo danh từ chỉ đối tượng hoặc thời gian."
+      },
+      {
+        "text": "Thường xuất hiện trong các câu mô tả sự kiện quân sự, tội phạm, hoặc hành động mạnh tay."
+      },
+      {
+        "text": "Kết hợp với các từ như "
+      },
+      {
+        "text": "計画",
+        "furigana": "けいかく"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "部隊",
+        "furigana": "ぶたい"
+      },
+      {
+        "text": ", hay "
+      },
+      {
+        "text": "警報",
+        "furigana": "けいほう"
+      },
+      {
+        "text": "để tạo thành cụm từ liên quan."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "警察",
+            "furigana": "けいさつ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "山奥",
+            "furigana": "やまおく"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "隠れ家",
+            "furigana": "かくれが"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "襲撃",
+            "furigana": "しゅうげき"
+          },
+          {
+            "text": "した"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Cảnh sát đã tấn công (ra đợt tấn công) vào căn ẩn núi."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "敵",
+            "furigana": "てき"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "基地",
+            "furigana": "きち"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "夜中",
+            "furigana": "よなか"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "襲撃",
+            "furigana": "しゅうげき"
+          },
+          {
+            "text": "された"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Cơ sở của kẻ thù đã bị tấn công vào giữa đêm."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼ら",
+            "furigana": "かれら"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "突然",
+            "furigana": "とつぜん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "襲撃",
+            "furigana": "しゅうげき"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "驚いた"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Họ đã rất ngạc nhiên vì cuộc tấn công bất ngờ."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "襲撃",
+            "furigana": "しゅうげき"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "被害",
+            "furigana": "ひがい"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "大きく"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "建物",
+            "furigana": "たてもの"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "ほとんど"
+          },
+          {
+            "text": "倒壊",
+            "furigana": "とうかい"
+          },
+          {
+            "text": "した"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Thiệt hại do cuộc tấn công rất nặng, các tòa nhà gần như sụp đổ."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "その"
+          },
+          {
+            "text": "海賊",
+            "furigana": "かいぞく"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "商船",
+            "furigana": "しょうせん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "襲撃",
+            "furigana": "しゅうげき"
+          },
+          {
+            "text": "し"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "財宝",
+            "furigana": "ざいほう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "奪った"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Tên cướp biển đó đã tấn công các tàu thương mại và cướp lấy kho báu."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "攻撃",
+        "furigana": "こうげき"
+      },
+      {
+        "text": " (công kích) là hành động tấn công mang tính chất quân sự hoặc thể thao, không nhất thiết phải bất ngờ; "
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": " nhấn mạnh tính bất ngờ, tấn công nhanh và thường kèm theo yếu tố bất hợp pháp hoặc khủng bố."
+      },
+      {
+        "text": "侵略",
+        "furigana": "しんりゃく"
+      },
+      {
+        "text": " (xâm lược) chỉ hành động chiếm đóng, xâm chiếm lãnh thổ hoặc quốc gia, mang tính chiến lược dài hạn, không chỉ là một đợt tấn công nhanh."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Từ này mang tính mạnh mẽ, thường dùng trong bối cảnh bạo lực, tội phạm hoặc quân sự; không thích hợp trong giao tiếp hàng ngày lịch sự."
+      },
+      {
+        "text": "Khi dùng làm động từ, cần thêm \"する\" để thành \"襲撃する\"."
+      },
+      {
+        "text": "Tránh nhầm lẫn với \"攻撃\" khi muốn nhấn mạnh yếu tố bất ngờ và tấn công nhanh."
+      }
+    ],
+    "part_of_speech": "danh từ, động từ する",
+    "kanji_breakdown": [
+      {
+        "text": "襲",
+        "furigana": "しゅう"
+      },
+      {
+        "text": " — Hán Việt: TÚ"
+      },
+      {
+        "text": "撃",
+        "furigana": "げき"
+      },
+      {
+        "text": " — Hán Việt: KÍCH"
+      }
+    ],
+    "collocations": [
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "事件",
+        "furigana": "じけん"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "隊",
+        "furigana": "たい"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "計画",
+        "furigana": "けいかく"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "警報",
+        "furigana": "けいほう"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "部隊",
+        "furigana": "ぶたい"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "者",
+        "furigana": "しゃ"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "行為",
+        "furigana": "こうい"
+      },
+      {
+        "text": "、"
+      },
+      {
+        "text": "襲撃",
+        "furigana": "しゅうげき"
+      },
+      {
+        "text": "被害",
+        "furigana": "ひがい"
+      }
+    ],
+    "stroke_count_note": [
+      {
+        "text": "襲",
+        "furigana": "しゅう"
+      },
+      {
+        "text": " — Hán Việt: TÚ; "
+      },
+      {
+        "text": "撃",
+        "furigana": "げき"
+      },
+      {
+        "text": " — Hán Việt: KÍCH."
+      }
+    ],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "cachedAt": "2026-09-05T03:17:23.148Z"
+  },
+  "kanji_記入": {
+    "meaning": [
+      {
+        "text": "記入",
+        "furigana": "きにゅう"
+      },
+      {
+        "text": " có nghĩa là “điền vào”, “ghi lại” trong biểu mẫu, sổ đăng ký hoặc nhật ký."
+      }
+    ],
+    "usage": [
+      {
+        "text": "～を記入する",
+        "furigana": ""
+      },
+      {
+        "text": " (động từ する)"
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "申し込み用紙に",
+            "furigana": "もうしこみようしに"
+          },
+          {
+            "text": "氏名",
+            "furigana": "しめい"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "住所",
+            "furigana": "じゅうしょ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "記入",
+            "furigana": "きにゅう"
+          },
+          {
+            "text": "してください"
+          }
+        ],
+        "vi": "Vui lòng ghi họ tên và địa chỉ vào mẫu đơn đăng ký."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "アンケートの最後のページに",
+            "furigana": "あんけーとのさいごのぺーじに"
+          },
+          {
+            "text": "コメント",
+            "furigana": ""
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "記入",
+            "furigana": "きにゅう"
+          },
+          {
+            "text": "してください"
+          }
+        ],
+        "vi": "Xin hãy ghi nhận xét vào trang cuối của bảng khảo sát."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "この欄に",
+            "furigana": "このらんに"
+          },
+          {
+            "text": "必要事項",
+            "furigana": "ひつようじこう"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "記入",
+            "furigana": "きにゅう"
+          },
+          {
+            "text": "し、署名",
+            "furigana": "しょめい"
+          },
+          {
+            "text": "してください"
+          }
+        ],
+        "vi": "Hãy điền các thông tin cần thiết vào mục này và ký tên."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "入力ミスがあると、再度",
+            "furigana": "にゅうりょくみすがあると、さいど"
+          },
+          {
+            "text": "記入",
+            "furigana": "きにゅう"
+          },
+          {
+            "text": "し直す",
+            "furigana": "しなおす"
+          },
+          {
+            "text": "必要があります"
+          }
+        ],
+        "vi": "Nếu có lỗi nhập liệu, cần phải điền lại."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "記入",
+            "furigana": "きにゅう"
+          },
+          {
+            "text": "した内容は",
+            "furigana": "したないようは"
+          },
+          {
+            "text": "保存されます"
+          }
+        ],
+        "vi": "Nội dung đã ghi sẽ được lưu lại."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "入力",
+        "furigana": "にゅうりょく"
+      },
+      {
+        "text": " (にゅうりょく) nghĩa là “nhập dữ liệu”, thường dùng cho việc nhập ký tự trên máy tính; "
+      },
+      {
+        "text": "記載",
+        "furigana": "きさい"
+      },
+      {
+        "text": " (きさい) nghĩa là “ghi chép”, nhấn mạnh việc ghi lại thông tin trong tài liệu, không nhất thiết phải điền vào ô."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Thường xuất hiện trong văn viết, hướng dẫn, biểu mẫu; không dùng trong hội thoại thông thường."
+      },
+      {
+        "text": "Dạng lịch sự thường đi kèm với 「してください」 hoặc 「いただく」."
+      }
+    ],
+    "part_of_speech": "danh từ, động từ する",
+    "kanji_breakdown": [
+      {
+        "text": "記",
+        "furigana": "き"
+      },
+      {
+        "text": " — Hán Việt: KÝ. "
+      },
+      {
+        "text": "入",
+        "furigana": "にゅう"
+      },
+      {
+        "text": " — Hán Việt: NHẬP."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "氏名を記入する",
+        "furigana": "しめいをきにゅうする"
+      },
+      {
+        "text": "住所を記入してください",
+        "furigana": "じゅうしょをきにゅうしてください"
+      },
+      {
+        "text": "記入欄",
+        "furigana": "きにゅうらん"
+      },
+      {
+        "text": "アンケートに記入",
+        "furigana": "あんけーとにきにゅう"
+      },
+      {
+        "text": "記入ミス",
+        "furigana": "きにゅうみす"
+      },
+      {
+        "text": "記入用紙",
+        "furigana": "きにゅうようし"
+      },
+      {
+        "text": "記入済み",
+        "furigana": "きにゅうずみ"
+      },
+      {
+        "text": "記入期限",
+        "furigana": "きにゅうきげん"
+      }
+    ],
+    "stroke_count_note": [
+      {
+        "text": "記",
+        "furigana": "き"
+      },
+      {
+        "text": " — Hán Việt: KÝ; "
+      },
+      {
+        "text": "入",
+        "furigana": "にゅう"
+      },
+      {
+        "text": " — Hán Việt: NHẬP."
+      }
+    ],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "cachedAt": "2026-09-07T01:05:42.325Z"
+  },
+  "kanji_郵便": {
+    "meaning": "郵便（ゆうびん） là danh từ chỉ dịch vụ gửi thư tín, bưu chính, bao gồm cả việc gửi thư, bưu kiện, và các dịch vụ liên quan như chuyển phát nhanh, bưu kiện quốc tế. Từ này có thể dùng để chỉ toàn bộ hệ thống bưu chính hoặc một bức thư/bưu kiện cụ thể được gửi qua hệ thống này.",
+    "usage": "1. Dùng làm danh từ chỉ dịch vụ chung: 郵便（ゆうびん）は便利（べんり）だ。 (dịch vụ bưu chính rất tiện lợi). 2. Kèm danh từ chỉ nơi chốn: 郵便（ゆうびん）局（きょく）で手続（てつづ）きする。 (thực hiện thủ tục tại bưu điện). 3. Kèm danh từ chỉ vật phẩm: 郵便（ゆうびん）物（もの）を受（う）け取（と）る。 (nhận bưu phẩm). 4. Kèm danh từ chỉ mã số: 郵便（ゆうびん）番（ばん）号（ごう）を調（しら）べる。 (tra cứu mã bưu điện). 5. Kèm tính từ chỉ phạm vi: 国際（こくさい）郵便（ゆうびん）で送（おく）る。 (gửi qua bưu điện quốc tế).",
+    "examples": [
+      {
+        "jp": "私（わたし）は毎日（まいにち）郵便（ゆうびん）局（きょく）へ行（い）く。",
+        "vi": "Tôi đi bưu điện mỗi ngày."
+      },
+      {
+        "jp": "友達（ともだち）に手紙（てがみ）を郵便（ゆうびん）で送（おく）った。",
+        "vi": "Tôi đã gửi thư cho bạn qua bưu điện."
+      },
+      {
+        "jp": "今日は国際（こくさい）郵便（ゆうびん）の配達（はいたつ）が遅（おそ）くなる。",
+        "vi": "Ngày hôm nay việc giao bưu điện quốc tế sẽ bị trễ."
+      },
+      {
+        "jp": "彼（かれ）の荷物（にもつ）は郵便（ゆうびん）便（びん）として届（とど）いた。",
+        "vi": "Hàng của anh ấy đã tới dưới dạng bưu kiện."
+      },
+      {
+        "jp": "郵便（ゆうびん）番号（ばんごう）を入力（にゅうりょく）してください。",
+        "vi": "Vui lòng nhập mã bưu chính."
+      }
+    ],
+    "synonyms_distinction": "1. 手紙（てがみ）: chỉ thư viết tay, dùng khi nhấn mạnh nội dung cá nhân, không bao gồm bưu kiện hay dịch vụ. 2. 電子メール（でんしメール）: gửi tin qua Internet, nhanh, không dùng hệ thống bưu chính truyền thống. 3. 郵送（ゆうそう）: động từ, nghĩa là ‘gửi bưu điện’; khác với danh từ 郵便. 4. 書留（かきとめ）: dạng thư bảo đảm, có phí thêm, nhấn mạnh tính an toàn, không đồng nghĩa chung với 郵便.",
+    "notes": "- 郵便 là danh từ trung tính, dùng trong cả văn nói và viết, mức độ lịch sự trung bình. - Thường kết hợp với các danh từ khác để tạo thành các cụm như 郵便局, 郵便番号, 国際郵便. - Người học thường nhầm lẫn giữa 郵便 (danh từ) và 郵送 (động từ). - Tần suất dùng cao trong đời sống hàng ngày, đặc biệt khi nói về việc gửi thư/bưu kiện.",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "郵（ゆう）(Hán Việt: BỎU - nghĩa gốc): Onyomi ゆう (ví dụ: 郵便（ゆうびん）); Kunyomi không có; Bộ thủ 阝（かんむり） (8 nét); Tổng 10 nét。 便（びん）(Hán Việt: TIỆN - nghĩa gốc): Onyomi びん (ví dụ: 便（びん）利（り）); Kunyomi たすける (ví dụ: 便（たす）ける); Bộ thủ 亻（にんべん） (2 nét); Tổng 9 nét。",
+    "collocations": "郵便（ゆうびん）局（きょく）; 郵便（ゆうびん）配達（はいたつ）; 郵便（ゆうびん）番号（ばんごう）; 郵便（ゆうびん）料金（りょうきん）; 郵便（ゆうびん）物（もの）; 国際（こくさい）郵便（ゆうびん）; 書留（かきとめ）郵便（ゆうびん）; 速達（そくたつ）郵便（ゆうびん）",
+    "stroke_count_note": "郵（ゆう）: Hán Việt BỎU, Onyomi ゆう, Kunyomi -, bộ阝（かんむり） (8 nét), tổng 10 nét. 便（びん）: Hán Việt TIỆN, Onyomi びん, Kunyomi たすける, bộ亻（にんべん） (2 nét), tổng 9 nét.",
+    "cachedAt": "2026-09-05T01:59:53.295Z"
+  },
+  "kanji_郵便局": {
+    "meaning": "郵便局（ゆうびんきょく） là danh từ chỉ cơ sở bưu chính, nơi cung cấp các dịch vụ gửi thư, bưu phẩm, mua tem, thanh toán hóa đơn, gửi tiền gửi ngân hàng và các dịch vụ tài chính khác. Thuật ngữ này dùng cho tòa nhà chính thức của bưu điện, không phải các hộp thư riêng lẻ hay bưu cục tạm thời.",
+    "usage": "1. Danh từ chỉ địa điểm: 郵（ゆう）便（びん）局（きょく）で手紙（てがみ）を出（だ）す。 – Gửi thư tại bưu điện. 2. Kết hợp với các danh từ khác để chỉ các phòng, dịch vụ: 郵（ゆう）便（びん）局（きょく）窓口（まどぐち） – quầy giao dịch bưu điện. 3. Dùng trong cụm chỉ người làm việc tại đó: 郵（ゆう）便（びん）局（きょく）員（いん） – nhân viên bưu điện. 4. Dùng trong cụm chỉ vị trí địa lý: 郵（ゆう）便（びん）局（きょく）前（まえ） – trước bưu điện.",
+    "examples": [
+      {
+        "jp": "私（わたし）は毎朝（まいあさ）郵（ゆう）便（びん）局（きょく）へ行（い）って切手（きって）を買（か）う。",
+        "vi": "Tôi mỗi sáng đi đến bưu điện để mua tem."
+      },
+      {
+        "jp": "この町（まち）には二つ（ふたつ）の郵（ゆう）便（びん）局（きょく）がある。",
+        "vi": "Thị trấn này có hai bưu điện."
+      },
+      {
+        "jp": "荷物（にもつ）を速（はや）く送（おく）りたければ、郵（ゆう）便（びん）局（きょく）のエクスプレスサービスを使（つか）うといい。",
+        "vi": "Nếu muốn gửi hàng nhanh, nên dùng dịch vụ nhanh của bưu điện."
+      },
+      {
+        "jp": "近所（きんじょ）の郵（ゆう）便（びん）局（きょく）は夜遅（よるおそ）くまで開（ひら）いている。",
+        "vi": "Bưu điện gần nhà mở muộn vào buổi tối."
+      }
+    ],
+    "cachedAt": "2026-09-05T01:58:22.369Z"
+  },
+  "kanji_険しい": {
+    "meaning": "khắt khe, nghiêm khắc; dốc, dựng đứng; hiểm trở",
+    "usage": "dùng để miêu tả địa hình dốc, đường khó, hoặc tính cách, môi trường nghiêm khắc, khó chịu",
+    "examples": [
+      {
+        "jp": "険しい山道は注意が必要です。",
+        "vi": "Đường dốc hiểm trở cần chú ý."
+      },
+      {
+        "jp": "上司はとても険しい表情で部下に指示した。",
+        "vi": "Sếp đã chỉ dẫn nhân viên với vẻ mặt nghiêm khắc."
+      }
+    ],
+    "synonyms_distinction": "類似 từ: 厳しい (ki​bii​shi) chỉ tính cách nghiêm khắc; 過酷な (kakokuna) nhấn mạnh sự tàn nhẫn, khắc nghiệt; ただし,険しい thường dùng cho địa hình dốc và cảm xúc nghiêm trọng.",
+    "notes": "Có thể dùng cả nghĩa đen (địa hình) và nghĩa bóng (tính cách, môi trường).",
+    "part_of_speech": "tính từ i‑động từ",
+    "kanji_breakdown": "険: bao gồm bộ 阝 (đồi, mỏ) và phần 險 (nguy hiểm). Tổng số nét: 12.",
+    "collocations": "険しい山道,険しい表情,険しい性格,険しい道,険しい景色",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "Số nét của kanji 險 (bản gốc) là 15, nhưng kanji 簡体 險 (険) có 12 nét.",
+    "cachedAt": "2026-09-03T22:53:43.591Z"
+  },
+  "kanji_頭痛": {
+    "meaning": [
+      {
+        "text": "Danh từ chỉ "
+      },
+      {
+        "text": "頭痛",
+        "furigana": "ずつう"
+      },
+      {
+        "text": " là cảm giác đau ở đầu, có thể là nhẹ hoặc nặng, thường kèm theo áp lực hoặc nhói."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng như danh từ, thường xuất hiện trong cấu trúc "
+      },
+      {
+        "text": "頭痛がする",
+        "furigana": "ずつうがする"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "頭痛がある",
+        "furigana": "ずつうがある"
+      },
+      {
+        "text": ", hoặc "
+      },
+      {
+        "text": "頭痛薬",
+        "furigana": "ずつうやく"
+      },
+      {
+        "text": " để chỉ thuốc giảm đau đầu."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "昨日",
+            "furigana": "きのう"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "頭痛",
+            "furigana": "ずつう"
+          },
+          {
+            "text": "がひどくて、"
+          },
+          {
+            "text": "今日は",
+            "furigana": "きょうは"
+          }
+        ]
+      }
+    ],
+    "cachedAt": "2026-09-05T02:48:57.888Z"
+  },
+  "vocab_いわゆる": {
+    "meaning": [
+      {
+        "text": "Trạng từ "
+      },
+      {
+        "text": "いわゆる"
+      },
+      {
+        "text": " có nghĩa là “cái gọi là”, “được gọi là”. Dùng để chỉ một đối tượng, khái niệm mà người nói muốn nhấn mạnh là như đã được biết đến hoặc thường được gọi như vậy."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng trước danh từ để nhấn mạnh rằng danh từ đó là “cái được gọi là …”. "
+      },
+      {
+        "text": "Cấu trúc thường là "
+      },
+      {
+        "text": "いわゆる"
+      },
+      {
+        "text": " + danh từ, có thể tiếp tục bằng "
+      },
+      {
+        "text": "です",
+        "furigana": ""
+      },
+      {
+        "text": " hoặc "
+      },
+      {
+        "text": "だ",
+        "furigana": ""
+      },
+      {
+        "text": " trong câu bình thường."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "いわゆる"
+          },
+          {
+            "text": "インターネット・スターは、"
+          },
+          {
+            "text": "有名",
+            "furigana": "ゆうめい"
+          },
+          {
+            "text": "になった人だ。"
+          }
+        ],
+        "vi": "Người ta gọi họ là “ngôi sao Internet”, là người trở nên nổi tiếng trên mạng xã hội."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "いわゆる"
+          },
+          {
+            "text": "問題は、"
+          },
+          {
+            "text": "解決",
+            "furigana": "かいけつ"
+          },
+          {
+            "text": "が難しいことだ。"
+          }
+        ],
+        "vi": "Vấn đề “được gọi là” là việc khó giải quyết."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "いわゆる"
+          },
+          {
+            "text": "天才でも、"
+          },
+          {
+            "text": "失敗",
+            "furigana": "しっぱい"
+          },
+          {
+            "text": "することはある。"
+          }
+        ],
+        "vi": "Ngay cả “thiên tài” cũng có lúc thất bại."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "いわゆる"
+          },
+          {
+            "text": "例外は、"
+          },
+          {
+            "text": "この規則に当てはまらないケースです。"
+          }
+        ],
+        "vi": "“Ngoại lệ” ở đây là các trường hợp không áp dụng quy tắc này."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "いわゆる"
+          },
+          {
+            "text": "偽情報が拡散すると、"
+          },
+          {
+            "text": "社会",
+            "furigana": "しゃかい"
+          },
+          {
+            "text": "に悪影響を与える。"
+          }
+        ],
+        "vi": "Khi “thông tin giả” lan truyền, nó gây ảnh hưởng tiêu cực cho xã hội."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "所謂（いわゆる）"
+      },
+      {
+        "text": " – viết bằng kanji, cùng nghĩa, thường xuất hiện trong văn bản trang trọng hơn, còn "
+      },
+      {
+        "text": "いわゆる"
+      },
+      {
+        "text": " thường dùng trong văn nói và văn bản thông thường."
+      },
+      {
+        "text": "いわば"
+      },
+      {
+        "text": " – mang nghĩa “nói cách khác, như là”, dùng để đưa ra một phép ẩn dụ hoặc giải thích, không nhất thiết là một danh từ đã được công nhận rộng rãi như “いわゆる”。"
+      }
+    ],
+    "notes": [
+      {
+        "text": "“いわゆる” là trạng từ không lịch sự, không dùng trong ngữ cảnh trang trọng hoặc trong lời nói kính ngữ. "
+      },
+      {
+        "text": "Thường đi kèm với danh từ, không nên dùng trực tiếp trước động từ. "
+      },
+      {
+        "text": "Cần tránh nhầm lẫn với “いわば”, vì “いわば” mang tính so sánh, ẩn dụ, không phải là “cái gọi là”. "
+      }
+    ],
+    "part_of_speech": "trạng từ",
+    "kanji_breakdown": [],
+    "collocations": [
+      {
+        "text": "いわゆる問題",
+        "furigana": "いわゆるもんだい"
+      },
+      {
+        "text": "いわゆる事実",
+        "furigana": "いわゆるじじつ"
+      },
+      {
+        "text": "いわゆる天才",
+        "furigana": "いわゆるてんさい"
+      },
+      {
+        "text": "いわゆる例外",
+        "furigana": "いわゆるれいがい"
+      },
+      {
+        "text": "いわゆる偽情報",
+        "furigana": "いわゆるぎじょうほう"
+      },
+      {
+        "text": "いわゆる実態",
+        "furigana": "いわゆるじったい"
+      },
+      {
+        "text": "いわゆる問題点",
+        "furigana": "いわゆるもんだいてん"
+      }
+    ],
+    "stroke_count_note": [],
+    "cachedAt": "2026-09-05T03:36:38.680Z"
+  },
+  "vocab_上着": {
+    "meaning": "áo khoác, áo ngoài được mặc lên trên áo trong, thường dùng trong thời tiết lạnh hoặc gió",
+    "usage": "Dùng để chỉ loại áo ngoài như áo khoác, áo vest, áo len nhẹ; thường xuất hiện trong câu nói về việc mặc hoặc cởi áo ngoài",
+    "examples": [
+      {
+        "jp": "今日は寒いから上着を着ます。",
+        "vi": "Hôm nay lạnh nên tôi sẽ mặc áo ngoài."
+      },
+      {
+        "jp": "上着を脱ってください。",
+        "vi": "Xin hãy cởi áo khoác ra."
+      }
+    ],
+    "synonyms_distinction": "上着 thường chỉ áo khoác chung chung, trong khi コート chỉ áo khoác dài, ジャケット chỉ áo khoác ngắn; áo vest (ベスト) là áo không tay.",
+    "notes": "Có thể dùng cho cả áo khoác nhẹ và nặng; không dùng cho áo ngủ hay áo lót.",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "上 (うえ, nghĩa là \"trên\"), 着 (き, nghĩa là \"mặc\"; bộ \"衤\" liên quan đến quần áo)",
+    "collocations": "上着を着る, 上着を脱ぐ, 上着を買う, 上着が必要です, 上着のサイズ",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "上 có 3 nét, thuộc bộ \"一\" và \"ノ\"; 着 có 11 nét, bộ \"衤\" (quần áo) + \"羊\" (cừu) thường nhầm với \"襲\".",
+    "cachedAt": "2026-09-02T13:06:57.013Z"
+  },
+  "vocab_主食": {
+    "meaning": [
+      {
+        "text": "Danh từ chỉ "
+      },
+      {
+        "text": "主食",
+        "furigana": "しゅしょく"
+      },
+      {
+        "text": " là thực phẩm chủ yếu, thường là món ăn cung cấp năng lượng chính trong bữa ăn, ví dụ như gạo, bánh mì, mì."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Thường dùng làm danh từ chỉ loại thực phẩm chính trong bữa ăn; đi kèm với từ \"として\" hoặc \"の\" để chỉ vai trò."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "日本人の"
+          },
+          {
+            "text": "主食",
+            "furigana": "しゅしょく"
+          },
+          {
+            "text": "は米です。"
+          }
+        ],
+        "vi": "Thực phẩm chính của người Nhật là gạo."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "朝食の"
+          },
+          {
+            "text": "主食",
+            "furigana": "しゅしょく"
+          },
+          {
+            "text": "はトーストです。"
+          }
+        ],
+        "vi": "Món ăn chính cho bữa sáng là bánh mì nướng."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "健康のために"
+          },
+          {
+            "text": "主食",
+            "furigana": "しゅしょく"
+          },
+          {
+            "text": "のバランスを考える。"
+          }
+        ],
+        "vi": "Cân nhắc cân bằng thực phẩm chính vì sức khỏe."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "ダイエット中は"
+          },
+          {
+            "text": "主食",
+            "furigana": "しゅしょく"
+          },
+          {
+            "text": "を低カロリーに変える。"
+          }
+        ],
+        "vi": "Trong thời gian ăn kiêng, thay đổi thực phẩm chính sang loại ít calo."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼は"
+          },
+          {
+            "text": "主食",
+            "furigana": "しゅしょく"
+          },
+          {
+            "text": "を抜くとエネルギーが足りないと言った。"
+          }
+        ],
+        "vi": "Anh ấy nói nếu bỏ qua thực phẩm chính sẽ thiếu năng lượng."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "「食事」",
+        "furigana": "しょくじ"
+      },
+      {
+        "text": " là bữa ăn nói chung, không nhấn mạnh vào món chính; còn \"主食\" chỉ phần thực phẩm cung cấp năng lượng chính."
+      },
+      {
+        "text": "「ご飯」",
+        "furigana": "ごはん"
+      },
+      {
+        "text": " thường chỉ gạo hoặc bữa cơ bản, dùng trong ngữ cảnh thân mật; \"主食\" có phạm vi rộng hơn, bao gồm bánh mì, mì, vv."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Từ này dùng trong cả văn viết và nói, mức độ trung tính, không mang tính lịch sự đặc biệt."
+      },
+      {
+        "text": "Thường xuất hiện cùng với \"副食\" (ふくしょく) để chỉ món phụ."
+      },
+      {
+        "text": "Cẩn thận không nhầm \"主食\" với \"副食\" (món phụ), nghĩa trái ngược nhau."
+      }
+    ],
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": [
+      {
+        "text": "主",
+        "furigana": "しゅ"
+      },
+      {
+        "text": " — Hán Việt: CHỦ."
+      },
+      {
+        "text": "食",
+        "furigana": "しょく"
+      },
+      {
+        "text": " — Hán Việt: THỰC."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "主食として",
+        "furigana": "しゅしょくとして"
+      },
+      {
+        "text": "主食の種類",
+        "furigana": "しゅしょくのしゅるい"
+      },
+      {
+        "text": "主食中心",
+        "furigana": "しゅしょくちゅうしん"
+      },
+      {
+        "text": "主食と副菜",
+        "furigana": "しゅしょくとふくさい"
+      },
+      {
+        "text": "主食のバランス",
+        "furigana": "しゅしょくのばらんす"
+      },
+      {
+        "text": "主食の摂取",
+        "furigana": "しゅしょくのせっしゅ"
+      }
+    ],
+    "stroke_count_note": [
+      {
+        "text": "主",
+        "furigana": "しゅ"
+      },
+      {
+        "text": ": Hán Việt CHỦ; "
+      },
+      {
+        "text": "食",
+        "furigana": "しょく"
+      },
+      {
+        "text": ": Hán Việt THỰC."
+      }
+    ],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "cachedAt": "2026-09-05T03:23:54.491Z"
+  },
+  "vocab_以上": {
+    "meaning": "hơn, trên, trên mức, từ ... trở lên",
+    "usage": "Được dùng sau số lượng hoặc mức độ để chỉ 'hơn ...', hoặc trong câu '以上です' nghĩa là 'đó là tất cả'",
+    "examples": [
+      {
+        "jp": "じゅういじょうのひとがきました。",
+        "vi": "Có hơn 10 người đến."
+      },
+      {
+        "jp": "このもんだいはむずかしすぎます。いじょうです。",
+        "vi": "Vấn đề này quá khó. Hết rồi."
+      }
+    ],
+    "synonyms_distinction": "Khá giống với '超える' (vượt qua) nhưng '以上' là danh từ/định lượng, còn '以下' là ngược lại (ít hơn hoặc bằng).",
+    "notes": "",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "以 (bộ 人, 5 nét) + 上 (bộ 一, 3 nét)",
+    "collocations": "10以上, 20歳以上, 5%以上, 以上の条件, 以上となります",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "以上 gồm 2 kanji: 以 (5 nét) và 上 (3 nét), tổng cộng 8 nét.",
+    "cachedAt": "2026-09-03T12:56:58.705Z"
+  },
+  "vocab_会う": {
+    "meaning": "gặp mặt, gặp gỡ ai đó; gặp lại",
+    "usage": "dùng khi gặp trực tiếp người khác, thường kèm thời gian hoặc địa điểm",
+    "examples": [
+      {
+        "jp": "明日、友だちに会う。",
+        "vi": "Ngày mai, tôi sẽ gặp bạn bè."
+      },
+      {
+        "jp": "駅で彼と会った。",
+        "vi": "Tôi đã gặp anh ấy ở ga."
+      }
+    ],
+    "synonyms_distinction": "同義語は「逢う（あう）」で、会うは一般的な出会い、逢うは感情的・偶然の出会いに使われることが多い。",
+    "notes": "",
+    "part_of_speech": "động từ (五段動詞)",
+    "kanji_breakdown": "会: gặp, hội họp; う: okurigana biểu thị thể hiện động từ 五段う段",
+    "collocations": "友だちに会う, 会う約束, 再び会う, 会うことができない",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "N5",
+    "component_analysis": "",
+    "similar_kanji": "逢 (あう)",
+    "stroke_count_note": "会 có 6 nét; 逢 có 10 nét, thường bị nhầm lẫn vì hình dạng gần giống.",
+    "cachedAt": "2026-09-03T12:40:27.006Z"
+  },
+  "vocab_地味な": {
+    "meaning": [
+      {
+        "text": "地味な"
+      },
+      {
+        "text": " là tính từ な dùng để mô tả thứ gì đó "
+      },
+      {
+        "text": "đơn giản, không lòe loẹt, tối giản, "
+      },
+      {
+        "text": "cũng có thể mang nghĩa "
+      },
+      {
+        "text": "khuất phục, tỉnh táo, "
+      },
+      {
+        "text": "trong trường hợp nhấn mạnh tính khiêm tốn, không nổi bật."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Được dùng trước danh từ để chỉ sự giản dị, không màu mè: "
+      },
+      {
+        "text": "地味な服装",
+        "furigana": "じみなふくそう"
+      },
+      {
+        "text": "; "
+      },
+      {
+        "text": "Có thể kết hợp với "
+      },
+      {
+        "text": "に",
+        "furigana": ""
+      },
+      {
+        "text": " để diễn tả cách làm việc một cách giản dị: "
+      },
+      {
+        "text": "地味に暮らす",
+        "furigana": "じみにくらす"
+      },
+      {
+        "text": "; "
+      },
+      {
+        "text": "Trong văn nói thông thường, thường xuất hiện ở dạng "
+      },
+      {
+        "text": "地味です",
+        "furigana": "じみです"
+      },
+      {
+        "text": " hoặc "
+      },
+      {
+        "text": "地味だ",
+        "furigana": "じみだ"
+      },
+      {
+        "text": " khi muốn nhấn mạnh tính chất bình thường, không phô trương."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "地味",
+            "furigana": "じみ"
+          },
+          {
+            "text": "な"
+          },
+          {
+            "text": "服装",
+            "furigana": "ふくそう"
+          },
+          {
+            "text": "が好きだ。"
+          },
+          {
+            "text": "好き",
+            "furigana": "すき"
+          },
+          {
+            "text": "だ。"
+          }
+        ],
+        "vi": "Anh ấy thích trang phục giản dị."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "部屋",
+            "furigana": "へや"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "地味",
+            "furigana": "じみ"
+          },
+          {
+            "text": "な"
+          },
+          {
+            "text": "色",
+            "furigana": "いろ"
+          },
+          {
+            "text": "合い",
+            "furigana": "あい"
+          },
+          {
+            "text": "で、"
+          },
+          {
+            "text": "落ち着いた",
+            "furigana": "おちついた"
+          },
+          {
+            "text": "雰囲気",
+            "furigana": "ふんいき"
+          },
+          {
+            "text": "だ。"
+          }
+        ],
+        "vi": "Căn phòng này có màu sắc giản dị, tạo nên không gian êm dịu."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "地味",
+            "furigana": "じみ"
+          },
+          {
+            "text": "な"
+          },
+          {
+            "text": "性格",
+            "furigana": "せいかく"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は、"
+          },
+          {
+            "text": "目立つこと",
+            "furigana": "めだつこと"
+          },
+          {
+            "text": "が苦手だ。"
+          },
+          {
+            "text": "苦手",
+            "furigana": "にがて"
+          },
+          {
+            "text": "だ。"
+          }
+        ],
+        "vi": "Anh ấy có tính cách khiêm tốn, không thích nổi bật."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "最近",
+            "furigana": "さいきん"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "地味",
+            "furigana": "じみ"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "料理",
+            "furigana": "りょうり"
+          },
+          {
+            "text": "を作るようにしている。"
+          }
+        ]
+      }
+    ],
+    "cachedAt": "2026-09-08T12:59:31.917Z"
+  },
+  "vocab_外泊": {
+    "meaning": "ngoại trú, ở lại nơi khác qua đêm (không ở nhà mình)",
+    "usage": "Dùng để chỉ việc ngủ qua đêm ở nơi khác, thường trong bối cảnh công sở, học đường, bệnh viện…",
+    "examples": [
+      {
+        "jp": "今日は外泊（がいはく）が許可されたので、友達の家に泊まります。",
+        "vi": "Hôm nay được phép ngoại trú nên sẽ ngủ ở nhà bạn."
+      }
+    ],
+    "synonyms_distinction": "So sánh với 泊まる (động từ 'ở lại qua đêm') và 宿泊 (danh từ chính thức hơn, thường dùng cho khách sạn); 外泊 nhấn mạnh việc rời nơi cư trú chính để ngủ ở chỗ khác",
+    "notes": "Thường đi kèm với 動詞 する: 外泊する; dùng trong ngữ cảnh xin phép, ví dụ: 外泊許可、外泊費",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "外: nghĩa 'bên ngoài', radical '外' (5 nét); 泊: nghĩa 'ở lại qua đêm', radical '氵' (nước, 3 nét) + '白' (5 nét)",
+    "collocations": "外泊する, 外泊許可, 外泊費, 外泊先, 外泊中, 外泊規定",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "N3",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "外 (5 nét) gồm radical 外; 泊 (8 nét) gồm radical 氵 (3 nét) và phần 白 (5 nét)",
+    "cachedAt": "2026-09-03T12:37:58.648Z"
+  },
+  "vocab_完成": {
+    "meaning": "hoàn thành; đạt được kết quả cuối cùng của một công việc, dự án, tác phẩm",
+    "usage": "Dùng để chỉ việc đã hoàn thiện, không còn thiếu gì nữa; thường đi kèm với danh từ chỉ công việc, dự án, tác phẩm",
+    "examples": [
+      {
+        "jp": "プロジェクトが無事に完成した。",
+        "vi": "Dự án đã hoàn thành một cách suôn sẻ."
+      },
+      {
+        "jp": "宿題が完成した。",
+        "vi": "Bài tập về nhà đã được hoàn thành."
+      }
+    ],
+    "synonyms_distinction": "So sánh với 完了 (kanryō): 完成 nhấn mạnh sản phẩm cuối cùng đã hoàn chỉnh, trong khi 完了 nhấn mạnh hành động kết thúc quá trình thực hiện",
+    "notes": "Là danh từ và động từ する (完成する)",
+    "part_of_speech": "danh từ, động từ (suru)",
+    "kanji_breakdown": "完: bộ 宀 (nhà) + 元 (nguyên); 成: bộ 戈 (cây giáo) + 丁 (đinh)",
+    "collocations": "作品を完成させる, 仕事が完成する, 完成品, 完成度",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "完: 6 nét, 成: 6 nét",
+    "cachedAt": "2026-09-03T12:55:17.786Z"
+  },
+  "vocab_巧妙": {
+    "meaning": [
+      {
+        "text": "Tính từ na chỉ "
+      },
+      {
+        "text": "巧妙",
+        "furigana": "こうみょう"
+      },
+      {
+        "text": ", nghĩa là khéo léo, tài tình, thông minh, có cách bố trí tinh vi."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng làm tính từ trước danh từ kèm "
+      },
+      {
+        "text": "な",
+        "furigana": ""
+      },
+      {
+        "text": ", ví dụ "
+      },
+      {
+        "text": "巧妙な計画",
+        "furigana": "こうみょうなけいかく"
+      },
+      {
+        "text": "."
+      },
+      {
+        "text": "Dùng làm trạng từ với hậu tố "
+      },
+      {
+        "text": "に",
+        "furigana": ""
+      },
+      {
+        "text": ", ví dụ "
+      },
+      {
+        "text": "巧妙に話す",
+        "furigana": "こうみょうにはなす"
+      },
+      {
+        "text": "."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "巧妙に",
+            "furigana": "こうみょうに"
+          },
+          {
+            "text": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "解決した",
+            "furigana": "かいけつした"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Anh ấy đã khéo léo giải quyết vấn đề."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "その"
+          },
+          {
+            "text": "計画",
+            "furigana": "けいかく"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "非常に",
+            "furigana": "ひじょうに"
+          },
+          {
+            "text": "巧妙",
+            "furigana": "こうみょう"
+          },
+          {
+            "text": "だった",
+            "furigana": ""
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Kế hoạch đó rất tài tình."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "巧妙な",
+            "furigana": "こうみょうな"
+          },
+          {
+            "text": "手口",
+            "furigana": "てぐち"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "犯人",
+            "furigana": "はんにん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "騙した",
+            "furigana": "だました"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Cô ấy đã lừa kẻ phạm tội bằng cách khéo léo."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "話し方",
+            "furigana": "はなしかた"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "巧妙で",
+            "furigana": "こうみょうで"
+          },
+          {
+            "text": "、"
+          },
+          {
+            "text": "聞き手",
+            "furigana": "ききて"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "引きつける",
+            "furigana": "ひきつける"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Cách nói của anh ấy khéo léo, thu hút người nghe."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "その"
+          },
+          {
+            "text": "デザイン",
+            "furigana": ""
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "巧妙さ",
+            "furigana": "こうみょうさ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "際立っている",
+            "furigana": "きわだっている"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Thiết kế đó có sự khéo léo nổi bật."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "「器用」",
+        "furigana": "きよう"
+      },
+      {
+        "text": " thường chỉ khả năng vận động hoặc thực hiện việc tay nghề tốt, không nhấn mạnh sự tinh vi hay mánh lới như "
+      },
+      {
+        "text": "巧妙",
+        "furigana": "こうみょう"
+      },
+      {
+        "text": "."
+      },
+      {
+        "text": "「上手」",
+        "furigana": "じょうず"
+      },
+      {
+        "text": " nhấn mạnh sự thành thạo trong một kỹ năng, nhưng không có hàm ý về sự tính toán hay mưu mô như "
+      },
+      {
+        "text": "巧妙",
+        "furigana": "こうみょう"
+      },
+      {
+        "text": "."
+      }
+    ],
+    "notes": [
+      {
+        "text": "「巧妙」 là tính từ na, dùng trong ngữ cảnh trang trọng hoặc văn viết; trong hội thoại thông thường người ta thường dùng 「うまい」 hoặc 「器用」."
+      },
+      {
+        "text": "Không nên dùng 「巧妙」 để miêu tả người có tài năng thể chất; nó phù hợp hơn cho cách thức, chiến lược, hoặc thiết kế."
+      },
+      {
+        "text": "Khi dùng làm trạng từ, cần thêm 「に」 (巧妙に)."
+      }
+    ],
+    "part_of_speech": "tính từ na",
+    "kanji_breakdown": [
+      {
+        "text": "巧",
+        "furigana": "こう"
+      },
+      {
+        "text": " — Hán Việt: KHOẢ. "
+      },
+      {
+        "text": "妙",
+        "furigana": "みょう"
+      },
+      {
+        "text": " — Hán Việt: DIỆU."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "巧妙な計画",
+        "furigana": "こうみょうなけいかく"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "巧妙に話す",
+        "furigana": "こうみょうにはなす"
+      },
+      {
+        "text": ", "
+      }
+    ],
+    "cachedAt": "2026-09-05T02:59:39.223Z"
+  },
+  "vocab_庶民": {
+    "meaning": [
+      {
+        "text": "Từ "
+      },
+      {
+        "text": "庶民",
+        "furigana": "しょみん"
+      },
+      {
+        "text": " (shomin) là danh từ chỉ người bình thường, dân thường, những người không thuộc tầng lớp thượng lưu hoặc quan chức. Nghĩa gần nhất là "
+      },
+      {
+        "text": "一般人",
+        "furigana": "いっぱんじん"
+      },
+      {
+        "text": " (ippanjin) nhưng "
+      },
+      {
+        "text": "庶民",
+        "furigana": "しょみん"
+      },
+      {
+        "text": " thường nhấn mạnh tính giản dị, gần gũi với đời sống hàng ngày."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng làm danh từ độc lập để chỉ nhóm người bình thường, ví dụ: "
+      },
+      {
+        "text": "庶民",
+        "furigana": "しょみん"
+      },
+      {
+        "text": "は..."
+      },
+      {
+        "text": "."
+      },
+      {
+        "text": "Cũng có thể kết hợp với các hậu tố hoặc tính từ để tạo thành các cụm danh từ, như "
+      },
+      {
+        "text": "庶民的",
+        "furigana": "しょみんてき"
+      },
+      {
+        "text": " (shominteki) nghĩa 'thuộc dân thường, mang tính dân gian' hoặc "
+      },
+      {
+        "text": "庶民向け",
+        "furigana": "しょみんむけ"
+      }
+    ],
+    "cachedAt": "2026-09-05T03:14:00.835Z"
+  },
+  "vocab_循環": {
+    "meaning": [
+      {
+        "text": "Danh từ chỉ "
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": ": quá trình lưu thông, luân chuyển, vòng lặp của một vật chất, năng lượng hoặc thông tin. Cũng dùng để chỉ việc tái chế, vòng đời khép kín."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Thường đi kèm với "
+      },
+      {
+        "text": "の",
+        "furigana": ""
+      },
+      {
+        "text": " để nối với danh từ chỉ đối tượng được lưu thông, ví dụ "
+      },
+      {
+        "text": "血液",
+        "furigana": "けつえき"
+      },
+      {
+        "text": "の"
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": "."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "血液",
+            "furigana": "けつえき"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "循環",
+            "furigana": "じゅんかん"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "良くない",
+            "furigana": "よくない"
+          },
+          {
+            "text": "と"
+          },
+          {
+            "text": "疲れやすくなる",
+            "furigana": "つかれやすくなる"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Nếu tuần hoàn máu không tốt, người sẽ nhanh mệt mỏi."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "資源",
+            "furigana": "しげん"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "循環",
+            "furigana": "じゅんかん"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "促進する",
+            "furigana": "そくしんする"
+          },
+          {
+            "text": "政策",
+            "furigana": "せいさく"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "必要",
+            "furigana": "ひつよう"
+          },
+          {
+            "text": "だ",
+            "furigana": "だ"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Cần có chính sách thúc đẩy việc tái chế tài nguyên."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "水",
+            "furigana": "すい"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "循環",
+            "furigana": "じゅんかん"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "地球",
+            "furigana": "ちきゅう"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "生命",
+            "furigana": "せいめい"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "支えている",
+            "furigana": "ささえている"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Chu trình nước duy trì sự sống trên trái đất."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "エネルギー",
+            "furigana": "エネルギー"
+          },
+          {
+            "text": "循環",
+            "furigana": "じゅんかん"
+          },
+          {
+            "text": "型",
+            "furigana": "がた"
+          },
+          {
+            "text": "社会",
+            "furigana": "しゃかい"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "目指す",
+            "furigana": "めざす"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Nhắm tới một xã hội năng lượng tuần hoàn."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "大気",
+            "furigana": "たいき"
+          },
+          {
+            "text": "循環",
+            "furigana": "じゅんかん"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "気候",
+            "furigana": "きこう"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "大きく",
+            "furigana": "おおきく"
+          },
+          {
+            "text": "影響",
+            "furigana": "えいきょう"
+          },
+          {
+            "text": "する",
+            "furigana": "する"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Sự tuần hoàn không khí ảnh hưởng mạnh mẽ đến khí hậu."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "回転",
+        "furigana": "かいてん"
+      },
+      {
+        "text": " – nghĩa là quay vòng, nhấn mạnh chuyển động quay quanh trục, thường dùng cho bánh xe, vật thể. Không mang ý nghĩa tái chế hay chu trình khép kín như "
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": "."
+      },
+      {
+        "text": "流通",
+        "furigana": "りゅうつう"
+      },
+      {
+        "text": " – chỉ quá trình lưu chuyển, phân phối hàng hoá, thông tin trong kinh tế. Nhấn mạnh khía cạnh thương mại, không bao hàm ý tái sử dụng như "
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": "."
+      },
+      {
+        "text": "サイクル",
+        "furigana": "サイクル"
+      },
+      {
+        "text": " – từ mượn tiếng Anh “cycle”, thường dùng trong ngữ cảnh thể thao, âm nhạc hoặc mô tả vòng lặp trừu tượng, không mang tính học thuật hay khoa học như "
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": "."
+      }
+    ],
+    "notes": [
+      {
+        "text": "「循環」 là danh từ trung tính, thường đi kèm với 「の」 để chỉ đối tượng được tuần hoàn."
+      },
+      {
+        "text": "Không dùng để chỉ \"xe đạp\"; từ đúng là 「自転車」(じてんしゃ)."
+      },
+      {
+        "text": "Thường xuất hiện trong các lĩnh vực y học, môi trường, kinh tế và khoa học."
+      },
+      {
+        "text": "Câu nói sai thường là \"循環を乗る\" – không có nghĩa, vì 「循環」 không phải là phương tiện di chuyển."
+      }
+    ],
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": [
+      {
+        "text": "循",
+        "furigana": "じゅん"
+      },
+      {
+        "text": " — Hán Việt: TUÂN."
+      },
+      {
+        "text": "環",
+        "furigana": "かん"
+      },
+      {
+        "text": " — Hán Việt: HOAN."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "血液",
+        "furigana": "けつえき"
+      },
+      {
+        "text": "の"
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "資源",
+        "furigana": "しげん"
+      },
+      {
+        "text": "の"
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": "型",
+        "furigana": "がた"
+      },
+      {
+        "text": "社会",
+        "furigana": "しゃかい"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "エネルギー",
+        "furigana": "エネルギー"
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "大気",
+        "furigana": "たいき"
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "水",
+        "furigana": "すい"
+      },
+      {
+        "text": "の"
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": "器",
+        "furigana": "き"
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "循環",
+        "furigana": "じゅんかん"
+      },
+      {
+        "text": "経済",
+        "furigana": "けいざい"
+      }
+    ],
+    "stroke_count_note": [
+      {
+        "text": "循",
+        "furigana": "じゅん"
+      },
+      {
+        "text": " : Hán Việt TUÂN; "
+      },
+      {
+        "text": "環",
+        "furigana": "かん"
+      },
+      {
+        "text": " : Hán Việt HOAN."
+      }
+    ],
+    "cachedAt": "2026-09-05T03:06:15.206Z"
+  },
+  "vocab_所属": {
+    "meaning": [
+      {
+        "text": "Danh từ chỉ "
+      },
+      {
+        "text": "所属",
+        "furigana": "しょぞく"
+      },
+      {
+        "text": " là \"thuộc về, trực thuộc\"; trạng thái hoặc mối quan hệ của một người, vật với một tổ chức, nhóm, nơi nào đó."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Được dùng để chỉ vị trí thuộc về một tổ chức hoặc bộ phận, thường đi kèm với trợ từ \"に\" hoặc \"の\"."
+      },
+      {
+        "text": "Thường xuất hiện trong cấu trúc \"Xに所属する\" (thuộc về X)."
+      },
+      {
+        "text": "Có thể dùng như danh từ độc lập, ví dụ: \"所属は大学です\" (Nơi thuộc là trường đại học)."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": ""
+          },
+          {
+            "text": "は",
+            "furigana": ""
+          },
+          {
+            "text": "研究所",
+            "furigana": "けんきゅうじょ"
+          },
+          {
+            "text": "に",
+            "furigana": ""
+          },
+          {
+            "text": "所属",
+            "furigana": "しょぞく"
+          },
+          {
+            "text": "しています",
+            "furigana": "しています"
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Anh ấy thuộc viện nghiên cứu."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "私",
+            "furigana": ""
+          },
+          {
+            "text": "の",
+            "furigana": ""
+          },
+          {
+            "text": "所属",
+            "furigana": "しょぞく"
+          },
+          {
+            "text": "は",
+            "furigana": ""
+          },
+          {
+            "text": "営業部",
+            "furigana": "えいぎょうぶ"
+          },
+          {
+            "text": "です",
+            "furigana": "です"
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Bộ phận tôi thuộc là phòng kinh doanh."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "この",
+            "furigana": ""
+          },
+          {
+            "text": "会社",
+            "furigana": "かいしゃ"
+          },
+          {
+            "text": "の",
+            "furigana": ""
+          },
+          {
+            "text": "所属",
+            "furigana": "しょぞく"
+          },
+          {
+            "text": "は",
+            "furigana": ""
+          },
+          {
+            "text": "海外",
+            "furigana": "かいがい"
+          },
+          {
+            "text": "支店",
+            "furigana": "してん"
+          },
+          {
+            "text": "です",
+            "furigana": "です"
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Chi nhánh mà công ty này thuộc là chi nhánh ở nước ngoài."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "大学",
+            "furigana": "だいがく"
+          },
+          {
+            "text": "に",
+            "furigana": ""
+          },
+          {
+            "text": "所属",
+            "furigana": "しょぞく"
+          },
+          {
+            "text": "する",
+            "furigana": "する"
+          },
+          {
+            "text": "学生",
+            "furigana": "がくせい"
+          },
+          {
+            "text": "は",
+            "furigana": ""
+          },
+          {
+            "text": "多い",
+            "furigana": "おおい"
+          },
+          {
+            "text": "です",
+            "furigana": "です"
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Số lượng sinh viên thuộc trường đại học là nhiều."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "所属",
+        "furigana": "しょぞく"
+      },
+      {
+        "text": "は",
+        "furigana": ""
+      },
+      {
+        "text": " \"trạng thái thuộc về\"; dùng làm danh từ, nhấn mạnh mối quan hệ tĩnh, thường xuất hiện cùng \"に\" hoặc \"の\".",
+        "furigana": ""
+      },
+      {
+        "text": "属する",
+        "furigana": "ぞくする"
+      },
+      {
+        "text": " là ",
+        "furigana": ""
+      },
+      {
+        "text": "\"thuộc về\" (động từ)",
+        "furigana": ""
+      },
+      {
+        "text": "; nhấn mạnh hành động hoặc quá trình thuộc về, thường đứng độc lập hoặc kết hợp với danh từ để tạo thành \"Xに属する\".",
+        "furigana": ""
+      }
+    ],
+    "notes": [
+      {
+        "text": "Từ này lịch sự, dùng trong văn viết và nói trang trọng; không phù hợp trong ngữ cảnh rất thân mật."
+      },
+      {
+        "text": "Khi dùng làm danh từ, thường cần đi kèm trợ từ \"に\" hoặc \"の\" để chỉ đối tượng thuộc."
+      },
+      {
+        "text": "Tránh nhầm lẫn với \"属\" (chỉ ký tự đơn), vì \"属\" thường xuất hiện trong động từ \"属する\"."
+      }
+    ],
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": [
+      {
+        "text": "所",
+        "furigana": "しょ"
+      },
+      {
+        "text": " — Hán Việt: SỞ."
+      },
+      {
+        "text": "属",
+        "furigana": "ぞく"
+      },
+      {
+        "text": " — Hán Việt: THUỘC."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "所属部署",
+        "furigana": "しょぞくぶしょ"
+      },
+      {
+        "text": "所属大学",
+        "furigana": "しょぞくだいがく"
+      },
+      {
+        "text": "所属会社",
+        "furigana": "しょぞくかいしゃ"
+      },
+      {
+        "text": "所属組織",
+        "furigana": "しょぞくそしき"
+      },
+      {
+        "text": "所属部門",
+        "furigana": "しょぞくぶもん"
+      },
+      {
+        "text": "所属先",
+        "furigana": "しょぞくさき"
+      },
+      {
+        "text": "所属資格",
+        "furigana": "しょぞくしかく"
+      }
+    ],
+    "stroke_count_note": [],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "cachedAt": "2026-09-05T03:14:36.293Z"
+  },
+  "vocab_日焼けする": {
+    "meaning": "Bị cháy nắng; da trở nên sẫm màu, đỏ hoặc nâu do tiếp xúc lâu dài với ánh nắng mặt trời; trạng thái da bị đốt cháy bởi tia UV",
+    "usage": "1. N が 日焼けする: 肌が日焼けする。 (chủ ngữ là bộ phận, da bị cháy nắng) 2. N で 日焼けする: 海で日焼けする。 (địa điểm diễn ra hành động) 3. N は 日焼けしやすい: 子どもは日焼けしやすい。 (miêu tả tính dễ bị cháy nắng) 4. V‑たら 日焼けした: 今日は海で泳いだら、日焼けした。 (kết quả sau một hành động) 5. V‑たいと 日焼けしたくない: 日焼けしたくないので、日焼け止めを塗る。 (mong muốn không bị cháy nắng)",
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "text": "は",
+            "furigana": ""
+          },
+          {
+            "text": "海",
+            "furigana": "うみ"
+          },
+          {
+            "text": "で",
+            "furigana": ""
+          },
+          {
+            "text": "日焼け",
+            "furigana": "ひやけ"
+          },
+          {
+            "text": "した",
+            "furigana": ""
+          },
+          {
+            "text": "ので",
+            "furigana": ""
+          },
+          {
+            "text": "、",
+            "furigana": ""
+          },
+          {
+            "text": "肌",
+            "furigana": "はだ"
+          },
+          {
+            "text": "が",
+            "furigana": ""
+          },
+          {
+            "text": "赤",
+            "furigana": "あか"
+          },
+          {
+            "text": "く",
+            "furigana": ""
+          },
+          {
+            "text": "なった",
+            "furigana": ""
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Hôm nay tôi bơi ở biển, vì đã bị cháy nắng nên da đỏ lên."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "山",
+            "furigana": "やま"
+          },
+          {
+            "text": "へ",
+            "furigana": ""
+          },
+          {
+            "text": "ハイキング",
+            "furigana": ""
+          },
+          {
+            "text": "に",
+            "furigana": ""
+          },
+          {
+            "text": "行ったら",
+            "furigana": ""
+          },
+          {
+            "text": "、",
+            "furigana": ""
+          },
+          {
+            "text": "日焼け",
+            "furigana": "ひやけ"
+          },
+          {
+            "text": "して",
+            "furigana": ""
+          },
+          {
+            "text": "しまった",
+            "furigana": ""
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Khi đi leo núi, tôi đã bị cháy nắng."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "子ども",
+            "furigana": "こども"
+          },
+          {
+            "text": "が",
+            "furigana": ""
+          },
+          {
+            "text": "外",
+            "furigana": "そと"
+          },
+          {
+            "text": "で",
+            "furigana": ""
+          },
+          {
+            "text": "遊んで",
+            "furigana": ""
+          },
+          {
+            "text": "いる",
+            "furigana": ""
+          },
+          {
+            "text": "と",
+            "furigana": ""
+          },
+          {
+            "text": "、",
+            "furigana": ""
+          },
+          {
+            "text": "すぐに",
+            "furigana": ""
+          },
+          {
+            "text": "日焼け",
+            "furigana": "ひやけ"
+          },
+          {
+            "text": "する",
+            "furigana": ""
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Khi trẻ con chơi ở ngoài, chúng nhanh chóng bị cháy nắng."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "日焼け",
+            "furigana": "ひやけ"
+          },
+          {
+            "text": "した",
+            "furigana": ""
+          },
+          {
+            "text": "肌",
+            "furigana": "はだ"
+          },
+          {
+            "text": "は",
+            "furigana": ""
+          },
+          {
+            "text": "、",
+            "furigana": ""
+          },
+          {
+            "text": "保湿",
+            "furigana": "ほしつ"
+          },
+          {
+            "text": "クリーム",
+            "furigana": ""
+          }
+        ]
+      }
+    ],
+    "cachedAt": "2026-09-05T02:17:42.402Z"
+  },
+  "vocab_時刻表": {
+    "meaning": "Thời gian biểu; lịch trình liệt kê các thời điểm khởi hành, đến, hoặc diễn ra của các phương tiện giao thông, lớp học, sự kiện…; thường dùng cho tàu, xe buýt, máy bay, lớp học…",
+    "usage": "1. Dùng như danh từ chung để chỉ một bảng liệt kê thời gian: 時刻表（じこくひょう）を確認（かくにん）する。 \n2. Kèm danh từ chỉ phương tiện hoặc địa điểm: 駅（えき）の時刻表、バスの時刻表、航空（こうくう）の時刻表。 \n3. Dùng trong câu hỏi về thời gian khởi hành: 次（つぎ）の電車は何時（なんじ）の時刻表に載（の）っていますか？",
+    "examples": [
+      {
+        "jp": "駅（えき）の時刻表（じこくひょう）を見（み）て、電車（でんしゃ）の出発（しゅっぱつ）時間（じかん）を確認（かくにん）した。",
+        "vi": "Tôi đã nhìn vào bảng thời gian của ga và kiểm tra giờ xuất phát của tàu."
+      },
+      {
+        "jp": "バス（ばす）の時刻表（じこくひょう）によると、次（つぎ）のバスは8時（はちじ）に来（く）る。",
+        "vi": "Theo bảng thời gian của xe buýt, chuyến tiếp theo sẽ đến lúc 8 giờ."
+      },
+      {
+        "jp": "旅行（りょこう）の計画（けいかく）では、各（かく）観光地（かんこうち）の時刻表（じこくひょう）をチェックしておく必要（ひつよう）があります。",
+        "vi": "Trong kế hoạch du lịch, cần kiểm tra bảng thời gian của từng địa điểm tham quan."
+      },
+      {
+        "jp": "学校（がっこう）の授業（じゅぎょう）の時刻表（じこくひょう）は毎週（まいしゅう）変更（へんこう）されることがあります。",
+        "vi": "Bảng thời gian các tiết học của trường có thể thay đổi mỗi tuần."
+      },
+      {
+        "jp": "飛行機（ひこうき）の時刻表（じこくひょう）は季節（きせつ）によって変（か）わります。",
+        "vi": "Bảng thời gian của máy bay thay đổi tùy theo mùa."
+      }
+    ],
+    "synonyms_distinction": "スケジュール（すけじゅーる）は rộng hơn, bao gồm cả kế hoạch chung, không nhất thiết là bảng liệt kê thời gian cụ thể; 予定表（よていひょう） thường dùng cho lịch cá nhân, ít chi tiết về giờ khởi hành; タイムテーブル（たいむてーぶる） là từ vay tiếng Anh, thường dùng trong thể thao hoặc các sự kiện lớn, mang tính hiện đại hơn.",
+    "notes": "Thường dùng trong văn viết và nói trang trọng; trong giao tiếp hàng ngày người Nhật thường nói “スケジュール” hoặc “タイムテーブル”. Không có dạng lịch sự hay suồng sã riêng, nhưng có thể kết hợp với từ lịch sự như “ご確認ください”。",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "時（じ）(Hán Việt: THỜI - onyomi: じ; kunyomi: とき, と; Bộ thủ: 日 (4 nét); Tổng 10 nét). 刻（こく）(Hán Việt: KHẮC - onyomi: こく; kunyomi: きざむ; Bộ thủ: 刂 (2 nét); Tổng 10 nét). 表（ひょう）(Hán Việt: BIỂU - onyomi: ひょう; kunyomi: あらわす; Bộ thủ: 衣 (6 nét); Tổng 8 nét).",
+    "collocations": "駅（えき）の時刻表、バスの時刻表、電車（でんしゃ）の時刻表、航空（こうくう）の時刻表、授業（じゅぎょう）の時刻表、映画（えいが）の上映（じょうえい）時刻表、イベントの時刻表、時刻表アプリ、時刻表を確認（かくにん）する、時刻表を印刷（いんさつ）する",
+    "stroke_count_note": "時（じ）: Hán Việt THỜI, Onyomi じ, Kunyomi とき/と, bộ 日 (4 nét), tổng 10 nét; 刻（こく）: Hán Việt KHẮC, Onyomi こく, Kunyomi きざむ, bộ 刂 (2 nét), tổng 10 nét; 表（ひょう）: Hán Việt BIỂU, Onyomi ひょう, Kunyomi あらわす, bộ 衣 (6 nét), tổng 8 nét",
+    "cachedAt": "2026-09-05T01:57:37.548Z"
+  },
+  "vocab_本音": {
+    "meaning": [
+      {
+        "text": "本音",
+        "furigana": "ほんね"
+      },
+      {
+        "text": " là danh từ chỉ ý định thực sự, động cơ, ý kiến thực sự, hoặc điều người thực sự nghĩ."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Được dùng để diễn tả cảm xúc hoặc suy nghĩ thật sự của người nói, thường xuất hiện trong cấu trúc "
+      },
+      {
+        "text": "本音を言う",
+        "furigana": "ほんねをいう"
+      },
+      {
+        "text": " (nói thẳng tấm lòng), "
+      },
+      {
+        "text": "本音を隠す",
+        "furigana": "ほんねをかくす"
+      }
+    ],
+    "cachedAt": "2026-09-05T03:23:31.549Z"
+  },
+  "vocab_没頭": {
+    "meaning": [
+      {
+        "text": "Danh từ/動詞"
+      },
+      {
+        "text": "没頭",
+        "furigana": "ぼっとう"
+      },
+      {
+        "text": " có nghĩa là \"đắm mình vào, say sưa với\" một hoạt động hoặc chủ đề nào đó, tập trung hoàn toàn và không để ý tới những thứ khác."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Thường được dùng kèm với các trợ từ"
+      },
+      {
+        "text": "に",
+        "furigana": ""
+      },
+      {
+        "text": ", "
+      },
+      {
+        "text": "で",
+        "furigana": ""
+      },
+      {
+        "text": " hoặc "
+      },
+      {
+        "text": "と",
+        "furigana": ""
+      },
+      {
+        "text": " để chỉ đối tượng hoặc hoạt động mà người ta đắm mình vào. Kết hợp với "
+      },
+      {
+        "text": "する",
+        "furigana": ""
+      },
+      {
+        "text": " để tạo thành động từ "
+      },
+      {
+        "text": "没頭する",
+        "furigana": "ぼっとうする"
+      },
+      {
+        "text": " (đắm mình)."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "彼",
+            "furigana": "かれ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "ゲームに"
+          },
+          {
+            "text": "没頭",
+            "furigana": "ぼっとう"
+          },
+          {
+            "text": "している"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Anh ấy đang đắm mình vào trò chơi."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "彼女",
+            "furigana": "かのじょ"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "読書に"
+          },
+          {
+            "text": "没頭",
+            "furigana": "ぼっとう"
+          },
+          {
+            "text": "して、時間を忘れた"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Cô ấy đã đắm mình vào việc đọc sách và quên mất thời gian."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "研究者は"
+          },
+          {
+            "text": "新しい薬の開発に"
+          },
+          {
+            "text": "没頭",
+            "furigana": "ぼっとう"
+          },
+          {
+            "text": "している"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Các nhà nghiên cứu đang đắm mình vào việc phát triển thuốc mới."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "子どもたちは"
+          },
+          {
+            "text": "絵を描くことに"
+          },
+          {
+            "text": "没頭",
+            "furigana": "ぼっとう"
+          },
+          {
+            "text": "して、外の音を聞かなかった"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Các bé đã đắm mình vào việc vẽ tranh và không nghe tiếng ồn bên ngoài."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "熱中",
+        "furigana": "ねっちゅう"
+      },
+      {
+        "text": ": thường chỉ sự đam mê mạnh mẽ, thường có cảm xúc hưng phấn, dùng cho sở thích, thể thao, ... "
+      },
+      {
+        "text": "夢中",
+        "furigana": "むちゅう"
+      },
+      {
+        "text": ": nhấn mạnh trạng thái không thể rời mắt, quên hết mọi thứ xung quanh, thường dùng cho cảm xúc cá nhân, như \"mơ màng\". "
+      },
+      {
+        "text": "没頭",
+        "furigana": "ぼっとう"
+      },
+      {
+        "text": ": nhấn mạnh sự tập trung sâu sắc, thường kèm theo công việc, nghiên cứu, học tập; mang tính chất chuyên nghiệp hơn, ít cảm xúc hưng phấn."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Từ này có tính trung tính, dùng trong cả văn nói và văn viết, nhưng thường xuất hiện trong ngữ cảnh trang trọng hoặc mô tả chi tiết. "
+      },
+      {
+        "text": "Khi dùng kèm với \"に\" hoặc \"で\" thường không cần \"を\". "
+      },
+      {
+        "text": "Có thể kết hợp với \"する\" để tạo động từ, hoặc dùng như danh từ \"没頭感\" (cảm giác đắm mình)."
+      }
+    ],
+    "part_of_speech": "danh từ (có thể kết hợp với する để làm động từ)",
+    "kanji_breakdown": [
+      {
+        "text": "没",
+        "furigana": "ぼつ"
+      },
+      {
+        "text": " — Hán Việt: MẬT."
+      },
+      {
+        "text": "頭",
+        "furigana": "とう"
+      },
+      {
+        "text": " — Hán Việt: ĐẦU."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "没頭する",
+        "furigana": "ぼっとうする"
+      },
+      {
+        "text": "読書に没頭",
+        "furigana": "どくしょにぼっとう"
+      },
+      {
+        "text": "仕事に没頭",
+        "furigana": "しごとにぼっとう"
+      },
+      {
+        "text": "趣味に没頭",
+        "furigana": "しゅみへぼっとう"
+      },
+      {
+        "text": "研究に没頭",
+        "furigana": "けんきゅうにぼっとう"
+      },
+      {
+        "text": "ゲームに没頭",
+        "furigana": "げーむにぼっとう"
+      },
+      {
+        "text": "没頭感",
+        "furigana": "ぼっとうかん"
+      }
+    ],
+    "stroke_count_note": [],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "cachedAt": "2026-09-05T03:10:20.529Z"
+  },
+  "vocab_海水浴に行く": {
+    "meaning": "Đi đến nơi để tắm biển (tắm bơi, chơi nước) – hành động tham gia hoạt động biển, thường dùng cụm danh từ 海水浴 (tắm biển) kèm theo trợ từ に và động từ 行く (đi).",
+    "usage": "1. 海水浴に行く: dạng hiện tại, khẳng định. 2. 海水浴に行きます: dạng lịch sự, dùng trong giao tiếp trang trọng. 3. 海水浴に行かない: phủ định. 4. 海水浴に行かなかった: quá khứ phủ định. 5. 海水浴に行きたい: muốn đi tắm biển. Mỗi cấu trúc thay đổi theo thể và thời gian.",
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "今日",
+            "furigana": "きょう"
+          },
+          {
+            "text": "は",
+            "furigana": ""
+          },
+          {
+            "text": "海水浴",
+            "furigana": "かいすいよく"
+          },
+          {
+            "text": "に",
+            "furigana": ""
+          },
+          {
+            "text": "行く",
+            "furigana": "いく"
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Hôm nay tôi sẽ đi tắm biển."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "週末",
+            "furigana": "しゅうまつ"
+          },
+          {
+            "text": "に",
+            "furigana": ""
+          },
+          {
+            "text": "友達",
+            "furigana": "ともだち"
+          },
+          {
+            "text": "と",
+            "furigana": ""
+          },
+          {
+            "text": "海水浴",
+            "furigana": "かいすいよく"
+          },
+          {
+            "text": "に",
+            "furigana": ""
+          },
+          {
+            "text": "行きました",
+            "furigana": "いきました"
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Cuối tuần tôi đã đi tắm biển cùng bạn bè."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "暑くなる",
+            "furigana": "あつくなる"
+          },
+          {
+            "text": "と",
+            "furigana": ""
+          },
+          {
+            "text": "、",
+            "furigana": ""
+          },
+          {
+            "text": "海水浴",
+            "furigana": "かいすいよく"
+          },
+          {
+            "text": "に",
+            "furigana": ""
+          },
+          {
+            "text": "行きたくなる",
+            "furigana": "いきたくなる"
+          },
+          {
+            "text": "。",
+            "furigana": ""
+          }
+        ],
+        "vi": "Khi trời nóng lên, tôi muốn đi tắm biển."
+      }
+    ],
+    "synonyms_distinction": "海に入る（うみにはいる）: chỉ vào trong nước biển, không nhất thiết là tắm; 海で泳ぐ（うみでおよぐ）: bơi trong biển, tập trung vào hành động bơi; ビーチへ行く（びーちへいく）: đi đến bãi biển (có thể không tắm), nhấn mạnh địa điểm chứ không phải hoạt động tắm.",
+    "notes": "Cụm này thường dùng ở dạng không lịch sự (海水浴に行く) hoặc lịch sự (海水浴に行きます). Khi muốn nhấn mạnh hoạt động tắm, có thể dùng 海水浴をする. Thường xuất hiện trong hội thoại mùa hè, tần suất trung bình.",
+    "part_of_speech": "cụm động từ (海水浴: danh từ, に: trợ từ, 行く: động từ)",
+    "kanji_breakdown": "海（かい）(Hán Việt: HẢI - Onyomi かい; Kunyomi うみ; Bộ thủ 氵 (3 nét); Tổng 9 nét), 水（すい）(Hán Việt: THỦY - Onyomi すい; Kunyomi みず; Bộ thủ 氵 (3 nét); Tổng 4 nét), 浴（よく）(Hán Việt: DƯỠNG - Onyomi よく; Kunyomi あびる; Bộ thủ 氵 (3 nét); Tổng 13 nét), 行（こう）(Hán Việt: HÀNG - Onyomi こう/ぎょう; Kunyomi いく/ゆく; Bộ thủ 行 (6 nét); Tổng 6 nét)",
+    "collocations": "海水浴場（かいすいよくじょう）, 海水浴客（かいすいよくきゃく）, 海水浴衣（かいすいよくぎ）, 海水浴用具（かいすいよくようぐ）, 海水浴シーズン（かいすいよくシーズン）, 海水浴禁止（かいすいよくきんし）",
+    "stroke_count_note": "海（かい）HẢI: Onyomi かい; Kunyomi うみ; Bộ thủ 氵; 9 nét. 水（すい）THỦY: Onyomi すい; Kunyomi みず; Bộ thủ 氵; 4 nét. 浴（よく）DƯỠNG: Onyomi よく; Kunyomi あびる; Bộ thủ 氵; 13 nét. 行（こう）HÀNG: Onyomi こう/ぎょう; Kunyomi いく/ゆく; Bộ thủ 行; 6 nét.",
+    "cachedAt": "2026-09-05T02:20:38.164Z"
+  },
+  "vocab_私鉄": {
+    "meaning": "động từ danh từ “私鉄”（してつ）: hệ thống đường sắt do các công ty tư nhân sở hữu và vận hành; thường dùng để chỉ các công ty đường sắt không thuộc JR (Japan Railways) hay các công ty nhà nước",
+    "usage": "- danh từ độc lập: 私鉄（してつ）は都市（とし）部（ぶ）で重要（じゅうよう）な交通手段（こうつうしゅだん）です。 (được dùng như một danh từ để chỉ chung các công ty đường sắt tư nhân) \n- trong cụm danh từ: 私鉄（してつ）会社（がいしゃ）: công ty đường sắt tư nhân \n- trong cụm danh từ: 私鉄（してつ）路線（ろせん）: tuyến đường sắt tư nhân \n- trong cấu trúc so sánh: 私鉄（してつ）はJR（じぇーあーる）と比（くら）べて運賃（うんちん）が安（やす）い。 (so sánh phí vé) \n- trong câu mô tả hợp tác: 私鉄（してつ）は他（た）社（しゃ）と連携（れんけい）して運行（うんこう）している。 (miêu tả hợp tác)",
+    "examples": [
+      {
+        "jp": "私鉄（してつ）はJR（じぇーあーる）と比（くら）べて運賃（うんちん）が安（やす）い。",
+        "vi": "Đường sắt tư nhân có giá vé rẻ hơn JR."
+      },
+      {
+        "jp": "私鉄（してつ）の路線（ろせん）は主（おも）に都市（とし）圏（けん）内（ない）を走（はし）る。",
+        "vi": "Các tuyến đường sắt tư nhân chủ yếu chạy trong khu vực đô thị."
+      },
+      {
+        "jp": "近年（きんねん）、私鉄（してつ）は他（た）の交通機関（こうかん）と連携（れんけい）している。",
+        "vi": "Trong những năm gần đây, các đường sắt tư nhân đã hợp tác với các phương tiện giao thông khác."
+      },
+      {
+        "jp": "私鉄（してつ）に乗（の）って、郊外（こうがい）へ行（い）くと景色（けしき）が綺麗（きれい）だ。",
+        "vi": "Đi bằng đường sắt tư nhân ra ngoại ô thì cảnh vật rất đẹp."
+      },
+      {
+        "jp": "この地域（ちいき）では私鉄（してつ）だけが主要（しゅよう）な公共交通（こうきょうこうつう）手段（しゅだん）だ。",
+        "vi": "Trong khu vực này, chỉ có đường sắt tư nhân là phương tiện công cộng chính."
+      }
+    ],
+    "synonyms_distinction": "- 民営鉄道（みんえいてつどう）: nhấn mạnh hình thức quản lý tư nhân (được doanh nghiệp tư nhân điều hành) nhưng có thể nhận hỗ trợ công cộng, dùng rộng hơn “私鉄”。 \n- 民間鉄道（みんかんてつどう）: nhấn mạnh sở hữu thuộc khu vực dân sinh, thường dùng cho các tuyến nhỏ, không nhất thiết là công ty lớn như 私鉄。 \n- 私有鉄道（しゆうてつどう）: chỉ giao thông sở hữu cá nhân, thường dùng cho các đường sắt doanh nghiệp riêng lẻ, ít dùng trong thực tế so với 私鉄。",
+    "notes": "- “私鉄” là từ viết tắt thường dùng trong báo chí, tài liệu, không có mức lịch sự đặc biệt; dùng trong cả văn nói và viết. \n- Thường xuất hiện cùng với các danh từ như 会社、路線、乗客、利用者. \n- Sai lầm thường gặp: nhầm “私鉄” với “公鉄”（こうてつ） (đường sắt công cộng) hoặc dùng “私鉄道” (không sai nhưng ít dùng).",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "私（し）(Hán Việt: TÂ - nghĩa gốc: riêng tư, cá nhân): Onyomi シ (ví dụ: 私（し）人（じん）); Kunyomi わたくし/わたし (ví dụ: 私（わたくし）); Bộ thủ 禾（か） (5 nét); Tổng 7 nét. 鉄（てつ）(Hán Việt: TÉT - nghĩa gốc: sắt, kim loại): Onyomi テツ (ví dụ: 鉄（てつ）道（どう）); Kunyomi くろがね (ví dụ: 鉄（くろがね）); Bộ thủ 金（かね） (8 nét); Tổng 13 nét.",
+    "collocations": "私鉄（してつ）会社（がいしゃ）、私鉄（してつ）網（もう）、私鉄（してつ）路線（ろせん）、私鉄（してつ）駅（えき）、私鉄（してつ）利用者（りようしゃ）、私鉄（してつ）乗客（じょうきゃく）、私鉄（してつ）乗車券（じょうしゃけん）、私鉄（してつ）車両（しゃりょう）、私鉄（してつ）路網（ろもう）",
+    "stroke_count_note": "私（し）: Hán Việt TÂ, Onyomi シ, Kunyomi わたくし, bộ 禾 (5 nét), tổng 7 nét; 鉄（てつ）: Hán Việt TÉT, Onyomi テツ, Kunyomi くろがね, bộ 金 (8 nét), tổng 13 nét",
+    "cachedAt": "2026-09-05T02:02:45.589Z"
+  },
+  "vocab_羽出名": {
+    "meaning": [
+      {
+        "text": "Tính từ な chỉ "
+      },
+      {
+        "text": "羽出名",
+        "furigana": "はでな"
+      },
+      {
+        "text": " có nghĩa là lòe loẹt, màu mè, hào nhoáng, thường dùng để mô tả trang phục, màu sắc hoặc phong cách quá mức."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng trước danh từ với "
+      },
+      {
+        "text": "羽出名",
+        "furigana": "はでな"
+      },
+      {
+        "text": "な: "
+      },
+      {
+        "text": "羽出名な服装",
+        "furigana": "はでなふくそう"
+      },
+      {
+        "text": "Dạng trạng từ "
+      },
+      {
+        "text": "羽出に",
+        "furigana": "はでに"
+      }
+    ],
+    "cachedAt": "2026-09-08T12:59:03.894Z"
+  },
+  "vocab_自動で引き落とされる": {
+    "meaning": [
+      {
+        "text": "Từ "
+      },
+      {
+        "text": "自動で引き落とされる",
+        "furigana": "じどうでひきおとされる"
+      },
+      {
+        "text": " có nghĩa là 'được tự động trừ tiền (từ tài khoản)'."
+      },
+      {
+        "text": " Câu này thường dùng trong ngữ cảnh giao dịch tài chính."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Cấu trúc thường thấy: "
+      },
+      {
+        "text": "NOUN",
+        "furigana": ""
+      },
+      {
+        "text": " が "
+      },
+      {
+        "text": "自動で引き落とされる",
+        "furigana": "じどうでひきおとされる"
+      },
+      {
+        "text": " (đối tượng + bị tự động trừ)."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "毎月",
+            "furigana": "まいげつ"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "会費",
+            "furigana": "かいひ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "自動",
+            "furigana": "じどう"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "引き落と",
+            "furigana": "ひきおと"
+          },
+          {
+            "text": "される"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Phí hội viên hàng tháng sẽ được tự động trừ."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "口座から",
+            "furigana": "こうざから"
+          },
+          {
+            "text": "自動",
+            "furigana": "じどう"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "引き落と",
+            "furigana": "ひきおと"
+          },
+          {
+            "text": "される",
+            "furigana": ""
+          },
+          {
+            "text": "こと",
+            "furigana": "こと"
+          },
+          {
+            "text": "が",
+            "furigana": ""
+          },
+          {
+            "text": "あります",
+            "furigana": "あります"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Có việc tiền được tự động trừ từ tài khoản."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "電気代",
+            "furigana": "でんきだ"
+          },
+          {
+            "text": "が"
+          },
+          {
+            "text": "自動",
+            "furigana": "じどう"
+          },
+          {
+            "text": "で"
+          },
+          {
+            "text": "引き落と",
+            "furigana": "ひきおと"
+          },
+          {
+            "text": "される",
+            "furigana": ""
+          },
+          {
+            "text": "の",
+            "furigana": ""
+          },
+          {
+            "text": "が",
+            "furigana": ""
+          },
+          {
+            "text": "好き",
+            "furigana": "すき"
+          },
+          {
+            "text": "です",
+            "furigana": "です"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Tôi thích việc tiền điện được tự động trừ."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "自動引き落とし",
+        "furigana": "じどうひきおとし"
+      },
+      {
+        "text": " (dạng danh từ, nhấn mạnh hành động trừ tiền) "
+      },
+      {
+        "text": "vs"
+      },
+      {
+        "text": "自動振替",
+        "furigana": "じどうふりかえ"
+      },
+      {
+        "text": " (đảo chuyển tiền tự động, thường dùng cho chuyển khoản)"
+      }
+    ],
+    "notes": [
+      {
+        "text": "Thường dùng trong văn viết, mang tính trang trọng."
+      },
+      {
+        "text": "Không dùng trong hội thoại thân mật."
+      },
+      {
+        "text": "Câu này đã ở thể bị động, không thể thêm 「ます」để làm lời nói lịch sự; nếu muốn lịch sự dùng 「自動で引き落とされます」."
+      }
+    ],
+    "cachedAt": "2026-09-05T02:30:16.722Z"
+  },
+  "vocab_自明": {
+    "meaning": [
+      {
+        "text": "Từ "
+      },
+      {
+        "text": "自明",
+        "furigana": "じめい"
+      },
+      {
+        "text": " là tính từ な, có nghĩa là \"hiển nhiên\", \"tự hiển\"; dùng để chỉ điều gì đó rõ ràng, không cần giải thích thêm."
+      }
+    ],
+    "usage": [
+      {
+        "text": "Dùng như tính từ な, thường đi kèm \"な\" hoặc \"である\"."
+      }
+    ],
+    "examples": [
+      {
+        "jp_segments": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "命題",
+            "furigana": "めいだい"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "自明",
+            "furigana": "じめい"
+          },
+          {
+            "text": "である"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Mệnh đề này là tự hiển."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "自明",
+            "furigana": "じめい"
+          },
+          {
+            "text": "の"
+          },
+          {
+            "text": "事実",
+            "furigana": "じじつ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "無視",
+            "furigana": "むし"
+          },
+          {
+            "text": "してはいけない"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Không được xem thường những sự thật hiển nhiên."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "この"
+          },
+          {
+            "text": "問題",
+            "furigana": "もんだい"
+          },
+          {
+            "text": "は"
+          },
+          {
+            "text": "自明",
+            "furigana": "じめい"
+          },
+          {
+            "text": "な"
+          },
+          {
+            "text": "前提",
+            "furigana": "ぜんてい"
+          },
+          {
+            "text": "に"
+          },
+          {
+            "text": "基づいている",
+            "furigana": "きづいている"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Vấn đề này dựa trên một tiền đề hiển nhiên."
+      },
+      {
+        "jp_segments": [
+          {
+            "text": "自明さ",
+            "furigana": "じめいさ"
+          },
+          {
+            "text": "を"
+          },
+          {
+            "text": "証明",
+            "furigana": "しょうめい"
+          },
+          {
+            "text": "することは"
+          },
+          {
+            "text": "不可能",
+            "furigana": "ふかのう"
+          },
+          {
+            "text": "だ"
+          },
+          {
+            "text": "。"
+          }
+        ],
+        "vi": "Việc chứng minh tính tự hiển là không thể."
+      }
+    ],
+    "synonyms_distinction": [
+      {
+        "text": "明白",
+        "furigana": "めいはく"
+      },
+      {
+        "text": " — có nghĩa \"rõ ràng\", thường dùng trong ngữ cảnh mô tả thông tin cụ thể, nhấn mạnh sự rõ ràng hơn là \"được hiểu\"."
+      },
+      {
+        "text": "当然",
+        "furigana": "とうぜん"
+      },
+      {
+        "text": " — có nghĩa \"tự nhiên\", \"đúng như mong đợi\", mang tính khẳng định một cách logic, không nhất thiết là \"đã được chứng minh\" như \"自明\"."
+      }
+    ],
+    "notes": [
+      {
+        "text": "Từ này mang tính trang trọng, thường xuất hiện trong các văn bản học thuật, toán học, logic."
+      },
+      {
+        "text": "Không thường dùng trong hội thoại đời thường; trong giao tiếp hàng ngày người Nhật thường dùng \"明らか\" hoặc \"当たり前\"."
+      },
+      {
+        "text": "Lỗi thường gặp: dùng \"自明\" để mô tả cảm xúc hay trạng thái cá nhân sẽ nghe không tự nhiên."
+      }
+    ],
+    "part_of_speech": "tính từ な",
+    "kanji_breakdown": [
+      {
+        "text": "自",
+        "furigana": "じ"
+      },
+      {
+        "text": " — Hán Việt: TỰ. "
+      },
+      {
+        "text": "明",
+        "furigana": "めい"
+      },
+      {
+        "text": " — Hán Việt: MINH."
+      }
+    ],
+    "collocations": [
+      {
+        "text": "自明の事実",
+        "furigana": "じめいのじじつ"
+      },
+      {
+        "text": "自明の理",
+        "furigana": "じめいのり"
+      },
+      {
+        "text": "自明な前提",
+        "furigana": "じめいなぜんてい"
+      },
+      {
+        "text": "自明と仮定する",
+        "furigana": "じめいとかていする"
+      },
+      {
+        "text": "自明な結論",
+        "furigana": "じめいなけつろん"
+      },
+      {
+        "text": "自明な答え",
+        "furigana": "じめいなこたえ"
+      },
+      {
+        "text": "自明な真理",
+        "furigana": "じめいなしんり"
+      }
+    ],
+    "stroke_count_note": [],
+    "structure": [],
+    "conjugation": [],
+    "jlpt_level": "",
+    "component_analysis": [],
+    "similar_kanji": [],
+    "cachedAt": "2026-09-05T03:05:56.258Z"
+  },
+  "vocab_関係": {
+    "meaning": "mối quan hệ; sự liên quan giữa các đối tượng, người, sự việc; quan hệ (giữa người, giữa sự việc)",
+    "usage": "Dùng để chỉ mối liên kết, quan hệ giữa các thực thể hoặc để diễn đạt việc có liên quan tới một vấn đề nào đó",
+    "examples": [
+      {
+        "jp": "かれらのかんけいはふくざつだ。",
+        "vi": "Mối quan hệ của họ rất phức tạp."
+      },
+      {
+        "jp": "このもんだいはわたしたちにかんけいがある。",
+        "vi": "Vấn đề này liên quan đến chúng ta."
+      }
+    ],
+    "synonyms_distinction": "「関連」(liên quan) thường nhấn mạnh mối liên hệ chặt chẽ, còn 「関わり」(quan hệ, dính líu) nhấn mạnh sự tham gia, ảnh hưởng; 「関係」 nhấn mạnh mối quan hệ chung, có thể là quan hệ thân thiết hoặc chỉ đơn thuần là có liên quan",
+    "notes": "phát âm: かんけい (kankei)",
+    "part_of_speech": "danh từ",
+    "kanji_breakdown": "関: 門 (cổng) + 㐆 (bộ \"かん\"); 係: 人 (người) + 系 (hệ)",
+    "collocations": "関係がある, 関係がない, 人間関係, 国際関係, 直接的な関係, 関係者, 関係性, 関係を築く",
+    "structure": "",
+    "conjugation": "",
+    "jlpt_level": "",
+    "component_analysis": "",
+    "similar_kanji": "",
+    "stroke_count_note": "関: radical 門 (cổng) + component 㐆; 係: radical 人 (người) + component 系",
+    "cachedAt": "2026-09-03T12:58:30.209Z"
   }
 }
