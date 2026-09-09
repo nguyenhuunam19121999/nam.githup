@@ -39,6 +39,12 @@ jobs:
           if-no-files-found: error
 
       - name: Submit to App Store
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 3
+          retry_wait_seconds: 30
+          command: |
+            eas submit --platform ios --path $(find . -maxdepth 1 -name "*.ipa" | head -n 1) --non-interactive --no-wait
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: eas submit --platform ios --path $(find . -maxdepth 1 -name "*.ipa" | head -n 1) --non-interactive
